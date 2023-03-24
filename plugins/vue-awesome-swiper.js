@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import VueAwesomeSwiper from 'vue-awesome-swiper/dist/vue-awesome-swiper'
-import 'swiper/css/swiper.css'
+import Vue from 'vue';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/swiper.scss';
 
-Vue.use(VueAwesomeSwiper)
+Vue.use( VueAwesomeSwiper );

@@ -1,165 +1,94 @@
 <template>
-    <div class="shop-page-wrapper">
-        <TheHeader />
-        <Breadcrumb pageTitle="Mon compte" />
-        
-        <div class="my-account-area pb-80 pt-100">
-            <div class="container">
-                <div class="row">
-                    <div class="ms-auto me-auto col-lg-9">
-                        <div class="my-account-wrapper">
-                            <div id="faq" class="panel-group">
-                                <div class="panel panel-default single-my-account">
-                                    <div class="panel-heading my-account-title">
-                                        <h3 class="panel-title"><span>1 .</span> <a data-bs-toggle="collapse" href="#my-account-1">Modifiez vos infos personnelles</a></h3>
+    <div id="main-wrapper" class="main-wrapper">
+
+        <HeaderOne />
+
+        <BreadCrumbTwo pageTitle='My Account' title='Account' />
+
+        <section class="account-page-area section-gap-equal">
+            <div class="container position-relative">
+                <div class="row g-5 justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="login-form-box">
+                            <h3 class="title">Sign in</h3>
+                            <p>Don’t have an account? <a href="#">Sign up</a></p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="current-log-email">Username or email*</label>
+                                    <input type="email" name="current-log-email" id="current-log-email" placeholder="Email or username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="current-log-password">Password*</label>
+                                    <input type="password" name="current-log-password" id="current-log-password" placeholder="Password">
+                                    <span class="password-show"><i class="icon-76"></i></span>
+                                </div>
+                                <div class="form-group chekbox-area">
+                                    <div class="edu-form-check">
+                                        <input type="checkbox" id="remember-me">
+                                        <label for="remember-me">Remember Me</label>
                                     </div>
-                                    <div id="my-account-1" class="panel-collapse collapse show" data-bs-parent="#faq">
-                                        <div class="panel-body">
-                                            <div class="myaccount-info-wrapper">
-                                                <!-- <div class="account-info-wrapper">
-                                                    <h4>My Account Information</h4>
-                                                    <h5>Your Personal Details</h5>
-                                                </div> -->
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Prénom</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Nom</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Email</label>
-                                                            <input type="email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Téléphone</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Fax</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div> -->
-                                                </div>
-                                                <div class="billing-back-btn">
-                                                    <!-- <div class="billing-back">
-                                                        <a href="#"><i class="fa fa-arrow-up"></i> back</a>
-                                                    </div> -->
-                                                    <div class="billing-btn">
-                                                        <button type="submit">Enregistrer</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <a href="#" class="password-reset">Lost your password?</a>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="edu-btn btn-medium">Sign in <i class="icon-4"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="login-form-box registration-form">
+                            <h3 class="title">Registration</h3>
+                            <p>Already have an account? <a href="#">Sign in</a></p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="reg-name">Name*</label>
+                                    <input type="text" name="reg-name" id="reg-name" placeholder="Full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="log-email">Username or email*</label>
+                                    <input type="email" name="log-email" id="log-email" placeholder="Email or username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="log-password">Password*</label>
+                                    <input type="password" name="log-password" id="log-password" placeholder="Password">
+                                    <span class="password-show"><i class="icon-76"></i></span>
+                                </div>
+                                <div class="form-group chekbox-area">
+                                    <div class="edu-form-check">
+                                        <input type="checkbox" id="terms-condition">
+                                        <label for="terms-condition">I agree the User Agreement and <a href="terms-condition.html">Terms & Condition.</a> </label>
                                     </div>
                                 </div>
-                                <div class="panel panel-default single-my-account">
-                                    <div class="panel-heading my-account-title">
-                                        <h3 class="panel-title"><span>2 .</span> <a data-bs-toggle="collapse" href="#my-account-2">Changez votre mot de passe</a></h3>
-                                    </div>
-                                    <div id="my-account-2" class="panel-collapse collapse" data-bs-parent="#faq">
-                                        <div class="panel-body">
-                                            <div class="myaccount-info-wrapper">
-                                                <!-- div class="account-info-wrapper">
-                                                    <h4>Change Password</h4>
-                                                    <h5>Your Password</h5>
-                                                </div> -->
-                                                <div class="row">
-                                                    <div class="col-lg-12 col-md-12">
-                                                        <div class="billing-info">
-                                                            <label>Password</label>
-                                                            <input type="password">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12">
-                                                        <div class="billing-info">
-                                                            <label>Password Confirm</label>
-                                                            <input type="password">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="billing-back-btn">
-                                                    <!-- <div class="billing-back">
-                                                        <a href="#"><i class="fa fa-arrow-up"></i> back</a>
-                                                    </div> -->
-                                                    <div class="billing-btn">
-                                                        <button type="submit">Enregistrer</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <button type="button" class="edu-btn btn-medium">Create Account <i class="icon-4"></i></button>
                                 </div>
-                                <!-- <div class="panel panel-default single-my-account">
-                                    <div class="panel-heading my-account-title">
-                                        <h3 class="panel-title"><span>3 .</span> <a data-bs-toggle="collapse" href="#my-account-3">Modify your address book entries   </a></h3>
-                                    </div>
-                                    <div id="my-account-3" class="panel-collapse collapse" data-bs-parent="#faq">
-                                        <div class="panel-body">
-                                            <div class="myaccount-info-wrapper">
-                                                <div class="account-info-wrapper">
-                                                    <h4>Address Book Entries</h4>
-                                                </div>
-                                                <div class="entries-wrapper">
-                                                    <div class="row">
-                                                        <div class="col-md-6 d-flex align-items-center justify-content-center">
-                                                            <div class="entries-info text-center">
-                                                                <p>Keith L. Castro </p>
-                                                                <p>  559 Pratt Avenue </p>
-                                                                <p> Orchards, WA 98662 </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 d-flex align-items-center justify-content-center">
-                                                            <div class="entries-edit-delete text-center">
-                                                                <button class="edit">Edit</button>
-                                                                <button>Delete</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="billing-back-btn">
-                                                    <div class="billing-back">
-                                                        <a href="#"><i class="fa fa-arrow-up"></i> back</a>
-                                                    </div>
-                                                    <div class="billing-btn">
-                                                        <button type="submit">Continue</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <ul class="shape-group">
+                    <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
+                    <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
+                    <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
+                </ul>
             </div>
-        </div> 
-        <TheFooter />
+        </section>
+
+        <FooterOne />
     </div>
 </template>
 
 <script>
     export default {
         components: {
-            TheHeader: () => import("@/components/TheHeader"),
-            Breadcrumb: () => import("@/components/Breadcrumb"),
-            TheFooter: () => import("@/components/TheFooter"),
+            HeaderOne: () => import("@/components/header/HeaderOne"),
+            BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
+            FooterOne: () => import("@/components/footer/FooterOne"),
+            MouseMove: () => import('@/components/animation/MouseMove')
         },
         head() {
             return {
-                title: "My Account"
+                title: 'Terms & Condition'
             }
         }
     }
