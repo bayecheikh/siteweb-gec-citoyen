@@ -80,8 +80,8 @@
         </li>
         <li class="has-droupdown"><n-link to="">Contact</n-link>
             <ul class="submenu">
-                <li><n-link to="/contact-us">Contact Us</n-link></li>
-                <li><n-link to="/contact-me">Contact Me</n-link></li>
+                <li><n-link to="/contact-us">Contact Us </n-link></li>
+                <li><n-link to="/contact-me">Contact Me </n-link></li>
             </ul>
         </li>
     </ul>
