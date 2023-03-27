@@ -1,113 +1,56 @@
 <template>
-    <div class="edu-course-area course-area-3 bg-lighten04 pb-5">
-       <div class="container mb-6">
-          <SectionTitle preTitle="" title='' alignment='section-center' />
-          <div class="isotope-wrapper">
-             <div class="isotop-button isotop-filter nav">
-                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#online" role="tab">Connexion</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#coordonnees" role="tab">Vos coordonnées</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#undergraduate" role="tab">Trouvez le ministère</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#graduate" role="tab">Contenu du courrier</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#validation" role="tab">Validation</button>
-                
-             </div>
-             <div class="tab-content">
-                <div class="tab-pane fade show active" id="online" role="tabpanel">
-                   <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-6">
-                            <Connexion />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
+    <div class="edu-course-area course-area-3 section-gap-large bg-lighten04">
+        <div class="container">
+            <SectionTitle preTitle="Popular Courses" title='Academic Programs' alignment='section-center' />
+            
+            <div class="isotope-wrapper">
+                <div class="isotop-button isotop-filter nav">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#undergraduate" role="tab">Undergraduate Program</button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#graduate" role="tab">Graduate Program</button>
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#online" role="tab">Online Program</button>
                 </div>
-                <div class="tab-pane fade" id="coordonnees" role="tabpanel">
-                   <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-6">
-                            <Coordonnees />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="undergraduate" role="tabpanel">
+                        <div class="row g-5">
+                            <div class="col-md-6 col-lg-4" v-for="(course) in courseData.universityCourses.slice(0, 3)" :key="course.id">
+                                <CourseTypeTwo :course="course" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="graduate" role="tabpanel">
+                        <div class="row g-5">
+                            <div class="col-md-6 col-lg-4" v-for="(course) in courseData.universityCourses.slice(0, 2)" :key="course.id">
+                                <CourseTypeTwo :course="course" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="online" role="tabpanel">
+                        <div class="row g-5">
+                            <div class="col-md-6 col-lg-4" v-for="(course) in courseData.universityCourses.slice(2, 3)" :key="course.id">
+                                <CourseTypeTwo :course="course" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="undergraduate" role="tabpanel">
-                    <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-12 pt-4">
-                            <Ministeres />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                <div class="tab-pane fade" id="graduate" role="tabpanel">
-                    <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-8 pt-4">
-                            <Contenu />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                <div class="tab-pane fade" id="validation" role="tabpanel">
-                    <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-8 pt-4">
-                            <Validation />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                
-             </div>
-          </div>
-       </div>
-       <ul class="shape-group">
-          <li class="shape-1">
-             <img src="/images/others/map-shape-3.png" alt="Shape">
-          </li>
-          <li class="shape-2">
-             <img src="/images/others/map-shape-3.png" alt="Shape">
-          </li>
-       </ul>
+            </div>
+        </div>
+        <ul class="shape-group">
+            <li class="shape-1">
+                <img src="/images/others/map-shape-3.png" alt="Shape">
+            </li>
+            <li class="shape-2">
+                <img src="/images/others/map-shape-3.png" alt="Shape">
+            </li>
+        </ul>
     </div>
- </template>
- <script>
+</template>
+
+<script>
     import courseData from '~/data/course';
     export default {
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle'),
-            CourseTypeTwo: () => import('@/components/course/CourseTypeTwo'),
-            Connexion: () => import("@/components/home-online-academy/Connexion"),
-            Coordonnees: () => import("@/components/home-online-academy/Coordonnees"),
-            Ministeres: () => import("@/components/home-online-academy/Ministeres"),
-            Contenu: () => import("@/components/home-online-academy/Contenu"),
-            Validation: () => import("@/components/home-online-academy/Validation"),
-            Previsualisation: () => import("@/components/home-online-academy/Previsualisation"),
+            CourseTypeTwo: () => import('@/components/course/CourseTypeTwo')
         },
         data () {
             return {
@@ -115,43 +58,37 @@
             }
         }
     }
- </script>
- <style lang="scss">
+</script>
+
+<style lang="scss">
     .course-area-3 {
-    .isotop-button {
-    button {
-    &:hover,
-    &.active {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
+        .isotop-button {
+            button {
+                &:hover,
+                &.active {
+                    background-color: var(--color-secondary);
+                    color: var(--color-white);
+                }
+                &.active:after {
+                    bottom: -10px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
     }
-    &.active:after {
-    bottom: -10px;
-    visibility: visible;
-    opacity: 1;
-    }
-    }
-    }
-    }
+
     .dark-mode {
-    .course-area-3 { 
-    .isotop-button {
-    button {
-    &:hover,
-    &.active {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
+        .course-area-3 { 
+            .isotop-button {
+                button {
+                    &:hover,
+                    &.active {
+                        background-color: var(--color-secondary);
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
     }
-    }
-    }
-    }
-    }
-    .login-form-box {
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.08);
-  padding: 40px 50px !important;
-  border-radius: 5px;
-  background-color: #ffffff;
-  background-color: var(--color-white);
-}
- </style>
- 
+</style>
