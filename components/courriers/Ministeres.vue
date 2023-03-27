@@ -1,60 +1,34 @@
 <template>
-    <div class="login-form-box registration-form">
-        <h3 class="title"></h3>
-        <form class="row">
-            <div class="form-group col-6">
-                <h5 for="reg-name">Nom*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.nom}}</p>
+    <div class="edu-categorie-area " id="categories">
+        <div class="container">
+
+            <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 pt-4 pb-4">
+                <div 
+                    class="col" 
+                    data-aos-delay="100" 
+                    data-aos="fade-up" 
+                    data-aos-duration="800" 
+                    v-for="(category, index) in categories" :key="index"
+                >
+                    <div class="categorie-grid categorie-style-3" :class="category.colorClass" @click="submitMinistere(category)">
+                        <div class="icon" :class="category.extraClass">
+                            <i :class="category.iconClass"></i>
+                        </div>
+                        <div class="content">
+                            <h5 class="title">{{ category.title }}</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group col-6">
-                <h5 for="reg-name">Prénom*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.prenom}}</p>
-            </div>
-            <div class="form-group col-6">
-                <h5 for="log-email">Email*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.email}}</p>
-            </div>
-            <div class="form-group col-6">
-                <h5 for="reg-name">Adresse*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.adresse}}</p>
-            </div>
-            <div class="form-group col-6">
-                <h5 for="reg-name">Téléphone*</h5>
-                <p>lorum ipsum</p>
-            </div>
-            <hr>
-            <div class="form-group col-12">
-                <h5 for="reg-name">Ministère</h5>
-                <p>{{this.detailministere && this.detailministere.nom}}</p>
-            </div>
-            <hr>
-            <div class="form-group col-12">
-                <h5 for="reg-name">Objet*</h5>
-                <p>{{this.detailcontenu && this.detailcontenu.objet}}</p>
-            </div>
-            <div class="form-group col-12">
-                <h5 for="reg-name">Message*</h5>
-                <p>{{this.detailcontenu && this.detailcontenu.message}}</p>
-            </div>
-            
-            <div class="form-group col-4">
-                <button type="button" class="edu-btn btn-medium">Confirmer <i class="icon-4"></i></button>
-            </div>
-        </form>
+        </div>
     </div>
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex'
     export default {
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
-        computed: mapGetters({
-            detailutilisateur: 'coordonnees/detailutilisateur',
-            detailministere: 'ministeres/detailministere',
-            detailcontenu: 'contenus/detailcontenu'
-        }),
         data() {
             return {
                 categories: [
@@ -112,6 +86,23 @@ import { mapMutations, mapGetters } from 'vuex'
                     }
                 ]
             }
-        }
+        },
+        methods: {
+            submitMinistere(item){
+                this.load=true
+                console.log('Données formulaire ++++++: ', item)
+                this.$store.dispatch('ministeres/getDetail',{title:item.title})
+                /* this.$axios.$post('/demandes')
+                .then(async (response) => {
+                    //this.$toast.success(response.message).goAway(2000)
+                    console.log('Données demande Reçu ++++++: ', response)
+
+                }).catch((error) => {
+                    console.log('Code error ++++++: ', error?.response?.data?.message)
+                }).finally(() => {
+                    console.log('Requette envoyé ')
+                }); */
+            },
+        },
     }
 </script>

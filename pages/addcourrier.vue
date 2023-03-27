@@ -2,7 +2,7 @@
     <div id="main-wrapper" class="main-wrapper">
         <HeaderOne />
        
-        <Course />
+        <Form />
         
         <FooterThree />
     </div>
@@ -16,7 +16,7 @@
             Features: () => import("@/components/home-university/Features"),
             About: () => import("@/components/home-university/About"),
             FunFact: () => import("@/components/home-university/FunFact"),
-            Course: () => import("@/components/home-university/Course"),
+            Form: () => import("@/components/courriers/Form"),
             Campus: () => import("@/components/home-university/Campus"),
             TestimonialThree: () => import("@/components/testimonial/TestimonialThree"),
             VideoSection: () => import("@/components/home-university/Video"),

@@ -4,19 +4,19 @@
         <form class="row">
             <div class="form-group col-6">
                 <h5 for="reg-name">Nom*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.nom}}</p>
+                <p>lorum ipsum</p>
             </div>
             <div class="form-group col-6">
                 <h5 for="reg-name">Prénom*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.prenom}}</p>
+                <p>lorum ipsum</p>
             </div>
             <div class="form-group col-6">
                 <h5 for="log-email">Email*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.email}}</p>
+                <p>lorum@ipsum.test</p>
             </div>
             <div class="form-group col-6">
                 <h5 for="reg-name">Adresse*</h5>
-                <p>{{this.detailutilisateur && this.detailutilisateur.adresse}}</p>
+                <p>lorum ipsum</p>
             </div>
             <div class="form-group col-6">
                 <h5 for="reg-name">Téléphone*</h5>
@@ -25,16 +25,16 @@
             <hr>
             <div class="form-group col-12">
                 <h5 for="reg-name">Ministère</h5>
-                <p>{{this.detailministere && this.detailministere.nom}}</p>
+                <p>lorum ipsum</p>
             </div>
             <hr>
             <div class="form-group col-12">
                 <h5 for="reg-name">Objet*</h5>
-                <p>{{this.detailcontenu && this.detailcontenu.objet}}</p>
+                <p>lorum ipsum</p>
             </div>
             <div class="form-group col-12">
                 <h5 for="reg-name">Message*</h5>
-                <p>{{this.detailcontenu && this.detailcontenu.message}}</p>
+                <p>lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum</p>
             </div>
             
             <div class="form-group col-4">
@@ -45,16 +45,10 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex'
     export default {
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
-        computed: mapGetters({
-            detailutilisateur: 'coordonnees/detailutilisateur',
-            detailministere: 'ministeres/detailministere',
-            detailcontenu: 'contenus/detailcontenu'
-        }),
         data() {
             return {
                 categories: [

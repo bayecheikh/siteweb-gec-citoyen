@@ -20,12 +20,12 @@
             </div>
             <div class="form-group col-6">
                 <h5 for="reg-name">Téléphone*</h5>
-                <p>lorum ipsum</p>
+                <p>{{this.detailutilisateur && this.detailutilisateur.telephone}}</p>
             </div>
             <hr>
             <div class="form-group col-12">
                 <h5 for="reg-name">Ministère</h5>
-                <p>{{this.detailministere && this.detailministere.nom}}</p>
+                <p>{{this.detailministere && this.detailministere.title}}</p>
             </div>
             <hr>
             <div class="form-group col-12">
