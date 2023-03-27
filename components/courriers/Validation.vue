@@ -36,9 +36,11 @@
                 <h5 for="reg-name">Message*</h5>
                 <p>{{this.detailcontenu && this.detailcontenu.message}}</p>
             </div>
-            
-            <div class="form-group col-4">
-                <button type="button" class="edu-btn btn-medium">Confirmer <i class="icon-4"></i></button>
+            <div class="form-group col-6">
+            <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+            </div>
+            <div class="form-group col-6">
+                <button @click="submitValidation" type="button" class="edu-btn btn-medium">Confirmer <i class="icon-4"></i></button>
             </div>
         </form>
     </div>
@@ -50,6 +52,7 @@ import { mapMutations, mapGetters } from 'vuex'
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
+        
         computed: mapGetters({
             detailutilisateur: 'coordonnees/detailutilisateur',
             detailministere: 'ministeres/detailministere',
@@ -57,61 +60,30 @@ import { mapMutations, mapGetters } from 'vuex'
         }),
         data() {
             return {
-                categories: [
-                    {
-                        title: "Ministère de l'enseignement",
-                        iconClass: "icon-9",
-                        colorClass: "color-primary-style"
-                    },
-                    {
-                        title: "Ministère de l'éducation",
-                        iconClass: "icon-10",
-                        colorClass: "color-secondary-style"
-                    },
-                    {
-                        title: "Ministère de la santé",
-                        iconClass: "icon-11",
-                        colorClass: "color-extra04-style"
-                    },
-                    {
-                        title: "Ministère du tourisme",
-                        iconClass: "icon-12",
-                        colorClass: "color-tertiary-style"
-                    },
-                    {
-                        title: "Ministère des forces armées",
-                        iconClass: "icon-13",
-                        colorClass: "color-extra02-style"
-                    },
-                    {
-                        title: "Ministére de la recherche",
-                        iconClass: "icon-42",
-                        colorClass: "color-extra07-style",
-                        extraClass: "design-pencil-icon"
-                    },
-                    {
-                        title: "Ministére des finances",
-                        iconClass: "icon-14",
-                        colorClass: "color-extra06-style"
-                    },
-                    {
-                        title: "Ministère de l'economie",
-                        iconClass: "icon-16",
-                        colorClass: "color-extra03-style",
-                        extraClass: "laptop-icon"
-                    },
-                    {
-                        title: "Ministère de l'urbanisme",
-                        iconClass: "icon-17",
-                        colorClass: "color-extra01-style"
-                    },
-                    {
-                        title: "Ministère des transports",
-                        iconClass: "icon-43",
-                        colorClass: "color-extra05-style"
-                    }
-                ]
+                
             }
-        }
+        },
+        methods: {
+            submitValidation(){
+                this.load=true
+                console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu})
+                this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement. Merci!'})
+                this.$router.push('/');
+                /* this.$axios.$post('/demandes')
+                .then(async (response) => {
+                    //this.$toast.success(response.message).goAway(2000)
+                    this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement !'})
+                    console.log('Données demande Reçu ++++++: ', response)
+                    this.$router.push('/');
+
+                }).catch((error) => {
+                    console.log('Code error ++++++: ', error?.response?.data?.message)
+                }).finally(() => {
+                    console.log('Requette envoyé ')
+                }); */
+                
+
+            },
+        },
     }
 </script>

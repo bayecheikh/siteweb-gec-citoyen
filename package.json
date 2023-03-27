@@ -11,7 +11,9 @@
     },
     "dependencies": {
         "@growthbunker/vuetimeline": "^0.1.17",
+        "@nuxtjs/axios": "^5.13.6",
         "@nuxtjs/style-resources": "^1.2.1",
+        "@nuxtjs/toast": "^3.3.1",
         "aos": "^2.3.4",
         "core-js": "^3.18.2",
         "emailjs-com": "^3.2.0",

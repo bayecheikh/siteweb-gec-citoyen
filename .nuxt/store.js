@@ -37,6 +37,10 @@ let store = {};
   resolveStoreModules(require('..\\store\\ministeres\\getters.js'), 'ministeres/getters.js')
   resolveStoreModules(require('..\\store\\ministeres\\mutations.js'), 'ministeres/mutations.js')
   resolveStoreModules(require('..\\store\\ministeres\\state.js'), 'ministeres/state.js')
+  resolveStoreModules(require('..\\store\\toast\\actions.js'), 'toast/actions.js')
+  resolveStoreModules(require('..\\store\\toast\\getters.js'), 'toast/getters.js')
+  resolveStoreModules(require('..\\store\\toast\\mutations.js'), 'toast/mutations.js')
+  resolveStoreModules(require('..\\store\\toast\\state.js'), 'toast/state.js')
 
   // If the environment supports hot reloading...
 
@@ -63,6 +67,10 @@ let store = {};
       '..\\store\\ministeres\\getters.js',
       '..\\store\\ministeres\\mutations.js',
       '..\\store\\ministeres\\state.js',
+      '..\\store\\toast\\actions.js',
+      '..\\store\\toast\\getters.js',
+      '..\\store\\toast\\mutations.js',
+      '..\\store\\toast\\state.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()

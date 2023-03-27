@@ -14,6 +14,8 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_plugin_7b356d66 from 'nuxt_plugin_plugin_7b356d66' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_09494a89 from 'nuxt_plugin_axios_09494a89' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_toast_550cd190 from 'nuxt_plugin_toast_550cd190' // Source: .\\toast.js (mode: 'client')
 import nuxt_plugin_pluginserver_fe1a2980 from 'nuxt_plugin_pluginserver_fe1a2980' // Source: .\\color-mode\\plugin.server.js (mode: 'server')
 import nuxt_plugin_pluginclient_1b3979b8 from 'nuxt_plugin_pluginclient_1b3979b8' // Source: .\\color-mode\\plugin.client.js (mode: 'client')
 import nuxt_plugin_vueawesomeswiper_5ce03f58 from 'nuxt_plugin_vueawesomeswiper_5ce03f58' // Source: ..\\plugins\\vue-awesome-swiper.js (mode: 'all')
@@ -24,6 +26,7 @@ import nuxt_plugin_vueinlinesvg_56f4a20a from 'nuxt_plugin_vueinlinesvg_56f4a20a
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ..\\plugins\\observe-visibility.js (mode: 'all')
 import nuxt_plugin_vuemasonrycss_6d616ab9 from 'nuxt_plugin_vuemasonrycss_6d616ab9' // Source: ..\\plugins\\vue-masonry-css.js (mode: 'all')
 import nuxt_plugin_vuetimeline_6e66edc6 from 'nuxt_plugin_vuetimeline_6e66edc6' // Source: ..\\plugins\\vuetimeline.js (mode: 'all')
+import nuxt_plugin_goToTab_8fb3dcca from 'nuxt_plugin_goToTab_8fb3dcca' // Source: ..\\plugins\\goToTab.js (mode: 'all')
 import nuxt_plugin_bootstrapbundlemin_61132cca from 'nuxt_plugin_bootstrapbundlemin_61132cca' // Source: ..\\plugins\\bootstrap.bundle.min.js (mode: 'client')
 import nuxt_plugin_aos_5e4622cf from 'nuxt_plugin_aos_5e4622cf' // Source: ..\\plugins\\aos (mode: 'client')
 
@@ -226,6 +229,14 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_7b356d66(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_axios_09494a89 === 'function') {
+    await nuxt_plugin_axios_09494a89(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_toast_550cd190 === 'function') {
+    await nuxt_plugin_toast_550cd190(app.context, inject)
+  }
+
   if (process.server && typeof nuxt_plugin_pluginserver_fe1a2980 === 'function') {
     await nuxt_plugin_pluginserver_fe1a2980(app.context, inject)
   }
@@ -264,6 +275,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vuetimeline_6e66edc6 === 'function') {
     await nuxt_plugin_vuetimeline_6e66edc6(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_goToTab_8fb3dcca === 'function') {
+    await nuxt_plugin_goToTab_8fb3dcca(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_bootstrapbundlemin_61132cca === 'function') {

@@ -1,88 +1,86 @@
 <template>
-    <div class="edu-course-area course-area-3 bg-lighten04 pb-5">
+    <div class="edu-course-area course-area-3 bg-lighten04 pb-5 pt-5">
        <div class="container mb-6">
           <SectionTitle preTitle="" title='' alignment='section-center' />
           <div class="isotope-wrapper">
              <div class="isotop-button isotop-filter nav">
-                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#online" role="tab">Connexion</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#coordonnees" role="tab">Vos coordonnées</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#undergraduate" role="tab">Trouvez le ministère</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#graduate" role="tab">Contenu du courrier</button>
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#validation" role="tab">Validation</button>
-                
+                <button @click="$goToTab('connexion')" :class="'nav-link '+(detailactive_step.id=='connexion'?'active':'')">Connexion</button>
+                <button @click="$goToTab('coordonnees')" :class="'nav-link '+(detailactive_step.id=='coordonnees'?'active':'')">Vos coordonnées</button>
+                <button @click="$goToTab('ministeres')" :class="'nav-link '+(detailactive_step.id=='ministeres'?'active':'')" >Trouvez le ministère</button>
+                <button @click="$goToTab('contenu')" :class="'nav-link '+(detailactive_step.id=='contenu'?'active':'')" >Contenu du courrier</button>
+                <button @click="$goToTab('validation')" :class="'nav-link '+(detailactive_step.id=='validation'?'active':'')">Validation</button>               
              </div>
              <div class="tab-content">
-                <div class="tab-pane fade show active" id="online" role="tabpanel">
-                   <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-6">
-                            <Connexion />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                <div class="tab-pane fade" id="coordonnees" role="tabpanel">
-                   <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-6">
-                            <Coordonnees />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                <div class="tab-pane fade" id="undergraduate" role="tabpanel">
-                    <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-12 pt-4">
-                            <Ministeres />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                <div class="tab-pane fade" id="graduate" role="tabpanel">
-                    <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-8 pt-4">
-                            <Contenu />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                <div class="tab-pane fade" id="validation" role="tabpanel">
-                    <div class="container position-relative">
-                      <div class="row g-5 justify-content-center">
-                         <div class="col-lg-8 pt-4">
-                            <Validation />
-                         </div>
-                      </div>
-                      <ul class="shape-group">
-                         <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                         <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                         <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                      </ul>
-                   </div>
-                </div>
-                
+               <div :class="'tab-pane fade '+(detailactive_step.id=='connexion'?'show active':'')" id="online" role="tabpanel">
+                  <div class="container position-relative">
+                     <div class="row g-5 justify-content-center">
+                        <div class="col-lg-6">
+                           <Connexion />
+                        </div>
+                     </div>
+                     <ul class="shape-group">
+                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
+                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
+                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
+                     </ul>
+                  </div>
+               </div>
+               <div :class="'tab-pane fade '+(detailactive_step.id=='coordonnees'?'show active':'')" id="coordonnees" role="tabpanel">
+                  <div class="container position-relative">
+                     <div class="row g-5 justify-content-center">
+                        <div class="col-lg-8">
+                           <Coordonnees />
+                        </div>
+                     </div>
+                     <ul class="shape-group">
+                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
+                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
+                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
+                     </ul>
+                  </div>
+               </div>
+               <div :class="'tab-pane fade '+(detailactive_step.id=='ministeres'?'show active':'')" id="undergraduate" role="tabpanel">
+                  <div class="container position-relative">
+                     <div class="row g-5 justify-content-center">
+                        <div class="col-lg-12 pt-4">
+                           <Ministeres />
+                        </div>
+                     </div>
+                     <ul class="shape-group">
+                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
+                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
+                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
+                     </ul>
+                  </div>
+               </div>
+               <div :class="'tab-pane fade '+(detailactive_step.id=='contenu'?'show active':'')" id="graduate" role="tabpanel">
+                  <div class="container position-relative">
+                     <div class="row g-5 justify-content-center">
+                        <div class="col-lg-8 pt-4">
+                           <Contenu />
+                        </div>
+                     </div>
+                     <ul class="shape-group">
+                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
+                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
+                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
+                     </ul>
+                  </div>
+               </div>
+               <div :class="'tab-pane fade '+(detailactive_step.id=='validation'?'show active':'')" id="validation" role="tabpanel">
+                  <div class="container position-relative">
+                     <div class="row g-5 justify-content-center">
+                        <div class="col-lg-8 pt-4">
+                           <Validation />
+                        </div>
+                     </div>
+                     <ul class="shape-group">
+                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
+                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
+                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
+                     </ul>
+                  </div>
+               </div>              
              </div>
           </div>
        </div>
@@ -107,6 +105,9 @@
             Contenu: () => import("@/components/courriers/Contenu"),
             Validation: () => import("@/components/courriers/Validation"),
         },
+        mounted: function() { 
+         this.$store.dispatch('active_step/getDetail',{id:'connexion'})        
+        },
         computed: mapGetters({
             detailactive_step: 'active_step/detailactive_step',
         }),
@@ -114,7 +115,9 @@
             return {
                 courseData
             }
-        }
+        },
+        methods: {
+        },
     }
  </script>
  <style lang="scss">

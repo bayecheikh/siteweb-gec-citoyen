@@ -19,7 +19,7 @@
                 <a href="#" class="password-reset">Mot de passe oublié</a>
             </div>
             <div class="form-group">
-                <button @click="submitConnexion" type="button" class="edu-btn btn-medium">Suivant <i class="icon-4"></i></button>
+                <button @click="submitConnexion" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
             </div>
         </form>
     </div>
@@ -55,6 +55,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
                 this.$store.dispatch('coordonnees/getDetail',{...this.model})
+                
                 this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
 
             },

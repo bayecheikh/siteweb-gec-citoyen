@@ -19,6 +19,13 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="form-group col-6 justify-content-end">
+                <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précedent</button>
+                </div>
+                <div class="form-group col-6 justify-content-end">
+                    <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium float-end">Suivant <i class="icon-east"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -92,6 +99,7 @@
                 this.load=true
                 console.log('Données formulaire ++++++: ', item)
                 this.$store.dispatch('ministeres/getDetail',{title:item.title})
+                this.$store.dispatch('active_step/getDetail',{id:'contenu'})
                 /* this.$axios.$post('/demandes')
                 .then(async (response) => {
                     //this.$toast.success(response.message).goAway(2000)
