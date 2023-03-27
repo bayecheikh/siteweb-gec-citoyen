@@ -4,68 +4,52 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _618ac95e = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
-const _b88ff88e = () => interopDefault(import('..\\pages\\activites\\index.vue' /* webpackChunkName: "pages/activites/index" */))
-const _d9a69dfe = () => interopDefault(import('..\\pages\\blog\\index.vue' /* webpackChunkName: "pages/blog/index" */))
-const _6a49e6d4 = () => interopDefault(import('..\\pages\\candidatures\\index.vue' /* webpackChunkName: "pages/candidatures/index" */))
-const _888cfe42 = () => interopDefault(import('..\\pages\\cart.vue' /* webpackChunkName: "pages/cart" */))
-const _7080e485 = () => interopDefault(import('..\\pages\\checkout.vue' /* webpackChunkName: "pages/checkout" */))
-const _1176ec76 = () => interopDefault(import('..\\pages\\compare.vue' /* webpackChunkName: "pages/compare" */))
-const _2c7abe31 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
-const _9c91e6ec = () => interopDefault(import('..\\pages\\contenus\\index.vue' /* webpackChunkName: "pages/contenus/index" */))
-const _1e09e449 = () => interopDefault(import('..\\pages\\gestion-rh\\index.vue' /* webpackChunkName: "pages/gestion-rh/index" */))
-const _20577615 = () => interopDefault(import('..\\pages\\home-cosmetics.vue' /* webpackChunkName: "pages/home-cosmetics" */))
-const _53139426 = () => interopDefault(import('..\\pages\\home-fashion-five.vue' /* webpackChunkName: "pages/home-fashion-five" */))
-const _e1095ecc = () => interopDefault(import('..\\pages\\home-fashion-four.vue' /* webpackChunkName: "pages/home-fashion-four" */))
-const _0a8de86e = () => interopDefault(import('..\\pages\\home-fashion-seven.vue' /* webpackChunkName: "pages/home-fashion-seven" */))
-const _3820a1c4 = () => interopDefault(import('..\\pages\\home-fashion-six.vue' /* webpackChunkName: "pages/home-fashion-six" */))
-const _1aed7e4c = () => interopDefault(import('..\\pages\\home-fashion-three.vue' /* webpackChunkName: "pages/home-fashion-three" */))
-const _303aef88 = () => interopDefault(import('..\\pages\\home-fashion-two.vue' /* webpackChunkName: "pages/home-fashion-two" */))
-const _74cd03f4 = () => interopDefault(import('..\\pages\\login-register.vue' /* webpackChunkName: "pages/login-register" */))
-const _f37d5bfa = () => interopDefault(import('..\\pages\\marches-publics\\index.vue' /* webpackChunkName: "pages/marches-publics/index" */))
-const _d72d62c8 = () => interopDefault(import('..\\pages\\missions\\index.vue' /* webpackChunkName: "pages/missions/index" */))
-const _7cabf4ea = () => interopDefault(import('..\\pages\\my-account.vue' /* webpackChunkName: "pages/my-account" */))
-const _464c322e = () => interopDefault(import('..\\pages\\postes-peages\\index.vue' /* webpackChunkName: "pages/postes-peages/index" */))
-const _ef11ded4 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
-const _c27a2092 = () => interopDefault(import('..\\pages\\qui-sommes-nous\\index.vue' /* webpackChunkName: "pages/qui-sommes-nous/index" */))
-const _b27df496 = () => interopDefault(import('..\\pages\\shop.vue' /* webpackChunkName: "pages/shop" */))
-const _448480d7 = () => interopDefault(import('..\\pages\\shop-grid-full-width.vue' /* webpackChunkName: "pages/shop-grid-full-width" */))
-const _00dbcb1f = () => interopDefault(import('..\\pages\\shop-grid-no-sidebar.vue' /* webpackChunkName: "pages/shop-grid-no-sidebar" */))
-const _060a852c = () => interopDefault(import('..\\pages\\shop-grid-right-sidebar.vue' /* webpackChunkName: "pages/shop-grid-right-sidebar" */))
-const _f9b9fb74 = () => interopDefault(import('..\\pages\\shop-grid-two-column.vue' /* webpackChunkName: "pages/shop-grid-two-column" */))
-const _c10fff02 = () => interopDefault(import('..\\pages\\shop-list-full-width.vue' /* webpackChunkName: "pages/shop-list-full-width" */))
-const _5caeeb74 = () => interopDefault(import('..\\pages\\shop-list-standard.vue' /* webpackChunkName: "pages/shop-list-standard" */))
-const _5bc172fd = () => interopDefault(import('..\\pages\\terms-conditions.vue' /* webpackChunkName: "pages/terms-conditions" */))
-const _07b2f584 = () => interopDefault(import('..\\pages\\wishlist.vue' /* webpackChunkName: "pages/wishlist" */))
-const _69a76321 = () => interopDefault(import('..\\pages\\blog\\blog-right-sidebar.vue' /* webpackChunkName: "pages/blog/blog-right-sidebar" */))
-const _09a7bf66 = () => interopDefault(import('..\\pages\\blog\\blog-without-sidebar.vue' /* webpackChunkName: "pages/blog/blog-without-sidebar" */))
-const _71b9ce38 = () => interopDefault(import('..\\pages\\contenus\\blog-right-sidebar.vue' /* webpackChunkName: "pages/contenus/blog-right-sidebar" */))
-const _485021a4 = () => interopDefault(import('..\\pages\\contenus\\blog-without-sidebar.vue' /* webpackChunkName: "pages/contenus/blog-without-sidebar" */))
-const _8f925dd0 = () => interopDefault(import('..\\pages\\gestion-rh\\decret-statut.vue' /* webpackChunkName: "pages/gestion-rh/decret-statut" */))
-const _04755443 = () => interopDefault(import('..\\pages\\gestion-rh\\mission.vue' /* webpackChunkName: "pages/gestion-rh/mission" */))
-const _08ea34b2 = () => interopDefault(import('..\\pages\\gestion-rh\\organnigramme.vue' /* webpackChunkName: "pages/gestion-rh/organnigramme" */))
-const _532c365c = () => interopDefault(import('..\\pages\\marches-publics\\decret-statut.vue' /* webpackChunkName: "pages/marches-publics/decret-statut" */))
-const _3c883b7d = () => interopDefault(import('..\\pages\\marches-publics\\mission.vue' /* webpackChunkName: "pages/marches-publics/mission" */))
-const _271d486c = () => interopDefault(import('..\\pages\\marches-publics\\organnigramme.vue' /* webpackChunkName: "pages/marches-publics/organnigramme" */))
-const _0fdaf966 = () => interopDefault(import('..\\pages\\missions\\blog-right-sidebar.vue' /* webpackChunkName: "pages/missions/blog-right-sidebar" */))
-const _3a598d5c = () => interopDefault(import('..\\pages\\missions\\blog-without-sidebar.vue' /* webpackChunkName: "pages/missions/blog-without-sidebar" */))
-const _4aab9890 = () => interopDefault(import('..\\pages\\postes-peages\\decret-statut.vue' /* webpackChunkName: "pages/postes-peages/decret-statut" */))
-const _4f4f2ee3 = () => interopDefault(import('..\\pages\\postes-peages\\mission.vue' /* webpackChunkName: "pages/postes-peages/mission" */))
-const _2b5d9752 = () => interopDefault(import('..\\pages\\postes-peages\\organnigramme.vue' /* webpackChunkName: "pages/postes-peages/organnigramme" */))
-const _d73720c2 = () => interopDefault(import('..\\pages\\product\\product-affiliate.vue' /* webpackChunkName: "pages/product/product-affiliate" */))
-const _161c8e86 = () => interopDefault(import('..\\pages\\qui-sommes-nous\\decret-statut.vue' /* webpackChunkName: "pages/qui-sommes-nous/decret-statut" */))
-const _3b193c31 = () => interopDefault(import('..\\pages\\qui-sommes-nous\\mission.vue' /* webpackChunkName: "pages/qui-sommes-nous/mission" */))
-const _66cff220 = () => interopDefault(import('..\\pages\\qui-sommes-nous\\organnigramme.vue' /* webpackChunkName: "pages/qui-sommes-nous/organnigramme" */))
-const _bbfd3b1e = () => interopDefault(import('..\\pages\\activites\\_slug.vue' /* webpackChunkName: "pages/activites/_slug" */))
-const _dd13e08e = () => interopDefault(import('..\\pages\\blog\\_slug.vue' /* webpackChunkName: "pages/blog/_slug" */))
-const _9fff297c = () => interopDefault(import('..\\pages\\contenus\\_slug.vue' /* webpackChunkName: "pages/contenus/_slug" */))
-const _1c534301 = () => interopDefault(import('..\\pages\\gestion-rh\\_slug.vue' /* webpackChunkName: "pages/gestion-rh/_slug" */))
-const _f6ea9e8a = () => interopDefault(import('..\\pages\\marches-publics\\_slug.vue' /* webpackChunkName: "pages/marches-publics/_slug" */))
-const _da9aa558 = () => interopDefault(import('..\\pages\\missions\\_slug.vue' /* webpackChunkName: "pages/missions/_slug" */))
-const _49b974be = () => interopDefault(import('..\\pages\\postes-peages\\_slug.vue' /* webpackChunkName: "pages/postes-peages/_slug" */))
-const _e244488c = () => interopDefault(import('..\\pages\\product\\_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
-const _c5e76322 = () => interopDefault(import('..\\pages\\qui-sommes-nous\\_slug.vue' /* webpackChunkName: "pages/qui-sommes-nous/_slug" */))
-const _fd7ab7ba = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _2f117ed5 = () => interopDefault(import('..\\pages\\about-us-one.vue' /* webpackChunkName: "pages/about-us-one" */))
+const _3338404d = () => interopDefault(import('..\\pages\\about-us-three.vue' /* webpackChunkName: "pages/about-us-three" */))
+const _47792fbb = () => interopDefault(import('..\\pages\\about-us-two.vue' /* webpackChunkName: "pages/about-us-two" */))
+const _3f0e774e = () => interopDefault(import('..\\pages\\coming-soon.vue' /* webpackChunkName: "pages/coming-soon" */))
+const _a56b427a = () => interopDefault(import('..\\pages\\contact-me.vue' /* webpackChunkName: "pages/contact-me" */))
+const _8893266e = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
+const _88c8c370 = () => interopDefault(import('..\\pages\\distant-learning.vue' /* webpackChunkName: "pages/distant-learning" */))
+const _1a591d28 = () => interopDefault(import('..\\pages\\faq.vue' /* webpackChunkName: "pages/faq" */))
+const _2a3821bf = () => interopDefault(import('..\\pages\\gallery-grid.vue' /* webpackChunkName: "pages/gallery-grid" */))
+const _5a5ed048 = () => interopDefault(import('..\\pages\\gallery-masonry.vue' /* webpackChunkName: "pages/gallery-masonry" */))
+const _cc2461b8 = () => interopDefault(import('..\\pages\\kindergarten.vue' /* webpackChunkName: "pages/kindergarten" */))
+const _1d366143 = () => interopDefault(import('..\\pages\\kitchen-coach.vue' /* webpackChunkName: "pages/kitchen-coach" */))
+const _c04eee92 = () => interopDefault(import('..\\pages\\landing-demo.vue' /* webpackChunkName: "pages/landing-demo" */))
+const _d717b82c = () => interopDefault(import('..\\pages\\my-account.vue' /* webpackChunkName: "pages/my-account" */))
+const _658a9450 = () => interopDefault(import('..\\pages\\online-academy.vue' /* webpackChunkName: "pages/online-academy" */))
+const _520e6419 = () => interopDefault(import('..\\pages\\pricing-table.vue' /* webpackChunkName: "pages/pricing-table" */))
+const _db863116 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
+const _ddb8c1e4 = () => interopDefault(import('..\\pages\\purchase-guide.vue' /* webpackChunkName: "pages/purchase-guide" */))
+const _61ffd2a4 = () => interopDefault(import('..\\pages\\shop\\index.vue' /* webpackChunkName: "pages/shop/index" */))
+const _42508fe7 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
+const _2ff96e6c = () => interopDefault(import('..\\pages\\university.vue' /* webpackChunkName: "pages/university" */))
+const _59521da8 = () => interopDefault(import('..\\pages\\yoga-instructor.vue' /* webpackChunkName: "pages/yoga-instructor" */))
+const _2cf40b17 = () => interopDefault(import('..\\pages\\blog\\blog-details.vue' /* webpackChunkName: "pages/blog/blog-details" */))
+const _6badc3ce = () => interopDefault(import('..\\pages\\blog\\blog-list.vue' /* webpackChunkName: "pages/blog/blog-list" */))
+const _761544cc = () => interopDefault(import('..\\pages\\blog\\blog-masonry.vue' /* webpackChunkName: "pages/blog/blog-masonry" */))
+const _8f888990 = () => interopDefault(import('..\\pages\\blog\\blog-standard.vue' /* webpackChunkName: "pages/blog/blog-standard" */))
+const _ffd456ee = () => interopDefault(import('..\\pages\\course\\course-details.vue' /* webpackChunkName: "pages/course/course-details" */))
+const _67407124 = () => interopDefault(import('..\\pages\\course\\course-details-2.vue' /* webpackChunkName: "pages/course/course-details-2" */))
+const _67244222 = () => interopDefault(import('..\\pages\\course\\course-details-3.vue' /* webpackChunkName: "pages/course/course-details-3" */))
+const _366335fb = () => interopDefault(import('..\\pages\\course\\course-five.vue' /* webpackChunkName: "pages/course/course-five" */))
+const _72caf26f = () => interopDefault(import('..\\pages\\course\\course-four.vue' /* webpackChunkName: "pages/course/course-four" */))
+const _9864e3a6 = () => interopDefault(import('..\\pages\\course\\course-one.vue' /* webpackChunkName: "pages/course/course-one" */))
+const _792dd9a5 = () => interopDefault(import('..\\pages\\course\\course-three.vue' /* webpackChunkName: "pages/course/course-three" */))
+const _679581da = () => interopDefault(import('..\\pages\\course\\course-two.vue' /* webpackChunkName: "pages/course/course-two" */))
+const _65b07193 = () => interopDefault(import('..\\pages\\event\\event-details.vue' /* webpackChunkName: "pages/event/event-details" */))
+const _11822076 = () => interopDefault(import('..\\pages\\event\\event-grid.vue' /* webpackChunkName: "pages/event/event-grid" */))
+const _347ea91d = () => interopDefault(import('..\\pages\\event\\event-list.vue' /* webpackChunkName: "pages/event/event-list" */))
+const _fd8de69e = () => interopDefault(import('..\\pages\\instructor\\instructor-one.vue' /* webpackChunkName: "pages/instructor/instructor-one" */))
+const _1a93fcf4 = () => interopDefault(import('..\\pages\\instructor\\instructor-profile.vue' /* webpackChunkName: "pages/instructor/instructor-profile" */))
+const _cc9871ae = () => interopDefault(import('..\\pages\\instructor\\instructor-three.vue' /* webpackChunkName: "pages/instructor/instructor-three" */))
+const _ccbe84d2 = () => interopDefault(import('..\\pages\\instructor\\instructor-two.vue' /* webpackChunkName: "pages/instructor/instructor-two" */))
+const _088e10f4 = () => interopDefault(import('..\\pages\\shop\\cart.vue' /* webpackChunkName: "pages/shop/cart" */))
+const _21b5621a = () => interopDefault(import('..\\pages\\shop\\checkout.vue' /* webpackChunkName: "pages/shop/checkout" */))
+const _af39d980 = () => interopDefault(import('..\\pages\\shop\\product-details.vue' /* webpackChunkName: "pages/shop/product-details" */))
+const _8e3119ce = () => interopDefault(import('..\\pages\\shop\\wishlist.vue' /* webpackChunkName: "pages/shop/wishlist" */))
+const _cc2e7338 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -79,252 +63,188 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/about",
-    component: _618ac95e,
-    name: "about"
+    path: "/about-us-one",
+    component: _2f117ed5,
+    name: "about-us-one"
   }, {
-    path: "/activites",
-    component: _b88ff88e,
-    name: "activites"
+    path: "/about-us-three",
+    component: _3338404d,
+    name: "about-us-three"
   }, {
-    path: "/blog",
-    component: _d9a69dfe,
-    name: "blog"
+    path: "/about-us-two",
+    component: _47792fbb,
+    name: "about-us-two"
   }, {
-    path: "/candidatures",
-    component: _6a49e6d4,
-    name: "candidatures"
+    path: "/coming-soon",
+    component: _3f0e774e,
+    name: "coming-soon"
   }, {
-    path: "/cart",
-    component: _888cfe42,
-    name: "cart"
+    path: "/contact-me",
+    component: _a56b427a,
+    name: "contact-me"
   }, {
-    path: "/checkout",
-    component: _7080e485,
-    name: "checkout"
+    path: "/contact-us",
+    component: _8893266e,
+    name: "contact-us"
   }, {
-    path: "/compare",
-    component: _1176ec76,
-    name: "compare"
+    path: "/distant-learning",
+    component: _88c8c370,
+    name: "distant-learning"
   }, {
-    path: "/contact",
-    component: _2c7abe31,
-    name: "contact"
+    path: "/faq",
+    component: _1a591d28,
+    name: "faq"
   }, {
-    path: "/contenus",
-    component: _9c91e6ec,
-    name: "contenus"
+    path: "/gallery-grid",
+    component: _2a3821bf,
+    name: "gallery-grid"
   }, {
-    path: "/gestion-rh",
-    component: _1e09e449,
-    name: "gestion-rh"
+    path: "/gallery-masonry",
+    component: _5a5ed048,
+    name: "gallery-masonry"
   }, {
-    path: "/home-cosmetics",
-    component: _20577615,
-    name: "home-cosmetics"
+    path: "/kindergarten",
+    component: _cc2461b8,
+    name: "kindergarten"
   }, {
-    path: "/home-fashion-five",
-    component: _53139426,
-    name: "home-fashion-five"
+    path: "/kitchen-coach",
+    component: _1d366143,
+    name: "kitchen-coach"
   }, {
-    path: "/home-fashion-four",
-    component: _e1095ecc,
-    name: "home-fashion-four"
-  }, {
-    path: "/home-fashion-seven",
-    component: _0a8de86e,
-    name: "home-fashion-seven"
-  }, {
-    path: "/home-fashion-six",
-    component: _3820a1c4,
-    name: "home-fashion-six"
-  }, {
-    path: "/home-fashion-three",
-    component: _1aed7e4c,
-    name: "home-fashion-three"
-  }, {
-    path: "/home-fashion-two",
-    component: _303aef88,
-    name: "home-fashion-two"
-  }, {
-    path: "/login-register",
-    component: _74cd03f4,
-    name: "login-register"
-  }, {
-    path: "/marches-publics",
-    component: _f37d5bfa,
-    name: "marches-publics"
-  }, {
-    path: "/missions",
-    component: _d72d62c8,
-    name: "missions"
+    path: "/landing-demo",
+    component: _c04eee92,
+    name: "landing-demo"
   }, {
     path: "/my-account",
-    component: _7cabf4ea,
+    component: _d717b82c,
     name: "my-account"
   }, {
-    path: "/postes-peages",
-    component: _464c322e,
-    name: "postes-peages"
+    path: "/online-academy",
+    component: _658a9450,
+    name: "online-academy"
+  }, {
+    path: "/pricing-table",
+    component: _520e6419,
+    name: "pricing-table"
   }, {
     path: "/privacy-policy",
-    component: _ef11ded4,
+    component: _db863116,
     name: "privacy-policy"
   }, {
-    path: "/qui-sommes-nous",
-    component: _c27a2092,
-    name: "qui-sommes-nous"
+    path: "/purchase-guide",
+    component: _ddb8c1e4,
+    name: "purchase-guide"
   }, {
     path: "/shop",
-    component: _b27df496,
+    component: _61ffd2a4,
     name: "shop"
   }, {
-    path: "/shop-grid-full-width",
-    component: _448480d7,
-    name: "shop-grid-full-width"
+    path: "/terms-condition",
+    component: _42508fe7,
+    name: "terms-condition"
   }, {
-    path: "/shop-grid-no-sidebar",
-    component: _00dbcb1f,
-    name: "shop-grid-no-sidebar"
+    path: "/university",
+    component: _2ff96e6c,
+    name: "university"
   }, {
-    path: "/shop-grid-right-sidebar",
-    component: _060a852c,
-    name: "shop-grid-right-sidebar"
+    path: "/yoga-instructor",
+    component: _59521da8,
+    name: "yoga-instructor"
   }, {
-    path: "/shop-grid-two-column",
-    component: _f9b9fb74,
-    name: "shop-grid-two-column"
+    path: "/blog/blog-details",
+    component: _2cf40b17,
+    name: "blog-blog-details"
   }, {
-    path: "/shop-list-full-width",
-    component: _c10fff02,
-    name: "shop-list-full-width"
+    path: "/blog/blog-list",
+    component: _6badc3ce,
+    name: "blog-blog-list"
   }, {
-    path: "/shop-list-standard",
-    component: _5caeeb74,
-    name: "shop-list-standard"
+    path: "/blog/blog-masonry",
+    component: _761544cc,
+    name: "blog-blog-masonry"
   }, {
-    path: "/terms-conditions",
-    component: _5bc172fd,
-    name: "terms-conditions"
+    path: "/blog/blog-standard",
+    component: _8f888990,
+    name: "blog-blog-standard"
   }, {
-    path: "/wishlist",
-    component: _07b2f584,
-    name: "wishlist"
+    path: "/course/course-details",
+    component: _ffd456ee,
+    name: "course-course-details"
   }, {
-    path: "/blog/blog-right-sidebar",
-    component: _69a76321,
-    name: "blog-blog-right-sidebar"
+    path: "/course/course-details-2",
+    component: _67407124,
+    name: "course-course-details-2"
   }, {
-    path: "/blog/blog-without-sidebar",
-    component: _09a7bf66,
-    name: "blog-blog-without-sidebar"
+    path: "/course/course-details-3",
+    component: _67244222,
+    name: "course-course-details-3"
   }, {
-    path: "/contenus/blog-right-sidebar",
-    component: _71b9ce38,
-    name: "contenus-blog-right-sidebar"
+    path: "/course/course-five",
+    component: _366335fb,
+    name: "course-course-five"
   }, {
-    path: "/contenus/blog-without-sidebar",
-    component: _485021a4,
-    name: "contenus-blog-without-sidebar"
+    path: "/course/course-four",
+    component: _72caf26f,
+    name: "course-course-four"
   }, {
-    path: "/gestion-rh/decret-statut",
-    component: _8f925dd0,
-    name: "gestion-rh-decret-statut"
+    path: "/course/course-one",
+    component: _9864e3a6,
+    name: "course-course-one"
   }, {
-    path: "/gestion-rh/mission",
-    component: _04755443,
-    name: "gestion-rh-mission"
+    path: "/course/course-three",
+    component: _792dd9a5,
+    name: "course-course-three"
   }, {
-    path: "/gestion-rh/organnigramme",
-    component: _08ea34b2,
-    name: "gestion-rh-organnigramme"
+    path: "/course/course-two",
+    component: _679581da,
+    name: "course-course-two"
   }, {
-    path: "/marches-publics/decret-statut",
-    component: _532c365c,
-    name: "marches-publics-decret-statut"
+    path: "/event/event-details",
+    component: _65b07193,
+    name: "event-event-details"
   }, {
-    path: "/marches-publics/mission",
-    component: _3c883b7d,
-    name: "marches-publics-mission"
+    path: "/event/event-grid",
+    component: _11822076,
+    name: "event-event-grid"
   }, {
-    path: "/marches-publics/organnigramme",
-    component: _271d486c,
-    name: "marches-publics-organnigramme"
+    path: "/event/event-list",
+    component: _347ea91d,
+    name: "event-event-list"
   }, {
-    path: "/missions/blog-right-sidebar",
-    component: _0fdaf966,
-    name: "missions-blog-right-sidebar"
+    path: "/instructor/instructor-one",
+    component: _fd8de69e,
+    name: "instructor-instructor-one"
   }, {
-    path: "/missions/blog-without-sidebar",
-    component: _3a598d5c,
-    name: "missions-blog-without-sidebar"
+    path: "/instructor/instructor-profile",
+    component: _1a93fcf4,
+    name: "instructor-instructor-profile"
   }, {
-    path: "/postes-peages/decret-statut",
-    component: _4aab9890,
-    name: "postes-peages-decret-statut"
+    path: "/instructor/instructor-three",
+    component: _cc9871ae,
+    name: "instructor-instructor-three"
   }, {
-    path: "/postes-peages/mission",
-    component: _4f4f2ee3,
-    name: "postes-peages-mission"
+    path: "/instructor/instructor-two",
+    component: _ccbe84d2,
+    name: "instructor-instructor-two"
   }, {
-    path: "/postes-peages/organnigramme",
-    component: _2b5d9752,
-    name: "postes-peages-organnigramme"
+    path: "/shop/cart",
+    component: _088e10f4,
+    name: "shop-cart"
   }, {
-    path: "/product/product-affiliate",
-    component: _d73720c2,
-    name: "product-product-affiliate"
+    path: "/shop/checkout",
+    component: _21b5621a,
+    name: "shop-checkout"
   }, {
-    path: "/qui-sommes-nous/decret-statut",
-    component: _161c8e86,
-    name: "qui-sommes-nous-decret-statut"
+    path: "/shop/product-details",
+    component: _af39d980,
+    name: "shop-product-details"
   }, {
-    path: "/qui-sommes-nous/mission",
-    component: _3b193c31,
-    name: "qui-sommes-nous-mission"
-  }, {
-    path: "/qui-sommes-nous/organnigramme",
-    component: _66cff220,
-    name: "qui-sommes-nous-organnigramme"
-  }, {
-    path: "/activites/:slug",
-    component: _bbfd3b1e,
-    name: "activites-slug"
-  }, {
-    path: "/blog/:slug",
-    component: _dd13e08e,
-    name: "blog-slug"
-  }, {
-    path: "/contenus/:slug",
-    component: _9fff297c,
-    name: "contenus-slug"
-  }, {
-    path: "/gestion-rh/:slug?",
-    component: _1c534301,
-    name: "gestion-rh-slug"
-  }, {
-    path: "/marches-publics/:slug?",
-    component: _f6ea9e8a,
-    name: "marches-publics-slug"
-  }, {
-    path: "/missions/:slug",
-    component: _da9aa558,
-    name: "missions-slug"
-  }, {
-    path: "/postes-peages/:slug?",
-    component: _49b974be,
-    name: "postes-peages-slug"
-  }, {
-    path: "/product/:slug?",
-    component: _e244488c,
-    name: "product-slug"
-  }, {
-    path: "/qui-sommes-nous/:slug?",
-    component: _c5e76322,
-    name: "qui-sommes-nous-slug"
+    path: "/shop/wishlist",
+    component: _8e3119ce,
+    name: "shop-wishlist"
   }, {
     path: "/",
-    component: _fd7ab7ba,
+    component: _cc2e7338,
     name: "index"
   }],
 

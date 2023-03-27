@@ -196,11 +196,11 @@ export async function setContext (app, context) {
       isDev: true,
       isHMR: false,
       app,
-      store: app.store,
+
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"baseUrl":"https://ip3dev.com/api-sirat/public/api","siteUrl":"https://ip3dev.com","frontUrl":"https://siteweb-sirat.vercel.app","fileUrl":"https://ip3dev.com/api-sirat/public/upload/"}
+      env: {}
     }
     // Only set once
 

@@ -1,436 +1,324 @@
 [
   {
-    "name": "about",
-    "path": "/about",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\about.vue",
-    "chunkName": "pages/about",
-    "_name": "_618ac95e"
+    "name": "about-us-one",
+    "path": "/about-us-one",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-one.vue",
+    "chunkName": "pages/about-us-one",
+    "_name": "_2f117ed5"
   },
   {
-    "name": "activites",
-    "path": "/activites",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\activites\\\\index.vue",
-    "chunkName": "pages/activites/index",
-    "_name": "_b88ff88e"
+    "name": "about-us-three",
+    "path": "/about-us-three",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-three.vue",
+    "chunkName": "pages/about-us-three",
+    "_name": "_3338404d"
   },
   {
-    "name": "blog",
-    "path": "/blog",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\blog\\\\index.vue",
-    "chunkName": "pages/blog/index",
-    "_name": "_d9a69dfe"
+    "name": "about-us-two",
+    "path": "/about-us-two",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-two.vue",
+    "chunkName": "pages/about-us-two",
+    "_name": "_47792fbb"
   },
   {
-    "name": "candidatures",
-    "path": "/candidatures",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\candidatures\\\\index.vue",
-    "chunkName": "pages/candidatures/index",
-    "_name": "_6a49e6d4"
+    "name": "coming-soon",
+    "path": "/coming-soon",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\coming-soon.vue",
+    "chunkName": "pages/coming-soon",
+    "_name": "_3f0e774e"
   },
   {
-    "name": "cart",
-    "path": "/cart",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\cart.vue",
-    "chunkName": "pages/cart",
-    "_name": "_888cfe42"
+    "name": "contact-me",
+    "path": "/contact-me",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-me.vue",
+    "chunkName": "pages/contact-me",
+    "_name": "_a56b427a"
   },
   {
-    "name": "checkout",
-    "path": "/checkout",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\checkout.vue",
-    "chunkName": "pages/checkout",
-    "_name": "_7080e485"
+    "name": "contact-us",
+    "path": "/contact-us",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-us.vue",
+    "chunkName": "pages/contact-us",
+    "_name": "_8893266e"
   },
   {
-    "name": "compare",
-    "path": "/compare",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\compare.vue",
-    "chunkName": "pages/compare",
-    "_name": "_1176ec76"
+    "name": "distant-learning",
+    "path": "/distant-learning",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\distant-learning.vue",
+    "chunkName": "pages/distant-learning",
+    "_name": "_88c8c370"
   },
   {
-    "name": "contact",
-    "path": "/contact",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_2c7abe31"
+    "name": "faq",
+    "path": "/faq",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\faq.vue",
+    "chunkName": "pages/faq",
+    "_name": "_1a591d28"
   },
   {
-    "name": "contenus",
-    "path": "/contenus",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\contenus\\\\index.vue",
-    "chunkName": "pages/contenus/index",
-    "_name": "_9c91e6ec"
+    "name": "gallery-grid",
+    "path": "/gallery-grid",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\gallery-grid.vue",
+    "chunkName": "pages/gallery-grid",
+    "_name": "_2a3821bf"
   },
   {
-    "name": "gestion-rh",
-    "path": "/gestion-rh",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\gestion-rh\\\\index.vue",
-    "chunkName": "pages/gestion-rh/index",
-    "_name": "_1e09e449"
+    "name": "gallery-masonry",
+    "path": "/gallery-masonry",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\gallery-masonry.vue",
+    "chunkName": "pages/gallery-masonry",
+    "_name": "_5a5ed048"
   },
   {
-    "name": "home-cosmetics",
-    "path": "/home-cosmetics",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\home-cosmetics.vue",
-    "chunkName": "pages/home-cosmetics",
-    "_name": "_20577615"
+    "name": "kindergarten",
+    "path": "/kindergarten",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\kindergarten.vue",
+    "chunkName": "pages/kindergarten",
+    "_name": "_cc2461b8"
   },
   {
-    "name": "home-fashion-five",
-    "path": "/home-fashion-five",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\home-fashion-five.vue",
-    "chunkName": "pages/home-fashion-five",
-    "_name": "_53139426"
+    "name": "kitchen-coach",
+    "path": "/kitchen-coach",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\kitchen-coach.vue",
+    "chunkName": "pages/kitchen-coach",
+    "_name": "_1d366143"
   },
   {
-    "name": "home-fashion-four",
-    "path": "/home-fashion-four",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\home-fashion-four.vue",
-    "chunkName": "pages/home-fashion-four",
-    "_name": "_e1095ecc"
-  },
-  {
-    "name": "home-fashion-seven",
-    "path": "/home-fashion-seven",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\home-fashion-seven.vue",
-    "chunkName": "pages/home-fashion-seven",
-    "_name": "_0a8de86e"
-  },
-  {
-    "name": "home-fashion-six",
-    "path": "/home-fashion-six",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\home-fashion-six.vue",
-    "chunkName": "pages/home-fashion-six",
-    "_name": "_3820a1c4"
-  },
-  {
-    "name": "home-fashion-three",
-    "path": "/home-fashion-three",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\home-fashion-three.vue",
-    "chunkName": "pages/home-fashion-three",
-    "_name": "_1aed7e4c"
-  },
-  {
-    "name": "home-fashion-two",
-    "path": "/home-fashion-two",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\home-fashion-two.vue",
-    "chunkName": "pages/home-fashion-two",
-    "_name": "_303aef88"
-  },
-  {
-    "name": "login-register",
-    "path": "/login-register",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\login-register.vue",
-    "chunkName": "pages/login-register",
-    "_name": "_74cd03f4"
-  },
-  {
-    "name": "marches-publics",
-    "path": "/marches-publics",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\marches-publics\\\\index.vue",
-    "chunkName": "pages/marches-publics/index",
-    "_name": "_f37d5bfa"
-  },
-  {
-    "name": "missions",
-    "path": "/missions",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\missions\\\\index.vue",
-    "chunkName": "pages/missions/index",
-    "_name": "_d72d62c8"
+    "name": "landing-demo",
+    "path": "/landing-demo",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\landing-demo.vue",
+    "chunkName": "pages/landing-demo",
+    "_name": "_c04eee92"
   },
   {
     "name": "my-account",
     "path": "/my-account",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\my-account.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\my-account.vue",
     "chunkName": "pages/my-account",
-    "_name": "_7cabf4ea"
+    "_name": "_d717b82c"
   },
   {
-    "name": "postes-peages",
-    "path": "/postes-peages",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\postes-peages\\\\index.vue",
-    "chunkName": "pages/postes-peages/index",
-    "_name": "_464c322e"
+    "name": "online-academy",
+    "path": "/online-academy",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\online-academy.vue",
+    "chunkName": "pages/online-academy",
+    "_name": "_658a9450"
+  },
+  {
+    "name": "pricing-table",
+    "path": "/pricing-table",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\pricing-table.vue",
+    "chunkName": "pages/pricing-table",
+    "_name": "_520e6419"
   },
   {
     "name": "privacy-policy",
     "path": "/privacy-policy",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\privacy-policy.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\privacy-policy.vue",
     "chunkName": "pages/privacy-policy",
-    "_name": "_ef11ded4"
+    "_name": "_db863116"
   },
   {
-    "name": "qui-sommes-nous",
-    "path": "/qui-sommes-nous",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\qui-sommes-nous\\\\index.vue",
-    "chunkName": "pages/qui-sommes-nous/index",
-    "_name": "_c27a2092"
+    "name": "purchase-guide",
+    "path": "/purchase-guide",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\purchase-guide.vue",
+    "chunkName": "pages/purchase-guide",
+    "_name": "_ddb8c1e4"
   },
   {
     "name": "shop",
     "path": "/shop",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\shop.vue",
-    "chunkName": "pages/shop",
-    "_name": "_b27df496"
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\index.vue",
+    "chunkName": "pages/shop/index",
+    "_name": "_61ffd2a4"
   },
   {
-    "name": "shop-grid-full-width",
-    "path": "/shop-grid-full-width",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\shop-grid-full-width.vue",
-    "chunkName": "pages/shop-grid-full-width",
-    "_name": "_448480d7"
+    "name": "terms-condition",
+    "path": "/terms-condition",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",
+    "chunkName": "pages/terms-condition",
+    "_name": "_42508fe7"
   },
   {
-    "name": "shop-grid-no-sidebar",
-    "path": "/shop-grid-no-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\shop-grid-no-sidebar.vue",
-    "chunkName": "pages/shop-grid-no-sidebar",
-    "_name": "_00dbcb1f"
+    "name": "university",
+    "path": "/university",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\university.vue",
+    "chunkName": "pages/university",
+    "_name": "_2ff96e6c"
   },
   {
-    "name": "shop-grid-right-sidebar",
-    "path": "/shop-grid-right-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\shop-grid-right-sidebar.vue",
-    "chunkName": "pages/shop-grid-right-sidebar",
-    "_name": "_060a852c"
+    "name": "yoga-instructor",
+    "path": "/yoga-instructor",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\yoga-instructor.vue",
+    "chunkName": "pages/yoga-instructor",
+    "_name": "_59521da8"
   },
   {
-    "name": "shop-grid-two-column",
-    "path": "/shop-grid-two-column",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\shop-grid-two-column.vue",
-    "chunkName": "pages/shop-grid-two-column",
-    "_name": "_f9b9fb74"
+    "name": "blog-blog-details",
+    "path": "/blog/blog-details",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-details.vue",
+    "chunkName": "pages/blog/blog-details",
+    "_name": "_2cf40b17"
   },
   {
-    "name": "shop-list-full-width",
-    "path": "/shop-list-full-width",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\shop-list-full-width.vue",
-    "chunkName": "pages/shop-list-full-width",
-    "_name": "_c10fff02"
+    "name": "blog-blog-list",
+    "path": "/blog/blog-list",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-list.vue",
+    "chunkName": "pages/blog/blog-list",
+    "_name": "_6badc3ce"
   },
   {
-    "name": "shop-list-standard",
-    "path": "/shop-list-standard",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\shop-list-standard.vue",
-    "chunkName": "pages/shop-list-standard",
-    "_name": "_5caeeb74"
+    "name": "blog-blog-masonry",
+    "path": "/blog/blog-masonry",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-masonry.vue",
+    "chunkName": "pages/blog/blog-masonry",
+    "_name": "_761544cc"
   },
   {
-    "name": "terms-conditions",
-    "path": "/terms-conditions",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\terms-conditions.vue",
-    "chunkName": "pages/terms-conditions",
-    "_name": "_5bc172fd"
+    "name": "blog-blog-standard",
+    "path": "/blog/blog-standard",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-standard.vue",
+    "chunkName": "pages/blog/blog-standard",
+    "_name": "_8f888990"
   },
   {
-    "name": "wishlist",
-    "path": "/wishlist",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\wishlist.vue",
-    "chunkName": "pages/wishlist",
-    "_name": "_07b2f584"
+    "name": "course-course-details",
+    "path": "/course/course-details",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details.vue",
+    "chunkName": "pages/course/course-details",
+    "_name": "_ffd456ee"
   },
   {
-    "name": "blog-blog-right-sidebar",
-    "path": "/blog/blog-right-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\blog\\\\blog-right-sidebar.vue",
-    "chunkName": "pages/blog/blog-right-sidebar",
-    "_name": "_69a76321"
+    "name": "course-course-details-2",
+    "path": "/course/course-details-2",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details-2.vue",
+    "chunkName": "pages/course/course-details-2",
+    "_name": "_67407124"
   },
   {
-    "name": "blog-blog-without-sidebar",
-    "path": "/blog/blog-without-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\blog\\\\blog-without-sidebar.vue",
-    "chunkName": "pages/blog/blog-without-sidebar",
-    "_name": "_09a7bf66"
+    "name": "course-course-details-3",
+    "path": "/course/course-details-3",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details-3.vue",
+    "chunkName": "pages/course/course-details-3",
+    "_name": "_67244222"
   },
   {
-    "name": "contenus-blog-right-sidebar",
-    "path": "/contenus/blog-right-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\contenus\\\\blog-right-sidebar.vue",
-    "chunkName": "pages/contenus/blog-right-sidebar",
-    "_name": "_71b9ce38"
+    "name": "course-course-five",
+    "path": "/course/course-five",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-five.vue",
+    "chunkName": "pages/course/course-five",
+    "_name": "_366335fb"
   },
   {
-    "name": "contenus-blog-without-sidebar",
-    "path": "/contenus/blog-without-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\contenus\\\\blog-without-sidebar.vue",
-    "chunkName": "pages/contenus/blog-without-sidebar",
-    "_name": "_485021a4"
+    "name": "course-course-four",
+    "path": "/course/course-four",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-four.vue",
+    "chunkName": "pages/course/course-four",
+    "_name": "_72caf26f"
   },
   {
-    "name": "gestion-rh-decret-statut",
-    "path": "/gestion-rh/decret-statut",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\gestion-rh\\\\decret-statut.vue",
-    "chunkName": "pages/gestion-rh/decret-statut",
-    "_name": "_8f925dd0"
+    "name": "course-course-one",
+    "path": "/course/course-one",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-one.vue",
+    "chunkName": "pages/course/course-one",
+    "_name": "_9864e3a6"
   },
   {
-    "name": "gestion-rh-mission",
-    "path": "/gestion-rh/mission",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\gestion-rh\\\\mission.vue",
-    "chunkName": "pages/gestion-rh/mission",
-    "_name": "_04755443"
+    "name": "course-course-three",
+    "path": "/course/course-three",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-three.vue",
+    "chunkName": "pages/course/course-three",
+    "_name": "_792dd9a5"
   },
   {
-    "name": "gestion-rh-organnigramme",
-    "path": "/gestion-rh/organnigramme",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\gestion-rh\\\\organnigramme.vue",
-    "chunkName": "pages/gestion-rh/organnigramme",
-    "_name": "_08ea34b2"
+    "name": "course-course-two",
+    "path": "/course/course-two",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-two.vue",
+    "chunkName": "pages/course/course-two",
+    "_name": "_679581da"
   },
   {
-    "name": "marches-publics-decret-statut",
-    "path": "/marches-publics/decret-statut",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\marches-publics\\\\decret-statut.vue",
-    "chunkName": "pages/marches-publics/decret-statut",
-    "_name": "_532c365c"
+    "name": "event-event-details",
+    "path": "/event/event-details",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-details.vue",
+    "chunkName": "pages/event/event-details",
+    "_name": "_65b07193"
   },
   {
-    "name": "marches-publics-mission",
-    "path": "/marches-publics/mission",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\marches-publics\\\\mission.vue",
-    "chunkName": "pages/marches-publics/mission",
-    "_name": "_3c883b7d"
+    "name": "event-event-grid",
+    "path": "/event/event-grid",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-grid.vue",
+    "chunkName": "pages/event/event-grid",
+    "_name": "_11822076"
   },
   {
-    "name": "marches-publics-organnigramme",
-    "path": "/marches-publics/organnigramme",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\marches-publics\\\\organnigramme.vue",
-    "chunkName": "pages/marches-publics/organnigramme",
-    "_name": "_271d486c"
+    "name": "event-event-list",
+    "path": "/event/event-list",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-list.vue",
+    "chunkName": "pages/event/event-list",
+    "_name": "_347ea91d"
   },
   {
-    "name": "missions-blog-right-sidebar",
-    "path": "/missions/blog-right-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\missions\\\\blog-right-sidebar.vue",
-    "chunkName": "pages/missions/blog-right-sidebar",
-    "_name": "_0fdaf966"
+    "name": "instructor-instructor-one",
+    "path": "/instructor/instructor-one",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-one.vue",
+    "chunkName": "pages/instructor/instructor-one",
+    "_name": "_fd8de69e"
   },
   {
-    "name": "missions-blog-without-sidebar",
-    "path": "/missions/blog-without-sidebar",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\missions\\\\blog-without-sidebar.vue",
-    "chunkName": "pages/missions/blog-without-sidebar",
-    "_name": "_3a598d5c"
+    "name": "instructor-instructor-profile",
+    "path": "/instructor/instructor-profile",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-profile.vue",
+    "chunkName": "pages/instructor/instructor-profile",
+    "_name": "_1a93fcf4"
   },
   {
-    "name": "postes-peages-decret-statut",
-    "path": "/postes-peages/decret-statut",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\postes-peages\\\\decret-statut.vue",
-    "chunkName": "pages/postes-peages/decret-statut",
-    "_name": "_4aab9890"
+    "name": "instructor-instructor-three",
+    "path": "/instructor/instructor-three",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-three.vue",
+    "chunkName": "pages/instructor/instructor-three",
+    "_name": "_cc9871ae"
   },
   {
-    "name": "postes-peages-mission",
-    "path": "/postes-peages/mission",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\postes-peages\\\\mission.vue",
-    "chunkName": "pages/postes-peages/mission",
-    "_name": "_4f4f2ee3"
+    "name": "instructor-instructor-two",
+    "path": "/instructor/instructor-two",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-two.vue",
+    "chunkName": "pages/instructor/instructor-two",
+    "_name": "_ccbe84d2"
   },
   {
-    "name": "postes-peages-organnigramme",
-    "path": "/postes-peages/organnigramme",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\postes-peages\\\\organnigramme.vue",
-    "chunkName": "pages/postes-peages/organnigramme",
-    "_name": "_2b5d9752"
+    "name": "shop-cart",
+    "path": "/shop/cart",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\cart.vue",
+    "chunkName": "pages/shop/cart",
+    "_name": "_088e10f4"
   },
   {
-    "name": "product-product-affiliate",
-    "path": "/product/product-affiliate",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\product\\\\product-affiliate.vue",
-    "chunkName": "pages/product/product-affiliate",
-    "_name": "_d73720c2"
+    "name": "shop-checkout",
+    "path": "/shop/checkout",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\checkout.vue",
+    "chunkName": "pages/shop/checkout",
+    "_name": "_21b5621a"
   },
   {
-    "name": "qui-sommes-nous-decret-statut",
-    "path": "/qui-sommes-nous/decret-statut",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\qui-sommes-nous\\\\decret-statut.vue",
-    "chunkName": "pages/qui-sommes-nous/decret-statut",
-    "_name": "_161c8e86"
+    "name": "shop-product-details",
+    "path": "/shop/product-details",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\product-details.vue",
+    "chunkName": "pages/shop/product-details",
+    "_name": "_af39d980"
   },
   {
-    "name": "qui-sommes-nous-mission",
-    "path": "/qui-sommes-nous/mission",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\qui-sommes-nous\\\\mission.vue",
-    "chunkName": "pages/qui-sommes-nous/mission",
-    "_name": "_3b193c31"
-  },
-  {
-    "name": "qui-sommes-nous-organnigramme",
-    "path": "/qui-sommes-nous/organnigramme",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\qui-sommes-nous\\\\organnigramme.vue",
-    "chunkName": "pages/qui-sommes-nous/organnigramme",
-    "_name": "_66cff220"
-  },
-  {
-    "name": "activites-slug",
-    "path": "/activites/:slug",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\activites\\\\_slug.vue",
-    "chunkName": "pages/activites/_slug",
-    "_name": "_bbfd3b1e"
-  },
-  {
-    "name": "blog-slug",
-    "path": "/blog/:slug",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\blog\\\\_slug.vue",
-    "chunkName": "pages/blog/_slug",
-    "_name": "_dd13e08e"
-  },
-  {
-    "name": "contenus-slug",
-    "path": "/contenus/:slug",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\contenus\\\\_slug.vue",
-    "chunkName": "pages/contenus/_slug",
-    "_name": "_9fff297c"
-  },
-  {
-    "name": "gestion-rh-slug",
-    "path": "/gestion-rh/:slug?",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\gestion-rh\\\\_slug.vue",
-    "chunkName": "pages/gestion-rh/_slug",
-    "_name": "_1c534301"
-  },
-  {
-    "name": "marches-publics-slug",
-    "path": "/marches-publics/:slug?",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\marches-publics\\\\_slug.vue",
-    "chunkName": "pages/marches-publics/_slug",
-    "_name": "_f6ea9e8a"
-  },
-  {
-    "name": "missions-slug",
-    "path": "/missions/:slug",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\missions\\\\_slug.vue",
-    "chunkName": "pages/missions/_slug",
-    "_name": "_da9aa558"
-  },
-  {
-    "name": "postes-peages-slug",
-    "path": "/postes-peages/:slug?",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\postes-peages\\\\_slug.vue",
-    "chunkName": "pages/postes-peages/_slug",
-    "_name": "_49b974be"
-  },
-  {
-    "name": "product-slug",
-    "path": "/product/:slug?",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\product\\\\_slug.vue",
-    "chunkName": "pages/product/_slug",
-    "_name": "_e244488c"
-  },
-  {
-    "name": "qui-sommes-nous-slug",
-    "path": "/qui-sommes-nous/:slug?",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\qui-sommes-nous\\\\_slug.vue",
-    "chunkName": "pages/qui-sommes-nous/_slug",
-    "_name": "_c5e76322"
+    "name": "shop-wishlist",
+    "path": "/shop/wishlist",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\wishlist.vue",
+    "chunkName": "pages/shop/wishlist",
+    "_name": "_8e3119ce"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\wamp\\\\www\\\\SIRAT\\\\siteweb-sirat\\\\pages\\\\index.vue",
+    "component": "C:\\\\xampp\\\\htdocs\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_fd7ab7ba"
+    "_name": "_cc2e7338"
   }
 ]

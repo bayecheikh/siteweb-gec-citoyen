@@ -1,48 +1,57 @@
 <template>
-    <div class="home-page-wrapper">
-        <TheHeader />
-        <HeroSlider />
-        <ServicePolicy />
-        <ServicePolicyTwo />
-        <ServicePolicyThree />
-        <!-- <ProductWrapper :isSectionTitle=true /> -->
-        <BlogWrapper />
-        <TheFooter />
+    <div id="main-wrapper" class="main-wrapper">
+        <HeaderOne showHeaderTop="true" />
+
+        <Banner />
+        
+        <Features />
+        
+        <Categories />
+        
+        <About />
+        
+        <Course />
+        
+        <FunFact />
+        
+        <TestimonialOne />
+        
+        <ContactInfo />
+        
+        <Instructor />
+        
+        <CTAOne />
+        
+        <LogoOne />
+        
+        <Blog />
+        
+        <FooterTwo />
     </div>
 </template>
 
 <script>
     export default {
         components: {
-            TheHeader: () => import('@/components/TheHeader'),
-            HeroSlider: () => import('@/components/hero/HeroSlider'),
-            ServicePolicy: () => import('@/components/policy/ServicePolicy'),
-            ServicePolicyTwo: () => import('@/components/policy/ServicePolicyTwo'),
-            ServicePolicyThree: () => import('@/components/policy/ServicePolicyThree'),
-            ProductWrapper: () => import('@/components/product/ProductWrapper'),
-            BlogWrapper: () => import('@/components/BlogWrapper'),
-            TheFooter: () => import('@/components/TheFooter'),
+            HeaderOne: () => import("@/components/header/HeaderOne"),
+            Banner: () => import("@/components/home-main/Banner"),
+            Features: () => import("@/components/home-main/Features"),
+            Categories: () => import("@/components/home-main/Categories"),
+            About: () => import("@/components/home-main/About"),
+            Course: () => import("@/components/home-main/Course"),
+            FunFact: () => import("@/components/home-main/FunFact"),
+            TestimonialOne: () => import("@/components/testimonial/TestimonialOne"),
+            ContactInfo: () => import("@/components/home-main/ContactInfo"),
+            Instructor: () => import("@/components/home-main/Instructor"),
+            CTAOne: () => import("@/components/cta/CTAOne"),
+            LogoOne: () => import("@/components/logo/LogoOne"),
+            Blog: () => import("@/components/home-main/Blog"),
+            FooterTwo: () => import("@/components/footer/FooterTwo")
         },
-        mounted: function() {
-            this.$store.dispatch('contenus/getList')
-            this.$store.dispatch('marchepublics/getList')
-        },
-        
         head() {
             return {
-                title: 'Sirat'
+                title: 'EduBlink Education'
             }
-        },
-    };
+        }
+    }
 </script>
-<style>
-.nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #0060a8 !important;
-  text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
-</style>
-
-
