@@ -12,9 +12,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_8c547106 from 'nuxt_plugin_plugin_8c547106' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_pluginserver_0d545949 from 'nuxt_plugin_pluginserver_0d545949' // Source: .\\color-mode\\plugin.server.js (mode: 'server')
-import nuxt_plugin_pluginclient_b0ca307e from 'nuxt_plugin_pluginclient_b0ca307e' // Source: .\\color-mode\\plugin.client.js (mode: 'client')
+import nuxt_plugin_plugin_7b356d66 from 'nuxt_plugin_plugin_7b356d66' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_pluginserver_fe1a2980 from 'nuxt_plugin_pluginserver_fe1a2980' // Source: .\\color-mode\\plugin.server.js (mode: 'server')
+import nuxt_plugin_pluginclient_1b3979b8 from 'nuxt_plugin_pluginclient_1b3979b8' // Source: .\\color-mode\\plugin.client.js (mode: 'client')
 import nuxt_plugin_vueawesomeswiper_5ce03f58 from 'nuxt_plugin_vueawesomeswiper_5ce03f58' // Source: ..\\plugins\\vue-awesome-swiper.js (mode: 'all')
 import nuxt_plugin_vuecoollightbox_66548a3b from 'nuxt_plugin_vuecoollightbox_66548a3b' // Source: ..\\plugins\\vue-cool-lightbox.js (mode: 'all')
 import nuxt_plugin_vue2googlemaps_51da65b7 from 'nuxt_plugin_vue2googlemaps_51da65b7' // Source: ..\\plugins\\vue2-google-maps.js (mode: 'all')
@@ -22,6 +22,7 @@ import nuxt_plugin_vuepagination_ea1a8940 from 'nuxt_plugin_vuepagination_ea1a89
 import nuxt_plugin_vueinlinesvg_56f4a20a from 'nuxt_plugin_vueinlinesvg_56f4a20a' // Source: ..\\plugins\\vue-inline-svg.js (mode: 'all')
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ..\\plugins\\observe-visibility.js (mode: 'all')
 import nuxt_plugin_vuemasonrycss_6d616ab9 from 'nuxt_plugin_vuemasonrycss_6d616ab9' // Source: ..\\plugins\\vue-masonry-css.js (mode: 'all')
+import nuxt_plugin_vuetimeline_660653c4 from 'nuxt_plugin_vuetimeline_660653c4' // Source: ..\\plugins\\vuetimeline.js (mode: 'all')
 import nuxt_plugin_bootstrapbundlemin_61132cca from 'nuxt_plugin_bootstrapbundlemin_61132cca' // Source: ..\\plugins\\bootstrap.bundle.min.js (mode: 'client')
 import nuxt_plugin_aos_5e4622cf from 'nuxt_plugin_aos_5e4622cf' // Source: ..\\plugins\\aos (mode: 'client')
 
@@ -187,16 +188,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_8c547106 === 'function') {
-    await nuxt_plugin_plugin_8c547106(app.context, inject)
+  if (typeof nuxt_plugin_plugin_7b356d66 === 'function') {
+    await nuxt_plugin_plugin_7b356d66(app.context, inject)
   }
 
-  if (process.server && typeof nuxt_plugin_pluginserver_0d545949 === 'function') {
-    await nuxt_plugin_pluginserver_0d545949(app.context, inject)
+  if (process.server && typeof nuxt_plugin_pluginserver_fe1a2980 === 'function') {
+    await nuxt_plugin_pluginserver_fe1a2980(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_pluginclient_b0ca307e === 'function') {
-    await nuxt_plugin_pluginclient_b0ca307e(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_1b3979b8 === 'function') {
+    await nuxt_plugin_pluginclient_1b3979b8(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueawesomeswiper_5ce03f58 === 'function') {
@@ -225,6 +226,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vuemasonrycss_6d616ab9 === 'function') {
     await nuxt_plugin_vuemasonrycss_6d616ab9(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vuetimeline_660653c4 === 'function') {
+    await nuxt_plugin_vuetimeline_660653c4(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_bootstrapbundlemin_61132cca === 'function') {

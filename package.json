@@ -10,6 +10,7 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
+        "@growthbunker/vuetimeline": "^0.1.17",
         "@nuxtjs/style-resources": "^1.2.1",
         "aos": "^2.3.4",
         "core-js": "^3.18.2",

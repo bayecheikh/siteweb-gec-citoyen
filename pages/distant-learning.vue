@@ -3,25 +3,25 @@
         
         <HeaderOne />
 
-        <Banner />
+        <!-- <Banner /> -->
 
         <Categories />
 
-        <About />
+        <!-- <About />
 
         <Course />
 
-        <VideoSection />
+        <VideoSection /> -->
 
         <FunFact />
 
-        <TestimonialTwo />
+        <!-- <TestimonialTwo />
 
-        <Logo />
+        <Logo /> -->
 
         <FAQ />
         
-        <Blog />
+        <!-- <Blog /> -->
 
         <FooterOne />
     </div>

@@ -26,15 +26,6 @@
   "AboutUsThreeWhyChoose": {
     "description": "Auto imported from components/about-us-three/WhyChoose.vue"
   },
-  "AboutUsOneFunFact": {
-    "description": "Auto imported from components/about-us-one/FunFact.vue"
-  },
-  "AboutUsOneInstructor": {
-    "description": "Auto imported from components/about-us-one/Instructor.vue"
-  },
-  "AboutUsOneWhyChoose": {
-    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
-  },
   "AboutUsTwoFeatures": {
     "description": "Auto imported from components/about-us-two/Features.vue"
   },
@@ -52,6 +43,15 @@
   },
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
+  },
+  "AboutUsOneFunFact": {
+    "description": "Auto imported from components/about-us-one/FunFact.vue"
+  },
+  "AboutUsOneInstructor": {
+    "description": "Auto imported from components/about-us-one/Instructor.vue"
+  },
+  "AboutUsOneWhyChoose": {
+    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
   },
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
@@ -341,8 +341,17 @@
   "HomeOnlineAcademyCategories": {
     "description": "Auto imported from components/home-online-academy/Categories.vue"
   },
+  "HomeOnlineAcademyConnexion": {
+    "description": "Auto imported from components/home-online-academy/Connexion.vue"
+  },
   "HomeOnlineAcademyContactInfo": {
     "description": "Auto imported from components/home-online-academy/ContactInfo.vue"
+  },
+  "HomeOnlineAcademyContenu": {
+    "description": "Auto imported from components/home-online-academy/Contenu.vue"
+  },
+  "HomeOnlineAcademyCoordonnees": {
+    "description": "Auto imported from components/home-online-academy/Coordonnees.vue"
   },
   "HomeOnlineAcademyCourse": {
     "description": "Auto imported from components/home-online-academy/Course.vue"
@@ -355,6 +364,15 @@
   },
   "HomeOnlineAcademyInstructor": {
     "description": "Auto imported from components/home-online-academy/Instructor.vue"
+  },
+  "HomeOnlineAcademyMinisteres": {
+    "description": "Auto imported from components/home-online-academy/Ministeres.vue"
+  },
+  "HomeOnlineAcademyPrevisualisation": {
+    "description": "Auto imported from components/home-online-academy/Previsualisation.vue"
+  },
+  "HomeOnlineAcademyValidation": {
+    "description": "Auto imported from components/home-online-academy/Validation.vue"
   },
   "HomeUniversityAbout": {
     "description": "Auto imported from components/home-university/About.vue"
