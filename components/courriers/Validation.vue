@@ -1,10 +1,12 @@
 <template>
     <div class="login-form-box registration-form">
         
-        <form >
+        
+        
             <div class="row border-grey">
-                <Previsualisation />
+            <Previsualisation />
             </div>
+            
             <div class="row border-grey">
                 <div class="form-group col-6">
                 <h5 for="reg-name">Nom*</h5>
@@ -61,7 +63,7 @@
                     <button @click="submitValidation" type="button" class="edu-btn btn-medium">Soumettre <i class="icon-4"></i></button>
                 </div>
             </div>
-        </form>
+        
     </div>
 </template>
 
