@@ -29,6 +29,7 @@ import nuxt_plugin_vuetimeline_6e66edc6 from 'nuxt_plugin_vuetimeline_6e66edc6' 
 import nuxt_plugin_goToTab_8fb3dcca from 'nuxt_plugin_goToTab_8fb3dcca' // Source: ..\\plugins\\goToTab.js (mode: 'all')
 import nuxt_plugin_bootstrapbundlemin_61132cca from 'nuxt_plugin_bootstrapbundlemin_61132cca' // Source: ..\\plugins\\bootstrap.bundle.min.js (mode: 'client')
 import nuxt_plugin_aos_5e4622cf from 'nuxt_plugin_aos_5e4622cf' // Source: ..\\plugins\\aos (mode: 'client')
+import nuxt_plugin_vuehtml2pdf_796dc3f4 from 'nuxt_plugin_vuehtml2pdf_796dc3f4' // Source: ..\\plugins\\vue-html2pdf (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -287,6 +288,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_aos_5e4622cf === 'function') {
     await nuxt_plugin_aos_5e4622cf(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vuehtml2pdf_796dc3f4 === 'function') {
+    await nuxt_plugin_vuehtml2pdf_796dc3f4(app.context, inject)
   }
 
   // Lock enablePreview in context

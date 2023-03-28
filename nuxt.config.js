@@ -50,7 +50,8 @@ export default {
         { 
             src: "~/plugins/aos", 
             ssr: false 
-        }
+        },
+        { src: '@/plugins/vue-html2pdf', mode: 'client' }
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
