@@ -30,8 +30,10 @@
         .mainmenu {
             li {
                 &.header-btn {
+                    text-align: center;
                     padding-top: 30px;
                     .edu-btn {
+                        text-align: center;
                         padding: 0;
                         &:hover {
                             color: var(--color-white);

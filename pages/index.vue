@@ -1,8 +1,9 @@
 <template>
-    <div id="main-wrapper" class="main-wrapper">
+    <div id="main-wrapper" class="main-wrapper" style="background-color:#F0F6F9 !important;">
         <HeaderOne showHeaderTop="true" />
-
-        <Banner />
+        <HomeKitchenCoachBanner/>
+        <HomeKitchenCoachFeatures/>
+       <!-- <Banner />
         
         <Features />
         
@@ -25,7 +26,8 @@
         <LogoOne />
         
         <Blog />
-        
+        -->
+
         <FooterTwo />
     </div>
 </template>
@@ -34,7 +36,9 @@
     export default {
         components: {
             HeaderOne: () => import("@/components/header/HeaderOne"),
-            Banner: () => import("@/components/home-main/Banner"),
+            HomeKitchenCoachBanner: () => import("@/components/home-kitchen-coach/Banner.vue"),
+            HomeKitchenCoachFeatures: () => import("@/components/home-kitchen-coach/Features.vue"),
+            /*Banner: () => import("@/components/home-main/Banner"),
             Features: () => import("@/components/home-main/Features"),
             Categories: () => import("@/components/home-main/Categories"),
             About: () => import("@/components/home-main/About"),
@@ -45,7 +49,7 @@
             Instructor: () => import("@/components/home-main/Instructor"),
             CTAOne: () => import("@/components/cta/CTAOne"),
             LogoOne: () => import("@/components/logo/LogoOne"),
-            Blog: () => import("@/components/home-main/Blog"),
+            Blog: () => import("@/components/home-main/Blog"),*/
             FooterTwo: () => import("@/components/footer/FooterTwo")
         },
         head() {

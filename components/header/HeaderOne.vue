@@ -1,7 +1,7 @@
 <template>
-    <header class="edu-header header-style-1 header-fullwidth no-topbar">
-        <HeaderTopOne v-if="showHeaderTop" />
-        <div class="header-mainmenu" :class="{'edu-sticky': isSticky}">
+    <header class="edu-header  header-style-1 header-fullwidth no-topbar">
+       <!--<HeaderTopOne v-if="showHeaderTop" />--> 
+        <div class="header-mainmenu custom-header-one" :class="{'edu-sticky': isSticky}">
             <div class="container-fluid">
                 <div class="header-navbar">
                     <div class="header-brand">
@@ -12,7 +12,7 @@
                             </n-link>
                         </div>
 
-                        <Category />
+                        <!--<Category />-->
                     </div>
                     <div class="header-mainnav">
                         <nav class="mainmenu-nav">
@@ -21,28 +21,20 @@
                     </div>
                     <div class="header-right">
                         <ul class="header-action">
-                            <li class="search-bar">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <button class="search-btn" type="button"><i class="icon-2"></i></button>
-                                </div>
-                            </li>
-                            <li class="icon search-icon">
-                                <button class="search-trigger" @click="searchPopUpOpen( 'addClass', 'open' )">
-                                    <i class="icon-2"></i>
-                                </button>
-                            </li>
-                            <li class="icon light-dark-icon">
+                            
+                          <!--  <li class="icon light-dark-icon">
                                 <ColorMode />
+                            </li> -->
+                            <li class="custom-header-btn">
+                                <n-link to="/contact-us" class="edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
                             </li>
-                            <li class="header-btn">
-                                <n-link to="/contact-us" class="edu-btn btn-medium">Try for free <i class="icon-4"></i></n-link>
+                            <li class="custom-header-btn">
+                                <n-link to="/contact-us" class="edu-btn custom-btn-sign-up btn-orange text-uppercase">Créer un compte<i class="icon-4"></i></n-link>
                             </li>
-                            <li class="mobile-menu-bar d-block d-xl-none">
-                                <button class="hamberger-button" @click="mobileMenuOpen( 'addClass', 'active' )">
-                                    <i class="icon-54"></i>
-                                </button>
+                            <li class="custom-header-btn">
+                                <n-link to="/contact-us" class="edu-btn custom-btn-send-courrier text-uppercase">Envoyer un courrier<i class="icon-4"></i></n-link>
                             </li>
+                          
                         </ul>
                     </div>
                 </div>
@@ -104,3 +96,82 @@
         }
     }
 </script>
+
+<style>
+ .custom-header-btn {
+                padding: 0 2px 0 0  !important;
+                color: var(--color-white) !important;
+                font-weight: bold !important;
+                border-radius: 0 !important;
+                overflow: visible !important;
+                   margin-right: 2px !important;
+                        margin-left: 2px !important;
+                padding-right: 0 !important;
+                font-size: 3px !important;
+                top: 0 !important;
+                text-align: center !important; 
+                  
+        
+            }
+            .custom-edu-btn {
+        
+        border-radius: 5px;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        color: var(--edu-btn-color);
+        background: var(--color-primary);
+        padding: 5px;
+        font-size: 6px;
+        font-weight: bold !important;
+        transition: 0.4s;
+        font-family: var(--font-secondary);
+        border: 0 none;
+        overflow: hidden;
+        text-align: center !important; 
+        position: relative;
+        z-index: 1;
+            }
+            .custom-btn-small {
+                font-weight: bold !important;
+            height: 30px !important;
+            line-height: 30px !important;
+            padding: 0 15px !important;
+            font-size: 8px !important;
+            text-align: center !important; 
+            background-color: #2985BC !important;
+        }
+
+        .custom-btn-sign-in {
+                font-weight: bold !important;
+            height: 30px !important;
+            line-height: 30px !important;
+            padding: 0 15px !important;
+            font-size: 8px !important;
+            text-align: center !important; 
+            background-color: #2985BC !important;
+        }
+        .custom-btn-sign-up {
+                font-weight: bold !important;
+            height: 30px !important;
+            line-height: 30px !important;
+            padding: 0 15px !important;
+            font-size: 8px !important;
+            text-align: center !important; 
+            background-color: orange !important;
+        }
+        .custom-btn-send-courrier {
+                font-weight: bold !important;
+    
+            margin-left: 10px !important;
+
+            padding-bottom: 5px !important;
+            
+            font-size: 11px !important;
+            text-align: center !important; 
+        }
+
+        .custom-header-one{
+            background-color: #0a3764 !important;
+        }
+</style>

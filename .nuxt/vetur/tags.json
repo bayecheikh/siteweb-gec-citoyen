@@ -9,22 +9,7 @@
     "description": "Auto imported from components/InstagramPost.vue"
   },
   "About": {
-    "description": "Auto imported from components/about-us-three/About.vue"
-  },
-  "AboutUsThreeContactInfo": {
-    "description": "Auto imported from components/about-us-three/ContactInfo.vue"
-  },
-  "AboutUsThreeFunFact": {
-    "description": "Auto imported from components/about-us-three/FunFact.vue"
-  },
-  "AboutUsThreeInstructor": {
-    "description": "Auto imported from components/about-us-three/Instructor.vue"
-  },
-  "AboutUsThreeTestimonial": {
-    "description": "Auto imported from components/about-us-three/Testimonial.vue"
-  },
-  "AboutUsThreeWhyChoose": {
-    "description": "Auto imported from components/about-us-three/WhyChoose.vue"
+    "description": "Auto imported from components/about-us-one/About.vue"
   },
   "AboutUsOneFunFact": {
     "description": "Auto imported from components/about-us-one/FunFact.vue"
@@ -53,8 +38,20 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
+  "AboutUsThreeContactInfo": {
+    "description": "Auto imported from components/about-us-three/ContactInfo.vue"
+  },
+  "AboutUsThreeFunFact": {
+    "description": "Auto imported from components/about-us-three/FunFact.vue"
+  },
+  "AboutUsThreeInstructor": {
+    "description": "Auto imported from components/about-us-three/Instructor.vue"
+  },
+  "AboutUsThreeTestimonial": {
+    "description": "Auto imported from components/about-us-three/Testimonial.vue"
+  },
+  "AboutUsThreeWhyChoose": {
+    "description": "Auto imported from components/about-us-three/WhyChoose.vue"
   },
   "BlogPostList": {
     "description": "Auto imported from components/blog/BlogPostList.vue"
@@ -68,23 +65,8 @@
   "BlogPostTwo": {
     "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
-  "CommonBreadCrumbOne": {
-    "description": "Auto imported from components/common/BreadCrumbOne.vue"
-  },
-  "CommonBreadCrumbThree": {
-    "description": "Auto imported from components/common/BreadCrumbThree.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonColorMode": {
-    "description": "Auto imported from components/common/ColorMode.vue"
-  },
-  "CommonPaginationOne": {
-    "description": "Auto imported from components/common/PaginationOne.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
   },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
@@ -109,6 +91,24 @@
   },
   "CourseTypeTwo": {
     "description": "Auto imported from components/course/CourseTypeTwo.vue"
+  },
+  "CommonBreadCrumbOne": {
+    "description": "Auto imported from components/common/BreadCrumbOne.vue"
+  },
+  "CommonBreadCrumbThree": {
+    "description": "Auto imported from components/common/BreadCrumbThree.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonColorMode": {
+    "description": "Auto imported from components/common/ColorMode.vue"
+  },
+  "CommonPaginationOne": {
+    "description": "Auto imported from components/common/PaginationOne.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "CtaCTAOne": {
     "description": "Auto imported from components/cta/CTAOne.vue"
@@ -281,30 +281,6 @@
   "HomeKitchenCoachTestimonial": {
     "description": "Auto imported from components/home-kitchen-coach/Testimonial.vue"
   },
-  "HomeLandingDemoBanner": {
-    "description": "Auto imported from components/home-landing-demo/Banner.vue"
-  },
-  "HomeLandingDemoCourseLayout": {
-    "description": "Auto imported from components/home-landing-demo/CourseLayout.vue"
-  },
-  "HomeLandingDemoFeatures": {
-    "description": "Auto imported from components/home-landing-demo/Features.vue"
-  },
-  "HomeLandingDemoFunFact": {
-    "description": "Auto imported from components/home-landing-demo/FunFact.vue"
-  },
-  "HomeDemo": {
-    "description": "Auto imported from components/home-landing-demo/HomeDemo.vue"
-  },
-  "HomeLandingDemoInnerPages": {
-    "description": "Auto imported from components/home-landing-demo/InnerPages.vue"
-  },
-  "HomeLandingDemoLearnWith": {
-    "description": "Auto imported from components/home-landing-demo/LearnWith.vue"
-  },
-  "HomeLandingDemoShopLayout": {
-    "description": "Auto imported from components/home-landing-demo/ShopLayout.vue"
-  },
   "HomeMainAbout": {
     "description": "Auto imported from components/home-main/About.vue"
   },
@@ -331,6 +307,30 @@
   },
   "HomeMainInstructor": {
     "description": "Auto imported from components/home-main/Instructor.vue"
+  },
+  "HomeLandingDemoBanner": {
+    "description": "Auto imported from components/home-landing-demo/Banner.vue"
+  },
+  "HomeLandingDemoCourseLayout": {
+    "description": "Auto imported from components/home-landing-demo/CourseLayout.vue"
+  },
+  "HomeLandingDemoFeatures": {
+    "description": "Auto imported from components/home-landing-demo/Features.vue"
+  },
+  "HomeLandingDemoFunFact": {
+    "description": "Auto imported from components/home-landing-demo/FunFact.vue"
+  },
+  "HomeDemo": {
+    "description": "Auto imported from components/home-landing-demo/HomeDemo.vue"
+  },
+  "HomeLandingDemoInnerPages": {
+    "description": "Auto imported from components/home-landing-demo/InnerPages.vue"
+  },
+  "HomeLandingDemoLearnWith": {
+    "description": "Auto imported from components/home-landing-demo/LearnWith.vue"
+  },
+  "HomeLandingDemoShopLayout": {
+    "description": "Auto imported from components/home-landing-demo/ShopLayout.vue"
   },
   "HomeOnlineAcademyBanner": {
     "description": "Auto imported from components/home-online-academy/Banner.vue"
