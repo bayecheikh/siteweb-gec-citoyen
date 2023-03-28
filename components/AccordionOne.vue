@@ -2,8 +2,8 @@
     <div class="faq-accordion" id="faq-accordion">
         <div class="accordion">
             <div class="accordion-item">
-                <h5 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                <h5 class="accordion-header ">
+                    <button class="accordion-button " type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
                         Comment se connecter à la plateforme ?
                     </button>
                 </h5>
@@ -28,10 +28,22 @@
             <div class="accordion-item">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
-                        Comment suivre son courrier ?
+                        Comment saisir son courrier ?
                     </button>
                 </h5>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                        <p>La saisie du courrier se fait via un formulaire simple. Vous pouvez choisir d'importer votre courrier ou de le rédiger directement sur la plateforme.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+                        Comment suivre son courrier ?
+                    </button>
+                </h5>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
                         <p>Après soumission du courrier, un code de suivi est généré automatiquement. Vous recevrez ce code de suivi par mail et pourrez suivre le statut votre courrier à tout moment sur la plateforme.</p>
                     </div>
@@ -40,3 +52,9 @@
         </div>
     </div>
 </template>
+
+<style>
+.custom-accordion-header{
+    color: rgb(0, 128, 100) !important; 
+}
+</style>

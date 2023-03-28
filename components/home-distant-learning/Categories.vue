@@ -1,7 +1,7 @@
 <template>
     <div class="edu-categorie-area custom-categorie-area-1 categorie-area-1 edu-section-gap">
         <div class="container">
-            <SectionTitle alignment="section-center"  title='Plateforme <span class="color-primary">GEC CITOYEN</span>' subTitle="Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers." />
+            <SectionTitle alignment="section-center"  title='Plateforme <span class="color-primary custom-section-title">GEC CITOYEN</span>' subTitle="Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers." />
 
             <div class="row g-5 custom-row">
                 <div class="col-lg-3 col-sm-6" data-aos-delay="100"  data-aos-duration="800">
@@ -98,6 +98,9 @@
 }
 .custom-custom{
     font-weight: bold !important;
+
+    background-color: rgb(0, 128, 100) !important; 
+
    
 }
 .custom-title{
@@ -108,7 +111,7 @@
     font-size: 25px !important; 
 }
 .custom-icon-connect{
-    fill: rgb(26, 182, 157);
+    fill: rgb(0, 128, 100);
 }
 .custom-icon-find{
     fill: #ee4a62;
@@ -118,5 +121,11 @@
 }
 .custom-icon-submit{
     fill: #f8b81f;
+}
+.custom-section-title{
+    color: rgb(0, 128, 100) !important; 
+}
+.custom-categorie-grid:hover .custom-title {
+  color: white !important;
 }
 </style>

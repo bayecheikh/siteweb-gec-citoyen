@@ -64,5 +64,6 @@
 <style>
 .custom-counterup-area-6{
     margin-bottom: 80px !important;
+    background: rgb(0, 128, 100) !important; 
 }
 </style>

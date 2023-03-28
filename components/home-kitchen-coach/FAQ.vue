@@ -18,11 +18,6 @@
                         <div class="faq-thumbnail thumbnail-1" data-aos-delay="50" data-aos="fade-left" data-aos-duration="800">
                             <img src="/images/faq/faq.jpg" alt="Faq Images">
                         </div>
-                        <ul class="shape-group">
-                            <MouseMove addClassName="shape-1" dataDepth="1.85" imgSrc="/images/faq/shape-12.png" data-aos-delay="500" data-aos="fade" data-aos-duration="200" />
-                            <MouseMove addClassName="shape-2" dataDepth="-1.85" imgSrc="/images/faq/shape-04.png" data-aos-delay="500" data-aos="fade" data-aos-duration="200" />
-                            <MouseMove addClassName="shape-3" dataDepth="1.5" imgSrc="/images/faq/shape-10.png" data-aos-delay="500" data-aos="fade" data-aos-duration="200" />
-                        </ul>
                     </div>
                 </div>
             </div>

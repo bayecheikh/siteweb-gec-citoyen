@@ -8,6 +8,24 @@
   "InstagramPost": {
     "description": "Auto imported from components/InstagramPost.vue"
   },
+  "About": {
+    "description": "Auto imported from components/about-us-three/About.vue"
+  },
+  "AboutUsThreeContactInfo": {
+    "description": "Auto imported from components/about-us-three/ContactInfo.vue"
+  },
+  "AboutUsThreeFunFact": {
+    "description": "Auto imported from components/about-us-three/FunFact.vue"
+  },
+  "AboutUsThreeInstructor": {
+    "description": "Auto imported from components/about-us-three/Instructor.vue"
+  },
+  "AboutUsThreeTestimonial": {
+    "description": "Auto imported from components/about-us-three/Testimonial.vue"
+  },
+  "AboutUsThreeWhyChoose": {
+    "description": "Auto imported from components/about-us-three/WhyChoose.vue"
+  },
   "AboutUsTwoFeatures": {
     "description": "Auto imported from components/about-us-two/Features.vue"
   },
@@ -26,9 +44,6 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
-  "About": {
-    "description": "Auto imported from components/about-us-one/About.vue"
-  },
   "AboutUsOneFunFact": {
     "description": "Auto imported from components/about-us-one/FunFact.vue"
   },
@@ -38,20 +53,17 @@
   "AboutUsOneWhyChoose": {
     "description": "Auto imported from components/about-us-one/WhyChoose.vue"
   },
-  "AboutUsThreeContactInfo": {
-    "description": "Auto imported from components/about-us-three/ContactInfo.vue"
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
   },
-  "AboutUsThreeFunFact": {
-    "description": "Auto imported from components/about-us-three/FunFact.vue"
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
   },
-  "AboutUsThreeInstructor": {
-    "description": "Auto imported from components/about-us-three/Instructor.vue"
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
   },
-  "AboutUsThreeTestimonial": {
-    "description": "Auto imported from components/about-us-three/Testimonial.vue"
-  },
-  "AboutUsThreeWhyChoose": {
-    "description": "Auto imported from components/about-us-three/WhyChoose.vue"
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
@@ -73,18 +85,6 @@
   },
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
-  },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
@@ -431,15 +431,6 @@
   "ProductOne": {
     "description": "Auto imported from components/product/ProductOne.vue"
   },
-  "TestimonialOne": {
-    "description": "Auto imported from components/testimonial/TestimonialOne.vue"
-  },
-  "TestimonialThree": {
-    "description": "Auto imported from components/testimonial/TestimonialThree.vue"
-  },
-  "TestimonialTwo": {
-    "description": "Auto imported from components/testimonial/TestimonialTwo.vue"
-  },
   "SidebarBlogSidebarOne": {
     "description": "Auto imported from components/sidebar/BlogSidebarOne.vue"
   },
@@ -451,5 +442,14 @@
   },
   "SidebarPageSidebarOne": {
     "description": "Auto imported from components/sidebar/PageSidebarOne.vue"
+  },
+  "TestimonialOne": {
+    "description": "Auto imported from components/testimonial/TestimonialOne.vue"
+  },
+  "TestimonialThree": {
+    "description": "Auto imported from components/testimonial/TestimonialThree.vue"
+  },
+  "TestimonialTwo": {
+    "description": "Auto imported from components/testimonial/TestimonialTwo.vue"
   }
 }
