@@ -3,7 +3,9 @@
         <HeaderOne showHeaderTop="true" />
         <!--<HomeKitchenCoachBanner/>-->
         <Categories />
+        <HomeYogaInstructorFunFact/>
         <!--<HomeKitchenCoachFeatures/>-->
+        <HomeKitchenCoachFAQ/>
        <!-- <Banner />
         
         <Features />
@@ -34,12 +36,16 @@
 </template>
 
 <script>
+import FAQ from '../components/home-kitchen-coach/FAQ.vue'
+
     export default {
         components: {
-            HeaderOne: () => import("@/components/header/HeaderOne"),
+            HeaderOne: () => import("@/components/header/HeaderOne.vue"),
             //HomeKitchenCoachBanner: () => import("@/components/home-kitchen-coach/Banner.vue"),
-            Categories: () => import("@/components/home-distant-learning/Categories"),
+            Categories: () => import("@/components/home-distant-learning/Categories.vue"),
             HomeKitchenCoachFeatures: () => import("@/components/home-kitchen-coach/Features.vue"),
+            HomeKitchenCoachFAQ : () => import("@/components/home-kitchen-coach/FAQ.vue"),
+            HomeYogaInstructorFunFact : () => import("@/components/home-yoga-instructor/FunFact.vue"),
             /*Banner: () => import("@/components/home-main/Banner"),
             Features: () => import("@/components/home-main/Features"),
             Categories: () => import("@/components/home-main/Categories"),

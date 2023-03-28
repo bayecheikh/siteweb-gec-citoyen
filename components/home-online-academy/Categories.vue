@@ -34,57 +34,42 @@
             return {
                 categories: [
                     {
-                        title: "Management",
+                        title: "Ministère des Affaires Étrangères",
                         iconClass: "icon-9",
                         colorClass: "color-primary-style"
                     },
                     {
-                        title: "Arts & Design",
+                        title: "Ministère du Numérique et de la Digitalisation",
                         iconClass: "icon-10",
                         colorClass: "color-secondary-style"
                     },
                     {
-                        title: "Development",
+                        title: "Ministère du Développement et de la Coordination de l'Action Gouvernementale",
                         iconClass: "icon-11",
                         colorClass: "color-extra04-style"
                     },
                     {
-                        title: "Health & Fitness",
+                        title: "Ministère du Travail et de la Fonction Publique",
                         iconClass: "icon-12",
                         colorClass: "color-tertiary-style"
                     },
                     {
-                        title: "Data Science",
+                        title: "Ministère du Cadre de Vie et du Développement Durable",
                         iconClass: "icon-13",
                         colorClass: "color-extra02-style"
                     },
                     {
-                        title: "Design",
+                        title: "Ministère de l'Agriculture, de l'Élevage et de la Pêche",
                         iconClass: "icon-42",
                         colorClass: "color-extra07-style",
                         extraClass: "design-pencil-icon"
                     },
                     {
-                        title: "Marketing",
+                        title: "Ministère de la Défense Nationale",
                         iconClass: "icon-14",
                         colorClass: "color-extra06-style"
                     },
-                    {
-                        title: "Computer Science",
-                        iconClass: "icon-16",
-                        colorClass: "color-extra03-style",
-                        extraClass: "laptop-icon"
-                    },
-                    {
-                        title: "Photography",
-                        iconClass: "icon-17",
-                        colorClass: "color-extra01-style"
-                    },
-                    {
-                        title: "Music Class",
-                        iconClass: "icon-43",
-                        colorClass: "color-extra05-style"
-                    }
+                  
                 ]
             }
         }

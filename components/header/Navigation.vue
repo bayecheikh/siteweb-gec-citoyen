@@ -1,6 +1,6 @@
 <template>
     <ul class="mainmenu">
-        <li class="custom-mainmenu" ><n-link to="" class="custom-mainmenu">GEC CITOYEN</n-link>
+        <li class="custom-mainmenu" ><n-link to="/" class="custom-mainmenu">Accueil</n-link>
         </li>
         <li class="custom-mainmenu" ><n-link to="" class="custom-mainmenu">Comment envoyer un courrier ?</n-link>
         </li>

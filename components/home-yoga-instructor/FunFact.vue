@@ -1,5 +1,5 @@
 <template>
-    <div class="counterup-area-6">
+    <div class="counterup-area-6 custom-counterup-area-6">
         <div class="container">
             <div class="row g-5">
                 <div class="col-12 col-lg-3 col-md-6 col-sm-6" v-for="(counter, i) in funFacts" :key="i">
@@ -27,35 +27,42 @@
             return {
                 funFacts: [
                     {
-                        number: 29.3,
+                        number: 9.3,
                         decimal: 1,
                         iconClass: 'icon-48',
-                        title: 'STUDENT ENROLLED',
+                        title: "USAGERS CONNECTÉS",
                         suffix: 'K'
                     },
                     {
-                        number: 32.4,
+                        number: 21.4,
                         decimal: 1,
                         iconClass: 'icon-47',
-                        title: 'CLASS COMPLETED',
+                        title: 'COURRIERS DÉPOSÉS',
                         suffix: 'K'
                     },
                     {
-                        number: 100,
-                        decimal: null,
-                        iconClass: 'icon-49',
-                        title: 'SATISFACTION RATE',
-                        suffix: '%'
-                    },
-                    {
-                        number: 354,
+                        number: 10,
                         decimal: null,
                         iconClass: 'icon-50',
-                        title: 'TOP INSTRUCTORS',
+                        title: 'MINISTÈRES ENROLLÉS',
                         suffix: '+'
-                    }
+                    },
+                    {
+                        number: 90,
+                        decimal: null,
+                        iconClass: 'icon-49',
+                        title: 'TAUX DE RÉPONSE',
+                        suffix: '%'
+                    },
+                   
                 ]
             }
         }
     }
 </script>
+
+<style>
+.custom-counterup-area-6{
+    margin-bottom: 80px !important;
+}
+</style>
