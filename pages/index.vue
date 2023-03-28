@@ -1,32 +1,29 @@
 <template>
     <div id="main-wrapper" class="main-wrapper">
-        <HeaderOne showHeaderTop="true" />
+        
+        <HeaderOne />
 
-        <Banner />
-        
-        <Features />
-        
+        <!-- <Banner /> -->
+
         <Categories />
-        
-        <About />
-        
+
+        <!-- <About />
+
         <Course />
+
+        <VideoSection /> -->
+
+        <!-- <FunFact /> -->
+
+        <!-- <TestimonialTwo />
+
+        <Logo /> -->
+
+        <FAQ />
         
-        <FunFact />
-        
-        <TestimonialOne />
-        
-        <ContactInfo />
-        
-        <Instructor />
-        
-        <CTAOne />
-        
-        <LogoOne />
-        
-        <Blog />
-        
-        <FooterTwo />
+        <!-- <Blog /> -->
+
+        <FooterOne />
     </div>
 </template>
 
@@ -34,23 +31,21 @@
     export default {
         components: {
             HeaderOne: () => import("@/components/header/HeaderOne"),
-            Banner: () => import("@/components/home-main/Banner"),
-            Features: () => import("@/components/home-main/Features"),
-            Categories: () => import("@/components/home-main/Categories"),
-            About: () => import("@/components/home-main/About"),
-            Course: () => import("@/components/home-main/Course"),
-            FunFact: () => import("@/components/home-main/FunFact"),
-            TestimonialOne: () => import("@/components/testimonial/TestimonialOne"),
-            ContactInfo: () => import("@/components/home-main/ContactInfo"),
-            Instructor: () => import("@/components/home-main/Instructor"),
-            CTAOne: () => import("@/components/cta/CTAOne"),
-            LogoOne: () => import("@/components/logo/LogoOne"),
-            Blog: () => import("@/components/home-main/Blog"),
-            FooterTwo: () => import("@/components/footer/FooterTwo")
+            Banner: () => import("@/components/home-distant-learning/Banner"),
+            Categories: () => import("@/components/home-distant-learning/Categories"),
+            About: () => import("@/components/home-distant-learning/About"),
+            Course: () => import("@/components/home-distant-learning/Course"),
+            VideoSection: () => import("@/components/home-distant-learning/Video"),
+            FunFact: () => import("@/components/home-distant-learning/FunFact"),
+            TestimonialTwo: () => import("@/components/testimonial/TestimonialTwo"),
+            Logo: () => import("@/components/home-distant-learning/Logo"),
+            FAQ: () => import("@/components/home-distant-learning/FAQ"),
+            Blog: () => import("@/components/home-distant-learning/Blog"),
+            FooterOne: () => import("@/components/footer/FooterOne")
         },
         head() {
             return {
-                title: 'EduBlink Education'
+                title: 'GEC CITOYEN'
             }
         }
     }

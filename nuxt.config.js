@@ -41,6 +41,8 @@ export default {
         '~/plugins/vue-inline-svg.js',
         '~/plugins/observe-visibility.js',
         '~/plugins/vue-masonry-css.js',
+        '~/plugins/vuetimeline.js' ,
+        '~/plugins/goToTab.js' ,
         { 
             src: '~/plugins/bootstrap.bundle.min.js', 
             mode: 'client'
@@ -68,7 +70,24 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
+        '@nuxtjs/toast',
+        '@nuxtjs/axios',
     ],
+    axios: {
+        baseURL: 'https://msas.ip3dev.com/api-gec-citoyen/public/api',
+    },
+    toast: {
+        position: 'top-center',
+        register: [ // Register custom toasts
+          {
+            name: 'my-error',
+            message: 'Oops...Something went wrong',
+            options: {
+              type: 'error'
+            }
+          }
+        ]
+      },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {

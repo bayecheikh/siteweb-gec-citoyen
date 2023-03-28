@@ -86,6 +86,27 @@
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
   },
+  "CourriersConnexion": {
+    "description": "Auto imported from components/courriers/Connexion.vue"
+  },
+  "CourriersContenu": {
+    "description": "Auto imported from components/courriers/Contenu.vue"
+  },
+  "CourriersCoordonnees": {
+    "description": "Auto imported from components/courriers/Coordonnees.vue"
+  },
+  "CourriersForm": {
+    "description": "Auto imported from components/courriers/Form.vue"
+  },
+  "CourriersMinisteres": {
+    "description": "Auto imported from components/courriers/Ministeres.vue"
+  },
+  "CourriersPrevisualisation": {
+    "description": "Auto imported from components/courriers/Previsualisation.vue"
+  },
+  "CourriersValidation": {
+    "description": "Auto imported from components/courriers/Validation.vue"
+  },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
   },
@@ -341,8 +362,17 @@
   "HomeOnlineAcademyCategories": {
     "description": "Auto imported from components/home-online-academy/Categories.vue"
   },
+  "HomeOnlineAcademyConnexion": {
+    "description": "Auto imported from components/home-online-academy/Connexion.vue"
+  },
   "HomeOnlineAcademyContactInfo": {
     "description": "Auto imported from components/home-online-academy/ContactInfo.vue"
+  },
+  "HomeOnlineAcademyContenu": {
+    "description": "Auto imported from components/home-online-academy/Contenu.vue"
+  },
+  "HomeOnlineAcademyCoordonnees": {
+    "description": "Auto imported from components/home-online-academy/Coordonnees.vue"
   },
   "HomeOnlineAcademyCourse": {
     "description": "Auto imported from components/home-online-academy/Course.vue"
@@ -355,6 +385,15 @@
   },
   "HomeOnlineAcademyInstructor": {
     "description": "Auto imported from components/home-online-academy/Instructor.vue"
+  },
+  "HomeOnlineAcademyMinisteres": {
+    "description": "Auto imported from components/home-online-academy/Ministeres.vue"
+  },
+  "HomeOnlineAcademyPrevisualisation": {
+    "description": "Auto imported from components/home-online-academy/Previsualisation.vue"
+  },
+  "HomeOnlineAcademyValidation": {
+    "description": "Auto imported from components/home-online-academy/Validation.vue"
   },
   "HomeUniversityAbout": {
     "description": "Auto imported from components/home-university/About.vue"
