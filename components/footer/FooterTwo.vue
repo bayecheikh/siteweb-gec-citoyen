@@ -2,15 +2,15 @@
     <footer class="edu-footer footer-lighten  footer-style-1">
         <div class="custom-footer-two-main footer-top">
             <div class="container">
-                <div class="row g-5">
+                <div class=" custom-row row g-5">
                     <div class="col-lg-3 col-sm-6">
                         <div class="edu-footer-widget explore-widget">
                             <h4 class="widget-title custom-footer-two" >Services publics</h4>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
-                                    <li ><n-link class="custom-footer-two" to="/">À propos</n-link></li>
-                                    <li ><n-link class="custom-footer-two" to="/">Nous contacter</n-link></li>
-                                   
+                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/about" target="_blank">À propos</a></li>
+                                    <!--<li ><a class="custom-footer-two" href="https://twitter.com/numeriquebenin" target="_blank"></a>À propos</li>-->
+                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Nous contacter</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -20,8 +20,8 @@
                             <h4 class="widget-title custom-footer-two">Contribuer</h4>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
-                                    <li ><n-link class="custom-footer-two" to="/faq">Faire une suggestion</n-link></li>
-                                    <li ><n-link class="custom-footer-two" to="/gallery-grid">Signaler un problème</n-link></li>
+                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Faire une suggestion</a></li>
+                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Signaler un problème</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -32,8 +32,8 @@
                             <h4 class="widget-title custom-footer-two">En savoir plus</h4>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
-                                    <li ><n-link class="custom-footer-two" to="/faq">Mentions légales</n-link></li>
-                                    <li ><n-link class="custom-footer-two" to="/gallery-grid">CGU</n-link></li>
+                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/mention-legal" target="_blank">Mentions légales</a></li>
+                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/cgu" target="_blank">CGU</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -84,10 +84,12 @@
     background-color: #0a3764 !important;
    
             color: white !important;
+            padding-top: 0px !important;
         }
         .custom-footer-two-main{
     background-color: #0a3764 !important;
     padding: 30px !important;
             color: white !important;
         }
+      
 </style>

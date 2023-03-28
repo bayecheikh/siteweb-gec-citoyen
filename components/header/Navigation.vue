@@ -1,6 +1,6 @@
 <template>
     <ul class="mainmenu">
-        <li class="custom-mainmenu" ><n-link to="" class="custom-mainmenu">À propos de la GEC CITOYEN</n-link>
+        <li class="custom-mainmenu" ><n-link to="" class="custom-mainmenu">GEC CITOYEN</n-link>
         </li>
         <li class="custom-mainmenu" ><n-link to="" class="custom-mainmenu">Comment envoyer un courrier ?</n-link>
         </li>
@@ -15,7 +15,7 @@
   margin-right: 0px !important;
   margin-left: 0px !important;
   margin-bottom: 0px !important;
-  padding: 5px !important;
+  padding: 0px !important;
 }
 .custom-mainmenu {
  color: white !important;

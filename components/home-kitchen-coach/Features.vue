@@ -77,7 +77,7 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title"><span>Saisissez votre courrier et obtenez un numéro de suivi </span></h5>
+                            <h5 class="title"><span>Saisissez votre courrier et obtenez un numéro de suivi</span></h5>
                             
                         </div>
                     </div>

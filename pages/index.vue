@@ -1,8 +1,9 @@
 <template>
     <div id="main-wrapper" class="main-wrapper" style="background-color:#F0F6F9 !important;">
         <HeaderOne showHeaderTop="true" />
-        <HomeKitchenCoachBanner/>
-        <HomeKitchenCoachFeatures/>
+        <!--<HomeKitchenCoachBanner/>-->
+        <Categories />
+        <!--<HomeKitchenCoachFeatures/>-->
        <!-- <Banner />
         
         <Features />
@@ -36,7 +37,8 @@
     export default {
         components: {
             HeaderOne: () => import("@/components/header/HeaderOne"),
-            HomeKitchenCoachBanner: () => import("@/components/home-kitchen-coach/Banner.vue"),
+            //HomeKitchenCoachBanner: () => import("@/components/home-kitchen-coach/Banner.vue"),
+            Categories: () => import("@/components/home-distant-learning/Categories"),
             HomeKitchenCoachFeatures: () => import("@/components/home-kitchen-coach/Features.vue"),
             /*Banner: () => import("@/components/home-main/Banner"),
             Features: () => import("@/components/home-main/Features"),
