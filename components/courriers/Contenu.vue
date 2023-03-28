@@ -28,7 +28,13 @@
         },
         data() {
             return {
+                modelContenu:[
+                    {id:1,libelle:'Plainte',text:'Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor'},
+                    {id:2,libelle:'Demande',text:'Message message'},
+                    {id:3,libelle:'Opinion',text:'Lorum ipsum dolor Lorum ipsum dolor'},
+                ],
                 model :{
+                    idModel:null,
                     objet:"Objet du courrier",
                     message:"Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor",
                 } 
@@ -41,6 +47,11 @@
                 this.$store.dispatch('contenus/getDetail',{...this.model})
                 this.$store.dispatch('active_step/getDetail',{id:'validation'})
 
+            },
+            changeModel(model){
+                console.log('Données formulaire ++++++: ', model)
+                this.model.message = model.text
+                this.model.idModel = model.id
             },
         },
     }
