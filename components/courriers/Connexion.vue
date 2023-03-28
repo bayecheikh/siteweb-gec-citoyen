@@ -40,13 +40,7 @@ import { mapMutations, mapGetters } from 'vuex'
             return {
                 model :{
                     numero_ipn:"",
-                    password:"",
-                    type_utilisateur:"Citoyen",
-                    prenom:"Cheikh",
-                    nom:"Gueye",
-                    email:"cheikh.gueye@ip3-conseil.com",
-                    telephone:"778688784",
-                    adresse:"Dakar, Sacré Coeur 3",
+                    password:""
                 }
             }
         },
@@ -54,7 +48,16 @@ import { mapMutations, mapGetters } from 'vuex'
             submitConnexion(){
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
-                this.$store.dispatch('coordonnees/getDetail',{...this.model})
+                let dataUser = {
+                    numero_ipn:"",
+                    type_utilisateur:"Citoyen",
+                    prenom:"Cheikh",
+                    nom:"Gueye",
+                    email:"cheikh.gueye@ip3-conseil.com",
+                    telephone:"778688784",
+                    adresse:"Dakar, Sacré Coeur 3",
+                }
+                this.$store.dispatch('coordonnees/getDetail',{dataUser})
                 
                 this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
 
