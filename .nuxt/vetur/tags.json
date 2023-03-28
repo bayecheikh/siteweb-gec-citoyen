@@ -86,6 +86,30 @@
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
   },
+  "CourriersConnexion": {
+    "description": "Auto imported from components/courriers/Connexion.vue"
+  },
+  "CourriersContenu": {
+    "description": "Auto imported from components/courriers/Contenu.vue"
+  },
+  "CourriersCoordonnees": {
+    "description": "Auto imported from components/courriers/Coordonnees.vue"
+  },
+  "CourriersForm": {
+    "description": "Auto imported from components/courriers/Form.vue"
+  },
+  "CourriersMinisteres": {
+    "description": "Auto imported from components/courriers/Ministeres.vue"
+  },
+  "CourriersPrevisualisation copy": {
+    "description": "Auto imported from components/courriers/Previsualisation copy.vue"
+  },
+  "CourriersPrevisualisation": {
+    "description": "Auto imported from components/courriers/Previsualisation.vue"
+  },
+  "CourriersValidation": {
+    "description": "Auto imported from components/courriers/Validation.vue"
+  },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
   },
