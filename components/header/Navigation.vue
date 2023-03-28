@@ -9,7 +9,22 @@
         
     </ul>
 </template>
-
+<script>
+export default {
+  methods: {
+   /*scrollToSection() {
+      
+      this.$refs.faq.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+      offsetTop: 100
+    });
+      
+    }*/
+  }
+}
+</script>
 <style>
 .mainmenu {
   margin-right: 0px !important;

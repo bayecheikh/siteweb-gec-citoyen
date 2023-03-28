@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-6" data-aos-delay="200" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-1 color-secondary-style edublink-svg-animate">
+                    <div class="categorie-grid custom-categorie-grid categorie-style-1 custom-background-color color-secondary-style edublink-svg-animate">
                         <div class="icon custom-icon custom-icon-find">
                             <svg width="100%" height="100%" viewBox="1 -1 20 30" xmlns="http://www.w3.org/2000/svg"><title>magnify</title><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
                         </div>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="300"  data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-1 color-extra08-style edublink-svg-animate">
+                    <div class="categorie-grid custom-categorie-grid custom-background-color2 categorie-style-1 color-extra08-style edublink-svg-animate">
                         <div class="icon custom-icon-form">
                             <svg width="100%" height="100%" viewBox="1 -1 20 30" xmlns="http://www.w3.org/2000/svg"><title>note-text-outline</title><path d="M15 3H5A2 2 0 0 0 3 5V19A2 2 0 0 0 5 21H19A2 2 0 0 0 21 19V9L15 3M19 19H5V5H14V10H19M17 14H7V12H17M14 17H7V15H14" /></svg>
                         </div>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="400" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-1 color-extra05-style edublink-svg-animate">
+                    <div class="categorie-grid custom-categorie-grid categorie-style-1 custom-background-color3 color-extra05-style edublink-svg-animate">
                         <div class="icon custom-icon-submit">
                             <svg width="100%" height="100%" viewBox="1 -1 20 30" xmlns="http://www.w3.org/2000/svg"><title>send-circle-outline</title><path d="M8,7.71L18,12L8,16.29V12.95L15.14,12L8,11.05V7.71M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" /></svg>
                         </div>
@@ -140,6 +140,15 @@
 }
 .custom-categorie-grid:hover .custom-title {
   color: white !important;
+}
+.custom-background-color:hover{
+    background-color:  #f47087 !important;
+}
+.custom-background-color2:hover{
+    background-color:  #1BA2DB !important;
+}
+.custom-background-color3:hover{
+    background-color:  #FFB46A !important;
 }
 
 </style>
