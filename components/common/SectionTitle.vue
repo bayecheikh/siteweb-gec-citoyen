@@ -36,8 +36,10 @@
 <style>
 .custom-title{
     color: #333333 !important;
+    
 }
 .custom-shape-line{
     color: rgb(0, 128, 100) !important;
+   
 }
 </style>

@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="banner-content">
-                        <h1 class="title custom-banner">Plateforme GEC CITOYEN</h1>
+                        <h1 class="title custom-banner ">Plateforme GEC CITOYEN</h1>
                         <p class="title custom-banner"> La plateforme GEC CITOYEN est une plateforme digitale nationale, destinée aux usagers des organismes publics pour leur permettre de déposer, d'une manière électronique et sécurisée, des courriers auprès de ces organismes.
 
 Les usagers peuvent être une entreprise ou un citoyen.
@@ -47,6 +47,7 @@ Les usagers peuvent être une entreprise ou un citoyen.
 .custom-banner{
     color: #F7F7F7 !important;
 }
+
 .hero-banner::before {
   content: "";
   position: absolute;

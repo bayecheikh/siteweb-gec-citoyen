@@ -1,4 +1,5 @@
 <template>
+    <section id="faq">
     <div class="edu-faq-area faq-style-3 gap-bottom-equal">
         <div class="container">
             <div class="row g-5 row--45">
@@ -23,6 +24,7 @@
             </div>
         </div>
     </div>
+</section>
 </template>
 
 <script>
