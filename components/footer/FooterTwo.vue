@@ -5,10 +5,10 @@
                 <div class=" custom-row row g-5">
                     <div class="col-lg-3 col-sm-6">
                         <div class="edu-footer-widget explore-widget">
-                            <h4 class="widget-title custom-footer-two" >Services publics</h4>
+                            <h4 class="widget-title custom-footer-two-title custom-footer-two" >Services publics</h4>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
-                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/about" target="_blank">À propos</a></li>
+                                    <li ><a class="custom-footer-two custom-footer-two-content" href="https://service-public.bj/public/about"   target="_blank">À propos</a></li>
                                     <!--<li ><a class="custom-footer-two" href="https://twitter.com/numeriquebenin" target="_blank"></a>À propos</li>-->
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Nous contacter</a></li>
                                 </ul>
@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <div class="edu-footer-widget quick-link-widget">
-                            <h4 class="widget-title custom-footer-two">Contribuer</h4>
+                            <h4 class="widget-title custom-footer-two custom-footer-two-title ">Contribuer</h4>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Faire une suggestion</a></li>
@@ -29,7 +29,7 @@
 
                     <div class="col-lg-2 col-sm-6">
                         <div class="edu-footer-widget quick-link-widget">
-                            <h4 class="widget-title custom-footer-two">En savoir plus</h4>
+                            <h4 class="widget-title custom-footer-two custom-footer-two-title">En savoir plus</h4>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/mention-legal" target="_blank">Mentions légales</a></li>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="edu-footer-widget">
-                            <h4 class="widget-title custom-footer-two">Suivez-nous sur</h4>
+                            <h4 class="widget-title custom-footer-two custom-footer-two-title">Suivez-nous</h4>
                             <div class="inner">
                                 <ul class="social-share icon-transparent">
                                     <li><a href="https://twitter.com/numeriquebenin" target="_blank" class="color-twitter"><i class="icon-twitter"></i></a></li>
@@ -86,6 +86,14 @@
             color: white !important;
             padding-top: 0px !important;
         }
+        .custom-footer-two-title{
+            margin-bottom: -25px !important;
+            font-size: 15px !important;
+        }
+        .custom-footer-two-content{
+            font-size: 14px !important;
+        }
+       
         .custom-footer-two-main{
     background-color: #0a3764 !important;
     padding: 30px !important;
