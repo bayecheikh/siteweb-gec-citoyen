@@ -68,6 +68,24 @@
   "BlogPostTwo": {
     "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
+  "CommonBreadCrumbOne": {
+    "description": "Auto imported from components/common/BreadCrumbOne.vue"
+  },
+  "CommonBreadCrumbThree": {
+    "description": "Auto imported from components/common/BreadCrumbThree.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonColorMode": {
+    "description": "Auto imported from components/common/ColorMode.vue"
+  },
+  "CommonPaginationOne": {
+    "description": "Auto imported from components/common/PaginationOne.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
   },
@@ -91,24 +109,6 @@
   },
   "CourseTypeTwo": {
     "description": "Auto imported from components/course/CourseTypeTwo.vue"
-  },
-  "CommonBreadCrumbOne": {
-    "description": "Auto imported from components/common/BreadCrumbOne.vue"
-  },
-  "CommonBreadCrumbThree": {
-    "description": "Auto imported from components/common/BreadCrumbThree.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonColorMode": {
-    "description": "Auto imported from components/common/ColorMode.vue"
-  },
-  "CommonPaginationOne": {
-    "description": "Auto imported from components/common/PaginationOne.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "CtaCTAOne": {
     "description": "Auto imported from components/cta/CTAOne.vue"

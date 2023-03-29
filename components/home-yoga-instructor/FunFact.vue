@@ -10,7 +10,7 @@
                       
                         <h2 class="counter-item count-number">
                             <FunFact :number="counter.number" :decimal="counter.decimal" :suffix="counter.suffix" />
-                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait trop en bas-->
+                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
                         <section id="faq">
                         </section>
                         </h2>
@@ -35,7 +35,7 @@
                     {
                         number: 9.3,
                         decimal: 1,
-                        iconClass: 'icon-30',
+                        iconClass: 'icon-48',
                         title: "USAGERS CONNECTÉS",
                         suffix: 'K'
                     },
