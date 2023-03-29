@@ -2,8 +2,8 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'edublink',
-        titleTemplate: '%s - EduBlink',
+        title: 'GEC CITOYEN',
+        titleTemplate: '%s',
         htmlAttrs: {
             lang: 'zxx'
         },
