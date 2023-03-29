@@ -10,10 +10,13 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
+        "@nuxtjs/axios": "^5.13.6",
         "@nuxtjs/style-resources": "^1.2.1",
+        "@nuxtjs/toast": "^3.3.1",
         "aos": "^2.3.4",
         "core-js": "^3.18.2",
         "emailjs-com": "^3.2.0",
+        "html2pdf.js": "^0.10.1",
         "nuxt": "^2.15.8",
         "parallax-js": "^3.1.0",
         "rellax": "^1.12.1",
@@ -21,6 +24,7 @@
         "vue-awesome-swiper": "^4.1.1",
         "vue-cool-lightbox": "^2.7.5",
         "vue-count-to": "^1.0.13",
+        "vue-html2pdf": "^1.8.0",
         "vue-inline-svg": "^2.0.0",
         "vue-masonry-css": "^1.0.3",
         "vue-observe-visibility": "^1.0.0",

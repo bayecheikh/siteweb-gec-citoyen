@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _2ade83d4 = () => interopDefault(import('..\\pages\\about-us-one.vue' /* webpackChunkName: "pages/about-us-one" */))
 const _0be4b34e = () => interopDefault(import('..\\pages\\about-us-three.vue' /* webpackChunkName: "pages/about-us-three" */))
 const _02f86efc = () => interopDefault(import('..\\pages\\about-us-two.vue' /* webpackChunkName: "pages/about-us-two" */))
+const _cac6b602 = () => interopDefault(import('..\\pages\\addcourrier.vue' /* webpackChunkName: "pages/addcourrier" */))
 const _626418f8 = () => interopDefault(import('..\\pages\\coming-soon.vue' /* webpackChunkName: "pages/coming-soon" */))
 const _4e627a44 = () => interopDefault(import('..\\pages\\contact-me.vue' /* webpackChunkName: "pages/contact-me" */))
 const _5cce884a = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
@@ -74,6 +75,10 @@ export const routerOptions = {
     path: "/about-us-two",
     component: _02f86efc,
     name: "about-us-two"
+  }, {
+    path: "/addcourrier",
+    component: _cac6b602,
+    name: "addcourrier"
   }, {
     path: "/coming-soon",
     component: _626418f8,
