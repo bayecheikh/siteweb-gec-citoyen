@@ -27,7 +27,7 @@
                             </li> -->
                             <div class="banner-btn custom-banner-btn">
                             <li class="custom-header-btn">
-                                <n-link to="/" class="edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
+                                <n-link to="/" class="edu-btn custom-edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
                             </li>
                             <li class="custom-header-btn">
                                 <n-link to="/" class="edu-btn custom-btn-sign-up btn-orange text-uppercase">Créer un compte<i class="icon-4"></i></n-link>
@@ -158,6 +158,7 @@
             font-size: 10px !important;
             text-align: center !important; 
             background-color: #2985BC !important;
+            background: #2985BC !important;
         }
 
         .custom-btn-sign-up {
@@ -168,6 +169,7 @@
             font-size: 10px !important;
             text-align: center !important; 
             background-color: orange !important;
+            background: orange !important;
         }
         .custom-btn-send-courrier {
                 font-weight: bold !important;
@@ -183,4 +185,21 @@
         .custom-header-one{
             background-color: #0a3764 !important;
         }
+        .custom-btn-sign-in:hover {
+            background: linear-gradient(-90deg, #2985BC 0%, #2985BC 100%) !important;
+        }
+        .custom-btn-sign-in:after{
+            background: linear-gradient(-90deg, #4CA4E4 0%, #1da1f2 100%) !important; 
+        }
+        .custom-btn-sign-up:hover {
+            background: linear-gradient(-90deg, orange 0%, orange 100%) !important;
+        }
+        .custom-btn-sign-up:after{
+            background: linear-gradient(-90deg, #FFC04D 0%, #ffc752 100%) !important; 
+        }
+
+
+    
+
+
 </style>

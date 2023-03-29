@@ -1,6 +1,6 @@
 
 <template>
-  <section id="faq">
+  <section id="custom-faq-section">
     <div class="edu-faq-area faq-style-3 gap-bottom-equal">
         <div class="container">
             
@@ -21,8 +21,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="edu-faq-gallery">
-                        <div class="faq-thumbnail thumbnail-1" data-aos-delay="50" data-aos="fade-left" data-aos-duration="800">
-                            <img src="/images/faq/faq.jpg" alt="Faq Images">
+                        <div class="faq-thumbnail" data-aos-delay="50" data-aos="fade-left" data-aos-duration="800">
+                            <img src="/images/faq/faq.jpg" class="main-img-1" alt="Faq Images">
                         </div>
                     </div>
                 </div>
@@ -46,6 +46,8 @@
 .custom-title{
     margin-bottom: 10px !important;
 }
+
+
 
 
 </style>

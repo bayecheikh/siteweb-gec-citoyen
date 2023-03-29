@@ -11,18 +11,7 @@
 </template>
 <script>
 export default {
-  methods: {
-   /*scrollToSection() {
-      
-      this.$refs.faq.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-      offsetTop: 100
-    });
-      
-    }*/
-  }
+  
 }
 </script>
 <style>
@@ -33,6 +22,6 @@ export default {
   padding: 0px !important;
 }
 .custom-mainmenu {
- color: white !important;
+ color: var(--color-white) !important;
 }
 </style>

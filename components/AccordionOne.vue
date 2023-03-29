@@ -9,7 +9,7 @@
                 </h5>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>La connexion et l'inscription passent par la Plateforme Nationale Publique du Bénin.</p>
+                        <p>Pour vous connecter à la plateforme, vous devez disposer d'un compte au Portail National des Services Publics du Bénin.</p>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 </h5>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Les Ministères concernés sont : le Ministère des Affaires Étrangères, le Ministère du Numérique et de la Digitalisation, le Ministère du Développement et de la Coordination de l'Action Gouvernementale, le Ministère du Travail et de la Fonction Publique, le Ministère du Cadre de Vie et du Développement Durable, le Ministère de la Défense Nationale, le Ministère de l'Agriculture, de l'Élevage et de la Pêche. </p>
+                        <p>Les Ministères concernés sont : le Ministère des Affaires Étrangères, le Ministère du Numérique et de la Digitalisation, le Ministère du Développement et de la Coordination de l'Action Gouvernementale, le Ministère du Travail et de la Fonction Publique, le Ministère du Cadre de Vie et du Développement Durable, le Ministère de la Défense Nationale et le Ministère de l'Agriculture, de l'Élevage et de la Pêche. </p>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 </h5>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>La saisie du courrier se fait via un formulaire simple. Vous pouvez choisir d'importer votre courrier ou de le rédiger directement sur la plateforme.</p>
+                        <p>L'envoi du courrier se fait via un formulaire simple. Vous pouvez importer votre courrier ou le rédiger directement dans le formulaire.</p>
                     </div>
                 </div>
             </div>

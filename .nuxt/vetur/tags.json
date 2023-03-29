@@ -56,6 +56,18 @@
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
   },
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
+  },
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
+  },
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
+  },
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
+  },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
   },
@@ -79,18 +91,6 @@
   },
   "CourseTypeTwo": {
     "description": "Auto imported from components/course/CourseTypeTwo.vue"
-  },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CommonBreadCrumbOne": {
     "description": "Auto imported from components/common/BreadCrumbOne.vue"
