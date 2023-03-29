@@ -83,7 +83,7 @@
  .custom-footer-two{
     background-color: #0a3764 !important;
    
-            color: white !important;
+            color: var(--color-white) !important;
             padding-top: 0px !important;
         }
         .custom-footer-two-title{
@@ -97,7 +97,7 @@
         .custom-footer-two-main{
     background-color: #0a3764 !important;
     padding: 30px !important;
-            color: white !important;
+            color: var(--color-white) !important;
         }
       
 </style>

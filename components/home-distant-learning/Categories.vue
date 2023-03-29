@@ -57,9 +57,9 @@
             </div>
             <div class="row g-5">
             <div class="banner-btn custom-banner-btn">
-                            <!--<n-link to="/" class="edu-btn" style = "background-color: #1F6680" >
+                            <n-link to="/" class=" edu-btn custom-track-btn text-uppercase" style = "background-color: #1F6680; font-weight: bold !important;" >
                                 Suivre son courrier <i class="icon-4"></i>
-                          </n-link>  !-->
+                          </n-link>  
                             <n-link to="/addcourrier" class=" custom-custom edu-btn text-uppercase" >
                                 Déposer un courrier <i class="icon-4"></i>
                             </n-link>
@@ -139,7 +139,7 @@
     color: rgb(0, 128, 100) !important; 
 }
 .custom-categorie-grid:hover .custom-title {
-  color: white !important;
+  color: var(--color-white) !important;
 }
 .custom-background-color:hover{
     background-color:  #f47087 !important;
@@ -150,5 +150,12 @@
 .custom-background-color3:hover{
     background-color:  #FFB46A !important;
 }
+
+.custom-track-btn:hover {
+    background: linear-gradient(-90deg, rgb(30, 95, 116)  0%, rgb(30, 95, 116)  100%) !important;
+}
+.custom-track-btn:after{
+    background: linear-gradient(-90deg, rgb(67, 123, 140) 0%, rgb(60, 135, 156) 100%) !important; 
+}       
 
 </style>

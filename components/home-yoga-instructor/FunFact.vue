@@ -7,11 +7,17 @@
                         <div class="icon">
                             <i :class="counter.iconClass"></i>
                         </div>
+                      
                         <h2 class="counter-item count-number">
                             <FunFact :number="counter.number" :decimal="counter.decimal" :suffix="counter.suffix" />
+                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait trop en bas-->
+                        <section id="faq">
+                        </section>
                         </h2>
+                        
                         <h6 class="title">{{ counter.title }}</h6>
                     </div>
+                   
                 </div>
             </div>
         </div>
@@ -29,7 +35,7 @@
                     {
                         number: 9.3,
                         decimal: 1,
-                        iconClass: 'icon-48',
+                        iconClass: 'icon-30',
                         title: "USAGERS CONNECTÉS",
                         suffix: 'K'
                     },
