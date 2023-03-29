@@ -1,9 +1,5 @@
 <template>
     <div class="login-form-box registration-form">
-<<<<<<< HEAD
-        <h3 class="title"></h3>
-        <form >
-=======
         
         
         
@@ -11,7 +7,6 @@
             <Previsualisation />
             </div>
             
->>>>>>> dev
             <div class="row border-grey">
                 <div class="form-group col-6">
                 <h5 for="reg-name">Nom*</h5>
@@ -65,17 +60,10 @@
                 <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
                 </div>
                 <div class="form-group col-6">
-<<<<<<< HEAD
-                    <button @click="submitValidation" type="button" class="edu-btn btn-medium">Confirmer <i class="icon-4"></i></button>
-                </div>
-            </div>
-        </form>
-=======
                     <button @click="submitValidation" type="button" class="edu-btn btn-medium">Soumettre <i class="icon-4"></i></button>
                 </div>
             </div>
         
->>>>>>> dev
     </div>
 </template>
 
@@ -83,12 +71,8 @@
 import { mapMutations, mapGetters } from 'vuex'
     export default {
         components: {
-<<<<<<< HEAD
-            SectionTitle: () => import('@/components/common/SectionTitle')
-=======
             SectionTitle: () => import('@/components/common/SectionTitle'),
             Previsualisation: () => import('@/components/courriers/Previsualisation')
->>>>>>> dev
         },
         
         computed: mapGetters({
