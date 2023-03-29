@@ -96,7 +96,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"edublink","titleTemplate":"%s - EduBlink","htmlAttrs":{"lang":"zxx"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"}],"script":[{"src":"\u002Fjs\u002Fpace.min.js"}],"style":[]},
+    head: {"title":"GEC CITOYEN","titleTemplate":"%s","htmlAttrs":{"lang":"zxx"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"}],"script":[{"src":"\u002Fjs\u002Fpace.min.js"}],"style":[]},
 
     store,
     router,

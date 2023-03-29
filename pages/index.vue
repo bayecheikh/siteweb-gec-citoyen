@@ -62,7 +62,7 @@ import FAQ from '../components/home-kitchen-coach/FAQ.vue'
         },
         head() {
             return {
-                title: 'EduBlink Education'
+                title: 'GEC CITOYEN'
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <div class="login-form-box registration-form">
+    <div class="login-form-box registration-form border-grey">
         <h3 class="title"></h3>
         <form class="row d-flex">
             <div class="form-group col-6">
@@ -53,11 +53,11 @@ import { mapMutations, mapGetters } from 'vuex'
             return {
                 model :{
                     type_utilisateur:"Citoyen",
-                    prenom:"Cheikh",
-                    nom:"Gueye",
-                    email:"cheikh.gueye@ip3-conseil.com",
-                    telephone:"778688784",
-                    adresse:"Thiès",
+                    prenom:"",
+                    nom:"",
+                    email:"",
+                    telephone:"",
+                    adresse:"",
                 }
             }
         },
@@ -81,3 +81,8 @@ import { mapMutations, mapGetters } from 'vuex'
         },
     }
 </script>
+<style scoped>
+.border-grey{
+  border: solid 2px #0a3764;
+}
+</style>

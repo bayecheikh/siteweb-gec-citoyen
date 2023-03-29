@@ -4,7 +4,7 @@
        
         <Form />
         
-        <FooterThree />
+        <FooterTwo />
     </div>
 </template>
 
@@ -24,11 +24,11 @@
             Event: () => import("@/components/event/EventSectionOne"),
             Logo: () => import("@/components/logo/LogoTwo"),
             CTA: () => import("@/components/cta/CTAOne"),
-            FooterThree: () => import("@/components/footer/FooterThree")
+            FooterTwo: () => import("@/components/footer/FooterTwo")
         },
         head() {
             return {
-                title: 'University'
+                title: 'Envoyer un courrier'
             }
         }
     }
