@@ -9,22 +9,7 @@
     "description": "Auto imported from components/InstagramPost.vue"
   },
   "About": {
-    "description": "Auto imported from components/about-us-three/About.vue"
-  },
-  "AboutUsThreeContactInfo": {
-    "description": "Auto imported from components/about-us-three/ContactInfo.vue"
-  },
-  "AboutUsThreeFunFact": {
-    "description": "Auto imported from components/about-us-three/FunFact.vue"
-  },
-  "AboutUsThreeInstructor": {
-    "description": "Auto imported from components/about-us-three/Instructor.vue"
-  },
-  "AboutUsThreeTestimonial": {
-    "description": "Auto imported from components/about-us-three/Testimonial.vue"
-  },
-  "AboutUsThreeWhyChoose": {
-    "description": "Auto imported from components/about-us-three/WhyChoose.vue"
+    "description": "Auto imported from components/about-us-one/About.vue"
   },
   "AboutUsOneFunFact": {
     "description": "Auto imported from components/about-us-one/FunFact.vue"

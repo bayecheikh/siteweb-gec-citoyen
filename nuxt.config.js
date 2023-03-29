@@ -41,8 +41,6 @@ export default {
         '~/plugins/vue-inline-svg.js',
         '~/plugins/observe-visibility.js',
         '~/plugins/vue-masonry-css.js',
-        '~/plugins/vuetimeline.js' ,
-        '~/plugins/goToTab.js' ,
         { 
             src: '~/plugins/bootstrap.bundle.min.js', 
             mode: 'client'
@@ -50,7 +48,8 @@ export default {
         { 
             src: "~/plugins/aos", 
             ssr: false 
-        }
+        },
+        { src: '@/plugins/vue-html2pdf', mode: 'client' }
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -87,7 +86,7 @@ export default {
             }
           }
         ]
-      },
+    },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {

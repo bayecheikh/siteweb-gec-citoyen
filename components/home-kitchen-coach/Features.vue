@@ -1,8 +1,9 @@
 <template>
-    <div class="features-area-1 gap-top-equal">
+    <div class="features-area-1 custom-features gap-top-equal">
         <div class="container">
+            <h2 class="custom-features-title title">Comment procéder ?</h2>
             <div class="row g-5">
-                <div class="col-lg-3" data-aos-delay="50" data-aos="fade-up" data-aos-duration="800">
+                <div class="col-lg-3 mb-20" data-aos-delay="50" data-aos="fade-up" data-aos-duration="800">
                     <div class="features-box color-primary-style edublink-svg-animate">
                         <div class="icon">
                            <svg class="svgInject kitchen-skilled-instructor-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44 44" style="enable-background:new 0 0 44 44;" xml:space="preserve">
@@ -23,25 +24,44 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title"><span>Skilled </span>Lecturers</h5>
-                            <p>Lorem ipsum dolor consec tur elit adicing sed umod tempor.</p>
+                            <h5 class="title"><span>Trouvez le Ministère concerné </span></h5>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3" data-aos-delay="100" data-aos="fade-up" data-aos-duration="800">
                     <div class="features-box color-secondary-style edublink-svg-animate">
                         <div class="icon">
-                            <svg class="svgInject" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.51448 30.4573C0.0954334 27.0383 0.0954334 21.4954 3.51448 18.0764L18.0764 3.51448C21.4954 0.0954334 27.0383 0.0954334 30.4573 3.51448C33.8764 6.93353 33.8764 12.4764 30.4573 15.8954L15.8954 30.4573C12.4764 33.8764 6.93353 33.8764 3.51448 30.4573Z" stroke="#ee4a62" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                                <path d="M31.3715 39.0477C35.6109 39.0477 39.0477 35.6109 39.0477 31.3715C39.0477 27.1321 35.6109 23.6953 31.3715 23.6953C27.1321 23.6953 23.6953 27.1321 23.6953 31.3715C23.6953 35.6109 27.1321 39.0477 31.3715 39.0477Z" stroke="#ee4a62" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                                <path d="M10.7905 10.791L23.1715 23.172" stroke="#ee4a62" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                                <path d="M25.9619 36.781L36.781 25.9619" stroke="#ee4a62" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                                <path d="M19.5337 9.57139L21.9527 7.15234" stroke="#ee4a62" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                            </svg>
+                            <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#F9C5D1"/>
+  <path d="M95.5 227.5C105.5 215.5 105.5 190.5 95.5 178.5C85.5 166.5 72.5 164.5 62.5 176.5C52.5 188.5 52.5 213.5 62.5 225.5C72.5 237.5 85.5 239.5 95.5 227.5Z" fill="#84BF6B" stroke="#549B4C" stroke-width="4"/>
+  <path d="M177.5 178.5L234.5 138.5" stroke="#3D3D3D" stroke-width="8"/>
+  <path d="M195.5 206.5L244.5 161.5" stroke="#3D3D3D" stroke-width="8"/>
+  <path d="M162.5 218.5L207.5 182.5" stroke="#3D3D3D" stroke-width="8"/>
+</svg>
                         </div>
                         <div class="content">
-                            <h5 class="title"><span>Distance</span> Programs</h5>
-                            <p>Lorem ipsum dolor consec tur elit adicing sed umod tempor.</p>
+                            <h5 class="title"><span>Saisissez votre courrier</span></h5>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" data-aos-delay="150" data-aos="fade-up" data-aos-duration="800">
+                    <div class="features-box color-extra08-style edublink-svg-animate">
+                        <div class="icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 1.5C8.41015 1.5 5.5 4.41015 5.5 8C5.5 11.5899 8.41015 14.5 12 14.5C15.5899 14.5 18.5 11.5899 18.5 8C18.5 4.41015 15.5899 1.5 12 1.5ZM12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13Z" fill="#4664E4"/>
+  <rect x="16" y="17" width="7" height="7" rx="1" fill="#FF9AA2"/>
+  <path d="M18 20.5H21V23.5H18V20.5ZM15 20.5H16.5V23.5H15V20.5ZM18 18H21V19.5H18V18ZM15 18H16.5V19.5H15V18Z" fill="#4664E4"/>
+  <path d="M8.5 14C8.5 16.2091 10.2909 18 12.5 18C14.7091 18 16.5 16.2091 16.5 14V9C16.5 6.79086 14.7091 5 12.5 5C10.2909 5 8.5 6.79086 8.5 9V14Z" fill="#FFB7B2"/>
+  <path d="M9.5 14C9.5 14.8284 10.1716 15.5 11 15.5C11.8284 15.5 12.5 14.8284 12.5 14V8C12.5 7.17157 11.8284 6.5 11 6.5C10.1716 6.5 9.5 7.17157 9.5 8V14Z" fill="#F05D5E"/>
+  <rect x="2" y="17" width="7" height="7" rx="1" fill="#FF9AA2"/>
+  <path d="M4 20.5H7V23.5H4V20.5ZM1 20.5H2.5V23.5H1V20.5ZM4 18H7V19.5H4V18ZM1 18H2.5V19.5H1V18Z" fill="#4664E4"/>
+</svg>
+                        </div>
+                        <div class="content">
+                            <h5 class="title"><span>Saisissez vos coordonnées </span></h5>
+                            
                         </div>
                     </div>
                 </div>
@@ -57,27 +77,8 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title"><span>Online</span>Certifications</h5>
-                            <p>Lorem ipsum dolor consec tur elit adicing sed umod tempor.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3" data-aos-delay="150" data-aos="fade-up" data-aos-duration="800">
-                    <div class="features-box color-extra05-style edublink-svg-animate">
-                        <div class="icon">
-                            <svg class="svgInject" width="38" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22.5004 20.4568C26.6355 20.4568 29.9876 17.1309 29.9876 13.0282C29.9876 8.92549 26.6355 5.59961 22.5004 5.59961C18.3653 5.59961 15.0132 8.92549 15.0132 13.0282C15.0132 17.1309 18.3653 20.4568 22.5004 20.4568Z" stroke="#f8941f" stroke-width="2" stroke-miterlimit="10"/>
-                                <path d="M32.7999 39.0468H12.2005C11.6821 39.0468 11.2598 38.6277 11.2598 38.1134V31.6182C11.2598 25.4563 16.2896 20.4658 22.5002 20.4658C28.7107 20.4658 33.7406 25.4563 33.7406 31.6182V38.123C33.7406 38.6277 33.3182 39.0468 32.7999 39.0468Z" stroke="#f8941f" stroke-width="2" stroke-miterlimit="10"/>
-                                <path d="M25.6772 6.06643C26.6563 3.09501 29.4784 0.952148 32.7997 0.952148C36.9368 0.952148 40.2869 4.27596 40.2869 8.38072C40.2869 12.4855 36.9368 15.8093 32.7997 15.8093C31.6862 15.8093 30.6303 15.5712 29.68 15.1331" stroke="#f8941f" stroke-width="2" stroke-miterlimit="10"/>
-                                <path d="M29.1714 16.4088C30.3137 16.0279 31.5327 15.8184 32.7998 15.8184C39.0103 15.8184 44.0402 20.8088 44.0402 26.9707V33.4755C44.0402 33.9898 43.6178 34.4088 43.0995 34.4088H33.9133" stroke="#f8941f" stroke-width="2" stroke-miterlimit="10"/>
-                                <path d="M19.3229 6.06643C18.3342 3.09501 15.5217 0.952148 12.2004 0.952148C8.06325 0.952148 4.70361 4.27596 4.70361 8.38072C4.70361 12.4855 8.05366 15.8093 12.1908 15.8093C13.3043 15.8093 14.3602 15.5712 15.3105 15.1331" stroke="#f8941f" stroke-width="2" stroke-miterlimit="10"/>
-                                <path d="M15.8288 16.4088C14.6865 16.0279 13.4674 15.8184 12.2004 15.8184C5.98982 15.8184 0.959961 20.8088 0.959961 26.9707V33.4755C0.959961 33.9898 1.38232 34.4088 1.90066 34.4088H11.0869" stroke="#f8941f" stroke-width="2" stroke-miterlimit="10"/>
-                            </svg>
-                        </div>
-                        
-                        <div class="content">
-                            <h5 class="title"><span>6000</span>Members</h5>
-                            <p>Lorem ipsum dolor consec tur elit adicing sed umod tempor.</p>
+                            <h5 class="title"><span>Saisissez votre courrier et obtenez un numéro de suivi</span></h5>
+                            
                         </div>
                     </div>
                 </div>
@@ -104,4 +105,21 @@
             stroke-linejoin:round;
         }
     }
+    .mb-20 {
+    margin-bottom: 100px;
+}
+.custom-features-title {
+text-align: center !important;
+font-size : 30px;
+margin-top: 0px;
+
+}
+.custom-features {
+background-color:#F0F6F9 !important;
+height: 815px !important;
+
+
+}
+
+
 </style>
