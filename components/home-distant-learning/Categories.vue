@@ -16,7 +16,7 @@
                             <svg class ="custom-svg" xmlns="http://www.w3.org/2000/svg" width="38.16" height="40.834" viewBox="0 0 38.16 40.834"><g transform="translate(-5928 -10528.621)"><path d="M40.159,28.56V24.04A9.04,9.04,0,0,0,31.119,15H13.04A9.04,9.04,0,0,0,4,24.04v4.52" transform="translate(5925 10539.894)" fill="none" stroke="#007aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="8.771" cy="8.771" r="8.771" transform="translate(5939.57 10529.62)" fill="none" stroke="#007aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title custom-title-1">Se connecter à la plateforme</h5>
+                            <h5 class="title custom-title custom-title-1">Connectez-vous à la plateforme</h5>
                            
                             <div class="course-remain custom-number custom-number-1">1</div>
                         </div>
@@ -84,13 +84,13 @@
         <SuiviCourrier v-if="isPageLoad"/>
         
             <div class="banner-btn custom-banner-btn">
-                            <n-link to="/" class=" edu-btn custom-track-btn text-uppercase" @click="onClickSuivreCourrier('suivre-courrier')" style = "background-color: #1F6680; font-weight: bold !important;" >
+                            <n-button class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" @click="onClickSuivreCourrier()" style = "background-color: #1F6680; font-weight: bold !important;" >
                                 Suivre son courrier <i class="icon-4"></i>
-                          </n-link>  
+                          </n-button>  
                             <n-link to="/addcourrier" class="custom-send-btn edu-btn text-uppercase" >
                                 Déposer un courrier <i class="icon-4"></i>
                             </n-link>
-                          
+                        
                             
                         </div>
                         
@@ -106,7 +106,7 @@
             SuiviCourrier: () => import("@/components/home-distant-learning/SuiviCourrier.vue"),
         },
         methods:{
-            onClickSuivreCourrier(item) {
+            onClickSuivreCourrier() {
                 console.log("TERERZEZE")
                 this.isPageLoad=true
                 
@@ -151,6 +151,7 @@
 }
 .custom-track-btn {
     margin-top: 20px !important;
+    cursor: pointer !important;
 }
 
 .custom-title{
@@ -230,4 +231,49 @@ color: var(--color-white) !important;
 background-color: var(--color-tertiary) !important;
 }
 
+.custom-edu-btn-2 {
+    text-align: center !important;
+border-radius: 5px !important;
+display: inline-block !important;
+height: 60px !important;
+line-height: 62px !important;
+color: var(--edu-btn-color) !important;
+background: var(--color-primary) !important;
+padding: 0 30px !important;
+font-size: 15px !important;
+transition: 0.4s !important;
+font-family: var(--font-secondary) !important;
+border: 0 none !important;
+overflow: hidden !important;
+position: relative !important;
+z-index: 1 !important;
+font-weight: bold !important;
+margin-top: 20px !important;
+background-color: #2985bc !important;
+}
+
+.custom-edu-btn-2:hover {
+      background: linear-gradient(-90deg, rgb(30, 95, 116)  0%, rgb(30, 95, 116)  100%) !important;
+    color: var(--color-white);
+}
+ 
+.custom-edu-btn-2:after {
+    background-color: var(--color-white);
+    color: var(--color-white);
+    content: "";
+    height: 100%;
+    width: 0;
+    background: linear-gradient(-90deg, #31b978 0%, #1ab69d 100%);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+                    
+                    
+                    
+                
 </style>

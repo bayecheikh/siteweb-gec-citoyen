@@ -1,5 +1,5 @@
 <template>
-    <footer class="edu-footer footer-lighten  footer-style-1">
+    <footer class="edu-footer custom-edu-footer footer-lighten  footer-style-1">
         <div class="custom-footer-two-main footer-top">
             <div class="container">
                 <div class=" custom-row row g-5">
@@ -100,5 +100,5 @@
     padding: 30px !important;
             color: var(--color-white) !important;
         }
-      
+     
 </style>
