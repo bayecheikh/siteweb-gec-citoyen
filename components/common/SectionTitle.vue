@@ -3,7 +3,7 @@
         <span class="pre-title" :class="preTitleClass" v-html="preTitle" v-if="preTitle"></span>
         <h2 class="title custom-title" v-html="title"></h2>
         <span class="shape-line" v-if="!disableMark"><i class="icon-19"></i></span>
-        <p v-html="subTitle" v-if="subTitle"></p>
+        <p class= "custom-subtitle" v-html="subTitle" v-if="subTitle"></p>
     </div>
 </template>
 
@@ -36,6 +36,10 @@
 <style>
 .custom-title{
     color: #333333 !important;
+    
+}
+.custom-subtitle{
+    margin-top: -10px !important;
     
 }
 .custom-shape-line{

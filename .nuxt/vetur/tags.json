@@ -53,21 +53,6 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
-  },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
   },
@@ -89,6 +74,9 @@
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
   },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
+  },
   "CommonBreadCrumbOne": {
     "description": "Auto imported from components/common/BreadCrumbOne.vue"
   },
@@ -106,6 +94,18 @@
   },
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
+  },
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
+  },
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
+  },
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
@@ -238,6 +238,9 @@
   },
   "HomeDistantLearningLogo": {
     "description": "Auto imported from components/home-distant-learning/Logo.vue"
+  },
+  "HomeDistantLearningSuiviCourrier": {
+    "description": "Auto imported from components/home-distant-learning/SuiviCourrier.vue"
   },
   "HomeDistantLearningVideo": {
     "description": "Auto imported from components/home-distant-learning/Video.vue"
@@ -449,6 +452,9 @@
   "LogoTwo": {
     "description": "Auto imported from components/logo/LogoTwo.vue"
   },
+  "ProductOne": {
+    "description": "Auto imported from components/product/ProductOne.vue"
+  },
   "SidebarBlogSidebarOne": {
     "description": "Auto imported from components/sidebar/BlogSidebarOne.vue"
   },
@@ -460,9 +466,6 @@
   },
   "SidebarPageSidebarOne": {
     "description": "Auto imported from components/sidebar/PageSidebarOne.vue"
-  },
-  "ProductOne": {
-    "description": "Auto imported from components/product/ProductOne.vue"
   },
   "TestimonialOne": {
     "description": "Auto imported from components/testimonial/TestimonialOne.vue"

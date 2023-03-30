@@ -152,8 +152,8 @@
 
         .custom-btn-sign-in {
                 font-weight: bold !important;
-            height: 30px !important;
-            line-height: 30px !important;
+            height: 40px !important;
+            line-height: 40px !important;
             padding: 0 40px !important;
             font-size: 10px !important;
             text-align: center !important; 
@@ -162,9 +162,10 @@
         }
 
         .custom-btn-sign-up {
+            margin-right: 30px !important;
                 font-weight: bold !important;
-            height: 30px !important;
-            line-height: 30px !important;
+            height: 40px !important;
+            line-height: 40px !important;
             padding: 0 30px !important;
             font-size: 10px !important;
             text-align: center !important; 

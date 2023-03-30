@@ -90,6 +90,7 @@
             margin-bottom: -25px !important;
             font-size: 15px !important;
         }
+       
         .custom-footer-two-content{
             font-size: 14px !important;
         }

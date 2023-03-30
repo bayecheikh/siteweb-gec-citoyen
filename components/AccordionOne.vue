@@ -33,7 +33,7 @@
                 </h5>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>L'envoi du courrier se fait via un formulaire simple. Vous pouvez importer votre courrier ou le rédiger directement dans le formulaire.</p>
+                        <p>L'envoi du courrier se fait via un formulaire simple. Vous pouvez importer votre courrier et y joindre d'autres fichiers si besoin.</p>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <template>
-    <ul class="mainmenu">
-        <li class="custom-mainmenu" ><n-link to="/" class="custom-mainmenu">Accueil</n-link>
+    <ul class="mainmenu custom-mainmenu">
+        <li class="custom-mainmenu " ><n-link to="/" class="custom-mainmenu">Accueil</n-link>
         </li>
         <li class="custom-mainmenu" ><a href="#faq" class="custom-mainmenu">Comment envoyer un courrier ?</a>
         </li>
@@ -23,5 +23,8 @@ export default {
 }
 .custom-mainmenu {
  color: var(--color-white) !important;
+}
+.mainmenu-nav .mainmenu > li > a:hover, .mainmenu-nav .mainmenu > li > a.active {
+  color: orange !important;
 }
 </style>
