@@ -1,5 +1,5 @@
 <template>
-    <div id="main-wrapper" class="main-wrapper" style="background-color:rgb(238, 242, 248) !important;">
+    <div id="main-wrapper" class="main-wrapper bg-lighten04">
         <HeaderOne showHeaderTop="true" />
         <!--<HomeKitchenCoachBanner/>-->
         <Categories />

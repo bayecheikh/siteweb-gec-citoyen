@@ -225,8 +225,8 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_7b356d66 === 'function') {
-    await nuxt_plugin_plugin_7b356d66(app.context, inject)
+  if (typeof nuxt_plugin_plugin_e3fcb098 === 'function') {
+    await nuxt_plugin_plugin_e3fcb098(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_f15fec52 === 'function') {
@@ -241,16 +241,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_pluginserver_c925c59c(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_toast_550cd190 === 'function') {
-    await nuxt_plugin_toast_550cd190(app.context, inject)
-  }
-
-  if (process.server && typeof nuxt_plugin_pluginserver_fe1a2980 === 'function') {
-    await nuxt_plugin_pluginserver_fe1a2980(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_pluginclient_1b3979b8 === 'function') {
-    await nuxt_plugin_pluginclient_1b3979b8(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_35b3abaa === 'function') {
+    await nuxt_plugin_pluginclient_35b3abaa(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueawesomeswiper_5ce03f58 === 'function') {
