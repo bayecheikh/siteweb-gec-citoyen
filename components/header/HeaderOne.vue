@@ -162,7 +162,7 @@
         }
 
         .custom-btn-sign-up {
-            margin-right: 30px !important;
+            margin-right: 33px !important;
                 font-weight: bold !important;
             height: 40px !important;
             line-height: 40px !important;

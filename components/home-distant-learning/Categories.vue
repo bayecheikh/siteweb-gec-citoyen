@@ -81,10 +81,58 @@
                       
                                                
         </div>
-        <SuiviCourrier v-if="isPageLoad"/>
+        <template>
+  <div v-show="isPageLoad">
+<div v-show="isPopUpVisible" class="custom-template offset-xl-2 col-lg-6">
+    <div class="contact-form form-style-2">
+        <button @click="onClickClose()" class="custom-close-btn">x</button>
+        <div class="section-title">
+            <h4 class="title">Veuillez entrer le code de suivi</h4>
+            <p style="font-style: italic; background-color: #F2F2F2; padding: 5px;">Vous avez reçu un email contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour suivre l'avancement de votre courrier, veuillez entrer le code dans l'espace ci-dessous.</p>
+        </div>
+
+        <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="isCodeValid()">
+            <div class="row row--10">
+                <div class="form-group col-12">
+                    <input type="text" name="code" placeholder="Votre code">
+                </div>
+                <div v-if="!validCode" class="col-12 success-msg">
+                        <p class="custom-error-msg">Ce code est invalide</p>
+                    </div> 
+                <div class="form-group col-12">
+                    <button class="rn-btn edu-btn btn-medium submit-btn" name="submit" type="submit">Valider <i class="icon-4"></i></button>
+                    
+
+                </div>
+            </div>
+        </form>
+
+        <ul class="shape-group">
+            <MouseMove addClassName="shape-1" dataDepth="1" imgSrc="/images/about/shape-13.png" />
+            <MouseMove addClassName="shape-2" dataDepth="-1" imgSrc="/images/counterup/shape-02.png" />
+        </ul>
+    </div>
+</div>
+
+<div v-show="showValidMessage1" class="custom-template offset-xl-2 col-lg-6">
+    <div class="contact-form form-style-2">
+        <button @click="onClickClose2()" class="custom-close-btn">x</button>
+        <h2 class="message-title">État de votre courrier</h2>
+      <p class="message-text">Votre courrier a été déposé et est en attente de traitement.</p>
+       </div>
+    </div>
+    <div v-show="showValidMessage2" class="custom-template offset-xl-2 col-lg-6">
+    <div class="contact-form form-style-2">
+        <button @click="onClickClose3()" class="custom-close-btn">x</button>
+        <h2 class="message-title">État de votre courrier</h2>
+      <p class="message-text">Votre courrier a été traité avec succès ! Vous pouvez consulter la réponse en vérifiant votre boîte de réception à l'adresse email ya******@outlook.com.</p>
+       </div>
+    </div>
+</div>
+</template>
         
             <div class="banner-btn custom-banner-btn">
-                            <n-button class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" @click="onClickSuivreCourrier()" style = "background-color: #1F6680; font-weight: bold !important;" >
+                            <n-button class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton" @click="onClickSuivreCourrier()" style = "background-color: #1F6680; font-weight: bold !important;" >
                                 Suivre son courrier <i class="icon-4"></i>
                           </n-button>  
                             <n-link to="/addcourrier" class="custom-send-btn edu-btn text-uppercase" >
@@ -109,13 +157,52 @@
             onClickSuivreCourrier() {
                 console.log("TERERZEZE")
                 this.isPageLoad=true
-                
+             
+                this.isPopUpVisible = true
             },
+            onClickClose() {
+                this.isPopUpVisible = false;
+                this.isPageLoad = false;
+                this.$refs.form.reset();
+            },
+            onClickClose2() {
+                this.showValidMessage1 = false;
+                this.isPageLoad = false;
+            },
+            onClickClose3() {
+                this.showValidMessage2 = false;
+                this.isPageLoad = false;
+            },
+            isCodeValid() {
+                const codeInput = this.$refs.form.querySelector('input[name="code"]');
+                const codeValue = codeInput.value;
+               
+                if(codeValue==2){
+                    this.isPopUpVisible = false
+                    this.showValidMessage1 = true
+                    this.validCode = true
+                }
+                else if(codeValue==3){
+                    this.isPopUpVisible = false
+                    this.showValidMessage2 = true
+                    this.validCode = true
+                }
+                else {
+                    this.validCode = false
+                }
+                
+
+            }
             
         },
         data() {
             return {
+                isPopUpVisible: true,
+                validCode: true,
+                showValidMessage1: false,
+                showValidMessage2: false,
                 isPageLoad:false,
+               
             }
         },
     }
@@ -150,6 +237,7 @@
    
 }
 .custom-track-btn {
+    
     margin-top: 20px !important;
     cursor: pointer !important;
 }
@@ -160,11 +248,13 @@
 .custom-number{
     
     font-size: 25px !important; 
+    margin-top: 25px !important;
+  
  
 }
 .custom-number-1{
     
-    color: var(--color-primary) !important; 
+    color: #007aff !important; 
 }
 
 
@@ -252,25 +342,39 @@ margin-top: 20px !important;
 background-color: #2985bc !important;
 }
 
-.custom-edu-btn-2:hover {
-      background: linear-gradient(-90deg, rgb(30, 95, 116)  0%, rgb(30, 95, 116)  100%) !important;
-    color: var(--color-white);
+.custom-template{
+  position: fixed !important;
+  top: 50%;
+  left: 34.8%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 9999 !important;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(5px) !important;
+
 }
- 
-.custom-edu-btn-2:after {
-    background-color: var(--color-white);
-    color: var(--color-white);
-    content: "";
-    height: 100%;
-    width: 0;
-    background: linear-gradient(-90deg, #31b978 0%, #1ab69d 100%);
-    border-radius: 5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.4s;
+.custom-error-msg{
+    color: #FF5733 !important;
+}
+.message-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.message-text {
+  font-size: 16px;
+  color: #666;
+}
+.custom-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: gray;
+  padding-right: 15px ;
+  font-size: 20px;
 }
                     
                     
