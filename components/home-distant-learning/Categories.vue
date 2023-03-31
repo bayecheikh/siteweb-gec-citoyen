@@ -1,80 +1,210 @@
+
 <template>
     <div class="edu-categorie-area custom-categorie-area-1 categorie-area-1 edu-section-gap">
         <div class="container">
-            <SectionTitle alignment="section-center"  title='Plateforme <span class="color-primary custom-section-title">GEC CITOYEN</span>' subTitle="Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers." />
+            <SectionTitle alignment="section-center"  title='Plateforme <span class="color-primary custom-section-title">GEC CITOYEN</span>' subTitle="Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers." disableMark=false />
 
             <div class="row g-5 custom-row">
-                <div class="custom-div col-lg-3 col-sm-6" data-aos-delay="100"  data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-1 color-primary-style edublink-svg-animate">
-                        <div class="icon custom-icon-connect">
-                            <svg  width="100%" height="100%" viewBox="1 -1 20 30" xmlns="http://www.w3.org/2000/svg"><title>account-check-outline</title><path d="M21.1,12.5L22.5,13.91L15.97,20.5L12.5,17L13.9,15.59L15.97,17.67L21.1,12.5M11,4A4,4 0 0,1 15,8A4,4 0 0,1 11,12A4,4 0 0,1 7,8A4,4 0 0,1 11,4M11,6A2,2 0 0,0 9,8A2,2 0 0,0 11,10A2,2 0 0,0 13,8A2,2 0 0,0 11,6M11,13C11.68,13 12.5,13.09 13.41,13.26L11.74,14.93L11,14.9C8.03,14.9 4.9,16.36 4.9,17V18.1H11.1L13,20H3V17C3,14.34 8.33,13 11,13Z  "/></svg>
+                <div 
+                    class="col" 
+                    data-aos-delay="100" 
+            
+                    data-aos-duration="800" 
+                >
+                    <div class="categorie-grid custom-categorie-grid categorie-style-3 color-extra04-style">
+                        <div class="icon">
+                            <svg class ="custom-svg" xmlns="http://www.w3.org/2000/svg" width="38.16" height="40.834" viewBox="0 0 38.16 40.834"><g transform="translate(-5928 -10528.621)"><path d="M40.159,28.56V24.04A9.04,9.04,0,0,0,31.119,15H13.04A9.04,9.04,0,0,0,4,24.04v4.52" transform="translate(5925 10539.894)" fill="none" stroke="#007aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="8.771" cy="8.771" r="8.771" transform="translate(5939.57 10529.62)" fill="none" stroke="#007aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title">Se connecter à la plateforme</h5>
-                            <p></p>
-                            <div class="course-remain custom-number custom-number-one">1</div>
+                            <h5 class="title custom-title custom-title-1">Connectez-vous à la plateforme</h5>
+                           
+                            <div class="course-remain custom-number custom-number-1">1</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-sm-6" data-aos-delay="200" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-1 custom-background-color color-secondary-style edublink-svg-animate">
-                        <div class="icon custom-icon custom-icon-find">
-                            <svg width="100%" height="100%" viewBox="1 -1 20 30" xmlns="http://www.w3.org/2000/svg"><title>magnify</title><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                <div 
+                    class="col" 
+                    data-aos-delay="100" 
+                  
+                    data-aos-duration="800" 
+                >
+                    <div class="categorie-grid custom-categorie-grid categorie-style-3 color-primary-style">
+                        <div class="icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46.588" height="46.529" viewBox="0 0 46.588 46.529"><defs><clipPath id="a"><rect width="46.588" height="46.529" fill="#008064"/></clipPath></defs><g clip-path="url(#a)"><path d="M43.351,19.708c0,.872.025,1.7-.012,2.528a1.948,1.948,0,0,1-.268,1.038,5.06,5.06,0,0,1-1.08.819V35.977a4.642,4.642,0,0,1,.679.285,1.447,1.447,0,0,1,.681,1.347c0,.861,0,1.722,0,2.637.828,0,1.593,0,2.358,0,.682,0,.877.2.878.895q0,2.26,0,4.52c0,.656-.209.867-.856.867q-22.438,0-44.876,0c-.63,0-.849-.21-.85-.823Q0,43.4,0,41.089c0-.627.208-.837.833-.841.992-.006,1.983,0,3.061,0V39.129q0-.6,0-1.2c0-1.2.207-1.5,1.357-1.957v-.454c0-3.687,0-7.374.007-11.061,0-.342-.051-.529-.429-.653A1.366,1.366,0,0,1,3.9,22.379c-.006-.864,0-1.727,0-2.646-.208-.01-.377-.024-.546-.024-.834,0-1.668.007-2.5-.006a.65.65,0,0,1-.728-.71c-.012-1.571,0-3.142-.006-4.713,0-.416.265-.618.581-.809q4.549-2.738,9.093-5.485Q16.229,4.1,22.663.21A1.049,1.049,0,0,1,23.9.193q10.873,6.58,21.766,13.126a1.445,1.445,0,0,1,.82,1.459c-.051,1.345-.012,2.693-.016,4.039,0,.671-.22.886-.894.891-.718,0-1.436,0-2.224,0m-41.9-1.363H45.134c0-1.137-.016-2.24.01-3.343a.677.677,0,0,0-.4-.675Q34.229,8,23.726,1.645a.7.7,0,0,0-.852-.012Q17.7,4.783,12.514,7.9,7.167,11.125,1.825,14.359c-.154.094-.35.285-.353.436-.029,1.167-.016,2.335-.016,3.55M45.229,41.6H1.366v3.563H45.229ZM26.9,35.974c1.169.425,1.384.737,1.384,1.991,0,.746,0,1.493,0,2.243H33.4c0-.917,0-1.8,0-2.678a1.359,1.359,0,0,1,.548-1.171,5.365,5.365,0,0,1,.8-.4v-12c-1.1-.371-1.346-.723-1.346-1.87,0-.779,0-1.558,0-2.347H28.281c0,.77,0,1.506,0,2.241,0,1.256-.213,1.565-1.384,1.992ZM19.69,23.982c-1.194-.454-1.383-.735-1.383-2.039v-2.2H13.9a.737.737,0,0,0-.031.13q0,1.082-.005,2.164c0,1.191-.216,1.505-1.324,1.925V36.006a1.543,1.543,0,0,1,1.324,1.8c0,.8,0,1.593,0,2.441h4.444c0-.83,0-1.6,0-2.363,0-1.162.266-1.53,1.383-1.9ZM6.62,35.992h4.526V23.94H6.62ZM21.07,36h4.449V23.933H21.07ZM40.6,23.96h-4.47V36.008H40.6ZM12.5,19.788H5.265v2.775H12.5ZM26.9,19.782H19.676v2.776H26.9ZM5.256,40.175H12.5V37.4H5.256Zm14.416.011h7.236V37.393H19.671ZM34.756,22.54h7.238V19.773H34.756Zm7.236,14.866H34.773V40.2h7.218Z" transform="translate(0 0)" fill="#008064"/><path d="M158.333,57.165a3.971,3.971,0,1,1-3.99-3.949,3.957,3.957,0,0,1,3.99,3.949m-3.989,2.666a2.638,2.638,0,0,0,2.666-2.593,2.644,2.644,0,1,0-5.288-.037,2.617,2.617,0,0,0,2.623,2.63" transform="translate(-131.068 -46.379)" fill="#008064"/></g></svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title">Trouvez l'organisme concerné</h5>
-                            <p></p>
-                            <div class="course-remain custom-number">2</div>
+                            <h5 class="title custom-title custom-title-2">Trouvez l'organisme concerné</h5>
+                          
+                            <div class="course-remain custom-number custom-number-2">2</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6" data-aos-delay="300"  data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid custom-background-color2 categorie-style-1 color-extra08-style edublink-svg-animate">
-                        <div class="icon custom-icon-form">
-                            <svg width="100%" height="100%" viewBox="1 -1 20 30" xmlns="http://www.w3.org/2000/svg"><title>note-text-outline</title><path d="M15 3H5A2 2 0 0 0 3 5V19A2 2 0 0 0 5 21H19A2 2 0 0 0 21 19V9L15 3M19 19H5V5H14V10H19M17 14H7V12H17M14 17H7V15H14" /></svg>
+                <div 
+                    class="col" 
+                    data-aos-delay="100" 
+                 
+                    data-aos-duration="800" 
+                >
+                    <div class="categorie-grid custom-categorie-grid categorie-style-3 color-secondary-style">
+                        <div class="icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="40.834" height="40.832" viewBox="0 0 40.834 40.832"><g transform="translate(-847 -579)"><path d="M19.369,4H5.86A3.86,3.86,0,0,0,2,7.86V34.879a3.86,3.86,0,0,0,3.86,3.86H32.879a3.86,3.86,0,0,0,3.86-3.86V21.369" transform="translate(846 580.094)" fill="none" stroke="#ee4a62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M28.264,3.078a4.094,4.094,0,1,1,5.79,5.79L15.72,27.2,8,29.132l1.93-7.72Z" transform="translate(851.579 578.121)" fill="none" stroke="#ee4a62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>
                         </div>
                         <div class="content">
-                            <h5 class="custom-title title">Renseignez le formulaire étape par étape</h5>
-                            <p></p>
-                            <div class="course-remain custom-number">3</div>
+                            <h5 class="title custom-title custom-title-3">Remplissez le formulaire étape par étape</h5>
+                           
+                            <div class="course-remain custom-number custom-number-3">3</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="400" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-1 custom-background-color3 color-extra05-style edublink-svg-animate">
-                        <div class="icon custom-icon-submit">
-                            <svg width="100%" height="100%" viewBox="1 -1 20 30" xmlns="http://www.w3.org/2000/svg"><title>send-circle-outline</title><path d="M8,7.71L18,12L8,16.29V12.95L15.14,12L8,11.05V7.71M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" /></svg>
+                    <div 
+                    class="col" 
+                    data-aos-delay="100" 
+                 
+                    data-aos-duration="800" 
+                >
+                    <div class="categorie-grid custom-categorie-grid categorie-style-3 color-tertiary-style">
+                        <div class="icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="35.563" height="43.951" viewBox="0 0 35.563 43.951"><g transform="translate(-1604 -553)"><path d="M24.976,2H8.2A4.2,4.2,0,0,0,4,6.2V39.757a4.2,4.2,0,0,0,4.2,4.2H33.366a4.2,4.2,0,0,0,4.2-4.2V14.586Z" transform="translate(1601 552)" fill="none" stroke="#f8b81f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M14,2V14.586H26.586" transform="translate(1611.976 552)" fill="none" stroke="#f8b81f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><g transform="translate(1614.598 572.977)"><path d="M20,6,9,17,4,12" transform="translate(-4 -6)" fill="none" stroke="#f8b81f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></g></svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title">Soumettez votre courrier et obtenez un code de suivi</h5>
-                            <p></p>
-                            <div class="course-remain custom-number">4</div>
+                            <h5 class="title custom-title custom-title-4">Soumettez votre courrier et obtenez un code de suivi</h5>
+                            <div class="course-remain custom-number custom-number-4">4</div>
                         </div>
-                        
                     </div>
                 </div>
+                </div>
             </div>
-            <div class="row g-5">
+            
+               
+                      
+                                               
+        </div>
+        <template>
+  <div v-show="isPageLoad">
+<div v-show="isPopUpVisible" class="custom-template offset-xl-2 col-lg-6">
+    <div class="contact-form form-style-2">
+        <button @click="onClickClose()" class="custom-close-btn">x</button>
+        <div class="section-title">
+            <h4 class="title">Veuillez entrer le code de suivi</h4>
+            <p style="font-style: italic; background-color: #F2F2F2; padding: 5px;">Vous avez reçu un email contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour suivre l'avancement de votre courrier, veuillez entrer le code dans l'espace ci-dessous.</p>
+        </div>
+
+        <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="isCodeValid()">
+            <div class="row row--10">
+                <div class="form-group col-12" >
+                    <input type="text" name="code" id="code" placeholder="Votre code" autocomplete="off">
+                </div>
+                <div v-if="!validCode" class="col-12 success-msg">
+                        <p class="custom-error-msg">Ce code est invalide.</p>
+                    </div> 
+                <div class="form-group col-12">
+                    <button class="rn-btn edu-btn btn-medium submit-btn"  name="submit" type="submit" >Valider <i class="icon-4"></i></button>
+                </div>
+            </div>
+        </form>
+
+        <ul class="shape-group">
+            <MouseMove addClassName="shape-1" dataDepth="1" imgSrc="/images/about/shape-13.png" />
+            <MouseMove addClassName="shape-2" dataDepth="-1" imgSrc="/images/counterup/shape-02.png" />
+        </ul>
+    </div>
+</div>
+
+<div v-show="showValidMessage1" class="custom-template offset-xl-2 col-lg-6">
+    <div class="contact-form form-style-2">
+        <button @click="onClickClose2()" class="custom-close-btn">x</button>
+        <h2 class="message-title">État de votre courrier</h2>
+      <p class="message-text">Votre courrier a été déposé et est en attente de traitement.</p>
+       </div>
+    </div>
+    <div v-show="showValidMessage2" class="custom-template offset-xl-2 col-lg-6">
+    <div class="contact-form form-style-2">
+        <button @click="onClickClose3()" class="custom-close-btn">x</button>
+        <h2 class="message-title">État de votre courrier</h2>
+      <p class="message-text">Votre courrier a été traité avec succès ! Vous pouvez consulter la réponse en vérifiant votre boîte de réception à l'adresse email ya******@outlook.com.</p>
+       </div>
+    </div>
+</div>
+</template>
+        
             <div class="banner-btn custom-banner-btn">
-                            <n-link to="/" class=" edu-btn custom-track-btn text-uppercase" style = "background-color: #1F6680; font-weight: bold !important;" >
+                            <n-button class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton" @click="onClickSuivreCourrier()" style = " font-weight: bold !important;" >
                                 Suivre son courrier <i class="icon-4"></i>
-                          </n-link>  
-                            <n-link to="/addcourrier" class=" custom-custom edu-btn text-uppercase" >
+                          </n-button>  
+                            <n-link to="/addcourrier" class="custom-send-btn edu-btn text-uppercase" >
                                 Déposer un courrier <i class="icon-4"></i>
                             </n-link>
+                        
                             
                         </div>
-                        </div>
-        </div>
+                        
+                       
     </div>
+    
 </template>
 
 <script>
     export default {
         components: {
-            SectionTitle: () => import('@/components/common/SectionTitle')
-        }
+            SectionTitle: () => import('@/components/common/SectionTitle'),
+            SuiviCourrier: () => import("@/components/home-distant-learning/SuiviCourrier.vue"),
+        },
+          
+        methods:{
+            onClickSuivreCourrier() {
+                console.log("TERERZEZE")
+                this.isPageLoad=true
+             
+                this.isPopUpVisible = true
+            },
+            onClickClose() {
+                this.isPopUpVisible = false;
+                this.isPageLoad = false;
+                this.$refs.form.reset();
+            },
+            onClickClose2() {
+                this.showValidMessage1 = false;
+                this.isPageLoad = false;
+            },
+            onClickClose3() {
+                this.showValidMessage2 = false;
+                this.isPageLoad = false;
+            },
+            isCodeValid() {
+                const codeInput = this.$refs.form.querySelector('input[name="code"]');
+                const codeValue = codeInput.value;
+               
+                if(codeValue==2){
+                    this.isPopUpVisible = false
+                    this.showValidMessage1 = true
+                    this.validCode = true
+                }
+                else if(codeValue==3){
+                    this.isPopUpVisible = false
+                    this.showValidMessage2 = true
+                    this.validCode = true
+                }
+                else {
+                    this.validCode = false
+                }
+                
+
+            }
+            
+        },
+        data() {
+            return {
+                isPopUpVisible: true,
+                validCode: true,
+                showValidMessage1: false,
+                showValidMessage2: false,
+                isPageLoad:false,
+                code: ''
+               
+            }
+        },
     }
 </script>
 
@@ -87,75 +217,170 @@
     padding-top: 30px !important;
 }
 .custom-banner-btn{
-    padding-top: 25px !important;
+   
+    padding-top: 60px !important;
     display: flex !important;
   justify-content: center !important;
-  gap: 20px !important;
+  gap: 20px !important; 
+
 }
+
 .custom-row{
-    margin-top: -35px !important;
+    margin-top: -15px !important;
     padding-top: 0px !important;
 }
-.custom-custom{
+.custom-send-btn{
     font-weight: bold !important;
-
+    margin-top: 20px !important;
     background-color: rgb(0, 128, 100) !important; 
 
    
 }
+.custom-track-btn {
+    
+    margin-top: 20px !important;
+    cursor: pointer !important;
+}
+
 .custom-title{
     height: 78.3px !important; 
 }
 .custom-number{
     
     font-size: 25px !important; 
+    margin-top: 25px !important;
+  
  
 }
-.custom-number-one{
+.custom-number-1{
     
-    color: rgb(0, 128, 100) !important; 
-}
-.custom-icon-connect{
-    fill: rgb(0, 128, 100);
-}
-.custom-icon-connect circle {
-  fill: transparent !important;
-  stroke: #fff !important;
-  stroke-width: 2 !important;
+    color: #007aff !important; 
 }
 
 
-.custom-icon-find{
-    fill: #ee4a62;
-}
-.custom-icon-form{
-    fill: #007aff;
-}
-.custom-icon-submit{
-    fill: #f8b81f;
-}
+
+
 .custom-section-title{
 
     color: rgb(0, 128, 100) !important; 
 }
-.custom-categorie-grid:hover .custom-title {
+.custom-categorie-grid:hover {
   color: var(--color-white) !important;
 }
-.custom-background-color:hover{
-    background-color:  #f47087 !important;
-}
-.custom-background-color2:hover{
-    background-color:  #1BA2DB !important;
-}
-.custom-background-color3:hover{
-    background-color:  #FFB46A !important;
-}
+
 
 .custom-track-btn:hover {
-    background: linear-gradient(-90deg, rgb(30, 95, 116)  0%, rgb(30, 95, 116)  100%) !important;
+    
+
+    background: linear-gradient(-90deg,  #2985bc  0%,  #2985bc  100%) !important;
 }
 .custom-track-btn:after{
+ 
     background: linear-gradient(-90deg, rgb(67, 123, 140) 0%, rgb(60, 135, 156) 100%) !important; 
-}       
+}      
 
+.icon svg circle {
+                    stroke: var(--color-extra04) !important;
+}
+.categorie-style-3:hover .icon svg path,
+.categorie-style-3:hover .icon svg circle {
+  stroke: #fff !important;
+}
+.categorie-style-3:hover .content .custom-title-1{
+
+  color: var(--color-extra08) !important;
+}
+.categorie-style-3:hover .content .custom-number-1{
+
+color: var(--color-white) !important;
+background-color: var(--color-extra08) !important;
+}
+
+.categorie-style-3:hover .content .custom-title-2{
+
+color: var(--color-primary) !important;
+}
+.categorie-style-3:hover .content .custom-number-2{
+
+color: var(--color-white) !important;
+background-color: var(--color-primary) !important;
+}
+.categorie-style-3:hover .content .custom-title-3{
+
+color: var(--color-secondary) !important;
+}
+.categorie-style-3:hover .content .custom-number-3{
+
+color: var(--color-white) !important;
+background-color: var(--color-secondary) !important;
+}
+.categorie-style-3:hover .content .custom-title-4{
+
+color: var(--color-tertiary) !important;
+}
+.categorie-style-3:hover .content .custom-number-4{
+
+color: var(--color-white) !important;
+background-color: var(--color-tertiary) !important;
+}
+
+.custom-edu-btn-2 {
+    text-align: center !important;
+border-radius: 5px !important;
+display: inline-block !important;
+height: 60px !important;
+line-height: 62px !important;
+color: var(--edu-btn-color) !important;
+
+padding: 0 30px !important;
+font-size: 15px !important;
+transition: 0.4s !important;
+font-family: var(--font-secondary) !important;
+border: 0 none !important;
+overflow: hidden !important;
+position: relative !important;
+z-index: 1 !important;
+font-weight: bold !important;
+margin-top: 20px !important;
+background-color:  #2985bc !important;
+}
+
+.custom-template{
+  position: fixed !important;
+  top: 50%;
+  left: 34.8%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 9999 !important;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(5px) !important;
+
+}
+.custom-error-msg{
+    color: #FF5733 !important;
+}
+.message-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.message-text {
+  font-size: 16px;
+  color: #666;
+}
+.custom-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  color: gray;
+  padding-right: 15px ;
+  font-size: 20px;
+}
+
+                
+                    
+                
 </style>

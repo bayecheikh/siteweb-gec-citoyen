@@ -36,6 +36,8 @@
 </template>
 
 <script>
+
+
 import FAQ from '../components/home-kitchen-coach/FAQ.vue'
 
     export default {

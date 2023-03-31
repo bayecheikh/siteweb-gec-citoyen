@@ -1,5 +1,5 @@
 <template>
-    <footer class="edu-footer footer-lighten  footer-style-1">
+    <footer class="edu-footer custom-edu-footer footer-lighten  footer-style-1">
         <div class="custom-footer-two-main footer-top">
             <div class="container">
                 <div class=" custom-row row g-5">
@@ -7,7 +7,7 @@
                         <div class="edu-footer-widget explore-widget">
                             <h4 class="widget-title custom-footer-two-title custom-footer-two" >Services publics</h4>
                             <div class="inner">
-                                <ul class="footer-link link-hover">
+                                <ul class="footer-link custom-footer-link link-hover">
                                     <li ><a class="custom-footer-two custom-footer-two-content" href="https://service-public.bj/public/about"   target="_blank">À propos</a></li>
                                     <!--<li ><a class="custom-footer-two" href="https://twitter.com/numeriquebenin" target="_blank"></a>À propos</li>-->
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Nous contacter</a></li>
@@ -19,7 +19,7 @@
                         <div class="edu-footer-widget quick-link-widget">
                             <h4 class="widget-title custom-footer-two custom-footer-two-title ">Contribuer</h4>
                             <div class="inner">
-                                <ul class="footer-link link-hover">
+                                <ul class="footer-link custom-footer-link link-hover">
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Faire une suggestion</a></li>
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Signaler un problème</a></li>
                                 </ul>
@@ -31,7 +31,7 @@
                         <div class="edu-footer-widget quick-link-widget">
                             <h4 class="widget-title custom-footer-two custom-footer-two-title">En savoir plus</h4>
                             <div class="inner">
-                                <ul class="footer-link link-hover">
+                                <ul class="footer-link custom-footer-link link-hover">
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/mention-legal" target="_blank">Mentions légales</a></li>
                                     <li ><a class="custom-footer-two" href="https://service-public.bj/public/cgu" target="_blank">CGU</a></li>
                                 </ul>
@@ -42,7 +42,7 @@
                         <div class="edu-footer-widget">
                             <h4 class="widget-title custom-footer-two custom-footer-two-title">Suivez-nous</h4>
                             <div class="inner">
-                                <ul class="social-share icon-transparent">
+                                <ul class="social-share custom-footer-link icon-transparent">
                                     <li><a href="https://twitter.com/numeriquebenin" target="_blank" class="color-twitter"><i class="icon-twitter"></i></a></li>
                                     <li><a href="https://www.facebook.com/numeriquebenin/" target="_blank" class="color-fb"><i class="icon-facebook"></i></a></li>
                                     <li><a href="https://www.instagram.com/numeriquebenin/?hl=fr" target="_blank" class="color-ig"><i class="icon-instagram"></i></a></li>
@@ -90,6 +90,7 @@
             margin-bottom: -25px !important;
             font-size: 15px !important;
         }
+       
         .custom-footer-two-content{
             font-size: 14px !important;
         }
@@ -99,5 +100,10 @@
     padding: 30px !important;
             color: var(--color-white) !important;
         }
-      
+        .custom-footer-link a:hover{
+  color: orange !important;
+}
+.custom-edu-footer{
+    margin-left: -162px !important;
+}
 </style>

@@ -239,6 +239,9 @@
   "HomeDistantLearningLogo": {
     "description": "Auto imported from components/home-distant-learning/Logo.vue"
   },
+  "HomeDistantLearningSuiviCourrier": {
+    "description": "Auto imported from components/home-distant-learning/SuiviCourrier.vue"
+  },
   "HomeDistantLearningVideo": {
     "description": "Auto imported from components/home-distant-learning/Video.vue"
   },

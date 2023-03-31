@@ -27,10 +27,10 @@
                             </li> -->
                             <div class="banner-btn custom-banner-btn">
                             <li class="custom-header-btn">
-                                <n-link to="/" class="edu-btn custom-edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
+                                <n-link to="" class="edu-btn custom-edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
                             </li>
                             <li class="custom-header-btn">
-                                <n-link to="/" class="edu-btn custom-btn-sign-up btn-orange text-uppercase">Créer un compte<i class="icon-4"></i></n-link>
+                                <n-link to="" class="edu-btn custom-btn-sign-up btn-orange text-uppercase">Créer un compte<i class="icon-4"></i></n-link>
                             </li>
                             </div>
                            <!-- <li class="custom-header-btn">
@@ -152,8 +152,8 @@
 
         .custom-btn-sign-in {
                 font-weight: bold !important;
-            height: 30px !important;
-            line-height: 30px !important;
+            height: 40px !important;
+            line-height: 40px !important;
             padding: 0 40px !important;
             font-size: 10px !important;
             text-align: center !important; 
@@ -162,9 +162,10 @@
         }
 
         .custom-btn-sign-up {
+            margin-right: 33px !important;
                 font-weight: bold !important;
-            height: 30px !important;
-            line-height: 30px !important;
+            height: 40px !important;
+            line-height: 40px !important;
             padding: 0 30px !important;
             font-size: 10px !important;
             text-align: center !important; 

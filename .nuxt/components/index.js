@@ -78,6 +78,7 @@ export { default as HomeDistantLearningCourse } from '../..\\components\\home-di
 export { default as HomeDistantLearningFAQ } from '../..\\components\\home-distant-learning\\FAQ.vue'
 export { default as HomeDistantLearningFunFact } from '../..\\components\\home-distant-learning\\FunFact.vue'
 export { default as HomeDistantLearningLogo } from '../..\\components\\home-distant-learning\\Logo.vue'
+export { default as HomeDistantLearningSuiviCourrier } from '../..\\components\\home-distant-learning\\SuiviCourrier.vue'
 export { default as HomeDistantLearningVideo } from '../..\\components\\home-distant-learning\\Video.vue'
 export { default as HomeKindergartenAbout } from '../..\\components\\home-kindergarten\\About.vue'
 export { default as HomeKindergartenActivities } from '../..\\components\\home-kindergarten\\Activities.vue'
