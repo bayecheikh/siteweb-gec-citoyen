@@ -14,7 +14,7 @@
                     <input type="text" name="code" placeholder="Votre code">
                 </div>
                 <div v-if="!validCode" class="col-12 success-msg">
-                        <p class="custom-error-msg">Ce code est invalide</p>
+                        <p class="custom-error-msg">Ce code est invalide.</p>
                     </div> 
                 <div class="form-group col-12">
                     <button class="rn-btn edu-btn btn-medium submit-btn" name="submit" type="submit">Valider <i class="icon-4"></i></button>

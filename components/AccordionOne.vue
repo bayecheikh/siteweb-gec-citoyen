@@ -45,7 +45,7 @@
                 </h5>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Après soumission du courrier, un code de suivi est généré automatiquement. Vous recevrez ce code de suivi par mail et pourrez suivre le statut votre courrier à tout moment sur la plateforme.</p>
+                        <p>Après soumission du courrier, un code de suivi est généré automatiquement. Vous recevrez ce code de suivi par mail et pourrez suivre le statut de votre courrier à tout moment sur la plateforme.</p>
                     </div>
                 </div>
             </div>

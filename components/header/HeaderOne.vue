@@ -27,10 +27,10 @@
                             </li> -->
                             <div class="banner-btn custom-banner-btn">
                             <li class="custom-header-btn">
-                                <n-link to="/" class="edu-btn custom-edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
+                                <n-link to="" class="edu-btn custom-edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
                             </li>
                             <li class="custom-header-btn">
-                                <n-link to="/" class="edu-btn custom-btn-sign-up btn-orange text-uppercase">Créer un compte<i class="icon-4"></i></n-link>
+                                <n-link to="" class="edu-btn custom-btn-sign-up btn-orange text-uppercase">Créer un compte<i class="icon-4"></i></n-link>
                             </li>
                             </div>
                            <!-- <li class="custom-header-btn">

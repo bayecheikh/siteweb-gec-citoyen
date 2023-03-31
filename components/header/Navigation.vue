@@ -2,7 +2,7 @@
     <ul class="mainmenu custom-mainmenu">
         <li class="custom-mainmenu " ><n-link to="/" class="custom-mainmenu">Accueil</n-link>
         </li>
-        <li class="custom-mainmenu" ><a href="#faq" class="custom-mainmenu">Comment envoyer un courrier ?</a>
+        <li class="custom-mainmenu" ><a href="/#faq" class="custom-mainmenu">Comment envoyer un courrier ?</a>
         </li>
         <li class="custom-mainmenu"><a target="_blank" href="https://service-public.bj/" class="custom-mainmenu">Services publics</a>
         </li>

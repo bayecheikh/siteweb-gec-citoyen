@@ -93,16 +93,14 @@
 
         <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="isCodeValid()">
             <div class="row row--10">
-                <div class="form-group col-12">
-                    <input type="text" name="code" placeholder="Votre code">
+                <div class="form-group col-12" >
+                    <input type="text" name="code" id="code" placeholder="Votre code" autocomplete="off">
                 </div>
                 <div v-if="!validCode" class="col-12 success-msg">
-                        <p class="custom-error-msg">Ce code est invalide</p>
+                        <p class="custom-error-msg">Ce code est invalide.</p>
                     </div> 
                 <div class="form-group col-12">
-                    <button class="rn-btn edu-btn btn-medium submit-btn" name="submit" type="submit">Valider <i class="icon-4"></i></button>
-                    
-
+                    <button class="rn-btn edu-btn btn-medium submit-btn"  name="submit" type="submit" >Valider <i class="icon-4"></i></button>
                 </div>
             </div>
         </form>
@@ -132,7 +130,7 @@
 </template>
         
             <div class="banner-btn custom-banner-btn">
-                            <n-button class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton" @click="onClickSuivreCourrier()" style = "background-color: #1F6680; font-weight: bold !important;" >
+                            <n-button class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton" @click="onClickSuivreCourrier()" style = " font-weight: bold !important;" >
                                 Suivre son courrier <i class="icon-4"></i>
                           </n-button>  
                             <n-link to="/addcourrier" class="custom-send-btn edu-btn text-uppercase" >
@@ -153,6 +151,7 @@
             SectionTitle: () => import('@/components/common/SectionTitle'),
             SuiviCourrier: () => import("@/components/home-distant-learning/SuiviCourrier.vue"),
         },
+          
         methods:{
             onClickSuivreCourrier() {
                 console.log("TERERZEZE")
@@ -202,6 +201,7 @@
                 showValidMessage1: false,
                 showValidMessage2: false,
                 isPageLoad:false,
+                code: ''
                
             }
         },
@@ -270,9 +270,12 @@
 
 
 .custom-track-btn:hover {
-    background: linear-gradient(-90deg, rgb(30, 95, 116)  0%, rgb(30, 95, 116)  100%) !important;
+    
+
+    background: linear-gradient(-90deg,  #2985bc  0%,  #2985bc  100%) !important;
 }
 .custom-track-btn:after{
+ 
     background: linear-gradient(-90deg, rgb(67, 123, 140) 0%, rgb(60, 135, 156) 100%) !important; 
 }      
 
@@ -328,7 +331,7 @@ display: inline-block !important;
 height: 60px !important;
 line-height: 62px !important;
 color: var(--edu-btn-color) !important;
-background: var(--color-primary) !important;
+
 padding: 0 30px !important;
 font-size: 15px !important;
 transition: 0.4s !important;
@@ -339,7 +342,7 @@ position: relative !important;
 z-index: 1 !important;
 font-weight: bold !important;
 margin-top: 20px !important;
-background-color: #2985bc !important;
+background-color:  #2985bc !important;
 }
 
 .custom-template{
@@ -376,8 +379,8 @@ background-color: #2985bc !important;
   padding-right: 15px ;
   font-size: 20px;
 }
-                    
-                    
+
+                
                     
                 
 </style>
