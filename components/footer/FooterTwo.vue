@@ -5,12 +5,13 @@
                 <div class=" custom-row row g-5">
                     <div class="col-lg-3 col-sm-6">
                         <div class="edu-footer-widget explore-widget">
-                            <h4 class="widget-title custom-footer-two-title custom-footer-two" >Services publics</h4>
+                            <h4 class="widget-title custom-footer-two-title custom-footer-two">Services publics</h4>
                             <div class="inner">
                                 <ul class="footer-link custom-footer-link link-hover">
-                                    <li ><a class="custom-footer-two custom-footer-two-content" href="https://service-public.bj/public/about"   target="_blank">À propos</a></li>
-                                    <!--<li ><a class="custom-footer-two" href="https://twitter.com/numeriquebenin" target="_blank"></a>À propos</li>-->
-                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Nous contacter</a></li>
+                                    <li><a class="custom-footer-two custom-footer-two-content"
+                                            href="https://service-public.bj/public/about" target="_blank">À propos</a></li>
+                                    <li><a class="custom-footer-two" href="https://service-public.bj/public/report"
+                                            target="_blank">Nous contacter</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -20,8 +21,10 @@
                             <h4 class="widget-title custom-footer-two custom-footer-two-title ">Contribuer</h4>
                             <div class="inner">
                                 <ul class="footer-link custom-footer-link link-hover">
-                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Faire une suggestion</a></li>
-                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/report" target="_blank">Signaler un problème</a></li>
+                                    <li><a class="custom-footer-two" href="https://service-public.bj/public/report"
+                                            target="_blank">Faire une suggestion</a></li>
+                                    <li><a class="custom-footer-two" href="https://service-public.bj/public/report"
+                                            target="_blank">Signaler un problème</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -32,8 +35,10 @@
                             <h4 class="widget-title custom-footer-two custom-footer-two-title">En savoir plus</h4>
                             <div class="inner">
                                 <ul class="footer-link custom-footer-link link-hover">
-                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/mention-legal" target="_blank">Mentions légales</a></li>
-                                    <li ><a class="custom-footer-two" href="https://service-public.bj/public/cgu" target="_blank">CGU</a></li>
+                                    <li><a class="custom-footer-two" href="https://service-public.bj/public/mention-legal"
+                                            target="_blank">Mentions légales</a></li>
+                                    <li><a class="custom-footer-two" href="https://service-public.bj/public/cgu"
+                                            target="_blank">CGU</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -43,11 +48,15 @@
                             <h4 class="widget-title custom-footer-two custom-footer-two-title">Suivez-nous</h4>
                             <div class="inner">
                                 <ul class="social-share custom-footer-link icon-transparent">
-                                    <li><a href="https://twitter.com/numeriquebenin" target="_blank" class="color-twitter"><i class="icon-twitter"></i></a></li>
-                                    <li><a href="https://www.facebook.com/numeriquebenin/" target="_blank" class="color-fb"><i class="icon-facebook"></i></a></li>
-                                    <li><a href="https://www.instagram.com/numeriquebenin/?hl=fr" target="_blank" class="color-ig"><i class="icon-instagram"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/numeriquebenin/" target="_blank" class="color-linkd"><i class="icon-linkedin2"></i></a></li>
-                                    
+                                    <li><a href="https://twitter.com/numeriquebenin" target="_blank"
+                                            class="color-twitter"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="https://www.facebook.com/numeriquebenin/" target="_blank"
+                                            class="color-fb"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/numeriquebenin/?hl=fr" target="_blank"
+                                            class="color-ig"><i class="icon-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/numeriquebenin/" target="_blank"
+                                            class="color-linkd"><i class="icon-linkedin2"></i></a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -55,8 +64,7 @@
                 </div>
             </div>
         </div>
-        
-       <!--<div class="copyright-area">
+        <!--<div class="copyright-area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -66,44 +74,40 @@
                     </div>
                 </div>
             </div>
-        </div>--> 
+        </div>-->
     </footer>
 </template>
 
+<style scoped>
 
-<script>
-    export default {
-        components: {
-            ColorMode: () => import("@/components/common/ColorMode")
-        }
+    .custom-footer-two {
+        background-color: #0a3764 !important;
+
+        color: var(--color-white) !important;
+        padding-top: 0px !important;
     }
-</script>
 
-<style>
- .custom-footer-two{
-    background-color: #0a3764 !important;
-   
-            color: var(--color-white) !important;
-            padding-top: 0px !important;
-        }
-        .custom-footer-two-title{
-            margin-bottom: -25px !important;
-            font-size: 15px !important;
-        }
-       
-        .custom-footer-two-content{
-            font-size: 14px !important;
-        }
-       
-        .custom-footer-two-main{
-    background-color: #0a3764 !important;
-    padding: 30px !important;
-            color: var(--color-white) !important;
-        }
-        .custom-footer-link a:hover{
-  color: orange !important;
-}
-.custom-edu-footer{
-    margin-left: -162px !important;
-}
+    .custom-footer-two-title {
+        margin-bottom: -25px !important;
+        font-size: 15px !important;
+    }
+
+    .custom-footer-two-content {
+        font-size: 14px !important;
+    }
+
+    .custom-footer-two-main {
+        background-color: #0a3764 !important;
+        padding: 30px !important;
+        color: var(--color-white) !important;
+    }
+
+    .custom-footer-link a:hover {
+        color: orange !important;
+    }
+
+    .custom-edu-footer {
+        margin-left: -162px !important;
+    }
+
 </style>

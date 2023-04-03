@@ -7,68 +7,47 @@
                         <div class="icon">
                             <i class="icon-48"></i>
                         </div>
-                      
                         <h2 class="counter-item count-number">
                             <FunFact number="9.3" decimal="1" suffix="K" />
-                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
-                        <section id="faq">
-                        </section>
+                            <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
+                            <section id="faq">
+                            </section>
                         </h2>
-                        
                         <h6 class="title">USAGERS CONNECTÉS</h6>
                     </div>
-                   
                 </div>
-                <div class="col-12 col-lg-3 col-md-6 col-sm-6" >
+                <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
                         <div class="icon">
                             <i class="icon-47"></i>
                         </div>
-                      
                         <h2 class="counter-item count-number">
                             <FunFact number="21.4" decimal="1" suffix="K" />
-                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
-                        <section id="faq">
-                        </section>
                         </h2>
-                        
                         <h6 class="title">COURRIERS DÉPOSÉS</h6>
                     </div>
-                   
                 </div>
-                <div class="col-12 col-lg-3 col-md-6 col-sm-6" >
+                <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
                         <div class="icon">
                             <i class="icon-50"></i>
                         </div>
-                      
                         <h2 class="counter-item count-number">
                             <FunFact number="10" suffix="+" />
-                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
-                        <section id="faq">
-                        </section>
                         </h2>
-                        
                         <h6 class="title">MINISTÈRES ENROLLÉS</h6>
                     </div>
-                   
                 </div>
-                <div class="col-12 col-lg-3 col-md-6 col-sm-6" >
+                <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
                         <div class="icon">
                             <i class="icon-49"></i>
                         </div>
-                      
                         <h2 class="counter-item count-number">
                             <FunFact number="90" suffix="%" />
-                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
-                        <section id="faq">
-                        </section>
                         </h2>
-                        
                         <h6 class="title">TAUX DE RÉPONSE</h6>
                     </div>
-                   
                 </div>
             </div>
         </div>
@@ -78,27 +57,27 @@
 <script>
     export default {
         head() {
-    return {
-      link: [
-        {
-          rel: 'stylesheet',
-          href: '@/assets/css/icomoon.css'
-        }
-      ]
-    }
-  },
-        components: { 
+            return {
+                link: [
+                    {
+                        rel: 'stylesheet',
+                        href: '@/assets/css/icomoon.css'
+                    }
+                ]
+            }
+        },
+        components: {
             FunFact: () => import('@/components/FunFact')
         },
-     
+
     }
+
 </script>
 
 <style scoped>
-
-.custom-counterup-area-6{
-    margin-bottom: 80px !important;
-    background: rgb(0, 128, 100) !important; 
-}
+    .custom-counterup-area-6 {
+        margin-bottom: 80px !important;
+        background: rgb(0, 128, 100) !important;
+    }
 
 </style>
