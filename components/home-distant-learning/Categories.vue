@@ -194,7 +194,7 @@
             </n-link>
         </div>
 
-
+       
     </div>
 </template>
 
@@ -273,6 +273,7 @@
         display: flex !important;
         justify-content: center !important;
         gap: 20px !important;
+        margin-right : 33px !important;
 
     }
 

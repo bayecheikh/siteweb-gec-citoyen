@@ -5,7 +5,7 @@
                 <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
                         <div class="icon">
-                            <i class="icon-48"></i>
+                            <i class="icon-8"></i>
                         </div>
                         <h2 class="counter-item count-number">
                             <FunFact number="9.3" decimal="1" suffix="K" />
@@ -19,7 +19,7 @@
                 <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
                         <div class="icon">
-                            <i class="icon-47"></i>
+                            <i class="icon-20"></i>
                         </div>
                         <h2 class="counter-item count-number">
                             <FunFact number="21.4" decimal="1" suffix="K" />
@@ -30,7 +30,7 @@
                 <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
                         <div class="icon">
-                            <i class="icon-50"></i>
+                            <i class="icon-64"></i>
                         </div>
                         <h2 class="counter-item count-number">
                             <FunFact number="10" suffix="+" />
