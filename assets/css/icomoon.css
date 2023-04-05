@@ -50,6 +50,9 @@
 .icon-share-alt:before {
   content: "\f1e0";
 }
+.icon-pen:before {
+  content: "\e908";
+}
 .icon-1:before {
   content: "\e900";
 }

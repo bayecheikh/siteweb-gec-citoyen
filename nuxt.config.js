@@ -2,8 +2,8 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'edublink',
-        titleTemplate: '%s - EduBlink',
+        title: 'GEC CITOYEN',
+        titleTemplate: '%s',
         htmlAttrs: {
             lang: 'zxx'
         },
@@ -41,6 +41,7 @@ export default {
         '~/plugins/vue-inline-svg.js',
         '~/plugins/observe-visibility.js',
         '~/plugins/vue-masonry-css.js',
+        '~/plugins/goToTab.js',
         { 
             src: '~/plugins/bootstrap.bundle.min.js', 
             mode: 'client'

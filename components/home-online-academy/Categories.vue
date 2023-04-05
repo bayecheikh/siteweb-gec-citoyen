@@ -26,6 +26,7 @@
 </template>
 
 <script>
+
     export default {
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
@@ -74,4 +75,5 @@
             }
         }
     }
+
 </script>

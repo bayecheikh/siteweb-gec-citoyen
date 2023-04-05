@@ -25,6 +25,7 @@ import nuxt_plugin_vuepagination_ea1a8940 from 'nuxt_plugin_vuepagination_ea1a89
 import nuxt_plugin_vueinlinesvg_56f4a20a from 'nuxt_plugin_vueinlinesvg_56f4a20a' // Source: ..\\plugins\\vue-inline-svg.js (mode: 'all')
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ..\\plugins\\observe-visibility.js (mode: 'all')
 import nuxt_plugin_vuemasonrycss_6d616ab9 from 'nuxt_plugin_vuemasonrycss_6d616ab9' // Source: ..\\plugins\\vue-masonry-css.js (mode: 'all')
+import nuxt_plugin_goToTab_8fb3dcca from 'nuxt_plugin_goToTab_8fb3dcca' // Source: ..\\plugins\\goToTab.js (mode: 'all')
 import nuxt_plugin_bootstrapbundlemin_61132cca from 'nuxt_plugin_bootstrapbundlemin_61132cca' // Source: ..\\plugins\\bootstrap.bundle.min.js (mode: 'client')
 import nuxt_plugin_aos_5e4622cf from 'nuxt_plugin_aos_5e4622cf' // Source: ..\\plugins\\aos (mode: 'client')
 import nuxt_plugin_vuehtml2pdf_796dc3f4 from 'nuxt_plugin_vuehtml2pdf_796dc3f4' // Source: ..\\plugins\\vue-html2pdf (mode: 'client')
@@ -95,7 +96,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"edublink","titleTemplate":"%s - EduBlink","htmlAttrs":{"lang":"zxx"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"}],"script":[{"src":"\u002Fjs\u002Fpace.min.js"}],"style":[]},
+    head: {"title":"GEC CITOYEN","titleTemplate":"%s","htmlAttrs":{"lang":"zxx"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"}],"script":[{"src":"\u002Fjs\u002Fpace.min.js"}],"style":[]},
 
     store,
     router,
@@ -270,6 +271,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_vuemasonrycss_6d616ab9 === 'function') {
     await nuxt_plugin_vuemasonrycss_6d616ab9(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_goToTab_8fb3dcca === 'function') {
+    await nuxt_plugin_goToTab_8fb3dcca(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_bootstrapbundlemin_61132cca === 'function') {

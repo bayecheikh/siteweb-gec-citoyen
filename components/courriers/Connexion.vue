@@ -1,5 +1,5 @@
 <template>
-    <div class="login-form-box">
+    <div class="login-form-box border-grey">
         <h3 class="title"></h3>
         <form>
             <div class="form-group">
@@ -65,3 +65,8 @@ import { mapMutations, mapGetters } from 'vuex'
         },
     }
 </script>
+<style scoped>
+.border-grey{
+  border: solid 2px #0a3764;
+}
+</style>

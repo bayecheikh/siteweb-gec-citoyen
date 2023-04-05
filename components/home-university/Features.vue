@@ -39,7 +39,7 @@
                         </svg>
                     </div>
                     <div class="content">
-                        <h4 class="title">Skilled Lecturers</h4>
+                        <h4 class="title">Skilled ecturers</h4>
                         <p>Lorem ipsum dolor sit amet cont adipiscing elit.</p>
                     </div>
                 </div>

@@ -33,7 +33,7 @@
                 </h5>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>L'envoi du courrier se fait via un formulaire simple. Vous pouvez importer votre courrier ou le rédiger directement dans le formulaire.</p>
+                        <p>L'envoi du courrier se fait via un formulaire simple. Vous pouvez importer votre courrier et y joindre d'autres fichiers si besoin.</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 </h5>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Après soumission du courrier, un code de suivi est généré automatiquement. Vous recevrez ce code de suivi par mail et pourrez suivre le statut votre courrier à tout moment sur la plateforme.</p>
+                        <p>Après soumission du courrier, un code de suivi est généré automatiquement. Vous recevrez ce code de suivi par mail et pourrez suivre le statut de votre courrier à tout moment sur la plateforme.</p>
                     </div>
                 </div>
             </div>
@@ -53,8 +53,10 @@
     </div>
 </template>
 
-<style>
-.custom-accordion-header{
-    color: rgb(0, 128, 100) !important; 
-}
+<style scoped>
+
+    .custom-accordion-header{
+        color: rgb(0, 128, 100) !important; 
+    }
+
 </style>
