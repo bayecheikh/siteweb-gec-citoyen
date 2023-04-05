@@ -18,6 +18,7 @@
 </template>
 
 <script>
+
     import courseData from '~/data/course';
     export default {
         components: {
@@ -53,9 +54,11 @@
             }
         }
     }
+
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+
     .course-area-6 {
         .swiper-pagination {
             position: absolute;
@@ -65,4 +68,5 @@
             bottom: 120px;
         }
     }
+    
 </style>

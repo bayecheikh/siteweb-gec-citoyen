@@ -53,8 +53,10 @@
     </div>
 </template>
 
-<style>
-.custom-accordion-header{
-    color: rgb(0, 128, 100) !important; 
-}
+<style scoped>
+
+    .custom-accordion-header{
+        color: rgb(0, 128, 100) !important; 
+    }
+
 </style>
