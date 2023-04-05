@@ -149,33 +149,6 @@
   "EventTwo": {
     "description": "Auto imported from components/event/EventTwo.vue"
   },
-  "FooterKindergarten": {
-    "description": "Auto imported from components/footer/FooterKindergarten.vue"
-  },
-  "FooterKitchen": {
-    "description": "Auto imported from components/footer/FooterKitchen.vue"
-  },
-  "FooterLanding": {
-    "description": "Auto imported from components/footer/FooterLanding.vue"
-  },
-  "FooterOne": {
-    "description": "Auto imported from components/footer/FooterOne.vue"
-  },
-  "FooterThree": {
-    "description": "Auto imported from components/footer/FooterThree.vue"
-  },
-  "FooterTwo": {
-    "description": "Auto imported from components/footer/FooterTwo.vue"
-  },
-  "FooterYoga": {
-    "description": "Auto imported from components/footer/FooterYoga.vue"
-  },
-  "FooterGoogleMapWithAPI": {
-    "description": "Auto imported from components/footer/GoogleMapWithAPI.vue"
-  },
-  "FooterScrollToTop": {
-    "description": "Auto imported from components/footer/ScrollToTop.vue"
-  },
   "HeaderCategory": {
     "description": "Auto imported from components/header/Category.vue"
   },
@@ -214,6 +187,33 @@
   },
   "HeaderSearchPopUp": {
     "description": "Auto imported from components/header/SearchPopUp.vue"
+  },
+  "FooterKindergarten": {
+    "description": "Auto imported from components/footer/FooterKindergarten.vue"
+  },
+  "FooterKitchen": {
+    "description": "Auto imported from components/footer/FooterKitchen.vue"
+  },
+  "FooterLanding": {
+    "description": "Auto imported from components/footer/FooterLanding.vue"
+  },
+  "FooterOne": {
+    "description": "Auto imported from components/footer/FooterOne.vue"
+  },
+  "FooterThree": {
+    "description": "Auto imported from components/footer/FooterThree.vue"
+  },
+  "FooterTwo": {
+    "description": "Auto imported from components/footer/FooterTwo.vue"
+  },
+  "FooterYoga": {
+    "description": "Auto imported from components/footer/FooterYoga.vue"
+  },
+  "FooterGoogleMapWithAPI": {
+    "description": "Auto imported from components/footer/GoogleMapWithAPI.vue"
+  },
+  "FooterScrollToTop": {
+    "description": "Auto imported from components/footer/ScrollToTop.vue"
   },
   "HomeDistantLearningAbout": {
     "description": "Auto imported from components/home-distant-learning/About.vue"
