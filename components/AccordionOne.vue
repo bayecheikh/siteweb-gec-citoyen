@@ -9,7 +9,7 @@
                 </h5>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Pour vous connecter à la plateforme, vous devez disposer d'un compte au Portail National des Services Publics du Bénin.</p>
+                        <p>Pour vous connecter à la plateforme, vous devez disposer d'un compte au Portail National des Services Publics du Bénin ou sur La Plateforme Nationale d'Interopérabilité (XROAD BJ).</p>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 </h5>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>L'envoi du courrier se fait via un formulaire simple. Vous pouvez importer votre courrier et y joindre d'autres fichiers si besoin.</p>
+                        <p>L'envoi du courrier se fait via un formulaire simple. Vous serez guidé étape par étape.</p>
                     </div>
                 </div>
             </div>

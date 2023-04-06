@@ -10,7 +10,7 @@
                                 <h2 class="title custom-title">Questions fréquentes</h2>
                                 <span class="shape-line custom-shape-line"><i class="icon-19"></i></span>
                             </div>
-
+                            
                             <AccordionOne />
 
                         </div>

@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div class="counterup-area-6 custom-counterup-area-6">
         <div class="container">
             <div class="row g-5">
@@ -9,12 +10,13 @@
                         </div>
                         <h2 class="counter-item count-number">
                             <FunFact number="9.3" decimal="1" suffix="K" />
-                            <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
-                            <section id="faq">
-                            </section>
+                           
                         </h2>
                         <h6 class="title">USAGERS CONNECTÉS</h6>
                     </div>
+                      <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
+                      <section id="faq">
+                            </section>
                 </div>
                 <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
@@ -35,23 +37,27 @@
                         <h2 class="counter-item count-number">
                             <FunFact number="10" suffix="+" />
                         </h2>
-                        <h6 class="title">MINISTÈRES ENROLLÉS</h6>
+                        <h6 class="title">ORGANISMES ENROLLÉS</h6>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                     <div class="edu-counterup counterup-style-6">
-                        <div class="icon">
+                        <div class="icon custom-counterup-style-6">
                             <i class="icon-49"></i>
                         </div>
                         <h2 class="counter-item count-number">
                             <FunFact number="90" suffix="%" />
                         </h2>
+                       
                         <h6 class="title">TAUX DE RÉPONSE</h6>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
+   
+                        </div>
 </template>
 
 <script>
@@ -79,5 +85,12 @@
         margin-bottom: 80px !important;
         background: rgb(0, 128, 100) !important;
     }
-
+    .custom-counterup-style-6 {
+        border: none !important;
+     
+    }
+    .counterup-style-6{
+        border-right-width: 50px !important;
+    }
+ 
 </style>

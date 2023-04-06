@@ -1,5 +1,5 @@
 <template>
-    <header class="edu-header  header-style-1 header-fullwidth no-topbar">
+    <header class="edu-header custom-edu-header header-style-1 header-fullwidth no-topbar">
         <div class="header-mainmenu custom-header-one" :class="{ 'edu-sticky': isSticky }">
             <div class="container-fluid">
                 <div class="header-navbar">
@@ -98,7 +98,7 @@ export default {
     }
 
     .custom-banner-btn {
-        padding-bottom: 20px !important;
+        
         display: flex !important;
         justify-content: center !important;
         gap: 5px !important;
@@ -122,7 +122,7 @@ export default {
         font-weight: 700 !important;
         height: 40px !important;
         display: flex !important;
-     
+     margin-right: 20px !important;
        justify-content: center !important;
        align-items: center !important;
         font-size: 13px !important;
@@ -143,23 +143,28 @@ export default {
     }
 
     .custom-header-one {
+       
         background-color: #0a3764 !important;
     }
 
     .custom-btn-sign-in:hover {
         background: linear-gradient(-90deg, #2985BC 0%, #2985BC 100%) !important;
+        color: white !important;
     }
 
     .custom-btn-sign-in:after {
         background: linear-gradient(-90deg, #4CA4E4 0%, #1da1f2 100%) !important;
+        
     }
 
     .custom-btn-sign-up:hover {
         background: linear-gradient(-90deg, orange 0%, orange 100%) !important;
+        color: white !important;
     }
 
     .custom-btn-sign-up:after {
         background: linear-gradient(-90deg, #FFC04D 0%, #ffc752 100%) !important;
     }
+
 
 </style>

@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="resultat-section-etat">
                                     <p class="row-label-resultat">État</p>
-                                    <p class="row-etat-value-pending">Votre courrier est toujours en cours de traitement</p>
+                                    <p class="row-etat-value-pending">Votre courrier est toujours en cours de traitement   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg> </p> 
                                 </div>
                                 </div>
                         </div>
@@ -174,7 +174,7 @@
                                 </div>
                                 <div class="resultat-section-etat">
                                     <p class="row-label-resultat">État</p>
-                                    <p class="row-etat-value-close">Veuillez consulter la réponse à l'adresse ya****@outlook.com</p>
+                                    <p class="row-etat-value-close">Veuillez consulter la réponse à l'adresse ya****@outlook.com <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg></p>
                                 </div>
                                 </div>
                         </div>
@@ -184,7 +184,7 @@
             </div>
         </template>
 
-        <div class="banner-btn custom-banner-btn">
+        <div class="banner-btn custom-actions-btn">
             <a class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton"
                 @click="onClickSuivreCourrier()" >
                 Suivre son courrier <i class="icon-4"></i>
@@ -268,13 +268,13 @@
         padding-top: 30px !important;
     }
 
-    .custom-banner-btn {
-        padding-top: 27px !important;
+    .custom-actions-btn {
+        padding-top: 20px !important;
         display: flex !important;
         justify-content: center !important;
+        align-items: center !important;
         gap: 20px !important;
-        margin-right : 33px !important;
-
+      
     }
 
     .custom-row {
@@ -618,4 +618,21 @@ p {
   #code {
     color: #0a3764 !important;
 }
+
+.row-etat-value-pending svg {
+    
+    padding: 3px;
+    fill: #ffa500;
+  width: 20px;
+  height: 20px;
+}
+
+.row-etat-value-close svg {
+    
+    padding: 2.5px;
+   fill: #008064;
+  width: 20px;
+  height: 20px;
+}
+
 </style>
