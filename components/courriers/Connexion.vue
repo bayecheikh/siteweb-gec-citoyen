@@ -60,7 +60,6 @@ import { mapMutations, mapGetters } from 'vuex'
                 this.$store.dispatch('coordonnees/getDetail',{dataUser})
                 
                 this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
-
             },
         },
     }
