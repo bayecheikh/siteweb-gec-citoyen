@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 col-md-6 col-sm-6">
-                    <div class="edu-counterup counterup-style-6">
+                    <div class="edu-counterup counterup-style-6 border-none">
                         <div class="icon custom-counterup-style-6">
                             <i class="icon-49"></i>
                         </div>
@@ -85,12 +85,5 @@
         margin-bottom: 80px !important;
         background: rgb(0, 128, 100) !important;
     }
-    .custom-counterup-style-6 {
-        border: none !important;
-     
-    }
-    .counterup-style-6{
-        border-right-width: 50px !important;
-    }
- 
+  
 </style>
