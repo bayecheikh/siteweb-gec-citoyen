@@ -6,11 +6,11 @@
                     <div class="col-lg-6" data-aos-delay="150" data-aos="fade-up" data-aos-duration="800">
                         <div class="edu-faq-content">
                             <div class="section-title section-left">
-                                <span class="pre-title ">FAQ</span>
+                              
                                 <h2 class="title custom-title">Questions fréquentes</h2>
                                 <span class="shape-line custom-shape-line"><i class="icon-19"></i></span>
                             </div>
-
+                            
                             <AccordionOne />
 
                         </div>

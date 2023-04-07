@@ -112,79 +112,9 @@
                 </div>
             </div>
         </div>
-        <template>
-            <div v-show="isPageLoad">
-                <div v-show="isPopUpVisible" class="custom-template offset-xl-2 col-lg-6">
-                    <div class="contact-form form-style-2">
-                        <button @click="onClickClose()" class="custom-close-btn">x</button>
-                        <div class="section-title">
-                            <h4 class="title custom-suivi-title text-uppercase">Veuillez entrer le code du courrier à suivre</h4>
-                            <p class="custom-information-msg">Vous avez reçu un email
-                                contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
-                                suivre l'avancement de votre courrier, veuillez entrer le code dans l'espace ci-dessous.</p>
-                        </div>
+       <SuiviCourrier v-if="ispopupload" />
 
-                        <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="isCodeValid()">
-                            <div class="row row--10">
-                                <div class="form-group col-12">
-                                <div class="d-flex align-items-center search-box">
-                                    <i class="icon-2"></i>
-                                    <input type="text" name="code" id="code"  autocomplete="off">
-                                    <button class="submit-button" name="submit" type="submit"> <i class="icon-4"></i> </button>
-                                </div>
-                                </div>
-                            </div>
-                        </form>
-                        <div v-if="!validCode" >
-                            <p class="custom-error-msg">Ce code est invalide.</p>
-                        </div>
-                        <div v-if="showValidMessage1" >
-                            <p class="custom-title-resultat">RÉSULTAT</p>
-                            <div class="box-resultat">
-                                
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Nature</p>
-                                
-                                    <p class="row-label-value">Courrier</p>
-                                </div>
-                            
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Objet</p>
-                                    <p class="row-label-value">Autorisation de construire</p>
-                                </div>
-                                <div class="resultat-section-etat">
-                                    <p class="row-label-resultat">État</p>
-                                    <p class="row-etat-value-pending">Votre courrier est toujours en cours de traitement</p>
-                                </div>
-                                </div>
-                        </div>
-                        <div v-if="showValidMessage2" >
-                            <p class="custom-title-resultat">RÉSULTAT</p>
-                            <div class="box-resultat">
-                                
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Nature</p>
-                                
-                                    <p class="row-label-value">Courrier</p>
-                                </div>
-                            
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Objet</p>
-                                    <p class="row-label-value">Demande d'emploi au MCVDD</p>
-                                </div>
-                                <div class="resultat-section-etat">
-                                    <p class="row-label-resultat">État</p>
-                                    <p class="row-etat-value-close">Veuillez consulter la réponse à l'adresse ya****@outlook.com</p>
-                                </div>
-                                </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </template>
-
-        <div class="banner-btn custom-banner-btn">
+        <div class="banner-btn custom-actions-btn">
             <a class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton"
                 @click="onClickSuivreCourrier()" >
                 Suivre son courrier <i class="icon-4"></i>
@@ -199,60 +129,32 @@
 </template>
 
 <script>
+
+import { mapMutations, mapGetters } from 'vuex'
     export default {
+        computed: {
+            ...mapGetters({
+                ispopupload: 'suivicourrier/ispopupload'
+            })
+        },
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle'),
             SuiviCourrier: () => import("@/components/home-distant-learning/SuiviCourrier.vue"),
         },
 
         methods: {
-            onClickSuivreCourrier() {
-                this.isPageLoad = true
-                this.isPopUpVisible = true
-            },
-            onClickClose() {
-                this.isPopUpVisible = false;
-                this.isPageLoad = false;
-                this.showValidMessage1 = false;
-                this.showValidMessage2 = false;
-                this.validCode = true
-                this.$refs.form.reset();
-            },
-            isCodeValid() {
-                const codeInput = this.$refs.form.querySelector('input[name="code"]');
-                const codeValue = codeInput.value;
-
-                if (codeValue == 2) {
-                   
-                    this.showValidMessage1 = true
-                    this.showValidMessage2= false
-                    this.validCode = true
-                }
-                else if (codeValue == 3) {
-                 
-                    this.showValidMessage2 = true
-                    this.showValidMessage1 = false
-                    this.validCode = true
-                }
-                else {
-                    this.showValidMessage2 = false
-                    this.showValidMessage1 = false
-                    this.validCode = false
-                }
-
-
+            async onClickSuivreCourrier() {
+                await this.$store.dispatch('suivicourrier/getDetail', true)
             }
-
         },
         data() {
             return {
-                isPopUpVisible: true,
+                isPageLoad: false,
+                isLoading: false,
                 validCode: true,
                 showValidMessage1: false,
                 showValidMessage2: false,
-                isPageLoad: false,
-                code: ''
-
+                code: '',
             }
         },
     }
@@ -268,13 +170,13 @@
         padding-top: 30px !important;
     }
 
-    .custom-banner-btn {
-        padding-top: 27px !important;
+    .custom-actions-btn {
+        padding-top: 20px !important;
         display: flex !important;
         justify-content: center !important;
+        align-items: center !important;
         gap: 20px !important;
-        margin-right : 33px !important;
-
+      
     }
 
     .custom-row {
@@ -618,4 +520,21 @@ p {
   #code {
     color: #0a3764 !important;
 }
+
+.row-etat-value-pending svg {
+    
+    padding: 3px;
+    fill: #ffa500;
+  width: 20px;
+  height: 20px;
+}
+
+.row-etat-value-close svg {
+    
+    padding: 2.5px;
+   fill: #008064;
+  width: 20px;
+  height: 20px;
+}
+
 </style>
