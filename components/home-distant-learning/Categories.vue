@@ -112,77 +112,7 @@
                 </div>
             </div>
         </div>
-        <template>
-            <div v-show="isPageLoad">
-                <div v-show="isPopUpVisible" class="custom-template offset-xl-2 col-lg-6">
-                    <div class="contact-form form-style-2">
-                        <button @click="onClickClose()" class="custom-close-btn">x</button>
-                        <div class="section-title">
-                            <h4 class="title custom-suivi-title text-uppercase">Veuillez entrer le code du courrier à suivre</h4>
-                            <p class="custom-information-msg">Vous avez reçu un email
-                                contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
-                                suivre l'avancement de votre courrier, veuillez entrer le code dans l'espace ci-dessous.</p>
-                        </div>
-
-                        <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="isCodeValid()">
-                            <div class="row row--10">
-                                <div class="form-group col-12">
-                                <div class="d-flex align-items-center search-box">
-                                    <i class="icon-2"></i>
-                                    <input type="text" name="code" id="code"  autocomplete="off">
-                                    <button class="submit-button" name="submit" type="submit"> <i class="icon-4"></i> </button>
-                                </div>
-                                </div>
-                            </div>
-                        </form>
-                        <div v-if="!validCode" >
-                            <p class="custom-error-msg">Ce code est invalide.</p>
-                        </div>
-                        <div v-if="showValidMessage1" >
-                            <p class="custom-title-resultat">RÉSULTAT</p>
-                            <div class="box-resultat">
-                                
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Nature</p>
-                                
-                                    <p class="row-label-value">Courrier</p>
-                                </div>
-                            
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Objet</p>
-                                    <p class="row-label-value">Autorisation de construire</p>
-                                </div>
-                                <div class="resultat-section-etat">
-                                    <p class="row-label-resultat">État</p>
-                                    <p class="row-etat-value-pending">Votre courrier est toujours en cours de traitement   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg> </p> 
-                                </div>
-                                </div>
-                        </div>
-                        <div v-if="showValidMessage2" >
-                            <p class="custom-title-resultat">RÉSULTAT</p>
-                            <div class="box-resultat">
-                                
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Nature</p>
-                                
-                                    <p class="row-label-value">Courrier</p>
-                                </div>
-                            
-                                <div class="resultat-section">
-                                    <p class="row-label-resultat">Objet</p>
-                                    <p class="row-label-value">Demande d'emploi au MCVDD</p>
-                                </div>
-                                <div class="resultat-section-etat">
-                                    <p class="row-label-resultat">État</p>
-                                    <p class="row-etat-value-close">Veuillez consulter la réponse à l'adresse ya****@outlook.com <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg></p>
-                                </div>
-                                </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </template>
+       <SuiviCourrier v-if="ispopupload" />
 
         <div class="banner-btn custom-actions-btn">
             <a class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton"
@@ -199,60 +129,32 @@
 </template>
 
 <script>
+
+import { mapMutations, mapGetters } from 'vuex'
     export default {
+        computed: {
+            ...mapGetters({
+                ispopupload: 'suivicourrier/ispopupload'
+            })
+        },
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle'),
             SuiviCourrier: () => import("@/components/home-distant-learning/SuiviCourrier.vue"),
         },
 
         methods: {
-            onClickSuivreCourrier() {
-                this.isPageLoad = true
-                this.isPopUpVisible = true
-            },
-            onClickClose() {
-                this.isPopUpVisible = false;
-                this.isPageLoad = false;
-                this.showValidMessage1 = false;
-                this.showValidMessage2 = false;
-                this.validCode = true
-                this.$refs.form.reset();
-            },
-            isCodeValid() {
-                const codeInput = this.$refs.form.querySelector('input[name="code"]');
-                const codeValue = codeInput.value;
-
-                if (codeValue == 2) {
-                   
-                    this.showValidMessage1 = true
-                    this.showValidMessage2= false
-                    this.validCode = true
-                }
-                else if (codeValue == 3) {
-                 
-                    this.showValidMessage2 = true
-                    this.showValidMessage1 = false
-                    this.validCode = true
-                }
-                else {
-                    this.showValidMessage2 = false
-                    this.showValidMessage1 = false
-                    this.validCode = false
-                }
-
-
+            async onClickSuivreCourrier() {
+                await this.$store.dispatch('suivicourrier/getDetail', true)
             }
-
         },
         data() {
             return {
-                isPopUpVisible: true,
+                isPageLoad: false,
+                isLoading: false,
                 validCode: true,
                 showValidMessage1: false,
                 showValidMessage2: false,
-                isPageLoad: false,
-                code: ''
-
+                code: '',
             }
         },
     }

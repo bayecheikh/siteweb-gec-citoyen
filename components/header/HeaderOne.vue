@@ -61,7 +61,7 @@
                                     </div>
                             <div class="initials-circle">
                                 <span class="initials">CG</span>
-                                <span class="tooltip">Cheikh Gueye<br>NPI : 555-123-4567</span>
+                                <span class="tooltip">Cheikh Gueye<br>NPI : 0087742803</span>
                                
                             </div>
                           
@@ -505,7 +505,7 @@ export default {
     }
 
     .custom-btn-sign-in:after {
-        background: linear-gradient(-90deg, #7289da 0%, #7289da 100%) !important;
+        background: linear-gradient(-90deg, #2c8ac0 0%, #42a0d7 100%) !important;
         
     }
 
