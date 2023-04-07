@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="form-group col-6">
-                <button @click="$goToTab('connexion')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+                <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
             </div>
             <div class="form-group col-6">
                 <button @click="submitCoordonnee" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
@@ -66,7 +66,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
                 this.$store.dispatch('coordonnees/getDetail',{...this.model})
-                this.$store.dispatch('active_step/getDetail',{id:'ministeres'})
+                this.$store.dispatch('active_step/getDetail',{id:'validation'})
                 /* this.$axios.$post('/demandes')
                 .then(async (response) => {
                     //this.$toast.success(response.message).goAway(2000)

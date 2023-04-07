@@ -57,7 +57,7 @@
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
                 this.$store.dispatch('contenus/getDetail',{...this.model})
-                this.$store.dispatch('active_step/getDetail',{id:'validation'})
+                this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
 
             },
             changeModel($event){
