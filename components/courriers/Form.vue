@@ -81,7 +81,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2">Prévisualisez et soumettre</p>
+                  <p class="title_step pt-2 py-5">Prévisualisez et soumettre</p>
                </div>
                
                <!-- <button @click="$goToTab('ministeres')" :class="'nav-link '+(detailactive_step.id=='ministeres'?'active':'')" >Trouvez le ministère</button> -->
@@ -89,7 +89,7 @@
                <!-- <button @click="$goToTab('coordonnees')" :class="'nav-link '+(detailactive_step.id=='coordonnees'?'active':'')">Vos coordonnées</button> -->
                <!-- <button @click="$goToTab('validation')" :class="'nav-link '+(detailactive_step.id=='validation'?'active':'')">Validation</button> -->               
             </div>
-            <div class="tab-content">
+            <div class="tab-content pt-5">
               <!-- <div :class="'tab-pane fade '+(detailactive_step.id=='connexion'?'show active':'')" id="online" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
@@ -265,12 +265,16 @@ import { mapMutations, mapGetters } from 'vuex'
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -5px -5px 45px;
+  margin: -5px -5px 23px;
   background: #0a3764;
   padding: 18px;
   border-radius: 5px;
 }
 .color-green{
    color: green !important;
+}
+.tab-content {
+  border: solid 1px #8080804d;
+  background-color: #fff;
 }
 </style>
