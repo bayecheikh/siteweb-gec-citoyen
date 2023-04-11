@@ -4,12 +4,12 @@
         <form class="row">
             <div class="edu-sorting form-group col-12">
                 <div class="form-check form-check-inline border-radio mr-5">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Saisie libre</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option1">
+                    <label class="form-check-label" for="inlineRadio11">Saisie libre</label>
                     </div>
                 <div class="form-check form-check-inline border-radio">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Choisir un modél</label>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio22" value="option2">
+                    <label class="form-check-label" for="inlineRadio22">Choisir un modél</label>
                 </div>
             </div>
             <div class="edu-sorting form-group col-12">

@@ -29,15 +29,6 @@
   "AboutUsThreeWhyChoose": {
     "description": "Auto imported from components/about-us-three/WhyChoose.vue"
   },
-  "AboutUsOneFunFact": {
-    "description": "Auto imported from components/about-us-one/FunFact.vue"
-  },
-  "AboutUsOneInstructor": {
-    "description": "Auto imported from components/about-us-one/Instructor.vue"
-  },
-  "AboutUsOneWhyChoose": {
-    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
-  },
   "AboutUsTwoFeatures": {
     "description": "Auto imported from components/about-us-two/Features.vue"
   },
@@ -55,6 +46,15 @@
   },
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
+  },
+  "AboutUsOneFunFact": {
+    "description": "Auto imported from components/about-us-one/FunFact.vue"
+  },
+  "AboutUsOneInstructor": {
+    "description": "Auto imported from components/about-us-one/Instructor.vue"
+  },
+  "AboutUsOneWhyChoose": {
+    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
   },
   "BlogPostList": {
     "description": "Auto imported from components/blog/BlogPostList.vue"
