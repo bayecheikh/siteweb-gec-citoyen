@@ -26,13 +26,6 @@ You can directly use them in pages and other components without the need to impo
 - `<AboutUsTwoTestimonial>` | `<about-us-two-testimonial>` (components/about-us-two/Testimonial.vue)
 - `<AboutUsTwoVideo>` | `<about-us-two-video>` (components/about-us-two/Video.vue)
 - `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)
-<<<<<<< HEAD
-- `<BlogPostList>` | `<blog-post-list>` (components/blog/BlogPostList.vue)
-- `<BlogPostOne>` | `<blog-post-one>` (components/blog/BlogPostOne.vue)
-- `<BlogPostStandard>` | `<blog-post-standard>` (components/blog/BlogPostStandard.vue)
-- `<BlogPostTwo>` | `<blog-post-two>` (components/blog/BlogPostTwo.vue)
-=======
->>>>>>> origin/yacine-v14
 - `<CommonBreadCrumbOne>` | `<common-bread-crumb-one>` (components/common/BreadCrumbOne.vue)
 - `<CommonBreadCrumbThree>` | `<common-bread-crumb-three>` (components/common/BreadCrumbThree.vue)
 - `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
@@ -46,13 +39,10 @@ You can directly use them in pages and other components without the need to impo
 - `<CourriersMinisteres>` | `<courriers-ministeres>` (components/courriers/Ministeres.vue)
 - `<CourriersPrevisualisation>` | `<courriers-previsualisation>` (components/courriers/Previsualisation.vue)
 - `<CourriersValidation>` | `<courriers-validation>` (components/courriers/Validation.vue)
-<<<<<<< HEAD
-=======
 - `<BlogPostList>` | `<blog-post-list>` (components/blog/BlogPostList.vue)
 - `<BlogPostOne>` | `<blog-post-one>` (components/blog/BlogPostOne.vue)
 - `<BlogPostStandard>` | `<blog-post-standard>` (components/blog/BlogPostStandard.vue)
 - `<BlogPostTwo>` | `<blog-post-two>` (components/blog/BlogPostTwo.vue)
->>>>>>> origin/yacine-v14
 - `<CourseTypeEight>` | `<course-type-eight>` (components/course/CourseTypeEight.vue)
 - `<CourseTypeFive>` | `<course-type-five>` (components/course/CourseTypeFive.vue)
 - `<CourseTypeFour>` | `<course-type-four>` (components/course/CourseTypeFour.vue)
@@ -77,6 +67,7 @@ You can directly use them in pages and other components without the need to impo
 - `<FooterGoogleMapWithAPI>` | `<footer-google-map-with-a-p-i>` (components/footer/GoogleMapWithAPI.vue)
 - `<FooterScrollToTop>` | `<footer-scroll-to-top>` (components/footer/ScrollToTop.vue)
 - `<HeaderAuthentication>` | `<header-authentication>` (components/header/Authentication.vue)
+- `<HeaderAuthentication2>` | `<header-authentication2>` (components/header/Authentication2.vue)
 - `<HeaderCategory>` | `<header-category>` (components/header/Category.vue)
 - `<HeaderFour>` | `<header-four>` (components/header/HeaderFour.vue)
 - `<HeaderLanding>` | `<header-landing>` (components/header/HeaderLanding.vue)

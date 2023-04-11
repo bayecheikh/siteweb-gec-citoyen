@@ -77,24 +77,6 @@
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
   },
-  "CommonBreadCrumbOne": {
-    "description": "Auto imported from components/common/BreadCrumbOne.vue"
-  },
-  "CommonBreadCrumbThree": {
-    "description": "Auto imported from components/common/BreadCrumbThree.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonColorMode": {
-    "description": "Auto imported from components/common/ColorMode.vue"
-  },
-  "CommonPaginationOne": {
-    "description": "Auto imported from components/common/PaginationOne.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
   },
@@ -199,6 +181,9 @@
   },
   "HeaderAuthentication": {
     "description": "Auto imported from components/header/Authentication.vue"
+  },
+  "HeaderAuthentication2": {
+    "description": "Auto imported from components/header/Authentication2.vue"
   },
   "HeaderCategory": {
     "description": "Auto imported from components/header/Category.vue"
