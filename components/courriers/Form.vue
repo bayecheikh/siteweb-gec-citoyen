@@ -25,8 +25,13 @@
                         </g>
                      </svg>
                   </div>
-                  <p :class="'title_step pt-2'">Trouvez l'organisme concerné</p>
+                  <p :class="'title_step pt-2 '">Trouvez l'organisme concerné</p>
                </div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+
+               <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='ministeres'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
+
+               </svg>
                <div class="d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='contenu'?'active_step':'')" @click="$goToTab('contenu')">
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
@@ -44,9 +49,14 @@
                   </div>
                   <p class="title_step pt-2">Remplir le formulaire de somission</p>
                </div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+
+               <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='contenu'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
+
+               </svg>
                <div class="d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='coordonnees'?'active_step':'')" @click="$goToTab('coordonnees')">
-                     <svg class="custom-svg" xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
+                     <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
                         viewBox="0 0 38.16 40.834">
                         <g transform="translate(-5928 -10528.621)">
                            <path
@@ -61,6 +71,11 @@
                   </div>
                   <p class="title_step pt-2">Saisissez vos coordonnées</p>
                </div>
+               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+
+               <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='coordonnees'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
+
+               </svg>
                <div class="d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='validation'?'active_step':'')" @click="$goToTab('validation')">
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
@@ -81,7 +96,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2 py-5">Prévisualisez et soumettre</p>
+                  <p class="title_step pt-2">Prévisualisez et soumettre</p>
                </div>
                
                <!-- <button @click="$goToTab('ministeres')" :class="'nav-link '+(detailactive_step.id=='ministeres'?'active':'')" >Trouvez le ministère</button> -->
@@ -253,7 +268,7 @@ import { mapMutations, mapGetters } from 'vuex'
    align-items: center;
 }
 .active_step{
-   background-color:green;
+   background-color:#008064;
    color: #ffffff;
 }
 .title_step{
@@ -270,8 +285,8 @@ import { mapMutations, mapGetters } from 'vuex'
   padding: 18px;
   border-radius: 5px;
 }
-.color-green{
-   color: green !important;
+.color-#green{
+   color: #008064 !important;
 }
 .tab-content {
   border: solid 1px #8080804d;

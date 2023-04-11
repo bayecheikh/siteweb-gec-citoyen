@@ -3,12 +3,37 @@
         <h3 class="title"></h3>
         <form class="row">
             <div class="edu-sorting form-group col-12">
-                <label for="reg-name">Model de courrier</label>
-                <div class="icon"><i class="icon-55"></i></div>
+                <div class="form-check form-check-inline border-radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Saisie libre</label>
+                </div>
+                <div class="form-check form-check-inline border-radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Choisir un modél</label>
+                </div>
+            </div>
+            <div class="edu-sorting form-group col-12">
+                <label for="reg-name">Type de courrier</label>
                 <select class="edu-select" @change="changeModel($event)" v-model="key">
                     <option>--</option>
                     <option v-for="item in modelContenu" :key="item.id" :value="item">{{item.libelle}}</option>
                 </select>
+                <!-- <v-autocomplete
+            v-model="model.roles"
+            :items="modelContenu"
+            :rules="rules.rolesRules"
+            outlined
+            dense
+            multiple
+            small-chips
+            label="Model"
+            item-text="libelle"
+            item-value="id"
+            clearable
+            return-object
+            @change="changeModel"
+          >
+        </v-autocomplete> -->
             </div>
             <div class="form-group col-12">
                 <label for="reg-name">Objet*</label>
@@ -77,5 +102,9 @@
 }
 .border-grey{
   border: solid 2px #0a3764;
+}
+.border-radio {
+  border: solid 1px #0a3764;
+  padding: 10px;
 }
 </style>

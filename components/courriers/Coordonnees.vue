@@ -52,7 +52,7 @@ import { mapMutations, mapGetters } from 'vuex'
         data() {
             return {
                 model :{
-                    type_utilisateur:"Citoyen",
+                    type_utilisateur:"",
                     prenom:"",
                     nom:"",
                     email:"",
