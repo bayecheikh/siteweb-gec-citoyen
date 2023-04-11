@@ -1,7 +1,25 @@
 <template>
     <div class="edu-categorie-area " id="categories">
         <div class="container">
-
+            <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 pt-4 pb-4">
+                <div class="form-group col-12">
+                    <label for="reg-name">MOTS CLÉS</label>
+                    <input class="border-radio" type="text" v-model="recherche" name="reg-name" id="reg-name" placeholder="Rechercher">
+                </div>
+                <div class="form-group col-12 my-0">
+                    <label for="reg-name">TYPE D'ORGANISME</label>
+                </div>
+                <div class="form-group col-12 my-0">
+                    <div class="form-check form-check-inline border-radio mr-5">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Ministère</label>
+                        </div>
+                    <div class="form-check form-check-inline border-radio">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Autre organisme</label>
+                    </div>
+                </div>
+            </div>
             <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 pt-4 pb-4">
                 <div 
                     class="col-lg-4 col-md-4 col-sm-12" 
@@ -41,6 +59,7 @@
         },
         data() {
             return {
+                recherche:'',
                 categories: [
                     {
                         title: "Ministère des Affaires Étrangères",
@@ -124,7 +143,22 @@ padding: 10px;
 .custom-bloc-ministere:hover {
   border: solid 2px green !important;
 }
+.custom-textarea {
+  padding: 20px 25px;
+  border: solid 1px #eae9e9;
+}
 .border-grey{
   border: solid 2px #0a3764;
+}
+.border-grey{
+  border: solid 2px #0a3764;
+}
+.border-radio {
+  border: solid 1px #eae9e9 !important;
+  padding: 10px;
+}
+.border-input{
+    border: solid 1px #eae9e9;
+    border-radius: 5px;
 }
 </style>

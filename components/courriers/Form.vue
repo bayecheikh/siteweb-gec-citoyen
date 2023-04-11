@@ -292,4 +292,7 @@ import { mapMutations, mapGetters } from 'vuex'
   border: solid 1px #8080804d;
   background-color: #fff;
 }
+élément {
+  background: #f0f2f2;
+}
 </style>

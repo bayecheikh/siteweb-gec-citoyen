@@ -11,22 +11,16 @@
                 <input type="text" name="reg-name" id="reg-name" placeholder="Votre prénom" v-model="model.prenom">
             </div>
             <div class="form-group col-6">
-                <label for="log-email">Email*</label>
-                <input type="email" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.email">
-            </div>
-            <div class="form-group col-6">
-                <label for="reg-name">Adresse*</label>
-                <input type="text" name="reg-name" id="reg-name" placeholder="Votre adresse" v-model="model.adresse">
-            </div>
-            <div class="form-group col-6">
                 <label for="reg-name">Téléphone*</label>
                 <input type="text" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.telephone">
             </div>
-            <div class="form-group col-6 chekbox-area">
-                <div class="edu-form-check">
-                <input type="checkbox" id="terms-condition">
-                <label for="terms-condition">J'accepte les termes et conditions <a href="terms-condition.html">Terms & Condition.</a> </label>
-                </div>
+            <div class="form-group col-6">
+                <label for="log-email">Email*</label>
+                <input type="email" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.email">
+            </div>
+            <div class="form-group col-12">
+                <label for="reg-name">Adresse*</label>
+                <input type="text" name="reg-name" id="reg-name" placeholder="Votre adresse" v-model="model.adresse">
             </div>
             <div class="form-group col-6">
                 <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
