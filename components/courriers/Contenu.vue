@@ -1,5 +1,5 @@
 <template>
-    <div class="login-form-box registration-form">
+    <div>
         <h3 class="title"></h3>
         <form class="row">
             <div class="edu-sorting form-group col-12">

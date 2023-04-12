@@ -104,7 +104,7 @@
                <!-- <button @click="$goToTab('coordonnees')" :class="'nav-link '+(detailactive_step.id=='coordonnees'?'active':'')">Vos coordonnées</button> -->
                <!-- <button @click="$goToTab('validation')" :class="'nav-link '+(detailactive_step.id=='validation'?'active':'')">Validation</button> -->               
             </div>
-            <div class="tab-content pt-5">
+            <div class="tab-content pt-5 login-form-box registration-form">
               <!-- <div :class="'tab-pane fade '+(detailactive_step.id=='connexion'?'show active':'')" id="online" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
@@ -122,7 +122,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='ministeres'?'show active':'')" id="undergraduate" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-12 pt-4">
+                       <div class="col-lg-10 pt-4 ">
                           <Ministeres />
                        </div>
                     </div>
@@ -136,7 +136,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='contenu'?'show active':'')" id="graduate" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-8 pt-4">
+                       <div class="col-lg-10 pt-4">
                           <Contenu />
                        </div>
                     </div>
@@ -150,7 +150,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='coordonnees'?'show active':'')" id="coordonnees" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-8">
+                       <div class="col-lg-10 pt-4">
                           <Coordonnees />
                        </div>
                     </div>
@@ -164,7 +164,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='validation'?'show active':'')" id="validation" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-8 pt-4">
+                       <div class="col-lg-10 pt-4">
                           <Validation />
                        </div>
                     </div>
@@ -280,7 +280,7 @@ import { mapMutations, mapGetters } from 'vuex'
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -5px -5px 23px;
+  margin: -5px 0px 23px;
   background: #0a3764;
   padding: 18px;
   border-radius: 5px;

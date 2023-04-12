@@ -1,5 +1,5 @@
 <template>
-    <div class="login-form-box registration-form">
+    <div>
         <h3 class="title"></h3>
         <form class="row d-flex">
             <div class="form-group col-6">

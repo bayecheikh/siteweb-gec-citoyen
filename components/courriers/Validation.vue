@@ -1,5 +1,5 @@
 <template>
-    <div class="login-form-box registration-form">
+    <div >
         
         
         

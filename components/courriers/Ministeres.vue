@@ -1,12 +1,13 @@
 <template>
-    <div class="edu-categorie-area " id="categories">
-        <div class="container">
-            <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 pt-4 pb-4">
-                <div class="form-group col-12">
+
+        <div >
+            <div class="row pt-4 pb-0 bloc-recherche">
+                <div class="form-group col-12 mb-4">
                     <label for="reg-name">MOTS CLÉS</label>
-                    <input class="border-radio" type="text" v-model="recherche" name="reg-name" id="reg-name" placeholder="Rechercher">
+                    <input class="border-radio my-4" type="text" v-model="recherche" name="reg-name" id="reg-name" placeholder="Rechercher">
                 </div>
-                <div class="form-group col-12 my-0">
+                <hr class='dotted' />
+                <div class="form-group col-12 my-4">
                     <label for="reg-name">TYPE D'ORGANISME</label>
                 </div>
                 <div class="form-group col-12 my-0">
@@ -20,24 +21,39 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 pt-4 pb-4">
-                <div 
-                    class="col-lg-4 col-md-4 col-sm-12" 
-                    data-aos-delay="100" 
-                    data-aos="fade-up" 
-                    data-aos-duration="800" 
-                    v-for="(category, index) in categories" :key="index"
-                >
-                    <div class="custom-bloc-ministere border-grey categorie-grid categorie-style-3 d-flex align-items-center"  @click="submitMinistere(category)">
-                        <div class="icon embleme">
-                            <img class="" src="/images/logo/embleme.png" alt="Dark Logo" v-if="$colorMode.value === 'light'">
-                            <img class="" src="/images/logo/embleme.png" alt="Light Logo" v-if="$colorMode.value === 'dark'">
-                        </div>
-                        <div class="content ministere">
-                            <h5 class="custom-title-ministere">{{ category.title }}</h5>
-                            <img class="" src="/images/logo/vjr.png" alt="Dark Logo">
+            <div class="row ">
+                <div class="pt-4 py-4 custom-border-grey mt-5 mb-0 bg-grey col-lg-12 col-md-12 col-sm-12">
+                    <div class="container">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <label for="reg-name">LISTE DES MINISTERES</label>
                         </div>
                     </div>
+                    
+                </div>
+                <div class="pt-4 pb-4 border-grey bg-grey">
+                    <div class="container">
+                        <div class="row custom-row-equal ">
+                            <div 
+                                class="col-lg-4 col-md-4 col-sm-12 custom-col-equal" 
+                                data-aos-delay="100" 
+                                data-aos="fade-up" 
+                                data-aos-duration="800" 
+                                v-for="(category, index) in categories" :key="index"
+                            >
+                                <div class="custom-bloc-ministere border-grey categorie-grid categorie-style-3 d-flex align-items-center"  @click="submitMinistere(category)">
+                                    <div class="icon embleme">
+                                        <img class="" src="/images/logo/embleme.png" alt="Dark Logo" v-if="$colorMode.value === 'light'">
+                                        <img class="" src="/images/logo/embleme.png" alt="Light Logo" v-if="$colorMode.value === 'dark'">
+                                    </div>
+                                    <div class="content ministere">
+                                        <h5 class="custom-title-ministere">{{ category.title }}</h5>
+                                        <img class="" src="/images/logo/vjr.png" alt="Dark Logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 pt-4 pb-4">
@@ -49,7 +65,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </template>
 
 <script>
@@ -123,7 +139,8 @@
 </script>
 <style scoop>
 .custom-title-ministere{
-    font-size: 14px !important;
+    font-size: 8px !important;
+    text-transform: uppercase;
 }
 .embleme{
 width: 100%;
@@ -147,11 +164,11 @@ padding: 10px;
   padding: 20px 25px;
   border: solid 1px #eae9e9;
 }
-.border-grey{
-  border: solid 2px #0a3764;
-}
-.border-grey{
-  border: solid 2px #0a3764;
+
+.custom-border-grey{
+    border: solid 2px #e8ecee;
+  border-bottom: 0px;
+  border-radius: 5px 5px 0px 0px;
 }
 .border-radio {
   border: solid 1px #eae9e9 !important;
@@ -161,4 +178,24 @@ padding: 10px;
     border: solid 1px #eae9e9;
     border-radius: 5px;
 }
+.bg-grey {
+  background: #f7f5f2;
+}
+.bloc-recherche > * {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.custom-row-equal{
+    overflow: hidden !important; 
+}
+
+.custom-col-equal{
+    margin-bottom: -99999px !important;
+    padding-bottom: 99999px !important;
+}
+.dotted {
+    border: 4px dotted #eae9e9; 
+    border-style: none none dotted; 
+    color: #fff; 
+    background-color: #fff; }
 </style>
