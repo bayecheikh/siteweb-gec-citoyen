@@ -1,14 +1,13 @@
 <template>
     <div class="edu-categorie-area custom-categorie-area-1 categorie-area-1 edu-section-gap">
         <div class="container">
-            <SectionTitle alignment="section-center"
-                title='Plateforme <span class="color-primary custom-section-title">GEC CITOYEN</span>'
-                subTitle="Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers."
-                />
-
+            
+            
+             <h2 class="title">Comment procéder ?</h2>
+            
             <div class="row g-5 custom-row">
-                <div class="col" data-aos-delay="100" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-3 color-extra04-style">
+                <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
+                    <div class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor1 categorie-style-3 color-extra04-style">
                         <div class="icon">
                             <svg class="custom-svg" xmlns="http://www.w3.org/2000/svg" width="38.16" height="40.834"
                                 viewBox="0 0 38.16 40.834">
@@ -31,9 +30,9 @@
                     </div>
                 </div>
 
-                <div class="col" data-aos-delay="100" data-aos-duration="800">
+                <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
                     <div
-                        class="categorie-grid custom-categorie-grid categorie-style-3 color-green-style color-primary-style">
+                        class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor2 categorie-style-3 color-green-style color-primary-style">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="46.588" height="46.529" viewBox="0 0 46.588 46.529">
@@ -58,8 +57,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col" data-aos-delay="100" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid categorie-style-3 color-secondary-style">
+                <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
+                    <div class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor3 categorie-style-3 color-secondary-style">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40.834" height="40.832"
                                 viewBox="0 0 40.834 40.832">
@@ -83,7 +82,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="400" data-aos-duration="800">
                     <div class="col" data-aos-delay="100" data-aos-duration="800">
-                        <div class="categorie-grid custom-categorie-grid categorie-style-3 color-tertiary-style">
+                        <div class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor4 categorie-style-3 color-tertiary-style">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35.563" height="43.951"
                                     viewBox="0 0 35.563 43.951">
@@ -115,15 +114,18 @@
         </div>
         <SuiviCourrier v-if="ispopupload" />
 
-        <div class="banner-btn custom-actions-btn">
-            <a class=" edu-btn custom-track-btn custom-edu-btn-2 text-uppercase" ref="followButton"
-                @click="onClickSuivreCourrier()">
-                Suivre son courrier <i class="icon-4"></i>
-            </a>
-            <n-link to="/addcourrier" class="custom-send-btn edu-btn text-uppercase">
-                Déposer un courrier <i class="icon-4"></i>
-            </n-link>
-        </div>
+     
+
+     <div class="banner-btn custom-actions-btn d-flex flex-wrap">
+    <a class="edu-btn custom-track-btn custom-edu-btn-2 text-uppercase mr-3" ref="followButton"
+        @click="onClickSuivreCourrier()">
+        Suivre son courrier <i class="icon-4"></i>
+    </a>
+    <a class="custom-send-btn edu-btn custom-edu-btn-3 text-uppercase">
+        Déposer un courrier <i class="icon-4"></i>
+    </a>
+</div>
+
 
 
     </div>
@@ -144,6 +146,7 @@ export default {
     },
 
     methods: {
+        
         async onClickSuivreCourrier() {
             await this.$store.dispatch('suivicourrier/getDetail', true)
         }
@@ -166,6 +169,18 @@ export default {
 .custom-categorie-grid {
     height: 337.25px !important;
 }
+.custom-categorie-grid-bgcolor1 {
+    background-color: #eeeffd !important;
+}
+.custom-categorie-grid-bgcolor2 {
+    background-color: #e7f8f5 !important;
+}
+.custom-categorie-grid-bgcolor3 {
+    background-color: #feecef !important;
+}
+.custom-categorie-grid-bgcolor4 {
+    background-color: #fff8e8 !important;
+}
 
 .custom-categorie-area-1 {
     padding-top: 30px !important;
@@ -173,7 +188,7 @@ export default {
 
 .custom-actions-btn {
     padding-top: 20px !important;
-    display: flex !important;
+    display: flex;
     justify-content: center !important;
     align-items: center !important;
     gap: 20px !important;
@@ -186,6 +201,7 @@ export default {
 }
 
 .custom-send-btn {
+    cursor: pointer;
     font-weight: bold !important;
     margin-top: 20px !important;
     background-color: rgb(0, 128, 100) !important;
@@ -301,7 +317,24 @@ export default {
     background-color: #2985BC !important;
     background: #2985BC !important;
 }
-
+.custom-edu-btn-3 {
+    text-align: center !important;
+    border-radius: 5px !important;
+    display: inline-block !important;
+    height: 60px !important;
+    line-height: 62px !important;
+    padding: 0 30px !important;
+    font-size: 15px !important;
+    transition: 0.4s !important;
+    font-family: var(--font-secondary) !important;
+    border: 0 none !important;
+    overflow: hidden !important;
+    position: relative !important;
+    z-index: 1 !important;
+    font-weight: bold !important;
+    margin-top: 20px !important;
+  
+}
 .custom-template {
     position: fixed !important;
     top: 50%;

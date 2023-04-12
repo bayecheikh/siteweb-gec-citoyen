@@ -136,6 +136,7 @@ export default {
     },
     computed: mapGetters({
         detailactive_step: 'active_step/detailactive_step',
+        isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
     }),
     data() {
         return {
@@ -182,6 +183,7 @@ export default {
 
             this.$refs.pnsform.reset();
             await this.$store.dispatch('authentication/getDetail', false)
+            await this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
 
         },
         async onClickCloseChooseMode() {
@@ -215,9 +217,13 @@ export default {
                     setTimeout(() => {
 
                         this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-                        this.onClickClose();
+                        
                         this.isPNSConnecting = false
+                        if(this.isauthenticatingfrombutton){
+                    this.$router.push('/addcourrier')
+                }
                     }, 1000);
+                    this.onClickClose();
                 }, 1000);
 
             }

@@ -83,7 +83,7 @@
 <style scoped>
     .custom-counterup-area-6 {
         margin-bottom: 80px !important;
-        background: rgb(0, 128, 100) !important;
+        background: #24b78c !important;
     }
   
 </style>

@@ -1,26 +1,22 @@
 <template>
-    <div id="main-wrapper" class="main-wrapper bg-lighten05">
-        <HeaderTwo/>
-        <Banner />
+    <div id="main-wrapper" class="main-wrapper bg-lighten04">
+        <HeaderOne/>
+        <Categories />
         <HomeYogaInstructorFunFact/>
-        <Categories/>
         <HomeKitchenCoachFAQ/>
-        <FooterKitchen />
+        <FooterTwo />
     </div>
-    
 </template>
 
 <script>
 
     export default {
         components: {
-            HeaderTwo: () => import("@/components/header/HeaderTwo.vue"),
-            Banner: () => import("@/components/home-main/Banner.vue"),
+            HeaderOne: () => import("@/components/header/HeaderOne.vue"),
             Categories: () => import("@/components/home-distant-learning/Categories.vue"),
-            Features: () => import("@/components/home-main/Features.vue"),
             HomeKitchenCoachFAQ : () => import("@/components/home-kitchen-coach/FAQ.vue"),
             HomeYogaInstructorFunFact : () => import("@/components/home-yoga-instructor/FunFact.vue"),
-            FooterKitchen: () => import("@/components/footer/FooterKitchen")
+            FooterTwo: () => import("@/components/footer/FooterTwo")
         },
         head() {
             return {
@@ -30,8 +26,3 @@
     }
     
 </script>
-
-<style>
-
-
-</style>
