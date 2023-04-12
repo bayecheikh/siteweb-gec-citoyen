@@ -182,6 +182,9 @@
   "HeaderAuthentication": {
     "description": "Auto imported from components/header/Authentication.vue"
   },
+  "HeaderAuthentication2": {
+    "description": "Auto imported from components/header/Authentication2.vue"
+  },
   "HeaderCategory": {
     "description": "Auto imported from components/header/Category.vue"
   },

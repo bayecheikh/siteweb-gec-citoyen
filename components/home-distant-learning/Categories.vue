@@ -4,7 +4,7 @@
             <SectionTitle alignment="section-center"
                 title='Plateforme <span class="color-primary custom-section-title">GEC CITOYEN</span>'
                 subTitle="Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers."
-                disableMark=false />
+                />
 
             <div class="row g-5 custom-row">
                 <div class="col" data-aos-delay="100" data-aos-duration="800">
@@ -310,7 +310,7 @@ export default {
     position: fixed;
     z-index: 9999 !important;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(5px) !important;
+ 
 
 }
 

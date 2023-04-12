@@ -132,7 +132,7 @@ import { mapMutations, mapGetters } from 'vuex'
         position: fixed;
         z-index: 9999 !important;
         box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
-        backdrop-filter: blur(5px) !important;
+   
     }
         .custom-close-btn {
         position: absolute;

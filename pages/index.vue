@@ -1,6 +1,6 @@
 <template>
     <div id="main-wrapper" class="main-wrapper bg-lighten04">
-        <HeaderOne showHeaderTop="true" />
+        <HeaderOne/>
         <Categories />
         <HomeYogaInstructorFunFact/>
         <HomeKitchenCoachFAQ/>
