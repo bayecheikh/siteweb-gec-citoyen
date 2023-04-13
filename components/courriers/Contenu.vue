@@ -44,10 +44,11 @@
             </div>
             <div class="col-12 form-group" v-if="attache_courrier">
                 <div
-                class="imagePreviewWrapper col-12 border-input"
+                class="imagePreviewWrapper col-12 border-input mb-3"
                 @click="selectImage">
                     <img :src="imageData"/>
                 </div>
+                
             </div>
             <div class="form-group col-12 chekbox-area">
                 <div class="edu-form-check">
@@ -74,6 +75,7 @@
             return {
                 key:null,
                 imageData:null,
+                title_courrier:'',
                 saisie:false,
                 attache_courrier:true,
                 modelContenu:[
@@ -137,6 +139,7 @@
                 //Recupère l'extension
                 let filename = files[0].name;
                 let title = filename.substring(0, filename.lastIndexOf('.')) || filename;
+                this.title_courrier=title
                 let idxDot = filename.lastIndexOf(".") + 1;
                 let extFile = filename.substr(idxDot, filename.length).toLowerCase(); 
                 this.model.format = extFile

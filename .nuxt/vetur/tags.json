@@ -11,6 +11,24 @@
   "PopUpConnexion": {
     "description": "Auto imported from components/PopUpConnexion.vue"
   },
+  "AboutUsTwoFeatures": {
+    "description": "Auto imported from components/about-us-two/Features.vue"
+  },
+  "AboutUsTwoFunFact": {
+    "description": "Auto imported from components/about-us-two/FunFact.vue"
+  },
+  "AboutUsTwoInstructor": {
+    "description": "Auto imported from components/about-us-two/Instructor.vue"
+  },
+  "AboutUsTwoLogo": {
+    "description": "Auto imported from components/about-us-two/Logo.vue"
+  },
+  "AboutUsTwoTestimonial": {
+    "description": "Auto imported from components/about-us-two/Testimonial.vue"
+  },
+  "AboutUsTwoVideo": {
+    "description": "Auto imported from components/about-us-two/Video.vue"
+  },
   "About": {
     "description": "Auto imported from components/about-us-one/About.vue"
   },
@@ -38,27 +56,6 @@
   "AboutUsThreeWhyChoose": {
     "description": "Auto imported from components/about-us-three/WhyChoose.vue"
   },
-  "AboutUsTwoFeatures": {
-    "description": "Auto imported from components/about-us-two/Features.vue"
-  },
-  "AboutUsTwoFunFact": {
-    "description": "Auto imported from components/about-us-two/FunFact.vue"
-  },
-  "AboutUsTwoInstructor": {
-    "description": "Auto imported from components/about-us-two/Instructor.vue"
-  },
-  "AboutUsTwoLogo": {
-    "description": "Auto imported from components/about-us-two/Logo.vue"
-  },
-  "AboutUsTwoTestimonial": {
-    "description": "Auto imported from components/about-us-two/Testimonial.vue"
-  },
-  "AboutUsTwoVideo": {
-    "description": "Auto imported from components/about-us-two/Video.vue"
-  },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
   "BlogPostList": {
     "description": "Auto imported from components/blog/BlogPostList.vue"
   },
@@ -70,6 +67,9 @@
   },
   "BlogPostTwo": {
     "description": "Auto imported from components/blog/BlogPostTwo.vue"
+  },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
