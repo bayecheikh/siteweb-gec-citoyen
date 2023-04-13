@@ -1,8 +1,11 @@
+  
 <template>
     <div id="main-wrapper" class="main-wrapper bg-lighten05">
         <HeaderTwo/>
-        <Banner />
-        <HomeYogaInstructorFunFact/>
+
+      <Banner />
+      <HomeYogaInstructorFunFact/>
+
         <Categories/>
         <HomeKitchenCoachFAQ/>
         <FooterKitchen />
@@ -30,8 +33,3 @@
     }
     
 </script>
-
-<style>
-
-
-</style>

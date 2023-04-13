@@ -1,20 +1,36 @@
 <template>
-    <div class="fix-elements">
+    <div >
     <div class="hero-banner hero-style-1 bg-image bg-image--11">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="banner-content">
-                        <h1 class="title">Plateforme <div class="color-secondary">GEC CITOYEN</div></h1>
+                    <div class="banner-content custom-banner-content">
+                        <h1 class="title custom-banner-title">Plateforme <span class="custom-banner-title-color">GEC CITOYEN</span><div>du Bénin</div></h1>
                         <p class="custom-subtitle">Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers.</p>
                         <div class="d-flex banner-btn custom-main-banner-button flex-wrap">
-    <a @click="deposerCourrier()" class="edu-btn custom-banner-send-button">
-        Déposer un courrier <i class="icon-4"></i>
-    </a>
+   
     <div class="d-flex align-items-center search-box custom-search-box">
-        <input type="text" class="custom-search" name="code" id="code" placeholder="Suivre son courrier" autocomplete="off">
-        <button class="submit-button custom-submit-button" name="submit" type="submit"   @click="onClickSuivreCourrier()"> <i class="icon-2"></i> </button>
-    </div>
+                                <i class="icon-2 custom-magnifying-icon"></i>
+                                <input type="text" name="code" id="code" autocomplete="off" placeholder="Suivre mon courrier" class="custom-banner-search-button">
+                                <button class="submit-button custom-banner-submit-button" name="submit" type="submit" @click="onClickSuivreCourrier"> <span v-if="!isLoading"> <i
+                                            class="icon-4"></i></span><span v-if="isLoading"><svg width="24" height="24"
+                                            viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <g transform="translate(1 1)" stroke-width="2">
+                                                    <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                                                    <path d="M36 18c0-9.94-8.06-18-18-18">
+                                                        <animateTransform attributeName="transform" type="rotate"
+                                                            from="0 18 18" to="360 18 18" dur="1s"
+                                                            repeatCount="indefinite" />
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span></button>
+                            </div>
+                            <a @click="deposerCourrier()" class="edu-btn custom-banner-send-button">
+        DÉPOSER UN COURRIER
+    </a>
 </div>
 
 
@@ -28,7 +44,7 @@
                 <div class="col-lg-6">
                     <div class="banner-thumbnail">
                         <div class="thumbnail" data-aos-delay="500" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="/images/banner/banner-image.webp" alt="Banner Image">
+                            <img src="/images/banner/banner-image.png" alt="Banner Image">
                         </div>
                    
                         <ul class="shape-group">
@@ -108,7 +124,9 @@ import { mapMutations, mapGetters } from 'vuex'
         border-radius: 100%;
     }
     .custom-subtitle{
-        margin-bottom: 20px;
+        color: #818181 !important;
+        
+        margin-bottom: 90px;
     }
     
 .form-control::placeholder {
@@ -179,12 +197,20 @@ input, select, textarea {
 }
 
 .custom-search-box{
-    width: 300px !important;
-    padding-left: 20px;
+    width: 350px !important;
+
+}
+.custom-magnifying-icon{
+    margin-left: 15px !important;
 }
 .custom-banner-send-button{
     cursor: pointer;
+    background: #008064 !important;
+    color: #fff !important;
+    padding: 20px;
+    font-weight: 600 !important;
 }
+
 .custom-main-banner-button{
     gap: 10px !important;
 }
@@ -202,6 +228,32 @@ padding: 20px;
 
 .fix-elements{
     height: 100vh;
+}
+.custom-banner-title{
+    font-size: 42px !important;
+    width: 700px !important;
+}
+.custom-banner-title-color{
+    color: #008064;
+}
+.custom-banner-search-button::placeholder{
+    color: #0a3764 !important;
+    font-weight: 300;
+}
+.search-box .submit-button {
+
+height: 60px !important;
+cursor: pointer;
+background-color: #0a3764 !important;
+
+}
+.custom-banner-content{
+    margin-left: -80px !important;
+}
+
+.custom-banner-submit-button{
+    border: 3px solid #0a3764 !important; 
+    border-radius: .25rem !important;
 }
 </style>
 

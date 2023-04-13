@@ -3,36 +3,54 @@
         <div class="container">
             
             
-             <h2 class="title">Comment procéder ?</h2>
+            <div class="title-container">
+  <div class="title-text-wrapper">
+    <h3 class="title">Comment envoyer un courrier ?</h3>
+    
+    <p class="custom-subtitle">Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
+  </div>
+  <div class="title-button-wrapper">
+    <a class="edu-btn custom-categories-send-button" @click="deposerCourrier()">
+      DÉPOSER UN COURRIER 
+    </a>
+  </div>
+
+</div>
+
+
             
             <div class="row g-5 custom-row">
                 <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor1 categorie-style-3 color-extra04-style">
+                    <div class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
                         <div class="icon">
                             <svg class="custom-svg" xmlns="http://www.w3.org/2000/svg" width="38.16" height="40.834"
                                 viewBox="0 0 38.16 40.834">
                                 <g transform="translate(-5928 -10528.621)">
                                     <path
                                         d="M40.159,28.56V24.04A9.04,9.04,0,0,0,31.119,15H13.04A9.04,9.04,0,0,0,4,24.04v4.52"
-                                        transform="translate(5925 10539.894)" fill="none" stroke="#007aff"
+                                        transform="translate(5925 10539.894)" fill="none" stroke="#008064"
                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                                     <circle cx="8.771" cy="8.771" r="8.771" transform="translate(5939.57 10529.62)"
-                                        fill="none" stroke="#007aff" stroke-linecap="round" stroke-linejoin="round"
+                                        fill="none" stroke="#008064" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" />
                                 </g>
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title custom-title-1">Connectez-vous à la plateforme</h5>
-
-                            <div class="course-remain custom-number custom-number-1">1</div>
+                            <h5 class="title custom-title custom-title-2">Connectez-vous à la plateforme</h5>
+                            <div class="custom-number-container">
+                                <div class="custom-line"></div>
+                           
+                            </div>
+                            <div class=" custom-number-2">1</div>
+                            
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
                     <div
-                        class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor2 categorie-style-3 color-green-style color-primary-style">
+                        class="categorie-grid custom-categorie-grid categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="46.588" height="46.529" viewBox="0 0 46.588 46.529">
@@ -53,59 +71,71 @@
                         </div>
                         <div class="content">
                             <h5 class="title custom-title custom-title-2">Trouvez l'organisme concerné</h5>
-                            <div class="course-remain custom-number custom-number-2">2</div>
+                            <div class="custom-number-container">
+                                <div class="custom-line"></div>
+                           
+                            </div>
+                            <div class=" custom-number-2">2</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor3 categorie-style-3 color-secondary-style">
+                    <div class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40.834" height="40.832"
                                 viewBox="0 0 40.834 40.832">
                                 <g transform="translate(-847 -579)">
                                     <path
                                         d="M19.369,4H5.86A3.86,3.86,0,0,0,2,7.86V34.879a3.86,3.86,0,0,0,3.86,3.86H32.879a3.86,3.86,0,0,0,3.86-3.86V21.369"
-                                        transform="translate(846 580.094)" fill="none" stroke="#ee4a62"
+                                        transform="translate(846 580.094)" fill="none" stroke="#008064"
                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                                     <path d="M28.264,3.078a4.094,4.094,0,1,1,5.79,5.79L15.72,27.2,8,29.132l1.93-7.72Z"
-                                        transform="translate(851.579 578.121)" fill="none" stroke="#ee4a62"
+                                        transform="translate(851.579 578.121)" fill="none" stroke="#008064"
                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                                 </g>
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title custom-title-3">Remplissez le formulaire étape par étape</h5>
+                            <h5 class="title custom-title custom-title-2">Remplissez le formulaire étape par étape</h5>
 
-                            <div class="course-remain custom-number custom-number-3">3</div>
+                            <div class="custom-number-container">
+                                <div class="custom-line"></div>
+                           
+                            </div>
+                            <div class=" custom-number-2">3</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="400" data-aos-duration="800">
                     <div class="col" data-aos-delay="100" data-aos-duration="800">
-                        <div class="categorie-grid custom-categorie-grid custom-categorie-grid-bgcolor4 categorie-style-3 color-tertiary-style">
+                        <div class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35.563" height="43.951"
                                     viewBox="0 0 35.563 43.951">
                                     <g transform="translate(-1604 -553)">
                                         <path
                                             d="M24.976,2H8.2A4.2,4.2,0,0,0,4,6.2V39.757a4.2,4.2,0,0,0,4.2,4.2H33.366a4.2,4.2,0,0,0,4.2-4.2V14.586Z"
-                                            transform="translate(1601 552)" fill="none" stroke="#f8b81f"
+                                            transform="translate(1601 552)" fill="none" stroke="#008064"
                                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                                         <path d="M14,2V14.586H26.586" transform="translate(1611.976 552)" fill="none"
-                                            stroke="#f8b81f" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#008064" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" />
                                         <g transform="translate(1614.598 572.977)">
                                             <path d="M20,6,9,17,4,12" transform="translate(-4 -6)" fill="none"
-                                                stroke="#f8b81f" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke="#008064" stroke-linecap="round" stroke-linejoin="round"
                                                 stroke-width="2" />
                                         </g>
                                     </g>
                                 </svg>
                             </div>
                             <div class="content">
-                                <h5 class="title custom-title custom-title-4">Soumettez votre courrier et obtenez un code de
+                                <h5 class="title custom-title custom-title-2">Soumettez votre courrier et obtenez un code de
                                     suivi</h5>
-                                <div class="course-remain custom-number custom-number-4">4</div>
+                                    <div class="custom-number-container">
+                                <div class="custom-line"></div>
+                           
+                            </div>
+                            <div class=" custom-number-2">4</div>
                             </div>
                         </div>
                     </div>
@@ -113,21 +143,6 @@
             </div>
         </div>
         <SuiviCourrier v-if="ispopupload" />
-
-     
-
-     <div class="banner-btn custom-actions-btn d-flex flex-wrap">
-    <a class="edu-btn custom-track-btn custom-edu-btn-2 text-uppercase mr-3" ref="followButton"
-        @click="onClickSuivreCourrier()">
-        Suivre son courrier <i class="icon-4"></i>
-    </a>
-    <a class="custom-send-btn edu-btn custom-edu-btn-3 text-uppercase">
-        Déposer un courrier <i class="icon-4"></i>
-    </a>
-</div>
-
-
-
     </div>
 </template>
 
@@ -137,7 +152,8 @@ import { mapMutations, mapGetters } from 'vuex'
 export default {
     computed: {
         ...mapGetters({
-            ispopupload: 'suivicourrier/ispopupload'
+            ispopupload: 'suivicourrier/ispopupload',
+            isloggedin: 'authentication/isloggedin',
         })
     },
     components: {
@@ -149,6 +165,16 @@ export default {
         
         async onClickSuivreCourrier() {
             await this.$store.dispatch('suivicourrier/getDetail', true)
+        },
+        deposerCourrier(){
+            if(this.isloggedin){
+                this.$router.push('/addcourrier')
+            }
+            else{
+                this.$store.dispatch('authentication/getDetail', true)
+                this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', true)
+            
+            }
         }
     },
     data() {
@@ -218,11 +244,6 @@ export default {
     height: 78.3px !important;
 }
 
-.custom-number {
-    font-size: 25px !important;
-    margin-top: 25px !important;
-
-}
 
 .custom-number-1 {
     color: #007aff !important;
@@ -266,13 +287,11 @@ export default {
 }
 
 .custom-number-2 {
+    font-size: 25px !important;
     color: #008064 !important;
 }
 
-.categorie-style-3:hover .content .custom-number-2 {
-    color: var(--color-white) !important;
-    background-color: #008064 !important;
-}
+
 
 .categorie-grid.color-green-style:hover.color-primary-style .icon {
     background-color: #008064 !important;
@@ -585,4 +604,55 @@ p {
     fill: #008064;
     width: 20px;
     height: 20px;
-}</style>
+}
+.custom-line {
+  width: 75px; /* Largeur du trait */
+  height: 4px; /* Hauteur du trait */
+  background-color: #008064; /* Couleur du trait */
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center;
+}
+.custom-number-container{
+    display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  padding: 20px;
+}
+.categorie-grid.color-primary-style .icon, .categorie-grid.color-primary-style .course-remain {
+  background-color: rgba(26, 182, 157, 0.1) !important;
+  color: #0a3764 !important;
+}
+
+.custom-categorie-style-3{
+    box-shadow: 0px 10px 45px 0px rgba(0,0,0,0.1) !important;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-text-wrapper {
+  flex: 1;
+}
+
+.title-button-wrapper {
+    white-space: nowrap !important;
+  display: flex;
+  align-items: center;
+ 
+}
+
+
+.custom-categories-send-button{
+    cursor: pointer;
+    background: #008064 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    margin-left: auto !important;
+  margin-right: 0 !important;
+  
+  
+}
+</style>

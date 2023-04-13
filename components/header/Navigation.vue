@@ -1,8 +1,10 @@
 <template>
   <ul class="mainmenu custom-mainmenu">
-    <li><n-link to="/">Accueil</n-link>
+    <li><n-link to="/">Faire une suggestion</n-link>
     </li>
-    <li><a href="/#faq" class="custom-mainmenu">Comment envoyer un courrier ?</a>
+    <li><n-link to="/" class="custom-mainmenu">Signaler un problème</n-link>
+    </li>
+    <li><n-link to="/" class="custom-mainmenu">Nous contacter</n-link>
     </li>
   
 
@@ -20,6 +22,11 @@
   .mainmenu-nav .mainmenu>li>a.active {
     color: #1ab69d !important;
     font-weight: 700px;
+  }
+  .mainmenu-nav .mainmenu>li>a {
+    color: #8e8e8e !important;
+    font-size: 13px;
+  
   }
 
 </style>

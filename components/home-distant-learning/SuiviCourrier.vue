@@ -250,14 +250,8 @@ export default {
     color: #008064 !important;
 }
 
-.custom-number-2 {
-    color: #008064 !important;
-}
 
-.categorie-style-3:hover .content .custom-number-2 {
-    color: var(--color-white) !important;
-    background-color: #008064 !important;
-}
+
 
 .categorie-grid.color-green-style:hover.color-primary-style .icon {
     background-color: #008064 !important;

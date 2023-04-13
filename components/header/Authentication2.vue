@@ -7,24 +7,26 @@
                 <div class="section-title ">
                     <h4 class="custom-left-box-title text-uppercase">GEC CITOYEN</h4>
                     <p class="custom-message">Connectez-vous avec votre compte PNS ou XROAD BJ.</p>
+                    <div class="connexion-mode">
+                    <div class="edu-form-check">
+                        <input type="radio" value="pns" id="pns" name="connexionMode" @click="onRadioClickPNS($event)"
+                            checked>
+                        <label for="pns" class="custom-auth-label">PNS</label>
+                    </div>
+                    <div class="custom-edu-form-check edu-form-check">
+                        <input type="radio" value="xroad" id="xroad" name="connexionMode"
+                            @click="onRadioClickXROAD($event)">
+                        <label for="xroad" class="custom-auth-label">XROAD</label>
+                    </div>
                 </div>
+                </div>
+                
             </div>
             <div class="right-block">
                 <div class="section-title">
                     <h4 class="title custom-right-box-title text-uppercase">Connectez-vous</h4>
                 </div>
-                <div class="connexion-mode">
-                    <div class="edu-form-check">
-                        <input type="radio" value="pns" id="pns" name="connexionMode" @click="onRadioClickPNS($event)"
-                            checked>
-                        <label for="pns">PNS</label>
-                    </div>
-                    <div class="edu-form-check">
-                        <input type="radio" value="xroad" id="xroad" name="connexionMode"
-                            @click="onRadioClickXROAD($event)">
-                        <label for="xroad">XROAD</label>
-                    </div>
-                </div>
+             
                 <div v-if="showPNSForm">
                     <form ref="pnsform">
                         <div class="form-group">
@@ -311,6 +313,9 @@ export default {
 </script>
 
 <style>
+.custom-auth-label{
+    color: #fff !important;
+}
 .custom-header-btn {
     padding: 0 2px 0 0 !important;
     color: var(--color-white) !important;
@@ -624,8 +629,9 @@ export default {
 
 .left-block {
     flex-basis: 40%;
-    background-color: #3ab19b;
-    padding: 50px !important;
+ 
+    background: linear-gradient(-90deg,  #61b8a5 0%,  #008064 100%);
+   
     display: flex; align-items: center;
 }
 
@@ -651,7 +657,7 @@ export default {
 }
 
 .custom-right-box-title {
-    color: #3ab19b !important;
+    color: #008064 !important;
     font-weight: bold !important;
     text-align: center;
 
@@ -678,4 +684,14 @@ export default {
     justify-content: center;
     gap: 25px;
 
-}</style>
+}
+
+.custom-edu-form-check input[type="radio"] {
+        /* Changer la couleur de fond de la boule en rouge */
+        background-color: red !important;
+        /* Autres styles pour la boule */
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+</style>
