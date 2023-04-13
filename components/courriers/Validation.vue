@@ -109,21 +109,21 @@
             methods: {
                 submitValidation(){
                     this.load=true
-                    console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu})
-                    this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement. Merci!'})
+                    console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu,piece_jointes:[]})
+                    //this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement. Merci!'})
                     //this.$router.push('/');
-                    /* this.$axios.$post('/demandes')
+                    this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu,piece_jointes:[]})
                     .then(async (response) => {
                         //this.$toast.success(response.message).goAway(2000)
                         this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement !'})
-                        console.log('Données demande Reçu ++++++: ', response)
+                        console.log('Données courrier Reçu ++++++: ', response.data?.data?.id_suivi)
                         this.$router.push('/');
     
                     }).catch((error) => {
                         console.log('Code error ++++++: ', error?.response?.data?.message)
                     }).finally(() => {
                         console.log('Requette envoyé ')
-                    }); */
+                    });
                     
     
                 },

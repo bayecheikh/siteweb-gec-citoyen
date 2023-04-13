@@ -6,7 +6,7 @@
                     <div class="custom-lable-title">MOTS CLÉS</div>
                     <input class="border-radio my-4" type="text" v-model="recherche" name="reg-name" id="reg-name" placeholder="Rechercher">
                 </div>
-                <hr class='dotted' />
+                <!-- <hr class='dotted' />
                 <div class="form-group col-12 my-4">
                     <div class="custom-lable-title">TYPE D'ORGANISME</div>
                 </div>
@@ -19,18 +19,18 @@
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                         <label class="form-check-label" for="inlineRadio2">Autre organisme</label>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row ">
-                <div class="pt-4 py-4 custom-border-grey mt-5 mb-0 bg-grey col-lg-12 col-md-12 col-sm-12">
+                <div class="pt-4 py-4 custom-border-grey mt-0 mb-0 bg-grey col-lg-12 col-md-12 col-sm-12">
                     <div class="container">
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <label for="reg-name" class="custom-lable-title">LISTE DES MINISTERES</label>
+                            <label for="reg-name" class="custom-lable-title">LISTE DES ORGANISMES</label>
                         </div>
                     </div>
                     
                 </div>
-                <div class="pt-4 pb-4 border-grey bg-grey">
+                <div class="pt-4 pb-4 border-grey bg-grey bloc-organisme">
                     <div class="container">
                         <div class="row custom-row-equal ">
                             <div 
@@ -143,16 +143,20 @@
     text-transform: uppercase;
 }
 .embleme{
-width: 100%;
+width: 34%;
 }
 .ministere{
 width: 100%;
 padding: 10px;
 }
+.bloc-organisme{
+padding-left: 0px !important;
+padding-right: 0px !important;
+}
 .custom-bloc-ministere {
   background-color: #ffffff;
   background-color: var(--color-white);
-  padding: 0px 22px 0px !important;
+  padding: 0px 20px 0px !important;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
   min-height: 128px !important;
   cursor: pointer;

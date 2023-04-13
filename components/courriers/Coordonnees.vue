@@ -7,16 +7,16 @@
             </div>
             <div class="form-group col-12 mb-3">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">
-                    <input class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Particulier">
+                    <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Particulier">
                     <label class="form-check-label" for="inlineRadio111">Particulier</label>
                     </div>
                 <div class="form-check form-check-inline border-radio pb-1">
-                    <input class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio222" value="Entreprise">
+                    <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio222" value="Entreprise">
                     <label class="form-check-label" for="inlineRadio222">Entreprise</label>
                 </div>
             </div>
             <!-- ENTREPRISE -->
-            <div class="row d-flex">
+            <div class="row d-flex" v-if="entreprise">
                 <hr class='dotted mt-5' />
                 <div class="form-group col-12 my-0 mb-4 mt-3">
                     <div class="custom-lable-title">INFORMATIONS CONCERNANT L'ENTREPRISE</div>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <!-- FIN ENTREPRISE -->
-            <hr class='dotted mt-5' />
+            <hr class='dotted mt-5'  />
             <div class="form-group col-12 my-0 mb-4 mt-3">
                 <div class="custom-lable-title">INFORMATIONS GENERALES</div>
             </div>
@@ -134,8 +134,10 @@ import { mapMutations, mapGetters } from 'vuex'
         }),
         data() {
             return {
+                particuler:true,
+                entreprise:false,
                 model :{
-                    type_utilisateur:"",
+                    type_utilisateur:"Particulier",
                     prenom:"",
                     nom:"",
                     email:"",
@@ -174,6 +176,20 @@ import { mapMutations, mapGetters } from 'vuex'
                 }).finally(() => {
                     console.log('Requette envoyé ')
                 }); */
+            },
+            changeTypeUser($event){
+                console.log('Données formulaire ++++++: ', $event.target.value)
+                /* this.model.message = $event.target.value.text
+                this.model.subject = $event.target.value.libelle */
+                if($event.target.value=='Particulier'){
+                    this.particuler = true
+                    this.entreprise=false
+                }
+                if($event.target.value=='Entreprise'){
+                    this.particuler = false
+                    this.entreprise=true
+                }
+                
             },
         },
     }

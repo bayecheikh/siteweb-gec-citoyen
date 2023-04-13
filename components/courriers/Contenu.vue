@@ -3,48 +3,32 @@
         <h3 class="title"></h3>
         <form class="row">
             <div class="edu-sorting form-group col-12">
-                <div class="form-check form-check-inline border-radio mr-5">
-                    <input class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions" id="inlineRadio11" value="saisie_libre">
-                    <label class="form-check-label" for="inlineRadio11">Saisie libre</label>
-                    </div>
                 <div class="form-check form-check-inline border-radio">
-                    <input class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions" id="inlineRadio22" value="model">
-                    <label class="form-check-label" for="inlineRadio22">Choisir un modél</label>
+                    <input @change="changeType($event)" class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions1" id="inlineRadio22" value="attache_courrier">
+                    <label class="form-check-label" for="inlineRadio22">Attacher le courrier</label>
                 </div>
+                <div class="form-check form-check-inline border-radio mr-5">
+                    <input @change="changeType($event)" class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions1" id="inlineRadio11" value="saisie_libre">
+                    <label class="form-check-label" for="inlineRadio11">Saisie le courrier</label>
+                </div>              
             </div>
-            <div class="edu-sorting form-group col-12">
-                <label for="reg-name">Type de courrier</label>
-                <select class="custom-select" @change="changeModel($event)" v-model="key">
+            <div class="edu-sorting form-group col-12" v-if="saisie">
+                <label for="reg-name">Choisir un model</label>
+                <select class="custom-select" @change="changeModel($event)" v-model="key" >
                     <option>--</option>
-                    <option v-for="item in modelContenu" :key="item.id" :value="item">{{item.libelle}}</option>
+                    <option v-for="item in modelContenu" :key="item.id" :value="item.id">{{item.libelle}}</option>
                 </select>
-                <!-- <v-autocomplete
-            v-model="model.roles"
-            :items="modelContenu"
-            :rules="rules.rolesRules"
-            outlined
-            dense
-            multiple
-            small-chips
-            label="Model"
-            item-text="libelle"
-            item-value="id"
-            clearable
-            return-object
-            @change="changeModel"
-          >
-        </v-autocomplete> -->
             </div>
             <div class="form-group col-12">
-                <label for="reg-name">subject*</label>
+                <label for="reg-name">Sujet*</label>
                 <input class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="subject du message">
             </div>
-            <div class="form-group col-12 mt-4">
+            <div class="form-group col-12 mt-4" v-if="saisie">
                 <label for="reg-name">Message*</label>
                 <textarea class="custom-textarea" cols="30" rows="4" name="reg-name" placeholder="Votre Message*" v-model="model.message" required></textarea>
                 
             </div>
-            <div class="col-12 form-group">
+            <div class="col-12 form-group" v-if="attache_courrier">
                 <label for="reg-name">Joindre le courrier (Format PDF) :</label>
                 <div class="d-flex justify-content-between border-input" @click="$refs.file.click()">
                     <p class="mb-0 bg-fichier p-3">Choisir un fichier</p>
@@ -58,7 +42,7 @@
                 </div>
                 <input type="file" id="file" name="avatar" ref="file" v-on:change="handleFileUpload" style="display: none"/>
             </div>
-            <div class="col-12 form-group">
+            <div class="col-12 form-group" v-if="attache_courrier">
                 <div
                 class="imagePreviewWrapper col-12 border-input"
                 @click="selectImage">
@@ -88,21 +72,26 @@
         },
         data() {
             return {
+                key:null,
                 imageData:null,
+                saisie:false,
+                attache_courrier:true,
                 modelContenu:[
                     {id:1,libelle:'Plainte',text:'Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor'},
                     {id:2,libelle:'Demande',text:'Message message'},
                     {id:3,libelle:'Opinion',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
                 model :{
-                    type_contenu:"model",
+                    type_contenu:"attache_courrier",
                     encodedFile:'',
                     piece_jointes:[],
-                    modelId:null,
+                    modelId:1,
                     format:"",
                     subject:"",
                     message:"",
-                    doctype:102,                
+                    doctype:102,   
+                    status:"COU",
+                    destination:1             
                 } 
             }
         },
@@ -116,9 +105,23 @@
             },
             changeModel($event){
                 console.log('Données formulaire ++++++: ', $event.target.value)
-                this.model.message = $event.target.value.text
-                this.model.subject = $event.target.value.libelle
-                this.model.idModel = $event.target.value.id
+                /* this.model.message = $event.target.value.text
+                this.model.subject = $event.target.value.libelle */
+                this.model.modelId = parseInt($event.target.value)
+            },
+            changeType($event){
+                console.log('Données formulaire ++++++: ', $event.target.value)
+                /* this.model.message = $event.target.value.text
+                this.model.subject = $event.target.value.libelle */
+                if($event.target.value=='saisie_libre'){
+                    this.saisie = true
+                    this.attache_courrier=false
+                }
+                if($event.target.value=='attache_courrier'){
+                    this.saisie = false
+                    this.attache_courrier=true
+                }
+                
             },
             selectImage () {
                 this.$refs.fileInput.click()
@@ -136,6 +139,7 @@
                 let title = filename.substring(0, filename.lastIndexOf('.')) || filename;
                 let idxDot = filename.lastIndexOf(".") + 1;
                 let extFile = filename.substr(idxDot, filename.length).toLowerCase(); 
+                this.model.format = extFile
                 let size = files[0].size/1024/1024 //La taille en Mbit
                 console.log('Size -------------- ',size)
 

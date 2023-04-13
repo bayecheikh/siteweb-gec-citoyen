@@ -42,6 +42,7 @@ export default {
         '~/plugins/observe-visibility.js',
         '~/plugins/vue-masonry-css.js',
         '~/plugins/goToTab.js',
+        '~/plugins/api.js',
         { 
             src: '~/plugins/bootstrap.bundle.min.js', 
             mode: 'client'
@@ -74,7 +75,7 @@ export default {
         '@nuxtjs/axios',
     ],
     axios: {
-        baseURL: 'https://msas.ip3dev.com/api-gec-citoyen/public/api',
+        baseURL: 'https://api-gec-citoyen.fly.dev/api/v1',
     },
     toast: {
         position: 'top-center',

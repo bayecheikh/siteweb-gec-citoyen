@@ -26,6 +26,7 @@ import nuxt_plugin_vueinlinesvg_56f4a20a from 'nuxt_plugin_vueinlinesvg_56f4a20a
 import nuxt_plugin_observevisibility_b986de04 from 'nuxt_plugin_observevisibility_b986de04' // Source: ..\\plugins\\observe-visibility.js (mode: 'all')
 import nuxt_plugin_vuemasonrycss_6d616ab9 from 'nuxt_plugin_vuemasonrycss_6d616ab9' // Source: ..\\plugins\\vue-masonry-css.js (mode: 'all')
 import nuxt_plugin_goToTab_8fb3dcca from 'nuxt_plugin_goToTab_8fb3dcca' // Source: ..\\plugins\\goToTab.js (mode: 'all')
+import nuxt_plugin_api_785206da from 'nuxt_plugin_api_785206da' // Source: ..\\plugins\\api.js (mode: 'all')
 import nuxt_plugin_bootstrapbundlemin_61132cca from 'nuxt_plugin_bootstrapbundlemin_61132cca' // Source: ..\\plugins\\bootstrap.bundle.min.js (mode: 'client')
 import nuxt_plugin_aos_5e4622cf from 'nuxt_plugin_aos_5e4622cf' // Source: ..\\plugins\\aos (mode: 'client')
 import nuxt_plugin_vuehtml2pdf_796dc3f4 from 'nuxt_plugin_vuehtml2pdf_796dc3f4' // Source: ..\\plugins\\vue-html2pdf (mode: 'client')
@@ -275,6 +276,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_goToTab_8fb3dcca === 'function') {
     await nuxt_plugin_goToTab_8fb3dcca(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_api_785206da === 'function') {
+    await nuxt_plugin_api_785206da(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_bootstrapbundlemin_61132cca === 'function') {
