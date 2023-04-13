@@ -1,12 +1,12 @@
 <template>
    <div class="edu-course-area course-area-3 bg-lighten04 pb-5 pt-5">
-      <div class="container mb-6">
+      <div class="container mb-6 custom-form-container">
          <SectionTitle preTitle="" title='' alignment='section-center' />
          <div class="isotope-wrapper">
             <h3 class="pl-0 pt-5 pb-5 pr-0">Formulaire de soumission courrier</h3>
-            <div class="isotop-button isotop-filter nav d-flex justify-content-between">
+            <div class="row isotop-button isotop-filter nav d-flex justify-content-between">
                <!-- <button @click="$goToTab('connexion')" :class="'nav-link '+(detailactive_step.id=='connexion'?'active':'')">Connexion</button> -->
-               <div class="d-flex flex-column justify-content-center align-center">
+               <div class="col-2 d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='ministeres'?'active_step':'')" @click="$goToTab('ministeres')">
                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         width="26.588" height="26.529" viewBox="0 0 46.588 46.529">
@@ -27,12 +27,15 @@
                   </div>
                   <p :class="'title_step pt-2 '">Trouvez l'organisme concerné</p>
                </div>
-               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+               <div class="col-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
 
-               <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='ministeres'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
+                  <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='ministeres'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
 
-               </svg>
-               <div class="d-flex flex-column justify-content-center align-center">
+                  </svg>
+               </div>
+               
+               <div class="col-2 d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='contenu'?'active_step':'')" @click="$goToTab('contenu')">
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
                                 viewBox="0 0 40.834 40.832">
@@ -49,12 +52,15 @@
                   </div>
                   <p class="title_step pt-2">Remplir le formulaire de somission</p>
                </div>
-               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+               <div class="col-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
 
-               <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='contenu'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
+                  <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='contenu'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
 
-               </svg>
-               <div class="d-flex flex-column justify-content-center align-center">
+                  </svg>
+               </div>
+               
+               <div class="col-2 d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='coordonnees'?'active_step':'')" @click="$goToTab('coordonnees')">
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
                         viewBox="0 0 38.16 40.834">
@@ -71,12 +77,15 @@
                   </div>
                   <p class="title_step pt-2">Saisissez vos coordonnées</p>
                </div>
-               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+               <div class="col-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
 
-               <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='coordonnees'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
+                  <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='coordonnees'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
 
-               </svg>
-               <div class="d-flex flex-column justify-content-center align-center">
+                  </svg>
+               </div>
+               
+               <div class="col-2 d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='validation'?'active_step':'')" @click="$goToTab('validation')">
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
                         viewBox="0 0 35.563 43.951">
@@ -96,7 +105,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2">Prévisualisez et soumettre</p>
+                  <p class="title_step pt-2 ">Prévisualisez et soumettre</p>
                </div>
                
                <!-- <button @click="$goToTab('ministeres')" :class="'nav-link '+(detailactive_step.id=='ministeres'?'active':'')" >Trouvez le ministère</button> -->
@@ -104,7 +113,7 @@
                <!-- <button @click="$goToTab('coordonnees')" :class="'nav-link '+(detailactive_step.id=='coordonnees'?'active':'')">Vos coordonnées</button> -->
                <!-- <button @click="$goToTab('validation')" :class="'nav-link '+(detailactive_step.id=='validation'?'active':'')">Validation</button> -->               
             </div>
-            <div class="tab-content pt-5 login-form-box registration-form">
+            <div class="tab-content login-form-box registration-form">
               <!-- <div :class="'tab-pane fade '+(detailactive_step.id=='connexion'?'show active':'')" id="online" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
@@ -122,7 +131,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='ministeres'?'show active':'')" id="undergraduate" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-10 pt-4 ">
+                       <div class="col-lg-12">
                           <Ministeres />
                        </div>
                     </div>
@@ -136,7 +145,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='contenu'?'show active':'')" id="graduate" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-10 pt-4">
+                       <div class="col-lg-12">
                           <Contenu />
                        </div>
                     </div>
@@ -150,7 +159,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='coordonnees'?'show active':'')" id="coordonnees" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-10 pt-4">
+                       <div class="col-lg-12">
                           <Coordonnees />
                        </div>
                     </div>
@@ -164,7 +173,7 @@
               <div :class="'tab-pane fade '+(detailactive_step.id=='validation'?'show active':'')" id="validation" role="tabpanel">
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
-                       <div class="col-lg-10 pt-4">
+                       <div class="col-lg-12">
                           <Validation />
                        </div>
                     </div>
@@ -245,7 +254,7 @@ import { mapMutations, mapGetters } from 'vuex'
    }
    .login-form-box {
  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.08);
- padding: 40px 50px !important;
+ padding: 0px 38px !important;
  border-radius: 5px;
  background-color: #ffffff;
  background-color: var(--color-white);
@@ -291,8 +300,19 @@ import { mapMutations, mapGetters } from 'vuex'
 .tab-content {
   border: solid 1px #8080804d;
   background-color: #fff;
+  width: 100% !important;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 0px !important;
 }
-élément {
-  background: #f0f2f2;
+.tab-content > .active {
+  width: 100% !important;
+}
+.custom-form-container{
+   max-width: 900px;
+}
+.align-center{
+   text-align: center;
 }
 </style>

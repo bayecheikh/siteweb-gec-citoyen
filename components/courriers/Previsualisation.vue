@@ -48,8 +48,8 @@
              </vue-html2pdf>
           </client-only>
 
-          <div class="form-group col-4">
-            <button @click="generatePdf()" type="button" class="edu-btn btn-medium float-end">Générer le PDF</button>
+          <div class="form-group col-112">
+            <button @click="generatePdf()" type="button" class="edu-btn btn-medium float-end">Prévisualiser le pdf</button>
           </div>
        </div>
     </div>

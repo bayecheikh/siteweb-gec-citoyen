@@ -1,14 +1,14 @@
 <template>
 
-        <div >
-            <div class="row pt-4 pb-0 bloc-recherche">
+        <div class="custom-bloc-padding">
+            <div class="row pb-0 bloc-recherche">
                 <div class="form-group col-12 mb-4">
-                    <label for="reg-name">MOTS CLÉS</label>
+                    <div class="custom-lable-title">MOTS CLÉS</div>
                     <input class="border-radio my-4" type="text" v-model="recherche" name="reg-name" id="reg-name" placeholder="Rechercher">
                 </div>
                 <hr class='dotted' />
                 <div class="form-group col-12 my-4">
-                    <label for="reg-name">TYPE D'ORGANISME</label>
+                    <div class="custom-lable-title">TYPE D'ORGANISME</div>
                 </div>
                 <div class="form-group col-12 my-0">
                     <div class="form-check form-check-inline border-radio mr-5">
@@ -25,7 +25,7 @@
                 <div class="pt-4 py-4 custom-border-grey mt-5 mb-0 bg-grey col-lg-12 col-md-12 col-sm-12">
                     <div class="container">
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <label for="reg-name">LISTE DES MINISTERES</label>
+                            <label for="reg-name" class="custom-lable-title">LISTE DES MINISTERES</label>
                         </div>
                     </div>
                     
@@ -121,7 +121,7 @@
             submitMinistere(item){
                 this.load=true
                 console.log('Données formulaire ++++++: ', item)
-                this.$store.dispatch('ministeres/getDetail',{title:item.title})
+                this.$store.dispatch('ministeres/getDetail',{title_organisme:item.title,structure:"6435747b3ddb7686b0feff6d"})
                 this.$store.dispatch('active_step/getDetail',{id:'contenu'})
                 /* this.$axios.$post('/demandes')
                 .then(async (response) => {
@@ -137,7 +137,7 @@
         },
     }
 </script>
-<style scoop>
+<style scoped>
 .custom-title-ministere{
     font-size: 8px !important;
     text-transform: uppercase;
@@ -152,9 +152,9 @@ padding: 10px;
 .custom-bloc-ministere {
   background-color: #ffffff;
   background-color: var(--color-white);
-  padding: 10px 20px 10px !important;
+  padding: 0px 22px 0px !important;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
-  min-height: 151px !important;
+  min-height: 128px !important;
   cursor: pointer;
 }
 .custom-bloc-ministere:hover {
@@ -162,7 +162,7 @@ padding: 10px;
 }
 .custom-textarea {
   padding: 20px 25px;
-  border: solid 1px #eae9e9;
+  border: solid 1px #cecdcc ;
 }
 
 .custom-border-grey{
@@ -171,11 +171,11 @@ padding: 10px;
   border-radius: 5px 5px 0px 0px;
 }
 .border-radio {
-  border: solid 1px #eae9e9 !important;
+  border: solid 1px #cecdcc  !important;
   padding: 10px;
 }
 .border-input{
-    border: solid 1px #eae9e9;
+    border: solid 1px #cecdcc ;
     border-radius: 5px;
 }
 .bg-grey {
@@ -194,8 +194,35 @@ padding: 10px;
     padding-bottom: 99999px !important;
 }
 .dotted {
-    border: 4px dotted #eae9e9; 
+    border: 4px dotted #cecdcc ; 
     border-style: none none dotted; 
     color: #fff; 
-    background-color: #fff; }
+    background-color: #fff; 
+}
+.custom-input{
+  border: 1px solid #cecdcc  !important;
+  height: 45px !important;
+}
+.custom-select {
+  height: 45px !important;
+  border: solid 1px #cecdcc !important;
+  background-color: none !important;
+}
+.form-group label {
+  color: #181818c2 !important;
+  margin-bottom: 8px;
+}
+.custom-lable-title {
+  color: #0a3764 !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+.custom-bloc-padding {
+  padding: 30px;
+}
+.border-grey {
+    border: solid 2px #e8ecee;
+    padding: 25px;
+    margin-bottom: 10px;
+    }
 </style>

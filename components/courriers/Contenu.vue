@@ -1,20 +1,20 @@
 <template>
-    <div>
+    <div class="custom-bloc-padding">
         <h3 class="title"></h3>
         <form class="row">
             <div class="edu-sorting form-group col-12">
                 <div class="form-check form-check-inline border-radio mr-5">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option1">
+                    <input class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions" id="inlineRadio11" value="saisie_libre">
                     <label class="form-check-label" for="inlineRadio11">Saisie libre</label>
                     </div>
                 <div class="form-check form-check-inline border-radio">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio22" value="option2">
+                    <input class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions" id="inlineRadio22" value="model">
                     <label class="form-check-label" for="inlineRadio22">Choisir un modél</label>
                 </div>
             </div>
             <div class="edu-sorting form-group col-12">
                 <label for="reg-name">Type de courrier</label>
-                <select class="" @change="changeModel($event)" v-model="key">
+                <select class="custom-select" @change="changeModel($event)" v-model="key">
                     <option>--</option>
                     <option v-for="item in modelContenu" :key="item.id" :value="item">{{item.libelle}}</option>
                 </select>
@@ -36,8 +36,8 @@
         </v-autocomplete> -->
             </div>
             <div class="form-group col-12">
-                <label for="reg-name">Objet*</label>
-                <input type="text" v-model="model.objet" name="reg-name" id="reg-name" placeholder="Objet du message">
+                <label for="reg-name">subject*</label>
+                <input class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="subject du message">
             </div>
             <div class="form-group col-12 mt-4">
                 <label for="reg-name">Message*</label>
@@ -45,7 +45,7 @@
                 
             </div>
             <div class="col-12 form-group">
-                <label for="reg-name">Pièces jointes :</label>
+                <label for="reg-name">Joindre le courrier (Format PDF) :</label>
                 <div class="d-flex justify-content-between border-input" @click="$refs.file.click()">
                     <p class="mb-0 bg-fichier p-3">Choisir un fichier</p>
                     <div class="p-3">
@@ -95,10 +95,14 @@
                     {id:3,libelle:'Opinion',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
                 model :{
-                    avatar:'',
-                    idModel:null,
-                    objet:"",
-                    message:"Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor",
+                    type_contenu:"model",
+                    encodedFile:'',
+                    piece_jointes:[],
+                    modelId:null,
+                    format:"",
+                    subject:"",
+                    message:"",
+                    doctype:102,                
                 } 
             }
         },
@@ -113,7 +117,7 @@
             changeModel($event){
                 console.log('Données formulaire ++++++: ', $event.target.value)
                 this.model.message = $event.target.value.text
-                this.model.objet = $event.target.value.libelle
+                this.model.subject = $event.target.value.libelle
                 this.model.idModel = $event.target.value.id
             },
             selectImage () {
@@ -128,26 +132,31 @@
                 const files = input.files
 
                 //Recupère l'extension
-                let idxDot = files[0].name.lastIndexOf(".") + 1;
-                let extFile = files[0].name.substr(idxDot, files[0].name.length).toLowerCase(); 
+                let filename = files[0].name;
+                let title = filename.substring(0, filename.lastIndexOf('.')) || filename;
+                let idxDot = filename.lastIndexOf(".") + 1;
+                let extFile = filename.substr(idxDot, filename.length).toLowerCase(); 
                 let size = files[0].size/1024/1024 //La taille en Mbit
-                console.log('Size-------------- ',size)
+                console.log('Size -------------- ',size)
 
-                if (size <= 2 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png")){
+                if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
                 //Affecté le fichier image au model avatar
-                this.model.avatar = e.target.files[0];
+                //this.model.avatar = e.target.files[0];
 
                 //Prévisualise l'image
                 if (files && files[0]) {
-                    const reader = new FileReader
-                    reader.onload = e => {
-                    this.imageData = e.target.result
+                        const reader = new FileReader
+                        reader.onload = e => {
+                        this.imageData = e.target.result
+                        this.model.encodedFile = reader.result.split(';base64,')[1];
+                        this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                        console.log(reader.result.split(';base64,')[1])
                     }
                     reader.readAsDataURL(files[0])
                     this.$emit('input', files[0])
                 }
                 }else{
-                alert("Seul les images jpg/jpeg png et de taille inférieur à 2Mb sont acceptés!");
+                    alert("Seul les images jpg/jpeg png et de taille inférieur à 5Mb sont acceptés!");
                 }  
             },
         },
@@ -156,18 +165,27 @@
 <style scoped>
 .custom-textarea {
   padding: 20px 25px;
-  border: solid 1px #eae9e9;
+  border: solid 1px #cecdcc  !important;
+}
+.dotted {
+    border: 4px dotted #cecdcc ; 
+    border-style: none none dotted; 
+    color: #fff; 
+    background-color: #fff; 
 }
 .border-grey{
   border: solid 2px #0a3764;
 }
 .border-radio {
-  border: solid 1px #eae9e9;
+  border: solid 1px #cecdcc  !important;
   padding: 10px;
+  padding-top: 16px;
+padding-bottom: 6px;
 }
 .border-input{
-    border: solid 1px #eae9e9;
+    border: solid 1px #cecdcc  !important;
     border-radius: 5px;
+    cursor: pointer;
 }
 .bg-fichier{
     background-color: #0a3764;
@@ -178,8 +196,26 @@
     border: solid 1px #eae9e9;
     height: 200px;
     padding: 20px;
+    cursor: pointer;
 }
 .imagePreviewWrapper img{
     height: 100% !important;
+}
+.custom-input{
+  border: 1px solid #cecdcc  !important;
+  height: 50px !important;
+}
+.custom-select {
+  height: 50px !important;
+  border: solid 1px #cecdcc !important;
+  background-color: none !important;
+  background: none !important;
+}
+.form-group label {
+  color: #181818c2 !important;
+  margin-bottom: 8px;
+}
+.custom-bloc-padding {
+  padding: 30px;
 }
 </style>
