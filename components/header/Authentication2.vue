@@ -4,27 +4,29 @@
             class="login-form-box custom-border custom-auth-template offset-xl-2 col-lg-6">
             <button @click="onClickCloseChooseMode()" class="custom-close-btn">x</button>
             <div class="left-block ">
-                <div class="section-title ">
+                <div class="section-title custom-auth-section-title ">
                     <h4 class="custom-left-box-title text-uppercase">GEC CITOYEN</h4>
-                    <p class="custom-message">Connectez-vous avec votre compte PNS ou XROAD BJ.</p>
+                    <p class="custom-auth-message">Connectez-vous avec PNS <br> ou XROAD BJ.</p>
+                    <div class="connexion-mode">
+                    <div class="edu-form-check">
+                        <input type="radio" value="pns" id="pns" name="connexionMode" @click="onRadioClickPNS($event)"
+                            checked>
+                        <label for="pns" class="custom-auth-label">PNS</label>
+                    </div>
+                    <div class="custom-edu-form-check edu-form-check">
+                        <input type="radio" value="xroad" id="xroad" name="connexionMode"
+                            @click="onRadioClickXROAD($event)">
+                        <label for="xroad" class="custom-auth-label">XROAD</label>
+                    </div>
                 </div>
+                </div>
+                
             </div>
             <div class="right-block">
                 <div class="section-title">
                     <h4 class="title custom-right-box-title text-uppercase">Connectez-vous</h4>
                 </div>
-                <div class="connexion-mode">
-                    <div class="edu-form-check">
-                        <input type="radio" value="pns" id="pns" name="connexionMode" @click="onRadioClickPNS($event)"
-                            checked>
-                        <label for="pns">PNS</label>
-                    </div>
-                    <div class="edu-form-check">
-                        <input type="radio" value="xroad" id="xroad" name="connexionMode"
-                            @click="onRadioClickXROAD($event)">
-                        <label for="xroad">XROAD</label>
-                    </div>
-                </div>
+             
                 <div v-if="showPNSForm">
                     <form ref="pnsform">
                         <div class="form-group">
@@ -136,6 +138,7 @@ export default {
     },
     computed: mapGetters({
         detailactive_step: 'active_step/detailactive_step',
+        isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
     }),
     data() {
         return {
@@ -176,27 +179,24 @@ export default {
         togglePNSPasswordVisibility() {
             this.pnsPasswordStatus = !this.pnsPasswordStatus
         },
-        async onClickClose() {
+      onClickClose() {
 
             this.isPopUpConnexionNPSVisible = false
 
-            this.$refs.pnsform.reset();
-            await this.$store.dispatch('authentication/getDetail', false)
+           
+          this.$store.dispatch('authentication/getDetail', false)
+         this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
+         this.$refs.pnsform.reset();
+            this.$refs.xroadform.reset();
 
         },
-        async onClickCloseChooseMode() {
-            this.isPopUpChooseConnexionMode = false
-            await this.$store.dispatch('authentication/getDetail', false)
+       onClickCloseChooseMode() {
+       
+            this.$store.dispatch('authentication/getDetail', false)
+            this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
         },
-        async onClickChooseNPS() {
-            this.isPopUpChooseConnexionMode = false
-            this.isPopUpConnexionNPSVisible = true
-
-        },
-        onClickChooseXroad() {
-            this.isPopUpChooseConnexionMode = false
-            this.isPopUpConnexionXroadVisible = true
-        },
+       
+        
 
         async onClickCloseXroad() {
 
@@ -204,20 +204,30 @@ export default {
             this.$refs.xroadform.reset();
             await this.$store.dispatch('authentication/getDetail', false)
         },
-        submitPNSConnexion() {
+       async submitPNSConnexion() {
+        let isauthenticatingfrombutton = this.isauthenticatingfrombutton
             this.isPNSConnecting = true
             const npi = this.$refs.pnsform.querySelector('input[name="current-log-email"]');
             const npiValue = npi.value;
 
-            if (npiValue == 1) {
+            if (npiValue != 1) {
                 setTimeout(() => {
                     this.validPNSCredentials = true
+
                     setTimeout(() => {
 
                         this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-                        this.onClickClose();
+                        console.log("GDDcccFKG", this.isauthenticatingfrombutton)
                         this.isPNSConnecting = false
+                        if(isauthenticatingfrombutton){
+                            console.log("elkstjorpktoirj")
+                            this.$router.push('/addcourrier')
+                        }
                     }, 1000);
+                  
+                    this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
+                 this.onClickCloseChooseMode();
+                    
                 }, 1000);
 
             }
@@ -248,15 +258,22 @@ export default {
 
         },
         submitXroadConnexion() {
+            let isauthenticatingfrombutton = this.isauthenticatingfrombutton
             const emailInput = this.$refs.xroadform.querySelector('input[name="xroad-email"]');
             const emailValue = emailInput.value;
             this.isXroadConnecting = true
-            if (emailValue == 1) {
+            if (emailValue != 1) {
                 setTimeout(() => {
                     this.validXroadCredentials = true
                     this.isXroadConnecting = false
                     this.onClickCloseXroad();
                     this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
+                    if(isauthenticatingfrombutton){
+                            console.log("elkstjorpktoirj")
+                            this.$router.push('/addcourrier')
+                        }
+                        this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
+                 this.onClickCloseChooseMode();
                 }, 1000);
 
             }
@@ -286,25 +303,17 @@ export default {
             this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
 
         },
-        onClickSeConnecter() {
-
-            this.isPageLoad = true
-            this.isPopUpChooseConnexionMode = true
-        },
-        onClickSeDeconnecter() {
-            this.isDeconnecting = true
-            setTimeout(() => {
-                this.isDeconnecting = false
-                this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
-            }, 1000);
-
-        }
+     
+       
     }
 }
 
 </script>
 
 <style>
+.custom-auth-label{
+    color: #fff !important;
+}
 .custom-header-btn {
     padding: 0 2px 0 0 !important;
     color: var(--color-white) !important;
@@ -618,8 +627,9 @@ export default {
 
 .left-block {
     flex-basis: 40%;
-    background-color: #3ab19b;
-    padding: 50px !important;
+ 
+    background: linear-gradient(-90deg,  #61b8a5 0%,  #008064 100%);
+   
     display: flex; align-items: center;
 }
 
@@ -645,7 +655,7 @@ export default {
 }
 
 .custom-right-box-title {
-    color: #3ab19b !important;
+    color: #008064 !important;
     font-weight: bold !important;
     text-align: center;
 
@@ -660,9 +670,10 @@ export default {
 
 }
 
-.custom-message {
+.custom-auth-message {
     color: white !important;
-    text-align: center;
+    text-align: center !important;
+   
 
 }
 
@@ -672,4 +683,18 @@ export default {
     justify-content: center;
     gap: 25px;
 
-}</style>
+}
+
+.custom-edu-form-check input[type="radio"] {
+        /* Changer la couleur de fond de la boule en rouge */
+        background-color: red !important;
+        /* Autres styles pour la boule */
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+.custom-auth-section-title{
+    padding: 50px !important;
+}
+</style>

@@ -1,3 +1,3 @@
 export default () => ({
-    ispopupload : false,
+    ispopupload : 0,
 })

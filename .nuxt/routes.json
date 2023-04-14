@@ -18,6 +18,12 @@
     "chunkName": "pages/about-us-two"
   },
   {
+    "name": "accueil",
+    "path": "/accueil",
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\accueil.vue",
+    "chunkName": "pages/accueil"
+  },
+  {
     "name": "addcourrier",
     "path": "/addcourrier",
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\addcourrier.vue",
