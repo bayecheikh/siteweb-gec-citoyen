@@ -4,42 +4,31 @@
             <div class="contact-form form-style-2">
                 <button @click="onClickClose()" class="custom-close-btn">x</button>
                 <div class="section-title">
-                    <h4 class="title custom-suivi-title text-uppercase">Veuillez entrer le code du courrier à suivre</h4>
+                    <h4 class="title custom-suivi-title text-uppercase">RESULTAT</h4>
                     <p class="custom-information-msg">Vous avez reçu un email
                         contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
-                        suivre l'avancement de votre courrier, veuillez entrer le code dans l'espace ci-dessous.</p>
+                        suivre l'avancement de votre courrier, veuillez saisir ce code à la lettre.</p>
                 </div>
 
-                <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="isCodeValid()">
-                    <div class="row row--10">
-                        <div class="form-group col-12">
-                            <div class="d-flex align-items-center search-box">
-                                <i class="icon-2"></i>
-                                <input type="text" name="code" id="code" autocomplete="off">
-                                <button class="submit-button" name="submit" type="submit"> <span v-if="!isLoading"> <i
-                                            class="icon-4"></i></span><span v-if="isLoading"><svg width="24" height="24"
-                                            viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(1 1)" stroke-width="2">
-                                                    <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
-                                                    <path d="M36 18c0-9.94-8.06-18-18-18">
-                                                        <animateTransform attributeName="transform" type="rotate"
-                                                            from="0 18 18" to="360 18 18" dur="1s"
-                                                            repeatCount="indefinite" />
-                                                    </path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </span></button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <div class="custom-loader" v-if="isCharging">
+                    <svg width="100" height="100" viewBox="0 0 38 38"
+                                                    xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g transform="translate(1 1)" stroke-width="2">
+                                                            <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                                                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                                                                <animateTransform attributeName="transform" type="rotate"
+                                                                    from="0 18 18" to="360 18 18" dur="1s"
+                                                                    repeatCount="indefinite" />
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                </div>
                 <div v-if="!validCode">
                     <p class="custom-error-msg">Ce code est invalide.</p>
                 </div>
                 <div v-if="showValidMessage1">
-                    <p class="custom-title-resultat">RÉSULTAT</p>
                     <div class="box-resultat">
 
                         <div class="resultat-section">
@@ -64,7 +53,6 @@
                     </div>
                 </div>
                 <div v-if="showValidMessage2">
-                    <p class="custom-title-resultat">RÉSULTAT</p>
                     <div class="box-resultat">
 
                         <div class="resultat-section">
@@ -96,41 +84,47 @@
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
-
+    mounted(){
+        this.isCodeValid()
+    },
+    computed: {
+        ...mapGetters({
+            ispopupload: 'suivicourrier/ispopupload'
+        })
+    },
     methods: {
 
         async onClickClose() {
             this.showValidMessage1 = false;
             this.showValidMessage2 = false;
             this.validCode = true
-            this.$refs.form.reset();
+          
 
 
-            try {
-                this.$store.dispatch('suivicourrier/getDetail', false)
-                // L'action s'est exécutée avec succès
-                console.log('L\'action "getDetail" a été exécutée avec succès');
-            } catch (error) {
-                // L'action a échoué
-                console.error('Une erreur est survenue lors de l\'exécution de l\'action "getDetail":', error);
-            }
+         
+            this.$store.dispatch('suivicourrier/getDetail', false)
+              
+           
 
 
         },
         isCodeValid() {
-            const codeInput = this.$refs.form.querySelector('input[name="code"]');
-            const codeValue = codeInput.value;
+            
             this.isLoading = true
-            if (codeValue == 2) {
+            if (this.ispopupload == 2) {
+                this.isCharging = true
                 setTimeout(() => {
+                    this.isCharging = false
                     this.showValidMessage1 = true
                     this.showValidMessage2 = false
                     this.validCode = true
                     this.isLoading = false
                 }, 1000);
             }
-            else if (codeValue == 3) {
+            else if (this.ispopupload == 3) {
+                this.isCharging = true
                 setTimeout(() => {
+                    this.isCharging = false
                     this.showValidMessage2 = true
                     this.showValidMessage1 = false
                     this.validCode = true
@@ -138,7 +132,9 @@ export default {
                 }, 1000);
             }
             else {
+                this.isCharging = true
                 setTimeout(() => {
+                    this.isCharging = false
                     this.showValidMessage2 = false
                     this.showValidMessage1 = false
                     this.validCode = false
@@ -152,6 +148,7 @@ export default {
 
     data() {
         return {
+            isCharging: false,
             isLoading: false,
             validCode: true,
             showValidMessage1: false,
@@ -546,4 +543,10 @@ p {
     fill: #008064;
     width: 20px;
     height: 20px;
-}</style>
+}
+.custom-loader{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+</style>

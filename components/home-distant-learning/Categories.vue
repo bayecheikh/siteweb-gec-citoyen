@@ -142,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <SuiviCourrier v-if="ispopupload" />
+      
     </div>
 </template>
 
@@ -152,7 +152,6 @@ import { mapMutations, mapGetters } from 'vuex'
 export default {
     computed: {
         ...mapGetters({
-            ispopupload: 'suivicourrier/ispopupload',
             isloggedin: 'authentication/isloggedin',
         })
     },

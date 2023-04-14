@@ -12,21 +12,8 @@
     <div class="d-flex align-items-center search-box custom-search-box">
                                 <i class="icon-2 custom-magnifying-icon"></i>
                                 <input type="text" name="code" id="code" autocomplete="off" placeholder="Suivre mon courrier" class="custom-banner-search-button">
-                                <button class="submit-button custom-banner-submit-button" name="submit" type="submit" @click="onClickSuivreCourrier"> <span v-if="!isLoading"> <i
-                                            class="icon-4"></i></span><span v-if="isLoading"><svg width="24" height="24"
-                                            viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g transform="translate(1 1)" stroke-width="2">
-                                                    <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
-                                                    <path d="M36 18c0-9.94-8.06-18-18-18">
-                                                        <animateTransform attributeName="transform" type="rotate"
-                                                            from="0 18 18" to="360 18 18" dur="1s"
-                                                            repeatCount="indefinite" />
-                                                    </path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </span></button>
+                                <button class="submit-button custom-banner-submit-button" name="submit" type="submit" @click="onClickSuivreCourrier"> <i
+                                            class="icon-4"></i></button>
                             </div>
                             <a @click="deposerCourrier()" class="edu-btn custom-banner-send-button">
         DÉPOSER UN COURRIER
@@ -63,7 +50,7 @@
                             <MouseMove addClassName="shape-5" dataDepth="1.5" data-aos-delay="1000" data-aos="fade" data-aos-duration="1000" imgSrc="/images/about/shape-13.png" />
 
                             <MouseMove addClassName="shape-6" dataDepth="-2" data-aos-delay="1000" data-aos="fade" data-aos-duration="1000" imgSrc="/images/about/shape-18.png" />
-                        </ul>de
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -73,6 +60,7 @@
         </div>
     </div>
     <Authentication2 v-if="isauthenticatingfrombutton"/>
+    <SuiviCourrier v-if="ispopupload"/>
 
     </div>
 
@@ -80,21 +68,28 @@
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
+import SuiviCourrier from '../home-distant-learning/SuiviCourrier.vue';
     export default {
         computed: {
         ...mapGetters({
             isloggedin: 'authentication/isloggedin',
+            ispopupload: 'suivicourrier/ispopupload',
             isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
         })
     },
         components: {
-            HomeYogaInstructorFunFact : () => import("@/components/home-yoga-instructor/FunFact.vue"),
-            Authentication2: () => import("@/components/header/Authentication2.vue"),
-            MouseMove: () => import('@/components/animation/MouseMove')
-        },
+    HomeYogaInstructorFunFact: () => import("@/components/home-yoga-instructor/FunFact.vue"),
+    Authentication2: () => import("@/components/header/Authentication2.vue"),
+    MouseMove: () => import("@/components/animation/MouseMove"),
+    SuiviCourrier: () => import("@/components/home-distant-learning/SuiviCourrier.vue"),
+},
         methods: {
             async onClickSuivreCourrier() {
-            await this.$store.dispatch('suivicourrier/getDetail', true)
+                let code = document.getElementById("code").value;
+    
+    // Utiliser la valeur de l'input comme vous le souhaitez
+            console.log("La valeur de l'input est : " + code);
+            await this.$store.dispatch('suivicourrier/getDetail', code)
         },
         deposerCourrier(){
             if(this.isloggedin){
