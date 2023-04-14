@@ -4,7 +4,7 @@
             <div class="contact-form form-style-2">
                 <button @click="onClickClose()" class="custom-close-btn">x</button>
                 <div class="section-title">
-                    <h4 class="title custom-suivi-title text-uppercase">RESULTAT</h4>
+                    <h4 class="title custom-suivi-title text-uppercase">RÉSULTAT POUR Le CODE "{{ ispopupload }}"</h4>
                     <p class="custom-information-msg">Vous avez reçu un email
                         contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
                         suivre l'avancement de votre courrier, veuillez saisir ce code à la lettre.</p>
@@ -381,23 +381,7 @@ export default {
     outline: none !important;
 }
 
-.search-box .submit-button {
 
-    height: 100% !important;
-    margin: 0px !important;
-    cursor: pointer;
-
-}
-
-.submit-button {
-    background-color: #008064 !important;
-    border: none !important;
-    width: 100px !important;
-    padding: 5px 10px !important;
-    color: #fff !important;
-    cursor: pointer !important;
-
-}
 
 .icon-2 {
     font-size: 1.3em !important;

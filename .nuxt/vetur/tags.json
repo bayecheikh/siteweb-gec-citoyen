@@ -59,18 +59,6 @@
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
   },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
-  },
   "CommonBreadCrumbOne": {
     "description": "Auto imported from components/common/BreadCrumbOne.vue"
   },
@@ -88,6 +76,18 @@
   },
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
+  },
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
+  },
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
+  },
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
@@ -362,30 +362,6 @@
   "HomeMainInstructor": {
     "description": "Auto imported from components/home-main/Instructor.vue"
   },
-  "HomeOnlineAcademyBanner": {
-    "description": "Auto imported from components/home-online-academy/Banner.vue"
-  },
-  "HomeOnlineAcademyBlog": {
-    "description": "Auto imported from components/home-online-academy/Blog.vue"
-  },
-  "HomeOnlineAcademyCategories": {
-    "description": "Auto imported from components/home-online-academy/Categories.vue"
-  },
-  "HomeOnlineAcademyContactInfo": {
-    "description": "Auto imported from components/home-online-academy/ContactInfo.vue"
-  },
-  "HomeOnlineAcademyCourse": {
-    "description": "Auto imported from components/home-online-academy/Course.vue"
-  },
-  "HomeOnlineAcademyFAQ": {
-    "description": "Auto imported from components/home-online-academy/FAQ.vue"
-  },
-  "HomeOnlineAcademyFunFact": {
-    "description": "Auto imported from components/home-online-academy/FunFact.vue"
-  },
-  "HomeOnlineAcademyInstructor": {
-    "description": "Auto imported from components/home-online-academy/Instructor.vue"
-  },
   "HomeUniversityAbout": {
     "description": "Auto imported from components/home-university/About.vue"
   },
@@ -409,6 +385,30 @@
   },
   "HomeUniversityVideo": {
     "description": "Auto imported from components/home-university/Video.vue"
+  },
+  "HomeOnlineAcademyBanner": {
+    "description": "Auto imported from components/home-online-academy/Banner.vue"
+  },
+  "HomeOnlineAcademyBlog": {
+    "description": "Auto imported from components/home-online-academy/Blog.vue"
+  },
+  "HomeOnlineAcademyCategories": {
+    "description": "Auto imported from components/home-online-academy/Categories.vue"
+  },
+  "HomeOnlineAcademyContactInfo": {
+    "description": "Auto imported from components/home-online-academy/ContactInfo.vue"
+  },
+  "HomeOnlineAcademyCourse": {
+    "description": "Auto imported from components/home-online-academy/Course.vue"
+  },
+  "HomeOnlineAcademyFAQ": {
+    "description": "Auto imported from components/home-online-academy/FAQ.vue"
+  },
+  "HomeOnlineAcademyFunFact": {
+    "description": "Auto imported from components/home-online-academy/FunFact.vue"
+  },
+  "HomeOnlineAcademyInstructor": {
+    "description": "Auto imported from components/home-online-academy/Instructor.vue"
   },
   "HomeYogaInstructorAbout": {
     "description": "Auto imported from components/home-yoga-instructor/About.vue"

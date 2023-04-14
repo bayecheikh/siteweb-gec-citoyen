@@ -183,13 +183,14 @@ export default {
 
             this.isPopUpConnexionNPSVisible = false
 
-            this.$refs.pnsform.reset();
-            this.$refs.xroadform.reset();
+           
           this.$store.dispatch('authentication/getDetail', false)
          this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
+         this.$refs.pnsform.reset();
+            this.$refs.xroadform.reset();
 
         },
-        async onClickCloseChooseMode() {
+       onClickCloseChooseMode() {
        
             this.$store.dispatch('authentication/getDetail', false)
             this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
@@ -203,7 +204,8 @@ export default {
             this.$refs.xroadform.reset();
             await this.$store.dispatch('authentication/getDetail', false)
         },
-        submitPNSConnexion() {
+       async submitPNSConnexion() {
+        let isauthenticatingfrombutton = this.isauthenticatingfrombutton
             this.isPNSConnecting = true
             const npi = this.$refs.pnsform.querySelector('input[name="current-log-email"]');
             const npiValue = npi.value;
@@ -211,17 +213,21 @@ export default {
             if (npiValue != 1) {
                 setTimeout(() => {
                     this.validPNSCredentials = true
+
                     setTimeout(() => {
 
                         this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-                        this.$store.dispatch('authentication/getDetail', false)
-         this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
+                        console.log("GDDcccFKG", this.isauthenticatingfrombutton)
                         this.isPNSConnecting = false
-                        if(this.isauthenticatingfrombutton){
-                    this.$router.push('/addcourrier')
-                }
+                        if(isauthenticatingfrombutton){
+                            console.log("elkstjorpktoirj")
+                            this.$router.push('/addcourrier')
+                        }
                     }, 1000);
-                    this.onClickClose();
+                  
+                    this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
+                 this.onClickCloseChooseMode();
+                    
                 }, 1000);
 
             }
@@ -252,15 +258,22 @@ export default {
 
         },
         submitXroadConnexion() {
+            let isauthenticatingfrombutton = this.isauthenticatingfrombutton
             const emailInput = this.$refs.xroadform.querySelector('input[name="xroad-email"]');
             const emailValue = emailInput.value;
             this.isXroadConnecting = true
-            if (emailValue == 1) {
+            if (emailValue != 1) {
                 setTimeout(() => {
                     this.validXroadCredentials = true
                     this.isXroadConnecting = false
                     this.onClickCloseXroad();
                     this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
+                    if(isauthenticatingfrombutton){
+                            console.log("elkstjorpktoirj")
+                            this.$router.push('/addcourrier')
+                        }
+                        this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
+                 this.onClickCloseChooseMode();
                 }, 1000);
 
             }

@@ -13,7 +13,7 @@
                                 <i class="icon-2 custom-magnifying-icon"></i>
                                 <input type="text" name="code" id="code" autocomplete="off" placeholder="Suivre mon courrier" class="custom-banner-search-button">
                                 <button class="submit-button custom-banner-submit-button" name="submit" type="submit" @click="onClickSuivreCourrier"> <i
-                                            class="icon-4"></i></button>
+                                            class="icon-4 custom-icon-4"></i></button>
                             </div>
                             <a @click="deposerCourrier()" class="edu-btn custom-banner-send-button">
         DÉPOSER UN COURRIER
@@ -121,7 +121,7 @@ import SuiviCourrier from '../home-distant-learning/SuiviCourrier.vue';
 .form-control::placeholder {
 
 color: #6c757d;
-opacity: 1;
+opacity: 0.5 !important;
 
 }
 .banner-search .input-group .form-control {
@@ -228,10 +228,12 @@ padding: 20px;
 .custom-banner-search-button::placeholder{
     color: #0a3764 !important;
     font-weight: 300;
+    opacity: 0.8 !important;
 }
 .search-box .submit-button {
 
 height: 60px !important;
+width: 100px !important;
 cursor: pointer;
 background-color: #0a3764 !important;
 
@@ -243,6 +245,9 @@ background-color: #0a3764 !important;
 .custom-banner-submit-button{
     border: 3px solid #0a3764 !important; 
     border-radius: .25rem !important;
+}
+.custom-icon-4{
+    color: #fff !important;
 }
 </style>
 

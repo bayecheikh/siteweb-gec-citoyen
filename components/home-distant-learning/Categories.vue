@@ -441,23 +441,6 @@ export default {
     outline: none !important;
 }
 
-.search-box .submit-button {
-
-    height: 100% !important;
-    margin: 0px !important;
-    cursor: pointer;
-
-}
-
-.submit-button {
-    background-color: #008064 !important;
-    border: none !important;
-    width: 100px !important;
-    padding: 5px 10px !important;
-    color: #fff !important;
-    cursor: pointer !important;
-
-}
 
 .icon-2 {
     font-size: 1.3em !important;
