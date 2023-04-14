@@ -10,6 +10,26 @@
              </div>
              <div class="custom-bloc-padding">
                 <div class="row border-grey-no-padding d-flex align-items-center mb-5">
+                    <div class="d-flex justify-content-between p-4 pb-4 pt-4">
+                      <div for="reg-name" class="title_green">CONTENU</div>
+                      <div class="form-group col-3 justify-content-end">
+                       <button @click="$goToTab('contenu')" type="button" class="btn btn-outline-primary btn-medium float-end">Modifier <i class="icon-east"></i></button>
+                      </div>
+                   </div>
+                   <hr>
+                   <div class="d-flex justify-content-between p-4 pb-4 pt-0">
+                      <div class="col-6" for="reg-name">Nature</div>
+                      <p class="col-6">Courrier</p>
+                   </div>
+                   <hr>
+                   <div class="d-flex justify-content-between p-4 pb-4 pt-0">
+                      <div class="col-6" for="reg-name">Objet</div>
+                      <p class="col-6">{{this.detailcontenu && this.detailcontenu.subject}}</p>
+                   </div>
+                   
+                   
+                </div>
+                <div class="row border-grey-no-padding d-flex align-items-center mb-5">
                    <div class="d-flex justify-content-between p-4 pb-4 pt-4">
                       <div for="reg-name" class="title_green">COORDONNEES</div>
                       <div class="form-group col-3 justify-content-end">
@@ -45,7 +65,7 @@
                 </div>
                 <div class="row border-grey-no-padding d-flex align-items-center mb-5">
                     <div class="d-flex justify-content-between p-4 pb-4 pt-4">
-                      <div for="reg-name" class="title_green">ORGANISME</div>
+                      <div for="reg-name" class="title_green">ORGANISME DESTINATAIRE</div>
                       <div class="form-group col-3 justify-content-end">
                         <button @click="$goToTab('ministeres')" type="button" class="btn btn-outline-primary btn-medium float-end">Modifier <i class="icon-east"></i></button>
                       </div>
@@ -57,22 +77,21 @@
                    </div>
                    
                 </div>
-                <div class="row border-grey-no-padding d-flex align-items-center mb-5">
+                
+                <div class="row border-grey-no-padding d-flex align-items-center mb-5" v-if="this.detailcontenu.encodedFile">
                     <div class="d-flex justify-content-between p-4 pb-4 pt-4">
-                      <div for="reg-name" class="title_green">CONTENU</div>
+                      <div for="reg-name" class="title_green">COURRIER</div>
                       <div class="form-group col-3 justify-content-end">
                        <button @click="$goToTab('contenu')" type="button" class="btn btn-outline-primary btn-medium float-end">Modifier <i class="icon-east"></i></button>
                       </div>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                      <div class="col-6" for="reg-name">subject*</div>
-                      <p class="col-6">{{this.detailcontenu && this.detailcontenu.subject}}</p>
-                   </div>
-                   <hr>
-                   <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                      <div class="col-6" for="reg-name">Message*</div>
-                      <p class="col-6">{{this.detailcontenu && this.detailcontenu.message}}</p>
+                      <div class="col-12" for="reg-name">
+                        <div class="imagePreviewWrapper col-12 border-input mb-3" >
+                            <embed :src="'data:application/pdf;base64,'+this.detailcontenu.encodedFile+'#toolbar=0'" class="embeded-courrier" v-if="this.detailcontenu.format=='pdf' || this.detailcontenu.format=='docx' || this.detailcontenu.format=='doc'">
+                        </div>
+                      </div>
                    </div>
                 </div>
                 <div class="row d-flex justify-content-between">
@@ -108,16 +127,16 @@
             },
             methods: {
                 submitValidation(){
+                    
                     this.load=true
                     console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu,piece_jointes:[]})
-                    //this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement. Merci!'})
-                    //this.$router.push('/');
                     this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu,piece_jointes:[]})
                     .then(async (response) => {
-                        //this.$toast.success(response.message).goAway(2000)
-                        this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement !'})
-                        console.log('Données courrier Reçu ++++++: ', response.data?.data?.id_suivi)
+                        this.$toast.success('Courrier en cours de traitement. Votre code de suivi vous a été envoyé par mail').goAway(8000)
                         this.$router.push('/');
+                        /* this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement !'})
+                        console.log('Données courrier Reçu ++++++: ', response.data?.data?.id_suivi)
+                        this.$router.push('/'); */
     
                     }).catch((error) => {
                         console.log('Code error ++++++: ', error?.response?.data?.message)
@@ -176,7 +195,7 @@
     }
     .imagePreviewWrapper{
     border: solid 1px #eae9e9;
-    height: 200px;
+
     padding: 20px;
     }
     .imagePreviewWrapper img{
@@ -208,4 +227,17 @@
     font-size: 14px;
     font-weight: 500;
     }
+
+    .imagePreviewWrapper{
+    border: solid 1px #eae9e9;
+    padding: 20px;
+    cursor: pointer;
+}
+.imagePreviewWrapper img{
+    height: 200px !important;
+}
+.embeded-courrier{
+    width: 100%;
+    min-height: 300px;
+}
  </style>

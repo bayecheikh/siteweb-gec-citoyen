@@ -91,6 +91,12 @@
        methods: {
          generatePdf () {
            this.$refs.html2Pdf.generatePdf()
+           // Define the string
+            let string = 'Hello World!';
+
+            // Encode the String
+            Buffer.from(string).toString('base64')
+            console.log('base 64', Buffer.from('Hello World!').toString('base64'))
          },
          onProgress (x) {
            console.log(x)

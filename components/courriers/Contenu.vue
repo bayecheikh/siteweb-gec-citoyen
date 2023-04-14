@@ -21,11 +21,11 @@
             </div>
             <div class="form-group col-12">
                 <label for="reg-name">Sujet*</label>
-                <input class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="subject du message">
+                <input class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="Sujet du courrier">
             </div>
             <div class="form-group col-12 mt-4" v-if="saisie">
                 <label for="reg-name">Message*</label>
-                <textarea class="custom-textarea" cols="30" rows="4" name="reg-name" placeholder="Votre Message*" v-model="model.message" required></textarea>
+                <textarea class="custom-textarea" cols="30" rows="4" name="reg-name" placeholder="Votre courrier*" v-model="model.message" required></textarea>
                 
             </div>
             <div class="col-12 form-group" v-if="attache_courrier">
@@ -42,11 +42,13 @@
                 </div>
                 <input type="file" id="file" name="avatar" ref="file" v-on:change="handleFileUpload" style="display: none"/>
             </div>
-            <div class="col-12 form-group" v-if="attache_courrier">
+            <div class="col-12 form-group" v-if="attache_courrier && imageData">
                 <div
                 class="imagePreviewWrapper col-12 border-input mb-3"
                 @click="selectImage">
-                    <img :src="imageData"/>
+                    <img :src="imageData" v-if="model.format=='jpg' || model.format=='png'" />
+                    <!-- <iframe :src="imageData+'#toolbar=0'" width="100%" height="300"></iframe> -->
+                    <embed :src="imageData+'#toolbar=0'" class="embeded-courrier" v-if="model.format=='pdf' || model.format=='docx' || model.format=='doc'">
                 </div>
                 
             </div>
@@ -76,6 +78,7 @@
                 key:null,
                 imageData:null,
                 title_courrier:'',
+                extFile:'',
                 saisie:false,
                 attache_courrier:true,
                 modelContenu:[
@@ -99,6 +102,9 @@
         },
         methods: {
             submitContenu(){
+                if(this.model.type_contenu=="saisie_libre"){
+                    this.model.encodedFile=Buffer.from(this.model.message).toString('base64')
+                }
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
                 this.$store.dispatch('contenus/getDetail',{...this.model})
@@ -118,10 +124,13 @@
                 if($event.target.value=='saisie_libre'){
                     this.saisie = true
                     this.attache_courrier=false
+                    this.model.message=''
+                    this.$store.dispatch('contenus/getDetail',{...this.model,encodedFile:''})
                 }
                 if($event.target.value=='attache_courrier'){
                     this.saisie = false
                     this.attache_courrier=true
+                    this.$store.dispatch('contenus/getDetail',{...this.model,encodedFile:''})
                 }
                 
             },
@@ -201,12 +210,11 @@ padding-bottom: 6px;
 }
 .imagePreviewWrapper{
     border: solid 1px #eae9e9;
-    height: 200px;
     padding: 20px;
     cursor: pointer;
 }
 .imagePreviewWrapper img{
-    height: 100% !important;
+    height: 200px !important;
 }
 .custom-input{
   border: 1px solid #cecdcc  !important;
@@ -224,5 +232,9 @@ padding-bottom: 6px;
 }
 .custom-bloc-padding {
   padding: 30px;
+}
+.embeded-courrier{
+    width: 100%;
+    min-height: 400px;
 }
 </style>
