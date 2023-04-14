@@ -63,7 +63,7 @@
                             <MouseMove addClassName="shape-5" dataDepth="1.5" data-aos-delay="1000" data-aos="fade" data-aos-duration="1000" imgSrc="/images/about/shape-13.png" />
 
                             <MouseMove addClassName="shape-6" dataDepth="-2" data-aos-delay="1000" data-aos="fade" data-aos-duration="1000" imgSrc="/images/about/shape-18.png" />
-                        </ul>
+                        </ul>de
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             <img src="/images/about/h-1-shape-01.png" alt="Shape">
         </div>
     </div>
-    <Authentication2 v-if="isauthenticating"/>
+    <Authentication2 v-if="isauthenticatingfrombutton"/>
 
     </div>
 
@@ -84,7 +84,6 @@ import { mapMutations, mapGetters } from 'vuex'
         computed: {
         ...mapGetters({
             isloggedin: 'authentication/isloggedin',
-            isauthenticating: 'authentication/isauthenticating',
             isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
         })
     },
@@ -102,17 +101,12 @@ import { mapMutations, mapGetters } from 'vuex'
                 this.$router.push('/addcourrier')
             }
             else{
-                this.$store.dispatch('authentication/getDetail', true)
                 this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', true)
             
             }
         }
         },
-        data() {
-            return {
-                mustAuthenticate: false
-            }
-        },
+       
     }
 </script>
 

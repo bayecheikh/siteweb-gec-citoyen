@@ -54,7 +54,7 @@
                             width="55.794" height="55.723" viewBox="0 0 46.588 46.529">
                                 <defs>
                                     <clipPath id="a">
-                                        <rect width="55.794" height="55.723"  fill="#fff"   stroke-width="2.5"/>
+                                        <rect width="55.794" height="55.723"  fill="#fff" stroke="#fff"  stroke-width="2.5"/>
                                     </clipPath>
                                 </defs>
                                 <g clip-path="url(#a)">

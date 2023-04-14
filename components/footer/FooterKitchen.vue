@@ -1,11 +1,11 @@
 <template>
     <footer class="edu-footer custom-footer-for-kitchen footer-for-kitchen footer-style-4">
-        <div class="footer-top">
+        <div class="footer-top custom-footer-top">
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <div class="edu-footer-widget">
-                            <h4 class="widget-title"> <div class="logo">
+                            <h4 class="widget-title"> <div class="logo custom-footer-logo">
                             <n-link to="/">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="412.914" height="84.113" viewBox="0 0 412.914 84.113">
@@ -38,11 +38,15 @@
                                 <div class="widget-information">
                                     <ul class="information-list">
                                         <li>Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique et sécurisé de courriers.</li>
-                                        <li>Nous suivre sur :  <a style="padding:5px;" href="https://www.facebook.com/numeriquebenin/" target="_blank" class="color-reseaux"><i class="icon-facebook"></i></a>
-                                    <a style="padding:5px;" href="https://www.linkedin.com/company/numeriquebenin/" target="_blank" class="color-reseaux"><i class="icon-linkedin2"></i></a>
-                                    <a style="padding:5px;" href="https://www.instagram.com/numeriquebenin/?hl=fr" target="_blank" class="color-reseaux"><i class="icon-instagram"></i></a>
-                                    <a style="padding:5px;" href="https://twitter.com/numeriquebenin" target="_blank" class="color-reseaux"><i class="icon-twitter"></i></a></li>
                                     </ul>
+                                    <ul class="information-list" style="display: flex; list-style-type: none; padding-left: 0;">
+    <li ><span style="padding-top:10px;">Nous suivre sur :</span></li>
+    <li><a style="padding-left:10px;" href="https://www.facebook.com/numeriquebenin/" target="_blank" class="color-reseaux"><i class="icon-facebook"></i></a></li>
+    <li><a style="padding-left:10px;" href="https://www.linkedin.com/company/numeriquebenin/" target="_blank" class="color-reseaux"><i class="icon-linkedin2"></i></a></li>
+    <li><a style="padding-left:10px;" href="https://www.instagram.com/numeriquebenin/?hl=fr" target="_blank" class="color-reseaux"><i class="icon-instagram"></i></a></li>
+    <li><a style="padding-left:10px;" href="https://twitter.com/numeriquebenin" target="_blank" class="color-reseaux"><i class="icon-twitter"></i></a></li>
+</ul>
+
                                 </div>
                             </div>
                         </div>
@@ -90,17 +94,7 @@
             <li class="shape-5"><img src="/images/about/shape-07.png" alt="shape"></li>
         </ul>
         </div>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="inner text-center">
-                            <p>Copyright {{ new Date().getFullYear() }} <a href="#" target="_blank">GEC CITOYEN</a>. Tous droits réservés.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
     </footer>
 </template>
 
@@ -118,6 +112,15 @@
     color: #f0f0f0 !important;
 }
 .color-reseaux{
-    color: white;
+    color: white !important;
+}
+.custom-footer-top{
+    padding: 50px !important;
+}
+.custom-footer-logo{
+    margin-left: -20px !important;
+}
+.footer-link a:hover{
+    color: white !important;
 }
 </style>

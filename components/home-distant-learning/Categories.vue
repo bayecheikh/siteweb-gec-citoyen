@@ -171,11 +171,11 @@ export default {
                 this.$router.push('/addcourrier')
             }
             else{
-                this.$store.dispatch('authentication/getDetail', true)
                 this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', true)
             
             }
         }
+      
     },
     data() {
         return {

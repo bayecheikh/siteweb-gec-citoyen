@@ -4,9 +4,9 @@
             class="login-form-box custom-border custom-auth-template offset-xl-2 col-lg-6">
             <button @click="onClickCloseChooseMode()" class="custom-close-btn">x</button>
             <div class="left-block ">
-                <div class="section-title ">
+                <div class="section-title custom-auth-section-title ">
                     <h4 class="custom-left-box-title text-uppercase">GEC CITOYEN</h4>
-                    <p class="custom-message">Connectez-vous avec votre compte PNS ou XROAD BJ.</p>
+                    <p class="custom-auth-message">Connectez-vous avec PNS <br> ou XROAD BJ.</p>
                     <div class="connexion-mode">
                     <div class="edu-form-check">
                         <input type="radio" value="pns" id="pns" name="connexionMode" @click="onRadioClickPNS($event)"
@@ -179,28 +179,23 @@ export default {
         togglePNSPasswordVisibility() {
             this.pnsPasswordStatus = !this.pnsPasswordStatus
         },
-        async onClickClose() {
+      onClickClose() {
 
             this.isPopUpConnexionNPSVisible = false
 
             this.$refs.pnsform.reset();
-            await this.$store.dispatch('authentication/getDetail', false)
-            await this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
+            this.$refs.xroadform.reset();
+          this.$store.dispatch('authentication/getDetail', false)
+         this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
 
         },
         async onClickCloseChooseMode() {
-            this.isPopUpChooseConnexionMode = false
-            await this.$store.dispatch('authentication/getDetail', false)
+       
+            this.$store.dispatch('authentication/getDetail', false)
+            this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
         },
-        async onClickChooseNPS() {
-            this.isPopUpChooseConnexionMode = false
-            this.isPopUpConnexionNPSVisible = true
-
-        },
-        onClickChooseXroad() {
-            this.isPopUpChooseConnexionMode = false
-            this.isPopUpConnexionXroadVisible = true
-        },
+       
+        
 
         async onClickCloseXroad() {
 
@@ -213,13 +208,14 @@ export default {
             const npi = this.$refs.pnsform.querySelector('input[name="current-log-email"]');
             const npiValue = npi.value;
 
-            if (npiValue == 1) {
+            if (npiValue != 1) {
                 setTimeout(() => {
                     this.validPNSCredentials = true
                     setTimeout(() => {
 
                         this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-                        
+                        this.$store.dispatch('authentication/getDetail', false)
+         this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
                         this.isPNSConnecting = false
                         if(this.isauthenticatingfrombutton){
                     this.$router.push('/addcourrier')
@@ -294,19 +290,8 @@ export default {
             this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
 
         },
-        onClickSeConnecter() {
-
-            this.isPageLoad = true
-            this.isPopUpChooseConnexionMode = true
-        },
-        onClickSeDeconnecter() {
-            this.isDeconnecting = true
-            setTimeout(() => {
-                this.isDeconnecting = false
-                this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
-            }, 1000);
-
-        }
+     
+       
     }
 }
 
@@ -672,9 +657,10 @@ export default {
 
 }
 
-.custom-message {
+.custom-auth-message {
     color: white !important;
-    text-align: center;
+    text-align: center !important;
+   
 
 }
 
@@ -694,4 +680,8 @@ export default {
         height: 20px;
         border-radius: 50%;
     }
+
+.custom-auth-section-title{
+    padding: 50px !important;
+}
 </style>

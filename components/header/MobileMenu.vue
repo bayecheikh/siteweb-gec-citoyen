@@ -36,8 +36,16 @@
                     },
 
                     {
-                        url: '/accueil#faq',
-                        title: 'Comment envoyer un courrier ?',
+                        url: '',
+                        title: 'Faire une suggestion',
+                    },
+                    {
+                        url: '',
+                        title: 'Signaler un problème',
+                    },
+                    {
+                        url: '',
+                        title: 'Nous contacter',
                     },
                     {
                         url: '',

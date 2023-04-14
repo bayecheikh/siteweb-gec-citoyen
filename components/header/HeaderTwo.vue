@@ -95,7 +95,7 @@
 
         <OffCanvasMobileMenuTwo />
     </header>
-    <Authentication2 v-if="isauthenticatingfrombutton"/>
+    <Authentication2 v-if="isauthenticating"/>
 </div>
 </template>
 
@@ -105,7 +105,8 @@ import { mapMutations, mapGetters } from 'vuex'
         computed: {
         ...mapGetters({
             isloggedin: 'authentication/isloggedin',
-            isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
+            isauthenticating: 'authentication/isauthenticating',
+          
         })
     },
         components: {
@@ -123,8 +124,8 @@ import { mapMutations, mapGetters } from 'vuex'
         data(){
             return {
                 isSticky: false,
-                isAuthenticationPopUpLoad: false,
-            isPopUpChooseConnexionMode: false,
+            
+           
             isPNSConnecting: false,
             isXroadConnecting: false,
             isDeconnecting: false,
@@ -238,9 +239,6 @@ import { mapMutations, mapGetters } from 'vuex'
         },
         onClickSeConnecter() {
             this.$store.dispatch('authentication/getDetail', true)
-
-            this.isAuthenticationPopUpLoad = true
-            this.isPopUpChooseConnexionMode = true
         },
         onClickSeDeconnecter() {
             this.isDeconnecting = true
@@ -248,7 +246,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 this.isDeconnecting = false
                 this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
                 this.$store.dispatch('authentication/getDetail', false)
-                this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
+             
             }, 1000);
 
         }
@@ -260,9 +258,7 @@ import { mapMutations, mapGetters } from 'vuex'
             this.$refs.pnsform.reset();
 
         },
-        onClickCloseChooseMode() {
-            this.isPopUpChooseConnexionMode = false
-        },
+       
             // Off-canvas Mobile Menu Open
             mobileMenuOpen( addRemoveClass, className ) {
                 const el = document.querySelector( '#offcanvas-menu' );
