@@ -147,6 +147,18 @@
     "_name": "_935ae252"
   },
   {
+    "name": "signaler-probleme",
+    "path": "/signaler-probleme",
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\signaler-probleme.vue",
+    "chunkName": "pages/signaler-probleme"
+  },
+  {
+    "name": "suggestion",
+    "path": "/suggestion",
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\suggestion.vue",
+    "chunkName": "pages/suggestion"
+  },
+  {
     "name": "terms-condition",
     "path": "/terms-condition",
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",

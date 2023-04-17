@@ -3,8 +3,20 @@
         <div class="container">
             
             
-            <div class="title-container">
-  <div class="title-text-wrapper">
+            <div>
+                <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800" class="section-title section-left aos-init aos-animate">
+                  
+                    <h2 class="title">Comment <span class="color-primary">déposer</span> un courrier ?</h2>
+
+                     <p>Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
+                    
+                    <p class="custom-categories-send-btn-wrapper"> <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">
+        Déposer un courrier
+    </a></p>
+                    
+
+                </div>
+  <!-- <div class="title-text-wrapper">
     <h3 class="title">Comment envoyer un courrier ?</h3>
     
     <p class="custom-subtitle">Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
@@ -14,7 +26,7 @@
       DÉPOSER UN COURRIER 
     </a>
   </div>
-
+-->
 </div>
 
 
@@ -610,10 +622,7 @@ p {
     box-shadow: 0px 10px 45px 0px rgba(0,0,0,0.1) !important;
 }
 
-.title-container {
-  display: flex;
-  align-items: center;
-}
+
 
 .title-text-wrapper {
   flex: 1;
@@ -627,14 +636,16 @@ p {
 }
 
 
-.custom-categories-send-button{
+
+.custom-categories-send-button {
     cursor: pointer;
-    background: #008064 !important;
-    color: #fff !important;
-    font-weight: 600 !important;
-    margin-left: auto !important;
-  margin-right: 0 !important;
-  
-  
+   
 }
+
+.custom-categories-send-btn-wrapper {
+    text-align: right;
+   
+}
+
+
 </style>
