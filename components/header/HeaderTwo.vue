@@ -7,8 +7,8 @@
                 <div class="header-navbar">
                     <div class="header-brand">
                         <div class="logo" >
-                            <n-link class="logo-svg-link" to="/">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="custom-img-fluid img-fluid" xmlns:xlink="http://www.w3.org/1999/xlink" width="412.914" height="84.113" viewBox="0 0 412.914 84.113">
+                            <n-link class="logo-light logo-svg-link" to="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="custom-img-fluid img-fluid" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="auto" viewBox="0 0 412.914 84.113">
   <defs>
     <clipPath id="clip-path">
       <path id="Tracé_7170" data-name="Tracé 7170" d="M4330.086,16121.5v74.73H4393.7l43.409,4.6-6.565-27.3V16121.5l-48.824-4.784Z" transform="translate(-4209 -16034)" fill="none" stroke="#707070" stroke-width="1"/>
@@ -318,11 +318,7 @@ a.edu-btn, button.edu-btn{
     border: 3px solid  #3376b9  !important; 
 }
 
-@media (min-width: 738px) {
-    .logo-svg-link {
-        margin-left: -100px !important;   
-    }
-}
+
 
 .mainmenu-nav .mainmenu > li > a{
     padding-right: 0px;

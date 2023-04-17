@@ -31,7 +31,7 @@
             return {
                 menus: [
                     {
-                        url: '/accueil',
+                        url: '/',
                         title: 'Accueil',
                     },
 

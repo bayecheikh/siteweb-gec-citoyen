@@ -2,9 +2,9 @@
   <ul class="mainmenu custom-mainmenu">
     <li><n-link to="/suggestion">Faire une suggestion</n-link>
     </li>
-    <li><n-link to="/signaler-probleme" class="custom-mainmenu">Signaler un problème</n-link>
+    <li><n-link to="/signaler-probleme">Signaler un problème</n-link>
     </li>
-    <li><n-link to="/contact-us" class="custom-mainmenu">Nous contacter</n-link>
+    <li><n-link to="/contact-us">Nous contacter</n-link>
     </li>
   
 

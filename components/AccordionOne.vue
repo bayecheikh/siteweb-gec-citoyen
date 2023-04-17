@@ -3,7 +3,7 @@
         <div class="accordion">
             <div class="accordion-item">
                 <h5 class="accordion-header ">
-                    <button class="accordion-button custom-accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                    <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
                         Comment se connecter à la plateforme ?
                     </button>
                 </h5>
@@ -53,7 +53,3 @@
     </div>
 </template>
 
-<style scoped>
-
-   
-</style>
