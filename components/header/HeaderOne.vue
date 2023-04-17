@@ -25,14 +25,14 @@
                           <!--  <li class="icon light-dark-icon">
                                 <ColorMode />
                             </li> -->
-                            <div class="banner-btn custom-banner-btn">
+                            <!-- <div class="banner-btn custom-banner-btn">
                             <li class="custom-header-btn">
                                 <n-link to="" class="edu-btn custom-edu-btn custom-btn-sign-in text-uppercase">Se connecter<i class="icon-4"></i></n-link>
                             </li>
                             <li class="custom-header-btn">
                                 <n-link to="" class="edu-btn custom-btn-sign-up btn-orange text-uppercase">Créer un compte<i class="icon-4"></i></n-link>
                             </li>
-                            </div>
+                            </div> -->
                            <!-- <li class="custom-header-btn">
                                 <n-link to="/contact-us" class="edu-btn custom-btn-send-courrier text-uppercase">Envoyer un courrier<i class="icon-4"></i></n-link>
                             </li> -->
@@ -69,9 +69,9 @@
             window.addEventListener( 'scroll', () => {
                 let scrollPos = window.scrollY
                 if( scrollPos >= 200 ) {
-                    this.isSticky = true
+                    //this.isSticky = true
                 } else {
-                    this.isSticky = false
+                    //this.isSticky = false
                 }
             } )
         },
