@@ -21,7 +21,7 @@
     </clipPath>
   </defs>
   <g id="Groupe_7584" data-name="Groupe 7584" transform="translate(-121.086 -16.716)">
-    <text id="Features" transform="translate(225 86)" fill="#fff" font-size="12" font-family="Montserrat-Regular, Montserrat" letter-spacing="0.018em"><tspan x="0" y="0">GESTION ÉLECTRONIQUE DE COURRIER</tspan></text>
+    <text id="Features" transform="translate(225 86)" fill="#fff" font-size="12" font-family="Montserrat-Regular, Montserrat" letter-spacing="0.018em"><tspan x="0" y="0">GESTION ÉLECTRONIQUE DE COURRIERS</tspan></text>
     <g id="Groupe_de_masques_77" data-name="Groupe de masques 77" transform="translate(0 -66)" clip-path="url(#clip-path)">
       <rect id="Image_182" data-name="Image 182" width="240" height="70" transform="translate(138 87.5)" fill="url(#pattern)"/>
     </g>
@@ -41,10 +41,10 @@
                                     </ul>
                                     <ul class="information-list" style="display: flex; list-style-type: none; padding-left: 0;">
     <li ><span style="padding-top:10px;">Nous suivre sur :</span></li>
-    <li><a style="padding-left:10px;" href="https://www.facebook.com/numeriquebenin/" target="_blank" class="color-reseaux"><i class="icon-facebook"></i></a></li>
-    <li><a style="padding-left:10px;" href="https://www.linkedin.com/company/numeriquebenin/" target="_blank" class="color-reseaux"><i class="icon-linkedin2"></i></a></li>
-    <li><a style="padding-left:10px;" href="https://www.instagram.com/numeriquebenin/?hl=fr" target="_blank" class="color-reseaux"><i class="icon-instagram"></i></a></li>
-    <li><a style="padding-left:10px;" href="https://twitter.com/numeriquebenin" target="_blank" class="color-reseaux"><i class="icon-twitter"></i></a></li>
+    <li><n-link style="padding-left:10px;" to="" class="color-reseaux"><i class="icon-facebook"></i></n-link></li>
+    <li><n-link style="padding-left:10px;" to="" class="color-reseaux"><i class="icon-linkedin2"></i></n-link></li>
+    <li><n-link style="padding-left:10px;" to="" class="color-reseaux"><i class="icon-instagram"></i></n-link></li>
+    <li><n-link style="padding-left:10px;" to="" class="color-reseaux"><i class="icon-twitter"></i></n-link></li>
 </ul>
 
                                 </div>
@@ -70,9 +70,9 @@
                             <div class="inner">
                                 <ul class="footer-link">
                                     <li><n-link to="/">Accueil</n-link></li>
-                                    <li><n-link to="">Faire une suggestion</n-link></li>
-                                    <li><n-link to="">Signaler un problème</n-link></li>
-                                    <li><n-link to="">Nous contacter</n-link></li>
+                                    <li><n-link to="/suggestion">Faire une suggestion</n-link></li>
+                                    <li><n-link to="/signaler-probleme">Signaler un problème</n-link></li>
+                                    <li><n-link to="/contact-us">Nous contacter</n-link></li>
                                 </ul>
                             </div>
                         </div>

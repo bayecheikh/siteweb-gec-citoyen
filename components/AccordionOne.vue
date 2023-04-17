@@ -16,12 +16,12 @@
             <div class="accordion-item">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
-                        Quels sont les ministères concernés ?
+                        Quels sont les organismes concernés ?
                     </button>
                 </h5>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Les Ministères concernés sont : le Ministère des Affaires Étrangères, le Ministère du Numérique et de la Digitalisation, le Ministère du Développement et de la Coordination de l'Action Gouvernementale, le Ministère du Travail et de la Fonction Publique, le Ministère du Cadre de Vie et du Développement Durable, le Ministère de la Défense Nationale et le Ministère de l'Agriculture, de l'Élevage et de la Pêche. </p>
+                        <p>Les organismes concernés sont : le Ministère des Affaires Étrangères, le Ministère du Numérique et de la Digitalisation, le Ministère du Développement et de la Coordination de l'Action Gouvernementale, le Ministère du Travail et de la Fonction Publique, le Ministère du Cadre de Vie et du Développement Durable, le Ministère de la Défense Nationale et le Ministère de l'Agriculture, de l'Élevage et de la Pêche. Cette liste est évolutive. </p>
                     </div>
                 </div>
             </div>

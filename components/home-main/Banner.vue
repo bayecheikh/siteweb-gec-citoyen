@@ -53,12 +53,19 @@
                         </ul>
                     </div>
                 </div>
+        
             </div>
+     
         </div>
+        
          <div class="shape-7">
             <img src="/images/about/h-1-shape-01.png" alt="Shape">
         </div>
+        
     </div>
+    <div class="main-wrapper bg-lighten05">
+            <HomeYogaInstructorFunFact/>
+        </div>
     <Authentication2 v-if="isauthenticatingfrombutton"/>
     <SuiviCourrier v-if="ispopupload"/>
 
@@ -248,6 +255,11 @@ background-color: #0a3764 !important;
 }
 .custom-icon-4{
     color: #fff !important;
+}
+@media (min-width: 768px) {
+    .custom-banner-title {
+        font-size: 36px !important;
+    }
 }
 </style>
 

@@ -36,15 +36,15 @@
                     },
 
                     {
-                        url: '',
+                        url: '/suggestion',
                         title: 'Faire une suggestion',
                     },
                     {
-                        url: '',
+                        url: '/signaler-probleme',
                         title: 'Signaler un problème',
                     },
                     {
-                        url: '',
+                        url: '/contact-us',
                         title: 'Nous contacter',
                     },
                     {

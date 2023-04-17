@@ -5,10 +5,10 @@
         <div class="header-mainmenu" :class="{'edu-sticky': isSticky}">
             <div class="container">
                 <div class="header-navbar">
-                    <div class="custom-header-navbar">
-                        <div >
+                    <div class="header-brand">
+                        <div class="logo" >
                             <n-link class="logo-svg-link" to="/">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="412.914" height="84.113" viewBox="0 0 412.914 84.113">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="custom-img-fluid img-fluid" xmlns:xlink="http://www.w3.org/1999/xlink" width="412.914" height="84.113" viewBox="0 0 412.914 84.113">
   <defs>
     <clipPath id="clip-path">
       <path id="Tracé_7170" data-name="Tracé 7170" d="M4330.086,16121.5v74.73H4393.7l43.409,4.6-6.565-27.3V16121.5l-48.824-4.784Z" transform="translate(-4209 -16034)" fill="none" stroke="#707070" stroke-width="1"/>
@@ -21,7 +21,7 @@
     </clipPath>
   </defs>
   <g id="Groupe_7584" data-name="Groupe 7584" transform="translate(-121.086 -16.716)">
-    <text id="Features" transform="translate(225 86)" font-size="12"  font-family="Montserrat-Regular, Montserrat" letter-spacing="0.018em"><tspan x="0" y="0">GESTION ÉLECTRONIQUE DE COURRIER</tspan></text>
+    <text id="Features" transform="translate(225 86)" font-size="12"  font-family="Montserrat-Regular, Montserrat" letter-spacing="0.018em"><tspan x="0" y="0">GESTION ÉLECTRONIQUE DE COURRIERS</tspan></text>
     <g id="Groupe_de_masques_77" data-name="Groupe de masques 77" transform="translate(0 -66)" clip-path="url(#clip-path)">
       <rect id="Image_182" data-name="Image 182" width="240" height="70" transform="translate(138 87.5)" fill="url(#pattern)"/>
     </g>
@@ -146,6 +146,10 @@ import { mapMutations, mapGetters } from 'vuex'
         },
         props: ['showHeaderTop'],
         mounted(){
+            var largeurEcran = window.innerWidth;
+
+// Afficher la largeur de l'écran dans la console
+console.log("Largeur de l'écran : " + largeurEcran + " pixels");
             window.addEventListener( 'scroll', () => {
                 let scrollPos = window.scrollY
                 if( scrollPos >= 200 ) {
@@ -313,19 +317,19 @@ a.edu-btn, button.edu-btn{
     color: #3376b9 !important;
     border: 3px solid  #3376b9  !important; 
 }
-.logo-svg-link{
-    margin-left: -100px !important;   
-    margin-bottom: 0 !important; 
-     
-    margin-top: 0 !important; 
-    margin-right: 0 !important; 
-     
+
+@media (min-width: 738px) {
+    .logo-svg-link {
+        margin-left: -100px !important;   
+    }
 }
-.custom-header-navbar{
-    margin-right: 25px ;
-}
+
 .mainmenu-nav .mainmenu > li > a{
     padding-right: 0px;
+}
+.custom-img-fluid{
+    max-width: 100% !important;
+    height: auto !important;
 }
 
 </style>

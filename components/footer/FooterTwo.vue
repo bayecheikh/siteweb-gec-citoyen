@@ -21,10 +21,10 @@
                             <h4 class="widget-title custom-footer-two custom-footer-two-title ">Contribuer</h4>
                             <div class="inner">
                                 <ul class="footer-link custom-footer-link link-hover">
-                                    <li><a class="custom-footer-two" href="https://service-public.bj/public/report"
-                                            target="_blank">Faire une suggestion</a></li>
-                                    <li><a class="custom-footer-two" href="https://service-public.bj/public/report"
-                                            target="_blank">Signaler un problème</a></li>
+                                    <li><n-link class="custom-footer-two" to="/suggestion"
+                                            >Faire une suggestion</n-link></li>
+                                    <li><n-link class="custom-footer-two" to="/signaler-probleme"
+                                            >Signaler un problème</n-link></li>
                                 </ul>
                             </div>
                         </div>

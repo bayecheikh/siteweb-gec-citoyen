@@ -4,7 +4,7 @@
         <HeaderTwo/>
 
       <Banner />
-      <HomeYogaInstructorFunFact/>
+      <!--<HomeYogaInstructorFunFact/>-->
 
         <Categories/>
         <HomeKitchenCoachFAQ/>

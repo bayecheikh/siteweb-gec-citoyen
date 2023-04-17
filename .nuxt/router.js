@@ -25,6 +25,8 @@ const _06770cf8 = () => interopDefault(import('..\\pages\\pricing-table.vue' /* 
 const _6ae95a76 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
 const _69d0120f = () => interopDefault(import('..\\pages\\purchase-guide.vue' /* webpackChunkName: "pages/purchase-guide" */))
 const _50eb6b4d = () => interopDefault(import('..\\pages\\shop\\index.vue' /* webpackChunkName: "pages/shop/index" */))
+const _8d0a35e2 = () => interopDefault(import('..\\pages\\signaler-probleme.vue' /* webpackChunkName: "pages/signaler-probleme" */))
+const _85b8833a = () => interopDefault(import('..\\pages\\suggestion.vue' /* webpackChunkName: "pages/suggestion" */))
 const _7f327d06 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
 const _5ddcec26 = () => interopDefault(import('..\\pages\\university.vue' /* webpackChunkName: "pages/university" */))
 const _1038de4b = () => interopDefault(import('..\\pages\\yoga-instructor.vue' /* webpackChunkName: "pages/yoga-instructor" */))
@@ -148,6 +150,14 @@ export const routerOptions = {
     path: "/shop",
     component: _50eb6b4d,
     name: "shop"
+  }, {
+    path: "/signaler-probleme",
+    component: _8d0a35e2,
+    name: "signaler-probleme"
+  }, {
+    path: "/suggestion",
+    component: _85b8833a,
+    name: "suggestion"
   }, {
     path: "/terms-condition",
     component: _7f327d06,
