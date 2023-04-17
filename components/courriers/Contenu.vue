@@ -69,10 +69,16 @@
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
     export default {
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
+        computed: mapGetters({
+               detailutilisateur: 'coordonnees/detailutilisateur',
+               detailministere: 'ministeres/detailministere',
+               detailcontenu: 'contenus/detailcontenu'
+           }),
         data() {
             return {
                 key:null,
@@ -102,9 +108,6 @@
         },
         methods: {
             submitContenu(){
-                if(this.model.type_contenu=="saisie_libre"){
-                    this.model.encodedFile=Buffer.from(this.model.message).toString('base64')
-                }
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
                 this.$store.dispatch('contenus/getDetail',{...this.model})
@@ -125,12 +128,12 @@
                     this.saisie = true
                     this.attache_courrier=false
                     this.model.message=''
-                    this.$store.dispatch('contenus/getDetail',{...this.model,encodedFile:''})
+                    //this.$store.dispatch('contenus/getDetail',{...this.model,encodedFile:''})
                 }
                 if($event.target.value=='attache_courrier'){
                     this.saisie = false
                     this.attache_courrier=true
-                    this.$store.dispatch('contenus/getDetail',{...this.model,encodedFile:''})
+                    //this.$store.dispatch('contenus/getDetail',{...this.model,encodedFile:''})
                 }
                 
             },
@@ -140,7 +143,8 @@
             selectImage () {
                 this.$refs.file.click()
             },
-            handleFileUpload(e){         
+            handleFileUpload(e){     
+                    
                 //Recupère le fichier
                 const input = this.$refs.file
                 const files = input.files
@@ -164,8 +168,10 @@
                         const reader = new FileReader
                         reader.onload = e => {
                         this.imageData = e.target.result
-                        this.model.encodedFile = reader.result.split(';base64,')[1];
-                        this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                       this.model.encodedFile = reader.result.split(';base64,')[1];
+                        this.$store.dispatch('contenus/getDetail',{...this.detailcontenu,encodedFile:reader.result.split(';base64,')[1],format:extFile})
+                        //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                        //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
                         console.log(reader.result.split(';base64,')[1])
                     }
                     reader.readAsDataURL(files[0])

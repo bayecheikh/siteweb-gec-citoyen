@@ -5,7 +5,7 @@
              <div class="row bg-border-bottom-grey">
                 <div class="col-6 custom-lable-title pt-3">VERIFIER LES INFORMATIONS AVANT DE VALIDER</div>
                 <div class="col-6">
-                   <Previsualisation />
+                   <!-- <Previsualisation /> -->
                 </div>
              </div>
              <div class="custom-bloc-padding">
@@ -78,7 +78,7 @@
                    
                 </div>
                 
-                <div class="row border-grey-no-padding d-flex align-items-center mb-5" v-if="this.detailcontenu.encodedFile">
+                <div class="row border-grey-no-padding d-flex align-items-center mb-5">
                     <div class="d-flex justify-content-between p-4 pb-4 pt-4">
                       <div for="reg-name" class="title_green">COURRIER</div>
                       <div class="form-group col-3 justify-content-end">
@@ -86,11 +86,16 @@
                       </div>
                    </div>
                    <hr>
-                   <div class="d-flex justify-content-between p-4 pb-4 pt-0">
+                   <div class="row justify-content-between p-4 pb-4 pt-0">
                       <div class="col-12" for="reg-name">
-                        <div class="imagePreviewWrapper col-12 border-input mb-3" >
-                            <embed :src="'data:application/pdf;base64,'+this.detailcontenu.encodedFile+'#toolbar=0'" class="embeded-courrier" v-if="this.detailcontenu.format=='pdf' || this.detailcontenu.format=='docx' || this.detailcontenu.format=='doc'">
+                        <div class="imagePreviewWrapper border-input mb-3 row" v-if="this.detailcontenu.type_contenu=='saisie_libre'">
+                           <Previsualisation class="col-12 mb-4" />
+                            <embed :src="'data:application/pdf;base64,'+this.detailcontenu.encodedFile+'#toolbar=0'" class="embeded-courrier col-12" v-if="this.detailcontenu.format=='pdf' || this.detailcontenu.format=='docx' || this.detailcontenu.format=='doc'">                          
                         </div>
+                        <div class="imagePreviewWrapper border-input mb-3 row" v-if="this.detailcontenu.type_contenu=='attache_courrier'" >
+                            <embed :src="'data:application/pdf;base64,'+this.detailcontenu.encodedFile+'#toolbar=0'" class="embeded-courrier col-12" v-if="this.detailcontenu.format=='pdf' || this.detailcontenu.format=='docx' || this.detailcontenu.format=='doc'">                           
+                        </div>
+                        
                       </div>
                    </div>
                 </div>
