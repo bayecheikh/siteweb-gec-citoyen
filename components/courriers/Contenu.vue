@@ -20,7 +20,7 @@
                 </select>
             </div>
             <div class="form-group col-12">
-                <label for="reg-name">Sujet*</label>
+                <label for="reg-name">Objet*</label>
                 <input class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="Sujet du courrier">
             </div>
             <div class="form-group col-12 mt-4" v-if="saisie">

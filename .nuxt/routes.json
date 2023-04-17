@@ -149,14 +149,16 @@
   {
     "name": "signaler-probleme",
     "path": "/signaler-probleme",
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\signaler-probleme.vue",
-    "chunkName": "pages/signaler-probleme"
+    "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\signaler-probleme.vue",
+    "chunkName": "pages/signaler-probleme",
+    "_name": "_33d7b919"
   },
   {
     "name": "suggestion",
     "path": "/suggestion",
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\suggestion.vue",
-    "chunkName": "pages/suggestion"
+    "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\suggestion.vue",
+    "chunkName": "pages/suggestion",
+    "_name": "_a035fcce"
   },
   {
     "name": "terms-condition",
