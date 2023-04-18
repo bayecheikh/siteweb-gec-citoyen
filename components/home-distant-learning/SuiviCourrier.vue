@@ -115,9 +115,9 @@ export default {
                 this.isCharging = true
                 setTimeout(() => {
                     this.isCharging = false
-                    this.showValidMessage1 = true
                     this.showValidMessage2 = false
-                    this.validCode = true
+                    this.showValidMessage1 = false
+                    this.validCode = false
                     this.isLoading = false
                 }, 1000);
             }
@@ -125,8 +125,8 @@ export default {
                 this.isCharging = true
                 setTimeout(() => {
                     this.isCharging = false
-                    this.showValidMessage2 = true
-                    this.showValidMessage1 = false
+                    this.showValidMessage1 = true
+                    this.showValidMessage2 = false
                     this.validCode = true
                     this.isLoading = false
                 }, 1000);
@@ -135,11 +135,13 @@ export default {
                 this.isCharging = true
                 setTimeout(() => {
                     this.isCharging = false
-                    this.showValidMessage2 = false
+                    this.showValidMessage2 = true
                     this.showValidMessage1 = false
-                    this.validCode = false
+                    this.validCode = true
                     this.isLoading = false
                 }, 1000);
+              
+              
             }
 
 
@@ -383,12 +385,6 @@ export default {
 
 
 
-.icon-2 {
-    font-size: 1.3em !important;
-    margin-left: 25px !important;
-    color: #0a3764 !important;
-
-}
 
 .search-box .icon-4 {
     width: 80px !important;

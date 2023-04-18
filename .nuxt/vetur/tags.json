@@ -23,6 +23,21 @@
   "AboutUsOneWhyChoose": {
     "description": "Auto imported from components/about-us-one/WhyChoose.vue"
   },
+  "AboutUsThreeContactInfo": {
+    "description": "Auto imported from components/about-us-three/ContactInfo.vue"
+  },
+  "AboutUsThreeFunFact": {
+    "description": "Auto imported from components/about-us-three/FunFact.vue"
+  },
+  "AboutUsThreeInstructor": {
+    "description": "Auto imported from components/about-us-three/Instructor.vue"
+  },
+  "AboutUsThreeTestimonial": {
+    "description": "Auto imported from components/about-us-three/Testimonial.vue"
+  },
+  "AboutUsThreeWhyChoose": {
+    "description": "Auto imported from components/about-us-three/WhyChoose.vue"
+  },
   "AboutUsTwoFeatures": {
     "description": "Auto imported from components/about-us-two/Features.vue"
   },
@@ -41,35 +56,8 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
-  "AboutUsThreeContactInfo": {
-    "description": "Auto imported from components/about-us-three/ContactInfo.vue"
-  },
-  "AboutUsThreeFunFact": {
-    "description": "Auto imported from components/about-us-three/FunFact.vue"
-  },
-  "AboutUsThreeInstructor": {
-    "description": "Auto imported from components/about-us-three/Instructor.vue"
-  },
-  "AboutUsThreeTestimonial": {
-    "description": "Auto imported from components/about-us-three/Testimonial.vue"
-  },
-  "AboutUsThreeWhyChoose": {
-    "description": "Auto imported from components/about-us-three/WhyChoose.vue"
-  },
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
-  },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CommonBreadCrumbOne": {
     "description": "Auto imported from components/common/BreadCrumbOne.vue"
@@ -88,6 +76,18 @@
   },
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
+  },
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
+  },
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
+  },
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"

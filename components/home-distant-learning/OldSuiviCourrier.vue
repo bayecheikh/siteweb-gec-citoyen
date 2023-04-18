@@ -349,11 +349,7 @@ export default {
     color: #fff !important;
     cursor: pointer !important;
 }
-.icon-2 {
-    font-size: 1.3em !important;
-    margin-left: 25px !important;
-    color: #0a3764 !important;
-}
+
 .search-box .icon-4 {
     width: 80px !important;
     height: 2px !important;

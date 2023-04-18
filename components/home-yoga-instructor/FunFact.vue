@@ -19,7 +19,7 @@
                             <FunFact number="9.3" decimal="1" suffix="K" />
                            
                         </h2>
-                        <h6 class="title">USAGERS CONNECTÉS</h6>
+                        <h6 class="title">UTILISATEURS</h6>
                     </div>
                       <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
                       <section id="faq">
