@@ -3,7 +3,7 @@
         <div class="edu-faq-area custom-faq-style-3 faq-style-3 gap-bottom-equal">
             <div class="container custom-faq-container">
                 <div class="row g-5 row--45">
-                    <div class="col-lg-6" data-aos-delay="150" data-aos="fade-up" data-aos-duration="800">
+                    <div class="col-lg-6 custom-faq-left-section" data-aos-delay="150" data-aos="fade-up" data-aos-duration="800">
                         <div class="edu-faq-content ">
                             <div class="section-title section-left">
                                 <span class="pre-title">FAQ</span>
@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-6 custom-faq-video">
+                    <div class="col-lg-6 custom-faq-right-section">
                         <div class="edu-faq-content section-right">
                             <DemoVideo />
                         </div>
@@ -31,7 +31,7 @@
         components: {
             AccordionOne: () => import('@/components/AccordionOne'),
             MouseMove: () => import('@/components/animation/MouseMove'),
-            DemoVideo: () => import('@/components/home-distant-learning/Video')
+            DemoVideo: () => import('@/components/home-university/Video')
         }
     }
 </script>
@@ -65,10 +65,6 @@
         
         background-color: #f3f7f8 !important;
     }
-.custom-faq-video{
-    display: flex;
-  align-items: center; /* Centrer verticalement le contenu */
-  transform: translateY(10%); 
-}
+
 
 </style>
