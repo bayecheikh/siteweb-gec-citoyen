@@ -56,9 +56,6 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
   "BlogPostList": {
     "description": "Auto imported from components/blog/BlogPostList.vue"
   },
@@ -70,6 +67,9 @@
   },
   "BlogPostTwo": {
     "description": "Auto imported from components/blog/BlogPostTwo.vue"
+  },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
@@ -109,39 +109,6 @@
   },
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
-  },
-  "AboutUsTwoInstructor": {
-    "description": "Auto imported from components/about-us-two/Instructor.vue"
-  },
-  "AboutUsTwoLogo": {
-    "description": "Auto imported from components/about-us-two/Logo.vue"
-  },
-  "AboutUsTwoTestimonial": {
-    "description": "Auto imported from components/about-us-two/Testimonial.vue"
-  },
-  "AboutUsTwoVideo": {
-    "description": "Auto imported from components/about-us-two/Video.vue"
-  },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
-  },
-  "CtaCTAOne": {
-    "description": "Auto imported from components/cta/CTAOne.vue"
-  },
-  "CtaCTAOneAlter": {
-    "description": "Auto imported from components/cta/CTAOneAlter.vue"
   },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
