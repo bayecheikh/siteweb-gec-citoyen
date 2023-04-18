@@ -7,11 +7,16 @@
                         <div class="banner-content ">
                             <h1 class="title">Plateforme <span class="custom-banner-title-color">GEC CITOYEN</span> du Bénin
                             </h1>
-                            <p class="custom-subtitle">Plateforme digitale nationale destinée aux citoyens pour le dépôt
-                                électronique et sécurisé de courriers.</p>
+                            <p class="custom-subtitle">Plateforme digitale nationale pour le dépôt électronique et sécurisé de courriers à destination de l'administration béninoise.</p>
                             <div class="d-flex banner-btn custom-main-banner-btn">
-                                
-                                <a class="edu-btn custom-banner-track-btn"  @click="onClickSuivreCourrier">Suivre mon courrier</a>
+                                <div class="input-group custom-input-group">
+                                 
+    <!--<i class="icon-2"></i>-->
+
+                    <input type="text"  name="code" id="code" class="form-control custom-form-control" placeholder="Suivre mon courrier" v-model="courrier">
+                    <button class=" btn-medium custom-main-banner-track-btn" name="submit" type="submit" @click="onClickSuivreCourrier"><i class="custom-track-btn-icon icon-4"></i></button>
+                </div>
+                              <!--  <a class="edu-btn custom-banner-track-btn"  @click="onClickSuivreCourrier">Suivre mon courrier</a>-->
                                       
                                         <a @click="deposerCourrier()" class="edu-btn custom-banner-send-button">
         Déposer un courrier
@@ -82,14 +87,13 @@
             <HomeYogaInstructorFunFact />
         </div>
         <Authentication2 v-if="isauthenticatingfrombutton" />
-        <OldSuiviCourrier v-if="ispopupload" />
+        <SuiviCourrier v-if="ispopupload" />
 
     </div>
 </template>
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
-import OldSuiviCourrier from '../home-distant-learning/OldSuiviCourrier.vue';
 export default {
     computed: {
         ...mapGetters({
@@ -98,16 +102,26 @@ export default {
             isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
         })
     },
+    data() {
+            return {
+                courrier: ''
+            }
+        },
     components: {
         HomeYogaInstructorFunFact: () => import("@/components/home-yoga-instructor/FunFact.vue"),
         Authentication2: () => import("@/components/header/Authentication2.vue"),
         MouseMove: () => import("@/components/animation/MouseMove"),
-        OldSuiviCourrier: () => import("@/components/home-distant-learning/OldSuiviCourrier.vue"),
+        SuiviCourrier: () => import("@/components/home-distant-learning/SuiviCourrier.vue"),
     },
     methods: {
         async onClickSuivreCourrier() {
-            
-          this.$store.dispatch('suivicourrier/getDetail', true)
+            let code = document.getElementById("code").value;
+            if(!code){
+                return
+            }
+    // Utiliser la valeur de l'input comme vous le souhaitez
+            console.log("La valeur de l'input est : " + code);
+            await this.$store.dispatch('suivicourrier/getDetail', code)
         },
         deposerCourrier() {
             if (this.isloggedin) {
@@ -136,61 +150,18 @@ export default {
     padding-bottom: 20px;
 }
 
-.form-control::placeholder {
 
-    color: #6c757d;
-    opacity: 0.5 !important;
 
-}
 
-.banner-search .input-group .form-control {
-    height: 70px;
-    border: none;
-    line-height: 1;
-    font-size: 15px;
-    color: grey;
-    color: var(--color-body);
-    font-weight: 400;
-    padding: 0 0 0 20px;
-}
 
 .input-group:not(.has-validation)> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.input-group>.form-control {
-    position: relative;
-    flex: 1 1 auto;
-    width: 1%;
-    min-width: 0;
-}
 
-.form-control {
-    display: block;
 
-    background-color: #fff;
-    background-clip: padding-box;
 
-    appearance: none;
-    border-radius: .25rem;
-
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-input,
-select,
-textarea {
-    font-size: 100%;
-    margin: 0;
-    max-width: 100%;
-    vertical-align: baseline;
-    font-family: inherit;
-}
-
-.icon-2::before {
-    content: "\e901";
-}
 
 [class^="icon-"] {
     font-family: icomoon !important;
@@ -241,11 +212,7 @@ textarea {
     gap: 10px !important;
 }
 
-.custom-search::placeholder {
-    color: #6c757d;
-    opacity: 1;
-    padding: 20px;
-}
+
 
 @media (max-width: 767px) {
     .custom-main-banner-button {
@@ -262,11 +229,7 @@ textarea {
     color: #008064;
 }
 
-.custom-banner-search-button::placeholder {
-    color: #0a3764 !important;
-    font-weight: 300;
-    opacity: 0.8 !important;
-}
+
 
 .search-box .submit-button {
 
@@ -291,15 +254,16 @@ textarea {
     gap: 10px; /* Ajoute de l'espace entre les éléments */
     align-items: center; /* Centre les éléments verticalement */
 }
-.custom-banner-track-btn{
+.custom-main-banner-track-btn{
+    border: none;
     background: #0a3764 !important;
     cursor: pointer;
 }
-.custom-banner-track-btn:hover{
-    background: #3376b9 !important;
+.custom-main-banner-track-btn:hover{
+    background: #154f88 !important;
 }
-.custom-banner-track-btn::after{
-    background: #3376b9 !important;
+.custom-main-banner-track-btn::after{
+    background:  #154f88  !important;
 }
 @media (max-width: 992px) { /* Remplacer la valeur 768px par la largeur d'écran souhaitée */
     .custom-main-banner-btn {
@@ -308,5 +272,30 @@ textarea {
         gap: 10px; /* Ajoute de l'espace entre les éléments */
     }
 }
+.custom-input-group {
+  width: 300px;
+  height: 60px;
+}
+
+.custom-input-group input[type=email] {
+  height: 60px;
+  padding: 0 10px;
+}
+
+.custom-input-group button {
+  height: 60px;
+  width: 60px;
+}
+.custom-track-btn-icon{
+    color: white;
+}
+.custom-form-control {
+        text-transform: uppercase;
+    
+    }
+    .custom-form-control::placeholder {
+        text-transform: none;
+       
+    }
 </style>
 
