@@ -34,6 +34,31 @@
 
                   </svg>
                </div>
+               <div class="col-2 d-flex flex-column justify-content-center align-center">
+                  <div :class="'icon-step '+(detailactive_step.id=='coordonnees'?'active_step':'')" @click="$goToTab('coordonnees')">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
+                        viewBox="0 0 38.16 40.834">
+                        <g transform="translate(-5928 -10528.621)">
+                           <path
+                                 d="M40.159,28.56V24.04A9.04,9.04,0,0,0,31.119,15H13.04A9.04,9.04,0,0,0,4,24.04v4.52"
+                                 transform="translate(5925 10539.894)" fill="none" :stroke="detailactive_step.id=='coordonnees'?'#ffff':'#000'"
+                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                           <circle cx="8.771" cy="8.771" r="8.771" transform="translate(5939.57 10529.62)"
+                                 fill="none" :stroke="detailactive_step.id=='coordonnees'?'#ffff':'#000'" stroke-linecap="round" stroke-linejoin="round"
+                                 stroke-width="2" />
+                        </g>
+                     </svg>
+                  </div>
+                  <p class="title_step pt-2">Saisissez vos coordonnées</p>
+               </div>
+               
+               <div class="col-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+
+                  <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='contenu'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
+
+                  </svg>
+               </div>
                
                <div class="col-2 d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step '+(detailactive_step.id=='contenu'?'active_step':'')" @click="$goToTab('contenu')">
@@ -51,31 +76,6 @@
                      </svg>
                   </div>
                   <p class="title_step pt-2">Remplir le formulaire de somission</p>
-               </div>
-               <div class="col-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
-
-                  <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none" :stroke="detailactive_step.id=='contenu'?'#008064':'#ffff'" stroke-linecap="round" stroke-width="6" opacity="0.998"/>
-
-                  </svg>
-               </div>
-               
-               <div class="col-2 d-flex flex-column justify-content-center align-center">
-                  <div :class="'icon-step '+(detailactive_step.id=='coordonnees'?'active_step':'')" @click="$goToTab('coordonnees')">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
-                        viewBox="0 0 38.16 40.834">
-                        <g transform="translate(-5928 -10528.621)">
-                           <path
-                                 d="M40.159,28.56V24.04A9.04,9.04,0,0,0,31.119,15H13.04A9.04,9.04,0,0,0,4,24.04v4.52"
-                                 transform="translate(5925 10539.894)" fill="none" :stroke="detailactive_step.id=='coordonnees'?'#ffff':'#000'"
-                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                           <circle cx="8.771" cy="8.771" r="8.771" transform="translate(5939.57 10529.62)"
-                                 fill="none" :stroke="detailactive_step.id=='coordonnees'?'#ffff':'#000'" stroke-linecap="round" stroke-linejoin="round"
-                                 stroke-width="2" />
-                        </g>
-                     </svg>
-                  </div>
-                  <p class="title_step pt-2">Saisissez vos coordonnées</p>
                </div>
                <div class="col-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">

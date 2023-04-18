@@ -2,7 +2,9 @@
 <template>
     <div id="main-wrapper" class="main-wrapper bg-lighten05">
         <HeaderTwo/>
+<div class="custom-slider-home">
 
+</div>
       <Banner />
       <!--<HomeYogaInstructorFunFact/>-->
 
@@ -33,3 +35,8 @@
     }
     
 </script>
+<style scoped>
+.custom-slider-home{
+    
+}
+</style>

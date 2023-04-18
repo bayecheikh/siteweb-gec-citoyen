@@ -165,7 +165,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
                 this.$store.dispatch('coordonnees/getDetail',{...this.model})
-                this.$store.dispatch('active_step/getDetail',{id:'validation'})
+                this.$store.dispatch('active_step/getDetail',{id:'contenu'})
                 /* this.$axios.$post('/demandes')
                 .then(async (response) => {
                     //this.$toast.success(response.message).goAway(2000)
