@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _320e0bcc = () => interopDefault(import('..\\pages\\about-us-one.vue' /* webpackChunkName: "pages/about-us-one" */))
 const _69456b84 = () => interopDefault(import('..\\pages\\about-us-three.vue' /* webpackChunkName: "pages/about-us-three" */))
 const _4a75bcb2 = () => interopDefault(import('..\\pages\\about-us-two.vue' /* webpackChunkName: "pages/about-us-two" */))
+const _28497b22 = () => interopDefault(import('..\\pages\\accueil.vue' /* webpackChunkName: "pages/accueil" */))
 const _0003c889 = () => interopDefault(import('..\\pages\\addcourrier.vue' /* webpackChunkName: "pages/addcourrier" */))
 const _706986fc = () => interopDefault(import('..\\pages\\coming-soon.vue' /* webpackChunkName: "pages/coming-soon" */))
 const _4123bd7a = () => interopDefault(import('..\\pages\\contact-me.vue' /* webpackChunkName: "pages/contact-me" */))
@@ -24,6 +25,8 @@ const _a2b913fc = () => interopDefault(import('..\\pages\\pricing-table.vue' /* 
 const _6f6bdaa8 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
 const _719e6b76 = () => interopDefault(import('..\\pages\\purchase-guide.vue' /* webpackChunkName: "pages/purchase-guide" */))
 const _935ae252 = () => interopDefault(import('..\\pages\\shop\\index.vue' /* webpackChunkName: "pages/shop/index" */))
+const _33d7b919 = () => interopDefault(import('..\\pages\\signaler-probleme.vue' /* webpackChunkName: "pages/signaler-probleme" */))
+const _a035fcce = () => interopDefault(import('..\\pages\\suggestion.vue' /* webpackChunkName: "pages/suggestion" */))
 const _642e68e0 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
 const _785a65ba = () => interopDefault(import('..\\pages\\university.vue' /* webpackChunkName: "pages/university" */))
 const _5eef2cd5 = () => interopDefault(import('..\\pages\\yoga-instructor.vue' /* webpackChunkName: "pages/yoga-instructor" */))
@@ -75,6 +78,10 @@ export const routerOptions = {
     path: "/about-us-two",
     component: _4a75bcb2,
     name: "about-us-two"
+  }, {
+    path: "/accueil",
+    component: _28497b22,
+    name: "accueil"
   }, {
     path: "/addcourrier",
     component: _0003c889,
@@ -143,6 +150,14 @@ export const routerOptions = {
     path: "/shop",
     component: _935ae252,
     name: "shop"
+  }, {
+    path: "/signaler-probleme",
+    component: _33d7b919,
+    name: "signaler-probleme"
+  }, {
+    path: "/suggestion",
+    component: _a035fcce,
+    name: "suggestion"
   }, {
     path: "/terms-condition",
     component: _642e68e0,

@@ -8,6 +8,9 @@
   "InstagramPost": {
     "description": "Auto imported from components/InstagramPost.vue"
   },
+  "PopUpConnexion": {
+    "description": "Auto imported from components/PopUpConnexion.vue"
+  },
   "About": {
     "description": "Auto imported from components/about-us-one/About.vue"
   },
@@ -68,24 +71,6 @@
   "BlogPostTwo": {
     "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
-  "CommonBreadCrumbOne": {
-    "description": "Auto imported from components/common/BreadCrumbOne.vue"
-  },
-  "CommonBreadCrumbThree": {
-    "description": "Auto imported from components/common/BreadCrumbThree.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonColorMode": {
-    "description": "Auto imported from components/common/ColorMode.vue"
-  },
-  "CommonPaginationOne": {
-    "description": "Auto imported from components/common/PaginationOne.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
   },
@@ -106,6 +91,57 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
+  },
+  "CommonBreadCrumbOne": {
+    "description": "Auto imported from components/common/BreadCrumbOne.vue"
+  },
+  "CommonBreadCrumbThree": {
+    "description": "Auto imported from components/common/BreadCrumbThree.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonColorMode": {
+    "description": "Auto imported from components/common/ColorMode.vue"
+  },
+  "CommonPaginationOne": {
+    "description": "Auto imported from components/common/PaginationOne.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "AboutUsTwoInstructor": {
+    "description": "Auto imported from components/about-us-two/Instructor.vue"
+  },
+  "AboutUsTwoLogo": {
+    "description": "Auto imported from components/about-us-two/Logo.vue"
+  },
+  "AboutUsTwoTestimonial": {
+    "description": "Auto imported from components/about-us-two/Testimonial.vue"
+  },
+  "AboutUsTwoVideo": {
+    "description": "Auto imported from components/about-us-two/Video.vue"
+  },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
+  },
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
+  },
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
+  },
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
+  },
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
+  },
+  "CtaCTAOne": {
+    "description": "Auto imported from components/cta/CTAOne.vue"
+  },
+  "CtaCTAOneAlter": {
+    "description": "Auto imported from components/cta/CTAOneAlter.vue"
   },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
@@ -176,6 +212,9 @@
   "FooterScrollToTop": {
     "description": "Auto imported from components/footer/ScrollToTop.vue"
   },
+  "HeaderAuthentication2": {
+    "description": "Auto imported from components/header/Authentication2.vue"
+  },
   "HeaderCategory": {
     "description": "Auto imported from components/header/Category.vue"
   },
@@ -238,6 +277,9 @@
   },
   "HomeDistantLearningLogo": {
     "description": "Auto imported from components/home-distant-learning/Logo.vue"
+  },
+  "HomeDistantLearningOldSuiviCourrier": {
+    "description": "Auto imported from components/home-distant-learning/OldSuiviCourrier.vue"
   },
   "HomeDistantLearningSuiviCourrier": {
     "description": "Auto imported from components/home-distant-learning/SuiviCourrier.vue"

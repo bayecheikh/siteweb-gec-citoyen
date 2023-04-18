@@ -3,25 +3,25 @@
         <div class="accordion">
             <div class="accordion-item">
                 <h5 class="accordion-header ">
-                    <button class="accordion-button " type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                    <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
                         Comment se connecter à la plateforme ?
                     </button>
                 </h5>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Pour vous connecter à la plateforme, vous devez disposer d'un compte au Portail National des Services Publics du Bénin.</p>
+                        <p>Pour vous connecter à la plateforme, vous devez disposer d'un compte au Portail National des Services Publics du Bénin ou sur la Plateforme Nationale d'Interopérabilité (XROAD BJ).</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
-                        Quels sont les ministères concernés ?
+                        Quels sont les organismes concernés ?
                     </button>
                 </h5>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Les Ministères concernés sont : le Ministère des Affaires Étrangères, le Ministère du Numérique et de la Digitalisation, le Ministère du Développement et de la Coordination de l'Action Gouvernementale, le Ministère du Travail et de la Fonction Publique, le Ministère du Cadre de Vie et du Développement Durable, le Ministère de la Défense Nationale et le Ministère de l'Agriculture, de l'Élevage et de la Pêche. </p>
+                        <p>Les organismes concernés sont : le Ministère des Affaires Étrangères, le Ministère du Numérique et de la Digitalisation, le Ministère du Développement et de la Coordination de l'Action Gouvernementale, le Ministère du Travail et de la Fonction Publique, le Ministère du Cadre de Vie et du Développement Durable, le Ministère de la Défense Nationale et le Ministère de l'Agriculture, de l'Élevage et de la Pêche. Cette liste est évolutive. </p>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 </h5>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>L'envoi du courrier se fait via un formulaire simple. Vous pouvez importer votre courrier et y joindre d'autres fichiers si besoin.</p>
+                        <p>L'envoi du courrier se fait via un formulaire simple. Vous serez guidé étape par étape.</p>
                     </div>
                 </div>
             </div>
@@ -53,10 +53,3 @@
     </div>
 </template>
 
-<style scoped>
-
-    .custom-accordion-header{
-        color: rgb(0, 128, 100) !important; 
-    }
-
-</style>

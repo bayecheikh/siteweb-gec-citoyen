@@ -9,6 +9,10 @@ You can directly use them in pages and other components without the need to impo
 - `<AccordionOne>` | `<accordion-one>` (components/AccordionOne.vue)
 - `<FunFact>` | `<fun-fact>` (components/FunFact.vue)
 - `<InstagramPost>` | `<instagram-post>` (components/InstagramPost.vue)
+<<<<<<< HEAD
+=======
+- `<PopUpConnexion>` | `<pop-up-connexion>` (components/PopUpConnexion.vue)
+>>>>>>> dev
 - `<About>` | `<about>` (components/about-us-one/About.vue)
 - `<AboutUsOneFunFact>` | `<about-us-one-fun-fact>` (components/about-us-one/FunFact.vue)
 - `<AboutUsOneInstructor>` | `<about-us-one-instructor>` (components/about-us-one/Instructor.vue)
@@ -29,12 +33,15 @@ You can directly use them in pages and other components without the need to impo
 - `<BlogPostOne>` | `<blog-post-one>` (components/blog/BlogPostOne.vue)
 - `<BlogPostStandard>` | `<blog-post-standard>` (components/blog/BlogPostStandard.vue)
 - `<BlogPostTwo>` | `<blog-post-two>` (components/blog/BlogPostTwo.vue)
+<<<<<<< HEAD
 - `<CommonBreadCrumbOne>` | `<common-bread-crumb-one>` (components/common/BreadCrumbOne.vue)
 - `<CommonBreadCrumbThree>` | `<common-bread-crumb-three>` (components/common/BreadCrumbThree.vue)
 - `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
 - `<CommonColorMode>` | `<common-color-mode>` (components/common/ColorMode.vue)
 - `<CommonPaginationOne>` | `<common-pagination-one>` (components/common/PaginationOne.vue)
 - `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
+=======
+>>>>>>> dev
 - `<CourriersConnexion>` | `<courriers-connexion>` (components/courriers/Connexion.vue)
 - `<CourriersContenu>` | `<courriers-contenu>` (components/courriers/Contenu.vue)
 - `<CourriersCoordonnees>` | `<courriers-coordonnees>` (components/courriers/Coordonnees.vue)
@@ -42,6 +49,15 @@ You can directly use them in pages and other components without the need to impo
 - `<CourriersMinisteres>` | `<courriers-ministeres>` (components/courriers/Ministeres.vue)
 - `<CourriersPrevisualisation>` | `<courriers-previsualisation>` (components/courriers/Previsualisation.vue)
 - `<CourriersValidation>` | `<courriers-validation>` (components/courriers/Validation.vue)
+<<<<<<< HEAD
+=======
+- `<CommonBreadCrumbOne>` | `<common-bread-crumb-one>` (components/common/BreadCrumbOne.vue)
+- `<CommonBreadCrumbThree>` | `<common-bread-crumb-three>` (components/common/BreadCrumbThree.vue)
+- `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
+- `<CommonColorMode>` | `<common-color-mode>` (components/common/ColorMode.vue)
+- `<CommonPaginationOne>` | `<common-pagination-one>` (components/common/PaginationOne.vue)
+- `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
+>>>>>>> dev
 - `<CourseTypeEight>` | `<course-type-eight>` (components/course/CourseTypeEight.vue)
 - `<CourseTypeFive>` | `<course-type-five>` (components/course/CourseTypeFive.vue)
 - `<CourseTypeFour>` | `<course-type-four>` (components/course/CourseTypeFour.vue)
@@ -65,6 +81,7 @@ You can directly use them in pages and other components without the need to impo
 - `<FooterYoga>` | `<footer-yoga>` (components/footer/FooterYoga.vue)
 - `<FooterGoogleMapWithAPI>` | `<footer-google-map-with-a-p-i>` (components/footer/GoogleMapWithAPI.vue)
 - `<FooterScrollToTop>` | `<footer-scroll-to-top>` (components/footer/ScrollToTop.vue)
+- `<HeaderAuthentication2>` | `<header-authentication2>` (components/header/Authentication2.vue)
 - `<HeaderCategory>` | `<header-category>` (components/header/Category.vue)
 - `<HeaderFour>` | `<header-four>` (components/header/HeaderFour.vue)
 - `<HeaderLanding>` | `<header-landing>` (components/header/HeaderLanding.vue)
@@ -86,6 +103,7 @@ You can directly use them in pages and other components without the need to impo
 - `<HomeDistantLearningFAQ>` | `<home-distant-learning-f-a-q>` (components/home-distant-learning/FAQ.vue)
 - `<HomeDistantLearningFunFact>` | `<home-distant-learning-fun-fact>` (components/home-distant-learning/FunFact.vue)
 - `<HomeDistantLearningLogo>` | `<home-distant-learning-logo>` (components/home-distant-learning/Logo.vue)
+- `<HomeDistantLearningOldSuiviCourrier>` | `<home-distant-learning-old-suivi-courrier>` (components/home-distant-learning/OldSuiviCourrier.vue)
 - `<HomeDistantLearningSuiviCourrier>` | `<home-distant-learning-suivi-courrier>` (components/home-distant-learning/SuiviCourrier.vue)
 - `<HomeDistantLearningVideo>` | `<home-distant-learning-video>` (components/home-distant-learning/Video.vue)
 - `<HomeKindergartenAbout>` | `<home-kindergarten-about>` (components/home-kindergarten/About.vue)

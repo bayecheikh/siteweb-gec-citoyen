@@ -1,5 +1,5 @@
 {
-    "name": "edublink",
+    "name": "gec-citoyen",
     "version": "1.0.0",
     "author": "DevsBlink",
     "private": true,
@@ -16,6 +16,7 @@
         "aos": "^2.3.4",
         "core-js": "^3.18.2",
         "emailjs-com": "^3.2.0",
+        "html2pdf": "^0.0.11",
         "html2pdf.js": "^0.10.1",
         "nuxt": "^2.15.8",
         "parallax-js": "^3.1.0",

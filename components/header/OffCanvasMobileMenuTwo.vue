@@ -5,8 +5,7 @@
             <div class="header-top">
                 <div class="logo">
                     <n-link to="/">
-                        <img class="logo-light" src="/images/logo/logo-dark-2.png" alt="Dark Logo" v-if="$colorMode.value === 'light'">
-                        <img class="logo-dark" src="/images/logo/logo-white.png" alt="Light Logo" v-if="$colorMode.value === 'dark'">
+                       <h3>GEC CITOYEN</h3>
                     </n-link>
                 </div>
                 <div class="close-menu">
@@ -40,3 +39,4 @@
         }
     }
 </script>
+

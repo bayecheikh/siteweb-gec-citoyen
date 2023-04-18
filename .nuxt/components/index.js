@@ -1,6 +1,10 @@
 export { default as AccordionOne } from '../..\\components\\AccordionOne.vue'
 export { default as FunFact } from '../..\\components\\FunFact.vue'
 export { default as InstagramPost } from '../..\\components\\InstagramPost.vue'
+<<<<<<< HEAD
+=======
+export { default as PopUpConnexion } from '../..\\components\\PopUpConnexion.vue'
+>>>>>>> dev
 export { default as About } from '../..\\components\\about-us-one\\About.vue'
 export { default as AboutUsOneFunFact } from '../..\\components\\about-us-one\\FunFact.vue'
 export { default as AboutUsOneInstructor } from '../..\\components\\about-us-one\\Instructor.vue'
@@ -21,12 +25,15 @@ export { default as BlogPostList } from '../..\\components\\blog\\BlogPostList.v
 export { default as BlogPostOne } from '../..\\components\\blog\\BlogPostOne.vue'
 export { default as BlogPostStandard } from '../..\\components\\blog\\BlogPostStandard.vue'
 export { default as BlogPostTwo } from '../..\\components\\blog\\BlogPostTwo.vue'
+<<<<<<< HEAD
 export { default as CommonBreadCrumbOne } from '../..\\components\\common\\BreadCrumbOne.vue'
 export { default as CommonBreadCrumbThree } from '../..\\components\\common\\BreadCrumbThree.vue'
 export { default as CommonBreadCrumbTwo } from '../..\\components\\common\\BreadCrumbTwo.vue'
 export { default as CommonColorMode } from '../..\\components\\common\\ColorMode.vue'
 export { default as CommonPaginationOne } from '../..\\components\\common\\PaginationOne.vue'
 export { default as CommonSectionTitle } from '../..\\components\\common\\SectionTitle.vue'
+=======
+>>>>>>> dev
 export { default as CourriersConnexion } from '../..\\components\\courriers\\Connexion.vue'
 export { default as CourriersContenu } from '../..\\components\\courriers\\Contenu.vue'
 export { default as CourriersCoordonnees } from '../..\\components\\courriers\\Coordonnees.vue'
@@ -34,6 +41,15 @@ export { default as CourriersForm } from '../..\\components\\courriers\\Form.vue
 export { default as CourriersMinisteres } from '../..\\components\\courriers\\Ministeres.vue'
 export { default as CourriersPrevisualisation } from '../..\\components\\courriers\\Previsualisation.vue'
 export { default as CourriersValidation } from '../..\\components\\courriers\\Validation.vue'
+<<<<<<< HEAD
+=======
+export { default as CommonBreadCrumbOne } from '../..\\components\\common\\BreadCrumbOne.vue'
+export { default as CommonBreadCrumbThree } from '../..\\components\\common\\BreadCrumbThree.vue'
+export { default as CommonBreadCrumbTwo } from '../..\\components\\common\\BreadCrumbTwo.vue'
+export { default as CommonColorMode } from '../..\\components\\common\\ColorMode.vue'
+export { default as CommonPaginationOne } from '../..\\components\\common\\PaginationOne.vue'
+export { default as CommonSectionTitle } from '../..\\components\\common\\SectionTitle.vue'
+>>>>>>> dev
 export { default as CourseTypeEight } from '../..\\components\\course\\CourseTypeEight.vue'
 export { default as CourseTypeFive } from '../..\\components\\course\\CourseTypeFive.vue'
 export { default as CourseTypeFour } from '../..\\components\\course\\CourseTypeFour.vue'
@@ -57,6 +73,7 @@ export { default as FooterTwo } from '../..\\components\\footer\\FooterTwo.vue'
 export { default as FooterYoga } from '../..\\components\\footer\\FooterYoga.vue'
 export { default as FooterGoogleMapWithAPI } from '../..\\components\\footer\\GoogleMapWithAPI.vue'
 export { default as FooterScrollToTop } from '../..\\components\\footer\\ScrollToTop.vue'
+export { default as HeaderAuthentication2 } from '../..\\components\\header\\Authentication2.vue'
 export { default as HeaderCategory } from '../..\\components\\header\\Category.vue'
 export { default as HeaderFour } from '../..\\components\\header\\HeaderFour.vue'
 export { default as HeaderLanding } from '../..\\components\\header\\HeaderLanding.vue'
@@ -78,6 +95,7 @@ export { default as HomeDistantLearningCourse } from '../..\\components\\home-di
 export { default as HomeDistantLearningFAQ } from '../..\\components\\home-distant-learning\\FAQ.vue'
 export { default as HomeDistantLearningFunFact } from '../..\\components\\home-distant-learning\\FunFact.vue'
 export { default as HomeDistantLearningLogo } from '../..\\components\\home-distant-learning\\Logo.vue'
+export { default as HomeDistantLearningOldSuiviCourrier } from '../..\\components\\home-distant-learning\\OldSuiviCourrier.vue'
 export { default as HomeDistantLearningSuiviCourrier } from '../..\\components\\home-distant-learning\\SuiviCourrier.vue'
 export { default as HomeDistantLearningVideo } from '../..\\components\\home-distant-learning\\Video.vue'
 export { default as HomeKindergartenAbout } from '../..\\components\\home-kindergarten\\About.vue'
