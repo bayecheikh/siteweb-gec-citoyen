@@ -68,87 +68,87 @@ export const routerOptions = {
 
   routes: [{
     path: "/about-us-one",
-    component: _2ade83d4,
+    component: _320e0bcc,
     name: "about-us-one"
   }, {
     path: "/about-us-three",
-    component: _0be4b34e,
+    component: _69456b84,
     name: "about-us-three"
   }, {
     path: "/about-us-two",
-    component: _02f86efc,
+    component: _4a75bcb2,
     name: "about-us-two"
   }, {
     path: "/accueil",
-    component: _3410c9e5,
+    component: _28497b22,
     name: "accueil"
   }, {
     path: "/addcourrier",
-    component: _cac6b602,
+    component: _0003c889,
     name: "addcourrier"
   }, {
     path: "/coming-soon",
-    component: _626418f8,
+    component: _706986fc,
     name: "coming-soon"
   }, {
     path: "/contact-me",
-    component: _4e627a44,
+    component: _4123bd7a,
     name: "contact-me"
   }, {
     path: "/contact-us",
-    component: _5cce884a,
+    component: _4f8fcb80,
     name: "contact-us"
   }, {
     path: "/distant-learning",
-    component: _1af75509,
+    component: _b9ea5082,
     name: "distant-learning"
   }, {
     path: "/faq",
-    component: _4852fe72,
+    component: _4212635e,
     name: "faq"
   }, {
     path: "/gallery-grid",
-    component: _34913e00,
+    component: _2d34aeb6,
     name: "gallery-grid"
   }, {
     path: "/gallery-masonry",
-    component: _0fb284fb,
+    component: _5e68d385,
     name: "gallery-masonry"
   }, {
     path: "/kindergarten",
-    component: _556d0e65,
+    component: _c62b47ca,
     name: "kindergarten"
   }, {
     path: "/kitchen-coach",
-    component: _5cc1ebbc,
+    component: _79cb732c,
     name: "kitchen-coach"
   }, {
     path: "/landing-demo",
-    component: _5b57c7f8,
+    component: _ba55d4a4,
     name: "landing-demo"
   }, {
     path: "/my-account",
-    component: _358c3f6b,
+    component: _284d82a1,
     name: "my-account"
   }, {
     path: "/online-academy",
-    component: _3e370751,
+    component: _c8d080f2,
     name: "online-academy"
   }, {
     path: "/pricing-table",
-    component: _06770cf8,
+    component: _a2b913fc,
     name: "pricing-table"
   }, {
     path: "/privacy-policy",
-    component: _6ae95a76,
+    component: _6f6bdaa8,
     name: "privacy-policy"
   }, {
     path: "/purchase-guide",
-    component: _69d0120f,
+    component: _719e6b76,
     name: "purchase-guide"
   }, {
     path: "/shop",
-    component: _50eb6b4d,
+    component: _935ae252,
     name: "shop"
   }, {
     path: "/signaler-probleme",
@@ -160,111 +160,111 @@ export const routerOptions = {
     name: "suggestion"
   }, {
     path: "/terms-condition",
-    component: _7f327d06,
+    component: _642e68e0,
     name: "terms-condition"
   }, {
     path: "/university",
-    component: _5ddcec26,
+    component: _785a65ba,
     name: "university"
   }, {
     path: "/yoga-instructor",
-    component: _1038de4b,
+    component: _5eef2cd5,
     name: "yoga-instructor"
   }, {
     path: "/blog/blog-details",
-    component: _243d1598,
+    component: _150a7a64,
     name: "blog-blog-details"
   }, {
     path: "/blog/blog-list",
-    component: _070b0b38,
+    component: _55c159c2,
     name: "blog-blog-list"
   }, {
     path: "/blog/blog-masonry",
-    component: _87832fca,
+    component: _e507d55e,
     name: "blog-blog-masonry"
   }, {
     path: "/blog/blog-standard",
-    component: _abd7fe52,
+    component: _008bfa61,
     name: "blog-blog-standard"
   }, {
     path: "/course/course-details",
-    component: _3ee3b68a,
+    component: _9b084e80,
     name: "course-course-details"
   }, {
     path: "/course/course-details-2",
-    component: _0f3d2d2f,
+    component: _0554cc36,
     name: "course-course-details-2"
   }, {
     path: "/course/course-details-3",
-    component: _0f4b44b0,
+    component: _05389d34,
     name: "course-course-details-3"
   }, {
     path: "/course/course-five",
-    component: _283b7b9a,
+    component: _7eb37524,
     name: "course-course-five"
   }, {
     path: "/course/course-four",
-    component: _64a3380e,
+    component: _89c99cd0,
     name: "course-course-four"
   }, {
     path: "/course/course-one",
-    component: _a9d2cea4,
+    component: _7c5445e4,
     name: "course-course-one"
   }, {
     path: "/course/course-three",
-    component: _7b437034,
+    component: _3ae57f9c,
     name: "course-course-three"
   }, {
     path: "/course/course-two",
-    component: _79036cd8,
+    component: _d688126c,
     name: "course-course-two"
   }, {
     path: "/event/event-details",
-    component: _a23e4058,
+    component: _2768178a,
     name: "event-event-details"
   }, {
     path: "/event/event-grid",
-    component: _f94bddb8,
+    component: _049235a4,
     name: "event-event-grid"
   }, {
     path: "/event/event-list",
-    component: _7ecc6b08,
+    component: _3af69e86,
     name: "event-event-list"
   }, {
     path: "/instructor/instructor-one",
-    component: _fb57f39c,
+    component: _4c041d68,
     name: "instructor-instructor-one"
   }, {
     path: "/instructor/instructor-profile",
-    component: _8ab76416,
+    component: _7369da2b,
     name: "instructor-instructor-profile"
   }, {
     path: "/instructor/instructor-three",
-    component: _8013372c,
+    component: _4404f3c0,
     name: "instructor-instructor-three"
   }, {
     path: "/instructor/instructor-two",
-    component: _ca8891d0,
+    component: _646bce4e,
     name: "instructor-instructor-two"
   }, {
     path: "/shop/cart",
-    component: _acb3a716,
+    component: _c73120aa,
     name: "shop-cart"
   }, {
     path: "/shop/checkout",
-    component: _0b3c55ca,
+    component: _57c28d51,
     name: "shop-checkout"
   }, {
     path: "/shop/product-details",
-    component: _f57f25c2,
+    component: _1da02c29,
     name: "shop-product-details"
   }, {
     path: "/shop/wishlist",
-    component: _dcd833cc,
+    component: _2216c360,
     name: "shop-wishlist"
   }, {
     path: "/",
-    component: _1cc8837a,
+    component: _a4425d66,
     name: "index"
   }],
 
