@@ -15,6 +15,11 @@
 <script>
 
     export default {
+        mounted: function() {  
+            this.windowHeight = window.innerHeight;   
+            
+            this.$store.dispatch('banner/getDetail',this.windowHeight)   
+        },
         components: {
             HeaderTwo: () => import("@/components/header/HeaderTwo.vue"),
             Banner: () => import("@/components/home-main/Banner.vue"),
@@ -28,12 +33,12 @@
             return {
                 title: 'GEC CITOYEN'
             }
+        },
+        data() {
+            return {
+                windowHeight: ''
+            }
         }
     }
     
 </script>
-<style scoped>
-.custom-slider-home{
-    
-}
-</style>

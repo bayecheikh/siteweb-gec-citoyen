@@ -7,8 +7,8 @@
             <div class="banner-content">
               <h3 class="title">
                 Plateforme
-                <span class="custom-banner-title-color">GEC CITOYEN</span> du
-                Bénin
+                <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
+                Bénin </div>
               </h3>
               <p class="custom-subtitle">
                 Plateforme digitale nationale pour le dépôt électronique et
@@ -42,7 +42,7 @@
                   @click="deposerCourrier()"
                   class="edu-btn custom-banner-send-button"
                 >
-                  Déposer un courrier
+                  DÉPOSER UN COURRIER
                 </a>
               </div>
               <!--          <div class="d-flex banner-btn custom-main-banner-button flex-wrap">
@@ -156,8 +156,18 @@
 <script>
 import { mapMutations, mapGetters } from "vuex";
 export default {
+  mounted: function() {  
+    this.windowHeight = this.detailbanner;   
+
+    console.log("assdff",this.windowHeight)    
+    this.windowHeight = this.detailbanner;   
+
+    const newHeight = this.windowHeight - 248;
+    document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
+        },
   computed: {
     ...mapGetters({
+      detailbanner: 'banner/detailbanner',
       isloggedin: "authentication/isloggedin",
       ispopupload: "suivicourrier/ispopupload",
       isauthenticatingfrombutton: "authentication/isauthenticatingfrombutton",
@@ -166,14 +176,10 @@ export default {
   data() {
     return {
       courrier: "",
-      windowHeight:"ddd"
+      windowHeight:0
     };
   },
-  mounted() {
-    window.addEventListener('resize', () => {
-        this.windowHeight = window.innerHeight
-    })
-  },
+ 
   components: {
     HomeYogaInstructorFunFact: () =>
       import("@/components/home-yoga-instructor/FunFact.vue"),
@@ -257,14 +263,17 @@ export default {
 
 .custom-banner-send-button {
   cursor: pointer;
+  background: #008064 !important;
+  background-color: #008064 !;
+  font-weight: 700 !important;
 }
 .custom-banner-send-button-2 {
   cursor: pointer;
-  background: #008064 !important;
+  
   color: #fff !important;
   padding: 10px;
 
-  font-weight: 700 !important;
+  
 }
 
 .custom-main-banner-button {
@@ -347,13 +356,19 @@ export default {
 }
 .custom-form-control::placeholder {
   text-transform: none;
+  color: #0a3764 !important;
 }
-.custom-hero-banner{
+
+@media (min-width: 992px) {
+  .custom-hero-banner{
     min-height: 0px !important; 
     max-height: 100vh; 
 }
-.custom-image-banner{
-    height: 400px;
+.custom-image-banner {
+  height: 479px ; /* 248px = hauteur header + hauteur barre statistiques*/
 }
+}
+
+
 </style>
 
