@@ -93,6 +93,10 @@
                 <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.email">
             </div>
             <div class="form-group col-12">
+                <label for="log-email">Adresse*</label>
+                <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Adresse" v-model="model.adresse">
+            </div>
+            <!-- <div class="form-group col-12">
                 <label for="reg-name">Adresse*</label>
                 <div class="border-adresse row d-flex p-5">
                     <div class="form-group col-6">
@@ -109,7 +113,7 @@
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
             
             <div class="form-group col-6">
                 <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
