@@ -497,7 +497,8 @@ export default {
 
 .custom-nps-sign-in-btn {
     cursor: pointer;
-    background-color: #4c8977 !important;
+    background-color: #008064 !important;
+    background: #008064 !important;
 }
 
 .password-toggle {
@@ -531,44 +532,6 @@ export default {
     color: #FF5733 !important;
 }
 
-.initials-circle {
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: #7289da;
-    text-align: center;
-    line-height: 50px;
-}
-
-.tooltip {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    margin-left: -65px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.initials-circle:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-.initials {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-}
 
 .custom-connexion-title {
     border-bottom: 1px solid black !important;
@@ -628,7 +591,7 @@ export default {
 .left-block {
     flex-basis: 40%;
  
-    background: linear-gradient(-90deg,  #61b8a5 0%,  #008064 100%);
+    background: #008064;
    
     display: flex; align-items: center;
 }

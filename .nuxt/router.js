@@ -24,6 +24,7 @@ const _3e370751 = () => interopDefault(import('..\\pages\\online-academy.vue' /*
 const _06770cf8 = () => interopDefault(import('..\\pages\\pricing-table.vue' /* webpackChunkName: "pages/pricing-table" */))
 const _6ae95a76 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
 const _69d0120f = () => interopDefault(import('..\\pages\\purchase-guide.vue' /* webpackChunkName: "pages/purchase-guide" */))
+const _0e9be0d6 = () => interopDefault(import('..\\pages\\remerciement.vue' /* webpackChunkName: "pages/remerciement" */))
 const _50eb6b4d = () => interopDefault(import('..\\pages\\shop\\index.vue' /* webpackChunkName: "pages/shop/index" */))
 const _8d0a35e2 = () => interopDefault(import('..\\pages\\signaler-probleme.vue' /* webpackChunkName: "pages/signaler-probleme" */))
 const _85b8833a = () => interopDefault(import('..\\pages\\suggestion.vue' /* webpackChunkName: "pages/suggestion" */))
@@ -146,6 +147,10 @@ export const routerOptions = {
     path: "/purchase-guide",
     component: _69d0120f,
     name: "purchase-guide"
+  }, {
+    path: "/remerciement",
+    component: _0e9be0d6,
+    name: "remerciement"
   }, {
     path: "/shop",
     component: _50eb6b4d,

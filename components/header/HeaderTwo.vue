@@ -78,6 +78,14 @@
                                                 </svg>
                                             </span></a>
                             </li>
+                            <li>
+                                <div class="initials-circle">
+                                        <span class="initials">CG</span>
+                                        <span class="tooltip">Cheikh Gueye<br>NPI : 0087742803</span>
+
+                                    </div>
+
+                            </li>
                             <li class="mobile-menu-bar d-block d-xl-none">
                                 <button class="hamberger-button" @click="mobileMenuOpen( 'addClass', 'active' )">
                                     <i class="icon-54"></i>
@@ -328,4 +336,38 @@ a.edu-btn, button.edu-btn{
     height: auto !important;
 }
 
+.initials-circle {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #7289da;
+    text-align: center;
+  
+}
+.tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    right: 50%;
+  
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.initials-circle:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.initials {
+  
+   
+    color: #fff;
+}
 </style>

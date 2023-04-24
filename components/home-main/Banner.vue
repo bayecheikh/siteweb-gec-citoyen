@@ -26,6 +26,7 @@
                     class="form-control custom-form-control"
                     placeholder="Suivre mon courrier"
                     v-model="courrier"
+                    
                   />
                   <button
                     class="btn-medium custom-main-banner-track-btn"
@@ -316,7 +317,9 @@ export default {
   align-items: center; /* Centre les éléments verticalement */
 }
 .custom-main-banner-track-btn {
-  border: none;
+  border-radius: 5px;
+  border-color: #0a3764 !important;
+  background-color:#0a3764 !important;
   background: #0a3764 !important;
   cursor: pointer;
 }
@@ -368,7 +371,32 @@ export default {
   height: 479px ; /* 248px = hauteur header + hauteur barre statistiques*/
 }
 }
-
-
+@media (max-width: 1200px) {
+  .custom-banner-send-button{
+    font-size: 12px !important;
+    line-height: 30px !important;
+  }
+}
+@media (max-width: 992px) {
+  .custom-banner-send-button{
+    font-size: 15px !important;
+    line-height: 62px !important;
+  }
+}
+@media (max-width: 767px) {
+  .custom-banner-send-button{
+    padding: none !important;
+    height: 60px !important;
+    width: 301px !important;
+    line-height: 62px !important;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .my-custom-login-button{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
 </style>
 

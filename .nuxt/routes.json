@@ -140,6 +140,13 @@
     "_name": "_69d0120f"
   },
   {
+    "name": "remerciement",
+    "path": "/remerciement",
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\remerciement.vue",
+    "chunkName": "pages/remerciement",
+    "_name": "_0e9be0d6"
+  },
+  {
     "name": "shop",
     "path": "/shop",
     "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\index.vue",
