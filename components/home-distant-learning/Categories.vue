@@ -4,18 +4,16 @@
             
             
             <div>
-                <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800" class="section-title section-left aos-init aos-animate">
-                  
+                <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800" class="section-title custom-categories-section-title section-left aos-init aos-animate">
+                    <div class="custom-categories-send-btn-wrapper">
                     <h2 class="title">Comment <span class="color-primary">déposer</span> un courrier ?</h2>
-
-                     <p>Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
-                    
-                    <p class="custom-categories-send-btn-wrapper"> <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">
-        Déposer un courrier
-    </a></p>
-                    
-
-                </div>
+                    <p>Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
+       
+    </div>
+    <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">DÉPOSER UN COURRIER</a>
+        
+   
+</div>
   <!-- <div class="title-text-wrapper">
     <h3 class="title">Comment envoyer un courrier ?</h3>
     
@@ -49,7 +47,7 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title custom-title-2">Connectez-vous à la plateforme</h5>
+                            <h5 class="title custom-title custom-title-2">Se connecter à la plateforme</h5>
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
                            
@@ -82,7 +80,7 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title custom-title-2">Trouvez l'organisme concerné</h5>
+                            <h5 class="title custom-title custom-title-2">Trouver l'organisme concerné</h5>
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
                            
@@ -108,7 +106,7 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5 class="title custom-title custom-title-2">Remplissez le formulaire étape par étape</h5>
+                            <h5 class="title custom-title custom-title-2">Remplir le formulaire étape par étape</h5>
 
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
@@ -141,7 +139,7 @@
                                 </svg>
                             </div>
                             <div class="content">
-                                <h5 class="title custom-title custom-title-2">Soumettez votre courrier et obtenez un code de
+                                <h5 class="title custom-title custom-title-2">Soumettre le courrier et obtenir un code de
                                     suivi</h5>
                                     <div class="custom-number-container">
                                 <div class="custom-line"></div>
@@ -454,13 +452,6 @@ export default {
 }
 
 
-.icon-2 {
-    font-size: 1.3em !important;
-    margin-left: 25px !important;
-    color: #0a3764 !important;
-
-}
-
 .search-box .icon-4 {
     width: 80px !important;
     height: 2px !important;
@@ -637,15 +628,39 @@ p {
 
 
 
-.custom-categories-send-button {
-    cursor: pointer;
-   
+
+.custom-categories-section-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .custom-categories-send-button {
+        
+  background: #008064 !important;
+  background-color: #008064 !;
+  font-weight: 700 !important;
+        cursor: pointer;
+        flex-grow: 0.1;
+        text-align: right;
+    }
+    
+    .custom-categories-send-btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+    }
+
+    @media (max-width: 992px) {
+    .custom-categories-send-button {
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.custom-categories-send-btn-wrapper {
-    text-align: right;
-   
-}
+
 
 
 </style>

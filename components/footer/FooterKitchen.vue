@@ -6,7 +6,7 @@
                     <div class="col-md-4 col-lg-3 col-md-6">
                         <div class="edu-footer-widget">
                             <h4 class="widget-title">
-                                <div class="logo">
+                                <div class="logo custom-footer-kitchen-logo">
                                     <n-link to="/">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -60,8 +60,7 @@
                             <div class="inner">
                                 <div class="widget-information">
                                     <ul class="information-list">
-                                        <li>Plateforme digitale nationale destinée aux citoyens pour le dépôt électronique
-                                            et sécurisé de courriers.</li>
+                                        <li>Plateforme digitale nationale pour le dépôt électronique et sécurisé de courriers à destination de l'administration béninoise. </li>
                                     </ul>
                                     <ul class="information-list"
                                         style="display: flex; list-style-type: none; padding-left: 0;">
@@ -172,5 +171,8 @@ export default {
   display: flex;
   justify-content: center; /* Centrer horizontalement */
   align-items: center;
+}
+.custom-footer-kitchen-logo{
+    margin-left: -14px;
 }
 </style>
