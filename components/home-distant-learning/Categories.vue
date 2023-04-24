@@ -10,7 +10,7 @@
                     <p>Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
        
     </div>
-    <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">Déposer un courrier</a>
+    <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">DÉPOSER UN COURRIER</a>
         
    
 </div>
@@ -637,7 +637,10 @@ p {
     }
     
     .custom-categories-send-button {
-      
+        
+  background: #008064 !important;
+  background-color: #008064 !;
+  font-weight: 700 !important;
         cursor: pointer;
         flex-grow: 0.1;
         text-align: right;
