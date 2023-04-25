@@ -147,6 +147,13 @@
     "_name": "_0e9be0d6"
   },
   {
+    "name": "se-connecter",
+    "path": "/se-connecter",
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\se-connecter.vue",
+    "chunkName": "pages/se-connecter",
+    "_name": "_d599500a"
+  },
+  {
     "name": "shop",
     "path": "/shop",
     "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\index.vue",
@@ -173,6 +180,13 @@
     "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",
     "chunkName": "pages/terms-condition",
     "_name": "_7f327d06"
+  },
+  {
+    "name": "testministeres",
+    "path": "/testministeres",
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\testministeres.vue",
+    "chunkName": "pages/testministeres",
+    "_name": "_09335584"
   },
   {
     "name": "university",

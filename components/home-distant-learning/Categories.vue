@@ -176,7 +176,7 @@ export default {
             await this.$store.dispatch('suivicourrier/getDetail', true)
         },
         deposerCourrier(){
-            if(this.isloggedin){
+            if (localStorage.getItem('token')){
                 this.$router.push('/addcourrier')
             }
             else{
@@ -658,6 +658,18 @@ p {
         justify-content: center;
         align-items: center;
     }
+}
+    @media (max-width: 578px) {
+    .custom-categories-section-title  {
+        margin-left: 15px;
+        font-size: 12px !important;
+       
+    
+    }
+    .custom-categories-send-button{
+        left: 20%;
+    }
+    
 }
 
 

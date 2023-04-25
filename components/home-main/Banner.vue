@@ -155,7 +155,8 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from "vuex";
+
+import { mapMutations, mapActions,  mapGetters } from "vuex";
 export default {
   mounted: function() {  
     this.windowHeight = this.detailbanner;   
@@ -172,7 +173,11 @@ export default {
       isloggedin: "authentication/isloggedin",
       ispopupload: "suivicourrier/ispopupload",
       isauthenticatingfrombutton: "authentication/isauthenticatingfrombutton",
+      isauthenticated: "authentication/isauthenticated"
     }),
+
+  
+    
   },
   data() {
     return {
@@ -190,6 +195,7 @@ export default {
       import("@/components/home-distant-learning/SuiviCourrier.vue"),
   },
   methods: {
+   
     async onClickSuivreCourrier() {
       let code = document.getElementById("code").value;
       if (!code) {
@@ -199,8 +205,9 @@ export default {
       console.log("La valeur de l'input est : " + code);
       await this.$store.dispatch("suivicourrier/getDetail", code);
     },
-    deposerCourrier() {
-      if (this.isloggedin) {
+    async deposerCourrier() {
+      console.log("TOKEFKDFG", localStorage.getItem('token') )
+     if (localStorage.getItem('token')) {
         this.$router.push("/addcourrier");
       } else {
         this.$store.dispatch(
@@ -208,6 +215,14 @@ export default {
           true
         );
       }
+     /* if (this.isloggedin) {
+        this.$router.push("/addcourrier");
+      } else {
+        this.$store.dispatch(
+          "authentication/getDetailIsAuthenticatingFromButton",
+          true
+        );
+      }*/
     },
   },
 };

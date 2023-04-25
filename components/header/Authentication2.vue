@@ -1,7 +1,7 @@
 <template >
     <div>
         <div v-if="isPopUpChooseConnexionMode"
-            class="login-form-box custom-border custom-auth-template offset-xl-2 col-lg-6">
+            class="login-form-box pop-up-container custom-border custom-auth-template offset-xl-2 col-lg-6">
             <button @click="onClickCloseChooseMode()" class="custom-close-btn">x</button>
             <div class="left-block ">
                 <div class="section-title custom-auth-section-title ">
@@ -30,12 +30,12 @@
                 <div v-if="showPNSForm">
                     <form ref="pnsform">
                         <div class="form-group">
-                            <label for="current-log-email">Numéro Personnel d'Identification (NPI) *</label>
+                            <label for="current-log-email">Numéro Personnel d'Identification (NPI)*</label>
                             <input v-model="model.numero_npi" type="email" autocomplete="off" name="current-log-email"
                                 id="current-log-email" placeholder="Numéro NPI">
                         </div>
                         <div class="form-group">
-                            <label class="password-input" for="current-log-password">Mot de passe *</label>
+                            <label class="password-input" for="current-log-password">Mot de passe*</label>
 
                             <input v-model="model.password" :type="pnsPasswordStatus ? 'text' : 'password'" autocomplete="off"
                                 name="current-log-password" id="current-log-password" placeholder="Mot de passe">
@@ -78,12 +78,12 @@
                 <div v-if="showXROADForm">
                     <form ref="xroadform">
                         <div class="form-group">
-                            <label for="xroad-email">Adresse email *</label>
+                            <label for="xroad-email">Adresse email*</label>
                             <input v-model="model.xroad_email" type="email" autocomplete="off" name="xroad-email"
                                 id="xroad-email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <label class="password-input" for="current-log-password">Mot de passe *</label>
+                            <label class="password-input" for="current-log-password">Mot de passe*</label>
 
                             <input v-model="model.xroad_password" :type="xroadPasswordStatus ? 'text' : 'password'"
                                 autocomplete="off" name="xroad-password" id="xroad-password" placeholder="Mot de passe">
@@ -132,6 +132,11 @@
 
 import { mapMutations, mapGetters } from 'vuex'
 export default {
+    modules: ['@nuxtjs/axios'],
+        axios: {
+            // Configuration axios
+            baseURL: 'https://api-gec-citoyen.fly.dev' // l'URL de votre API
+        },
     components: {
         SectionTitle: () => import('@/components/common/SectionTitle'),
         PopUpConnexion: () => import("@/components/PopUpConnexion.vue"),
@@ -204,59 +209,59 @@ export default {
             this.$refs.xroadform.reset();
             await this.$store.dispatch('authentication/getDetail', false)
         },
-       async submitPNSConnexion() {
-        let isauthenticatingfrombutton = this.isauthenticatingfrombutton
-            this.isPNSConnecting = true
-            const npi = this.$refs.pnsform.querySelector('input[name="current-log-email"]');
+        async submitPNSConnexion() {
+            let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
+            this.isPNSConnecting = true;
+            const npi = this.$refs.pnsform.querySelector(
+                'input[name="current-log-email"]'
+            );
             const npiValue = npi.value;
+            const password = this.$refs.pnsform.querySelector(
+                'input[name="current-log-password"]'
+            );
+            const passwordValue = password.value;
 
-            if (npiValue != 1) {
-                setTimeout(() => {
-                    this.validPNSCredentials = true
-
-                    setTimeout(() => {
-
-                        this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-                        console.log("GDDcccFKG", this.isauthenticatingfrombutton)
-                        this.isPNSConnecting = false
-                        if(isauthenticatingfrombutton){
-                            console.log("elkstjorpktoirj")
-                            this.$router.push('/addcourrier')
-                        }
-                    }, 1000);
-                  
-                    this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
-                 this.onClickCloseChooseMode();
+            try {
+                const response = await this.$axios.post("/users/login", {
+                email: npiValue,
+                password: passwordValue,
+                });
+                console.log(response.data.status)
+                if (response.data.status === "success") {
+                    localStorage.setItem('token', response.data.token);
+                    const token = localStorage.getItem('token');
+                    console.log("Token", token)
+                    this.validPNSCredentials = true;
+                    this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
+                    this.isPNSConnecting = false;
+                    if (isauthenticatingfrombutton) {
+                        this.$router.push("/addcourrier");
+                    }
+                    this.$store.dispatch("toast/getMessage", {
+                    type: "success",
+                    text: "Authentification réussie !",
+                    });
+                    this.onClickCloseChooseMode();
+                    this.$store.dispatch("coordonnees/getDetail", {
+                        dataUser: response.data.data.user,
+                    });
+                    this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
+                } else {
                     
-                }, 1000);
-
+                    this.validPNSCredentials = false;
+                    this.isPNSConnecting = false;
+                    return ;
+             
+                }
+            } catch (error) {
+                console.error(error);
+                this.validPNSCredentials = false;
+                this.isPNSConnecting = false;
+                return ;
             }
-            else {
-                setTimeout(() => {
-                    this.validPNSCredentials = false
-                    this.isPNSConnecting = false
-                    return false
-                }, 1000);
-
-            }
-
-
-            console.log('Données formulaire ++++++: ', { ...this.model })
-            let dataUser = {
-                numero_npi: "",
-                type_utilisateur: "Citoyen",
-                prenom: "Cheikh",
-                nom: "Gueye",
-                email: "cheikh.gueye@ip3-conseil.com",
-                telephone: "778688784",
-                adresse: "Dakar, Sacré Coeur 3",
-            }
-
-            this.$store.dispatch('coordonnees/getDetail', { dataUser })
-
-            this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
 
         },
+
         submitXroadConnexion() {
             let isauthenticatingfrombutton = this.isauthenticatingfrombutton
             const emailInput = this.$refs.xroadform.querySelector('input[name="xroad-email"]');
@@ -314,164 +319,8 @@ export default {
 .custom-auth-label{
     color: #fff !important;
 }
-.custom-header-btn {
-    padding: 0 2px 0 0 !important;
-    color: var(--color-white) !important;
-    font-weight: bold !important;
-    border-radius: 0 !important;
-    overflow: visible !important;
-    margin-right: 2px !important;
-    margin-left: 2px !important;
-    padding-right: 0 !important;
-    font-size: 3px !important;
-    top: 0 !important;
-    text-align: center !important;
-}
 
-.custom-edu-btn {
-    border-radius: 5px;
-    display: inline-block;
-    height: 30px;
-    line-height: 30px;
-    color: var(--edu-btn-color);
-    background: var(--color-primary);
-    padding: 5px;
-    font-size: 6px;
-    font-weight: bold !important;
-    transition: 0.4s;
-    font-family: var(--font-secondary);
-    border: 0 none;
-    overflow: hidden;
-    text-align: center !important;
-    position: relative;
-    z-index: 1;
-}
 
-.custom-btn-small {
-    font-weight: bold !important;
-    height: 30px !important;
-    line-height: 30px !important;
-    padding: 0 15px !important;
-    font-size: 8px !important;
-    text-align: center !important;
-    background-color: #2985BC !important;
-}
-
-.custom-banner-btn {
-
-    display: flex !important;
-    justify-content: center !important;
-    gap: 5px !important;
-}
-
-.custom-loggout {
-
-    display: flex !important;
-    justify-content: center !important;
-    gap: 5px !important;
-}
-
-.custom-loggout-btn {
-    padding: 0 2px 0 0 !important;
-    margin-top: 7px;
-    color: var(--color-white) !important;
-    font-weight: bold !important;
-    border-radius: 0 !important;
-    overflow: visible !important;
-    margin-right: 2px !important;
-    margin-left: 2px !important;
-    padding-right: 0 !important;
-    font-size: 3px !important;
-    top: 0 !important;
-    text-align: center !important;
-}
-
-.custom-btn-sign-in {
-    cursor: pointer;
-    font-weight: 700 !important;
-    height: 40px !important;
-    display: flex !important;
-
-    justify-content: center !important;
-    align-items: center !important;
-    font-size: 13px !important;
-    text-align: center !important;
-    background-color: #2985BC !important;
-    background: #2985BC !important;
-}
-
-.custom-btn-sign-up {
-
-    font-weight: 700 !important;
-    height: 40px !important;
-    display: flex !important;
-    margin-right: 20px !important;
-    justify-content: center !important;
-    align-items: center !important;
-    font-size: 13px !important;
-    text-align: center !important;
-    background-color: orange !important;
-    background: orange !important;
-}
-
-.custom-btn-sign-out {
-    cursor: pointer;
-    font-weight: 700 !important;
-    height: 40px !important;
-    display: flex !important;
-    margin-right: 20px !important;
-    justify-content: center !important;
-    align-items: center !important;
-    font-size: 13px !important;
-    text-align: center !important;
-    background-color: #6441A3 !important;
-    background: #6441A3 !important;
-}
-
-.custom-btn-send-courrier {
-    font-weight: bold !important;
-
-    margin-left: 10px !important;
-
-    padding-bottom: 5px !important;
-
-    font-size: 11px !important;
-    text-align: center !important;
-}
-
-.custom-header-one {
-
-    background-color: #0a3764 !important;
-}
-
-.custom-btn-sign-in:hover {
-    background: linear-gradient(-90deg, #2985BC 0%, #2985BC 100%) !important;
-    color: white !important;
-}
-
-.custom-btn-sign-in:after {
-    background: linear-gradient(-90deg, #2c8ac0 0%, #42a0d7 100%) !important;
-
-}
-
-.custom-btn-sign-up:hover {
-    background: linear-gradient(-90deg, orange 0%, orange 100%) !important;
-    color: white !important;
-}
-
-.custom-btn-sign-up:after {
-    background: linear-gradient(-90deg, #FFC04D 0%, #ffc752 100%) !important;
-}
-
-.custom-btn-sign-out:hover {
-    background: linear-gradient(-90deg, #6441A3 0%, #6441A3 100%) !important;
-    color: white !important;
-}
-
-.custom-btn-sign-out:after {
-    background: linear-gradient(-90deg, #7a52c3 0%, #7a52c3 100%) !important;
-
-}
 
 .custom-auth-template {
     position: fixed !important;
@@ -625,13 +474,7 @@ export default {
 
 }
 
-.custom-left-section-title {
-    color: white !important;
-    text-align: center;
-    width: 150px;
-    align-items: center;
 
-}
 
 .custom-auth-message {
     color: white !important;
@@ -659,5 +502,39 @@ export default {
 
 .custom-auth-section-title{
     padding: 50px !important;
+}
+
+@media (max-width: 1198px) {
+  .custom-auth-template {
+    left: 50% !important;
+  }
+}
+@media (max-width: 1153px) {
+  .custom-auth-template {
+    width: 600px !important;
+  }
+}
+@media (max-width: 615px) {
+  .custom-auth-template {
+    width: 400px !important;
+    
+    left: 50% !important;
+
+    top: 50% !important;
+    flex-direction: column  !important;
+  }
+  .custom-auth-section-title{
+   text-align: center !important;
+   justify-content: center !important;
+   align-items: center !important;
+    padding: 20px !important;
+    margin-left: 80px !important;
+    margin-bottom: -30px !important;
+
+
+}
+.custom-close-btn{
+    color: #fff !important;
+}
 }
 </style>

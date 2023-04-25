@@ -25,10 +25,12 @@ const _06770cf8 = () => interopDefault(import('..\\pages\\pricing-table.vue' /* 
 const _6ae95a76 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
 const _69d0120f = () => interopDefault(import('..\\pages\\purchase-guide.vue' /* webpackChunkName: "pages/purchase-guide" */))
 const _0e9be0d6 = () => interopDefault(import('..\\pages\\remerciement.vue' /* webpackChunkName: "pages/remerciement" */))
+const _d599500a = () => interopDefault(import('..\\pages\\se-connecter.vue' /* webpackChunkName: "pages/se-connecter" */))
 const _50eb6b4d = () => interopDefault(import('..\\pages\\shop\\index.vue' /* webpackChunkName: "pages/shop/index" */))
 const _8d0a35e2 = () => interopDefault(import('..\\pages\\signaler-probleme.vue' /* webpackChunkName: "pages/signaler-probleme" */))
 const _85b8833a = () => interopDefault(import('..\\pages\\suggestion.vue' /* webpackChunkName: "pages/suggestion" */))
 const _7f327d06 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
+const _09335584 = () => interopDefault(import('..\\pages\\testministeres.vue' /* webpackChunkName: "pages/testministeres" */))
 const _5ddcec26 = () => interopDefault(import('..\\pages\\university.vue' /* webpackChunkName: "pages/university" */))
 const _1038de4b = () => interopDefault(import('..\\pages\\yoga-instructor.vue' /* webpackChunkName: "pages/yoga-instructor" */))
 const _243d1598 = () => interopDefault(import('..\\pages\\blog\\blog-details.vue' /* webpackChunkName: "pages/blog/blog-details" */))
@@ -152,6 +154,10 @@ export const routerOptions = {
     component: _0e9be0d6,
     name: "remerciement"
   }, {
+    path: "/se-connecter",
+    component: _d599500a,
+    name: "se-connecter"
+  }, {
     path: "/shop",
     component: _50eb6b4d,
     name: "shop"
@@ -167,6 +173,10 @@ export const routerOptions = {
     path: "/terms-condition",
     component: _7f327d06,
     name: "terms-condition"
+  }, {
+    path: "/testministeres",
+    component: _09335584,
+    name: "testministeres"
   }, {
     path: "/university",
     component: _5ddcec26,

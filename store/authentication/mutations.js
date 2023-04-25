@@ -8,6 +8,9 @@ export default {
 
     initdetailisloggedin(state, newisloggedin) {
         state.isloggedin = newisloggedin
+    },
+    initdetailisauthenticated(state, newisauthenticated) {
+        state.isauthenticated = newisauthenticated
     }
 
 }
