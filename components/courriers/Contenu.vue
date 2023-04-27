@@ -95,7 +95,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 model :{
                     type_contenu:"attache_courrier",
                     encodedFile:'',
-                    piece_jointes:[],
+                    pieces_jointes:[],
                     modelId:1,
                     format:"",
                     subject:"",

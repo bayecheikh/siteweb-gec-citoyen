@@ -103,9 +103,9 @@
                    <div class="col-6">
                       <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
                    </div>
-                   <div class="col-6">
+                  <!--  <div class="col-6">
                       <button @click="submitValidation" type="button" class="edu-btn btn-medium">Soumettre <i class="icon-4"></i></button>
-                   </div>
+                   </div> -->
                 </div>
              </div>
           </div>
@@ -134,8 +134,8 @@
                 submitValidation(){
                     
                     this.load=true
-                    console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu,piece_jointes:[]})
-                    this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu,piece_jointes:[]})
+                    console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu,pieces_jointes:[]})
+                    this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu,pieces_jointes:[]})
                     .then(async (response) => {
                         this.$toast.success('Courrier en cours de traitement. Votre code de suivi vous a été envoyé par mail').goAway(8000)
                         this.$router.push('/');
