@@ -7,7 +7,7 @@
             </div>
             <div class="form-group col-12 mb-3">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">
-                    <input @change=changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Particulier">
+                    <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Particulier">
                     <label class="form-check-label" for="inlineRadio111">Particulier</label>
                     </div>
                 <div class="form-check form-check-inline border-radio pb-1">
@@ -156,7 +156,7 @@ import { mapMutations, mapGetters } from 'vuex'
                     complement_adresse_entreprise:"",
                     code_postal_entreprise:"",
                     ville_entreprise:"",
-                    sender:"643539aa77e6ba38d4c98181"
+                    sender:"643d3a9f99e88a5fc4e09d1a"
                 }
             }
         },
