@@ -206,8 +206,8 @@ export default {
       await this.$store.dispatch("suivicourrier/getDetail", code);
     },
     async deposerCourrier() {
-      console.log("TOKEFKDFG", localStorage.getItem('token') )
-     if (localStorage.getItem('token')) {
+      console.log("TOKEFKDFG", localStorage.getItem('gecToken') )
+     if (localStorage.getItem('gecToken')) {
         this.$router.push("/addcourrier");
       } else {
         this.$store.dispatch(
@@ -215,14 +215,6 @@ export default {
           true
         );
       }
-     /* if (this.isloggedin) {
-        this.$router.push("/addcourrier");
-      } else {
-        this.$store.dispatch(
-          "authentication/getDetailIsAuthenticatingFromButton",
-          true
-        );
-      }*/
     },
   },
 };

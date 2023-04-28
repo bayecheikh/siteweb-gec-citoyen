@@ -2,7 +2,10 @@
     <div>
         <div v-if="isPopUpChooseConnexionMode"
             class="login-form-box pop-up-container custom-border custom-auth-template offset-xl-2 col-lg-6">
-            <button @click="onClickCloseChooseMode()" class="custom-close-btn">x</button>
+            <div class="close-menu">
+                <button @click="onClickCloseChooseMode()"  class="custom-close-btn"> <i class="icon-73"></i></button>
+                </div>
+           
             <div class="left-block ">
                 <div class="section-title custom-auth-section-title ">
                     <h4 class="custom-left-box-title text-uppercase">GEC CITOYEN</h4>
@@ -10,7 +13,7 @@
                     <div class="connexion-mode">
                     <div class="edu-form-check">
                         <input type="radio" value="pns" id="pns" name="connexionMode" @click="onRadioClickPNS($event)"
-                            checked>
+                            checked >
                         <label for="pns" class="custom-auth-label">PNS</label>
                     </div>
                     <div class="custom-edu-form-check edu-form-check">
@@ -30,15 +33,15 @@
                 <div v-if="showPNSForm">
                     <form ref="pnsform">
                         <div class="form-group">
-                            <label for="current-log-email">Numéro Personnel d'Identification (NPI)*</label>
-                            <input v-model="model.numero_npi" type="email" autocomplete="off" name="current-log-email"
-                                id="current-log-email" placeholder="Numéro NPI">
+                            <label for="current-log-npi">Numéro Personnel d'Identification (NPI)*</label>
+                            <input v-model="model.numero_npi" type="email" autocomplete="off" name="current-log-npi"
+                                id="current-log-npi" placeholder="Numéro NPI" :rules="rules.npiRules">
                         </div>
                         <div class="form-group">
-                            <label class="password-input" for="current-log-password">Mot de passe*</label>
+                            <label class="password-input" for="current-log-npi-password">Mot de passe*</label>
 
-                            <input v-model="model.password" :type="pnsPasswordStatus ? 'text' : 'password'" autocomplete="off"
-                                name="current-log-password" id="current-log-password" placeholder="Mot de passe">
+                            <input v-model="model.npi_password" :type="pnsPasswordStatus ? 'text' : 'password'" autocomplete="off"
+                                name="current-log-npi-password" id="current-log-npi-password" placeholder="Mot de passe" :rules="rules.passwordRules">
                             <span v-if="pnsPasswordStatus" @click="togglePNSPasswordVisibility"><svg class="password-icon"
                                     width="24" height="24" viewBox="0 0 640 512"
                                     xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -78,15 +81,15 @@
                 <div v-if="showXROADForm">
                     <form ref="xroadform">
                         <div class="form-group">
-                            <label for="xroad-email">Adresse email*</label>
-                            <input v-model="model.xroad_email" type="email" autocomplete="off" name="xroad-email"
-                                id="xroad-email" placeholder="Email">
+                            <label for="current-log-xroad-email">Adresse email*</label>
+                            <input v-model="model.xroad_email" type="email" autocomplete="off" name="current-log-xroad-email"
+                                id="current-log-xroad-email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <label class="password-input" for="current-log-password">Mot de passe*</label>
+                            <label class="password-input" for="current-log-xroad-password">Mot de passe*</label>
 
                             <input v-model="model.xroad_password" :type="xroadPasswordStatus ? 'text' : 'password'"
-                                autocomplete="off" name="xroad-password" id="xroad-password" placeholder="Mot de passe">
+                                autocomplete="off" name="current-log-xroad-password" id="current-log-xroad-password" placeholder="Mot de passe">
                             <span v-if="xroadPasswordStatus" @click="toggleXROADPasswordVisibility"><svg class="password-icon"
                                     width="24" height="24" viewBox="0 0 640 512"
                                     xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -147,6 +150,20 @@ export default {
     }),
     data() {
         return {
+            model: {
+                numero_npi: '',
+                npi_password: '',
+            },
+            rules:{
+                passwordRules: [
+                v => !!v || 'Le mot de passe est obligatoire',
+                //v => (v && v.length >= 4) || 'Mot de passe doit etre superieur a 3 caracteres',
+                ],
+                npiRules: [
+                v => !!v || 'L\'adresse e-mail est obligatoire',
+                v => /.+@.+\..+/.test(v) || 'L\'adresse e-mail doit être valide',
+                ]
+            },
             showPNSForm: true,
             showXROADForm: false,
             isPopUpChooseConnexionMode: true,
@@ -154,7 +171,6 @@ export default {
             pnsPasswordStatus: false,
             isPNSConnecting: false,
             isXroadConnecting: false,
-            isDeconnecting: false,
             validPNSCredentials: true,
             validXroadCredentials: true,
             model: {
@@ -210,33 +226,37 @@ export default {
             await this.$store.dispatch('authentication/getDetail', false)
         },
         async submitPNSConnexion() {
+            
             let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
             this.isPNSConnecting = true;
             const npi = this.$refs.pnsform.querySelector(
-                'input[name="current-log-email"]'
+                'input[name="current-log-npi"]'
             );
             const npiValue = npi.value;
             const password = this.$refs.pnsform.querySelector(
-                'input[name="current-log-password"]'
+                'input[name="current-log-npi-password"]'
             );
-            const passwordValue = password.value;
-
-            try {
-                const response = await this.$axios.post("/users/login", {
+            const npiPasswordValue = password.value;
+            await this.$axios.post('/users/login', {
                 email: npiValue,
-                password: passwordValue,
-                });
-                console.log(response.data.status)
-                if (response.data.status === "success") {
-                    localStorage.setItem('token', response.data.token);
-                    const token = localStorage.getItem('token');
-                    console.log("Token", token)
-                    this.validPNSCredentials = true;
-                    this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
-                    this.isPNSConnecting = false;
+                password: npiPasswordValue
+                }).then(async (response) => { 
                     if (isauthenticatingfrombutton) {
                         this.$router.push("/addcourrier");
                     }
+                    else{
+                        await  this.$router.go()
+
+                    }
+                    console.log('Utilisateur connecté++++++++++++++++++++++++++',response.data)
+                    await localStorage.setItem('gecToken', response.data.token)
+                    await localStorage.setItem('loggedInUser', JSON.stringify(response.data.data.user))
+                    await localStorage.setItem('isAuthenticated', true)
+                         
+                    this.validPNSCredentials = true;
+                    this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
+                    this.isPNSConnecting = false;
+                    
                     this.$store.dispatch("toast/getMessage", {
                     type: "success",
                     text: "Authentification réussie !",
@@ -246,66 +266,113 @@ export default {
                         dataUser: response.data.data.user,
                     });
                     this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
-                } else {
-                    
+                }).
+                catch((error) => {
                     this.validPNSCredentials = false;
                     this.isPNSConnecting = false;
-                    return ;
-             
-                }
-            } catch (error) {
-                console.error(error);
-                this.validPNSCredentials = false;
-                this.isPNSConnecting = false;
-                return ;
-            }
+                    console.log('Code error ++++++: ', error.response)
+                    this.$store.dispatch('toast/getMessage',{type:'error',text:error.response.data.message || 'Echec de la connexion'})
+                }).finally(() => {
+                    this.isPNSConnecting = false;
+                    console.log('Requête envoyée')
+        }); 
 
         },
 
-        submitXroadConnexion() {
-            let isauthenticatingfrombutton = this.isauthenticatingfrombutton
-            const emailInput = this.$refs.xroadform.querySelector('input[name="xroad-email"]');
-            const emailValue = emailInput.value;
+        async submitXroadConnexion() {
+            let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
             this.isXroadConnecting = true
-            if (emailValue != 1) {
-                setTimeout(() => {
-                    this.validXroadCredentials = true
-                    this.isXroadConnecting = false
-                    this.onClickCloseXroad();
-                    this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-                    if(isauthenticatingfrombutton){
-                            console.log("elkstjorpktoirj")
-                            this.$router.push('/addcourrier')
-                        }
-                        this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
-                 this.onClickCloseChooseMode();
-                }, 1000);
+            const xroadEmail = this.$refs.xroadform.querySelector(
+                'input[name="current-log-xroad-email"]'
+            );
+            const xroadEmailValue = xroadEmail.value;
+            const xroadPassword = this.$refs.xroadform.querySelector(
+                'input[name="current-log-xroad-password"]'
+            );
+            const xroadPasswordValue = xroadPassword.value;
+            await this.$axios.post('/users/login', {
+                email: xroadEmailValue,
+                password: xroadPasswordValue
+                }).then(async (response) => { 
+                    if (isauthenticatingfrombutton) {
+                        this.$router.push("/addcourrier");
+                    }
+                    else{
+                        await  this.$router.go()
 
-            }
-            else {
-                setTimeout(() => {
+                    }
+                    console.log('Utilisateur connecté++++++++++++++++++++++++++',response.data)
+                    await localStorage.setItem('gecToken', response.data.token)
+                    await localStorage.setItem('loggedInUser', JSON.stringify(response.data.data.user))
+                    await localStorage.setItem('isAuthenticated', true)
+                         
                     this.validXroadCredentials = false
                     this.isXroadConnecting = false
-                    return false
-                }, 1000);
+                    this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
+                    
+                    
+                    this.$store.dispatch("toast/getMessage", {
+                    type: "success",
+                    text: "Authentification réussie !",
+                    });
+                    this.onClickCloseChooseMode();
+                    this.$store.dispatch("coordonnees/getDetail", {
+                        dataUser: response.data.data.user,
+                    });
+                    this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
+                }).
+                catch((error) => {
+                    this.validXroadCredentials = false;
+                    this.isXroadConnecting = false;
+                    console.log('Code error ++++++: ', error.response)
+                    this.$store.dispatch('toast/getMessage',{type:'error',text:error.response.data.message || 'Echec de la connexion'})
+                }).finally(() => {
+                    this.isXroadConnecting = false;
+                    console.log('Requête envoyée')
+        }); 
+            // let isauthenticatingfrombutton = this.isauthenticatingfrombutton
+            // const emailInput = this.$refs.xroadform.querySelector('input[name="xroad-email"]');
+            // const emailValue = emailInput.value;
+            // 
+            // if (emailValue != 1) {
+            //     setTimeout(() => {
+            //         this.validXroadCredentials = true
+            //         this.isXroadConnecting = false
+            //         this.onClickCloseXroad();
+            //         this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
+            //         if(isauthenticatingfrombutton){
+            //                 console.log("elkstjorpktoirj")
+            //                 this.$router.push('/addcourrier')
+            //             }
+            //             this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
+            //      this.onClickCloseChooseMode();
+            //     }, 1000);
 
-            }
+            // }
+            // else {
+            //     setTimeout(() => {
+            //         this.validXroadCredentials = false
+            //         this.isXroadConnecting = false
+            //         return false
+            //     }, 1000);
+
+            // }
 
 
-            console.log('Données formulaire ++++++: ', { ...this.model })
-            let dataUser = {
-                email: "",
-                type_utilisateur: "Citoyen",
-                prenom: "Cheikh",
-                nom: "Gueye",
-                email: "cheikh.gueye@ip3-conseil.com",
-                telephone: "778688784",
-                adresse: "Dakar, Sacré Coeur 3",
-            }
+            // console.log('Données formulaire ++++++: ', { ...this.model })
+            // let dataUser = {
+            //     email: "",
+            //     type_utilisateur: "Citoyen",
+            //     prenom: "Cheikh",
+            //     nom: "Gueye",
+            //     email: "cheikh.gueye@ip3-conseil.com",
+            //     telephone: "778688784",
+            //     adresse: "Dakar, Sacré Coeur 3",
+            // }
 
-            this.$store.dispatch('coordonnees/getDetail', { dataUser })
+            // this.$store.dispatch('coordonnees/getDetail', { dataUser })
 
-            this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
+            // this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
 
         },
      
@@ -335,13 +402,11 @@ export default {
 
 .custom-close-btn {
     position: absolute;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    color: gray;
+    top: 3% !important;
+    right: 1% !important;
+    
     padding-right: 15px;
-    font-size: 20px;
+
 }
 
 .custom-nps-sign-in-btn {

@@ -13,9 +13,12 @@
             </n-link>
             <n-link to="/contact-us">
                 Nous contacter
-            </n-link>
-            <a href="/" @click.prevent = onClickSeConnecter()>
+            </n-link >
+            <a v-if="!$getToken()" href="/" @click.prevent = onClickSeConnecter()>
                 Se connecter
+            </a>
+            <a v-if="$getToken()" href="/" @click.prevent = onClickSeDeconnecter()>
+                Se déconnecter
             </a>
 
       
@@ -47,6 +50,19 @@ import { mapMutations, mapGetters } from 'vuex'
         
                     this.$store.dispatch('authentication/getDetail', true)
         },
+        async onClickSeDeconnecter() {
+           
+            await location.reload()
+            await this.$router.push('/')
+            await localStorage.removeItem('gecToken')
+            await localStorage.removeItem('loggedInUser')
+            await localStorage.removeItem('isAuthenticated')
+            this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
+            this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
+            this.$store.dispatch('authentication/getDetail', false)
+
+        }
+
     },
         data() {
             return {

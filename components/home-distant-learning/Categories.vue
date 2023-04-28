@@ -175,15 +175,17 @@ export default {
         async onClickSuivreCourrier() {
             await this.$store.dispatch('suivicourrier/getDetail', true)
         },
-        deposerCourrier(){
-            if (localStorage.getItem('token')){
-                this.$router.push('/addcourrier')
+        async deposerCourrier() {
+            console.log("TOKEFKDFG", localStorage.getItem('gecToken') )
+            if (localStorage.getItem('gecToken')) {
+                this.$router.push("/addcourrier");
+            } else {
+                this.$store.dispatch(
+                "authentication/getDetailIsAuthenticatingFromButton",
+                true
+                );
             }
-            else{
-                this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', true)
-            
-            }
-        }
+        },
       
     },
     data() {

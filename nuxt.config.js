@@ -1,5 +1,6 @@
 export default {
 
+    middleware: ['client-only', 'auth'],
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         title: 'GEC CITOYEN',
@@ -34,6 +35,7 @@ export default {
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
+        '~/plugins/helpers.js',
         '~/plugins/vue-awesome-swiper.js',
         '~/plugins/vue-cool-lightbox.js',
         '~/plugins/vue2-google-maps.js',
