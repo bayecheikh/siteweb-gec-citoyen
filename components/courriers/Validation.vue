@@ -107,6 +107,7 @@
                       <button @click="submitValidation" type="button" class="edu-btn btn-medium">Soumettre <i class="icon-4"></i></button>
                    </div>
                 </div>
+                <CourrierEnvoye v-if="ispopupload" />
              </div>
           </div>
        </div>
@@ -117,13 +118,15 @@
         export default {
             components: {
                 SectionTitle: () => import('@/components/common/SectionTitle'),
-                Previsualisation: () => import('@/components/courriers/Previsualisation')
+                Previsualisation: () => import('@/components/courriers/Previsualisation'),
+                CourrierEnvoye: () => import("@/components/home-distant-learning/CourrierEnvoye.vue"),
             },
             
             computed: mapGetters({
                 detailutilisateur: 'coordonnees/detailutilisateur',
                 detailministere: 'ministeres/detailministere',
-                detailcontenu: 'contenus/detailcontenu'
+                detailcontenu: 'contenus/detailcontenu',
+                ispopupload: "courrierenvoye/ispopupload",
             }),
             data() {
                 return {
@@ -131,17 +134,15 @@
                 }
             },
             methods: {
-                submitValidation(){
-                    
+                async submitValidation(){
+                  
                     this.load=true
                     console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu,pieces_jointes:[]})
                     this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu,pieces_jointes:[]})
                     .then(async (response) => {
-                        this.$toast.success('Courrier en cours de traitement. Votre code de suivi vous a été envoyé par mail').goAway(8000)
-                        this.$router.push('/');
-                        /* this.$store.dispatch('toast/getMessage',{type:'success',text:'Votre courrier est en cours de traitement !'})
-                        console.log('Données courrier Reçu ++++++: ', response.data?.data?.id_suivi)
-                        this.$router.push('/'); */
+                     await this.$store.dispatch("courrierenvoye/getDetail", true);
+                     //this.$router.push('/');
+                        
     
                     }).catch((error) => {
                         console.log('Code error ++++++: ', error?.response?.data?.message)
