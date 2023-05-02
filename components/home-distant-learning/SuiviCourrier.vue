@@ -2,7 +2,10 @@
     <div>
         <div class="custom-template offset-xl-2 col-lg-6">
             <div class="contact-form form-style-2">
-                <button @click="onClickClose()" class="custom-close-btn">x</button>
+                <div class="close-menu">
+                <button @click="onClickClose()"  class="custom-close-btn"> <i class="icon-73"></i></button>
+                </div>
+           
                 <div class="section-title">
                     <h4 class="title custom-suivi-title text-uppercase">RÉSULTAT POUR Le CODE "{{ ispopupload }}"</h4>
                     <p class="custom-information-msg">Vous avez reçu un email
@@ -323,15 +326,13 @@ export default {
     color: #666;
 }
 
+
 .custom-close-btn {
     position: absolute;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    color: gray;
+    top: 3% !important;
+    right: 1% !important;
     padding-right: 15px;
-    font-size: 20px;
+
 }
 
 .custom-information-msg {

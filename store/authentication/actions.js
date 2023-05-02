@@ -9,5 +9,18 @@ export default {
     },
     async getDetailIsLoggedIn({commit},payload){
         await commit('initdetailisloggedin', payload)
-    }
+    },
+    async getDetailIsAuthenticated({commit},payload){
+        await commit('initdetailisauthenticated', payload)
+    },
+    checkAuthentication: ({ getters }) => {
+        return new Promise((resolve, reject) => {
+          if (getters.isAuthenticated) {
+            resolve(true);
+          } else {
+            reject(false);
+          }
+        });
+      }
+   
 }

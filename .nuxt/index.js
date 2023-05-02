@@ -18,6 +18,7 @@ import nuxt_plugin_axios_09494a89 from 'nuxt_plugin_axios_09494a89' // Source: .
 import nuxt_plugin_toast_550cd190 from 'nuxt_plugin_toast_550cd190' // Source: .\\toast.js (mode: 'client')
 import nuxt_plugin_pluginserver_fe1a2980 from 'nuxt_plugin_pluginserver_fe1a2980' // Source: .\\color-mode\\plugin.server.js (mode: 'server')
 import nuxt_plugin_pluginclient_1b3979b8 from 'nuxt_plugin_pluginclient_1b3979b8' // Source: .\\color-mode\\plugin.client.js (mode: 'client')
+import nuxt_plugin_helpers_1c816d70 from 'nuxt_plugin_helpers_1c816d70' // Source: ..\\plugins\\helpers.js (mode: 'all')
 import nuxt_plugin_vueawesomeswiper_5ce03f58 from 'nuxt_plugin_vueawesomeswiper_5ce03f58' // Source: ..\\plugins\\vue-awesome-swiper.js (mode: 'all')
 import nuxt_plugin_vuecoollightbox_66548a3b from 'nuxt_plugin_vuecoollightbox_66548a3b' // Source: ..\\plugins\\vue-cool-lightbox.js (mode: 'all')
 import nuxt_plugin_vue2googlemaps_51da65b7 from 'nuxt_plugin_vue2googlemaps_51da65b7' // Source: ..\\plugins\\vue2-google-maps.js (mode: 'all')
@@ -244,6 +245,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_pluginclient_1b3979b8 === 'function') {
     await nuxt_plugin_pluginclient_1b3979b8(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_helpers_1c816d70 === 'function') {
+    await nuxt_plugin_helpers_1c816d70(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vueawesomeswiper_5ce03f58 === 'function') {

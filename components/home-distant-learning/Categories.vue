@@ -175,15 +175,17 @@ export default {
         async onClickSuivreCourrier() {
             await this.$store.dispatch('suivicourrier/getDetail', true)
         },
-        deposerCourrier(){
-            if(this.isloggedin){
-                this.$router.push('/addcourrier')
+        async deposerCourrier() {
+            console.log("TOKEFKDFG", localStorage.getItem('gecToken') )
+            if (localStorage.getItem('gecToken')) {
+                this.$router.push("/addcourrier");
+            } else {
+                this.$store.dispatch(
+                "authentication/getDetailIsAuthenticatingFromButton",
+                true
+                );
             }
-            else{
-                this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', true)
-            
-            }
-        }
+        },
       
     },
     data() {
@@ -658,6 +660,18 @@ p {
         justify-content: center;
         align-items: center;
     }
+}
+    @media (max-width: 578px) {
+    .custom-categories-section-title  {
+        margin-left: 15px;
+        font-size: 12px !important;
+       
+    
+    }
+    .custom-categories-send-button{
+        left: 20%;
+    }
+    
 }
 
 

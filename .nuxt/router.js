@@ -24,10 +24,13 @@ const _c8d080f2 = () => interopDefault(import('..\\pages\\online-academy.vue' /*
 const _a2b913fc = () => interopDefault(import('..\\pages\\pricing-table.vue' /* webpackChunkName: "pages/pricing-table" */))
 const _6f6bdaa8 = () => interopDefault(import('..\\pages\\privacy-policy.vue' /* webpackChunkName: "pages/privacy-policy" */))
 const _719e6b76 = () => interopDefault(import('..\\pages\\purchase-guide.vue' /* webpackChunkName: "pages/purchase-guide" */))
+const _402f5d4b = () => interopDefault(import('..\\pages\\remerciement.vue' /* webpackChunkName: "pages/remerciement" */))
+const _469eb49e = () => interopDefault(import('..\\pages\\se-connecter.vue' /* webpackChunkName: "pages/se-connecter" */))
 const _935ae252 = () => interopDefault(import('..\\pages\\shop\\index.vue' /* webpackChunkName: "pages/shop/index" */))
 const _33d7b919 = () => interopDefault(import('..\\pages\\signaler-probleme.vue' /* webpackChunkName: "pages/signaler-probleme" */))
 const _a035fcce = () => interopDefault(import('..\\pages\\suggestion.vue' /* webpackChunkName: "pages/suggestion" */))
 const _642e68e0 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
+const _66940dba = () => interopDefault(import('..\\pages\\testministeres.vue' /* webpackChunkName: "pages/testministeres" */))
 const _785a65ba = () => interopDefault(import('..\\pages\\university.vue' /* webpackChunkName: "pages/university" */))
 const _5eef2cd5 = () => interopDefault(import('..\\pages\\yoga-instructor.vue' /* webpackChunkName: "pages/yoga-instructor" */))
 const _150a7a64 = () => interopDefault(import('..\\pages\\blog\\blog-details.vue' /* webpackChunkName: "pages/blog/blog-details" */))
@@ -147,6 +150,14 @@ export const routerOptions = {
     component: _719e6b76,
     name: "purchase-guide"
   }, {
+    path: "/remerciement",
+    component: _402f5d4b,
+    name: "remerciement"
+  }, {
+    path: "/se-connecter",
+    component: _469eb49e,
+    name: "se-connecter"
+  }, {
     path: "/shop",
     component: _935ae252,
     name: "shop"
@@ -162,6 +173,10 @@ export const routerOptions = {
     path: "/terms-condition",
     component: _642e68e0,
     name: "terms-condition"
+  }, {
+    path: "/testministeres",
+    component: _66940dba,
+    name: "testministeres"
   }, {
     path: "/university",
     component: _785a65ba,
