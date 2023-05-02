@@ -2,83 +2,15 @@
     <div>
         <div class="custom-template offset-xl-2 col-lg-6">
             <div class="contact-form form-style-2">
-                <div class="close-menu">
-                <button @click="onClickClose()"  class="custom-close-btn"> <i class="icon-73"></i></button>
-                </div>
-           
+                <button @click="onClickClose()" class="custom-close-btn">x</button>
                 <div class="section-title">
-                    <h4 class="title custom-suivi-title text-uppercase">RÉSULTAT POUR Le CODE "{{ ispopupload }}"</h4>
+                    <h4 class="title custom-suivi-title text-uppercase">VOTRE COURRIER A ETE ENVOYE AVEC SUCCES"</h4>
                     <p class="custom-information-msg">Vous avez reçu un email
                         contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
                         suivre l'avancement de votre courrier, veuillez saisir ce code à la lettre.</p>
                 </div>
-
-                <div class="custom-loader" v-if="isCharging">
-                    <svg width="100" height="100" viewBox="0 0 38 38"
-                                                    xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
-                                                    <g fill="none" fill-rule="evenodd">
-                                                        <g transform="translate(1 1)" stroke-width="2">
-                                                            <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
-                                                            <path d="M36 18c0-9.94-8.06-18-18-18">
-                                                                <animateTransform attributeName="transform" type="rotate"
-                                                                    from="0 18 18" to="360 18 18" dur="1s"
-                                                                    repeatCount="indefinite" />
-                                                            </path>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                </div>
-                <div v-if="!validCode">
-                    <p class="custom-error-msg">Ce code est invalide.</p>
-                </div>
-                <div v-if="showValidMessage1">
-                    <div class="box-resultat">
-
-                        <div class="resultat-section">
-                            <p class="row-label-resultat">Nature</p>
-
-                            <p class="row-label-value">Courrier</p>
-                        </div>
-
-                        <div class="resultat-section">
-                            <p class="row-label-resultat">Objet</p>
-                            <p class="row-label-value">Autorisation de construire</p>
-                        </div>
-                        <div class="resultat-section-etat">
-                            <p class="row-label-resultat">État</p>
-                            <p class="row-etat-value-pending">Votre courrier est toujours en cours de traitement <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path
-                                        d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" />
-                                </svg> </p>
-                        </div>
-                    </div>
-                </div>
-                <div v-if="showValidMessage2">
-                    <div class="box-resultat">
-
-                        <div class="resultat-section">
-                            <p class="row-label-resultat">Nature</p>
-
-                            <p class="row-label-value">Courrier</p>
-                        </div>
-
-                        <div class="resultat-section">
-                            <p class="row-label-resultat">Objet</p>
-                            <p class="row-label-value">Demande d'emploi au MCVDD</p>
-                        </div>
-                        <div class="resultat-section-etat">
-                            <p class="row-label-resultat">État</p>
-                            <p class="row-etat-value-close">Veuillez consulter la réponse à l'adresse ya****@outlook.com
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                    <path
-                                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
-                                </svg></p>
-                        </div>
-                    </div>
-                </div>
+                
+                
 
             </div>
         </div>
@@ -92,7 +24,7 @@ export default {
     },
     computed: {
         ...mapGetters({
-            ispopupload: 'suivicourrier/ispopupload'
+            ispopupload: 'courrierenvoye/ispopupload'
         })
     },
     methods: {
@@ -105,7 +37,7 @@ export default {
 
 
          
-            this.$store.dispatch('suivicourrier/getDetail', false)
+            this.$store.dispatch('courrierenvoye/getDetail', false)
               
            
 
@@ -326,13 +258,15 @@ export default {
     color: #666;
 }
 
-
 .custom-close-btn {
     position: absolute;
-    top: 3% !important;
-    right: 1% !important;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    color: gray;
     padding-right: 15px;
-
+    font-size: 20px;
 }
 
 .custom-information-msg {

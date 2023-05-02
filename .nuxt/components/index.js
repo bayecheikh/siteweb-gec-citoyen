@@ -76,6 +76,7 @@ export { default as HomeDistantLearningAbout } from '../..\\components\\home-dis
 export { default as HomeDistantLearningBanner } from '../..\\components\\home-distant-learning\\Banner.vue'
 export { default as HomeDistantLearningBlog } from '../..\\components\\home-distant-learning\\Blog.vue'
 export { default as HomeDistantLearningCategories } from '../..\\components\\home-distant-learning\\Categories.vue'
+export { default as HomeDistantLearningCourrierEnvoye } from '../..\\components\\home-distant-learning\\CourrierEnvoye.vue'
 export { default as HomeDistantLearningCourse } from '../..\\components\\home-distant-learning\\Course.vue'
 export { default as HomeDistantLearningFAQ } from '../..\\components\\home-distant-learning\\FAQ.vue'
 export { default as HomeDistantLearningFunFact } from '../..\\components\\home-distant-learning\\FunFact.vue'

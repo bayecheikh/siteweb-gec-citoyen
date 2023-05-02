@@ -233,6 +233,9 @@
   "HomeDistantLearningCategories": {
     "description": "Auto imported from components/home-distant-learning/Categories.vue"
   },
+  "HomeDistantLearningCourrierEnvoye": {
+    "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
+  },
   "HomeDistantLearningCourse": {
     "description": "Auto imported from components/home-distant-learning/Course.vue"
   },

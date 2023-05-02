@@ -84,6 +84,7 @@ You can directly use them in pages and other components without the need to impo
 - `<HomeDistantLearningBanner>` | `<home-distant-learning-banner>` (components/home-distant-learning/Banner.vue)
 - `<HomeDistantLearningBlog>` | `<home-distant-learning-blog>` (components/home-distant-learning/Blog.vue)
 - `<HomeDistantLearningCategories>` | `<home-distant-learning-categories>` (components/home-distant-learning/Categories.vue)
+- `<HomeDistantLearningCourrierEnvoye>` | `<home-distant-learning-courrier-envoye>` (components/home-distant-learning/CourrierEnvoye.vue)
 - `<HomeDistantLearningCourse>` | `<home-distant-learning-course>` (components/home-distant-learning/Course.vue)
 - `<HomeDistantLearningFAQ>` | `<home-distant-learning-f-a-q>` (components/home-distant-learning/FAQ.vue)
 - `<HomeDistantLearningFunFact>` | `<home-distant-learning-fun-fact>` (components/home-distant-learning/FunFact.vue)

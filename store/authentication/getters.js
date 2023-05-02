@@ -7,5 +7,8 @@ export default {
     },
     isloggedin (state) {
       return state.isloggedin
+    },
+    isAuthenticated: state => {
+      return state.token !== null && state.token !== undefined;
     }
 }

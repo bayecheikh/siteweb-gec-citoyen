@@ -1,5 +1,5 @@
 <template>
-    <div id="offcanvas-menu" class="edublink-vue-mobile-popup-menu">
+    <div  id="offcanvas-menu" class="edublink-vue-mobile-popup-menu">
         <div class="mobile-menu-overlay" @click="mobileMenuClose( 'removeClass', 'active' )"></div>
         <div class="inner">
             <div class="header-top">
@@ -21,7 +21,19 @@
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
     export default {
+        mounted: function() { 
+            if(this.isauthenticating){
+                mobileMenuClose( 'removeClass', 'active' )
+            }        
+        },
+        computed: {
+        ...mapGetters({
+            isauthenticating: 'authentication/isauthenticating',
+          
+        })
+    },
         components: {
             MobileMenu: () => import('@/components/header/MobileMenu'),
             ColorMode: () => import("@/components/common/ColorMode")

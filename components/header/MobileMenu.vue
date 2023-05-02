@@ -1,34 +1,72 @@
 <template>
-    <ul class="edublink-mobile-menu mainmenu">
-        <li v-for='(link, i) in menus' :key='i'>
-            <n-link :to="link.url">
-                {{ link.title }}
+ 
+        <ul class="edublink-mobile-menu mainmenu">
+        <li >
+            <n-link to="/">
+                Accueil
             </n-link>
-            <span class="submenu-toggle" v-if="link.submenu">
-                <i class="ri-arrow-down-s-line"></i>
-            </span>
-            <ul class="submenu-wrapper" v-if="link.submenu">
-                <li v-for='(link, i) in link.submenu' :key='i' class="title">
-                    <n-link :to="link.url"> {{ link.title }} </n-link>
-                    <span class="submenu-toggle" v-if="link.submenu">
-                        <i class="ri-arrow-down-s-line"></i>
-                    </span> 
-                    <ul class="submenu-wrapper" v-if="link.submenu">
-                        <li v-for='(link, i) in link.submenu' :key='i'>
-                            <n-link :to="link.url"> {{ link.title }} </n-link>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <n-link to="/suggestion">
+                Faire une suggestion
+            </n-link>
+            <n-link to="/signaler-probleme">
+                Signaler un problème
+            </n-link>
+            <n-link to="/contact-us">
+                Nous contacter
+            </n-link >
+            <a v-if="!$getToken()" href="/" @click.prevent = onClickSeConnecter()>
+                Se connecter
+            </a>
+            <a v-if="$getToken()" href="/" @click.prevent = onClickSeDeconnecter()>
+                Se déconnecter
+            </a>
+
+      
         </li>
+       
     </ul>
+
+
+
+   
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
     import mobileMenuResponsive from '../../common/mobileMenuResponsive';
+
     export default {
+        computed: {
+        ...mapGetters({
+            isauthenticating: 'authentication/isauthenticating',
+          
+        })
+    },
+    components: {
+        Authentication2: () => import("@/components/header/Authentication2.vue"),
+    },
+    methods:{
+       async  onClickSeConnecter() {
+        
+                    this.$store.dispatch('authentication/getDetail', true)
+        },
+        async onClickSeDeconnecter() {
+           
+            await location.reload()
+            await this.$router.push('/')
+            await localStorage.removeItem('gecToken')
+            await localStorage.removeItem('loggedInUser')
+            await localStorage.removeItem('isAuthenticated')
+            this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
+            this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
+            this.$store.dispatch('authentication/getDetail', false)
+
+        }
+
+    },
         data() {
             return {
+                showMobileMenu: true,
                 menus: [
                     {
                         url: '/',
@@ -48,7 +86,7 @@
                         title: 'Nous contacter',
                     },
                     {
-                        url: '',
+                        url: '/se-connecter',
                         title: 'Se connecter',
                     }
                 ]

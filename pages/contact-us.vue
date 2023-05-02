@@ -2,10 +2,8 @@
     <div id="main-wrapper" class="main-wrapper">
         
         <HeaderTwo />
-
-        <BreadCrumbTwo title='Contactez-nous' />
         
-        <section class="contact-us-area">
+        <section class="contact-us-area custom-contact-us-area">
             <div class="container">
                 <div class="row g-5">
                     <div class="col-xl-4 col-lg-6">
@@ -34,7 +32,7 @@
                         </div>
                     </div>
                     <div class="offset-xl-2 col-lg-6">
-                        <div class="contact-form form-style-2">
+                        <div class="contact-form form-style-2 custom-form-style-2">
                             <div class="section-title">
                                 <h4 class="title">Formulaire de contact</h4>
                             </div>
@@ -42,16 +40,16 @@
                             <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="sendEmail">
                                 <div class="row row--10">
                                     <div class="form-group col-12">
-                                        <input type="text" name="fullname" placeholder="Nom">
+                                        <input type="text" name="fullname" placeholder="Nom *">
                                     </div>
                                     <div class="form-group col-12">
-                                        <input type="email" name="email" placeholder="Email">
+                                        <input type="email" name="email" placeholder="Email *">
                                     </div>
                                     <div class="form-group col-12">
                                         <input type="tel" name="phone" placeholder="Téléphone">
                                     </div>
                                     <div class="form-group col-12">
-                                        <textarea name="message" cols="30" rows="4" placeholder="Votre message"></textarea>
+                                        <textarea name="message" cols="30" rows="4" placeholder="Votre message *"></textarea>
                                     </div>
                                     <div class="form-group col-12">
                                         <button class="rn-btn edu-btn btn-medium submit-btn" name="submit" type="submit">Envoyer <i class="icon-4"></i></button>
@@ -64,7 +62,6 @@
 
                             <ul class="shape-group">
                                 <MouseMove addClassName="shape-1" dataDepth="1" imgSrc="/images/about/shape-13.png" />
-                                <MouseMove addClassName="shape-2" dataDepth="-1" imgSrc="/images/counterup/shape-02.png" />
                             </ul>
                         </div>
                     </div>
@@ -126,8 +123,18 @@
         },
         head() {
             return {
-                title: 'Contact Us'
+                title: 'Nous contacter'
             }
         }
     }
 </script>
+
+<style>
+.contact-form.custom-form-style-2{
+    padding: 50px !important;
+}
+
+.custom-contact-us-area {
+  padding: 90px 0 0 !important;
+}
+</style>
