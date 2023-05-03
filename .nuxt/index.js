@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_e3fcb098 from 'nuxt_plugin_plugin_e3fcb098' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_f15fec52 from 'nuxt_plugin_axios_f15fec52' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_toast_53805686 from 'nuxt_plugin_toast_53805686' // Source: .\\toast.js (mode: 'client')
+import nuxt_plugin_recaptcha_85745674 from 'nuxt_plugin_recaptcha_85745674' // Source: .\\recaptcha.js (mode: 'all')
 import nuxt_plugin_pluginserver_c925c59c from 'nuxt_plugin_pluginserver_c925c59c' // Source: .\\color-mode\\plugin.server.js (mode: 'server')
 import nuxt_plugin_pluginclient_35b3abaa from 'nuxt_plugin_pluginclient_35b3abaa' // Source: .\\color-mode\\plugin.client.js (mode: 'client')
 import nuxt_plugin_helpers_1c816d70 from 'nuxt_plugin_helpers_1c816d70' // Source: ..\\plugins\\helpers.js (mode: 'all')
@@ -98,7 +99,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"GEC CITOYEN","titleTemplate":"%s","htmlAttrs":{"lang":"zxx"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"}],"script":[{"src":"\u002Fjs\u002Fpace.min.js"}],"style":[]},
+    head: {"title":"GEC CITOYEN","titleTemplate":"%s","htmlAttrs":{"lang":"zxx"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"script":[{"src":"\u002Fjs\u002Fpace.min.js"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"}],"style":[]},
 
     store,
     router,
@@ -237,6 +238,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_toast_53805686 === 'function') {
     await nuxt_plugin_toast_53805686(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_recaptcha_85745674 === 'function') {
+    await nuxt_plugin_recaptcha_85745674(app.context, inject)
   }
 
   if (process.server && typeof nuxt_plugin_pluginserver_c925c59c === 'function') {

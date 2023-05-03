@@ -56,8 +56,38 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
+  "CommonBreadCrumbOne": {
+    "description": "Auto imported from components/common/BreadCrumbOne.vue"
+  },
+  "CommonBreadCrumbThree": {
+    "description": "Auto imported from components/common/BreadCrumbThree.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonColorMode": {
+    "description": "Auto imported from components/common/ColorMode.vue"
+  },
+  "CommonPaginationOne": {
+    "description": "Auto imported from components/common/PaginationOne.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
+  },
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
+  },
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
+  },
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
+  },
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
@@ -79,36 +109,6 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
-  },
-  "CommonBreadCrumbOne": {
-    "description": "Auto imported from components/common/BreadCrumbOne.vue"
-  },
-  "CommonBreadCrumbThree": {
-    "description": "Auto imported from components/common/BreadCrumbThree.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonColorMode": {
-    "description": "Auto imported from components/common/ColorMode.vue"
-  },
-  "CommonPaginationOne": {
-    "description": "Auto imported from components/common/PaginationOne.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
@@ -152,6 +152,33 @@
   "EventTwo": {
     "description": "Auto imported from components/event/EventTwo.vue"
   },
+  "FooterKindergarten": {
+    "description": "Auto imported from components/footer/FooterKindergarten.vue"
+  },
+  "FooterKitchen": {
+    "description": "Auto imported from components/footer/FooterKitchen.vue"
+  },
+  "FooterLanding": {
+    "description": "Auto imported from components/footer/FooterLanding.vue"
+  },
+  "FooterOne": {
+    "description": "Auto imported from components/footer/FooterOne.vue"
+  },
+  "FooterThree": {
+    "description": "Auto imported from components/footer/FooterThree.vue"
+  },
+  "FooterTwo": {
+    "description": "Auto imported from components/footer/FooterTwo.vue"
+  },
+  "FooterYoga": {
+    "description": "Auto imported from components/footer/FooterYoga.vue"
+  },
+  "FooterGoogleMapWithAPI": {
+    "description": "Auto imported from components/footer/GoogleMapWithAPI.vue"
+  },
+  "FooterScrollToTop": {
+    "description": "Auto imported from components/footer/ScrollToTop.vue"
+  },
   "HeaderAuthentication2": {
     "description": "Auto imported from components/header/Authentication2.vue"
   },
@@ -193,33 +220,6 @@
   },
   "HeaderSearchPopUp": {
     "description": "Auto imported from components/header/SearchPopUp.vue"
-  },
-  "FooterKindergarten": {
-    "description": "Auto imported from components/footer/FooterKindergarten.vue"
-  },
-  "FooterKitchen": {
-    "description": "Auto imported from components/footer/FooterKitchen.vue"
-  },
-  "FooterLanding": {
-    "description": "Auto imported from components/footer/FooterLanding.vue"
-  },
-  "FooterOne": {
-    "description": "Auto imported from components/footer/FooterOne.vue"
-  },
-  "FooterThree": {
-    "description": "Auto imported from components/footer/FooterThree.vue"
-  },
-  "FooterTwo": {
-    "description": "Auto imported from components/footer/FooterTwo.vue"
-  },
-  "FooterYoga": {
-    "description": "Auto imported from components/footer/FooterYoga.vue"
-  },
-  "FooterGoogleMapWithAPI": {
-    "description": "Auto imported from components/footer/GoogleMapWithAPI.vue"
-  },
-  "FooterScrollToTop": {
-    "description": "Auto imported from components/footer/ScrollToTop.vue"
   },
   "HomeDistantLearningAbout": {
     "description": "Auto imported from components/home-distant-learning/About.vue"
