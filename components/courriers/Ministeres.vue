@@ -98,30 +98,20 @@ export default {
     },
     methods: {
         filterOrganismes() {
-    if (!this.recherche) {
-      return this.organismes;
-    }
-    const search = this.recherche.toLowerCase();
-    return this.organismes.filter(organisme => {
-      return organisme.description.toLowerCase().includes(search);
-    });
-  },
+            if (!this.recherche) {
+            return this.organismes;
+            }
+            const search = this.recherche.toLowerCase();
+            return this.organismes.filter(organisme => {
+            return organisme.description.toLowerCase().includes(search);
+            });
+        },
         submitMinistere(item){
             this.load=true
-            console.log('Données formulaire ++++++: ', item)
-            this.$store.dispatch('ministeres/getDetail',{title_organisme:item.description,structure:"6435747b3ddb7686b0feff6d"})
+            console.log('Ministère ++++++: ', item)
+            this.$store.dispatch('ministeres/getDetail',{title_organisme:item.description,structure:item.id})
             this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
-            /* this.$axios.$post('/demandes')
-            .then(async (response) => {
-                //this.$toast.success(response.message).goAway(2000)
-                console.log('Données demande Reçu ++++++: ', response)
-
-            }).catch((error) => {
-                console.log('Code error ++++++: ', error?.response?.data?.message)
-            }).finally(() => {
-                console.log('Requette envoyé ')
-            }); */
-        },
+        }
     },
 }
 </script>
