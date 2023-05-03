@@ -204,7 +204,7 @@ export default {
         // Afficher la largeur de l'écran dans la console
         console.log("Largeur de l'écran : " + largeurEcran + " pixels");
         window.addEventListener('scroll', () => {
-            let scrollPos = window.scrol
+            let scrollPos = window.scroll
             if (scrollPos >= 200) {
                 this.isSticky = true
             } else {
@@ -222,6 +222,7 @@ export default {
             this.isDeconnecting = true
             
             await location.reload()
+          
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('loggedInUser')
             await localStorage.removeItem('isAuthenticated')

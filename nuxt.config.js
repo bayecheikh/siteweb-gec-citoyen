@@ -1,5 +1,15 @@
 export default {
-
+    publicRuntimeConfig: {
+        recaptcha: {
+            hideBadge: Boolean, // Hide badge element (v3 & v2 via size=invisible)
+            language: String,   // Recaptcha language (v2)
+            mode: String,       // Mode: 'base', 'enterprise'
+            siteKey: String,    // Site key for requests
+            version: Number,    // Version
+            size: String,      // Size: 'compact', 'normal', 'invisible' (v2)
+          siteKey: '6Lf2CtYlAAAAAHYqjiOMLOajbtuUd4GHxDKrrxBK' // for example
+        }
+      },
     middleware: ['client-only', 'auth'],
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
@@ -14,6 +24,14 @@ export default {
             { hid: 'description', name: 'description', content: '' },
             { name: 'format-detection', content: 'telephone=no' }
         ],
+        script: [
+            {
+           
+              src: 'https://www.google.com/recaptcha/api.js?render=explicit"',
+              async: true,
+              defer: true
+            }
+          ],
         link: [
             { 
                 rel: 'icon', 
@@ -73,6 +91,7 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
+        '@nuxtjs/recaptcha',
         '@nuxtjs/toast',
         '@nuxtjs/axios',
     ],
