@@ -1,51 +1,51 @@
 <template>
     <div class="faq-accordion" id="faq-accordion">
         <div class="accordion">
-            <div class="accordion-item">
+            <div class="accordion-item" v-if="faqs.length > 0 && faqs[0].question && faqs[0].response">
                 <h5 class="accordion-header ">
                     <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
-                        Comment se connecter à la plateforme ?
+                        {{ faqs[0].question }}
                     </button>
                 </h5>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Pour vous connecter à la plateforme, vous devez disposer d'un compte au Portail National des Services Publics du Bénin ou sur la Plateforme Nationale d'Interopérabilité (XROAD BJ).</p>
+                        <p> {{ faqs[0].response }}</p>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" v-if="faqs.length > 0 && faqs[1].question && faqs[1].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
-                        Quels sont les organismes concernés ?
+                        {{ faqs[1].question }}
                     </button>
                 </h5>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Les organismes concernés sont : le Ministère des Affaires Étrangères, le Ministère du Numérique et de la Digitalisation, le Ministère du Développement et de la Coordination de l'Action Gouvernementale, le Ministère du Travail et de la Fonction Publique, le Ministère du Cadre de Vie et du Développement Durable, le Ministère de la Défense Nationale et le Ministère de l'Agriculture, de l'Élevage et de la Pêche. Cette liste est évolutive. </p>
+                        <p>  {{ faqs[1].response }}</p>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" v-if="faqs.length > 0 && faqs[2].question && faqs[2].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
-                        Comment saisir son courrier ?
+                        {{ faqs[2].question }}
                     </button>
                 </h5>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>L'envoi du courrier se fait via un formulaire simple. Vous serez guidé étape par étape.</p>
+                        <p>  {{ faqs[2].response }}</p>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" v-if="faqs.length > 0 && faqs[3].question && faqs[3].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
-                        Comment suivre son courrier ?
+                        {{ faqs[3].question }}
                     </button>
                 </h5>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
-                        <p>Après soumission du courrier, un code de suivi est généré automatiquement. Vous recevrez ce code de suivi par mail et pourrez suivre le statut de votre courrier à tout moment sur la plateforme.</p>
+                        <p>  {{ faqs[3].response }}</p>
                     </div>
                 </div>
             </div>
@@ -53,3 +53,31 @@
     </div>
 </template>
 
+<script>
+export default {
+    modules: ['@nuxtjs/axios'],
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev'
+    },
+    mounted: async function () {
+        try {
+            const response = await this.$axios.get("/faqs");
+            for (let faq of response.data.data.data) {
+                if(faq.categorie.id=="6452491c5c298902251329bc")
+                    this.faqs.push(faq)   
+            }
+        }
+        catch (error) {
+            console.error(error);
+            return;
+        }
+        console.log("FAQS", this.faqs)
+    },
+    data() {
+        return {
+       
+            faqs: [],
+        }
+    },
+}
+</script>

@@ -221,7 +221,8 @@ export default {
         async onClickSeDeconnecter() {
             this.isDeconnecting = true
             
-            await location.reload()
+           
+            await this.$router.push('/')
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('loggedInUser')
             await localStorage.removeItem('isAuthenticated')
