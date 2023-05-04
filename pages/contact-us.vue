@@ -191,7 +191,7 @@ export default {
   },
   head() {
     return {
-      title: 'Faire une suggestion'
+      title: 'Contactez-nous'
     }
   }
 }

@@ -56,6 +56,9 @@
   "AboutUsOneWhyChoose": {
     "description": "Auto imported from components/about-us-one/WhyChoose.vue"
   },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
+  },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
   },
@@ -76,9 +79,6 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
-  },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
   },
   "BlogPostList": {
     "description": "Auto imported from components/blog/BlogPostList.vue"
