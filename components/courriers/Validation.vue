@@ -18,8 +18,8 @@
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                      <div class="col-6" for="reg-name">Nature</div>
-                      <p class="col-6">Courrier</p>
+                      <div class="col-6" for="reg-name">Entrée</div>
+                      <p class="col-6">{{this.detailcontenu && this.detailcontenu.entree}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">

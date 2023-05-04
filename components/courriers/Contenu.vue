@@ -12,6 +12,13 @@
                     <label class="form-check-label" for="inlineRadio11">Saisie le courrier</label>
                 </div>              
             </div>
+            <div class="edu-sorting form-group col-12">
+                <label for="reg-name">Choisir une entrée</label>
+                <select class="custom-select" @change="changeModelEntree($event)" v-model="key" >
+                    <option>--</option>
+                    <option v-for="item in modelEntree" :key="item.id" :value="item.libelle">{{item.libelle}}</option>
+                </select>
+            </div>
             <div class="edu-sorting form-group col-12" v-if="saisie">
                 <label for="reg-name">Choisir un model</label>
                 <select class="custom-select" @change="changeModel($event)" v-model="key" >
@@ -92,11 +99,17 @@ import { mapMutations, mapGetters } from 'vuex'
                     {id:2,libelle:'Demande',text:'Message message'},
                     {id:3,libelle:'Opinion',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
+                modelEntree:[
+                    {id:1,libelle:'Secrétariat administratif',text:'Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor'},
+                    {id:2,libelle:'Secrétariat DC',text:'Message message'},
+                    {id:3,libelle:'Secrétariat particulier',text:'Lorum ipsum dolor Lorum ipsum dolor'},
+                ],
                 model :{
                     type_contenu:"attache_courrier",
                     encodedFile:'',
                     pieces_jointes:[],
                     modelId:1,
+                    entree:'',
                     format:"",
                     subject:"",
                     message:"",
@@ -119,6 +132,12 @@ import { mapMutations, mapGetters } from 'vuex'
                 /* this.model.message = $event.target.value.text
                 this.model.subject = $event.target.value.libelle */
                 this.model.modelId = parseInt($event.target.value)
+            },
+            changeModelEntree($event){
+                console.log('Données formulaire ++++++: ', $event.target.value)
+                /* this.model.message = $event.target.value.text
+                this.model.subject = $event.target.value.libelle */
+                this.model.entree = $event.target.value
             },
             changeType($event){
                 console.log('Données formulaire ++++++: ', $event.target.value)
