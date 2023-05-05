@@ -178,7 +178,8 @@ import { mapMutations, mapGetters } from 'vuex'
                 let size = files[0].size/1024/1024 //La taille en Mbit
                 console.log('Size -------------- ',size)
 
-                if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
+                //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
+                if (size <= 5 && ( extFile=="pdf" )){
                 //Affecté le fichier image au model avatar
                 //this.model.avatar = e.target.files[0];
 
@@ -197,7 +198,7 @@ import { mapMutations, mapGetters } from 'vuex'
                     this.$emit('input', files[0])
                 }
                 }else{
-                    alert("Seul les images jpg/jpeg png et de taille inférieur à 5Mb sont acceptés!");
+                    alert("Seules les fichiers pdf et de taille inférieure à 5Mb sont acceptées!");
                 }  
             },
         },
