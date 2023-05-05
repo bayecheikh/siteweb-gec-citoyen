@@ -13,20 +13,12 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-<<<<<<< HEAD
 import nuxt_plugin_plugin_7b356d66 from 'nuxt_plugin_plugin_7b356d66' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_09494a89 from 'nuxt_plugin_axios_09494a89' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_toast_550cd190 from 'nuxt_plugin_toast_550cd190' // Source: .\\toast.js (mode: 'client')
+import nuxt_plugin_recaptcha_2a6b6c78 from 'nuxt_plugin_recaptcha_2a6b6c78' // Source: .\\recaptcha.js (mode: 'all')
 import nuxt_plugin_pluginserver_fe1a2980 from 'nuxt_plugin_pluginserver_fe1a2980' // Source: .\\color-mode\\plugin.server.js (mode: 'server')
 import nuxt_plugin_pluginclient_1b3979b8 from 'nuxt_plugin_pluginclient_1b3979b8' // Source: .\\color-mode\\plugin.client.js (mode: 'client')
-=======
-import nuxt_plugin_plugin_e3fcb098 from 'nuxt_plugin_plugin_e3fcb098' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_axios_f15fec52 from 'nuxt_plugin_axios_f15fec52' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_toast_53805686 from 'nuxt_plugin_toast_53805686' // Source: .\\toast.js (mode: 'client')
-import nuxt_plugin_recaptcha_85745674 from 'nuxt_plugin_recaptcha_85745674' // Source: .\\recaptcha.js (mode: 'all')
-import nuxt_plugin_pluginserver_c925c59c from 'nuxt_plugin_pluginserver_c925c59c' // Source: .\\color-mode\\plugin.server.js (mode: 'server')
-import nuxt_plugin_pluginclient_35b3abaa from 'nuxt_plugin_pluginclient_35b3abaa' // Source: .\\color-mode\\plugin.client.js (mode: 'client')
->>>>>>> origin/yacine-v28
 import nuxt_plugin_helpers_1c816d70 from 'nuxt_plugin_helpers_1c816d70' // Source: ..\\plugins\\helpers.js (mode: 'all')
 import nuxt_plugin_vueawesomeswiper_5ce03f58 from 'nuxt_plugin_vueawesomeswiper_5ce03f58' // Source: ..\\plugins\\vue-awesome-swiper.js (mode: 'all')
 import nuxt_plugin_vuecoollightbox_66548a3b from 'nuxt_plugin_vuecoollightbox_66548a3b' // Source: ..\\plugins\\vue-cool-lightbox.js (mode: 'all')
@@ -248,12 +240,12 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_toast_550cd190(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_recaptcha_85745674 === 'function') {
-    await nuxt_plugin_recaptcha_85745674(app.context, inject)
+  if (typeof nuxt_plugin_recaptcha_2a6b6c78 === 'function') {
+    await nuxt_plugin_recaptcha_2a6b6c78(app.context, inject)
   }
 
-  if (process.server && typeof nuxt_plugin_pluginserver_c925c59c === 'function') {
-    await nuxt_plugin_pluginserver_c925c59c(app.context, inject)
+  if (process.server && typeof nuxt_plugin_pluginserver_fe1a2980 === 'function') {
+    await nuxt_plugin_pluginserver_fe1a2980(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_pluginclient_1b3979b8 === 'function') {

@@ -521,13 +521,7 @@ export default {
     align-items: center;
 }
 
-.resultat-section-etat {
-    height: 70px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    border-bottom: none;
-    align-items: center;
-}
+
 
 .resultat-section:first-child {
     border-top: none;
@@ -553,15 +547,7 @@ p {
     margin-left: auto;
 }
 
-.row-etat-value-pending {
-    color: #f8b924 !important;
-    background-color: #fff8e8;
-    font-weight: 500;
-    padding: 7px !important;
-    font-style: italic;
-    justify-content: right !important;
-    margin-left: auto;
-}
+
 
 .row-etat-value-close {
     color: #168b71 !important;
@@ -577,13 +563,6 @@ p {
     color: #0a3764 !important;
 }
 
-.row-etat-value-pending svg {
-
-    padding: 3px;
-    fill: #ffa500;
-    width: 20px;
-    height: 20px;
-}
 
 .row-etat-value-close svg {
 

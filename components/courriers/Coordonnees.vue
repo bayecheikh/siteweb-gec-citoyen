@@ -7,7 +7,7 @@
             </div>
             <div class="form-group col-12 mb-3">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">
-                    <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Particulier">
+                    <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Personne">
                     <label class="form-check-label" for="inlineRadio111">Particulier</label>
                     </div>
                 <div class="form-check form-check-inline border-radio pb-1">
@@ -131,7 +131,33 @@ import { mapMutations, mapGetters } from 'vuex'
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
-        mounted: function() {         
+        mounted: function() {  
+            this.token = localStorage.getItem('gecToken')
+            if(localStorage.getItem('gecToken')){
+                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+                this.model.prenom = user?.firstname
+                this.type_utilisateur = user?.type_utilisateur
+                this.model.prenom = user?.firstname
+                this.model.nom = user?.lastname
+                this.model.email = user?.email
+                this.model.telephone = user?.telephone
+                this.model.sexe = user?.sexe
+                this.model.adresse = user?.adresse
+                this.model.rue = user?.rue
+                this.model.complement_adresse = user?.complement_adresse
+                this.model.code_postal = user?.code_postal
+                this.model.ville = user?.ville
+                this.model.nom_entreprise = user?.nom_entreprise
+                this.model.numero_rca = user?.numero_rca
+                this.model.numero_ninea = user?.numero_ninea
+                this.model.adresse_entreprise = user?.adresse_entreprise
+                this.model.rue_entreprise = user?.rue_entreprise
+                this.model.complement_adresse_entreprise = user?.complement_adresse_entreprise
+                this.model.code_postal_entreprise = user?.code_postal_entreprise
+                this.model.ville_entreprise = user?.ville_entreprise
+                this.model.sender = user?._id
+            }       
         },
         computed: mapGetters({
             detailutilisateur: 'coordonnees/detailutilisateur',
