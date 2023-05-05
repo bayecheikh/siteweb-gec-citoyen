@@ -9,9 +9,6 @@
                         contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
                         suivre l'avancement de votre courrier, veuillez saisir ce code à la lettre.</p>
                 </div>
-                
-                
-
             </div>
         </div>
     </div>
@@ -38,7 +35,7 @@ export default {
 
          
             this.$store.dispatch('courrierenvoye/getDetail', false)
-              
+            this.$router.push('/');
            
 
 
