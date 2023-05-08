@@ -36,6 +36,10 @@
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Numéro NINEA" v-model="model.numero_ninea">
                 </div>
                 <div class="form-group col-12">
+                    <label for="log-email">Siége social de l'entreprise*</label>
+                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse de l'entreprise" v-model="model.adresse_entreprise">
+                </div>
+                <!-- <div class="form-group col-12">
                     <label for="reg-name">Siége social de l'entreprise*</label>
                     <div class="border-adresse row d-flex p-5">
                         <div class="form-group col-6">
@@ -52,7 +56,7 @@
                         </div>
                     </div>
                     
-                </div>
+                </div> -->
             </div>
             <!-- FIN ENTREPRISE -->
             <hr class='dotted mt-5'  />
