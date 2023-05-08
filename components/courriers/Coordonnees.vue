@@ -74,11 +74,11 @@
                 </div>
                 <div class="form-group col-12 border-input pt-3 pb-1">
                     <div class="form-check form-check-inline mr-5">
-                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions" id="inlineRadio1111" value="Homme">
+                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme">
                         <label class="form-check-label" for="inlineRadio1111">Homme</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions" id="inlineRadio2222" value="Femme">
+                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
                         <label class="form-check-label" for="inlineRadio2222">Femme</label>
                     </div>
                 </div>
@@ -92,7 +92,11 @@
                 <label for="log-email">Email*</label>
                 <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.email">
             </div>
-            <div class="form-group col-12">
+            <div class="form-group col-6">
+                <label for="log-email">Adresse*</label>
+                <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.adresse">
+            </div>
+            <!-- <div class="form-group col-12">
                 <label for="reg-name">Adresse*</label>
                 <div class="border-adresse row d-flex p-5">
                     <div class="form-group col-6">
@@ -109,7 +113,7 @@
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
             
             <div class="form-group col-6">
                 <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
