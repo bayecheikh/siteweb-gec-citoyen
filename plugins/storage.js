@@ -5,16 +5,16 @@ export default function ({store ,redirect}, inject) {
     }
     
     const getUser = () => {
-        return JSON.parse(localStorage.getItem('loggedInUser'));
+        return JSON.parse(localStorage.getItem('gecLoggedInUser'));
     }
     
     const isLogged = () => {
-        return JSON.parse(localStorage.getItem('isAuthenticated'))
+        return JSON.parse(localStorage.getItem('gecIsAuthenticated'))
     }
     const loggout = async () => {
         await localStorage.removeItem('gecToken')
-        await localStorage.removeItem('loggedInUser')
-        await localStorage.removeItem('isAuthenticated') 
+        await localStorage.removeItem('gecLoggedInUser')
+        await localStorage.removeItem('gecIsAuthenticated') 
     }
 
 

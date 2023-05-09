@@ -186,7 +186,7 @@ export default {
     mounted() {
         this.token = localStorage.getItem('gecToken')
         if(localStorage.getItem('gecToken')){
-            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
             const prenom = user['firstname'];
             const nom = user['lastname'];
             const email = user['email'];
@@ -224,8 +224,8 @@ export default {
            
             await this.$router.push('/')
             await localStorage.removeItem('gecToken')
-            await localStorage.removeItem('loggedInUser')
-            await localStorage.removeItem('isAuthenticated')
+            await localStorage.removeItem('gecLoggedInUser')
+            await localStorage.removeItem('gecIsAuthenticated')
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
             this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
             this.$store.dispatch('authentication/getDetail', false)
