@@ -253,44 +253,50 @@ import { mapMutations, mapGetters } from 'vuex'
                     alert("Seules les fichiers pdf et de taille inférieure à 5Mb sont acceptées!");
                 }  
             },
-            handleFileUpload2(e){     
-                    
-                //Recupère le fichier
-                const input = this.$refs.file2
-                const files = input.files
+            handleFileUpload2(e){  
+                console.log(this.model.pieces_jointes.length)   
+                if(this.model.pieces_jointes.length<=2){
+                    //Recupère le fichier
+                    const input = this.$refs.file2
+                    const files = input.files
 
-                //Recupère l'extension
-                let filename = files[0].name;
-                let title = filename.substring(0, filename.lastIndexOf('.')) || filename;
-               // this.title_courrier=title
-                let idxDot = filename.lastIndexOf(".") + 1;
-                let extFile = filename.substr(idxDot, filename.length).toLowerCase(); 
-               // this.model.format = extFile
-                let size = files[0].size/1024/1024 //La taille en Mbit
-                console.log('Size -------------- ',size)
+                    //Recupère l'extension
+                    let filename = files[0].name;
+                    let title = filename.substring(0, filename.lastIndexOf('.')) || filename;
+                    // this.title_courrier=title
+                    let idxDot = filename.lastIndexOf(".") + 1;
+                    let extFile = filename.substr(idxDot, filename.length).toLowerCase(); 
+                    // this.model.format = extFile
+                    let size = files[0].size/1024/1024 //La taille en Mbit
+                    console.log('Size -------------- ',size)
 
-                //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
-                if (size <= 5 && ( extFile=="pdf" )){
-                //Affecté le fichier image au model avatar
-                //this.model.avatar = e.target.files[0];
+                    //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
+                    if (size <= 5 && ( extFile=="pdf" )){
+                    //Affecté le fichier image au model avatar
+                    //this.model.avatar = e.target.files[0];
 
-                //Prévisualise l'image
-                if (files && files[0]) {
-                        const reader = new FileReader
-                        reader.onload = e => {
-                        //this.imageData = e.target.result
-                        //this.model.encodedFile = reader.result.split(';base64,')[1];
-                        //this.$store.dispatch('contenus/getDetail',{...this.detailcontenu,encodedFile:reader.result.split(';base64,')[1],format:extFile})
-                        this.model.pieces_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
-                        //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
-                        console.log(this.model.pieces_jointes)
+                    //Prévisualise l'image
+                    if (files && files[0]) {
+                            const reader = new FileReader
+                            reader.onload = e => {
+                            //this.imageData = e.target.result
+                            //this.model.encodedFile = reader.result.split(';base64,')[1];
+                            //this.$store.dispatch('contenus/getDetail',{...this.detailcontenu,encodedFile:reader.result.split(';base64,')[1],format:extFile})
+                            this.model.pieces_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                            //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                            console.log(this.model.pieces_jointes)
+                        }
+                        reader.readAsDataURL(files[0])
+                        this.$emit('input', files[0])
                     }
-                    reader.readAsDataURL(files[0])
-                    this.$emit('input', files[0])
+                    }else{
+                        alert("Seules les fichiers pdf et de taille inférieure à 5Mb sont acceptées!");
+                    } 
                 }
-                }else{
-                    alert("Seules les fichiers pdf et de taille inférieure à 5Mb sont acceptées!");
-                }  
+                else{
+                    alert("Le nombre maximum de pièces-jointes est déja atteint")
+                }
+                 
             },
             deleteFindFichier: function(index) {
                 console.log('Index---- ',index);
