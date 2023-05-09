@@ -134,7 +134,10 @@
 <script>
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 export default {
-
+    modules: ['@nuxtjs/axios'],
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev'
+    },
     computed: {
         ...mapGetters({
             isloggedin: 'authentication/isloggedin',
@@ -214,8 +217,36 @@ export default {
     },
     methods: {
 
-      
+            async listenForUXPMessage() {
+                try {
+                    const response = await this.$axios.get('/api/portal/event/uxp/rest', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Application-Id': 'YOUR_APPLICATION_ID',
+                        'Token': 'YOUR_UXP_TOKEN'
+                    },
+                    data: {
+                        "type": "uxp-rest-listen",
+                        "responseToStage": "YOUR_RESPONSE_STAGE_ID",
+                        "payloadMapping": {
+                        "data.received": {
+                            "pointer": "/data"
+                        }
+                        },
+                        "transitions": {
+                            "type": "single",
+                            "nextStage": "DONE"
+                        }
+                    }
+                    });
+                    // On traite la réponse de la requête UXP ici
+                } catch (error) {
+                    console.log("Authentication Error !!!", error)
+                }
+            },
+
         onClickSeConnecter() {
+            //this.listenForUXPMessage()
             this.$store.dispatch('authentication/getDetail', true)
         },
         async onClickSeDeconnecter() {

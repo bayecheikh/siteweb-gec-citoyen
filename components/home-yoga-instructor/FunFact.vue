@@ -63,7 +63,7 @@
 </svg>
                         </div>
                         <h3 class="counter-item count-number">
-                            <FunFact number="10" suffix="+" />
+                            <FunFact number="100" suffix="+" />
                         </h3>
                         <h6 class="title">ORGANISMES ENROLLÉS</h6>
                     </div>
