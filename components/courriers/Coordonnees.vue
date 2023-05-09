@@ -215,7 +215,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 console.log('Données formulaire ++++++: ', $event.target.value)
                 /* this.model.message = $event.target.value.text
                 this.model.subject = $event.target.value.libelle */
-                if($event.target.value=='Particulier'){
+                if($event.target.value=='Personne'){
                     this.particuler = true
                     this.entreprise=false
                 }
