@@ -140,7 +140,7 @@ import { mapMutations, mapGetters } from 'vuex'
         mounted: function() {  
             this.token = localStorage.getItem('gecToken')
             if(localStorage.getItem('gecToken')){
-                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+                const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
 
                 this.model.prenom = user?.firstname
                 this.type_utilisateur = user?.type_utilisateur

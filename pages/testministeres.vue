@@ -41,7 +41,7 @@ export default {
         baseURL: 'https://api-gec-citoyen.fly.dev'
     },
     mounted: async function () {
-        console.log("LoggedInUSer", localStorage.getItem('loggedInUser'))
+        console.log("LoggedInUSer", localStorage.getItem('gecLoggedInUser'))
         try {
             const response = await this.$axios.get("/structures");
             for (let organisme of response.data.data.data) {

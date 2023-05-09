@@ -134,7 +134,10 @@
 <script>
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 export default {
-
+    modules: ['@nuxtjs/axios'],
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev'
+    },
     computed: {
         ...mapGetters({
             isloggedin: 'authentication/isloggedin',
@@ -185,9 +188,9 @@ export default {
     props: ['showHeaderTop'],
     mounted() {
         this.token = localStorage.getItem('gecToken')
-        if(localStorage.getItem('gecToken') && localStorage.getItem('loggedInUser')){
-            const user = JSON.parse(localStorage.getItem('loggedInUser'));
-            const prenom =  user['firstname'];
+        if(localStorage.getItem('gecToken')){
+            const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
+            const prenom = user['firstname'];
             const nom = user['lastname'];
             const email = user['email'];
             const initiales = prenom.substring(0, 1) + nom.substring(0, 1);
@@ -214,8 +217,36 @@ export default {
     },
     methods: {
 
-      
+            async listenForUXPMessage() {
+                try {
+                    const response = await this.$axios.get('/api/portal/event/uxp/rest', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Application-Id': 'YOUR_APPLICATION_ID',
+                        'Token': 'YOUR_UXP_TOKEN'
+                    },
+                    data: {
+                        "type": "uxp-rest-listen",
+                        "responseToStage": "YOUR_RESPONSE_STAGE_ID",
+                        "payloadMapping": {
+                        "data.received": {
+                            "pointer": "/data"
+                        }
+                        },
+                        "transitions": {
+                            "type": "single",
+                            "nextStage": "DONE"
+                        }
+                    }
+                    });
+                    // On traite la réponse de la requête UXP ici
+                } catch (error) {
+                    console.log("Authentication Error !!!", error)
+                }
+            },
+
         onClickSeConnecter() {
+            //this.listenForUXPMessage()
             this.$store.dispatch('authentication/getDetail', true)
         },
         async onClickSeDeconnecter() {
@@ -224,8 +255,8 @@ export default {
             await location.reload()
           
             await localStorage.removeItem('gecToken')
-            await localStorage.removeItem('loggedInUser')
-            await localStorage.removeItem('isAuthenticated')
+            await localStorage.removeItem('gecLoggedInUser')
+            await localStorage.removeItem('gecIsAuthenticated')
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
             this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
             this.$store.dispatch('authentication/getDetail', false)

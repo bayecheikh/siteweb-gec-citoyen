@@ -250,8 +250,8 @@ export default {
                     }
                     console.log('Utilisateur connecté++++++++++++++++++++++++++',response.data)
                     await localStorage.setItem('gecToken', response.data.token)
-                    await localStorage.setItem('loggedInUser', JSON.stringify(response.data.data.user))
-                    await localStorage.setItem('isAuthenticated', true)
+                    await localStorage.setItem('gecLoggedInUser', JSON.stringify(response.data.data.user))
+                    await localStorage.setItem('gecIsAuthenticated', true)
                          
                     this.validPNSCredentials = true;
                     this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
@@ -303,14 +303,12 @@ export default {
                     }
                     console.log('Utilisateur connecté++++++++++++++++++++++++++',response.data)
                     await localStorage.setItem('gecToken', response.data.token)
-                    await localStorage.setItem('loggedInUser', JSON.stringify(response.data.data.user))
-                    await localStorage.setItem('isAuthenticated', true)
+                    await localStorage.setItem('gecLoggedInUser', JSON.stringify(response.data.data.user))
+                    await localStorage.setItem('gecIsAuthenticated', true)
                          
                     this.validXroadCredentials = false
                     this.isXroadConnecting = false
                     this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
-                    
-                    
                     this.$store.dispatch("toast/getMessage", {
                     type: "success",
                     text: "Authentification réussie !",
