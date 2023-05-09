@@ -7,7 +7,7 @@
             </div>
             <div class="form-group col-12 mb-3">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">
-                    <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Particulier">
+                    <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Personne">
                     <label class="form-check-label" for="inlineRadio111">Particulier</label>
                     </div>
                 <div class="form-check form-check-inline border-radio pb-1">
@@ -36,6 +36,10 @@
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Numéro NINEA" v-model="model.numero_ninea">
                 </div>
                 <div class="form-group col-12">
+                    <label for="log-email">Siége social de l'entreprise*</label>
+                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse de l'entreprise" v-model="model.adresse_entreprise">
+                </div>
+                <!-- <div class="form-group col-12">
                     <label for="reg-name">Siége social de l'entreprise*</label>
                     <div class="border-adresse row d-flex p-5">
                         <div class="form-group col-6">
@@ -52,7 +56,7 @@
                         </div>
                     </div>
                     
-                </div>
+                </div> -->
             </div>
             <!-- FIN ENTREPRISE -->
             <hr class='dotted mt-5'  />
@@ -74,11 +78,11 @@
                 </div>
                 <div class="form-group col-12 border-input pt-3 pb-1">
                     <div class="form-check form-check-inline mr-5">
-                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions" id="inlineRadio1111" value="Homme">
+                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme">
                         <label class="form-check-label" for="inlineRadio1111">Homme</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions" id="inlineRadio2222" value="Femme">
+                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
                         <label class="form-check-label" for="inlineRadio2222">Femme</label>
                     </div>
                 </div>
@@ -92,7 +96,11 @@
                 <label for="log-email">Email*</label>
                 <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.email">
             </div>
-            <div class="form-group col-12">
+            <div class="form-group col-6">
+                <label for="log-email">Adresse*</label>
+                <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.adresse">
+            </div>
+            <!-- <div class="form-group col-12">
                 <label for="reg-name">Adresse*</label>
                 <div class="border-adresse row d-flex p-5">
                     <div class="form-group col-6">
@@ -109,7 +117,7 @@
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
             
             <div class="form-group col-6">
                 <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
@@ -127,7 +135,33 @@ import { mapMutations, mapGetters } from 'vuex'
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
-        mounted: function() {         
+        mounted: function() {  
+            this.token = localStorage.getItem('gecToken')
+            if(localStorage.getItem('gecToken')){
+                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+                this.model.prenom = user?.firstname
+                this.type_utilisateur = user?.type_utilisateur
+                this.model.prenom = user?.firstname
+                this.model.nom = user?.lastname
+                this.model.email = user?.email
+                this.model.telephone = user?.telephone
+                this.model.sexe = user?.sexe
+                this.model.adresse = user?.adresse
+                this.model.rue = user?.rue
+                this.model.complement_adresse = user?.complement_adresse
+                this.model.code_postal = user?.code_postal
+                this.model.ville = user?.ville
+                this.model.nom_entreprise = user?.nom_entreprise
+                this.model.numero_rca = user?.numero_rca
+                this.model.numero_ninea = user?.numero_ninea
+                this.model.adresse_entreprise = user?.adresse_entreprise
+                this.model.rue_entreprise = user?.rue_entreprise
+                this.model.complement_adresse_entreprise = user?.complement_adresse_entreprise
+                this.model.code_postal_entreprise = user?.code_postal_entreprise
+                this.model.ville_entreprise = user?.ville_entreprise
+                this.model.sender = user?._id
+            }       
         },
         computed: mapGetters({
             detailutilisateur: 'coordonnees/detailutilisateur',

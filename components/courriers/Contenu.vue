@@ -12,20 +12,27 @@
                     <label class="form-check-label" for="inlineRadio11">Saisie le courrier</label>
                 </div>              
             </div>
+            <div class="edu-sorting form-group col-12">
+                <label for="reg-name">Choisir une entrée</label>
+                <select class="custom-select" @change="changeModelEntree($event)">
+                    <option>--</option>
+                    <option v-for="item in modelEntree" :key="item.id" :value="item.libelle">{{item.libelle}}</option>
+                </select>
+            </div>
             <div class="edu-sorting form-group col-12" v-if="saisie">
                 <label for="reg-name">Choisir un model</label>
-                <select class="custom-select" @change="changeModel($event)" v-model="key" >
+                <select class="custom-select" @change="changeModel($event)">
                     <option>--</option>
-                    <option v-for="item in modelContenu" :key="item.id" :value="item.id">{{item.libelle}}</option>
+                    <option v-for="item in modelContenu" :key="item._id" :value="item._id">{{item.name}}</option>
                 </select>
             </div>
             <div class="form-group col-12">
-                <label for="reg-name">Objet*</label>
-                <input class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="Sujet du courrier">
+                <label for="reg-name">Objet* {{ this.model.subject }}</label>
+                <input ref="subject" class="custom-input" type="text" :v-model="this.model.subject" name="reg-name" id="reg-name" placeholder="Sujet du courrier">
             </div>
             <div class="form-group col-12 mt-4" v-if="saisie">
                 <label for="reg-name">Message*</label>
-                <textarea class="custom-textarea" cols="30" rows="4" name="reg-name" placeholder="Votre courrier*" v-model="model.message" required></textarea>
+                <textarea ref="message" class="custom-textarea" cols="30" rows="4" name="reg-name" placeholder="Votre courrier*" :v-model="model.message" required></textarea>
                 
             </div>
             <div class="col-12 form-group" v-if="attache_courrier">
@@ -75,10 +82,23 @@ import { mapMutations, mapGetters } from 'vuex'
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
         computed: mapGetters({
-               detailutilisateur: 'coordonnees/detailutilisateur',
-               detailministere: 'ministeres/detailministere',
-               detailcontenu: 'contenus/detailcontenu'
-           }),
+            detailutilisateur: 'coordonnees/detailutilisateur',
+            detailministere: 'ministeres/detailministere',
+            detailcontenu: 'contenus/detailcontenu'
+        }),
+        mounted: async function () {
+            try {
+                const response = await this.$axios.get("/model-courriers");
+                /* for (let organisme of response.data.data.data) {
+                    this.organismes.push(organisme)
+                } */
+                this.modelContenu = response.data.data.data
+            }
+            catch (error) {
+                console.error(error);
+                return;
+            }
+        },
         data() {
             return {
                 key:null,
@@ -92,11 +112,17 @@ import { mapMutations, mapGetters } from 'vuex'
                     {id:2,libelle:'Demande',text:'Message message'},
                     {id:3,libelle:'Opinion',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
+                modelEntree:[
+                    {id:1,libelle:'Secrétariat administratif',text:'Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor'},
+                    {id:2,libelle:'Secrétariat DC',text:'Message message'},
+                    {id:3,libelle:'Secrétariat particulier',text:'Lorum ipsum dolor Lorum ipsum dolor'},
+                ],
                 model :{
                     type_contenu:"attache_courrier",
                     encodedFile:'',
                     pieces_jointes:[],
                     modelId:1,
+                    entree:'',
                     format:"",
                     subject:"",
                     message:"",
@@ -116,9 +142,20 @@ import { mapMutations, mapGetters } from 'vuex'
             },
             changeModel($event){
                 console.log('Données formulaire ++++++: ', $event.target.value)
+                let model = this.modelContenu?.filter(item => (item._id==$event.target.value))[0];
+                this.$refs.message.value=model?.message || ""
+                this.model.message = model?.message || ""
+
+                this.$refs.subject.value=model?.objet || ""
+                this.model.subject = model?.objet || ""
+
+                this.model.modelId = parseInt($event.target.value)
+            },
+            changeModelEntree($event){
+                console.log('Données formulaire ++++++: ', $event.target.value)
                 /* this.model.message = $event.target.value.text
                 this.model.subject = $event.target.value.libelle */
-                this.model.modelId = parseInt($event.target.value)
+                this.model.entree = $event.target.value
             },
             changeType($event){
                 console.log('Données formulaire ++++++: ', $event.target.value)
@@ -159,7 +196,8 @@ import { mapMutations, mapGetters } from 'vuex'
                 let size = files[0].size/1024/1024 //La taille en Mbit
                 console.log('Size -------------- ',size)
 
-                if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
+                //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
+                if (size <= 5 && ( extFile=="pdf" )){
                 //Affecté le fichier image au model avatar
                 //this.model.avatar = e.target.files[0];
 
@@ -178,7 +216,7 @@ import { mapMutations, mapGetters } from 'vuex'
                     this.$emit('input', files[0])
                 }
                 }else{
-                    alert("Seul les images jpg/jpeg png et de taille inférieur à 5Mb sont acceptés!");
+                    alert("Seules les fichiers pdf et de taille inférieure à 5Mb sont acceptées!");
                 }  
             },
         },
