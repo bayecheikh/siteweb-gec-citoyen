@@ -99,6 +99,30 @@
                       </div>
                    </div>
                 </div>
+                <div class="row border-grey-no-padding d-flex align-items-center mb-5">
+                    <div class="d-flex justify-content-between p-4 pb-4 pt-4">
+                      <div for="reg-name" class="title_green">PIECES-JOINTES</div>
+                      <div class="form-group col-3 justify-content-end">
+                       <button @click="$goToTab('contenu')" type="button" class="btn btn-outline-primary btn-medium float-end">Modifier <i class="icon-east"></i></button>
+                      </div>
+                   </div>
+                   <hr>
+                   <div class="row justify-content-between p-4 pb-4 pt-0">
+                     <div class="col-12 my-5">
+                        <div class="card">
+                           <ul class="list-group list-group-flush">
+                                 <li class="list-group-item d-flex justify-content-between"
+                                    v-for="(file, index) in this.detailcontenu.pieces_jointes"
+                                    :key="index"
+                                    >
+                                    <span><img src="@/static/images/icons/file.png" width="50">
+                                    {{ file.title }}</span>
+                                 </li>
+                           </ul>
+                        </div>
+                     </div>
+                   </div>
+                </div>
                 <div class="row d-flex justify-content-between">
                    <div class="col-6">
                       <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
@@ -137,8 +161,8 @@
                 async submitValidation(){
                   
                     this.load=true
-                    console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu,pieces_jointes:[]})
-                    this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu,pieces_jointes:[]})
+                    console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu})
+                    this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu})
                     .then(async (response) => {
                      await this.$store.dispatch("courrierenvoye/getDetail", true);
                      //this.$router.push('/');
