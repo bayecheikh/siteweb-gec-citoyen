@@ -94,12 +94,15 @@
                 <label for="terms-condition">J'accepte les termes et conditions <a href="terms-condition.html">Terms & Condition.</a> </label>
                 </div>
             </div>
-            <div class="form-group col-6 mt-5">
-            <button @click="$goToTab('ministeres')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+            <div class="row d-flex justify-content-between">
+                <div class="form-group col-3 mt-5">
+                <button @click="$goToTab('ministeres')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+                </div>
+                <div class="form-group col-3 mt-5">
+                    <button @click="submitContenu" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
+                </div>
             </div>
-            <div class="form-group col-6 mt-5">
-                <button @click="submitContenu" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
-            </div>
+            
         </form>
     </div>
 </template>

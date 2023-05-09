@@ -57,12 +57,12 @@
 
             </div>
         </div>
-        <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 pt-4 pb-4">
-            <div class="form-group col-6 justify-content-end">
+        <div class="row d-flex justify-content-between">
+            <div class="form-group col-3">
             <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précedent</button>
             </div>
-            <div class="form-group col-6 justify-content-end">
-                <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium float-end">Suivant <i class="icon-east"></i></button>
+            <div class="form-group col-3">
+                <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
             </div>
         </div>
     </div>
