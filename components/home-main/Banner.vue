@@ -166,7 +166,7 @@ export default {
 
     const newHeight = this.windowHeight - 248;
     document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
-        },
+  },
   computed: {
     ...mapGetters({
       detailbanner: 'banner/detailbanner',

@@ -185,9 +185,9 @@ export default {
     props: ['showHeaderTop'],
     mounted() {
         this.token = localStorage.getItem('gecToken')
-        if(localStorage.getItem('gecToken')){
+        if(localStorage.getItem('gecToken') && localStorage.getItem('loggedInUser')){
             const user = JSON.parse(localStorage.getItem('loggedInUser'));
-            const prenom = user['firstname'];
+            const prenom =  user['firstname'];
             const nom = user['lastname'];
             const email = user['email'];
             const initiales = prenom.substring(0, 1) + nom.substring(0, 1);
