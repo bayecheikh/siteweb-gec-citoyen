@@ -56,7 +56,7 @@ export default {
                 this.$store.dispatch("toast/getMessage", {
                     type: "success",
                     text: "Authentification réussie !",
-                });
+                }); 
 
                 this.$store.dispatch("coordonnees/getDetail", {
                     dataUser: this.parseJwt(response.id_token),
