@@ -97,6 +97,7 @@ export default {
     ],
     axios: {
         baseURL: 'https://api-gec-citoyen.fly.dev/api/v1',
+      
     },
     toast: {
         position: 'top-center',
