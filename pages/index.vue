@@ -1,44 +1,107 @@
   
 <template>
     <div id="main-wrapper" class="main-wrapper bg-lighten05">
-        <HeaderTwo/>
-      <Banner />
-      <!--<HomeYogaInstructorFunFact/>-->
+        <HeaderTwo />
+        <Banner />
+        <!--<HomeYogaInstructorFunFact/>-->
 
-        <Categories/>
-        <HomeKitchenCoachFAQ/>
+        <Categories />
+        <HomeKitchenCoachFAQ />
         <FooterKitchen />
     </div>
-    
 </template>
 
 <script>
 
-    export default {
-        mounted: function() {  
-            this.windowHeight = window.innerHeight;   
+export default {
+
+   // modules: ['@nuxtjs/axios'],
+
+    mounted: async function () {
+        this.windowHeight = window.innerHeight;
+
+       
+        this.$store.dispatch('banner/getDetail', this.windowHeight)
+        // if (this.$route.params.code) {
+        //     try {
+        //         const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token', {
+        //             grant_type: 'authorization_code',
+        //             redirect_uri: 'https://siteweb-gec-citoyen.vercel.app',
+        //             code: this.$route.params.code
+        //         }, {
+        //             headers: {
+        //                 'Authorization': 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
+        //                 'Content-Type': 'application/x-www-form-urlencoded'
+        //             }
+        //         });
+
+        //         console.log("TOKEN PNS", this.parseJwt(response.id_token))
+        //         await localStorage.setItem('gecToken', response.id_token)
+        //         await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.id_token))
+        //         await localStorage.setItem('gecIsAuthenticated', true)
+        //         if (isauthenticatingfrombutton) {
+        //                 this.$router.push("/addcourrier");
+        //             }
+        //             else{
+        //                 await  this.$router.go()
+
+        //             }
             
-            this.$store.dispatch('banner/getDetail',this.windowHeight)   
-        },
-        components: {
-            HeaderTwo: () => import("@/components/header/HeaderTwo.vue"),
-            Banner: () => import("@/components/home-main/Banner.vue"),
-            Categories: () => import("@/components/home-distant-learning/Categories.vue"),
-            Features: () => import("@/components/home-main/Features.vue"),
-            HomeKitchenCoachFAQ : () => import("@/components/home-kitchen-coach/FAQ.vue"),
-            HomeYogaInstructorFunFact : () => import("@/components/home-yoga-instructor/FunFact.vue"),
-            FooterKitchen: () => import("@/components/footer/FooterKitchen")
-        },
-        head() {
-            return {
-                title: 'GEC CITOYEN'
+        //         this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
+        //         this.$store.dispatch("toast/getMessage", {
+        //         type: "success",
+        //         text: "Authentification réussie !",
+        //         });
+               
+        //         this.$store.dispatch("coordonnees/getDetail", {
+        //             dataUser: this.parseJwt(response.id_token),
+        //         });
+        //         this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
+
+        //     } catch (error) {
+        //         console.error(error);
+        //         console.log('Code error ++++++: ', error)
+        //         this.$store.dispatch('toast/getMessage',{type:'error',text:error|| 'Échec de la connexion'})
+        //         return;
+        //     }
+        // }
+
+
+    },
+
+    components: {
+        HeaderTwo: () => import("@/components/header/HeaderTwo.vue"),
+        Banner: () => import("@/components/home-main/Banner.vue"),
+        Categories: () => import("@/components/home-distant-learning/Categories.vue"),
+        Features: () => import("@/components/home-main/Features.vue"),
+        HomeKitchenCoachFAQ: () => import("@/components/home-kitchen-coach/FAQ.vue"),
+        HomeYogaInstructorFunFact: () => import("@/components/home-yoga-instructor/FunFact.vue"),
+        FooterKitchen: () => import("@/components/footer/FooterKitchen")
+    },
+    // computed: mapGetters({
+    //     detailactive_step: 'active_step/detailactive_step',
+    //     isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
+    // }),
+    head() {
+        return {
+            title: 'GEC CITOYEN'
+        }
+    },
+    data() {
+        return {
+            windowHeight: ''
+        }
+    },
+    methods: {
+        parseJwt(token) {
+            if (!token) {
+                return;
             }
-        },
-        data() {
-            return {
-                windowHeight: ''
-            }
+            const base64Url = token.split('.')[1];
+            const base64 = base64Url.replace('-', '+').replace('_', '/');
+            return JSON.parse(window.atob(base64));
         }
     }
-    
+}
+
 </script>
