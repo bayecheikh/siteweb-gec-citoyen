@@ -69,6 +69,7 @@
                         >
                         <span><img src="@/static/images/icons/file.png" width="50">
                         {{ file.title }}</span>
+                        <span>{{ file.size }}</span>
                         
                         <span @click="deleteFindFichier(i)"><img class="remove" src="@/static/images/icons/remove.png" width="50"></span>
                         </li>
@@ -282,7 +283,7 @@ import { mapMutations, mapGetters } from 'vuex'
                             //this.imageData = e.target.result
                             //this.model.encodedFile = reader.result.split(';base64,')[1];
                             //this.$store.dispatch('contenus/getDetail',{...this.detailcontenu,encodedFile:reader.result.split(';base64,')[1],format:extFile})
-                            this.model.pieces_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                            this.model.pieces_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1],taille:size})
                             //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
                             console.log(this.model.pieces_jointes)
                         }
