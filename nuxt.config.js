@@ -97,6 +97,11 @@ export default {
     ],
     axios: {
         baseURL: 'https://api-gec-citoyen.fly.dev/api/v1',
+        headers: {
+            'Authorization': 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            
+        }
     },
     toast: {
         position: 'top-center',
