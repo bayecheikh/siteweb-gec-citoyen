@@ -22,7 +22,8 @@ export default {
 
        
         this.$store.dispatch('banner/getDetail', this.windowHeight)
-        if (this.$route.params.code) {
+        console.log("CODE+++++++++++++++", this.$route.query)
+        if (this.$route.query.code) {
             try {
                 const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token', {
                     grant_type: 'authorization_code',
