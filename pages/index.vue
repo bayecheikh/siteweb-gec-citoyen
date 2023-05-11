@@ -29,13 +29,34 @@ export default {
         if (this.$route.query.code) {
             this.model = {
                 code : this.$route.query.code,
-                authorisation : 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
+                authorisation : 'ZWNvbW11bmU6ZWNvbW11bmU=',
                 urlClient: 'https://siteweb-gec-citoyen.vercel.app',
                 urlPns: 'https://pprodofficial.service-public.bj/api/official/token'
             }
             try {
             const response = await this.$axios.post('users/code', {...this.model})
             console.log("TOKEN PNS", response)
+            // await localStorage.setItem('gecToken', response.id_token)
+            //     await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.id_token))
+            //     await localStorage.setItem('gecIsAuthenticated', true)
+            //     if (isauthenticatingfrombutton) {
+            //         this.$router.push("/addcourrier");
+            //     }
+            //     else {
+            //         await this.$router.go()
+
+            //     }
+
+            //     this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
+            //     this.$store.dispatch("toast/getMessage", {
+            //         type: "success",
+            //         text: "Authentification réussie !",
+            //     }); 
+
+            //     this.$store.dispatch("coordonnees/getDetail", {
+            //         dataUser: this.parseJwt(response.id_token),
+            //     });
+            //     this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
             
         }catch (error) {
                 console.error(error);
@@ -61,27 +82,27 @@ export default {
         //             });
 
         //         console.log("TOKEN PNS", this.parseJwt(response.id_token))
-        //         await localStorage.setItem('gecToken', response.id_token)
-        //         await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.id_token))
-        //         await localStorage.setItem('gecIsAuthenticated', true)
-        //         if (isauthenticatingfrombutton) {
-        //             this.$router.push("/addcourrier");
-        //         }
-        //         else {
-        //             await this.$router.go()
+                // await localStorage.setItem('gecToken', response.id_token)
+                // await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.id_token))
+                // await localStorage.setItem('gecIsAuthenticated', true)
+                // if (isauthenticatingfrombutton) {
+                //     this.$router.push("/addcourrier");
+                // }
+                // else {
+                //     await this.$router.go()
 
-        //         }
+                // }
 
-        //         this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
-        //         this.$store.dispatch("toast/getMessage", {
-        //             type: "success",
-        //             text: "Authentification réussie !",
-        //         }); 
+                // this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
+                // this.$store.dispatch("toast/getMessage", {
+                //     type: "success",
+                //     text: "Authentification réussie !",
+                // }); 
 
-        //         this.$store.dispatch("coordonnees/getDetail", {
-        //             dataUser: this.parseJwt(response.id_token),
-        //         });
-        //         this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
+                // this.$store.dispatch("coordonnees/getDetail", {
+                //     dataUser: this.parseJwt(response.id_token),
+                // });
+                // this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
 
         //     } catch (error) {
         //         console.error(error);
