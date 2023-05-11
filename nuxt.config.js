@@ -95,9 +95,10 @@ export default {
         '@nuxtjs/toast',
         '@nuxtjs/axios',
     ],
-    // axios: {
-    //     baseURL: 'https://api-gec-citoyen.fly.dev/api/v1',
-    // },
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev/api/v1',
+      
+    },
     toast: {
         position: 'top-center',
         register: [ // Register custom toasts

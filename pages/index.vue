@@ -29,7 +29,7 @@ export default {
             urlencoded.append("redirect_uri", "https://siteweb-gec-citoyen.vercel.app");
             urlencoded.append("code", this.$route.query.code);
             try {
-                const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token',
+                const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token?grant_type=authorization_code&redirect_uri=https://siteweb-gec-citoyen.vercel.app&code=',
                     {
 
                         body: urlencoded,
@@ -56,7 +56,7 @@ export default {
                 this.$store.dispatch("toast/getMessage", {
                     type: "success",
                     text: "Authentification réussie !",
-                }); 
+                });
 
                 this.$store.dispatch("coordonnees/getDetail", {
                     dataUser: this.parseJwt(response.id_token),
