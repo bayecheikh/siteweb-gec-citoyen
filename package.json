@@ -21,6 +21,7 @@
         "express": "^4.18.2",
         "html2pdf": "^0.0.11",
         "html2pdf.js": "^0.10.1",
+        "jsonwebtoken": "^9.0.0",
         "nuxt": "^2.15.8",
         "parallax-js": "^3.1.0",
         "rellax": "^1.12.1",

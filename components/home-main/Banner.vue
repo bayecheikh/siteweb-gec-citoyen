@@ -156,9 +156,15 @@
 
 <script>
 
+
+
+
 import { mapMutations, mapActions,  mapGetters } from "vuex";
+
 export default {
-  mounted: function() {  
+
+mounted: function() {  
+ 
     this.windowHeight = this.detailbanner;   
 
     console.log("assdff",this.windowHeight)    

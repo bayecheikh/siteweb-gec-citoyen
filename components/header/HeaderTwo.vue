@@ -68,8 +68,10 @@
                                 <ul class="header-action">
 
                                     <li class="header-btn">
-                                        <a class=" btn-medium my-custom-login-button" @click="onClickSeConnecter()">SE
+                                        <a class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
                                             CONNECTER</a>
+                                            <!-- <a class=" btn-medium my-custom-login-button" @click="onClickSeConnecter">SE
+                                            CONNECTER</a> -->
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
                                         <button class="hamberger-button" @click="mobileMenuOpen('addClass', 'active')">
