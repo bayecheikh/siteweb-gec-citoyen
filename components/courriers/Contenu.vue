@@ -14,9 +14,9 @@
             </div>
             <div class="edu-sorting form-group col-12">
                 <label for="reg-name">Choisir une entrée</label>
-                <select class="custom-select" @change="changeModelEntree($event)">
-                    <option>--</option>
-                    <option v-for="item in modelEntree" :key="item.id" :value="item.libelle">{{item.libelle}}</option>
+                <select class="custom-select" @change="changeModelEntree($event)" v-model="selectedEntree">
+                    <!-- <option>--</option> -->
+                    <option v-for="item in modelEntree" :key="item.id" :value="item.libelle" >{{item.libelle}}</option>
                 </select>
             </div>
             <div class="edu-sorting form-group col-12" v-if="saisie">
@@ -27,8 +27,8 @@
                 </select>
             </div>
             <div class="form-group col-12">
-                <label for="reg-name">Objet* {{ this.model.subject }}</label>
-                <input ref="subject" class="custom-input" type="text" :v-model="this.model.subject" name="reg-name" id="reg-name" placeholder="Sujet du courrier">
+                <label for="reg-name">Objet*</label>
+                <input ref="subject" class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="Sujet du courrier">
             </div>
             <div class="form-group col-12 mt-4" v-if="saisie">
                 <label for="reg-name">Message*</label>
@@ -59,18 +59,50 @@
                 </div>
                 
             </div>
+            <div class="col-12 my-5">
+                <div class="card">
+                    <div class="card-header ">Ajouter des pièces jointes (Format PDF)</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between"
+                        v-for="(file, index) in model.pieces_jointes"
+                        :key="index"
+                        >
+                        <span><img src="@/static/images/icons/file.png" width="50">
+                        {{ file.title }}</span>
+                        
+                        <span @click="deleteFindFichier(i)"><img class="remove" src="@/static/images/icons/remove.png" width="50"></span>
+                        </li>
+                        <li class="list-group-item"
+                        >
+                            <div class="d-flex justify-content-center border-input bg-grey" @click="$refs.file2.click()">
+                                <div class="p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                    <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                    </svg>
+                                </div>
+                                
+                            </div>
+                            <input type="file" id="file2" name="avatar" ref="file2" v-on:change="handleFileUpload2" style="display: none"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="form-group col-12 chekbox-area">
                 <div class="edu-form-check">
                 <input type="checkbox" id="terms-condition">
                 <label for="terms-condition">J'accepte les termes et conditions <a href="terms-condition.html">Terms & Condition.</a> </label>
                 </div>
             </div>
-            <div class="form-group col-6 mt-5">
-            <button @click="$goToTab('ministeres')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+            <div class="row d-flex justify-content-between">
+                <div class="form-group col-3 mt-5">
+                <button @click="$goToTab('ministeres')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+                </div>
+                <div class="form-group col-3 mt-5">
+                    <button @click="submitContenu" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
+                </div>
             </div>
-            <div class="form-group col-6 mt-5">
-                <button @click="submitContenu" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
-            </div>
+            
         </form>
     </div>
 </template>
@@ -101,6 +133,8 @@ import { mapMutations, mapGetters } from 'vuex'
         },
         data() {
             return {
+                selectedEntree:'Secrétariat administratif',
+                fileInfos:[{name:'file 1',url:'#'},{name:'file 2',url:'#'}],
                 key:null,
                 imageData:null,
                 title_courrier:'',
@@ -113,7 +147,7 @@ import { mapMutations, mapGetters } from 'vuex'
                     {id:3,libelle:'Opinion',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
                 modelEntree:[
-                    {id:1,libelle:'Secrétariat administratif',text:'Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor'},
+                    {id:1,libelle:'Secrétariat administratif',text:'Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor',default:true},
                     {id:2,libelle:'Secrétariat DC',text:'Message message'},
                     {id:3,libelle:'Secrétariat particulier',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
@@ -136,7 +170,7 @@ import { mapMutations, mapGetters } from 'vuex'
             submitContenu(){
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
-               this.$store.dispatch('contenus/getDetail',{...this.model})
+               this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree,subject:this.model.subject})
                 this.$store.dispatch('active_step/getDetail',{id:'validation'})
 
             },
@@ -219,6 +253,56 @@ import { mapMutations, mapGetters } from 'vuex'
                     alert("Seules les fichiers pdf et de taille inférieure à 5Mb sont acceptées!");
                 }  
             },
+            handleFileUpload2(e){  
+                console.log(this.model.pieces_jointes.length)   
+                if(this.model.pieces_jointes.length<=2){
+                    //Recupère le fichier
+                    const input = this.$refs.file2
+                    const files = input.files
+
+                    //Recupère l'extension
+                    let filename = files[0].name;
+                    let title = filename.substring(0, filename.lastIndexOf('.')) || filename;
+                    // this.title_courrier=title
+                    let idxDot = filename.lastIndexOf(".") + 1;
+                    let extFile = filename.substr(idxDot, filename.length).toLowerCase(); 
+                    // this.model.format = extFile
+                    let size = files[0].size/1024/1024 //La taille en Mbit
+                    console.log('Size -------------- ',size)
+
+                    //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
+                    if (size <= 5 && ( extFile=="pdf" )){
+                    //Affecté le fichier image au model avatar
+                    //this.model.avatar = e.target.files[0];
+
+                    //Prévisualise l'image
+                    if (files && files[0]) {
+                            const reader = new FileReader
+                            reader.onload = e => {
+                            //this.imageData = e.target.result
+                            //this.model.encodedFile = reader.result.split(';base64,')[1];
+                            //this.$store.dispatch('contenus/getDetail',{...this.detailcontenu,encodedFile:reader.result.split(';base64,')[1],format:extFile})
+                            this.model.pieces_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                            //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
+                            console.log(this.model.pieces_jointes)
+                        }
+                        reader.readAsDataURL(files[0])
+                        this.$emit('input', files[0])
+                    }
+                    }else{
+                        alert("Seules les fichiers pdf et de taille inférieure à 5Mb sont acceptées!");
+                    } 
+                }
+                else{
+                    alert("Le nombre maximum de pièces-jointes est déja atteint")
+                }
+                 
+            },
+            deleteFindFichier: function(index) {
+                console.log('Index---- ',index);
+                this.model.pieces_jointes.splice(index,1);
+
+            },
         },
     }
 </script>
@@ -280,5 +364,11 @@ padding-bottom: 6px;
 .embeded-courrier{
     width: 100%;
     min-height: 400px;
+}
+.bg-grey{
+  background: #f7f5f2;
+}
+.remove{
+    cursor: pointer;
 }
 </style>

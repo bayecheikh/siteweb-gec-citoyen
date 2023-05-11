@@ -118,13 +118,15 @@
                 </div>
                 
             </div> -->
+            <div class="row d-flex justify-content-between">
+                <div class="form-group col-3">
+                <button @click="$goToTab('ministeres')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+                </div>
+                <div class="form-group col-3">
+                    <button @click="submitCoordonnee" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
+                </div>
+            </div>
             
-            <div class="form-group col-6">
-                <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
-            </div>
-            <div class="form-group col-6">
-                <button @click="submitCoordonnee" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
-            </div>
         </form>
     </div>
 </template>
@@ -215,7 +217,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 console.log('Données formulaire ++++++: ', $event.target.value)
                 /* this.model.message = $event.target.value.text
                 this.model.subject = $event.target.value.libelle */
-                if($event.target.value=='Particulier'){
+                if($event.target.value=='Personne'){
                     this.particuler = true
                     this.entreprise=false
                 }

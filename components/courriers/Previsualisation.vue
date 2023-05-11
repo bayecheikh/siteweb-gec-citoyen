@@ -36,14 +36,14 @@
                          <hr>
                          <div class="row border-grey">
                             <div class="form-group col-12">
-                               <h5 for="reg-name">Objet*</h5>
+                               <h5 for="reg-name">Objet</h5>
                                <p>{{this.detailcontenu && this.detailcontenu.subject}}</p>
                             </div>
                          </div>
                          <hr>
                          <div class="row border-grey">
                             <div class="form-group col-12">
-                               <h5 for="reg-name">Message*</h5>
+                               <h5 for="reg-name">Message</h5>
                                <p>{{this.detailcontenu && this.detailcontenu.message}}</p>
                             </div>
                          </div>
