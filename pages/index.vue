@@ -29,10 +29,9 @@ export default {
             urlencoded.append("redirect_uri", "https://siteweb-gec-citoyen.vercel.app");
             urlencoded.append("code", this.$route.query.code);
             try {
-                const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token',
+                const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token', urlencoded,
                     {
 
-                        body: urlencoded,
                         headers: {
                             'Authorization': 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
                             'Content-Type': 'application/x-www-form-urlencoded',
