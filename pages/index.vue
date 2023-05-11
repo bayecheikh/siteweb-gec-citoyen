@@ -25,7 +25,7 @@ export default {
         console.log("CODE+++++++++++++++", this.$route.query)
         if (this.$route.query.code) {
             try {
-                const response = await this.$axios.post(`https://pprodofficial.service-public.bj/api/official/token?grant_type=authorization_code?redirect_uri=https://siteweb-gec-citoyen.vercel.app?code=${{this.$route.query.code}}`, 
+                const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token?grant_type=authorization_code?redirect_uri=https://siteweb-gec-citoyen.vercel.app?code='+ this.$route.query.code, 
                  {
                     headers: {
                         'Authorization': 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
