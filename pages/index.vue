@@ -38,40 +38,6 @@ export default {
             console.log("TOKEN PNS", response)
             
         }catch (error) {
-                const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token', urlencoded,
-                    {
-
-                        headers: {
-                            'Authorization': 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
-                            'Content-Type': 'application/x-www-form-urlencoded',
-
-                        }
-                    });
-
-                console.log("TOKEN PNS", this.parseJwt(response.id_token))
-                await localStorage.setItem('gecToken', response.id_token)
-                await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.id_token))
-                await localStorage.setItem('gecIsAuthenticated', true)
-                if (isauthenticatingfrombutton) {
-                    this.$router.push("/addcourrier");
-                }
-                else {
-                    await this.$router.go()
-
-                }
-
-                this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
-                this.$store.dispatch("toast/getMessage", {
-                    type: "success",
-                    text: "Authentification réussie !",
-                });
-
-                this.$store.dispatch("coordonnees/getDetail", {
-                    dataUser: this.parseJwt(response.id_token),
-                });
-                this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
-
-            } catch (error) {
                 console.error(error);
                 console.log('Code error ++++++: ', error)
                 this.$store.dispatch('toast/getMessage', { type: 'error', text: error || 'Échec de la connexion' })
