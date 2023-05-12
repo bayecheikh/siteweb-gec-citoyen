@@ -35,6 +35,9 @@ export default {
             }
             try {
             const response = await this.$axios.post('users/code', {...this.model})
+            const { code, ...queryParams } = this.$route.query
+            const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`
+            this.$router.replace(newUrl)
             console.log("TOKEN PNS", response)
             await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.data.id_token.id_token))
