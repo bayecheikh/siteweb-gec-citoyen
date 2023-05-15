@@ -22,11 +22,11 @@
                       <form >
                          <div class="row border-grey">
                             <div class="form-group col-8">
-                              <p><span>Prénom : </span>{{this.detailutilisateur && this.detailutilisateur.nom}}</p>
-                              <p><span>Nom : </span>{{this.detailutilisateur && this.detailutilisateur.prenom}}</p>
-                              <p><span>Email : </span>{{this.detailutilisateur && this.detailutilisateur.email}}</p>
-                              <p><span>Téléphone : </span>{{this.detailutilisateur && this.detailutilisateur.telephone}}</p>
-                              <p><span>Adresse : </span>{{this.detailutilisateur && this.detailutilisateur.adresse}}</p>
+                              <p><span>Prénom : </span>{{this.detailutilisateur && this.detailutilisateur.requerant.prenom}}</p>
+                              <p><span>Nom : </span>{{this.detailutilisateur && this.detailutilisateur.requerant.nom}}</p>
+                              <p><span>Email : </span>{{this.detailutilisateur && this.detailutilisateur.requerant.email}}</p>
+                              <p><span>Téléphone : </span>{{this.detailutilisateur && this.detailutilisateur.requerant.telephone}}</p>
+                              <p><span>Adresse : </span>{{this.detailutilisateur && this.detailutilisateur.requerant.adresse}}</p>
                             </div>
                             <div class="form-group col-4">
                                <h5 for="reg-name">Ministère</h5>
