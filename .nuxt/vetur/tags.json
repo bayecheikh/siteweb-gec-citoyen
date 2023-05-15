@@ -140,6 +140,18 @@
   "CtaCTAOneAlter": {
     "description": "Auto imported from components/cta/CTAOneAlter.vue"
   },
+  "EventList": {
+    "description": "Auto imported from components/event/EventList.vue"
+  },
+  "EventOne": {
+    "description": "Auto imported from components/event/EventOne.vue"
+  },
+  "EventSectionOne": {
+    "description": "Auto imported from components/event/EventSectionOne.vue"
+  },
+  "EventTwo": {
+    "description": "Auto imported from components/event/EventTwo.vue"
+  },
   "FooterKindergarten": {
     "description": "Auto imported from components/footer/FooterKindergarten.vue"
   },
@@ -166,18 +178,6 @@
   },
   "FooterScrollToTop": {
     "description": "Auto imported from components/footer/ScrollToTop.vue"
-  },
-  "EventList": {
-    "description": "Auto imported from components/event/EventList.vue"
-  },
-  "EventOne": {
-    "description": "Auto imported from components/event/EventOne.vue"
-  },
-  "EventSectionOne": {
-    "description": "Auto imported from components/event/EventSectionOne.vue"
-  },
-  "EventTwo": {
-    "description": "Auto imported from components/event/EventTwo.vue"
   },
   "HeaderAuthentication2": {
     "description": "Auto imported from components/header/Authentication2.vue"
@@ -371,30 +371,6 @@
   "HomeMainInstructor": {
     "description": "Auto imported from components/home-main/Instructor.vue"
   },
-  "HomeUniversityAbout": {
-    "description": "Auto imported from components/home-university/About.vue"
-  },
-  "HomeUniversityBanner": {
-    "description": "Auto imported from components/home-university/Banner.vue"
-  },
-  "HomeUniversityCampus": {
-    "description": "Auto imported from components/home-university/Campus.vue"
-  },
-  "HomeUniversityContactInfo": {
-    "description": "Auto imported from components/home-university/ContactInfo.vue"
-  },
-  "HomeUniversityCourse": {
-    "description": "Auto imported from components/home-university/Course.vue"
-  },
-  "HomeUniversityFeatures": {
-    "description": "Auto imported from components/home-university/Features.vue"
-  },
-  "HomeUniversityFunFact": {
-    "description": "Auto imported from components/home-university/FunFact.vue"
-  },
-  "HomeUniversityVideo": {
-    "description": "Auto imported from components/home-university/Video.vue"
-  },
   "HomeOnlineAcademyBanner": {
     "description": "Auto imported from components/home-online-academy/Banner.vue"
   },
@@ -418,6 +394,30 @@
   },
   "HomeOnlineAcademyInstructor": {
     "description": "Auto imported from components/home-online-academy/Instructor.vue"
+  },
+  "HomeUniversityAbout": {
+    "description": "Auto imported from components/home-university/About.vue"
+  },
+  "HomeUniversityBanner": {
+    "description": "Auto imported from components/home-university/Banner.vue"
+  },
+  "HomeUniversityCampus": {
+    "description": "Auto imported from components/home-university/Campus.vue"
+  },
+  "HomeUniversityContactInfo": {
+    "description": "Auto imported from components/home-university/ContactInfo.vue"
+  },
+  "HomeUniversityCourse": {
+    "description": "Auto imported from components/home-university/Course.vue"
+  },
+  "HomeUniversityFeatures": {
+    "description": "Auto imported from components/home-university/Features.vue"
+  },
+  "HomeUniversityFunFact": {
+    "description": "Auto imported from components/home-university/FunFact.vue"
+  },
+  "HomeUniversityVideo": {
+    "description": "Auto imported from components/home-university/Video.vue"
   },
   "HomeYogaInstructorAbout": {
     "description": "Auto imported from components/home-yoga-instructor/About.vue"
