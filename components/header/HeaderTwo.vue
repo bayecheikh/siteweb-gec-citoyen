@@ -107,7 +107,7 @@
                                         <div class="initials-circle">
                                             <span class="initials" v-if="initiales" > {{ initiales}}</span>
                                             <span class="initials" v-if="!initiales" >XX</span>
-                                            <span class="tooltip" v-if="prenomEtNom">{{ prenomEtNom }}<br><span  v-if="email">Email : {{ email }}</span></span>
+                                            <span class="tooltip" v-if="name">{{ name }}<br><span  v-if="email">Email : {{ email }}</span></span>
 
                                         </div>
 
@@ -163,7 +163,7 @@ export default {
     data() {
         return {
             initiales : null,
-            prenomEtNom: null,
+            name: null,
             email: null,
             token: null,
             isSticky: false,
@@ -190,16 +190,23 @@ export default {
     props: ['showHeaderTop'],
     mounted() {
         this.token = localStorage.getItem('gecToken')
-        if(localStorage.getItem('gecToken')){
+        if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser') ){
             const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-            const prenom = user['firstname'];
-            const nom = user['lastname'];
-            const email = user['email'];
-            const initiales = prenom.substring(0, 1) + nom.substring(0, 1);
-            const prenomEtNom = prenom + " " +nom
+            const name = user['name'];
+            const email = user['sub'];
+            let initiales = "";
+
+            
+            const words = name.split(" ");
+
+          
+            for (const word of words) {
+            initiales += word.charAt(0).toUpperCase();
+            }
+        
             console.log("Initiales :", initiales);
             this.initiales = initiales
-            this.prenomEtNom = prenomEtNom
+            this.name = name
             this.email = email
         }
         var largeurEcran = window.innerWidth;

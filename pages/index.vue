@@ -28,7 +28,7 @@ export default {
         this.$store.dispatch('banner/getDetail', this.windowHeight)
         console.log("CODE+++++++++++++++", this.$route.query)
         if (this.$route.query.code) {
-            this.model = {
+            this.model =  {
                 code : this.$route.query.code,
                 authorisation : 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
                 urlClient: 'https://siteweb-gec-citoyen.vercel.app',
@@ -36,9 +36,7 @@ export default {
             }
             try {
             const response = await this.$axios.post('users/code', {...this.model})
-            const newUrl = this.$route.path;
-
-            this.$router.replace(newUrl)
+          
             console.log("TOKEN PNS", response)
   
             await localStorage.setItem('gecToken', response.data.id_token.id_token)
@@ -50,8 +48,9 @@ console.log("GEC LOGGED IN USER", gecLoggedInUser);
                     this.$router.push("/addcourrier");
                 }
                 else {
-                    await this.$router.go()
-
+                    const { code, ...queryParams } = this.$route.query;
+    const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
+   await this.$router.replace(newUrl);
                 }
 
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
