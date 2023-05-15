@@ -107,7 +107,7 @@
                                         <div class="initials-circle">
                                             <span class="initials" v-if="initiales" > {{ initiales}}</span>
                                             <span class="initials" v-if="!initiales" >XX</span>
-                                            <span class="tooltip" v-if="name">{{ name }}<br><span  v-if="email">Email : {{ email }}</span></span>
+                                            <span class="tooltip" v-if="userName">{{ userName }}<br><span  v-if="email">Email : {{ email }}</span></span>
 
                                         </div>
 
@@ -162,8 +162,8 @@ export default {
     },
     data() {
         return {
-            initiales : null,
-            name: null,
+            initiales : "",
+            userName: "",
             email: null,
             token: null,
             isSticky: false,
@@ -192,22 +192,33 @@ export default {
         this.token = localStorage.getItem('gecToken')
         if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser') ){
             const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-            const name = user['name'];
+            if(user['name']) {
+                const userName = user['name'];
+                this.userName = userName
+          
+            }
+           if(user['sub']){
             const email = user['sub'];
+            this.email = email
+           }
+           
             let initiales = "";
 
-            
-            const words = name.split(" ");
+            if(this.userName){
+                const words = this.userName.split(" ");
+                for (const word of words) {
+            initiales += word.charAt(0).toUpperCase();
+
+            }
+            }
+           this.initiales = initiales
 
           
-            for (const word of words) {
-            initiales += word.charAt(0).toUpperCase();
-            }
+           
         
             console.log("Initiales :", initiales);
-            this.initiales = initiales
-            this.name = name
-            this.email = email
+            
+         
         }
         var largeurEcran = window.innerWidth;
 
