@@ -22,8 +22,9 @@ export default {
 
     mounted: async function () {
      this.windowHeight = window.innerHeight;
+     let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
 
-
+    //console.log("JWT TOKEN", this.parseJwt("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwbnMudGVzdEBnb3V2LmJqIiwiYXVkIjoiZWNvbW11bmUiLCJyb2xlcyI6WyIiXSwibmFtZSI6IlRFU1QgUE5TIiwiaXNzIjoiaHR0cHM6Ly9wcHJvZG9mZmljaWFsLnNlcnZpY2UtcHVibGljLmJqL2FwaS9jaXRpemVuLyIsImNvbXBhbnkiOiJBU1NJIiwiZXhwIjoxNjg0MTQyNjM2LCJpYXQiOjE2ODQxNDI2MTZ9.fFJ8eQEVofzGeE1E4DiKyywZd9PBBQYHf_ZLuCxva3zurcPtZSaymq8bebwlVVxIc3VKRvD1CC2GcNohzEE-Wg"))
         this.$store.dispatch('banner/getDetail', this.windowHeight)
         console.log("CODE+++++++++++++++", this.$route.query)
         if (this.$route.query.code) {
@@ -35,13 +36,16 @@ export default {
             }
             try {
             const response = await this.$axios.post('users/code', {...this.model})
-            const { code, ...queryParams } = this.$route.query
-            const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`
+            const newUrl = this.$route.path;
+
             this.$router.replace(newUrl)
             console.log("TOKEN PNS", response)
+  
             await localStorage.setItem('gecToken', response.data.id_token.id_token)
-                await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.data.id_token.id_token))
+                await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
                 await localStorage.setItem('gecIsAuthenticated', true)
+                const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
+console.log("GEC LOGGED IN USER", gecLoggedInUser);
                 if (isauthenticatingfrombutton) {
                     this.$router.push("/addcourrier");
                 }
@@ -60,7 +64,7 @@ export default {
                     dataUser: this.parseJwt(response.id_token),
                 });
                 this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
-            
+                this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
         }catch (error) {
                 console.error(error);
                 console.log('Code error ++++++: ', error)
