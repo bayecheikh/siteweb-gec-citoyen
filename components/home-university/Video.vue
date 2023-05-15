@@ -29,13 +29,36 @@
 
 <script>
     export default {
+        modules: ['@nuxtjs/axios'],
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev'
+    },
+    mounted: async function () {
+        try {
+            const response = await this.$axios.get("/contenus");
+          
+            const filteredContenus = response.data.data.data.filter(contenu => contenu.title === "Vidéo");
+           
+            const sortedVideos = filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.videos = sortedVideos.slice(0, 1);
+          
+            this.video = this.videos[0]
+            this.items = [
+                    {
+                        src: this.video?.link||"https://www.youtube.com/watch?v=HrNBaa59PtU"
+                    }
+                ];
+        } catch (error) {
+        console.error(error);
+        return;
+        }
+        console.log("Vidéos", this.video.link)
+    },
         data () {
             return {
-                items: [
-                    {
-                        src: "https://www.youtube.com/watch?v=HrNBaa59PtU"
-                    }
-                ],
+                videos: [],
+                video: {},
+                items: [],
                 index: null
             }
         }
