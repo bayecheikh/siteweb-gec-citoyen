@@ -12,7 +12,16 @@
     "description": "Auto imported from components/PopUpConnexion.vue"
   },
   "About": {
-    "description": "Auto imported from components/about-us-three/About.vue"
+    "description": "Auto imported from components/about-us-one/About.vue"
+  },
+  "AboutUsOneFunFact": {
+    "description": "Auto imported from components/about-us-one/FunFact.vue"
+  },
+  "AboutUsOneInstructor": {
+    "description": "Auto imported from components/about-us-one/Instructor.vue"
+  },
+  "AboutUsOneWhyChoose": {
+    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
   },
   "AboutUsThreeContactInfo": {
     "description": "Auto imported from components/about-us-three/ContactInfo.vue"
@@ -47,18 +56,6 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
-  "AboutUsOneFunFact": {
-    "description": "Auto imported from components/about-us-one/FunFact.vue"
-  },
-  "AboutUsOneInstructor": {
-    "description": "Auto imported from components/about-us-one/Instructor.vue"
-  },
-  "AboutUsOneWhyChoose": {
-    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
-  },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
   "BlogPostList": {
     "description": "Auto imported from components/blog/BlogPostList.vue"
   },
@@ -88,6 +85,9 @@
   },
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
