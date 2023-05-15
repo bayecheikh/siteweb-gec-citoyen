@@ -7,13 +7,16 @@
             </div>
             <div class="form-group col-12 mb-3">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">
-                    <input @change="changeTypeExpediteur($event)" class="form-check-input" type="radio" v-model="model.type_expediteur" name="inlineRadioOptions2" id="inlineRadio1112" value="Requerant">
+                    <input checked @change="changeTypeExpediteur($event)" class="form-check-input" type="radio" v-model="model.type_expediteur" name="inlineRadioOptions2" id="inlineRadio1112" value="Requerant">
                     <label class="form-check-label" for="inlineRadio1112">Requérant</label>
                     </div>
                 <div class="form-check form-check-inline border-radio pb-1">
                     <input @change="changeTypeExpediteur($event)" class="form-check-input" type="radio" v-model="model.type_expediteur" name="inlineRadioOptions2" id="inlineRadio2222" value="Mandataire">
                     <label class="form-check-label" for="inlineRadio2222">Mandataire</label>
                 </div>
+            </div>
+            <div class="form-group col-12 mt-5" v-if="mandataire">
+                <div class="custom-lable-title">Je dépose un courrier pour une</div>
             </div>
             <div class="form-group col-12 mb-3" v-if="mandataire">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">

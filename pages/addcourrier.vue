@@ -1,6 +1,6 @@
 <template>
     <div id="main-wrapper" class="main-wrapper">
-        <HeaderOne />
+       <!--  <HeaderTwo /> -->
 
         <Form />
 
@@ -33,7 +33,8 @@ export default {
     //     }
     // },
     components: {
-        HeaderOne: () => import("@/components/header/HeaderOne"),
+       // HeaderOne: () => import("@/components/header/HeaderOne"),
+        HeaderTwo: () => import("@/components/header/HeaderTwo"),
         Banner: () => import("@/components/home-university/Banner"),
         Features: () => import("@/components/home-university/Features"),
         About: () => import("@/components/home-university/About"),

@@ -1,7 +1,7 @@
   
 <template>
     <div id="main-wrapper" class="main-wrapper bg-lighten05">
-        <HeaderTwo />
+        <!-- <HeaderTwo /> -->
         <Banner />
         <!--<HomeYogaInstructorFunFact/>-->
 
