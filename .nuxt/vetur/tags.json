@@ -12,16 +12,7 @@
     "description": "Auto imported from components/PopUpConnexion.vue"
   },
   "About": {
-    "description": "Auto imported from components/about-us-one/About.vue"
-  },
-  "AboutUsOneFunFact": {
-    "description": "Auto imported from components/about-us-one/FunFact.vue"
-  },
-  "AboutUsOneInstructor": {
-    "description": "Auto imported from components/about-us-one/Instructor.vue"
-  },
-  "AboutUsOneWhyChoose": {
-    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
+    "description": "Auto imported from components/about-us-three/About.vue"
   },
   "AboutUsThreeContactInfo": {
     "description": "Auto imported from components/about-us-three/ContactInfo.vue"
@@ -56,8 +47,47 @@
   "AboutUsTwoVideo": {
     "description": "Auto imported from components/about-us-two/Video.vue"
   },
+  "AboutUsOneFunFact": {
+    "description": "Auto imported from components/about-us-one/FunFact.vue"
+  },
+  "AboutUsOneInstructor": {
+    "description": "Auto imported from components/about-us-one/Instructor.vue"
+  },
+  "AboutUsOneWhyChoose": {
+    "description": "Auto imported from components/about-us-one/WhyChoose.vue"
+  },
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
+  },
+  "CommonBreadCrumbOne": {
+    "description": "Auto imported from components/common/BreadCrumbOne.vue"
+  },
+  "CommonBreadCrumbThree": {
+    "description": "Auto imported from components/common/BreadCrumbThree.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonColorMode": {
+    "description": "Auto imported from components/common/ColorMode.vue"
+  },
+  "CommonPaginationOne": {
+    "description": "Auto imported from components/common/PaginationOne.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "BlogPostList": {
+    "description": "Auto imported from components/blog/BlogPostList.vue"
+  },
+  "BlogPostOne": {
+    "description": "Auto imported from components/blog/BlogPostOne.vue"
+  },
+  "BlogPostStandard": {
+    "description": "Auto imported from components/blog/BlogPostStandard.vue"
+  },
+  "BlogPostTwo": {
+    "description": "Auto imported from components/blog/BlogPostTwo.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
@@ -79,36 +109,6 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
-  },
-  "BlogPostList": {
-    "description": "Auto imported from components/blog/BlogPostList.vue"
-  },
-  "BlogPostOne": {
-    "description": "Auto imported from components/blog/BlogPostOne.vue"
-  },
-  "BlogPostStandard": {
-    "description": "Auto imported from components/blog/BlogPostStandard.vue"
-  },
-  "BlogPostTwo": {
-    "description": "Auto imported from components/blog/BlogPostTwo.vue"
-  },
-  "CommonBreadCrumbOne": {
-    "description": "Auto imported from components/common/BreadCrumbOne.vue"
-  },
-  "CommonBreadCrumbThree": {
-    "description": "Auto imported from components/common/BreadCrumbThree.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonColorMode": {
-    "description": "Auto imported from components/common/ColorMode.vue"
-  },
-  "CommonPaginationOne": {
-    "description": "Auto imported from components/common/PaginationOne.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "CourseTypeEight": {
     "description": "Auto imported from components/course/CourseTypeEight.vue"
@@ -221,30 +221,6 @@
   "HeaderSearchPopUp": {
     "description": "Auto imported from components/header/SearchPopUp.vue"
   },
-  "HomeKindergartenAbout": {
-    "description": "Auto imported from components/home-kindergarten/About.vue"
-  },
-  "HomeKindergartenActivities": {
-    "description": "Auto imported from components/home-kindergarten/Activities.vue"
-  },
-  "HomeKindergartenBanner": {
-    "description": "Auto imported from components/home-kindergarten/Banner.vue"
-  },
-  "HomeKindergartenBlog": {
-    "description": "Auto imported from components/home-kindergarten/Blog.vue"
-  },
-  "HomeKindergartenCourse": {
-    "description": "Auto imported from components/home-kindergarten/Course.vue"
-  },
-  "HomeKindergartenEvent": {
-    "description": "Auto imported from components/home-kindergarten/Event.vue"
-  },
-  "HomeKindergartenFAQ": {
-    "description": "Auto imported from components/home-kindergarten/FAQ.vue"
-  },
-  "HomeKindergartenSubscriptionForm": {
-    "description": "Auto imported from components/home-kindergarten/SubscriptionForm.vue"
-  },
   "HomeDistantLearningAbout": {
     "description": "Auto imported from components/home-distant-learning/About.vue"
   },
@@ -280,6 +256,30 @@
   },
   "HomeDistantLearningVideo": {
     "description": "Auto imported from components/home-distant-learning/Video.vue"
+  },
+  "HomeKindergartenAbout": {
+    "description": "Auto imported from components/home-kindergarten/About.vue"
+  },
+  "HomeKindergartenActivities": {
+    "description": "Auto imported from components/home-kindergarten/Activities.vue"
+  },
+  "HomeKindergartenBanner": {
+    "description": "Auto imported from components/home-kindergarten/Banner.vue"
+  },
+  "HomeKindergartenBlog": {
+    "description": "Auto imported from components/home-kindergarten/Blog.vue"
+  },
+  "HomeKindergartenCourse": {
+    "description": "Auto imported from components/home-kindergarten/Course.vue"
+  },
+  "HomeKindergartenEvent": {
+    "description": "Auto imported from components/home-kindergarten/Event.vue"
+  },
+  "HomeKindergartenFAQ": {
+    "description": "Auto imported from components/home-kindergarten/FAQ.vue"
+  },
+  "HomeKindergartenSubscriptionForm": {
+    "description": "Auto imported from components/home-kindergarten/SubscriptionForm.vue"
   },
   "HomeKitchenCoachAbout": {
     "description": "Auto imported from components/home-kitchen-coach/About.vue"
