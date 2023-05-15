@@ -75,7 +75,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2">Remplir le formulaire de somission</p>
+                  <p class="title_step pt-2">Remplir le formulaire de soumission</p>
                </div>
                <div class="col-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">

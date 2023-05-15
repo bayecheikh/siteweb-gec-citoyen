@@ -151,6 +151,10 @@
                     <label for="reg-name">Numéro NINEA*</label>
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Numéro NINEA" v-model="model.entreprise.numero_ninea">
                 </div>
+                <div class="form-group col-12 mb-5">
+                    <label for="log-email">Siége social de l'entreprise*</label>
+                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse de l'entreprise" v-model="model.entreprise.adresse_entreprise">
+                </div>
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Prénom du représentant légal</label>
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Prénom du représentant légal" v-model="model.entreprise.prenom_representant_legal">
@@ -167,10 +171,7 @@
                     <label for="reg-name">Email du représentant légal</label>
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Email du représentant légal" v-model="model.entreprise.email_representant_legal">
                 </div>
-                <div class="form-group col-12 mb-5">
-                    <label for="log-email">Siége social de l'entreprise*</label>
-                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse de l'entreprise" v-model="model.entreprise.adresse_entreprise">
-                </div>
+                
                 <!-- <div class="form-group col-12">
                     <label for="reg-name">Siége social de l'entreprise*</label>
                     <div class="border-adresse row d-flex p-5">
