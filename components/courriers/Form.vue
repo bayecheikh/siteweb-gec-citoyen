@@ -105,7 +105,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2 ">Prévisualisez et soumettre</p>
+                  <p class="title_step pt-2 ">Prévisualisez et soumettez</p>
                </div>
                
                <!-- <button @click="$goToTab('ministeres')" :class="'nav-link '+(detailactive_step.id=='ministeres'?'active':'')" >Trouvez le ministère</button> -->

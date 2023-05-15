@@ -187,16 +187,16 @@ export default {
         this.token = localStorage.getItem('gecToken')
         if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser') ){
             const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-            const name = user['name'];
-            const email = user['sub'];
+            const name = user['name'] || '';
+            const email = user['sub'] || '';
             let initiales = "";
 
             
-            const words = name.split(" ");
+            const words = name?.split(" ");
 
           
             for (const word of words) {
-            initiales += word.charAt(0).toUpperCase();
+            initiales += word?.charAt(0).toUpperCase();
             }
         
             console.log("Initiales :", initiales);
