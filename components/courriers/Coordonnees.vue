@@ -3,17 +3,68 @@
         <h3 class="title"></h3>
         <form class="row d-flex">
             <div class="form-group col-12">
-                <div class="custom-lable-title">VOUS ETES ?</div>
+                <div class="custom-lable-title">Je suis</div>
             </div>
             <div class="form-group col-12 mb-3">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">
+                    <input @change="changeTypeExpediteur($event)" class="form-check-input" type="radio" v-model="model.type_expediteur" name="inlineRadioOptions2" id="inlineRadio1112" value="Requerant">
+                    <label class="form-check-label" for="inlineRadio1112">Requérant</label>
+                    </div>
+                <div class="form-check form-check-inline border-radio pb-1">
+                    <input @change="changeTypeExpediteur($event)" class="form-check-input" type="radio" v-model="model.type_expediteur" name="inlineRadioOptions2" id="inlineRadio2222" value="Mandataire">
+                    <label class="form-check-label" for="inlineRadio2222">Mandataire</label>
+                </div>
+            </div>
+            <div class="form-group col-12 mb-3" v-if="mandataire">
+                <div class="form-check form-check-inline border-radio mr-5 pb-1">
                     <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio111" value="Personne">
-                    <label class="form-check-label" for="inlineRadio111">Particulier</label>
+                    <label class="form-check-label" for="inlineRadio111">Personne physique</label>
                     </div>
                 <div class="form-check form-check-inline border-radio pb-1">
                     <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" name="inlineRadioOptions" id="inlineRadio222" value="Entreprise">
-                    <label class="form-check-label" for="inlineRadio222">Entreprise</label>
+                    <label class="form-check-label" for="inlineRadio222">Personne morale</label>
                 </div>
+            </div>
+            <hr class='dotted mt-5'  />
+            <div class="form-group col-12 my-0 mb-4 mt-3">
+                <div class="custom-lable-title">INFORMATIONS GENERALES</div>
+            </div>
+            <hr class='dotted mt-2 mb-5' />
+            <div class="form-group col-6">
+                <label for="reg-name">Prénom*</label>
+                <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre prénom" v-model="model.prenom">
+            </div>
+            <div class="form-group col-6">
+                <label for="reg-name">Nom*</label>
+                <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre nom" v-model="model.nom">
+            </div>
+            <div class="form-group col-6 mb-4 mt-2">
+                <div class="form-group col-12 mb-0">
+                    <label for="reg-name">Sexe*</label>
+                </div>
+                <div class="form-group col-12 border-input pt-3 pb-1">
+                    <div class="form-check form-check-inline mr-5">
+                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme">
+                        <label class="form-check-label" for="inlineRadio1111">Homme</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
+                        <label class="form-check-label" for="inlineRadio2222">Femme</label>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form-group col-6 mb-5 mt-2">
+                <label for="reg-name">Téléphone*</label>
+                <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.telephone">
+            </div>
+            <div class="form-group col-6">
+                <label for="log-email">Email*</label>
+                <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.email">
+            </div>
+            <div class="form-group col-6">
+                <label for="log-email">Adresse*</label>
+                <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.adresse">
             </div>
             <!-- ENTREPRISE -->
             <div class="row d-flex" v-if="entreprise">
@@ -59,47 +110,7 @@
                 </div> -->
             </div>
             <!-- FIN ENTREPRISE -->
-            <hr class='dotted mt-5'  />
-            <div class="form-group col-12 my-0 mb-4 mt-3">
-                <div class="custom-lable-title">INFORMATIONS GENERALES</div>
-            </div>
-            <hr class='dotted mt-2 mb-5' />
-            <div class="form-group col-6">
-                <label for="reg-name">Prénom*</label>
-                <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre prénom" v-model="model.prenom">
-            </div>
-            <div class="form-group col-6">
-                <label for="reg-name">Nom*</label>
-                <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre nom" v-model="model.nom">
-            </div>
-            <div class="form-group col-6 mb-4 mt-2">
-                <div class="form-group col-12 mb-0">
-                    <label for="reg-name">Sexe*</label>
-                </div>
-                <div class="form-group col-12 border-input pt-3 pb-1">
-                    <div class="form-check form-check-inline mr-5">
-                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme">
-                        <label class="form-check-label" for="inlineRadio1111">Homme</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" v-model="model.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
-                        <label class="form-check-label" for="inlineRadio2222">Femme</label>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="form-group col-6 mb-5 mt-2">
-                <label for="reg-name">Téléphone*</label>
-                <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.telephone">
-            </div>
-            <div class="form-group col-6">
-                <label for="log-email">Email*</label>
-                <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.email">
-            </div>
-            <div class="form-group col-6">
-                <label for="log-email">Adresse*</label>
-                <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.adresse">
-            </div>
+            
             <!-- <div class="form-group col-12">
                 <label for="reg-name">Adresse*</label>
                 <div class="border-adresse row d-flex p-5">
@@ -172,8 +183,11 @@ import { mapMutations, mapGetters } from 'vuex'
             return {
                 particuler:true,
                 entreprise:false,
+                requerant:true,
+                mandataire:false,
                 model :{
                     type_utilisateur:"Particulier",
+                    type_expediteur:"Particulier",
                     prenom:"",
                     nom:"",
                     email:"",
@@ -224,6 +238,20 @@ import { mapMutations, mapGetters } from 'vuex'
                 if($event.target.value=='Entreprise'){
                     this.particuler = false
                     this.entreprise=true
+                }
+                
+            },
+            changeTypeExpediteur($event){
+                console.log('Données formulaire ++++++: ', $event.target.value)
+                /* this.model.message = $event.target.value.text
+                this.model.subject = $event.target.value.libelle */
+                if($event.target.value=='Requerant'){
+                    this.requerant = true
+                    this.mandataire=false
+                }
+                if($event.target.value=='Mandataire'){
+                    this.requerant = false
+                    this.mandataire=true
                 }
                 
             },

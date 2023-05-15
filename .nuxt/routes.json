@@ -2,531 +2,372 @@
   {
     "name": "about-us-one",
     "path": "/about-us-one",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-one.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-one.vue",
->>>>>>> dev
-    "chunkName": "pages/about-us-one"
+    "chunkName": "pages/about-us-one",
+    "_name": "_320e0bcc"
   },
   {
     "name": "about-us-three",
     "path": "/about-us-three",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-three.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-three.vue",
->>>>>>> dev
-    "chunkName": "pages/about-us-three"
+    "chunkName": "pages/about-us-three",
+    "_name": "_69456b84"
   },
   {
     "name": "about-us-two",
     "path": "/about-us-two",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-two.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-two.vue",
->>>>>>> dev
-    "chunkName": "pages/about-us-two"
+    "chunkName": "pages/about-us-two",
+    "_name": "_4a75bcb2"
   },
   {
     "name": "accueil",
     "path": "/accueil",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\accueil.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\accueil.vue",
->>>>>>> dev
-    "chunkName": "pages/accueil"
+    "chunkName": "pages/accueil",
+    "_name": "_28497b22"
   },
   {
     "name": "addcourrier",
     "path": "/addcourrier",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\addcourrier.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\addcourrier.vue",
->>>>>>> dev
-    "chunkName": "pages/addcourrier"
+    "chunkName": "pages/addcourrier",
+    "_name": "_0003c889"
   },
   {
     "name": "coming-soon",
     "path": "/coming-soon",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\coming-soon.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\coming-soon.vue",
->>>>>>> dev
-    "chunkName": "pages/coming-soon"
+    "chunkName": "pages/coming-soon",
+    "_name": "_706986fc"
   },
   {
     "name": "contact-me",
     "path": "/contact-me",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-me.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-me.vue",
->>>>>>> dev
-    "chunkName": "pages/contact-me"
+    "chunkName": "pages/contact-me",
+    "_name": "_4123bd7a"
   },
   {
     "name": "contact-us",
     "path": "/contact-us",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-us.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-us.vue",
->>>>>>> dev
-    "chunkName": "pages/contact-us"
+    "chunkName": "pages/contact-us",
+    "_name": "_4f8fcb80"
   },
   {
     "name": "distant-learning",
     "path": "/distant-learning",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\distant-learning.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\distant-learning.vue",
->>>>>>> dev
-    "chunkName": "pages/distant-learning"
+    "chunkName": "pages/distant-learning",
+    "_name": "_b9ea5082"
   },
   {
     "name": "faq",
     "path": "/faq",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\faq.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\faq.vue",
->>>>>>> dev
-    "chunkName": "pages/faq"
+    "chunkName": "pages/faq",
+    "_name": "_4212635e"
   },
   {
     "name": "gallery-grid",
     "path": "/gallery-grid",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\gallery-grid.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\gallery-grid.vue",
->>>>>>> dev
-    "chunkName": "pages/gallery-grid"
+    "chunkName": "pages/gallery-grid",
+    "_name": "_2d34aeb6"
   },
   {
     "name": "gallery-masonry",
     "path": "/gallery-masonry",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\gallery-masonry.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\gallery-masonry.vue",
->>>>>>> dev
-    "chunkName": "pages/gallery-masonry"
+    "chunkName": "pages/gallery-masonry",
+    "_name": "_5e68d385"
   },
   {
     "name": "kindergarten",
     "path": "/kindergarten",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\kindergarten.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\kindergarten.vue",
->>>>>>> dev
-    "chunkName": "pages/kindergarten"
+    "chunkName": "pages/kindergarten",
+    "_name": "_c62b47ca"
   },
   {
     "name": "kitchen-coach",
     "path": "/kitchen-coach",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\kitchen-coach.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\kitchen-coach.vue",
->>>>>>> dev
-    "chunkName": "pages/kitchen-coach"
+    "chunkName": "pages/kitchen-coach",
+    "_name": "_79cb732c"
   },
   {
     "name": "landing-demo",
     "path": "/landing-demo",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\landing-demo.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\landing-demo.vue",
->>>>>>> dev
-    "chunkName": "pages/landing-demo"
+    "chunkName": "pages/landing-demo",
+    "_name": "_ba55d4a4"
   },
   {
     "name": "my-account",
     "path": "/my-account",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\my-account.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\my-account.vue",
->>>>>>> dev
-    "chunkName": "pages/my-account"
+    "chunkName": "pages/my-account",
+    "_name": "_284d82a1"
   },
   {
     "name": "online-academy",
     "path": "/online-academy",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\online-academy.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\online-academy.vue",
->>>>>>> dev
-    "chunkName": "pages/online-academy"
+    "chunkName": "pages/online-academy",
+    "_name": "_c8d080f2"
   },
   {
     "name": "pricing-table",
     "path": "/pricing-table",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\pricing-table.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\pricing-table.vue",
->>>>>>> dev
-    "chunkName": "pages/pricing-table"
+    "chunkName": "pages/pricing-table",
+    "_name": "_a2b913fc"
   },
   {
     "name": "privacy-policy",
     "path": "/privacy-policy",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\privacy-policy.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\privacy-policy.vue",
->>>>>>> dev
-    "chunkName": "pages/privacy-policy"
+    "chunkName": "pages/privacy-policy",
+    "_name": "_6f6bdaa8"
   },
   {
     "name": "purchase-guide",
     "path": "/purchase-guide",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\purchase-guide.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\purchase-guide.vue",
->>>>>>> dev
-    "chunkName": "pages/purchase-guide"
+    "chunkName": "pages/purchase-guide",
+    "_name": "_719e6b76"
   },
   {
     "name": "remerciement",
     "path": "/remerciement",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\remerciement.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\remerciement.vue",
->>>>>>> dev
-    "chunkName": "pages/remerciement"
+    "chunkName": "pages/remerciement",
+    "_name": "_402f5d4b"
   },
   {
     "name": "se-connecter",
     "path": "/se-connecter",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\se-connecter.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\se-connecter.vue",
->>>>>>> dev
-    "chunkName": "pages/se-connecter"
+    "chunkName": "pages/se-connecter",
+    "_name": "_469eb49e"
   },
   {
     "name": "shop",
     "path": "/shop",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\index.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\index.vue",
->>>>>>> dev
-    "chunkName": "pages/shop/index"
+    "chunkName": "pages/shop/index",
+    "_name": "_935ae252"
   },
   {
     "name": "signaler-probleme",
     "path": "/signaler-probleme",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\signaler-probleme.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\signaler-probleme.vue",
->>>>>>> dev
-    "chunkName": "pages/signaler-probleme"
+    "chunkName": "pages/signaler-probleme",
+    "_name": "_33d7b919"
   },
   {
     "name": "suggestion",
     "path": "/suggestion",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\suggestion.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\suggestion.vue",
->>>>>>> dev
-    "chunkName": "pages/suggestion"
+    "chunkName": "pages/suggestion",
+    "_name": "_a035fcce"
   },
   {
     "name": "terms-condition",
     "path": "/terms-condition",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",
->>>>>>> dev
-    "chunkName": "pages/terms-condition"
+    "chunkName": "pages/terms-condition",
+    "_name": "_642e68e0"
   },
   {
     "name": "testministeres",
     "path": "/testministeres",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\testministeres.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\testministeres.vue",
->>>>>>> dev
-    "chunkName": "pages/testministeres"
+    "chunkName": "pages/testministeres",
+    "_name": "_66940dba"
   },
   {
     "name": "university",
     "path": "/university",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\university.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\university.vue",
->>>>>>> dev
-    "chunkName": "pages/university"
+    "chunkName": "pages/university",
+    "_name": "_785a65ba"
   },
   {
     "name": "yoga-instructor",
     "path": "/yoga-instructor",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\yoga-instructor.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\yoga-instructor.vue",
->>>>>>> dev
-    "chunkName": "pages/yoga-instructor"
+    "chunkName": "pages/yoga-instructor",
+    "_name": "_5eef2cd5"
   },
   {
     "name": "blog-blog-details",
     "path": "/blog/blog-details",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-details.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-details.vue",
->>>>>>> dev
-    "chunkName": "pages/blog/blog-details"
+    "chunkName": "pages/blog/blog-details",
+    "_name": "_150a7a64"
   },
   {
     "name": "blog-blog-list",
     "path": "/blog/blog-list",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-list.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-list.vue",
->>>>>>> dev
-    "chunkName": "pages/blog/blog-list"
+    "chunkName": "pages/blog/blog-list",
+    "_name": "_55c159c2"
   },
   {
     "name": "blog-blog-masonry",
     "path": "/blog/blog-masonry",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-masonry.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-masonry.vue",
->>>>>>> dev
-    "chunkName": "pages/blog/blog-masonry"
+    "chunkName": "pages/blog/blog-masonry",
+    "_name": "_e507d55e"
   },
   {
     "name": "blog-blog-standard",
     "path": "/blog/blog-standard",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-standard.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\blog\\\\blog-standard.vue",
->>>>>>> dev
-    "chunkName": "pages/blog/blog-standard"
+    "chunkName": "pages/blog/blog-standard",
+    "_name": "_008bfa61"
   },
   {
     "name": "course-course-details",
     "path": "/course/course-details",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-details"
+    "chunkName": "pages/course/course-details",
+    "_name": "_9b084e80"
   },
   {
     "name": "course-course-details-2",
     "path": "/course/course-details-2",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details-2.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details-2.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-details-2"
+    "chunkName": "pages/course/course-details-2",
+    "_name": "_0554cc36"
   },
   {
     "name": "course-course-details-3",
     "path": "/course/course-details-3",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details-3.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-details-3.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-details-3"
+    "chunkName": "pages/course/course-details-3",
+    "_name": "_05389d34"
   },
   {
     "name": "course-course-five",
     "path": "/course/course-five",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-five.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-five.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-five"
+    "chunkName": "pages/course/course-five",
+    "_name": "_7eb37524"
   },
   {
     "name": "course-course-four",
     "path": "/course/course-four",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-four.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-four.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-four"
+    "chunkName": "pages/course/course-four",
+    "_name": "_89c99cd0"
   },
   {
     "name": "course-course-one",
     "path": "/course/course-one",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-one.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-one.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-one"
+    "chunkName": "pages/course/course-one",
+    "_name": "_7c5445e4"
   },
   {
     "name": "course-course-three",
     "path": "/course/course-three",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-three.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-three.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-three"
+    "chunkName": "pages/course/course-three",
+    "_name": "_3ae57f9c"
   },
   {
     "name": "course-course-two",
     "path": "/course/course-two",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-two.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\course\\\\course-two.vue",
->>>>>>> dev
-    "chunkName": "pages/course/course-two"
+    "chunkName": "pages/course/course-two",
+    "_name": "_d688126c"
   },
   {
     "name": "event-event-details",
     "path": "/event/event-details",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-details.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-details.vue",
->>>>>>> dev
-    "chunkName": "pages/event/event-details"
+    "chunkName": "pages/event/event-details",
+    "_name": "_2768178a"
   },
   {
     "name": "event-event-grid",
     "path": "/event/event-grid",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-grid.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-grid.vue",
->>>>>>> dev
-    "chunkName": "pages/event/event-grid"
+    "chunkName": "pages/event/event-grid",
+    "_name": "_049235a4"
   },
   {
     "name": "event-event-list",
     "path": "/event/event-list",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-list.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\event\\\\event-list.vue",
->>>>>>> dev
-    "chunkName": "pages/event/event-list"
+    "chunkName": "pages/event/event-list",
+    "_name": "_3af69e86"
   },
   {
     "name": "instructor-instructor-one",
     "path": "/instructor/instructor-one",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-one.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-one.vue",
->>>>>>> dev
-    "chunkName": "pages/instructor/instructor-one"
+    "chunkName": "pages/instructor/instructor-one",
+    "_name": "_4c041d68"
   },
   {
     "name": "instructor-instructor-profile",
     "path": "/instructor/instructor-profile",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-profile.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-profile.vue",
->>>>>>> dev
-    "chunkName": "pages/instructor/instructor-profile"
+    "chunkName": "pages/instructor/instructor-profile",
+    "_name": "_7369da2b"
   },
   {
     "name": "instructor-instructor-three",
     "path": "/instructor/instructor-three",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-three.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-three.vue",
->>>>>>> dev
-    "chunkName": "pages/instructor/instructor-three"
+    "chunkName": "pages/instructor/instructor-three",
+    "_name": "_4404f3c0"
   },
   {
     "name": "instructor-instructor-two",
     "path": "/instructor/instructor-two",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-two.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\instructor\\\\instructor-two.vue",
->>>>>>> dev
-    "chunkName": "pages/instructor/instructor-two"
+    "chunkName": "pages/instructor/instructor-two",
+    "_name": "_646bce4e"
   },
   {
     "name": "shop-cart",
     "path": "/shop/cart",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\cart.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\cart.vue",
->>>>>>> dev
-    "chunkName": "pages/shop/cart"
+    "chunkName": "pages/shop/cart",
+    "_name": "_c73120aa"
   },
   {
     "name": "shop-checkout",
     "path": "/shop/checkout",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\checkout.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\checkout.vue",
->>>>>>> dev
-    "chunkName": "pages/shop/checkout"
+    "chunkName": "pages/shop/checkout",
+    "_name": "_57c28d51"
   },
   {
     "name": "shop-product-details",
     "path": "/shop/product-details",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\product-details.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\product-details.vue",
->>>>>>> dev
-    "chunkName": "pages/shop/product-details"
+    "chunkName": "pages/shop/product-details",
+    "_name": "_1da02c29"
   },
   {
     "name": "shop-wishlist",
     "path": "/shop/wishlist",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\wishlist.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\wishlist.vue",
->>>>>>> dev
-    "chunkName": "pages/shop/wishlist"
+    "chunkName": "pages/shop/wishlist",
+    "_name": "_2216c360"
   },
   {
     "name": "index",
     "path": "/",
-<<<<<<< HEAD
-    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\index.vue",
-=======
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\index.vue",
->>>>>>> dev
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_a4425d66"
   }
 ]
