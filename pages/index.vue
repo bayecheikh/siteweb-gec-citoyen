@@ -29,7 +29,7 @@ export default {
         if (this.$route.query.code) {
             this.model = {
                 code : this.$route.query.code,
-                authorisation : 'ZWNvbW11bmU6ZWNvbW11bmU=',
+                authorisation : 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
                 urlClient: 'https://siteweb-gec-citoyen.vercel.app',
                 urlPns: 'https://pprodofficial.service-public.bj/api/official/token'
             }
