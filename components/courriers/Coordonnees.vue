@@ -159,11 +159,12 @@
                     <label for="log-email">Siége social de l'entreprise*</label>
                     <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.adresse_entreprise">
                 </div>
+                <hr class='dotted mt-5' />
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Prénom du représentant légal</label>
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.prenom_representant_legal">
                 </div>
-                <hr class='dotted mt-5' />
+                
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Nom du représentant légal</label>
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.nom_representant_legal">
