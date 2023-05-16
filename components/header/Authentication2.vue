@@ -1,9 +1,10 @@
+
 <template >
     <div>
         <div v-if="isPopUpChooseConnexionMode"
-            class="login-form-box pop-up-container custom-border custom-auth-template offset-xl-2 col-lg-6">
+        class="custom-auth-api-template offset-xl-2 custom-col-lg-6 col-lg-6 transparent-background">
            
-        <div  v-if="isCharging">
+        <div class="custom-loader" v-if="isCharging">
                     <svg width="100" height="100" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
@@ -377,7 +378,9 @@ export default {
     cursor: pointer;
 }
 
-
+.transparent-background {
+        background-color: transparent !important;
+    }
 .password-toggle.show-password i {
     color: #4fa794;
 }
@@ -485,7 +488,18 @@ export default {
 
 }
 
-
+.custom-auth-api-template {
+    
+    position: fixed !important;
+    top: 50%;
+    left: 34.8%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+   
+    z-index: 9999 !important;
+   
+  
+}
 
 .custom-auth-message {
     color: white !important;

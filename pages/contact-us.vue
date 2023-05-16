@@ -50,15 +50,16 @@
                                       </div>
 
                                     <div class="form-group col-12">
-                                        <input type="text" name="fullname" placeholder="Nom *" v-model="fullname">
-                                        <div v-if="$v.fullname.$error"><p class="custom-validation-error-msg">Le nom est obligatoire.</p></div>
+                                        <input type="text" name="fullname" placeholder="Prénom et nom *" v-model="fullname">
+                                        <div v-if="$v.fullname.$error"><p class="custom-validation-error-msg">Le prénom et le nom sont obligatoires.</p></div>
                                     </div>
                                     <div class="form-group col-12">
                                         <input type="email" name="email" placeholder="Email *" v-model="email">
                                         <div v-if="$v.email.$error"><p class="custom-validation-error-msg">L'email doit être valide.</p></div>
                                     </div>
-                                    <div class="form-group col-12">
-                                        <input type="tel" name="phone" placeholder="Téléphone">
+                                    <div class="form-group col-12"  >
+                                        <input type="tel" name="phone" placeholder="Téléphone" v-model="phone">
+                                        <div v-if="$v.phone.$error"><p class="custom-validation-error-msg">Le numéro de téléphone doit être valide.</p></div>
                                     </div>
                                     <div class="form-group col-12">
                                         <textarea name="message" cols="30" rows="4" placeholder="Votre message *" v-model="message"></textarea>
@@ -112,7 +113,8 @@
 
 <script>
 import emailjs from 'emailjs-com';
-import { required, email, minLength, maxLength } from 'vuelidate/lib/validators'
+import { required, email, minLength, numeric,  maxLength } from 'vuelidate/lib/validators'
+
 import { validationMixin } from 'vuelidate'
 
 export default {
@@ -142,6 +144,11 @@ export default {
   validations: {
     fullname: {
       required,
+      minLength: minLength(2)
+    },
+    phone: {
+      regex: value => /^[\d\s()+-]+$/.test(value),
+      minLength: minLength(8) 
     },
     email: {
       required,
@@ -149,6 +156,7 @@ export default {
     },
     message: {
       required,
+   
     },
   },
   methods: {

@@ -51,6 +51,7 @@ console.log("GEC LOGGED IN USER", gecLoggedInUser);
                     const { code, ...queryParams } = this.$route.query;
     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
    await this.$router.replace(newUrl);
+   this.$router.push("/");
                 }
 
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
