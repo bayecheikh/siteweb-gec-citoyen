@@ -4,7 +4,7 @@
             <div class="contact-form form-style-2">
                 <button @click="onClickClose()" class="custom-close-btn">x</button>
                 <div class="section-title">
-                    <h4 class="title custom-suivi-title text-uppercase">VOTRE COURRIER A ETE ENVOYE AVEC SUCCES"</h4>
+                    <h4 class="title custom-suivi-title text-uppercase">VOTRE COURRIER A ÉTÉ ENVOYÉ AVEC SUCCÈS</h4>
                     <p class="custom-information-msg">Vous avez reçu un email
                         contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
                         suivre l'avancement de votre courrier, veuillez saisir ce code à la lettre.</p>

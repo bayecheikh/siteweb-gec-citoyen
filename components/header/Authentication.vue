@@ -35,7 +35,7 @@ export default {
         },
     components: {
         SectionTitle: () => import('@/components/common/SectionTitle'),
-        PopUpConnexion: () => import("@/components/PopUpConnexion.vue"),
+       
     },
     computed: mapGetters({
         detailactive_step: 'active_step/detailactive_step',
@@ -277,49 +277,7 @@ export default {
                     this.isXroadConnecting = false;
                     console.log('Requête envoyée')
         }); 
-            // let isauthenticatingfrombutton = this.isauthenticatingfrombutton
-            // const emailInput = this.$refs.xroadform.querySelector('input[name="xroad-email"]');
-            // const emailValue = emailInput.value;
-            // 
-            // if (emailValue != 1) {
-            //     setTimeout(() => {
-            //         this.validXroadCredentials = true
-            //         this.isXroadConnecting = false
-            //         this.onClickCloseXroad();
-            //         this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-            //         if(isauthenticatingfrombutton){
-            //                 console.log("elkstjorpktoirj")
-            //                 this.$router.push('/addcourrier')
-            //             }
-            //             this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
-            //      this.onClickCloseChooseMode();
-            //     }, 1000);
-
-            // }
-            // else {
-            //     setTimeout(() => {
-            //         this.validXroadCredentials = false
-            //         this.isXroadConnecting = false
-            //         return false
-            //     }, 1000);
-
-            // }
-
-
-            // console.log('Données formulaire ++++++: ', { ...this.model })
-            // let dataUser = {
-            //     email: "",
-            //     type_utilisateur: "Citoyen",
-            //     prenom: "Cheikh",
-            //     nom: "Gueye",
-            //     email: "cheikh.gueye@ip3-conseil.com",
-            //     telephone: "778688784",
-            //     adresse: "Dakar, Sacré Coeur 3",
-            // }
-
-            // this.$store.dispatch('coordonnees/getDetail', { dataUser })
-
-            // this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
+       
 
         },
      

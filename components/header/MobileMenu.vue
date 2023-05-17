@@ -5,12 +5,7 @@
             <n-link to="/">
                 Accueil
             </n-link>
-            <n-link to="/suggestion">
-                Faire une suggestion
-            </n-link>
-            <n-link to="/signaler-probleme">
-                Signaler un problème
-            </n-link>
+          
             <n-link to="/contact-us">
                 Nous contacter
             </n-link >
@@ -43,7 +38,7 @@ import { mapMutations, mapGetters } from 'vuex'
         })
     },
     components: {
-        Authentication2: () => import("@/components/header/Authentication2.vue"),
+        Authentication: () => import("@/components/header/Authentication.vue"),
     },
     methods:{
        async  onClickSeConnecter() {
@@ -73,14 +68,7 @@ import { mapMutations, mapGetters } from 'vuex'
                         title: 'Accueil',
                     },
 
-                    {
-                        url: '/suggestion',
-                        title: 'Faire une suggestion',
-                    },
-                    {
-                        url: '/signaler-probleme',
-                        title: 'Signaler un problème',
-                    },
+                  
                     {
                         url: '/contact-us',
                         title: 'Nous contacter',

@@ -29,9 +29,9 @@
 <script>
     export default {
         components: {
-            AccordionOne: () => import('@/components/AccordionOne'),
+            AccordionOne: () => import('@/components/home-main/AccordionOne'),
             MouseMove: () => import('@/components/animation/MouseMove'),
-            DemoVideo: () => import('@/components/home-university/Video')
+            DemoVideo: () => import('@/components/home-main/Video')
         }
     }
 </script>
