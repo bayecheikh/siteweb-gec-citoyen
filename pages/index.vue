@@ -3,8 +3,6 @@
     <div id="main-wrapper" class="main-wrapper bg-lighten05">
         <!-- <HeaderTwo /> -->
         <Banner />
-        <!--<HomeYogaInstructorFunFact/>-->
-
         <Categories />
         <HomeKitchenCoachFAQ />
         <FooterKitchen />
@@ -23,8 +21,6 @@ export default {
     mounted: async function () {
      this.windowHeight = window.innerHeight;
      let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
-
-    //console.log("JWT TOKEN", this.parseJwt("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwbnMudGVzdEBnb3V2LmJqIiwiYXVkIjoiZWNvbW11bmUiLCJyb2xlcyI6WyIiXSwibmFtZSI6IlRFU1QgUE5TIiwiaXNzIjoiaHR0cHM6Ly9wcHJvZG9mZmljaWFsLnNlcnZpY2UtcHVibGljLmJqL2FwaS9jaXRpemVuLyIsImNvbXBhbnkiOiJBU1NJIiwiZXhwIjoxNjg0MTQyNjM2LCJpYXQiOjE2ODQxNDI2MTZ9.fFJ8eQEVofzGeE1E4DiKyywZd9PBBQYHf_ZLuCxva3zurcPtZSaymq8bebwlVVxIc3VKRvD1CC2GcNohzEE-Wg"))
         this.$store.dispatch('banner/getDetail', this.windowHeight)
         console.log("CODE+++++++++++++++", this.$route.query)
         if (this.$route.query.code) {
@@ -51,6 +47,7 @@ console.log("GEC LOGGED IN USER", gecLoggedInUser);
                     const { code, ...queryParams } = this.$route.query;
     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
    await this.$router.replace(newUrl);
+   this.$router.push("/");
                 }
 
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
@@ -71,63 +68,14 @@ console.log("GEC LOGGED IN USER", gecLoggedInUser);
                 return;
             }
         }
-        // if (this.$route.query.code) {
-        //     var urlencoded = new URLSearchParams();
-        //     urlencoded.append("grant_type", "authorization_code");
-        //     urlencoded.append("redirect_uri", "https://siteweb-gec-citoyen.vercel.app");
-        //     urlencoded.append("code", this.$route.query.code);
-        //     try {
-        //         const response = await this.$axios.post('https://pprodofficial.service-public.bj/api/official/token', urlencoded,
-        //             {
-
-        //                 headers: {
-        //                     'Authorization': 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
-        //                     'Content-Type': 'application/x-www-form-urlencoded',
-
-        //                 }
-        //             });
-
-        //         console.log("TOKEN PNS", this.parseJwt(response.id_token))
-                // await localStorage.setItem('gecToken', response.id_token)
-                // await localStorage.setItem('gecLoggedInUser', this.parseJwt(response.id_token))
-                // await localStorage.setItem('gecIsAuthenticated', true)
-                // if (isauthenticatingfrombutton) {
-                //     this.$router.push("/addcourrier");
-                // }
-                // else {
-                //     await this.$router.go()
-
-                // }
-
-                // this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
-                // this.$store.dispatch("toast/getMessage", {
-                //     type: "success",
-                //     text: "Authentification réussie !",
-                // }); 
-
-                // this.$store.dispatch("coordonnees/getDetail", {
-                //     dataUser: this.parseJwt(response.id_token),
-                // });
-                // this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
-
-        //     } catch (error) {
-        //         console.error(error);
-        //         console.log('Code error ++++++: ', error)
-        //         this.$store.dispatch('toast/getMessage', { type: 'error', text: error || 'Échec de la connexion' })
-        //         return;
-        //     }
-        // }
-
 
     },
 
     components: {
         HeaderTwo: () => import("@/components/header/HeaderTwo.vue"),
         Banner: () => import("@/components/home-main/Banner.vue"),
-        Categories: () => import("@/components/home-distant-learning/Categories.vue"),
-        Features: () => import("@/components/home-main/Features.vue"),
-        HomeKitchenCoachFAQ: () => import("@/components/home-kitchen-coach/FAQ.vue"),
-        HomeYogaInstructorFunFact: () => import("@/components/home-yoga-instructor/FunFact.vue"),
+        Categories: () => import("@/components/home-main/Categories.vue"),
+        HomeKitchenCoachFAQ: () => import("@/components/home-main/FAQ.vue"),
         FooterKitchen: () => import("@/components/footer/FooterKitchen")
     },
     computed: mapGetters({
