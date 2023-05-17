@@ -68,7 +68,7 @@
                                 <ul class="header-action">
 
                                     <li class="header-btn">
-                                        <a class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
+                                        <a  id="loginButton"  class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
                                             CONNECTER</a>
                                             <!-- <a class=" btn-medium my-custom-login-button" @click="onClickSeConnecter">SE
                                             CONNECTER</a> -->
@@ -134,6 +134,7 @@
 </template>
 
 <script>
+
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 export default {
     modules: ['@nuxtjs/axios'],
@@ -187,6 +188,31 @@ export default {
     },
     props: ['showHeaderTop'],
     mounted() {
+       if (process.client) {
+  const loginButton = document.getElementById('loginButton');
+  loginButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Obtenir les dimensions de la fenêtre actuelle
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    // Calculer les positions x et y pour centrer la fenêtre contextuelle
+    const popupWidth = 500;
+    const popupHeight = 600;
+    const left = (windowWidth - popupWidth) / 2;
+    const top = (windowHeight - popupHeight) / 2;
+
+    // Ouvrir la fenêtre contextuelle centrée
+    const popupWindow = window.open(loginButton.href, '_blank', `width=${popupWidth},height=${popupHeight},left=${left},top=${top}`);
+    window.addEventListener('message', (event) => {
+      if (event.data === 'authenticationSuccessful') {
+        popupWindow.close();
+      }
+    });
+  });
+}
+
         this.token = localStorage.getItem('gecToken')
         if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser') ){
             const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
