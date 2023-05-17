@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _0003c889 = () => interopDefault(import('..\\pages\\addcourrier.vue' /* webpackChunkName: "pages/addcourrier" */))
+const _5d2d9456 = () => interopDefault(import('..\\pages\\compte.vue' /* webpackChunkName: "pages/compte" */))
 const _4f8fcb80 = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
 const _642e68e0 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
 const _a4425d66 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -24,6 +25,10 @@ export const routerOptions = {
     path: "/addcourrier",
     component: _0003c889,
     name: "addcourrier"
+  }, {
+    path: "/compte",
+    component: _5d2d9456,
+    name: "compte"
   }, {
     path: "/contact-us",
     component: _4f8fcb80,
