@@ -2,7 +2,7 @@
     <div class="custom-bloc-padding">
         <h3 class="title"></h3>
         <form class="row">
-            <div class="edu-sorting form-group col-12">
+            <!-- <div class="edu-sorting form-group col-12">
                 <div class="form-check form-check-inline border-radio">
                     <input @change="changeType($event)" class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions1" id="inlineRadio22" value="attache_courrier">
                     <label class="form-check-label" for="inlineRadio22">Attacher le courrier</label>
@@ -11,7 +11,7 @@
                     <input @change="changeType($event)" class="form-check-input" type="radio" v-model="model.type_contenu" name="inlineRadioOptions1" id="inlineRadio11" value="saisie_libre">
                     <label class="form-check-label" for="inlineRadio11">Saisie le courrier</label>
                 </div>              
-            </div>
+            </div> -->
             <div class="edu-sorting form-group col-12">
                 <label for="reg-name">Choisir une entrée</label>
                 <select class="custom-select" @change="changeModelEntree($event)" v-model="selectedEntree">
@@ -171,7 +171,7 @@ import { mapMutations, mapGetters } from 'vuex'
             submitContenu(){
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
-               this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree,subject:this.model.subject})
+                this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree,subject:this.model.subject})
                 this.$store.dispatch('active_step/getDetail',{id:'validation'})
 
             },
