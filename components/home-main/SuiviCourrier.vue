@@ -37,8 +37,8 @@ RÉSULTAT POUR LE CODE DE SUIVI <span class="custom-code-font">{{ ispopupload }}
                 <div v-if="!validCode">
                     <div>
     <div class="resultat-section-etat-invalid d-flex">
-        <div style="background-color: #bc412b; padding: 0px !important; border-top-left-radius: 10px ; border-bottom-left-radius: 10px ; width: 1%;"></div>
-      <p class="text-left" style=" color: #bc412b !important; font-weight: 600 !important; padding: 40px !important;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="custom-svg-response-icon">
+        <div class="custom-resultat-section-etat-div"></div>
+      <p class="text-left custom-resultat-section-etat-p" ><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="custom-svg-response-icon">
 
 <g id="Groupe_7633" data-name="Groupe 7633" transform="translate(-672.66 -592.695)">
 
@@ -52,8 +52,8 @@ RÉSULTAT POUR LE CODE DE SUIVI <span class="custom-code-font">{{ ispopupload }}
 
 </svg> Attention, ce code de suivi est invalide. Merci de vérifier. </p>
     </div>
-    <div style="padding-top: 20px !important; color: #818181 !important;">
-    <a href="/signaler-probleme" style="color: #818181 !important;" @click="onClickClose()">
+    <div class="custom-aide-div">
+    <a href="/contact-us" class="custom-contact-us-a" @click="onClickClose()">
         Avez-vous besoin d'aide ?
     </a>
 </div>
@@ -62,8 +62,8 @@ RÉSULTAT POUR LE CODE DE SUIVI <span class="custom-code-font">{{ ispopupload }}
                 <div v-if="showValidMessage1">
   <div>
     <div class="resultat-section-etat-pending d-flex">
-        <div style="background-color: #ed802e; padding: 0px !important; border-top-left-radius: 10px ; border-bottom-left-radius: 10px ; width: 1%;"></div>
-      <p class="text-left" style=" padding: 10px !important; color: #ed802e !important; font-weight: 600 !important;"> <svg xmlns="http://www.w3.org/2000/svg" width="34.584" height="34.584" viewBox="0 0 34.584 34.584" class="custom-svg-response-icon">
+        <div class="custom-resultat-section-etat-pending-div"></div>
+      <p class="text-left custom-resultat-section-etat-pending-p"> <svg xmlns="http://www.w3.org/2000/svg" width="34.584" height="34.584" viewBox="0 0 34.584 34.584" class="custom-svg-response-icon">
 
 <g id="Groupe_7632" data-name="Groupe 7632" transform="translate(2 2)">
 
@@ -147,8 +147,8 @@ RÉSULTAT POUR LE CODE DE SUIVI <span class="custom-code-font">{{ ispopupload }}
 <div v-if="showValidMessage2">
   <div>
     <div class="resultat-section-etat-response d-flex">
-        <div style="background-color: #008165; padding: 0px !important; border-top-left-radius: 10px ; border-bottom-left-radius: 10px ; width: 1%;"></div>
-      <p class="text-left" style=" padding: 10px !important; color: #008165 !important; font-weight: 600 !important;"><svg xmlns="http://www.w3.org/2000/svg" width="34.588" height="33.799" viewBox="0 0 34.588 33.799" class="custom-svg-response-icon">
+        <div class="resultat-section-etat-response-div" ></div>
+      <p class="text-left resultat-section-etat-response-p" ><svg xmlns="http://www.w3.org/2000/svg" width="34.588" height="33.799" viewBox="0 0 34.588 33.799" class="custom-svg-response-icon">
 
 <g id="Groupe_7631" data-name="Groupe 7631" transform="translate(2.004 2.02)">
 
@@ -316,6 +316,39 @@ export default {
 </script>
 
 <style>
+
+.custom-resultat-section-etat-div{
+    background-color: #bc412b;
+    padding: 0px !important;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+    width: 1%;
+}
+.custom-contact-us{
+    color: #818181 !important;
+}
+
+.custom-aide-div{
+    padding-top: 20px !important;
+    color: #818181 !important;
+}
+.custom-resultat-section-etat-p{
+    color: #bc412b !important;
+    font-weight: 600 !important;
+    padding: 40px !important;
+}
+.custom-resultat-section-etat-pending-div{
+    background-color: #ed802e;
+    padding: 0px !important;
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+    width: 1%;
+}
+.custom-resultat-section-etat-pending-p{
+    padding: 10px !important;
+    color: #ed802e !important;
+    font-weight: 600 !important;
+}
 .custom-categorie-grid {
     height: 337.25px !important;
 }
@@ -645,7 +678,18 @@ export default {
     background-color: #dfebe9 !important;
     
 }
-
+.resultat-section-etat-response-div {
+    background-color: #008165;
+    padding: 0px !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px ;
+    width: 1%;
+}
+.resultat-section-etat-response-p {
+    padding: 10px !important;
+    color: #008165 !important;
+    font-weight: 600 !important;
+}
 .resultat-section:first-child {
     border-top: none;
 }

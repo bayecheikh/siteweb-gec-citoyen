@@ -3,7 +3,7 @@
         
         <HeaderOne />
 
-        <BreadCrumbTwo title="Error-404" />
+        <BreadCrumbTwo title="Erreur 404" />
 
         <section class="section-gap-equal error-page-area">
             <div class="container">
@@ -18,9 +18,9 @@
                         </ul>
                     </div>
                     <div class="content">
-                        <h2 class="title">404 - Page Not Found</h2>
-                        <h4 class="subtitle">The page you are looking for does not exist.</h4>
-                        <n-link to="/" class="edu-btn"><i class="icon-west"></i>Back to Homepage</n-link>
+                        <h2 class="title">Erreur 404</h2>
+                        <h4 class="subtitle">Cette page n'existe pas</h4>
+                        <n-link to="/" class="edu-btn"><i class="icon-west"></i>Retourner à la page d'accueil</n-link>
                     </div>
                 </div>
             </div>
@@ -41,13 +41,13 @@
     export default {
         components: {
             BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
-            FooterOne: () => import("@/components/footer/FooterOne"),
+            FooterKitchen: () => import("@/components/footer/FooterKitchen"),
             ScrollToTop: () => import('@/components/footer/ScrollToTop'),
             MouseMove: () => import('@/components/animation/MouseMove')
         },
         head() {
             return {
-                title: '404 Not Found'
+                title: 'Erreur 404'
             }
         }
     }

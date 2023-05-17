@@ -1,9 +1,10 @@
+
 <template >
     <div>
         <div v-if="isPopUpChooseConnexionMode"
-            class="login-form-box pop-up-container custom-border custom-auth-template offset-xl-2 col-lg-6">
+        class="custom-auth-api-template offset-xl-2 custom-col-lg-6 col-lg-6 transparent-background">
            
-        <div  v-if="isCharging">
+        <div class="custom-loader" v-if="isCharging">
                     <svg width="100" height="100" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
@@ -34,7 +35,7 @@ export default {
         },
     components: {
         SectionTitle: () => import('@/components/common/SectionTitle'),
-        PopUpConnexion: () => import("@/components/PopUpConnexion.vue"),
+       
     },
     computed: mapGetters({
         detailactive_step: 'active_step/detailactive_step',
@@ -276,49 +277,7 @@ export default {
                     this.isXroadConnecting = false;
                     console.log('Requête envoyée')
         }); 
-            // let isauthenticatingfrombutton = this.isauthenticatingfrombutton
-            // const emailInput = this.$refs.xroadform.querySelector('input[name="xroad-email"]');
-            // const emailValue = emailInput.value;
-            // 
-            // if (emailValue != 1) {
-            //     setTimeout(() => {
-            //         this.validXroadCredentials = true
-            //         this.isXroadConnecting = false
-            //         this.onClickCloseXroad();
-            //         this.$store.dispatch('authentication/getDetailIsLoggedIn', true)
-            //         if(isauthenticatingfrombutton){
-            //                 console.log("elkstjorpktoirj")
-            //                 this.$router.push('/addcourrier')
-            //             }
-            //             this.$store.dispatch('toast/getMessage',{type:'success',text:'Authentification réussie !'})
-            //      this.onClickCloseChooseMode();
-            //     }, 1000);
-
-            // }
-            // else {
-            //     setTimeout(() => {
-            //         this.validXroadCredentials = false
-            //         this.isXroadConnecting = false
-            //         return false
-            //     }, 1000);
-
-            // }
-
-
-            // console.log('Données formulaire ++++++: ', { ...this.model })
-            // let dataUser = {
-            //     email: "",
-            //     type_utilisateur: "Citoyen",
-            //     prenom: "Cheikh",
-            //     nom: "Gueye",
-            //     email: "cheikh.gueye@ip3-conseil.com",
-            //     telephone: "778688784",
-            //     adresse: "Dakar, Sacré Coeur 3",
-            // }
-
-            // this.$store.dispatch('coordonnees/getDetail', { dataUser })
-
-            // this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
+       
 
         },
      
@@ -377,7 +336,9 @@ export default {
     cursor: pointer;
 }
 
-
+.transparent-background {
+        background-color: transparent !important;
+    }
 .password-toggle.show-password i {
     color: #4fa794;
 }
@@ -485,7 +446,18 @@ export default {
 
 }
 
-
+.custom-auth-api-template {
+    
+    position: fixed !important;
+    top: 50%;
+    left: 34.8%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+   
+    z-index: 9999 !important;
+   
+  
+}
 
 .custom-auth-message {
     color: white !important;

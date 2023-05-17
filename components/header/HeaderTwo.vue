@@ -129,7 +129,7 @@
 
             <OffCanvasMobileMenuTwo />
         </header>
-        <Authentication2 v-if="isauthenticating" />
+        <Authentication v-if="isauthenticating" />
     </div>
 </template>
 
@@ -151,12 +151,10 @@ export default {
     components: {
         SectionTitle: () => import('@/components/common/SectionTitle'),
 
-        Category: () => import("@/components/header/Category"),
         Navigation: () => import("@/components/header/Navigation"),
-        Authentication2: () => import("@/components/header/Authentication2.vue"),
+        Authentication: () => import("@/components/header/Authentication.vue"),
 
 
-        SearchPopUp: () => import("@/components/header/SearchPopUp"),
 
         OffCanvasMobileMenuTwo: () => import("@/components/header/OffCanvasMobileMenuTwo")
     },
@@ -227,7 +225,7 @@ export default {
         // Afficher la largeur de l'écran dans la console
         console.log("Largeur de l'écran : " + largeurEcran + " pixels");
         window.addEventListener('scroll', () => {
-            let scrollPos = window.scroll
+            let scrollPos = window.scrollY
             if (scrollPos >= 200) {
                 this.isSticky = true
             } else {

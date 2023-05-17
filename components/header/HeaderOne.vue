@@ -127,7 +127,7 @@
 
             <OffCanvasMobileMenuTwo />
         </header>
-        <Authentication2 v-if="isauthenticating" />
+        <Authentication v-if="isauthenticating" />
     </div>
 </template>
 
@@ -146,12 +146,12 @@ export default {
     components: {
         SectionTitle: () => import('@/components/common/SectionTitle'),
 
-        Category: () => import("@/components/header/Category"),
+       
         Navigation: () => import("@/components/header/Navigation"),
-        Authentication2: () => import("@/components/header/Authentication2.vue"),
+        Authentication: () => import("@/components/header/Authentication.vue"),
 
 
-        SearchPopUp: () => import("@/components/header/SearchPopUp"),
+
 
         OffCanvasMobileMenuTwo: () => import("@/components/header/OffCanvasMobileMenuTwo")
     },

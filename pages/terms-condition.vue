@@ -3,7 +3,7 @@
         
         <HeaderOne />
 
-        <BreadCrumbTwo title='Terms & Condition' />
+        <BreadCrumbTwo title='Termes & Conditions' />
 
         <section class="privacy-policy-area terms-condition-area">
             <div class="container">
@@ -32,14 +32,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <PageSidebarOne />
-                    </div>
+                 
                 </div>
             </div>
         </section>
 
-        <FooterOne />
+        <FooterKitchen />
     </div>
 </template>
 
@@ -48,8 +46,8 @@
         components: {
             HeaderOne: () => import("@/components/header/HeaderOne"),
             BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
-            PageSidebarOne: () => import("@/components/sidebar/PageSidebarOne.vue"),
-            FooterOne: () => import("@/components/footer/FooterOne")
+       
+            FooterKitchen: () => import("@/components/footer/FooterKitchen")
         },
         head() {
             return {
