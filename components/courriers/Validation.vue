@@ -39,27 +39,27 @@
                    <hr>
                    <div class="d-flex p-4 pb-0 pt-0">
                       <div class="col-6" for="reg-name">Nom*</div>
-                      <p class="col-6">{{this.detailutilisateur && this.detailutilisateur.nom}}</p>
+                      <p class="col-6">{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.nom}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-0 pt-0">
                       <div class="col-6" for="reg-name">Prénom*</div>
-                      <p class="col-6">{{this.detailutilisateur && this.detailutilisateur.prenom}}</p>
+                      <p class="col-6">{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.prenom}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-0 pt-0">
                       <div class="col-6" for="log-email">Email*</div>
-                      <p class="col-6">{{this.detailutilisateur && this.detailutilisateur.email}}</p>
+                      <p class="col-6">{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.email}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">
                       <div class="col-6" for="reg-name">Adresse*</div>
-                      <p class="col-6" >{{this.detailutilisateur && this.detailutilisateur.adresse}}</p>
+                      <p class="col-6" >{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.adresse}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-0 pt-0">
                       <div class="col-6" for="reg-name">Téléphone*</div>
-                      <p class="col-6" >{{this.detailutilisateur && this.detailutilisateur.telephone}}</p>
+                      <p class="col-6" >{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.telephone}}</p>
                    </div>
                    
                 </div>
@@ -148,7 +148,7 @@
             
             computed: mapGetters({
                 detailutilisateur: 'coordonnees/detailutilisateur',
-                detailministere: 'ministeres/detailministere',
+                detailministere: 'ministeres/detailministere', 
                 detailcontenu: 'contenus/detailcontenu',
                 ispopupload: "courrierenvoye/ispopupload",
             }),

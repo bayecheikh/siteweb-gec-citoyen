@@ -40,6 +40,16 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\coming-soon.vue",
     "chunkName": "pages/coming-soon",
     "_name": "_706986fc"
+<<<<<<< HEAD
+=======
+  },
+  {
+    "name": "compte",
+    "path": "/compte",
+    "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\compte.vue",
+    "chunkName": "pages/compte",
+    "_name": "_5d2d9456"
+>>>>>>> update-coordonnees
   },
   {
     "name": "contact-me",

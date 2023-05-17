@@ -1,9 +1,10 @@
 <template>
    <div class="edu-course-area course-area-3 bg-lighten04 pb-5 pt-5">
+      
       <div class="container mb-6 custom-form-container">
          <SectionTitle preTitle="" title='' alignment='section-center' />
          <div class="isotope-wrapper">
-            <h3 class="pl-0 pt-5 pb-5 pr-0">Formulaire de soumission courrier</h3>
+            <!-- <h3 class="pl-0 pt-5 pb-5 pr-0">Mon espace personnel</h3> -->
             <div class="row isotop-button isotop-filter nav d-flex justify-content-between">
                <!-- <button @click="$goToTab('connexion')" :class="'nav-link '+(detailactive_step.id=='connexion'?'active':'')">Connexion</button> -->
                <div class="col-2 d-flex flex-column justify-content-center align-center">
@@ -25,7 +26,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p :class="'title_step pt-2 '">Trouvez l'organisme concerné</p>
+                  <p :class="'title_step pt-2 '">Courriers envoyés</p>
                </div>
                <div class="col-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
@@ -49,7 +50,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2">Saisissez vos coordonnées</p>
+                  <p class="title_step pt-2">Courriers reçu</p>
                </div>
                
                <div class="col-1">
@@ -75,7 +76,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2">Remplir le formulaire de soumission</p>
+                  <p class="title_step pt-2">Courriers en attente</p>
                </div>
                <div class="col-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
@@ -105,7 +106,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2 ">Prévisualisez et soumettez</p>
+                  <p class="title_step pt-2 ">Detail du courrier</p>
                </div>
                
                <!-- <button @click="$goToTab('ministeres')" :class="'nav-link '+(detailactive_step.id=='ministeres'?'active':'')" >Trouvez le ministère</button> -->
@@ -132,7 +133,7 @@
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
                        <div class="col-lg-12">
-                          <Ministeres />
+                          <CourrierEnvoye />
                        </div>
                     </div>
                     <ul class="shape-group">
@@ -146,7 +147,7 @@
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
                        <div class="col-lg-12">
-                          <Contenu />
+                          <CourrierRecu />
                        </div>
                     </div>
                     <ul class="shape-group">
@@ -160,7 +161,7 @@
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
                        <div class="col-lg-12">
-                          <Coordonnees />
+                          <CourrierEnAttente />
                        </div>
                     </div>
                     <ul class="shape-group">
@@ -174,7 +175,7 @@
                  <div class="container position-relative">
                     <div class="row g-5 justify-content-center">
                        <div class="col-lg-12">
-                          <Validation />
+                          <DetailCourrier/>
                        </div>
                     </div>
                     <ul class="shape-group">
@@ -201,17 +202,17 @@
 import { mapMutations, mapGetters } from 'vuex'
    export default {
        components: {
-           Connexion: () => import("@/components/courriers/Connexion"),
-           Coordonnees: () => import("@/components/courriers/Coordonnees"),
-           Ministeres: () => import("@/components/courriers/Ministeres"),
-           Contenu: () => import("@/components/courriers/Contenu"),
-           Validation: () => import("@/components/courriers/Validation"),
+         CourrierEnvoye: () => import("@/components/compte/CourrierEnvoye"),
+          CourrierRecu: () => import("@/components/compte/CourrierRecu"),
+           CourrierEnAttente: () => import("@/components/compte/CourrierEnAttente"),
+           DetailCourrier: () => import("@/components/compte/DetailCourrier"),
        },
        mounted: function() { 
         this.$store.dispatch('active_step/getDetail',{id:'ministeres'})        
        },
        computed: mapGetters({
            detailactive_step: 'active_step/detailactive_step',
+           detailutilisateur: 'coordonnees/detailutilisateur',
        }),
        data () {
            return {

@@ -38,7 +38,17 @@
                             </div>
 
                             <form class="rnt-contact-form rwt-dynamic-form" ref="form" @submit.prevent="sendEmail">
+                              
                                 <div class="row row--10">
+                                        <div class="form-group col-12 mt-5" >
+                                          <label for="subject">Objet</label>
+                                          <select name="subject" v-model="subject">
+                                              <option value="suggestion">Faire une suggestion</option>
+                                              <option value="probleme">Signaler un problème</option>
+                                              <option value="autre" selected>Autre</option>
+                                          </select>
+                                      </div>
+
                                     <div class="form-group col-12">
                                         <input type="text" name="fullname" placeholder="Nom *" v-model="fullname">
                                         <div v-if="$v.fullname.$error"><p class="custom-validation-error-msg">Le nom est obligatoire.</p></div>
@@ -113,8 +123,12 @@ export default {
     FooterKitchen: () => import("@/components/footer/FooterKitchen"),
     MouseMove: () => import('@/components/animation/MouseMove')
   },
+  mounted() {
+    this.subject = 'autre'
+  },
   data() {
     return {
+      subject: 'autre',
       isloading: false,
       recaptchaErrorText: false,
       showRecaptchaErrorText: false,
@@ -147,6 +161,7 @@ export default {
       const userId = '3JQlE7q770juJLC8c'
 
       const templateParams = {
+        
         fullname: this.$refs.form.fullname.value,
         email: this.$refs.form.email.value,
         phone: this.$refs.form.phone.value,

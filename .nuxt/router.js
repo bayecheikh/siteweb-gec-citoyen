@@ -10,6 +10,7 @@ const _4a75bcb2 = () => interopDefault(import('..\\pages\\about-us-two.vue' /* w
 const _28497b22 = () => interopDefault(import('..\\pages\\accueil.vue' /* webpackChunkName: "pages/accueil" */))
 const _0003c889 = () => interopDefault(import('..\\pages\\addcourrier.vue' /* webpackChunkName: "pages/addcourrier" */))
 const _706986fc = () => interopDefault(import('..\\pages\\coming-soon.vue' /* webpackChunkName: "pages/coming-soon" */))
+const _5d2d9456 = () => interopDefault(import('..\\pages\\compte.vue' /* webpackChunkName: "pages/compte" */))
 const _4123bd7a = () => interopDefault(import('..\\pages\\contact-me.vue' /* webpackChunkName: "pages/contact-me" */))
 const _4f8fcb80 = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
 const _b9ea5082 = () => interopDefault(import('..\\pages\\distant-learning.vue' /* webpackChunkName: "pages/distant-learning" */))
@@ -93,6 +94,10 @@ export const routerOptions = {
     path: "/coming-soon",
     component: _706986fc,
     name: "coming-soon"
+  }, {
+    path: "/compte",
+    component: _5d2d9456,
+    name: "compte"
   }, {
     path: "/contact-me",
     component: _4123bd7a,
