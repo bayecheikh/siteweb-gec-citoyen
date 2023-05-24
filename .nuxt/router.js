@@ -4,11 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0003c889 = () => interopDefault(import('..\\pages\\addcourrier.vue' /* webpackChunkName: "pages/addcourrier" */))
-const _5d2d9456 = () => interopDefault(import('..\\pages\\compte.vue' /* webpackChunkName: "pages/compte" */))
-const _4f8fcb80 = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
-const _642e68e0 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
-const _a4425d66 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _cac6b602 = () => interopDefault(import('..\\pages\\addcourrier.vue' /* webpackChunkName: "pages/addcourrier" */))
+const _0549e79f = () => interopDefault(import('..\\pages\\compte.vue' /* webpackChunkName: "pages/compte" */))
+const _5cce884a = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
+const _7f327d06 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
+const _1cc8837a = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -23,23 +23,23 @@ export const routerOptions = {
 
   routes: [{
     path: "/addcourrier",
-    component: _0003c889,
+    component: _cac6b602,
     name: "addcourrier"
   }, {
     path: "/compte",
-    component: _5d2d9456,
+    component: _0549e79f,
     name: "compte"
   }, {
     path: "/contact-us",
-    component: _4f8fcb80,
+    component: _5cce884a,
     name: "contact-us"
   }, {
     path: "/terms-condition",
-    component: _642e68e0,
+    component: _7f327d06,
     name: "terms-condition"
   }, {
     path: "/",
-    component: _a4425d66,
+    component: _1cc8837a,
     name: "index"
   }],
 

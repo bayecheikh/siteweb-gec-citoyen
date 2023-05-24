@@ -188,77 +188,67 @@ export default {
     },
     props: ['showHeaderTop'],
     mounted() {
-       if (process.client) {
-  const loginButton = document.getElementById('loginButton');
-  loginButton.addEventListener('click', (event) => {
-    event.preventDefault();
+  if (process.client) {
+    const loginButton = document.getElementById('loginButton');
+    loginButton.addEventListener('click', (event) => {
+      event.preventDefault();
 
-    // Obtenir les dimensions de la fenêtre actuelle
-    const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      const popupWidth = 500;
+      const popupHeight = 600;
+      const left = (window.innerWidth - popupWidth) / 2;
+      const top = (window.innerHeight - popupHeight) / 2;
 
-    // Calculer les positions x et y pour centrer la fenêtre contextuelle
-    const popupWidth = 500;
-    const popupHeight = 600;
-    const left = (windowWidth - popupWidth) / 2;
-    const top = (windowHeight - popupHeight) / 2;
+      const iframe = document.createElement('iframe');
+      iframe.src = loginButton.href;
+      iframe.style.zIndex = '99999';
+      iframe.style.width = `${popupWidth}px`;
+      iframe.style.height = `${popupHeight}px`;
+      iframe.style.position = 'fixed';
+      iframe.style.left = `${left}px`;
+      iframe.style.top = `${top}px`;
+      iframe.style.border = 'none';
 
-    // Ouvrir la fenêtre contextuelle centrée
-    const popupWindow = window.open(loginButton.href, '_blank', `width=${popupWidth},height=${popupHeight},left=${left},top=${top}`);
-    window.addEventListener('message', (event) => {
-      if (event.data === 'authenticationSuccessful') {
-        popupWindow.close();
-      }
+      const removeHeaderFooter = () => {
+        const headerElement = iframe.contentWindow.document.querySelector('header');
+        const footerElement = iframe.contentWindow.document.querySelector('footer');
+        if (headerElement) {
+          headerElement.style.display = 'none';
+        }
+        if (footerElement) {
+          footerElement.style.display = 'none';
+        }
+      };
+
+      iframe.addEventListener('load', removeHeaderFooter);
+
+      const closeButton = document.createElement('button');
+      closeButton.innerText = 'Fermer';
+      closeButton.addEventListener('click', () => {
+        document.body.removeChild(iframe);
+        document.body.removeChild(closeButton);
+      });
+      closeButton.style.position = 'fixed';
+      closeButton.style.top = `${top}px`;
+      closeButton.style.left = `${left + popupWidth}px`;
+
+      document.body.appendChild(iframe);
+      document.body.appendChild(closeButton);
+
+      window.addEventListener('message', (event) => {
+        if (event.data === 'authenticationSuccessful') {
+          document.body.removeChild(iframe);
+          document.body.removeChild(closeButton);
+        }
+      });
     });
-  });
+  }
 }
 
-        this.token = localStorage.getItem('gecToken')
-        if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser') ){
-            const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-            if(user['name']) {
-                const userName = user['name'];
-                this.userName = userName
-          
-            }
-           if(user['sub']){
-            const email = user['sub'];
-            this.email = email
-           }
-           
-            let initiales = "";
-
-            if(this.userName){
-                const words = this.userName.split(" ");
-                for (const word of words) {
-            initiales += word.charAt(0).toUpperCase();
-
-            }
-            }
-           this.initiales = initiales
-
-          
-           
-        
-            console.log("Initiales :", initiales);
-            
-         
-        }
-        var largeurEcran = window.innerWidth;
 
 
 
-        // Afficher la largeur de l'écran dans la console
-        console.log("Largeur de l'écran : " + largeurEcran + " pixels");
-        window.addEventListener('scroll', () => {
-            let scrollPos = window.scrollY
-            if (scrollPos >= 200) {
-                this.isSticky = true
-            } else {
-                this.isSticky = false
-            }
-        })
-    },
+,
+
     methods: {
 
             async listenForUXPMessage() {
