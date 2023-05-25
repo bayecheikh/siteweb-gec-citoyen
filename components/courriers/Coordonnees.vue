@@ -237,6 +237,7 @@ import { mapMutations, mapGetters } from 'vuex'
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
         mounted: function() {  
+          
             this.token = localStorage.getItem('gecToken')
             if(localStorage.getItem('gecToken')){
                 const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
@@ -260,6 +261,7 @@ import { mapMutations, mapGetters } from 'vuex'
             }       
         },
         computed: mapGetters({
+           
             detailutilisateur: 'coordonnees/detailutilisateur',
         }),
         data() {

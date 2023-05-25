@@ -5,12 +5,6 @@
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
   },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
   "CompteCourrierEnattente": {
     "description": "Auto imported from components/compte/CourrierEnattente.vue"
   },
@@ -25,6 +19,12 @@
   },
   "CompteMesCourrier": {
     "description": "Auto imported from components/compte/MesCourrier.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
@@ -53,9 +53,6 @@
   "FooterScrollToTop": {
     "description": "Auto imported from components/footer/ScrollToTop.vue"
   },
-  "HomeDistantLearningCourrierEnvoye": {
-    "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
-  },
   "HeaderAuthentication": {
     "description": "Auto imported from components/header/Authentication.vue"
   },
@@ -73,6 +70,9 @@
   },
   "HeaderOffCanvasMobileMenuTwo": {
     "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
+  },
+  "HomeDistantLearningCourrierEnvoye": {
+    "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
   },
   "HomeMainAccordionOne": {
     "description": "Auto imported from components/home-main/AccordionOne.vue"
