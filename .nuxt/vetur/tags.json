@@ -11,27 +11,6 @@
   "CommonSectionTitle": {
     "description": "Auto imported from components/common/SectionTitle.vue"
   },
-  "FooterKitchen": {
-    "description": "Auto imported from components/footer/FooterKitchen.vue"
-  },
-  "FooterScrollToTop": {
-    "description": "Auto imported from components/footer/ScrollToTop.vue"
-  },
-  "CompteCourrierEnattente": {
-    "description": "Auto imported from components/compte/CourrierEnattente.vue"
-  },
-  "CompteCourrierEnvoye": {
-    "description": "Auto imported from components/compte/CourrierEnvoye.vue"
-  },
-  "CompteCourrierRecu": {
-    "description": "Auto imported from components/compte/CourrierRecu.vue"
-  },
-  "CompteDetailCourrier": {
-    "description": "Auto imported from components/compte/DetailCourrier.vue"
-  },
-  "CompteMesCourrier": {
-    "description": "Auto imported from components/compte/MesCourrier.vue"
-  },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
   },
@@ -53,23 +32,11 @@
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
   },
-  "HeaderAuthentication": {
-    "description": "Auto imported from components/header/Authentication.vue"
+  "FooterKitchen": {
+    "description": "Auto imported from components/footer/FooterKitchen.vue"
   },
-  "HeaderOne": {
-    "description": "Auto imported from components/header/HeaderOne.vue"
-  },
-  "HeaderTwo": {
-    "description": "Auto imported from components/header/HeaderTwo.vue"
-  },
-  "HeaderMobileMenu": {
-    "description": "Auto imported from components/header/MobileMenu.vue"
-  },
-  "HeaderNavigation": {
-    "description": "Auto imported from components/header/Navigation.vue"
-  },
-  "HeaderOffCanvasMobileMenuTwo": {
-    "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
+  "FooterScrollToTop": {
+    "description": "Auto imported from components/footer/ScrollToTop.vue"
   },
   "HomeDistantLearningCourrierEnvoye": {
     "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
@@ -94,5 +61,23 @@
   },
   "HomeMainVideo": {
     "description": "Auto imported from components/home-main/Video.vue"
+  },
+  "HeaderAuthentication": {
+    "description": "Auto imported from components/header/Authentication.vue"
+  },
+  "HeaderOne": {
+    "description": "Auto imported from components/header/HeaderOne.vue"
+  },
+  "HeaderTwo": {
+    "description": "Auto imported from components/header/HeaderTwo.vue"
+  },
+  "HeaderMobileMenu": {
+    "description": "Auto imported from components/header/MobileMenu.vue"
+  },
+  "HeaderNavigation": {
+    "description": "Auto imported from components/header/Navigation.vue"
+  },
+  "HeaderOffCanvasMobileMenuTwo": {
+    "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
   }
 }

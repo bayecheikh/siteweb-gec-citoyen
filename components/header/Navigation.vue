@@ -2,8 +2,7 @@
   <ul class="mainmenu custom-mainmenu">
     <li><n-link to="/contact-us">Nous contacter</n-link>
     </li>
-    <li><a href="https://courrier-gec-citoyen.vercel.app/dashboard">Mon compte</a>
-    </li>
+    
   
 
   </ul>

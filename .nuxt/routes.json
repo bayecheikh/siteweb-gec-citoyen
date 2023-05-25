@@ -7,13 +7,6 @@
     "_name": "_0003c889"
   },
   {
-    "name": "compte",
-    "path": "/compte",
-    "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\compte.vue",
-    "chunkName": "pages/compte",
-    "_name": "_5d2d9456"
-  },
-  {
     "name": "contact-us",
     "path": "/contact-us",
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-us.vue",
