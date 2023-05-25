@@ -44,6 +44,10 @@ export default {
         //     console.log('on server');
         //     return
         // }
+        // if (process.server) {
+        //     console.log('on server');
+        //     return
+        // }
         // if (process.client) {
             //console.log("im on client 44444444444");
             // return localStorage.getItem('gecToken')
