@@ -2,6 +2,21 @@
   "FunFact": {
     "description": "Auto imported from components/FunFact.vue"
   },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "FooterKitchen": {
+    "description": "Auto imported from components/footer/FooterKitchen.vue"
+  },
+  "FooterScrollToTop": {
+    "description": "Auto imported from components/footer/ScrollToTop.vue"
+  },
   "CompteCourrierEnattente": {
     "description": "Auto imported from components/compte/CourrierEnattente.vue"
   },
@@ -16,9 +31,6 @@
   },
   "CompteMesCourrier": {
     "description": "Auto imported from components/compte/MesCourrier.vue"
-  },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
@@ -41,21 +53,6 @@
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
   },
-  "FooterKitchen": {
-    "description": "Auto imported from components/footer/FooterKitchen.vue"
-  },
-  "FooterScrollToTop": {
-    "description": "Auto imported from components/footer/ScrollToTop.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
-  "HomeDistantLearningCourrierEnvoye": {
-    "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
-  },
   "HeaderAuthentication": {
     "description": "Auto imported from components/header/Authentication.vue"
   },
@@ -73,6 +70,9 @@
   },
   "HeaderOffCanvasMobileMenuTwo": {
     "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
+  },
+  "HomeDistantLearningCourrierEnvoye": {
+    "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
   },
   "HomeMainAccordionOne": {
     "description": "Auto imported from components/home-main/AccordionOne.vue"
