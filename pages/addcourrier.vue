@@ -39,10 +39,7 @@ export default {
     
     mounted: function() {
         this.getToken()
-        // if (process.server) {
-        //     console.log('on server');
-        //     return
-        // }
+ 
         // if (process.server) {
         //     console.log('on server');
         //     return
