@@ -5,16 +5,32 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="banner-content">
-              <h3 class="title">
+              <h3  class="title">
+                Plateforme
+                <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
+                Bénin </div>
+             </h3>
+             <!--   <h3 v-if="!banniere[0]?.title" class="title">
                 Plateforme
                 <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
                 Bénin </div>
               </h3>
+              <h3 v-if="banniere[0]?.title" class="title">
+               {{ banniere[0].title }}
+              </h3> -->
               <p class="custom-subtitle">
                 Plateforme digitale nationale pour le dépôt électronique et
                 sécurisé de courriers à destination de l'administration
                 béninoise.
               </p>
+              <!-- <p v-if="!banniere[0]?.resume" class="custom-subtitle">
+                Plateforme digitale nationale pour le dépôt électronique et
+                sécurisé de courriers à destination de l'administration
+                béninoise.
+              </p>
+              <p  v-if="banniere[0]?.resume" class="custom-subtitle">
+                {{ banniere[0]?.resume }}
+              </p> -->
               <div class="d-flex banner-btn custom-main-banner-btn">
                 <div class="input-group custom-input-group">
                   <!--<i class="icon-2"></i>-->
@@ -149,7 +165,7 @@
     <div class="main-wrapper bg-lighten05">
       <HomeYogaInstructorFunFact />
     </div>
-    <Authentication2 v-if="isauthenticatingfrombutton" />
+    <Authentication v-if="isauthenticatingfrombutton" />
     <SuiviCourrier v-if="ispopupload" />
   </div>
 </template>
@@ -162,8 +178,12 @@
 import { mapMutations, mapActions,  mapGetters } from "vuex";
 
 export default {
+  modules: ['@nuxtjs/axios'],
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev'
+    },
 
-mounted: function() {  
+mounted: async function() {  
  
     this.windowHeight = this.detailbanner;   
 
@@ -172,6 +192,16 @@ mounted: function() {
 
     const newHeight = this.windowHeight - 248;
     document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
+    try {
+            const response = await this.$axios.get("/contenus");
+            const filteredContenus = response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
+            const sortedContenus = filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.banniere = sortedContenus.slice(0, 1);
+        } catch (error) {
+        console.error(error);
+        return;
+        }
+        console.log("Bannieres", this.banniere)
   },
   computed: {
     ...mapGetters({
@@ -188,17 +218,18 @@ mounted: function() {
   data() {
     return {
       courrier: "",
-      windowHeight:0
+      windowHeight:0,
+      banniere: []
     };
   },
  
   components: {
     HomeYogaInstructorFunFact: () =>
-      import("@/components/home-yoga-instructor/FunFact.vue"),
-    Authentication2: () => import("@/components/header/Authentication2.vue"),
+      import("@/components/home-main/FunFact.vue"),
+    Authentication: () => import("@/components/header/Authentication.vue"),
     MouseMove: () => import("@/components/animation/MouseMove"),
     SuiviCourrier: () =>
-      import("@/components/home-distant-learning/SuiviCourrier.vue"),
+      import("@/components/home-main/SuiviCourrier.vue"),
   },
   methods: {
    

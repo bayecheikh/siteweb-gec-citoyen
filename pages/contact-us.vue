@@ -10,17 +10,29 @@
                         <div class="contact-us-info">
                             <h3 class="heading-title">Contactez-nous !</h3>
                             <ul class="address-list">
-                                <li>
+                                <li v-if="!adresse[0]?.resume">
                                     <h5 class="title">Adresse</h5>
                                     <p>9F87+XJ3, RN 3, Cotonou, Bénin</p>
                                 </li>
-                                <li>
+                                <li v-if="adresse[0]?.resume">
+                                    <h5 class="title">Adresse</h5>
+                                    <p>{{adresse[0]?.resume}}</p>
+                                </li>
+                                <li v-if="!contactEmail[0]?.resume">
                                     <h5 class="title">Email</h5>
                                     <p><a href="mailto:gec-citoyen@gouv.bj" target="_blank">gec-citoyen@gouv.bj</a></p>
                                 </li>
-                                <li>
+                                <li v-if="contactEmail[0]?.resume">
+                                    <h5 class="title">Email</h5>
+                                    <p><a :href="'mailto:' + contactEmail[0]?.resume" target="_blank">{{contactEmail[0]?.resume}}</a></p>
+                                </li>
+                                <li v-if="!telephone[0]?.resume">
                                     <h5 class="title">Téléphone</h5>
                                     <p><a href="tel:+22947135598">(+229) 47 135 5 98</a></p>
+                                </li>
+                                <li v-if="telephone[0]?.resume">
+                                    <h5 class="title">Téléphone</h5>
+                                    <p><a :href="'tel:'+telephone[0]?.resume">{{telephone[0]?.resume}}</a></p>
                                 </li>
                             </ul>
                             <ul class="social-share">
@@ -43,22 +55,23 @@
                                         <div class="form-group col-12 mt-5" >
                                           <label for="subject">Objet</label>
                                           <select name="subject" v-model="subject">
-                                              <option value="suggestion">Faire une suggestion</option>
-                                              <option value="probleme">Signaler un problème</option>
-                                              <option value="autre" selected>Autre</option>
+                                              <option value="Suggestion">Faire une suggestion</option>
+                                              <option value="Signaler un problème">Signaler un problème</option>
+                                              <option value="Autre" selected>Autre</option>
                                           </select>
                                       </div>
 
                                     <div class="form-group col-12">
-                                        <input type="text" name="fullname" placeholder="Nom *" v-model="fullname">
-                                        <div v-if="$v.fullname.$error"><p class="custom-validation-error-msg">Le nom est obligatoire.</p></div>
+                                        <input type="text" name="fullname" placeholder="Prénom et nom *" v-model="fullname">
+                                        <div v-if="$v.fullname.$error"><p class="custom-validation-error-msg">Le prénom et le nom sont obligatoires.</p></div>
                                     </div>
                                     <div class="form-group col-12">
                                         <input type="email" name="email" placeholder="Email *" v-model="email">
                                         <div v-if="$v.email.$error"><p class="custom-validation-error-msg">L'email doit être valide.</p></div>
                                     </div>
-                                    <div class="form-group col-12">
-                                        <input type="tel" name="phone" placeholder="Téléphone">
+                                    <div class="form-group col-12"  >
+                                        <input type="tel" name="phone" placeholder="Téléphone" v-model="phone">
+                                        <div v-if="$v.phone.$error"><p class="custom-validation-error-msg">Le numéro de téléphone doit être valide.</p></div>
                                     </div>
                                     <div class="form-group col-12">
                                         <textarea name="message" cols="30" rows="4" placeholder="Votre message *" v-model="message"></textarea>
@@ -112,10 +125,33 @@
 
 <script>
 import emailjs from 'emailjs-com';
-import { required, email, minLength, maxLength } from 'vuelidate/lib/validators'
+import { required, email, minLength, numeric,  maxLength } from 'vuelidate/lib/validators'
+
 import { validationMixin } from 'vuelidate'
 
 export default {
+  modules: ['@nuxtjs/axios'],
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev'
+    },
+    mounted: async function() {  
+      this.subject = 'Autre'
+ try {
+         const response = await this.$axios.get("/contenus");
+         const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Téléphone");
+         const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+         this.telephone = sortedTelephones.slice(0, 1);
+         const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Email");
+         const sortedEmails = filteredEmails.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+         this.contactEmail = sortedEmails.slice(0, 1);
+         const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Adresse");
+         const sortedAdresses = filteredAdresses.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+         this.adresse = sortedAdresses.slice(0, 1);
+ }catch (error) {
+     console.error(error);
+     return;
+     }
+},
   mixins: [validationMixin],
   components: {
     HeaderTwo: () => import("@/components/header/HeaderTwo"),
@@ -123,12 +159,13 @@ export default {
     FooterKitchen: () => import("@/components/footer/FooterKitchen"),
     MouseMove: () => import('@/components/animation/MouseMove')
   },
-  mounted() {
-    this.subject = 'autre'
-  },
+
   data() {
     return {
-      subject: 'autre',
+      telephone : [],
+      contactEmail : [],
+      adresse : [],
+      subject: 'Autre',
       isloading: false,
       recaptchaErrorText: false,
       showRecaptchaErrorText: false,
@@ -142,6 +179,11 @@ export default {
   validations: {
     fullname: {
       required,
+      minLength: minLength(2)
+    },
+    phone: {
+      regex: value => /^[\d\s()+-]+$/.test(value),
+      minLength: minLength(8) 
     },
     email: {
       required,
@@ -149,6 +191,7 @@ export default {
     },
     message: {
       required,
+   
     },
   },
   methods: {
@@ -161,7 +204,7 @@ export default {
       const userId = '3JQlE7q770juJLC8c'
 
       const templateParams = {
-        
+        subject: this.$refs.form.subject.value,
         fullname: this.$refs.form.fullname.value,
         email: this.$refs.form.email.value,
         phone: this.$refs.form.phone.value,

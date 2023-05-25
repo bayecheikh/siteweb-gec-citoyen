@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "name": "about-us-one",
     "path": "/about-us-one",
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\about-us-one.vue",
@@ -47,11 +48,24 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-me.vue",
     "chunkName": "pages/contact-me",
     "_name": "_4123bd7a"
+=======
+    "name": "addcourrier",
+    "path": "/addcourrier",
+    "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\addcourrier.vue",
+    "chunkName": "pages/addcourrier"
+  },
+  {
+    "name": "compte",
+    "path": "/compte",
+    "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\compte.vue",
+    "chunkName": "pages/compte"
+>>>>>>> mon-compte
   },
   {
     "name": "contact-us",
     "path": "/contact-us",
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-us.vue",
+<<<<<<< HEAD
     "chunkName": "pages/contact-us",
     "_name": "_4f8fcb80"
   },
@@ -173,11 +187,15 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\suggestion.vue",
     "chunkName": "pages/suggestion",
     "_name": "_a035fcce"
+=======
+    "chunkName": "pages/contact-us"
+>>>>>>> mon-compte
   },
   {
     "name": "terms-condition",
     "path": "/terms-condition",
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",
+<<<<<<< HEAD
     "chunkName": "pages/terms-condition",
     "_name": "_642e68e0"
   },
@@ -362,12 +380,19 @@
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\shop\\\\wishlist.vue",
     "chunkName": "pages/shop/wishlist",
     "_name": "_2216c360"
+=======
+    "chunkName": "pages/terms-condition"
+>>>>>>> mon-compte
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\index.vue",
+<<<<<<< HEAD
     "chunkName": "pages/index",
     "_name": "_a4425d66"
+=======
+    "chunkName": "pages/index"
+>>>>>>> mon-compte
   }
 ]

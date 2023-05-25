@@ -45,7 +45,7 @@ import { mapGetters } from 'vuex'
     },
         components: {
             MobileMenu: () => import('@/components/header/MobileMenu'),
-            ColorMode: () => import("@/components/common/ColorMode")
+
         },
         
         methods: {

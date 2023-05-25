@@ -1,9 +1,5 @@
 <template>
   <ul class="mainmenu custom-mainmenu">
-    <!-- <li><n-link to="/suggestion">Faire une suggestion</n-link>
-    </li>
-    <li><n-link to="/signaler-probleme">Signaler un problème</n-link>
-    </li> -->
     <li><n-link to="/contact-us">Nous contacter</n-link>
     </li>
   
