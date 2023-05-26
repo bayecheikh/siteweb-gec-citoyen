@@ -5,16 +5,29 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="banner-content">
-              <h3 class="title">
+              <h3 v-if="loading" class=" title loader-title mb-4"></h3>
+              <h3 v-if="loading" class="custom-subtitle loader-resume mb-4"></h3>
+              <div v-if="!loading" >
+             <h3 v-if="banniere.length === 0 || !banniere[0]?.title" class="title">
                 Plateforme
                 <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
                 Bénin </div>
               </h3>
-              <p class="custom-subtitle">
+              <h3 v-if="banniere.length > 0 && banniere[0]?.title" class="title">
+    {{ firstWords }}
+  
+    <div>{{ lastWords }}</div>
+  </h3>
+           
+              <p v-if="banniere.length === 0 ||  !banniere[0]?.resume" class="custom-subtitle">
                 Plateforme digitale nationale pour le dépôt électronique et
                 sécurisé de courriers à destination de l'administration
                 béninoise.
               </p>
+              <p  v-if="banniere.length > 0 && banniere[0]?.resume" class="custom-subtitle">
+                {{ banniere[0]?.resume }}
+              </p>
+            </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
                 <div class="input-group custom-input-group">
                   <!--<i class="icon-2"></i>-->
@@ -149,7 +162,7 @@
     <div class="main-wrapper bg-lighten05">
       <HomeYogaInstructorFunFact />
     </div>
-    <Authentication2 v-if="isauthenticatingfrombutton" />
+    <Authentication v-if="isauthenticatingfrombutton" />
     <SuiviCourrier v-if="ispopupload" />
   </div>
 </template>
@@ -162,8 +175,12 @@
 import { mapMutations, mapActions,  mapGetters } from "vuex";
 
 export default {
+  modules: ['@nuxtjs/axios'],
+    axios: {
+        baseURL: 'https://api-gec-citoyen.fly.dev'
+    },
 
-mounted: function() {  
+mounted: async function() {  
  
     this.windowHeight = this.detailbanner;   
 
@@ -172,6 +189,44 @@ mounted: function() {
 
     const newHeight = this.windowHeight - 248;
     document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
+    try {
+            const response = await this.$axios.get("/contenus");
+            const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
+            const sortedContenus = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.banniere = await sortedContenus.slice(0, 1);
+            if(this.banniere[0]?.title){
+              const trimmedText = this.banniere[0]?.title?.trim();
+            
+const words = trimmedText.split(' ');
+
+if (words.length === 3) {
+  // Le texte contient exactement 3 mots
+  this.firstWords = words.join(' ');
+  this.lastWords = '';
+} else if (words.length > 3) {
+  // Le texte contient plus de 3 mots
+  this.firstWords = words.slice(0, 3).join(' ');
+  this.lastWords = words.slice(3).join(' ');
+} else {
+  // Le texte contient moins de 3 mots
+  this.firstWords = trimmedText;
+  this.lastWords = '';
+}
+
+              this.loading = false
+            }
+        
+        } catch (error) {
+          this.loading = false
+        console.error(error);
+        return;
+        }
+        finally{
+          this.loading = false
+        }
+        
+        // Supprimer les espaces en début et fin de chaîne
+   
   },
   computed: {
     ...mapGetters({
@@ -187,18 +242,23 @@ mounted: function() {
   },
   data() {
     return {
+      loading: true,
       courrier: "",
-      windowHeight:0
+      windowHeight:0,
+      banniere: [],
+      firstWords : '',
+      lastWords : '',
+
     };
   },
  
   components: {
     HomeYogaInstructorFunFact: () =>
-      import("@/components/home-yoga-instructor/FunFact.vue"),
-    Authentication2: () => import("@/components/header/Authentication2.vue"),
+      import("@/components/home-main/FunFact.vue"),
+    Authentication: () => import("@/components/header/Authentication.vue"),
     MouseMove: () => import("@/components/animation/MouseMove"),
     SuiviCourrier: () =>
-      import("@/components/home-distant-learning/SuiviCourrier.vue"),
+      import("@/components/home-main/SuiviCourrier.vue"),
   },
   methods: {
    
@@ -227,6 +287,29 @@ mounted: function() {
 </script>
 
 <style>
+
+.loader-title {
+  height: 100px;
+  background-color: #aae0c8; /* Couleur verte */
+  animation: loaderAnimation 1s ease-in-out infinite; /* Animation */
+}
+.loader-resume {
+  height: 120px;
+  background-color: #aae0c8; /* Couleur verte */
+  animation: loaderAnimation 1s ease-in-out infinite; /* Animation */
+}
+
+@keyframes loaderAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 .hero-style-1 .banner-thumbnail .shape-group li.shape-3.circle-shape {
   width: 41px;
   height: 41px;

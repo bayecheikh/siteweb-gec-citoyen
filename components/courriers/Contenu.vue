@@ -171,7 +171,7 @@ import { mapMutations, mapGetters } from 'vuex'
             submitContenu(){
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
-               this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree,subject:this.model.subject})
+                this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree,subject:this.model.subject})
                 this.$store.dispatch('active_step/getDetail',{id:'validation'})
 
             },

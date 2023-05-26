@@ -151,26 +151,33 @@
                     <label for="reg-name">Numéro NINEA*</label>
                     <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Numéro NINEA" v-model="model.entreprise.numero_ninea">
                 </div>
+                <div class="form-group col-6">
+                    <label for="log-email">Email de l'entreprise*</label>
+                    <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.entreprise.email_entreprise">
+                </div>
+                <div class="form-group col-6 mb-5">
+                    <label for="log-email">Siége social de l'entreprise*</label>
+                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.adresse_entreprise">
+                </div>
+                <hr class='dotted mt-5' />
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Prénom du représentant légal</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Prénom du représentant légal" v-model="model.entreprise.prenom_representant_legal">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.prenom_representant_legal">
                 </div>
+                
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Nom du représentant légal</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Nom du représentant légal" v-model="model.entreprise.nom_representant_legal">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.nom_representant_legal">
                 </div>
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Téléphone du représentant légal</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Téléphone du représentant légal" v-model="model.entreprise.telephone_representant_legal">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.telephone_representant_legal">
                 </div>
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Email du représentant légal</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Email du représentant légal" v-model="model.entreprise.email_representant_legal">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.email_representant_legal">
                 </div>
-                <div class="form-group col-12 mb-5">
-                    <label for="log-email">Siége social de l'entreprise*</label>
-                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse de l'entreprise" v-model="model.entreprise.adresse_entreprise">
-                </div>
+                
                 <!-- <div class="form-group col-12">
                     <label for="reg-name">Siége social de l'entreprise*</label>
                     <div class="border-adresse row d-flex p-5">
@@ -230,6 +237,7 @@ import { mapMutations, mapGetters } from 'vuex'
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
         mounted: function() {  
+          
             this.token = localStorage.getItem('gecToken')
             if(localStorage.getItem('gecToken')){
                 const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
@@ -253,6 +261,7 @@ import { mapMutations, mapGetters } from 'vuex'
             }       
         },
         computed: mapGetters({
+           
             detailutilisateur: 'coordonnees/detailutilisateur',
         }),
         data() {
@@ -294,6 +303,7 @@ import { mapMutations, mapGetters } from 'vuex'
                         telephone_representant_legal:"",
                         email_nom_representant_legal:"",
                         adresse_entreprise:"",
+                        email_entreprise:"",
                         rue_entreprise:"",
                         complement_adresse_entreprise:"",
                         code_postal_entreprise:"",
