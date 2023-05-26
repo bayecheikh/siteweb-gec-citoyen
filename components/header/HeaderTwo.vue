@@ -317,7 +317,7 @@ button.edu-btn {
 }
 .header-action .header-btn a {
     display: block;
-    color: grey;
+    color: grey !important;
     color: var(--color-white);
     padding: 0 30px;
 }
