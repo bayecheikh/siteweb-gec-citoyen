@@ -315,7 +315,12 @@ button.edu-btn {
     font-family: var(--font-secondary);
 
 }
-
+.header-action .header-btn a {
+    display: block;
+    color: grey;
+    color: var(--color-white);
+    padding: 0 30px;
+}
 .my-custom-login-button {
     padding: 15px !important;
     border-radius: 3px !important;

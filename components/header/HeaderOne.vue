@@ -356,6 +356,12 @@ button.edu-btn {
     font-size: 15px;
     padding: 10px !important;
 }
+.header-action .header-btn a {
+    display: block;
+    color: grey;
+    color: var(--color-white);
+    padding: 0 30px;
+}
 
 @media (max-width: 993px) {
     .my-custom-login-button {
