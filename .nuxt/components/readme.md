@@ -7,6 +7,7 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<FunFact>` | `<fun-fact>` (components/FunFact.vue)
+<<<<<<< HEAD
 - `<InstagramPost>` | `<instagram-post>` (components/InstagramPost.vue)
 - `<PopUpConnexion>` | `<pop-up-connexion>` (components/PopUpConnexion.vue)
 - `<About>` | `<about>` (components/about-us-three/About.vue)
@@ -39,6 +40,14 @@ You can directly use them in pages and other components without the need to impo
 - `<CompteMesCourrier>` | `<compte-mes-courrier>` (components/compte/MesCourrier.vue)
 - `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
 - `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
+=======
+- `<CompteCourrierEnattente>` | `<compte-courrier-enattente>` (components/compte/CourrierEnattente.vue)
+- `<CompteCourrierEnvoye>` | `<compte-courrier-envoye>` (components/compte/CourrierEnvoye.vue)
+- `<CompteCourrierRecu>` | `<compte-courrier-recu>` (components/compte/CourrierRecu.vue)
+- `<CompteDetailCourrier>` | `<compte-detail-courrier>` (components/compte/DetailCourrier.vue)
+- `<CompteMesCourrier>` | `<compte-mes-courrier>` (components/compte/MesCourrier.vue)
+- `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)
+>>>>>>> bc40c81d1b588d07f6b8b13d4893331f5dd7ff2a
 - `<CourriersConnexion>` | `<courriers-connexion>` (components/courriers/Connexion.vue)
 - `<CourriersContenu>` | `<courriers-contenu>` (components/courriers/Contenu.vue)
 - `<CourriersCoordonnees>` | `<courriers-coordonnees>` (components/courriers/Coordonnees.vue)
@@ -46,9 +55,13 @@ You can directly use them in pages and other components without the need to impo
 - `<CourriersMinisteres>` | `<courriers-ministeres>` (components/courriers/Ministeres.vue)
 - `<CourriersPrevisualisation>` | `<courriers-previsualisation>` (components/courriers/Previsualisation.vue)
 - `<CourriersValidation>` | `<courriers-validation>` (components/courriers/Validation.vue)
+<<<<<<< HEAD
 - `<AboutUsOneFunFact>` | `<about-us-one-fun-fact>` (components/about-us-one/FunFact.vue)
 - `<AboutUsOneInstructor>` | `<about-us-one-instructor>` (components/about-us-one/Instructor.vue)
 - `<AboutUsOneWhyChoose>` | `<about-us-one-why-choose>` (components/about-us-one/WhyChoose.vue)
+=======
+<<<<<<< HEAD
+>>>>>>> bc40c81d1b588d07f6b8b13d4893331f5dd7ff2a
 - `<CourseTypeEight>` | `<course-type-eight>` (components/course/CourseTypeEight.vue)
 - `<CourseTypeFive>` | `<course-type-five>` (components/course/CourseTypeFive.vue)
 - `<CourseTypeFour>` | `<course-type-four>` (components/course/CourseTypeFour.vue)
@@ -64,15 +77,22 @@ You can directly use them in pages and other components without the need to impo
 - `<EventSectionOne>` | `<event-section-one>` (components/event/EventSectionOne.vue)
 - `<EventTwo>` | `<event-two>` (components/event/EventTwo.vue)
 - `<FooterKindergarten>` | `<footer-kindergarten>` (components/footer/FooterKindergarten.vue)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> mon-compte
+>>>>>>> bc40c81d1b588d07f6b8b13d4893331f5dd7ff2a
 - `<FooterKitchen>` | `<footer-kitchen>` (components/footer/FooterKitchen.vue)
 - `<FooterScrollToTop>` | `<footer-scroll-to-top>` (components/footer/ScrollToTop.vue)
+- `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
+- `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
+- `<HomeDistantLearningCourrierEnvoye>` | `<home-distant-learning-courrier-envoye>` (components/home-distant-learning/CourrierEnvoye.vue)
 - `<HeaderAuthentication>` | `<header-authentication>` (components/header/Authentication.vue)
 - `<HeaderOne>` | `<header-one>` (components/header/HeaderOne.vue)
 - `<HeaderTwo>` | `<header-two>` (components/header/HeaderTwo.vue)
 - `<HeaderMobileMenu>` | `<header-mobile-menu>` (components/header/MobileMenu.vue)
 - `<HeaderNavigation>` | `<header-navigation>` (components/header/Navigation.vue)
 - `<HeaderOffCanvasMobileMenuTwo>` | `<header-off-canvas-mobile-menu-two>` (components/header/OffCanvasMobileMenuTwo.vue)
-- `<HomeDistantLearningCourrierEnvoye>` | `<home-distant-learning-courrier-envoye>` (components/home-distant-learning/CourrierEnvoye.vue)
 - `<HomeMainAccordionOne>` | `<home-main-accordion-one>` (components/home-main/AccordionOne.vue)
 - `<HomeMainBanner>` | `<home-main-banner>` (components/home-main/Banner.vue)
 - `<HomeMainCategories>` | `<home-main-categories>` (components/home-main/Categories.vue)
