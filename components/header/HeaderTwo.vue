@@ -318,7 +318,6 @@ button.edu-btn {
 .header-action .header-btn a {
     display: block;
     color: grey !important;
-    color: var(--color-white);
     padding: 0 30px;
 }
 .my-custom-login-button {
