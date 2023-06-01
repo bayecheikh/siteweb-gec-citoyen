@@ -63,15 +63,13 @@
                                 <Navigation />
                             </nav>
                         </div>
-                        <div v-if="!this.token">
+                        <div v-if="this.token=='null'">
                             <div class="header-right">
                                 <ul class="header-action">
 
                                     <li class="header-btn">
-                                        <a  id="loginButton"  class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
-                                            CONNECTER</a>
-                                            <!-- <a class=" btn-medium my-custom-login-button" @click="onClickSeConnecter">SE
-                                            CONNECTER</a> -->
+                                        <a class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true"> <span class="color-login-btn">SE CONNECTER</span></a>
+                                          
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
                                         <button class="hamberger-button" @click="mobileMenuOpen('addClass', 'active')">
@@ -82,14 +80,14 @@
                             </div>
                         </div>
 
-                        <div v-if="this.token">
+                        <div v-if="this.token && this.token!='null'">
                             <div class="header-right">
                                 <ul class="header-action">
                                     <li class="header-btn"><a href="https://courrier-gec-citoyen.vercel.app/dashboard">Mon compte</a>
     </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
-                                                v-if="!isDeconnecting">SE DÉCONNECTER</span><span v-if="isDeconnecting"><svg
+                                                v-if="!isDeconnecting" class="color-login-btn">SE DÉCONNECTER</span><span v-if="isDeconnecting"><svg
                                                     width="24" height="24" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
@@ -106,12 +104,12 @@
                                             </span></a>
                                     </li>
                                     <li class="header-btn">
-                                        <div class="initials-circle">
+                                        <!-- <div class="initials-circle">
                                             <span class="initials" v-if="initiales" > {{ initiales}}</span>
                                             <span class="initials" v-if="!initiales" >XX</span>
                                             <span class="tooltip" v-if="userName">{{ userName }}<br><span  v-if="email">Email : {{ email }}</span></span>
 
-                                        </div>
+                                        </div> -->
 
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
@@ -163,6 +161,7 @@ export default {
     },
     data() {
         return {
+            isUserAuthenticated: false,
             initiales : "",
             userName: "",
             email: null,
@@ -189,67 +188,17 @@ export default {
         }
     },
     props: ['showHeaderTop'],
-    mounted() {
-  if (process.client) {
-    const loginButton = document.getElementById('loginButton');
-    loginButton.addEventListener('click', (event) => {
-      event.preventDefault();
-
-      const popupWidth = 500;
-      const popupHeight = 600;
-      const left = (window.innerWidth - popupWidth) / 2;
-      const top = (window.innerHeight - popupHeight) / 2;
-
-      const iframe = document.createElement('iframe');
-      iframe.src = loginButton.href;
-      iframe.style.zIndex = '99999';
-      iframe.style.width = `${popupWidth}px`;
-      iframe.style.height = `${popupHeight}px`;
-      iframe.style.position = 'fixed';
-      iframe.style.left = `${left}px`;
-      iframe.style.top = `${top}px`;
-      iframe.style.border = 'none';
-
-      const removeHeaderFooter = () => {
-        const headerElement = iframe.contentWindow.document.querySelector('header');
-        const footerElement = iframe.contentWindow.document.querySelector('footer');
-        if (headerElement) {
-          headerElement.style.display = 'none';
-        }
-        if (footerElement) {
-          footerElement.style.display = 'none';
-        }
-      };
-
-      iframe.addEventListener('load', removeHeaderFooter);
-
-      const closeButton = document.createElement('button');
-      closeButton.innerText = 'Fermer';
-      closeButton.addEventListener('click', () => {
-        document.body.removeChild(iframe);
-        document.body.removeChild(closeButton);
-      });
-      closeButton.style.position = 'fixed';
-      closeButton.style.top = `${top}px`;
-      closeButton.style.left = `${left + popupWidth}px`;
-
-      document.body.appendChild(iframe);
-      document.body.appendChild(closeButton);
-
-      window.addEventListener('message', (event) => {
-        if (event.data === 'authenticationSuccessful') {
-          document.body.removeChild(iframe);
-          document.body.removeChild(closeButton);
-        }
-      });
-    });
-  }
-}
 
 
-
-
-,
+mounted() {
+    if( localStorage.getItem('gecToken')){
+        this.token = localStorage.getItem('gecToken');
+    }
+    else {
+        this.token = 'null';
+    }
+ 
+},
 
     methods: {
 
@@ -335,6 +284,9 @@ button.edu-btn {
     display: block;
     color: grey !important;
     padding: 0 30px;
+}
+.color-login-btn{
+    color: black !important;
 }
 .my-custom-login-button {
     padding: 15px !important;

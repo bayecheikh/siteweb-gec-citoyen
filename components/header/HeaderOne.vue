@@ -68,7 +68,7 @@
                                 <ul class="header-action">
 
                                     <li class="header-btn">
-                                        <a class=" btn-medium my-custom-login-button" @click="onClickSeConnecter()">SE
+                                        <a class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
                                             CONNECTER</a>
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
@@ -104,12 +104,12 @@
                                             </span></a>
                                     </li>
                                     <li class="header-btn">
-                                        <div class="initials-circle">
+                                        <!-- <div class="initials-circle">
                                             <span class="initials" v-if="initiales" > {{ initiales}}</span>
                                             <span class="initials" v-if="!initiales" >XX</span>
                                             <span class="tooltip" v-if="userName">{{ userName }}<br><span  v-if="email">Email : {{ email }}</span></span>
 
-                                        </div>
+                                        </div> -->
 
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">

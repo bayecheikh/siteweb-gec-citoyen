@@ -4,9 +4,9 @@
             
             
             <div>
-                <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800" class="section-title custom-categories-section-title section-left aos-init aos-animate">
-                    <div class="custom-categories-send-btn-wrapper">
-                    <h2 class="title">Comment <span class="color-primary">déposer</span> un courrier ?</h2>
+                <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800" class="section-title custom-categories-section-title mt-5 section-left aos-init aos-animate">
+                    <div class="custom-categories-send-btn-wrapper mt-5">
+                    <h2 class="title mt-5">Comment <span class="color-primary">déposer</span> un courrier ?</h2>
                     <p>Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
        
     </div>
