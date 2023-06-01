@@ -25,7 +25,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p :class="'title_step pt-2 '">Trouvez l'organisme concerné</p>
+                  <p :class="'title_step pt-2 '">Trouver l'organisme concerné</p>
                </div>
                <div class="col-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
@@ -49,7 +49,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2">Saisissez vos coordonnées</p>
+                  <p class="title_step pt-2">Saisir vos coordonnées</p>
                </div>
                
                <div class="col-1">
@@ -105,7 +105,7 @@
                         </g>
                      </svg>
                   </div>
-                  <p class="title_step pt-2 ">Prévisualisez et soumettez</p>
+                  <p class="title_step pt-2 ">Prévisualiser et soumettre</p>
                </div>
                
                <!-- <button @click="$goToTab('ministeres')" :class="'nav-link '+(detailactive_step.id=='ministeres'?'active':'')" >Trouvez le ministère</button> -->
