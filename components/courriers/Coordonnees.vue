@@ -45,11 +45,11 @@
             <hr class='dotted mt-2 mb-5' />
             <div class="form-group col-6">
                 <label for="reg-name">Prénom*</label>
-                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre prénom" v-model="model.requerant.prenom"  readonly >
+                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre prénom" v-model="model.requerant.prenom" readonly>
             </div>
             <div class="form-group col-6">
                 <label for="reg-name">Nom*</label>
-                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre nom" v-model="model.requerant.nom"  readonly >
+                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre nom" v-model="model.requerant.nom" readonly>
             </div>
             <div class="form-group col-6 mb-4 mt-2">
                 <div class="form-group col-12 mb-0">
@@ -57,11 +57,11 @@
                 </div>
                 <div class="form-group col-12 border-input pt-3 pb-1 readonly">
                     <div class="form-check form-check-inline mr-5">
-                        <input class="form-check-input readonly" type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme" desabled >
+                        <input class="form-check-input readonly" type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme" >
                         <label class="form-check-label" for="inlineRadio1111">Homme</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input readonly" type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme" desabled >
+                        <input class="form-check-input readonly" type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
                         <label class="form-check-label" for="inlineRadio2222">Femme</label>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="form-group col-6 mb-5 mt-2">
                 <label for="reg-name">Téléphone*</label>
-                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.requerant.telephone" readonly >
+                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.requerant.telephone">
             </div>
             <div class="form-group col-6">
                 <label for="log-email">Email*</label>
@@ -77,7 +77,7 @@
             </div>
             <div class="form-group col-6">
                 <label for="log-email">Adresse*</label>
-                <input type="text" class="border-input readonly" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.requerant.adresse" readonly >
+                <input type="text" class="border-input readonly" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.requerant.adresse">
             </div>
             <!-- PERSONNNE PHYSIQUE -->
             
@@ -236,18 +236,23 @@ import { mapMutations, mapGetters } from 'vuex'
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
-        mounted: function() {  
+        mounted: async function() {  
           
             this.token = localStorage.getItem('gecToken')
-            if(localStorage.getItem('gecToken')){
-                const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
+            if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser')){
+                const user = await JSON.parse(localStorage.getItem('gecLoggedInUser'));
+                const fullname = await user['name']
+                const mots = await fullname.split(" ");
+                const prenom = await mots.slice(0, mots.length - 1).join(" ");
+                const nom = await mots[mots.length - 1];
 
-                this.model.requerant.prenom = user?.firstname
-                this.model.requerant.nom = user?.lastname
-                this.model.requerant.email = user?.email
-                this.model.requerant.telephone = user?.telephone
-                this.model.requerant.sexe = user?.sexe
-                this.model.requerant.adresse = user?.adresse
+
+                this.model.requerant.prenom = prenom
+                this.model.requerant.nom = nom
+                this.model.requerant.email = user['sub']
+                // this.model.requerant.telephone = user?.telephone
+                // this.model.requerant.sexe = user?.sexe
+                // this.model.requerant.adresse = user?.adresse
                 /* this.model.entreprise.nom_entreprise = user?.nom_entreprise
                 this.model.entreprise.numero_rca = user?.numero_rca
                 this.model.entreprise.numero_ninea = user?.numero_ninea
