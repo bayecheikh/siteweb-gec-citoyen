@@ -68,7 +68,7 @@
                                 <ul class="header-action">
 
                                     <li class="header-btn">
-                                        <a class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
+                                        <a  id="loginButton"  class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
                                             CONNECTER</a>
                                             <!-- <a class=" btn-medium my-custom-login-button" @click="onClickSeConnecter">SE
                                             CONNECTER</a> -->
@@ -136,6 +136,7 @@
 </template>
 
 <script>
+
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 export default {
     modules: ['@nuxtjs/axios'],
@@ -189,52 +190,67 @@ export default {
     },
     props: ['showHeaderTop'],
     mounted() {
-        this.token = localStorage.getItem('gecToken')
-        if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser') ){
-            const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-            if(user['name']) {
-                const userName = user['name'];
-                this.userName = userName
-          
-            }
-           if(user['sub']){
-            const email = user['sub'];
-            this.email = email
-           }
-           
-            let initiales = "";
+  if (process.client) {
+    const loginButton = document.getElementById('loginButton');
+    loginButton.addEventListener('click', (event) => {
+      event.preventDefault();
 
-            if(this.userName){
-                const words = this.userName.split(" ");
-                for (const word of words) {
-            initiales += word.charAt(0).toUpperCase();
+      const popupWidth = 500;
+      const popupHeight = 600;
+      const left = (window.innerWidth - popupWidth) / 2;
+      const top = (window.innerHeight - popupHeight) / 2;
 
-            }
-            }
-           this.initiales = initiales
+      const iframe = document.createElement('iframe');
+      iframe.src = loginButton.href;
+      iframe.style.zIndex = '99999';
+      iframe.style.width = `${popupWidth}px`;
+      iframe.style.height = `${popupHeight}px`;
+      iframe.style.position = 'fixed';
+      iframe.style.left = `${left}px`;
+      iframe.style.top = `${top}px`;
+      iframe.style.border = 'none';
 
-          
-           
-        
-            console.log("Initiales :", initiales);
-            
-         
+      const removeHeaderFooter = () => {
+        const headerElement = iframe.contentWindow.document.querySelector('header');
+        const footerElement = iframe.contentWindow.document.querySelector('footer');
+        if (headerElement) {
+          headerElement.style.display = 'none';
         }
-        var largeurEcran = window.innerWidth;
+        if (footerElement) {
+          footerElement.style.display = 'none';
+        }
+      };
+
+      iframe.addEventListener('load', removeHeaderFooter);
+
+      const closeButton = document.createElement('button');
+      closeButton.innerText = 'Fermer';
+      closeButton.addEventListener('click', () => {
+        document.body.removeChild(iframe);
+        document.body.removeChild(closeButton);
+      });
+      closeButton.style.position = 'fixed';
+      closeButton.style.top = `${top}px`;
+      closeButton.style.left = `${left + popupWidth}px`;
+
+      document.body.appendChild(iframe);
+      document.body.appendChild(closeButton);
+
+      window.addEventListener('message', (event) => {
+        if (event.data === 'authenticationSuccessful') {
+          document.body.removeChild(iframe);
+          document.body.removeChild(closeButton);
+        }
+      });
+    });
+  }
+}
 
 
 
-        // Afficher la largeur de l'écran dans la console
-        console.log("Largeur de l'écran : " + largeurEcran + " pixels");
-        window.addEventListener('scroll', () => {
-            let scrollPos = window.scrollY
-            if (scrollPos >= 200) {
-                this.isSticky = true
-            } else {
-                this.isSticky = false
-            }
-        })
-    },
+
+,
+
     methods: {
 
             async listenForUXPMessage() {

@@ -5,32 +5,29 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="banner-content">
-              <h3  class="title">
-                Plateforme
-                <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
-                Bénin </div>
-             </h3>
-             <!--   <h3 v-if="!banniere[0]?.title" class="title">
+              <h3 v-if="loading" class=" title loader-title mb-4"></h3>
+              <h3 v-if="loading" class="custom-subtitle loader-resume mb-4"></h3>
+              <div v-if="!loading" >
+             <h3 v-if="banniere.length === 0 || !banniere[0]?.title" class="title">
                 Plateforme
                 <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
                 Bénin </div>
               </h3>
-              <h3 v-if="banniere[0]?.title" class="title">
-               {{ banniere[0].title }}
-              </h3> -->
-              <p class="custom-subtitle">
+              <h3 v-if="banniere.length > 0 && banniere[0]?.title" class="title">
+    {{ firstWords }}
+  
+    <div>{{ lastWords }}</div>
+  </h3>
+           
+              <p v-if="banniere.length === 0 ||  !banniere[0]?.resume" class="custom-subtitle">
                 Plateforme digitale nationale pour le dépôt électronique et
                 sécurisé de courriers à destination de l'administration
                 béninoise.
               </p>
-              <!-- <p v-if="!banniere[0]?.resume" class="custom-subtitle">
-                Plateforme digitale nationale pour le dépôt électronique et
-                sécurisé de courriers à destination de l'administration
-                béninoise.
-              </p>
-              <p  v-if="banniere[0]?.resume" class="custom-subtitle">
+              <p  v-if="banniere.length > 0 && banniere[0]?.resume" class="custom-subtitle">
                 {{ banniere[0]?.resume }}
-              </p> -->
+              </p>
+            </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
                 <div class="input-group custom-input-group">
                   <!--<i class="icon-2"></i>-->
@@ -194,14 +191,42 @@ mounted: async function() {
     document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
     try {
             const response = await this.$axios.get("/contenus");
-            const filteredContenus = response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
-            const sortedContenus = filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.banniere = sortedContenus.slice(0, 1);
+            const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
+            const sortedContenus = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.banniere = await sortedContenus.slice(0, 1);
+            if(this.banniere[0]?.title){
+              const trimmedText = this.banniere[0]?.title?.trim();
+            
+const words = trimmedText.split(' ');
+
+if (words.length === 3) {
+  // Le texte contient exactement 3 mots
+  this.firstWords = words.join(' ');
+  this.lastWords = '';
+} else if (words.length > 3) {
+  // Le texte contient plus de 3 mots
+  this.firstWords = words.slice(0, 3).join(' ');
+  this.lastWords = words.slice(3).join(' ');
+} else {
+  // Le texte contient moins de 3 mots
+  this.firstWords = trimmedText;
+  this.lastWords = '';
+}
+
+              this.loading = false
+            }
+        
         } catch (error) {
+          this.loading = false
         console.error(error);
         return;
         }
-        console.log("Bannieres", this.banniere)
+        finally{
+          this.loading = false
+        }
+        
+        // Supprimer les espaces en début et fin de chaîne
+   
   },
   computed: {
     ...mapGetters({
@@ -217,9 +242,13 @@ mounted: async function() {
   },
   data() {
     return {
+      loading: true,
       courrier: "",
       windowHeight:0,
-      banniere: []
+      banniere: [],
+      firstWords : '',
+      lastWords : '',
+
     };
   },
  
@@ -258,6 +287,29 @@ mounted: async function() {
 </script>
 
 <style>
+
+.loader-title {
+  height: 100px;
+  background-color: #aae0c8; /* Couleur verte */
+  animation: loaderAnimation 1s ease-in-out infinite; /* Animation */
+}
+.loader-resume {
+  height: 120px;
+  background-color: #aae0c8; /* Couleur verte */
+  animation: loaderAnimation 1s ease-in-out infinite; /* Animation */
+}
+
+@keyframes loaderAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 .hero-style-1 .banner-thumbnail .shape-group li.shape-3.circle-shape {
   width: 41px;
   height: 41px;

@@ -19,6 +19,11 @@ export default {
     },
 
     mounted: async function () {
+        window.addEventListener('message', (event) => {
+    if (event.data === 'authenticationSuccessful') {
+      popupWindow.close();
+    }
+  });
      this.windowHeight = window.innerHeight;
      let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
         this.$store.dispatch('banner/getDetail', this.windowHeight)
@@ -32,7 +37,7 @@ export default {
             }
             try {
             const response = await this.$axios.post('users/code', {...this.model})
-          
+            window.postMessage('authenticationSuccessful', '*')
             console.log("TOKEN PNS", response)
   
             await localStorage.setItem('gecToken', response.data.id_token.id_token)
@@ -61,6 +66,7 @@ console.log("GEC LOGGED IN USER", gecLoggedInUser);
                 });
                 this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
                 this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
+        
         }catch (error) {
                 console.error(error);
                 console.log('Code error ++++++: ', error)

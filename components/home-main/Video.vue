@@ -37,15 +37,17 @@
         try {
             const response = await this.$axios.get("/contenus");
           
-            const filteredContenus = response.data.data.data.filter(contenu => contenu.title === "Vidéo");
+            const filteredContenus = await response.data.data.data.filter(contenu => contenu.title === "Vidéo");
            
-            const sortedVideos = filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.videos = sortedVideos.slice(0, 1);
-          
+            const sortedVideos = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.videos = await sortedVideos.slice(0, 1);
+          if (this.videos){
             this.video = this.videos[0]
+          }
+          
             this.items = [
                     {
-                        src: this.video?.link||"https://www.youtube.com/watch?v=HrNBaa59PtU"
+                        src: this.video?.link||""
                     }
                 ];
         } catch (error) {

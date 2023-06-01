@@ -158,7 +158,7 @@ RÉSULTAT POUR LE CODE DE SUIVI <span class="custom-code-font">{{ ispopupload }}
 
 </g>
 
-</svg> Votre courrier de réponse a été envoyé à l'adresse as*****@misp.bj </p>
+</svg> Votre courrier de réponse a été envoyé à l'adresse {{  this.transformedEmail }}</p>
     </div>
   </div>
 
@@ -249,10 +249,21 @@ export default {
            
             try {
             const response = await this.$axios.get("/courriers/"+this.ispopupload.toUpperCase()+"/status");
+            
             this.subject = response.data.data.data.objet
-            this.structure = response.data.data.data.destinataire.description
+            this.structure = response.data.data.data.destinataire?.description
             this.createdAt = response.data.data.data.dateDepot
             this.status = response.data.data.data.status
+            const exactEmail = await response.data.data.data.sender?.email
+            if (!exactEmail) {
+                this.transformedEmail = '';
+                return;
+            }
+
+            const [username, domain] = await exactEmail.split('@');
+            const transformedUsername = await username.substring(0, 2) + '*****';
+            this.transformedEmail = transformedUsername + '@' + domain;
+        
         }
         catch (error) {
             console.error(error);
