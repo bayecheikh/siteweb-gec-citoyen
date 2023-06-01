@@ -19,11 +19,7 @@ export default {
     },
 
     mounted: async function () {
-        window.addEventListener('message', (event) => {
-    if (event.data === 'authenticationSuccessful') {
-      popupWindow.close();
-    }
-  });
+     
     //  this.windowHeight = window.innerHeight;
      let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
         // this.$store.dispatch('banner/getDetail', this.windowHeight)
@@ -39,7 +35,7 @@ export default {
             const response = await this.$axios.post('users/code', {...this.model})
             console.log("NEW RESPONSE", response)
             
-            window.postMessage('authenticationSuccessful', '*')
+     
             await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
 
             console.log("TOKEN PNS RESPONSE", JSON.parse(localStorage.getItem('NEWRESPONSE')))
