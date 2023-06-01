@@ -29,9 +29,8 @@
               </p>
             </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
-                <div class="input-group custom-input-group">
-                  <!--<i class="icon-2"></i>-->
-
+                <!-- <div class="input-group custom-input-group">
+                 
                   <input
                     type="text"
                     name="code"
@@ -49,15 +48,16 @@
                   >
                     <i class="custom-track-btn-icon icon-4"></i>
                   </button>
-                </div>
-                <!--  <a class="edu-btn custom-banner-track-btn"  @click="onClickSuivreCourrier">Suivre mon courrier</a>-->
-
+                </div> -->
+              
                 <a
                   @click="deposerCourrier()"
                   class="edu-btn custom-banner-send-button"
                 >
                   DÉPOSER UN COURRIER
                 </a>
+                <a class="edu-btn custom-banner-track-btn"  @click="onClickSuivreCourrier">SUIVRE MON COURRIER</a>
+
               </div>
               <!--          <div class="d-flex banner-btn custom-main-banner-button flex-wrap">
    
@@ -159,9 +159,9 @@
         <img src="/images/about/h-1-shape-01.png" alt="Shape" />
       </div>
     </div>
-    <div class="main-wrapper bg-lighten05">
+    <!-- <div class="main-wrapper bg-lighten05">
       <HomeYogaInstructorFunFact />
-    </div>
+    </div> -->
     <Authentication v-if="isauthenticatingfrombutton" />
     <SuiviCourrier v-if="ispopupload" />
   </div>
@@ -182,13 +182,13 @@ export default {
 
 mounted: async function() {  
  
-    this.windowHeight = this.detailbanner;   
+    // this.windowHeight = this.detailbanner;   
 
-    console.log("assdff",this.windowHeight)    
-    this.windowHeight = this.detailbanner;   
+    // console.log("assdff",this.windowHeight)    
+    // this.windowHeight = this.detailbanner;   
 
-    const newHeight = this.windowHeight - 248;
-    document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
+    // const newHeight = this.windowHeight - 248;
+    // document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
     try {
             const response = await this.$axios.get("/contenus");
             const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
@@ -230,7 +230,7 @@ if (words.length === 3) {
   },
   computed: {
     ...mapGetters({
-      detailbanner: 'banner/detailbanner',
+      // detailbanner: 'banner/detailbanner',
       isloggedin: "authentication/isloggedin",
       ispopupload: "suivicourrier/ispopupload",
       isauthenticatingfrombutton: "authentication/isauthenticatingfrombutton",
@@ -244,7 +244,7 @@ if (words.length === 3) {
     return {
       loading: true,
       courrier: "",
-      windowHeight:0,
+      // windowHeight:0,
       banniere: [],
       firstWords : '',
       lastWords : '',
@@ -253,23 +253,21 @@ if (words.length === 3) {
   },
  
   components: {
-    HomeYogaInstructorFunFact: () =>
-      import("@/components/home-main/FunFact.vue"),
+    // HomeYogaInstructorFunFact: () => import("@/components/home-main/FunFact.vue"),
     Authentication: () => import("@/components/header/Authentication.vue"),
     MouseMove: () => import("@/components/animation/MouseMove"),
-    SuiviCourrier: () =>
-      import("@/components/home-main/SuiviCourrier.vue"),
+    SuiviCourrier: () => import("@/components/home-main/SuiviCourrier.vue"),
   },
   methods: {
    
     async onClickSuivreCourrier() {
-      let code = document.getElementById("code").value;
-      if (!code) {
-        return;
-      }
-      // Utiliser la valeur de l'input comme vous le souhaitez
-      console.log("La valeur de l'input est : " + code);
-      await this.$store.dispatch("suivicourrier/getDetail", code);
+      // let code = document.getElementById("code")?.value;
+      // if (!code) {
+      //   return;
+      // }
+      // // Utiliser la valeur de l'input comme vous le souhaitez
+      // console.log("La valeur de l'input est : " + code);
+      await this.$store.dispatch("suivicourrier/getDetail", true);
     },
     async deposerCourrier() {
       console.log("TOKEFKDFG", localStorage.getItem('gecToken') )
@@ -361,8 +359,17 @@ if (words.length === 3) {
 .custom-banner-send-button {
   cursor: pointer;
   background: #008064 !important;
-  background-color: #008064 !;
+  background-color: #008064 ;
   font-weight: 700 !important;
+}
+.custom-banner-track-btn {
+  cursor: pointer;
+  background: #0a3764 !important;
+  background-color: #0a3764 !important;
+  font-weight: 700 !important;
+}
+.custom-banner-track-btn::after {
+background: linear-gradient(-90deg, #184878 0%, #795eb8 100%) !important; 
 }
 .custom-banner-send-button-2 {
   cursor: pointer;
@@ -384,9 +391,9 @@ if (words.length === 3) {
   }
 }
 
-.fix-elements {
+/* .fix-elements {
   height: 100vh;
-}
+} */
 
 .custom-banner-title-color {
   color: #008064;
@@ -412,19 +419,7 @@ if (words.length === 3) {
   gap: 10px; /* Ajoute de l'espace entre les éléments */
   align-items: center; /* Centre les éléments verticalement */
 }
-.custom-main-banner-track-btn {
-  border-radius: 5px;
-  border-color: #0a3764 !important;
-  background-color:#0a3764 !important;
-  background: #0a3764 !important;
-  cursor: pointer;
-}
-.custom-main-banner-track-btn:hover {
-  background: #154f88 !important;
-}
-.custom-main-banner-track-btn::after {
-  background: #154f88 !important;
-}
+
 @media (max-width: 992px) {
   /* Remplacer la valeur 768px par la largeur d'écran souhaitée */
   .custom-main-banner-btn {
@@ -433,40 +428,21 @@ if (words.length === 3) {
     gap: 10px; /* Ajoute de l'espace entre les éléments */
   }
 }
-.custom-input-group {
-  width: 300px;
-  height: 60px;
-}
 
-.custom-input-group input[type="email"] {
-  height: 60px;
-  padding: 0 10px;
-}
-
-.custom-input-group button {
-  height: 60px;
-  width: 60px;
-}
 .custom-track-btn-icon {
   color: white;
 }
-.custom-form-control {
-  text-transform: uppercase;
-}
-.custom-form-control::placeholder {
-  text-transform: none;
-  color: #0a3764 !important;
-}
 
-@media (min-width: 992px) {
+
+/*@media (min-width: 992px) {
   .custom-hero-banner{
     min-height: 0px !important; 
     max-height: 100vh; 
 }
 .custom-image-banner {
-  height: 479px ; /* 248px = hauteur header + hauteur barre statistiques*/
+  height: 479px ;
 }
-}
+}*/
 @media (max-width: 1200px) {
   .custom-banner-send-button{
     font-size: 12px !important;

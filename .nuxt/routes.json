@@ -2,25 +2,48 @@
   {
     "name": "addcourrier",
     "path": "/addcourrier",
+<<<<<<< HEAD
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\addcourrier.vue",
     "chunkName": "pages/addcourrier"
+=======
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\addcourrier.vue",
+    "chunkName": "pages/addcourrier"
+  },
+  {
+    "name": "compte",
+    "path": "/compte",
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\compte.vue",
+    "chunkName": "pages/compte"
+>>>>>>> origin/yacine-v39
   },
   {
     "name": "contact-us",
     "path": "/contact-us",
+<<<<<<< HEAD
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-us.vue",
+=======
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\contact-us.vue",
+>>>>>>> origin/yacine-v39
     "chunkName": "pages/contact-us"
   },
   {
     "name": "terms-condition",
     "path": "/terms-condition",
+<<<<<<< HEAD
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",
+=======
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\terms-condition.vue",
+>>>>>>> origin/yacine-v39
     "chunkName": "pages/terms-condition"
   },
   {
     "name": "index",
     "path": "/",
+<<<<<<< HEAD
     "component": "C:\\\\xampp\\\\htdocs\\\\BENIN\\\\siteweb-gec-citoyen\\\\pages\\\\index.vue",
+=======
+    "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\index.vue",
+>>>>>>> origin/yacine-v39
     "chunkName": "pages/index"
   }
 ]

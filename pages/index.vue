@@ -24,9 +24,9 @@ export default {
       popupWindow.close();
     }
   });
-     this.windowHeight = window.innerHeight;
+    //  this.windowHeight = window.innerHeight;
      let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
-        this.$store.dispatch('banner/getDetail', this.windowHeight)
+        // this.$store.dispatch('banner/getDetail', this.windowHeight)
         console.log("CODE+++++++++++++++", this.$route.query)
         if (this.$route.query.code) {
             this.model =  {
@@ -95,7 +95,7 @@ console.log("GEC LOGGED IN USER", gecLoggedInUser);
     },
     data() {
         return {
-            windowHeight: ''
+            // windowHeight: ''
         }
     },
     methods: {

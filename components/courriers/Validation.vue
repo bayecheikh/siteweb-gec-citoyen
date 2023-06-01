@@ -149,7 +149,7 @@
             computed: mapGetters({
                 detailutilisateur: 'coordonnees/detailutilisateur',
                 detailministere: 'ministeres/detailministere',
-                detailampliation: 'ampliations/detailampliation', 
+             
                 detailcontenu: 'contenus/detailcontenu',
                 ispopupload: "courrierenvoye/ispopupload",
             }),
@@ -162,7 +162,7 @@
                 async submitValidation(){
                   
                     this.load=true
-                    console.log('Données ampli ++++++: ', this.detailampliation)
+                 
                     console.log('Données formulaire ++++++: ', {...this.detailutilisateur,...this.detailministere,...this.detailcontenu})
                     this.$gecApi.$post('/courriers',{...this.detailutilisateur,...this.detailministere,...this.detailcontenu})
                     .then(async (response) => {

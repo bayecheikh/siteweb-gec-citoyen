@@ -1,10 +1,10 @@
 <template>
+
     <div class="custom-bloc-padding">
         <div class="row pb-0 bloc-recherche">
             <div class="form-group col-12 mb-4">
-                <div class="custom-lable-title">MOTS CLÉS</div>
-                <input class="border-radio my-4" type="text" v-model="recherche" name="reg-name" id="reg-name"
-                    placeholder="Rechercher">
+                <div class="custom-lable-title">MOTS-CLÉS</div>
+                <input class="border-radio my-4" type="text" v-model="recherche" name="reg-name" id="reg-name" placeholder="Rechercher">
             </div>
             <!-- <hr class='dotted' />
             <div class="form-group col-12 my-4">
@@ -28,29 +28,28 @@
                         <label for="reg-name" class="custom-lable-title">LISTE DES ORGANISMES</label>
                     </div>
                 </div>
-
+                
             </div>
             <div class="pt-4 pb-4 border-grey bg-grey bloc-organisme">
                 <div class="container">
                     <div class="row custom-row-equal ">
-                        <div class="col-lg-4 col-md-4 col-sm-12 custom-col-equal" data-aos-delay="100" data-aos="fade-up"
-                            data-aos-duration="800" v-for="(organisme, index) in filterOrganismes()" :key="index">
-                            <div class="custom-bloc-ministere border-grey categorie-grid categorie-style-3 d-flex align-items-center"
-                                :class="{ 'selected': organismesSelectionnes.includes(organisme) && organisme !== firstOrganismeSelected, 'first-selected': organisme === firstOrganismeSelected }"
-                                @click="toggleSelection(organisme)">
+                        <div 
+                            class="col-lg-4 col-md-4 col-sm-12 custom-col-equal" 
+                            data-aos-delay="100" 
+                            data-aos="fade-up" 
+                            data-aos-duration="800" 
+                        
+                            v-for="(organisme, index) in filterOrganismes()" :key="index"
+                        >
+                            <div class="custom-bloc-ministere border-grey categorie-grid categorie-style-3 d-flex align-items-center"  @click="submitMinistere(organisme)">
                                 <div class="icon embleme">
-                                    <img src="/images/logo/embleme.png" alt="Embleme">
-
+                                    <img class="" src="/images/logo/embleme.png" alt="Dark Logo" v-if="$colorMode.value === 'light'">
+                                    <img class="" src="/images/logo/embleme.png" alt="Light Logo" v-if="$colorMode.value === 'dark'">
                                 </div>
                                 <div class="content ministere">
                                     <h5 class="custom-title-ministere">{{ organisme.description }}</h5>
                                     <img class="" src="/images/logo/vjr.png" alt="Dark Logo">
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" :value="organisme"
-                                        v-model="organismesSelectionnes">
-                                </div>
-                                <div class="badge">{{ organisme === firstOrganismeSelected ? '*' : '+' }}</div>
                             </div>
                         </div>
                     </div>
@@ -60,15 +59,14 @@
         </div>
         <div class="row d-flex justify-content-between">
             <div class="form-group col-3">
-                <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i>
-                    Précedent</button>
+            <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précedent</button>
             </div>
             <div class="form-group col-3">
-                <button @click="submitOrganismesAndGoToTab('contenu')" type="button" class="edu-btn btn-medium">Suivant <i
-                        class="icon-east"></i></button>
+                <button @click="$goToTab('contenu')" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
@@ -94,217 +92,119 @@ export default {
     },
     data() {
         return {
-            recherche: '',
+            recherche:'',
             organismes: [],
-            organismesSelectionnes: [],
-            firstOrganismeSelected: null
         }
     },
     methods: {
-        async submitOrganismesAndGoToTab(tab) {
-            if (this.organismesSelectionnes.length > 0) {
-                await this.submitOrganismes();
-
-            }
-        },
-        async submitOrganismes() {
-            if (this.organismesSelectionnes.length > 0) {
-                const firstOrganismeSelected = this.organismesSelectionnes[0];
-
-                await this.$store.dispatch('ministeres/getDetail', {
-                    title_organisme: firstOrganismeSelected.description,
-                    structure: firstOrganismeSelected.id
-                });
-
-                if (this.organismesSelectionnes.length > 1) {
-                    const ampliations = this.organismesSelectionnes
-                        .filter(organisme => organisme !== firstOrganismeSelected)
-                        .map(organisme => ({ title_organisme: organisme.description, structure: organisme.id }));
-
-                    this.$store.dispatch('ampliations/getDetail', ampliations);
-                }
-
-                this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' });
-            }
-        },
-
-        toggleSelection(organisme) {
-            const index = this.organismesSelectionnes.indexOf(organisme);
-
-            if (index !== -1) {
-                // L'organisme est déjà sélectionné, le supprimer de la liste
-                this.organismesSelectionnes.splice(index, 1);
-
-                if (organisme === this.firstOrganismeSelected) {
-                    // Si le premier organisme est désélectionné, mettre à jour le premier organisme sélectionné
-                    this.firstOrganismeSelected = this.organismesSelectionnes.length > 0 ? this.organismesSelectionnes[0] : null;
-                }
-            } else {
-                // Ajouter l'organisme à la liste des sélections
-                this.organismesSelectionnes.push(organisme);
-
-                if (this.organismesSelectionnes.length === 1) {
-                    // Si c'est le premier organisme sélectionné, mettre à jour le premier organisme sélectionné
-                    this.firstOrganismeSelected = organisme;
-                }
-            }
-        },
-
-
-
         filterOrganismes() {
             if (!this.recherche) {
-                return this.organismes;
+            return this.organismes;
             }
             const search = this.recherche.toLowerCase();
             return this.organismes.filter(organisme => {
-                return organisme.description.toLowerCase().includes(search);
+            return organisme.description.toLowerCase().includes(search);
             });
         },
-        // submitMinistere(item){
-        //     this.load=true
-        //     console.log('Ministère ++++++: ', item)
-        //     this.$store.dispatch('ministeres/getDetail',{title_organisme:item.description,structure:item.id})
-        //     this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
-        // }
+        submitMinistere(item){
+            this.load=true
+            console.log('Ministère ++++++: ', item)
+            this.$store.dispatch('ministeres/getDetail',{title_organisme:item.description,structure:item.id})
+            this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
+        }
     },
 }
 </script>
 <style scoped>
-.custom-bloc-ministere.selected {
-    border: 2px solid green;
+.custom-title-ministere{
+font-size: 8px !important;
+text-transform: uppercase;
 }
-
-.custom-bloc-ministere.first-selected {
-    border: 2px solid red;
+.embleme{
+width: 34%;
 }
-
-
-.badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    border-radius: 50%;
+.ministere{
+width: 100%;
+padding: 10px;
 }
-
-.first-selected .badge {
-    color: red;
+.bloc-organisme{
+padding-left: 0px !important;
+padding-right: 0px !important;
 }
-
-.selected .badge {
-    color: green;
-}
-
-
-.custom-title-ministere {
-    font-size: 8px !important;
-    text-transform: uppercase;
-}
-
-.embleme {
-    width: 34%;
-}
-
-.ministere {
-    width: 100%;
-    padding: 10px;
-}
-
-.bloc-organisme {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-}
-
 .custom-bloc-ministere {
-    background-color: #ffffff;
-    background-color: var(--color-white);
-    padding: 0px 20px 0px !important;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
-    min-height: 128px !important;
-    cursor: pointer;
+background-color: #ffffff;
+background-color: var(--color-white);
+padding: 0px 20px 0px !important;
+box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+min-height: 128px !important;
+cursor: pointer;
 }
-
+.custom-bloc-ministere:hover {
+border: solid 2px green !important;
+}
 .custom-textarea {
-    padding: 20px 25px;
-    border: solid 1px #cecdcc;
+padding: 20px 25px;
+border: solid 1px #cecdcc ;
 }
 
-.custom-border-grey {
-    border: solid 2px #e8ecee;
-    border-bottom: 0px;
-    border-radius: 5px 5px 0px 0px;
+.custom-border-grey{
+border: solid 2px #e8ecee;
+border-bottom: 0px;
+border-radius: 5px 5px 0px 0px;
 }
-
 .border-radio {
-    border: solid 1px #cecdcc !important;
-    padding: 10px;
+border: solid 1px #cecdcc  !important;
+padding: 10px;
 }
-
-.border-input {
-    border: solid 1px #cecdcc;
-    border-radius: 5px;
+.border-input{
+border: solid 1px #cecdcc ;
+border-radius: 5px;
 }
-
 .bg-grey {
-    background: #f7f5f2;
+background: #f7f5f2;
+}
+.bloc-recherche > * {
+padding-right: 0px !important;
+padding-left: 0px !important;
+}
+.custom-row-equal{
+overflow: hidden !important; 
 }
 
-.bloc-recherche>* {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+.custom-col-equal{
+margin-bottom: -99999px !important;
+padding-bottom: 99999px !important;
 }
-
-.custom-row-equal {
-    overflow: hidden !important;
-}
-
-.custom-col-equal {
-    margin-bottom: -99999px !important;
-    padding-bottom: 99999px !important;
-}
-
 .dotted {
-    border: 4px dotted #cecdcc;
-    border-style: none none dotted;
-    color: #fff;
-    background-color: #fff;
+border: 4px dotted #cecdcc ; 
+border-style: none none dotted; 
+color: #fff; 
+background-color: #fff; 
 }
-
-.custom-input {
-    border: 1px solid #cecdcc !important;
-    height: 45px !important;
+.custom-input{
+border: 1px solid #cecdcc  !important;
+height: 45px !important;
 }
-
 .custom-select {
-    height: 45px !important;
-    border: solid 1px #cecdcc !important;
-    background-color: none !important;
+height: 45px !important;
+border: solid 1px #cecdcc !important;
+background-color: none !important;
 }
-
 .form-group label {
-    color: #181818c2 !important;
-    margin-bottom: 8px;
+color: #181818c2 !important;
+margin-bottom: 8px;
 }
-
 .custom-lable-title {
-    color: #0a3764 !important;
-    font-size: 14px;
-    font-weight: 500;
+color: #0a3764 !important;
+font-size: 14px;
+font-weight: 500;
 }
-
 .custom-bloc-padding {
-    padding: 30px;
+padding: 30px;
 }
-
 .border-grey {
-    border: solid 2px #e8ecee;
-    padding: 25px;
-    margin-bottom: 10px;
-}</style>
+border: solid 2px #e8ecee;
+padding: 25px;
+margin-bottom: 10px;
+}
+</style>
