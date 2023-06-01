@@ -46,9 +46,9 @@ export default {
             window.location.href = "https://siteweb-gec-citoyen.vercel.app/"
             await localStorage.setItem('gecToken', response.data.id_token.id_token)
             // await localStorage.setItem('gecToken', response.data.id_token.id_token)
-                await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
+                // await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
 
-                // await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt({...response.data.id_token.id_token,id:response.data.id_token._id})))
+                await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt({...response.data.id_token.id_token,_id:response.data.data.doc._id})))
                 await localStorage.setItem('gecIsAuthenticated', true)
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
 console.log("GEC LOGGED IN USER", gecLoggedInUser);
