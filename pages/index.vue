@@ -38,8 +38,11 @@ export default {
             try {
             const response = await this.$axios.post('users/code', {...this.model})
             console.log("NEW RESPONSE", response)
+            
             window.postMessage('authenticationSuccessful', '*')
-            console.log("TOKEN PNS RESPONSE", response)
+            await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
+
+            console.log("TOKEN PNS RESPONSE", JSON.parse(localStorage.getItem('NEWRESPONSE')))
             window.location.href = "https://siteweb-gec-citoyen.vercel.app/"
             await localStorage.setItem('gecToken', response.data.id_token.id_token)
             // await localStorage.setItem('gecToken', response.data.id_token.id_token)
