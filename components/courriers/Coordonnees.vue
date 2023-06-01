@@ -242,6 +242,7 @@ import { mapMutations, mapGetters } from 'vuex'
             if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser')){
                 const user = await JSON.parse(localStorage.getItem('gecLoggedInUser'));
                 const fullname = await user['name']
+                console.log("sdfdsd", fullname)
                 const mots = await fullname.split(" ");
                 const prenom = await mots.slice(0, mots.length - 1).join(" ");
                 const nom = await mots[mots.length - 1];

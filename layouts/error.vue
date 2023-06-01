@@ -20,7 +20,7 @@
                     <div class="content">
                         <h2 class="title">Erreur 404</h2>
                         <h4 class="subtitle">Cette page n'existe pas</h4>
-                        <n-link to="/" class="edu-btn"><i class="icon-west"></i>Retourner à la page d'accueil</n-link>
+                        <a href="/" class="edu-btn"><i class="icon-west"></i>Retourner à la page d'accueil</a>
                     </div>
                 </div>
             </div>

@@ -2,13 +2,13 @@
  
         <ul class="edublink-mobile-menu mainmenu">
         <li >
-            <n-link to="/">
+            <a href="/">
                 Accueil
-            </n-link>
+            </a>
           
-            <n-link to="/contact-us">
+            <a href="/contact-us">
                 Nous contacter
-            </n-link >
+            </a >
             <a v-if="!$getToken()" href="/" @click.prevent = onClickSeConnecter()>
                 Se connecter
             </a>

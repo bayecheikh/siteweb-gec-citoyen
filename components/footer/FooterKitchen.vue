@@ -7,7 +7,7 @@
                         <div class="edu-footer-widget">
                             <h4 class="widget-title">
                                 <div class="logo custom-footer-kitchen-logo">
-                                    <n-link to="/">
+                                    <a href="/">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="342.585" height="62.986" viewBox="0 0 342.585 62.986">
   <defs>
@@ -33,7 +33,7 @@
   </g>
 </svg>
 
-                                    </n-link>
+</a>
                                 </div>
                             </h4>
                             <div class="inner">
@@ -69,9 +69,9 @@
                             <h4 class="widget-title custom-color-white">Liens</h4>
                             <div class="inner">
                                 <ul class="footer-link">
-                                    <li><n-link to="/">Accueil</n-link></li>
+                                    <li><a href="/">Accueil</a></li>
                                    
-                                    <li><n-link to="/contact-us">Nous contacter</n-link></li>
+                                    <li><a href="/contact-us">Nous contacter</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -7,7 +7,7 @@
                     <div class="header-navbar">
                         <div class="header-brand">
                             <div class="logo">
-                                <n-link class="logo-light logo-svg-link" to="/">
+                                <a class="logo-light logo-svg-link" href="/">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="342.585" height="62.986" viewBox="0 0 342.585 62.986">
                                         <defs>
@@ -54,7 +54,7 @@
                                     </svg>
 
 
-                                </n-link>
+                                </a>
                             </div>
 
                         </div>

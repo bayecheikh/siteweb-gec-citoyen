@@ -4,9 +4,9 @@
         <div class="inner">
             <div class="header-top">
                 <div class="logo">
-                    <n-link to="/">
+                    <a href="/">
                        <h3>GEC CITOYEN</h3>
-                    </n-link>
+                    </a>
                     <h4 class="custom-mobile-menu-h4" v-if="prenomEtNom">{{ prenomEtNom }}</h4>
                     <p v-if="email">Email : {{ email }}</p>
 
