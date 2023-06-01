@@ -43,18 +43,18 @@ export default {
             
             await localStorage.setItem('gecToken', response.data.id_token.id_token)
             // await localStorage.setItem('gecToken', response.data.id_token.id_token)
-                // await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
-                const firstgecLoggedInUser = await {
-  ...response.data.id_token.id_token,
-  _id: response.data.data.doc._id
-};
+             await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
+             await localStorage.setItem('gecIdUser', response.data.data.doc._id)
 
 
 
-await localStorage.setItem('gecLoggedInUser', JSON.stringify(firstgecLoggedInUser));
+
+
                 await localStorage.setItem('gecIsAuthenticated', true)
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
+                const gecIdUser = localStorage.getItem('gecIdUser');
 console.log("GEC LOGGED IN USER", gecLoggedInUser);
+console.log("GEC ID USER", gecIdUser);
                 if (isauthenticatingfrombutton) {
                     this.$router.push("/addcourrier");
                 }

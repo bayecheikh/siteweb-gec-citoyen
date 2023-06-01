@@ -241,6 +241,7 @@ import { mapMutations, mapGetters } from 'vuex'
             this.token = localStorage.getItem('gecToken')
             if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser')){
                 const user = await JSON.parse(localStorage.getItem('gecLoggedInUser'));
+                const _id = await localStorage.getItem('gecIdUser');
                 const fullname = await user['name']
                 console.log("sdfdsd", fullname)
                 const mots = await fullname.split(" ");
@@ -263,7 +264,7 @@ import { mapMutations, mapGetters } from 'vuex'
                 this.model.entreprise.complement_adresse_entreprise = user?.complement_adresse_entreprise
                 this.model.entreprise.code_postal_entreprise = user?.code_postal_entreprise
                 this.model.entreprise.ville_entreprise = user?.ville_entreprise */
-                this.model.sender = user?._id
+                this.model.sender = _id
             }       
         },
         computed: mapGetters({
