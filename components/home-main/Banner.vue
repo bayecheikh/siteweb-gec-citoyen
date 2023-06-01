@@ -8,23 +8,23 @@
               <h3 v-if="loading" class=" title mb-5 loader-title"></h3>
               <h3 v-if="loading" class="custom-subtitle loader-resume mb-5"></h3>
               <div v-if="!loading" >
-             <h3 v-if="banniere.length === 0 || !banniere[0]?.title" class=" mb-5 title">
+             <h3 v-if="banniere?.length === 0 || !banniere[0]?.title" class=" mb-5 title">
                 Plateforme
                 <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
                 Bénin </div>
               </h3>
-              <h3 v-if="banniere.length > 0 && banniere[0]?.title" class="title">
+              <h3 v-if="banniere?.length > 0 && banniere[0]?.title" class="title">
     {{ firstWords }}
   
     <div>{{ lastWords }}</div>
   </h3>
            
-              <p v-if="banniere.length === 0 ||  !banniere[0]?.resume" class="custom-subtitle mb-5 ">
+              <p v-if="banniere?.length === 0 ||  !banniere[0]?.resume" class="custom-subtitle mb-5 ">
                 Plateforme digitale nationale pour le dépôt électronique et
                 sécurisé de courriers à destination de l'administration
                 béninoise.
               </p>
-              <p  v-if="banniere.length > 0 && banniere[0]?.resume" class="custom-subtitle mb-5 ">
+              <p  v-if="banniere?.length > 0 && banniere[0]?.resume" class="custom-subtitle mb-5 ">
                 {{ banniere[0]?.resume }}
               </p>
             </div>
@@ -274,10 +274,7 @@ if (words.length === 3) {
      if (localStorage.getItem('gecToken')) {
         this.$router.push("/addcourrier");
       } else {
-        this.$store.dispatch(
-          "authentication/getDetailIsAuthenticatingFromButton",
-          true
-        );
+        window.location.href = "https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true";
       }
     },
   },
@@ -391,9 +388,7 @@ background: linear-gradient(-90deg, #184878 0%, #795eb8 100%) !important;
   }
 }
 
-/* .fix-elements {
-  height: 100vh;
-} */
+
 
 .custom-banner-title-color {
   color: #008064;
@@ -421,7 +416,7 @@ background: linear-gradient(-90deg, #184878 0%, #795eb8 100%) !important;
 }
 
 @media (max-width: 992px) {
-  /* Remplacer la valeur 768px par la largeur d'écran souhaitée */
+
   .custom-main-banner-btn {
     justify-content: center; /* Centre les éléments horizontalement */
     flex-wrap: wrap; /* Permet aux éléments de s'enrouler sur plusieurs lignes si nécessaire */
@@ -434,15 +429,7 @@ background: linear-gradient(-90deg, #184878 0%, #795eb8 100%) !important;
 }
 
 
-/*@media (min-width: 992px) {
-  .custom-hero-banner{
-    min-height: 0px !important; 
-    max-height: 100vh; 
-}
-.custom-image-banner {
-  height: 479px ;
-}
-}*/
+
 @media (max-width: 1200px) {
   .custom-banner-send-button{
     font-size: 12px !important;
