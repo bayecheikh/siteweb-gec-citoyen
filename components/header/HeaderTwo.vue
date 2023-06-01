@@ -85,6 +85,8 @@
                         <div v-if="this.token">
                             <div class="header-right">
                                 <ul class="header-action">
+                                    <li class="header-btn"><a href="https://courrier-gec-citoyen.vercel.app/dashboard">Mon compte</a>
+    </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
                                                 v-if="!isDeconnecting">SE DÉCONNECTER</span><span v-if="isDeconnecting"><svg
@@ -313,7 +315,11 @@ button.edu-btn {
     font-family: var(--font-secondary);
 
 }
-
+.header-action .header-btn a {
+    display: block;
+    color: grey !important;
+    padding: 0 30px;
+}
 .my-custom-login-button {
     padding: 15px !important;
     border-radius: 3px !important;
