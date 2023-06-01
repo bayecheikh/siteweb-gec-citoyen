@@ -62,7 +62,7 @@ console.log("GEC LOGGED IN USER", gecLoggedInUser);
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
                 this.$store.dispatch("toast/getMessage", {
                     type: "success",
-                    text: "Authentification réussie !",
+                    text: "Connexion réussie !",
                 }); 
 
                 this.$store.dispatch("coordonnees/getDetail", {

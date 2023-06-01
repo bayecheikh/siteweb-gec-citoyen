@@ -70,7 +70,7 @@ export default {
                     this.isCharging = false
                     this.$store.dispatch("toast/getMessage", {
                     type: "success",
-                    text: "Authentification réussie !",
+                    text: "Connexion réussie !",
                     });
                     this.onClickCloseChooseMode();
                     this.$store.dispatch("coordonnees/getDetail", {
@@ -208,7 +208,7 @@ export default {
                     
                     this.$store.dispatch("toast/getMessage", {
                     type: "success",
-                    text: "Authentification réussie !",
+                    text: "Connexion réussie !",
                     });
                     this.onClickCloseChooseMode();
                     this.$store.dispatch("coordonnees/getDetail", {
@@ -260,7 +260,7 @@ export default {
                     this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
                     this.$store.dispatch("toast/getMessage", {
                     type: "success",
-                    text: "Authentification réussie !",
+                    text: "Connexion réussie !",
                     });
                     this.onClickCloseChooseMode();
                     this.$store.dispatch("coordonnees/getDetail", {
