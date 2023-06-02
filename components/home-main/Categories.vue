@@ -176,7 +176,7 @@ export default {
             await this.$store.dispatch('suivicourrier/getDetail', true)
         },
         async deposerCourrier() {
-            console.log("TOKEFKDFG", localStorage.getItem('gecToken') )
+        
             if (localStorage.getItem('gecToken')) {
                 this.$router.push("/addcourrier");
             } else {

@@ -26,7 +26,7 @@
 import { mapGetters } from 'vuex'
     export default {
         mounted() {
-        this.token = localStorage.getItem('gecToken')
+        this.token = localStorage?.getItem('gecToken')
         if(localStorage.getItem('gecToken')){
             const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
             const prenom = user['firstname'];

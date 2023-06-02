@@ -162,7 +162,7 @@
     <!-- <div class="main-wrapper bg-lighten05">
       <HomeYogaInstructorFunFact />
     </div> -->
-    <Authentication v-if="isauthenticatingfrombutton" />
+
     <SuiviCourrier v-if="ispopupload" />
   </div>
 </template>
@@ -182,13 +182,7 @@ export default {
 
 mounted: async function() {  
  
-    // this.windowHeight = this.detailbanner;   
-
-    // console.log("assdff",this.windowHeight)    
-    // this.windowHeight = this.detailbanner;   
-
-    // const newHeight = this.windowHeight - 248;
-    // document.querySelector('.custom-image-banner').style.height = `${newHeight}px`;
+  
     try {
             const response = await this.$axios.get("/contenus");
             const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
@@ -244,7 +238,7 @@ if (words.length === 3) {
     return {
       loading: true,
       courrier: "",
-      // windowHeight:0,
+
       banniere: [],
       firstWords : '',
       lastWords : '',
@@ -254,23 +248,17 @@ if (words.length === 3) {
  
   components: {
     // HomeYogaInstructorFunFact: () => import("@/components/home-main/FunFact.vue"),
-    Authentication: () => import("@/components/header/Authentication.vue"),
+
     MouseMove: () => import("@/components/animation/MouseMove"),
     SuiviCourrier: () => import("@/components/home-main/SuiviCourrier.vue"),
   },
   methods: {
    
     async onClickSuivreCourrier() {
-      // let code = document.getElementById("code")?.value;
-      // if (!code) {
-      //   return;
-      // }
-      // // Utiliser la valeur de l'input comme vous le souhaitez
-      // console.log("La valeur de l'input est : " + code);
+     
       await this.$store.dispatch("suivicourrier/getDetail", true);
     },
     async deposerCourrier() {
-      console.log("TOKEFKDFG", localStorage.getItem('gecToken') )
      if (localStorage.getItem('gecToken')) {
         this.$router.push("/addcourrier");
       } else {

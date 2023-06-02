@@ -38,7 +38,6 @@ import { mapMutations, mapGetters } from 'vuex'
         })
     },
     components: {
-        Authentication: () => import("@/components/header/Authentication.vue"),
     },
     methods:{
        async  onClickSeConnecter() {

@@ -69,7 +69,7 @@ export default {
         },
         { 
             src: "~/plugins/aos", 
-            ssr: false 
+          ssr: false 
         },
         { src: '@/plugins/vue-html2pdf', mode: 'client' }
     ],

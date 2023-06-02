@@ -63,7 +63,7 @@
                                 <Navigation />
                             </nav>
                         </div>
-                        <div v-if="!this.token">
+                        <div v-show="!this.token">
                             <div class="header-right">
                                 <ul class="header-action">
 
@@ -80,7 +80,7 @@
                             </div>
                         </div>
 
-                        <div v-if="this.token">
+                        <div v-show="this.token">
                             <div class="header-right">
                                 <ul class="header-action">
                                     <li class="header-btn"><a href="https://courrier-gec-citoyen.vercel.app/dashboard">Mon compte</a>
@@ -129,7 +129,7 @@
 
             <OffCanvasMobileMenuTwo />
         </header>
-        <Authentication v-if="isauthenticating" />
+     
     </div>
 </template>
 
@@ -150,7 +150,7 @@ export default {
 
        
         Navigation: () => import("@/components/header/Navigation"),
-        Authentication: () => import("@/components/header/Authentication.vue"),
+
 
 
 
@@ -187,37 +187,11 @@ export default {
     props: ['showHeaderTop'],
     mounted() {
         this.token = localStorage.getItem('gecToken')
-        if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser') ){
-            const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-            if(user['name']) {
-                const userName = user['name'];
-                this.userName = userName
-          
-            }
-           if(user['sub']){
-            const email = user['sub'];
-            this.email = email
-           }
-           
-            let initiales = "";
-
-            if(this.userName){
-                const words = this.userName.split(" ");
-                for (const word of words) {
-            initiales += word.charAt(0).toUpperCase();
-
-            }
-            }
-           this.initiales = initiales
-
-          
-           
-        
-            console.log("Initiales :", initiales);
+     
             
          
-        }
-        var largeurEcran = window.innerWidth;
+        
+        var largeurEcran = window?.innerWidth;
 
 
 

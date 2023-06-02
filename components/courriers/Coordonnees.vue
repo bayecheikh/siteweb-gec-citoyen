@@ -238,7 +238,7 @@ import { mapMutations, mapGetters } from 'vuex'
         },
         mounted: async function() {  
           
-            this.token = localStorage.getItem('gecToken')
+            this.token = localStorage?.getItem('gecToken')
             if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser')){
                 const user = await JSON.parse(localStorage.getItem('gecLoggedInUser'));
                 const _id = await localStorage.getItem('gecIdUser');

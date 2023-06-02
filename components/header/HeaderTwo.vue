@@ -63,7 +63,7 @@
                                 <Navigation />
                             </nav>
                         </div>
-                        <div v-if="this.token=='null'">
+                        <div v-show="!this.token">
                             <div class="header-right">
                                 <ul class="header-action">
 
@@ -80,7 +80,7 @@
                             </div>
                         </div>
 
-                        <div v-if="this.token && this.token!='null'">
+                        <div v-show="this.token">
                             <div class="header-right">
                                 <ul class="header-action">
                                     <li class="header-btn"><a href="https://courrier-gec-citoyen.vercel.app/dashboard">Mon compte</a>
@@ -129,7 +129,7 @@
 
             <OffCanvasMobileMenuTwo />
         </header>
-        <Authentication v-if="isauthenticating" />
+  
     </div>
 </template>
 
@@ -153,7 +153,7 @@ export default {
         SectionTitle: () => import('@/components/common/SectionTitle'),
 
         Navigation: () => import("@/components/header/Navigation"),
-        Authentication: () => import("@/components/header/Authentication.vue"),
+  
 
 
 
@@ -191,47 +191,15 @@ export default {
 
 
 mounted() {
-    if( localStorage.getItem('gecToken')){
-        this.token = localStorage.getItem('gecToken');
-    }
-    else {
-        this.token = 'null';
-    }
- 
+    this.token = localStorage.getItem('gecToken')
 },
 
     methods: {
 
-            async listenForUXPMessage() {
-                try {
-                    const response = await this.$axios.get('/api/portal/event/uxp/rest', {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Application-Id': 'YOUR_APPLICATION_ID',
-                        'Token': 'YOUR_UXP_TOKEN'
-                    },
-                    data: {
-                        "type": "uxp-rest-listen",
-                        "responseToStage": "YOUR_RESPONSE_STAGE_ID",
-                        "payloadMapping": {
-                        "data.received": {
-                            "pointer": "/data"
-                        }
-                        },
-                        "transitions": {
-                            "type": "single",
-                            "nextStage": "DONE"
-                        }
-                    }
-                    });
-                    // On traite la réponse de la requête UXP ici
-                } catch (error) {
-                    console.log("Authentication Error !!!", error)
-                }
-            },
+       
 
         onClickSeConnecter() {
-            //this.listenForUXPMessage()
+          
             this.$store.dispatch('authentication/getDetail', true)
         },
         async onClickSeDeconnecter() {
