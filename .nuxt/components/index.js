@@ -7,10 +7,11 @@ export { default as CourriersForm } from '../..\\components\\courriers\\Form.vue
 export { default as CourriersMinisteres } from '../..\\components\\courriers\\Ministeres.vue'
 export { default as CourriersPrevisualisation } from '../..\\components\\courriers\\Previsualisation.vue'
 export { default as CourriersValidation } from '../..\\components\\courriers\\Validation.vue'
-export { default as CommonBreadCrumbTwo } from '../..\\components\\common\\BreadCrumbTwo.vue'
-export { default as CommonSectionTitle } from '../..\\components\\common\\SectionTitle.vue'
 export { default as FooterKitchen } from '../..\\components\\footer\\FooterKitchen.vue'
 export { default as FooterScrollToTop } from '../..\\components\\footer\\ScrollToTop.vue'
+export { default as CommonBreadCrumbTwo } from '../..\\components\\common\\BreadCrumbTwo.vue'
+export { default as CommonSectionTitle } from '../..\\components\\common\\SectionTitle.vue'
+export { default as HomeDistantLearningCourrierEnvoye } from '../..\\components\\home-distant-learning\\CourrierEnvoye.vue'
 export { default as HeaderOne } from '../..\\components\\header\\HeaderOne.vue'
 export { default as HeaderTwo } from '../..\\components\\header\\HeaderTwo.vue'
 export { default as HeaderMobileMenu } from '../..\\components\\header\\MobileMenu.vue'
@@ -23,7 +24,6 @@ export { default as HomeMainFAQ } from '../..\\components\\home-main\\FAQ.vue'
 export { default as HomeMainFunFact } from '../..\\components\\home-main\\FunFact.vue'
 export { default as HomeMainSuiviCourrier } from '../..\\components\\home-main\\SuiviCourrier.vue'
 export { default as HomeMainVideo } from '../..\\components\\home-main\\Video.vue'
-export { default as HomeDistantLearningCourrierEnvoye } from '../..\\components\\home-distant-learning\\CourrierEnvoye.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

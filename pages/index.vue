@@ -20,9 +20,7 @@ export default {
 
     mounted: async function () {
 
-        //  this.windowHeight = window.innerHeight;
-        let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
-        // this.$store.dispatch('banner/getDetail', this.windowHeight)
+   
 
         if (this.$route.query.code) {
             this.model = {
@@ -34,12 +32,10 @@ export default {
             try {
                 const response = await this.$axios.post('users/code', { ...this.model })
 
-
-
                 await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
 
                 console.log("TOKEN PNS RESPONSE", JSON.parse(localStorage.getItem('NEWRESPONSE')))
-                window.location.href = "https://siteweb-gec-citoyen.vercel.app/"
+                
 
                 await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 // await localStorage.setItem('gecToken', response.data.id_token.id_token)
@@ -71,7 +67,7 @@ export default {
                     dataUser: this.parseJwt(response.id_token),
                 });
                 this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
-                this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
+       
 
             } catch (error) {
                 console.error(error);

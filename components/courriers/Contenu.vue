@@ -28,7 +28,8 @@
             </div>
             <div class="form-group col-12">
                 <label for="reg-name">Objet*</label>
-                <input ref="subject" class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="Sujet du courrier">
+                <input ref="subject" class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="Objet du courrier">
+                <div  v-if="$v.model.subject.$error"><p class="custom-validation-error-msg">L'objet est obligatoire.</p></div>
             </div>
             <div class="form-group col-12 mt-4" v-if="saisie">
                 <label for="reg-name">Message*</label>
@@ -91,9 +92,12 @@
             </div>
             <div class="form-group col-12 chekbox-area">
                 <div class="edu-form-check">
-                <input type="checkbox" id="terms-condition">
-                <label for="terms-condition">J'accepte les termes et conditions <a href="terms-condition.html">Terms & Condition.</a> </label>
+                <input type="checkbox" id="terms-condition" v-model="model.acceptedTerms">
+                <label for="terms-condition">J'accepte les termes et conditions <a href="#">Termes & Conditions.</a> </label>
                 </div>
+                <div v-if="$v.model.acceptedTerms.$error">
+    <p class="custom-validation-error-msg">Vous devez accepter les termes et conditions.</p>
+  </div>
             </div>
             <div class="row d-flex justify-content-between">
                 <div class="form-group col-3 mt-5">
@@ -110,7 +114,11 @@
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
+import { required } from 'vuelidate/lib/validators'
+
+import { validationMixin } from 'vuelidate'
     export default {
+        mixins: [validationMixin],
         components: {
             SectionTitle: () => import('@/components/common/SectionTitle')
         },
@@ -153,6 +161,7 @@ import { mapMutations, mapGetters } from 'vuex'
                     {id:3,libelle:'Secrétariat particulier',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
                 model :{
+                    acceptedTerms: false,
                     type_contenu:"attache_courrier",
                     encodedFile:'',
                     pieces_jointes:[],
@@ -167,12 +176,25 @@ import { mapMutations, mapGetters } from 'vuex'
                 } 
             }
         },
+        validations: {
+            model: {
+            subject: {
+                required
+            },
+            acceptedTerms: {
+            required
+            }
+            }
+        },
         methods: {
             submitContenu(){
+                this.$v.$touch();
+      if (!this.$v.$invalid) {
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
                 this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree,subject:this.model.subject})
                 this.$store.dispatch('active_step/getDetail',{id:'validation'})
+      }
 
             },
             changeModel($event){
@@ -308,6 +330,9 @@ import { mapMutations, mapGetters } from 'vuex'
     }
 </script>
 <style scoped>
+.custom-validation-error-msg{
+  color: #fe0022
+}
 .custom-textarea {
   padding: 20px 25px;
   border: solid 1px #cecdcc  !important;
