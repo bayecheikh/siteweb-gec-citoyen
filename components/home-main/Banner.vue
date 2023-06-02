@@ -25,7 +25,7 @@
                 sécurisé de courriers à destination de l'administration
                 béninoise.
               </p>
-              <p v-if="banniere.length > 0 && banniere[0] && banniere[0].resume !== undefined" class="custom-subtitle mb-5">
+              <p v-show="banniere.length > 0 && banniere[0] && banniere[0].resume !== undefined" class="custom-subtitle mb-5">
   {{ banniere[0].resume }}
 </p>
 
