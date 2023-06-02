@@ -54,7 +54,7 @@ export default {
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
                 const gecIdUser = localStorage.getItem('gecIdUser');
 
-                if (localStorage.getItem('isauthenticatingfrombutton') == true) {
+                if (localStorage.getItem('isauthenticatingfrombutton') == "true") {
                     await this.$router.push("/addcourrier");
                     await localStorage.setItem('isauthenticatingfrombutton', false)
 
