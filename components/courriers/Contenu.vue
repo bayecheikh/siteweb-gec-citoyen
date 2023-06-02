@@ -47,7 +47,7 @@
                     </div>
                     
                 </div>
-                <input type="file" id="file" name="avatar" ref="file" v-on:change="handleFileUpload" style="display: none"/>
+                <input type="file" id="file" name="avatar" ref="file" v-on:change="handleFileUpload" style="display: none">
             </div>
             <div class="col-12 form-group" v-if="attache_courrier && imageData">
                 <div
@@ -84,7 +84,7 @@
                                 </div>
                                 
                             </div>
-                            <input type="file" id="file2" name="avatar" ref="file2" v-on:change="handleFileUpload2" style="display: none"/>
+                            <input type="file" id="file2" name="avatar" ref="file2" v-on:change="handleFileUpload2" style="display: none">
                         </li>
                     </ul>
                 </div>

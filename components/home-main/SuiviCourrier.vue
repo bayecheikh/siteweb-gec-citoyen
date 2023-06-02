@@ -27,7 +27,7 @@
     class="form-control custom-form-control"
     placeholder="CODE DE SUIVI"
     v-model="code"
-  />
+  >
   <button
     class="btn-medium custom-main-banner-track-btn"
     name="submit"

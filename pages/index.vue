@@ -23,7 +23,7 @@ export default {
     //  this.windowHeight = window.innerHeight;
      let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
         // this.$store.dispatch('banner/getDetail', this.windowHeight)
-        console.log("CODE+++++++++++++++", this.$route.query)
+    
         if (this.$route.query.code) {
             this.model =  {
                 code : this.$route.query.code,
@@ -33,7 +33,7 @@ export default {
             }
             try {
             const response = await this.$axios.post('users/code', {...this.model})
-            console.log("NEW RESPONSE", response)
+    
             
      
             await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
@@ -53,8 +53,7 @@ export default {
                 await localStorage.setItem('gecIsAuthenticated', true)
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
                 const gecIdUser = localStorage.getItem('gecIdUser');
-console.log("GEC LOGGED IN USER", gecLoggedInUser);
-console.log("GEC ID USER", gecIdUser);
+
                 if (isauthenticatingfrombutton) {
                     this.$router.push("/addcourrier");
                 }
@@ -105,7 +104,7 @@ console.log("GEC ID USER", gecIdUser);
     },
     data() {
         return {
-            // windowHeight: ''
+          
         }
     },
     methods: {

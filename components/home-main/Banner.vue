@@ -231,7 +231,8 @@ if (words.length === 3) {
         this.$router.push("/addcourrier");
       } else {
         this.$store.commit('authentication/initdetailisauthenticatingfrombutton', true);
-        window.location.href = "https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true";
+        window.location.href = `https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=${encodeURIComponent("https://siteweb-gec-citoyen.vercel.app")}&response_type=code&scope=openid&authError=true`;
+
       }
     },
   },
