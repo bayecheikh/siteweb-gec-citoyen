@@ -43,18 +43,18 @@
                 <div class="custom-lable-title">COORDONNÉES MANDATAIRE ENTREPRISE</div>
             </div>
             <hr class='dotted mt-2 mb-5' />
-            <!-- <div class="form-group col-6">
+            <div class="form-group col-6">
                 <label for="reg-name">Prénom*</label>
                 <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre prénom" v-model="model.requerant.prenom" readonly>
             </div>
             <div class="form-group col-6">
                 <label for="reg-name">Nom*</label>
                 <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre nom" v-model="model.requerant.nom" readonly>
-            </div> -->
-            <div class="form-group col-6">
+            </div>
+            <!-- <div class="form-group col-6">
                 <label for="reg-name">Prénom et Nom*</label>
                 <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Prénom et nom" v-model="model.requerant.prenometnom" readonly>
-            </div>
+            </div> -->
             <div class="form-group col-6 mb-4 mt-2">
                 <div class="form-group col-12 mb-0">
                     <label for="reg-name">Sexe*</label>
@@ -245,16 +245,16 @@ import { mapMutations, mapGetters } from 'vuex'
             if(localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser')){
                 const user = await JSON.parse(localStorage.getItem('gecLoggedInUser'));
                 const _id = await localStorage.getItem('gecIdUser');
-                //const fullname = await user['name']
-                // console.log("sdfdsd", fullname)
-                // const mots = await fullname.split(" ");
-                // const prenom = await mots.slice(0, mots.length - 1).join(" ");
-                // const nom = await mots[mots.length - 1];
+                const fullname = await user['name']
+                console.log("sdfdsd", fullname)
+                const mots = await fullname.split(" ");
+                const prenom = await mots.slice(0, mots.length - 1).join(" ");
+                const nom = await mots[mots.length - 1];
 
 
-                // this.model.requerant.prenom = prenom
-                // this.model.requerant.nom = nom
-                this.model.requerant.prenometnom = user['name']
+                this.model.requerant.prenom = prenom
+                this.model.requerant.nom = nom
+                // this.model.requerant.prenometnom = user['name']
                 this.model.requerant.email = user['sub']
                 // this.model.requerant.telephone = user?.telephone
                 // this.model.requerant.sexe = user?.sexe
@@ -282,9 +282,9 @@ import { mapMutations, mapGetters } from 'vuex'
                 requerant:true,
                 model :{
                     requerant:{
-                        // prenom:"",
-                        // nom:"",
-                        prenometnom:'',
+                        prenom:"",
+                        nom:"",
+                        // prenometnom:'',
                         email:"",
                         telephone:"",
                         sexe:"",

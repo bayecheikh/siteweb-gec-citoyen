@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="banner-content">
+            <!-- <div class="banner-content">
               <h3 v-show="loading" class=" title mb-5 loader-title"></h3>
               <h3 v-show="loading" class="custom-subtitle loader-resume mb-5"></h3>
               <div v-show="!loading" >
@@ -28,6 +28,50 @@
               <p v-show="banniere.length > 0 && banniere[0] && banniere[0].resume !== undefined" class="custom-subtitle mb-5">
   {{ banniere[0].resume }}
 </p>
+
+
+            </div>
+              <div class="d-flex banner-btn custom-main-banner-btn">
+             
+              
+                <a
+                  @click="deposerCourrier()"
+                  class="edu-btn custom-banner-send-button"
+                >
+                  DÉPOSER UN COURRIER
+                </a>
+                <a class="edu-btn custom-banner-track-btn"  @click="onClickSuivreCourrier">SUIVRE MON COURRIER</a>
+
+              </div>
+          
+
+              <ul class="shape-group">
+                <MouseMove
+                  addClassName="shape-1"
+                  dataDepth="2"
+                  data-aos-delay="1000"
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  imgSrc="/images/about/shape-13.png"
+                />
+              </ul>
+            </div> -->
+            <div class="banner-content">
+             
+              <div >
+             <h3 class=" mb-5 title">
+                Plateforme
+                <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
+                Bénin </div>
+              </h3>
+
+             
+              <p  class="custom-subtitle mb-5 ">
+                Plateforme digitale nationale pour le dépôt électronique et
+                sécurisé de courriers à destination de l'administration
+                béninoise.
+              </p>
+            
 
 
             </div>
