@@ -20,14 +20,16 @@
     <div>{{ lastWords }}</div>
   </h3>
            
-              <p v-if="banniere.length === 0  " class="custom-subtitle mb-5 ">
+              <p v-show="banniere.length === 0" class="custom-subtitle mb-5 ">
                 Plateforme digitale nationale pour le dépôt électronique et
                 sécurisé de courriers à destination de l'administration
                 béninoise.
               </p>
-              <p  v-if="banniere.length > 0 " class="custom-subtitle mb-5 ">
-                {{ banniere[0].resume }}
-              </p>
+              <p v-if="banniere.length > 0 && banniere[0] && banniere[0].resume !== undefined" class="custom-subtitle mb-5">
+  {{ banniere[0].resume }}
+</p>
+
+
             </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
              
@@ -158,7 +160,7 @@ mounted: async function() {
             const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
             const sortedContenus = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.banniere = await sortedContenus.slice(0, 1);
-            if(this.banniere[0].title){
+            if(this.banniere[0]?.title){
               const trimmedText = this.banniere[0]?.title?.trim();
             
 const words = trimmedText.split(' ');
