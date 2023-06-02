@@ -56,7 +56,8 @@ export default {
 
                 if (localStorage.getItem('isauthenticatingfrombutton') == "true") {
                     await this.$router.push("/addcourrier");
-                    await localStorage.setItem('isauthenticatingfrombutton', false)
+                
+                
 
                 }
                 else {
