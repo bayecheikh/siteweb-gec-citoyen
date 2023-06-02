@@ -7,8 +7,7 @@
                     <a href="/">
                        <h3>GEC CITOYEN</h3>
                     </a>
-                    <h4 class="custom-mobile-menu-h4" v-if="prenomEtNom">{{ prenomEtNom }}</h4>
-                    <p v-if="email">Email : {{ email }}</p>
+                  
 
                 </div>
                 <div class="close-menu">
@@ -26,16 +25,7 @@
 import { mapGetters } from 'vuex'
     export default {
         mounted() {
-        this.token = localStorage.getItem('gecToken')
-        if(localStorage.getItem('gecToken')){
-            const user = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-            const prenom = user['firstname'];
-            const nom = user['lastname'];
-            const email = user['email'];
-            const prenomEtNom = prenom + " " +nom
-            this.prenomEtNom = prenomEtNom
-            this.email = email
-        }
+       
     },
         computed: {
         ...mapGetters({

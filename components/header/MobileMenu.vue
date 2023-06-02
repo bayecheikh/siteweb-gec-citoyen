@@ -9,10 +9,10 @@
             <a href="/contact-us">
                 Nous contacter
             </a >
-            <a v-if="!$getToken()" href="/" @click.prevent = onClickSeConnecter()>
+            <a v-show="!$getToken()" href="/" @click.prevent = onClickSeConnecter()>
                 Se connecter
             </a>
-            <a v-if="$getToken()" href="/" @click.prevent = onClickSeDeconnecter()>
+            <a v-show="$getToken()" href="/" @click.prevent = onClickSeDeconnecter()>
                 Se déconnecter
             </a>
 

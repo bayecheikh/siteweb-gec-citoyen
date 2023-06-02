@@ -38,27 +38,11 @@
                             </h4>
                             <div class="inner">
                                 <div class="widget-information">
-                                    <!-- <ul v-if="!footer[0].resume" class="information-list">
-                                        <li>Plateforme digitale nationale pour le dépôt électronique et sécurisé de courriers à destination de l'administration béninoise. </li>
-                                    </ul>
-                                    <ul  v-if="footer[0].resume" class="information-list">
-                                        <li>{{footer[0].resume}}</li>
-                                    </ul> -->
+                                  
                                     <ul class="information-list">
                                         <li>Plateforme digitale nationale pour le dépôt électronique et sécurisé de courriers à destination de l'administration béninoise. </li>
                                     </ul>
-                                    <!-- <ul v-if ="reseaux" class="information-list custom-info-list"
-                                       >
-                                        <li><span class="custom-reseaux-title">Nous suivre sur :</span></li>
-                                        <li v-if="facebook[0].link"><a  target = "_blank" :href=facebook[0].link class="color-reseaux custom-reseaux"><i
-                                                    class="icon-facebook"></i></a></li>
-                                        <li v-if="linkedin[0].link"><a  target = "_blank" :href=linkedin[0].link  class="color-reseaux custom-reseaux"><i
-                                                    class="icon-linkedin2"></i></a></li>
-                                        <li  v-if="instagram[0].link"><a target = "_blank" :href=instagram[0].link class="color-reseaux custom-reseaux"><i
-                                                    class="icon-instagram"></i></a></li>
-                                        <li v-if="twitter[0].link"><a  target = "_blank" :href=twitter[0].link class="color-reseaux custom-reseaux"><i
-                                                    class="icon-twitter"></i></a></li>
-                                    </ul> -->
+                                  
                                     <ul class="information-list custom-info-list"
                                        >
                                         <li><span class="custom-reseaux-title">Nous suivre sur :</span></li>
@@ -97,17 +81,7 @@
                         <div class="edu-footer-widget quick-link-widget">
                             <h4 class="widget-title custom-color-white" >Contact</h4>
                             <div class="inner">
-                                <!-- <ul class="footer-link">
-                                    <li v-if="!telephone[0].resume"><i class="icon-phone custom-footer-icon" ></i>      (+229) 47 135 5 98</li>
-                                    <li v-if="telephone[0].resume"><i class="icon-phone custom-footer-icon" ></i>     {{ telephone[0].resume }}</li>
-                                    <li class="custom-footer-line"></li>
-                                    <li v-if="!email[0].resume"><i class="icon-envelope custom-footer-icon"></i>     gec@gouv.bj</li>
-                                    <li v-if="email[0].resume"><i class="icon-envelope custom-footer-icon"></i>     {{email[0].resume}}</li>
-                                    <li class="custom-footer-line"></li>
-                                    <li  v-if="!adresse[0].resume"><i class="icon-40 custom-footer-icon"></i>      Cotonou, Bénin</li>
-                                    <li  v-if="adresse[0].resume"><i class="icon-40 custom-footer-icon"></i>{{ adresse[0].resume }}</li>
-                                    <li class="custom-footer-line"></li>
-                                </ul> -->
+                             
                                 <ul class="footer-link">
                                     <li><i class="icon-phone custom-footer-icon" ></i>     (+229) 47 135 5 98</li>
                                   
@@ -150,40 +124,6 @@ export default {
     },
     mounted: async function() {  
  
- try {
-         const response = await this.$axios.get("/contenus");
-         const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Téléphone");
-         const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.telephone = sortedTelephones.slice(0, 1);
-         const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Email");
-         const sortedEmails = filteredEmails.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.email = sortedEmails.slice(0, 1);
-         const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Adresse");
-         const sortedAdresses = filteredAdresses.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.adresse = sortedAdresses.slice(0, 1);
-         const filteredFooters = response.data.data.data.filter(contenus => contenus.categorie.id === "646418cc701a1e0225c9ebc5" && contenus.title === "Footer-text");
-         const sortedFooters = filteredFooters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.footer = sortedFooters.slice(0, 1);
-         const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.id === "64641a9a701a1e0225c9ebc7");
-         this.reseaux = filteredReseaux
-         const filteredFacebooks = filteredReseaux?.filter(contenus => contenus.title === "Facebook");
-         const sortedFacebooks = filteredFacebooks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.facebook = sortedFacebooks.slice(0, 1);
-         const filteredInstagrams = filteredReseaux?.filter(contenus => contenus.title === "Instagram");
-         const sortedInstagrams = filteredInstagrams.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.instagram = sortedInstagrams.slice(0, 1);
-         const filteredLinkedIns = filteredReseaux?.filter(contenus => contenus.title === "LinkedIn");
-         const sortedLinkedIns = filteredLinkedIns.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.linkedin = sortedLinkedIns.slice(0, 1);
-         const filteredTwitters = filteredReseaux?.filter(contenus => contenus.title === "Twitter");
-         const sortedTwitters = filteredTwitters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-         this.twitter = sortedTwitters.slice(0, 1);
-         
-         
-     } catch (error) {
-     console.error(error);
-     return;
-     }
      
 },
     components: {
