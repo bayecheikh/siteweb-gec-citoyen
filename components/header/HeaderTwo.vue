@@ -185,7 +185,13 @@ export default {
 
 
 mounted() {
-    this.token = localStorage.getItem('gecToken')
+    if(localStorage.getItem('gecToken')){
+        this.token = localStorage.getItem('gecToken')
+    }
+    else{
+        this.token = null
+    }
+       
 },
 
     methods: {

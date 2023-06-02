@@ -181,7 +181,12 @@ export default {
     },
     props: ['showHeaderTop'],
     mounted() {
+        if(localStorage.getItem('gecToken')){
         this.token = localStorage.getItem('gecToken')
+    }
+    else{
+        this.token = null
+    }
      
             
          
