@@ -1,7 +1,7 @@
 <template>
     <div class="faq-accordion" id="faq-accordion">
-        <div class="accordion">
-            <div class="accordion-item" v-if="faqs?.length > 0 && faqs[0]?.question && faqs[0]?.response">
+        <!-- <div class="accordion">
+            <div class="accordion-item" v-show="faqs.length > 0 && faqs[0].question && faqs[0].response">
                 <h5 class="accordion-header ">
                     <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
                         {{ faqs[0].question }}
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" v-if="faqs?.length > 0 && faqs[1]?.question && faqs[1]?.response">
+            <div class="accordion-item" v-show="faqs.length > 0 && faqs[1].question && faqs[1].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
                         {{ faqs[1].question }}
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" v-if="faqs?.length > 0 && faqs[2]?.question && faqs[2]?.response">
+            <div class="accordion-item" v-show="faqs.length > 0 && faqs[2].question && faqs[2].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
                         {{ faqs[2].question }}
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" v-if="faqs?.length > 0 && faqs[3]?.question && faqs[3]?.response">
+            <div class="accordion-item" v-show="faqs.length > 0 && faqs[3].question && faqs[3].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
                         {{ faqs[3].question }}
@@ -46,6 +46,56 @@
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
                     <div class="accordion-body">
                         <p>  {{ faqs[3].response }}</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="accordion">
+            <div class="accordion-item" >
+                <h5 class="accordion-header ">
+                    <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                       Question
+                    </button>
+                </h5>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      Réponse
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" >
+                <h5 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
+                       Question
+                    </button>
+                </h5>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                        <p>  Reponse </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" >
+                <h5 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
+                        Question
+                    </button>
+                </h5>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                     Reponse
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" >
+                <h5 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+                       Question
+                    </button>
+                </h5>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                        <p> Reponse</p>
                     </div>
                 </div>
             </div>

@@ -47,7 +47,7 @@
           
             this.items = [
                     {
-                        src: this.video?.link||""
+                        src: "https://www.youtube.com/watch?v=HrNBaa59PtU"
                     }
                 ];
         } catch (error) {
