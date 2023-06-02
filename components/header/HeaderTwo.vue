@@ -104,13 +104,7 @@
                                             </span></a>
                                     </li>
                                     <li class="header-btn">
-                                        <!-- <div class="initials-circle">
-                                            <span class="initials" v-if="initiales" > {{ initiales}}</span>
-                                            <span class="initials" v-if="!initiales" >XX</span>
-                                            <span class="tooltip" v-if="userName">{{ userName }}<br><span  v-if="email">Email : {{ email }}</span></span>
-
-                                        </div> -->
-
+                          
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
                                         <button class="hamberger-button" @click="mobileMenuOpen('addClass', 'active')">

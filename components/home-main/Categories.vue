@@ -14,17 +14,7 @@
         
    
 </div>
-  <!-- <div class="title-text-wrapper">
-    <h3 class="title">Comment envoyer un courrier ?</h3>
-    
-    <p class="custom-subtitle">Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
-  </div>
-  <div class="title-button-wrapper">
-    <a class="edu-btn custom-categories-send-button" @click="deposerCourrier()">
-      DÉPOSER UN COURRIER 
-    </a>
-  </div>
--->
+
 </div>
 
 

@@ -16,7 +16,7 @@
 
 </svg>
 <span > VEUILLEZ ENTRER VOTRE CODE DE SUIVI </span></h4> 
-<!-- <span v-if="!isCharging"> VEUILLEZ ENTRER VOTRE CODE DE SUIVI </span><span v-if="isCharging"> RÉSULTAT POUR LE CODE DE SUIVI </span> <span  v-if="code" class="custom-code-font">{{ code }}</span></h4> -->
+
                
                 </div>
                 <div class="input-group custom-input-group mb-5">

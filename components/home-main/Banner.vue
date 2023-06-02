@@ -29,26 +29,7 @@
               </p>
             </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
-                <!-- <div class="input-group custom-input-group">
-                 
-                  <input
-                    type="text"
-                    name="code"
-                    id="code"
-                    class="form-control custom-form-control"
-                    placeholder="Suivre mon courrier"
-                    v-model="courrier"
-                    
-                  />
-                  <button
-                    class="btn-medium custom-main-banner-track-btn"
-                    name="submit"
-                    type="submit"
-                    @click="onClickSuivreCourrier"
-                  >
-                    <i class="custom-track-btn-icon icon-4"></i>
-                  </button>
-                </div> -->
+             
               
                 <a
                   @click="deposerCourrier()"
@@ -59,18 +40,7 @@
                 <a class="edu-btn custom-banner-track-btn"  @click="onClickSuivreCourrier">SUIVRE MON COURRIER</a>
 
               </div>
-              <!--          <div class="d-flex banner-btn custom-main-banner-button flex-wrap">
-   
-    <div class="d-flex align-items-center search-box custom-search-box">
-                                <i class="icon-2 custom-magnifying-icon"></i>
-                                <input type="text" name="code" id="code" autocomplete="off" placeholder="Suivre mon courrier" class="custom-banner-search-button">
-                                <button class="submit-button custom-banner-submit-button" name="submit" type="submit" @click="onClickSuivreCourrier"> <i
-                                            class="icon-4 custom-icon-4"></i></button>
-                            </div>
-                            <a @click="deposerCourrier()" class="edu-btn custom-banner-send-button">
-        DÉPOSER UN COURRIER
-    </a>
-</div>-->
+          
 
               <ul class="shape-group">
                 <MouseMove
@@ -159,9 +129,7 @@
         <img src="/images/about/h-1-shape-01.png" alt="Shape" />
       </div>
     </div>
-    <!-- <div class="main-wrapper bg-lighten05">
-      <HomeYogaInstructorFunFact />
-    </div> -->
+ 
 
     <SuiviCourrier v-if="ispopupload" />
   </div>
