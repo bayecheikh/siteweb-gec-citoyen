@@ -23,14 +23,14 @@
                     <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" id="inlineRadioT3" value="Requerant">
                     <label class="form-check-label" for="inlineRadioT3">Requérant</label>
                 </div>
-                <!-- <div class="form-check form-check-inline border-radio mr-5 pb-1">
+                <div class="form-check form-check-inline border-radio mr-5 pb-1">
                     <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" id="inlineRadioT1" value="Personne">
                     <label class="form-check-label" for="inlineRadioT1">Mandataire personne physique</label>
                 </div>
                 <div class="form-check form-check-inline border-radio pb-1">
                     <input @change="changeTypeUser($event)" class="form-check-input" type="radio" v-model="model.type_utilisateur" id="inlineRadioT2" value="Entreprise">
                     <label class="form-check-label" for="inlineRadioT2">Mandataire personne morale</label>
-                </div> -->
+                </div>
             </div>
             <hr class='dotted mt-5'  />
             <div class="form-group col-12 my-0 mb-4 mt-3" v-if="requerant">
