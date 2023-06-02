@@ -86,6 +86,9 @@
                                 
                             </div>
                             <input type="file" id="file2" name="avatar" ref="file2" v-on:change="handleFileUpload2" style="display: none">
+                            <div v-if="$v.model.uploadedFile.$error">
+                                <p class="custom-validation-error-msg">Veuillez sélectionner un fichier.</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -161,7 +164,8 @@ import { validationMixin } from 'vuelidate'
                     {id:3,libelle:'Secrétariat particulier',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
                 model :{
-                    acceptedTerms: false,
+                    uploadedFile: null,
+                    acceptedTerms: null,
                     type_contenu:"attache_courrier",
                     encodedFile:'',
                     pieces_jointes:[],
@@ -182,6 +186,9 @@ import { validationMixin } from 'vuelidate'
                 required
             },
             acceptedTerms: {
+            required
+            },
+            uploadedFile: {
             required
             }
             }
@@ -238,7 +245,8 @@ import { validationMixin } from 'vuelidate'
                 this.$refs.file.click()
             },
             handleFileUpload(e){     
-                    
+                const file = e.target.files[0];
+                this.model.uploadedFile = file;
                 //Recupère le fichier
                 const input = this.$refs.file
                 const files = input.files

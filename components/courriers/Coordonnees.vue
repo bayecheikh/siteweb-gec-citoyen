@@ -16,7 +16,7 @@
                 </div>
             </div> -->
             <div class="form-group col-12 mt-5">
-                <div class="custom-lable-title">Je dépose un courrier en tant que</div>
+                <div class="custom-lable-title">Je dépose un courrier en tant que :</div>
             </div>
             <div class="form-group col-12 mb-3">
                 <div class="form-check form-check-inline border-radio mr-5 pb-1">
@@ -55,8 +55,12 @@
                 <label for="reg-name">Prénom et Nom*</label>
                 <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Prénom et nom" v-model="model.requerant.prenometnom" readonly>
             </div>
-            <div class="form-group col-6 mb-4 mt-2">
-                <div class="form-group col-12 mb-0">
+            <div class="form-group col-6 mb-5 mt-2">
+                <label for="log-email">Email*</label>
+                <input type="email" class="border-radio readonly" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.requerant.email" readonly >
+            </div>
+            <div class="form-group col-6 mb-5 mt-2">
+                <div class="form-group col-12">
                     <label for="reg-name">Sexe</label>
                 </div>
                 <div class="form-group col-12 border-input pt-3 pb-1">
@@ -75,11 +79,8 @@
                 <label for="reg-name">Téléphone</label>
                 <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.requerant.telephone">
             </div>
-            <div class="form-group col-6">
-                <label for="log-email">Email*</label>
-                <input type="email" class="border-radio readonly" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.requerant.email" readonly >
-            </div>
-            <div class="form-group col-6">
+           
+            <div class="form-group col-12 mb-5 mt-2">
                 <label for="log-email">Adresse</label>
                 <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.requerant.adresse">
             </div>

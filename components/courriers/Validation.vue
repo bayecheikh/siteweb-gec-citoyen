@@ -3,7 +3,7 @@
        <div  class="row">
           <div class="col-12">
              <div class="row bg-border-bottom-grey">
-                <div class="col-6 custom-lable-title pt-3">VERIFIER LES INFORMATIONS AVANT DE VALIDER</div>
+                <div class="col-6 custom-lable-title pt-3">VÉRIFIER LES INFORMATIONS AVANT DE VALIDER</div>
                 <div class="col-6">
                    <!-- <Previsualisation /> -->
                 </div>
@@ -18,26 +18,26 @@
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                      <div class="col-6" for="reg-name">Entrée</div>
+                      <div class="col-6" for="reg-name">Entrée :</div>
                       <p class="col-6">{{this.detailcontenu && this.detailcontenu.entree}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                      <div class="col-6" for="reg-name">Objet</div>
+                      <div class="col-6" for="reg-name">Objet :</div>
                       <p class="col-6">{{this.detailcontenu && this.detailcontenu.subject}}</p>
                    </div>
-                   
+                   <hr>
                    
                 </div>
                 <div class="row border-grey-no-padding d-flex align-items-center mb-5">
                    <div class="d-flex justify-content-between p-4 pb-4 pt-4">
-                      <div for="reg-name" class="title_green">COORDONNEES</div>
+                      <div for="reg-name" class="title_green">COORDONNÉES</div>
                       <div class="form-group col-3 justify-content-end">
                         <button @click="$goToTab('coordonnees')" type="button" class="btn btn-outline-primary btn-medium float-end">Modifier <i class="icon-east"></i></button>
                       </div>
                    </div>
                    <hr>
-                   <div class="d-flex p-4 pb-0 pt-0">
+                   <!-- <div class="d-flex p-4 pb-0 pt-0">
                       <div class="col-6" for="reg-name">Nom*</div>
                       <p class="col-6">{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.nom}}</p>
                    </div>
@@ -45,23 +45,32 @@
                    <div class="d-flex justify-content-between p-4 pb-0 pt-0">
                       <div class="col-6" for="reg-name">Prénom*</div>
                       <p class="col-6">{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.prenom}}</p>
-                   </div>
+                   </div> -->
+                   <div class="d-flex justify-content-between p-4 pb-0 pt-0">
+                      <div class="col-6" for="reg-name">Prénom et nom :</div>
+                      <p class="col-6">{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.prenometnom}}</p>
+                   </div> 
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-0 pt-0">
-                      <div class="col-6" for="log-email">Email*</div>
+                      <div class="col-6" for="log-email">Email :</div>
                       <p class="col-6">{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.email}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                      <div class="col-6" for="reg-name">Adresse*</div>
+                      <div class="col-6" for="reg-name">Sexe :</div>
+                      <p class="col-6" >{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.sexe}}</p>
+                   </div>
+                   <hr>
+                   <div class="d-flex justify-content-between p-4 pb-4 pt-0">
+                      <div class="col-6" for="reg-name">Adresse :</div>
                       <p class="col-6" >{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.adresse}}</p>
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-0 pt-0">
-                      <div class="col-6" for="reg-name">Téléphone*</div>
+                      <div class="col-6" for="reg-name">Téléphone :</div>
                       <p class="col-6" >{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.telephone}}</p>
                    </div>
-                   
+                   <hr>
                 </div>
                 <div class="row border-grey-no-padding d-flex align-items-center mb-5">
                     <div class="d-flex justify-content-between p-4 pb-4 pt-4">
@@ -72,7 +81,7 @@
                    </div>
                    <hr>
                    <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                      <div class="col-6" for="reg-name">Nom</div>
+                      <div class="col-6" for="reg-name">Nom :</div>
                       <p class="col-6" >{{this.detailministere && this.detailministere.title_organisme}}</p>
                    </div>
                    
@@ -101,7 +110,7 @@
                 </div>
                 <div class="row border-grey-no-padding d-flex align-items-center mb-5">
                     <div class="d-flex justify-content-between p-4 pb-4 pt-4">
-                      <div for="reg-name" class="title_green">PIECES-JOINTES</div>
+                      <div for="reg-name" class="title_green">PIÈCES-JOINTES</div>
                       <div class="form-group col-3 justify-content-end">
                        <button @click="$goToTab('contenu')" type="button" class="btn btn-outline-primary btn-medium float-end">Modifier <i class="icon-east"></i></button>
                       </div>
