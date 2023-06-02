@@ -19,36 +19,32 @@ export default {
     },
 
     mounted: async function () {
-     
-    //  this.windowHeight = window.innerHeight;
-     let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
+
+        //  this.windowHeight = window.innerHeight;
+        let isauthenticatingfrombutton = this.isauthenticatingfrombutton;
         // this.$store.dispatch('banner/getDetail', this.windowHeight)
-    
+
         if (this.$route.query.code) {
-            this.model =  {
-                code : this.$route.query.code,
-                authorisation : 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
+            this.model = {
+                code: this.$route.query.code,
+                authorisation: 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
                 urlClient: 'https://siteweb-gec-citoyen.vercel.app',
                 urlPns: 'https://pprodofficial.service-public.bj/api/official/token'
             }
             try {
-            const response = await this.$axios.post('users/code', {...this.model})
-    
-            
-     
-            await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
-
-            console.log("TOKEN PNS RESPONSE", JSON.parse(localStorage.getItem('NEWRESPONSE')))
-            window.location.href = "https://siteweb-gec-citoyen.vercel.app/"
-            
-            await localStorage.setItem('gecToken', response.data.id_token.id_token)
-            // await localStorage.setItem('gecToken', response.data.id_token.id_token)
-             await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
-             await localStorage.setItem('gecIdUser', response.data.data.doc._id)
+                const response = await this.$axios.post('users/code', { ...this.model })
 
 
 
+                await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
 
+                console.log("TOKEN PNS RESPONSE", JSON.parse(localStorage.getItem('NEWRESPONSE')))
+                window.location.href = "https://siteweb-gec-citoyen.vercel.app/"
+
+                await localStorage.setItem('gecToken', response.data.id_token.id_token)
+                // await localStorage.setItem('gecToken', response.data.id_token.id_token)
+                await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
+                await localStorage.setItem('gecIdUser', response.data.data.doc._id)
 
                 await localStorage.setItem('gecIsAuthenticated', true)
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
@@ -56,37 +52,44 @@ export default {
 
                 if (localStorage.getItem('isauthenticatingfrombutton') == "true") {
                     await this.$router.push("/addcourrier");
-                
-                
 
                 }
                 else {
                     const { code, ...queryParams } = this.$route.query;
-    const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
-   await this.$router.replace(newUrl);
-   this.$router.push("/");
+                    const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
+                    await this.$router.replace(newUrl);
+                    this.$router.push("/");
                 }
 
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
                 this.$store.dispatch("toast/getMessage", {
                     type: "success",
                     text: "Connexion réussie !",
-                }); 
+                });
 
                 this.$store.dispatch("coordonnees/getDetail", {
                     dataUser: this.parseJwt(response.id_token),
                 });
                 this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
                 this.$store.dispatch('authentication/getDetailIsAuthenticatingFromButton', false)
-        
-        }catch (error) {
+
+            } catch (error) {
                 console.error(error);
                 console.log('Code error ++++++: ', error)
                 this.$store.dispatch('toast/getMessage', { type: 'error', text: error || 'Échec de la connexion' })
                 return;
             }
         }
-        
+        if (this.$route.query.logout){
+            await localStorage.removeItem('gecToken')
+            await localStorage.removeItem('gecIdUser')
+            await localStorage.removeItem('gecLoggedInUser')
+            await localStorage.removeItem('gecIsAuthenticated')
+            const { logout, ...queryParams } = this.$route.query;
+            const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
+            await this.$router.replace(newUrl);
+            this.$router.push("/");
+        }
 
     },
 
@@ -108,7 +111,7 @@ export default {
     },
     data() {
         return {
-          
+
         }
     },
     methods: {

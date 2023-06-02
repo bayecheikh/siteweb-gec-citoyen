@@ -48,6 +48,7 @@ import { mapMutations, mapGetters } from 'vuex'
            
             await location.reload()
             await this.$router.push('/')
+            await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')

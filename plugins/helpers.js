@@ -22,9 +22,9 @@ export default function ({store ,redirect}, inject) {
    
     const loggout = async () => {
         if (process.client) {
+            await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('gecLoggedInUser')
-            await localStorage.removeItem('layout')
             await localStorage.removeItem('gecIsAuthenticated')
         } 
     }

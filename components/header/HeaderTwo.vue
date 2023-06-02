@@ -239,6 +239,7 @@ mounted() {
             await location.reload()
           
             await localStorage.removeItem('gecToken')
+            await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
