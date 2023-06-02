@@ -16,7 +16,6 @@ export { default as HeaderTwo } from '../..\\components\\header\\HeaderTwo.vue'
 export { default as HeaderMobileMenu } from '../..\\components\\header\\MobileMenu.vue'
 export { default as HeaderNavigation } from '../..\\components\\header\\Navigation.vue'
 export { default as HeaderOffCanvasMobileMenuTwo } from '../..\\components\\header\\OffCanvasMobileMenuTwo.vue'
-export { default as HomeDistantLearningCourrierEnvoye } from '../..\\components\\home-distant-learning\\CourrierEnvoye.vue'
 export { default as HomeMainAccordionOne } from '../..\\components\\home-main\\AccordionOne.vue'
 export { default as HomeMainBanner } from '../..\\components\\home-main\\Banner.vue'
 export { default as HomeMainCategories } from '../..\\components\\home-main\\Categories.vue'
@@ -24,6 +23,7 @@ export { default as HomeMainFAQ } from '../..\\components\\home-main\\FAQ.vue'
 export { default as HomeMainFunFact } from '../..\\components\\home-main\\FunFact.vue'
 export { default as HomeMainSuiviCourrier } from '../..\\components\\home-main\\SuiviCourrier.vue'
 export { default as HomeMainVideo } from '../..\\components\\home-main\\Video.vue'
+export { default as HomeDistantLearningCourrierEnvoye } from '../..\\components\\home-distant-learning\\CourrierEnvoye.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

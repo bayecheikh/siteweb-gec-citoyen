@@ -158,7 +158,7 @@ export default {
      console.error(error);
      return;
      }
-     console.log("Bannieres", this.banniere)
+     
 },
     components: {
         MouseMove: () => import('@/components/animation/MouseMove')

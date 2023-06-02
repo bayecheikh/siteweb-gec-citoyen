@@ -83,7 +83,7 @@
                         <div v-show="this.token">
                             <div class="header-right">
                                 <ul class="header-action">
-                                    <li class="header-btn"><a href="https://courrier-gec-citoyen.vercel.app/dashboard">Mon compte</a>
+                                    <li class="header-btn"><a :href="getDashboardURL">Mon compte</a>
     </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
@@ -138,6 +138,18 @@ export default {
             isauthenticating: 'authentication/isauthenticating',
 
         }),
+        getDashboardURL() {
+      // Générer l'URL avec les paramètres
+      const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
+      const params = new URLSearchParams({
+        gecToken: this.token,
+        gecIdUser: this.gecIdUser,
+        gecIsAuthenticated: this.gecIsAuthenticated,
+        gecLoggedInUser: this.gecLoggedInUser,
+      });
+
+      return `${baseURL}?${params.toString()}`;
+    }
 
     },
     components: {
@@ -154,6 +166,11 @@ export default {
     },
     data() {
         return {
+            token: '',
+            gecIsAuthenticated: '',
+            gecLoggedInUser: '',
+            gecIdUser: '',
+            gecToken: '',
             initiales : "",
             userName: "",
             email: null,
@@ -186,6 +203,24 @@ export default {
     }
     else{
         this.token = null
+    }
+    if(localStorage.getItem('gecIdUser')){
+        this.gecIdUser = localStorage.getItem('gecIdUser')
+    }
+    else{
+        this.gecIdUser = null
+    }
+    if(localStorage.getItem('gecIsAuthenticated')){
+        this.gecIsAuthenticated = localStorage.getItem('gecIsAuthenticated')
+    }
+    else{
+        this.gecIsAuthenticated = null
+    }
+    if(localStorage.getItem('gecLoggedInUser')){
+        this.gecLoggedInUser = localStorage.getItem('gecLoggedInUser')
+    }
+    else{
+        this.gecLoggedInUser = null
     }
      
             
