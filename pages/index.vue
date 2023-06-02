@@ -54,8 +54,10 @@ export default {
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
                 const gecIdUser = localStorage.getItem('gecIdUser');
 
-                if (isauthenticatingfrombutton) {
-                    this.$router.push("/addcourrier");
+                if (localStorage.getItem('isauthenticatingfrombutton') == true) {
+                    await this.$router.push("/addcourrier");
+                    await localStorage.setItem('isauthenticatingfrombutton', false)
+
                 }
                 else {
                     const { code, ...queryParams } = this.$route.query;
