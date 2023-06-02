@@ -20,7 +20,7 @@
                 </select>
             </div>
             <div class="edu-sorting form-group col-12" v-if="saisie">
-                <label for="reg-name">Choisir un model</label>
+                <label for="reg-name">Choisir un modèle</label>
                 <select class="custom-select" @change="changeModel($event)">
                     <option>--</option>
                     <option v-for="item in modelContenu" :key="item._id" :value="item._id">{{item.name}}</option>
@@ -49,6 +49,9 @@
                     
                 </div>
                 <input type="file" id="file" name="avatar" ref="file" v-on:change="handleFileUpload" style="display: none">
+                <div v-if="$v.model.uploadedFile.$error">
+                                <p class="custom-validation-error-msg">Veuillez joindre le courrier.</p>
+                            </div>
             </div>
             <div class="col-12 form-group" v-if="attache_courrier && imageData">
                 <div
@@ -86,9 +89,7 @@
                                 
                             </div>
                             <input type="file" id="file2" name="avatar" ref="file2" v-on:change="handleFileUpload2" style="display: none">
-                            <div v-if="$v.model.uploadedFile.$error">
-                                <p class="custom-validation-error-msg">Veuillez sélectionner un fichier.</p>
-                            </div>
+                           
                         </li>
                     </ul>
                 </div>
@@ -99,7 +100,7 @@
                 <label for="terms-condition">J'accepte les termes et conditions <a href="#">Termes & Conditions.</a> </label>
                 </div>
                 <div v-if="$v.model.acceptedTerms.$error">
-    <p class="custom-validation-error-msg">Vous devez accepter les termes et conditions.</p>
+    <p class="custom-validation-error-msg  mt-2">Vous devez accepter les termes et conditions.</p>
   </div>
             </div>
             <div class="row d-flex justify-content-between">

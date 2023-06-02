@@ -26,7 +26,7 @@
                       <div class="col-6" for="reg-name">Objet :</div>
                       <p class="col-6">{{this.detailcontenu && this.detailcontenu.subject}}</p>
                    </div>
-                   <hr>
+                
                    
                 </div>
                 <div class="row border-grey-no-padding d-flex align-items-center mb-5">
@@ -70,7 +70,7 @@
                       <div class="col-6" for="reg-name">Téléphone :</div>
                       <p class="col-6" >{{this.detailutilisateur.requerant && this.detailutilisateur.requerant.telephone}}</p>
                    </div>
-                   <hr>
+                   
                 </div>
                 <div class="row border-grey-no-padding d-flex align-items-center mb-5">
                     <div class="d-flex justify-content-between p-4 pb-4 pt-4">

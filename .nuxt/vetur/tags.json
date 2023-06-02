@@ -2,6 +2,9 @@
   "FunFact": {
     "description": "Auto imported from components/FunFact.vue"
   },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
+  },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
   },
@@ -23,9 +26,6 @@
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
   },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
   "CommonBreadCrumbTwo": {
     "description": "Auto imported from components/common/BreadCrumbTwo.vue"
   },
@@ -37,6 +37,21 @@
   },
   "FooterScrollToTop": {
     "description": "Auto imported from components/footer/ScrollToTop.vue"
+  },
+  "HeaderOne": {
+    "description": "Auto imported from components/header/HeaderOne.vue"
+  },
+  "HeaderTwo": {
+    "description": "Auto imported from components/header/HeaderTwo.vue"
+  },
+  "HeaderMobileMenu": {
+    "description": "Auto imported from components/header/MobileMenu.vue"
+  },
+  "HeaderNavigation": {
+    "description": "Auto imported from components/header/Navigation.vue"
+  },
+  "HeaderOffCanvasMobileMenuTwo": {
+    "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
   },
   "HomeMainAccordionOne": {
     "description": "Auto imported from components/home-main/AccordionOne.vue"
@@ -61,20 +76,5 @@
   },
   "HomeDistantLearningCourrierEnvoye": {
     "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
-  },
-  "HeaderOne": {
-    "description": "Auto imported from components/header/HeaderOne.vue"
-  },
-  "HeaderTwo": {
-    "description": "Auto imported from components/header/HeaderTwo.vue"
-  },
-  "HeaderMobileMenu": {
-    "description": "Auto imported from components/header/MobileMenu.vue"
-  },
-  "HeaderNavigation": {
-    "description": "Auto imported from components/header/Navigation.vue"
-  },
-  "HeaderOffCanvasMobileMenuTwo": {
-    "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
   }
 }

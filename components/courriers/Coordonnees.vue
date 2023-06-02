@@ -51,39 +51,40 @@
                 <label for="reg-name">Nom*</label>
                 <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Votre nom" v-model="model.requerant.nom" readonly>
             </div> -->
-            <div class="form-group col-6">
-                <label for="reg-name">Prénom et Nom*</label>
-                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Prénom et nom" v-model="model.requerant.prenometnom" readonly>
-            </div>
-            <div class="form-group col-6 mb-5 mt-2">
-                <label for="log-email">Email*</label>
-                <input type="email" class="border-radio readonly" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.requerant.email" readonly >
-            </div>
-            <div class="form-group col-6 mb-5 mt-2">
-                <div class="form-group col-12">
-                    <label for="reg-name">Sexe</label>
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="reg-name">Prénom et Nom*</label>
+                    <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Prénom et nom" v-model="model.requerant.prenometnom" readonly>
                 </div>
-                <div class="form-group col-12 border-input pt-3 pb-1">
+                <div class="form-group col-6">
+                    <label for="log-email">Email*</label>
+                    <input type="email" class="border-radio readonly" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.requerant.email" readonly>
+                </div>
+            </div>
+
+            <div class="form-group col-6 mb-5 mt-2">
+                <label for="reg-name">Sexe</label>
+                <div class="form-group border-input pt-3 pb-1">
                     <div class="form-check form-check-inline mr-5">
-                        <input class="form-check-input" type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme" >
-                        <label class="form-check-label" for="inlineRadio1111">Homme</label>
+                    <input class="form-check-input" type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio1111" value="Homme">
+                    <label class="form-check-label" for="inlineRadio1111">Homme</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input " type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
-                        <label class="form-check-label" for="inlineRadio2222">Femme</label>
+                    <input class="form-check-input" type="radio" v-model="model.requerant.sexe" name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
+                    <label class="form-check-label" for="inlineRadio2222">Femme</label>
                     </div>
                 </div>
-                
             </div>
             <div class="form-group col-6 mb-5 mt-2">
-                <label for="reg-name">Téléphone</label>
-                <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.requerant.telephone">
+                <label for="phone">Téléphone</label>
+                <input type="text" class="border-radio" name="phone" id="phone" placeholder="Votre numéro de téléphone" v-model="model.requerant.telephone">
+                </div>
+
+                <div class="form-group col-12 mb-5 mt-2">
+                <label for="address">Adresse</label>
+                <input type="text" class="border-input" name="address" id="address" placeholder="Adresse" v-model="model.requerant.adresse">
             </div>
-           
-            <div class="form-group col-12 mb-5 mt-2">
-                <label for="log-email">Adresse</label>
-                <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.requerant.adresse">
-            </div>
+
             <!-- PERSONNNE PHYSIQUE -->
             
             <div class="form-group col-12 mb-4 mt-3" v-if="personne_physique">

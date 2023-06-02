@@ -87,7 +87,7 @@
     </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
-                                                v-show="!isDeconnecting">SE DÉCONNECTER</span><span v-show="isDeconnecting"><svg
+                                                v-show="!isDeconnecting" class="color-login-btn">SE DÉCONNECTER</span><span v-show="isDeconnecting"><svg
                                                     width="24" height="24" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
@@ -279,6 +279,9 @@ export default {
 </script>
 
 <style>
+.color-login-btn{
+    color: black !important;
+}
 a.edu-btn,
 button.edu-btn {
     background: linear-gradient(-90deg, #31b978, #1ab69d);

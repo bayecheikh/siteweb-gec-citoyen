@@ -236,7 +236,7 @@ mounted() {
         async onClickSeDeconnecter() {
             this.isDeconnecting = true
             
-            await location.reload()
+            await this.$router.push('/')
           
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('gecIdUser')
