@@ -1,7 +1,7 @@
 <template>
     <div>
         <header class="edu-header header-style-2">
-            <HeaderTopTwo v-if="showHeaderTop" />
+        
             <div class="header-mainmenu" :class="{ 'edu-sticky': isSticky }">
                 <div class="container">
                     <div class="header-navbar">
@@ -87,7 +87,7 @@
     </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
-                                                v-if="!isDeconnecting">SE DÉCONNECTER</span><span v-if="isDeconnecting"><svg
+                                                v-show="!isDeconnecting">SE DÉCONNECTER</span><span v-show="isDeconnecting"><svg
                                                     width="24" height="24" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">

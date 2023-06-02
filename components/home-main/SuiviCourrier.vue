@@ -38,7 +38,7 @@
   </button>
 </div>
 
-                <div class="custom-loader" v-if="isCharging">
+                <div class="custom-loader" v-show="isCharging">
                     <svg width="100" height="100" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
@@ -53,7 +53,7 @@
                                                     </g>
                                                 </svg>
                 </div>
-                <div v-if="!validCode">
+                <div v-show="!validCode">
                     <div>
     <div class="resultat-section-etat-invalid d-flex">
         <div class="custom-resultat-section-etat-div"></div>
@@ -78,7 +78,7 @@
 </div>
   </div>
                 </div>
-                <div v-if="showValidMessage1&&!isCharging">
+                <div v-show="showValidMessage1&&!isCharging">
   <div>
     <div class="resultat-section-etat-pending d-flex">
         <div class="custom-resultat-section-etat-pending-div"></div>
@@ -163,7 +163,7 @@
   </table>
 </div>
 
-<div v-if="showValidMessage2&&!isCharging">
+<div v-show="showValidMessage2&&!isCharging">
   <div>
     <div class="resultat-section-etat-response d-flex">
         <div class="resultat-section-etat-response-div" ></div>

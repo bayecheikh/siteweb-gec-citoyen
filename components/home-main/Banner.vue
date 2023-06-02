@@ -5,26 +5,26 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="banner-content">
-              <h3 v-if="loading" class=" title mb-5 loader-title"></h3>
-              <h3 v-if="loading" class="custom-subtitle loader-resume mb-5"></h3>
-              <div v-if="!loading" >
-             <h3 v-if="banniere?.length === 0 || !banniere[0]?.title" class=" mb-5 title">
+              <h3 v-show="loading" class=" title mb-5 loader-title"></h3>
+              <h3 v-show="loading" class="custom-subtitle loader-resume mb-5"></h3>
+              <div v-show="!loading" >
+             <h3 v-show="banniere?.length === 0 || !banniere[0]?.title" class=" mb-5 title">
                 Plateforme
                 <span class="custom-banner-title-color">GEC CITOYEN</span> <div> du
                 Bénin </div>
               </h3>
-              <h3 v-if="banniere?.length > 0 && banniere[0]?.title" class="title">
+              <h3 v-show="banniere?.length > 0 && banniere[0]?.title" class="title">
     {{ firstWords }}
   
     <div>{{ lastWords }}</div>
   </h3>
            
-              <p v-if="banniere?.length === 0 ||  !banniere[0]?.resume" class="custom-subtitle mb-5 ">
+              <p v-show="banniere?.length === 0 ||  !banniere[0]?.resume" class="custom-subtitle mb-5 ">
                 Plateforme digitale nationale pour le dépôt électronique et
                 sécurisé de courriers à destination de l'administration
                 béninoise.
               </p>
-              <p  v-if="banniere?.length > 0 && banniere[0]?.resume" class="custom-subtitle mb-5 ">
+              <p  v-show="banniere?.length > 0 && banniere[0]?.resume" class="custom-subtitle mb-5 ">
                 {{ banniere[0]?.resume }}
               </p>
             </div>
