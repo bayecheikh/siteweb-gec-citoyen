@@ -10,30 +10,45 @@
                         <div class="contact-us-info">
                             <h3 class="heading-title">Contactez-nous !</h3>
                             <ul class="address-list">
-                                <li v-if="!adresse[0]?.resume">
+                                <!-- <li v-if="!adresse[0].resume">
                                     <h5 class="title">Adresse</h5>
                                     <p>9F87+XJ3, RN 3, Cotonou, Bénin</p>
                                 </li>
-                                <li v-if="adresse[0]?.resume">
+                                <li v-if="adresse[0].resume">
                                     <h5 class="title">Adresse</h5>
-                                    <p>{{adresse[0]?.resume}}</p>
+                                    <p>{{adresse[0].resume}}</p>
                                 </li>
-                                <li v-if="!contactEmail[0]?.resume">
+                                <li v-if="!contactEmail[0].resume">
                                     <h5 class="title">Email</h5>
                                     <p><a href="mailto:gec-citoyen@gouv.bj" target="_blank">gec-citoyen@gouv.bj</a></p>
                                 </li>
-                                <li v-if="contactEmail[0]?.resume">
+                                <li v-if="contactEmail[0].resume">
                                     <h5 class="title">Email</h5>
-                                    <p><a :href="'mailto:' + contactEmail[0]?.resume" target="_blank">{{contactEmail[0]?.resume}}</a></p>
+                                    <p><a :href="'mailto:' + contactEmail[0].resume" target="_blank">{{contactEmail[0].resume}}</a></p>
                                 </li>
-                                <li v-if="!telephone[0]?.resume">
+                                <li v-if="!telephone[0].resume">
                                     <h5 class="title">Téléphone</h5>
                                     <p><a href="tel:+22947135598">(+229) 47 135 5 98</a></p>
                                 </li>
-                                <li v-if="telephone[0]?.resume">
+                                <li v-if="telephone[0].resume">
                                     <h5 class="title">Téléphone</h5>
-                                    <p><a :href="'tel:'+telephone[0]?.resume">{{telephone[0]?.resume}}</a></p>
+                                    <p><a :href="'tel:'+telephone[0].resume">{{telephone[0].resume}}</a></p>
+                                </li> -->
+                                <li >
+                                    <h5 class="title">Adresse</h5>
+                                    <p>9F87+XJ3, RN 3, Cotonou, Bénin</p>
                                 </li>
+                               
+                                <li >
+                                    <h5 class="title">Email</h5>
+                                    <p><a href="mailto:gec-citoyen@gouv.bj" target="_blank">gec-citoyen@gouv.bj</a></p>
+                                </li>
+                              
+                                <li >
+                                    <h5 class="title">Téléphone</h5>
+                                    <p><a href="tel:+22947135598">(+229) 47 135 5 98</a></p>
+                                </li>
+                              
                             </ul>
                             <ul class="social-share">
                                 <li><a href="#"><i class="icon-facebook"></i></a></li>

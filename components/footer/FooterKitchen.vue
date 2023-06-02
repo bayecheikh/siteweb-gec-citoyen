@@ -38,22 +38,37 @@
                             </h4>
                             <div class="inner">
                                 <div class="widget-information">
-                                    <ul v-if="!footer[0]?.resume" class="information-list">
+                                    <!-- <ul v-if="!footer[0].resume" class="information-list">
                                         <li>Plateforme digitale nationale pour le dépôt électronique et sécurisé de courriers à destination de l'administration béninoise. </li>
                                     </ul>
-                                    <ul  v-if="footer[0]?.resume" class="information-list">
-                                        <li>{{footer[0]?.resume}}</li>
+                                    <ul  v-if="footer[0].resume" class="information-list">
+                                        <li>{{footer[0].resume}}</li>
+                                    </ul> -->
+                                    <ul class="information-list">
+                                        <li>Plateforme digitale nationale pour le dépôt électronique et sécurisé de courriers à destination de l'administration béninoise. </li>
                                     </ul>
-                                    <ul v-if ="reseaux" class="information-list custom-info-list"
+                                    <!-- <ul v-if ="reseaux" class="information-list custom-info-list"
                                        >
                                         <li><span class="custom-reseaux-title">Nous suivre sur :</span></li>
-                                        <li v-if="facebook[0]?.link"><a  target = "_blank" :href=facebook[0]?.link class="color-reseaux custom-reseaux"><i
+                                        <li v-if="facebook[0].link"><a  target = "_blank" :href=facebook[0].link class="color-reseaux custom-reseaux"><i
                                                     class="icon-facebook"></i></a></li>
-                                        <li v-if="linkedin[0]?.link"><a  target = "_blank" :href=linkedin[0]?.link  class="color-reseaux custom-reseaux"><i
+                                        <li v-if="linkedin[0].link"><a  target = "_blank" :href=linkedin[0].link  class="color-reseaux custom-reseaux"><i
                                                     class="icon-linkedin2"></i></a></li>
-                                        <li  v-if="instagram[0]?.link"><a target = "_blank" :href=instagram[0]?.link class="color-reseaux custom-reseaux"><i
+                                        <li  v-if="instagram[0].link"><a target = "_blank" :href=instagram[0].link class="color-reseaux custom-reseaux"><i
                                                     class="icon-instagram"></i></a></li>
-                                        <li v-if="twitter[0]?.link"><a  target = "_blank" :href=twitter[0]?.link class="color-reseaux custom-reseaux"><i
+                                        <li v-if="twitter[0].link"><a  target = "_blank" :href=twitter[0].link class="color-reseaux custom-reseaux"><i
+                                                    class="icon-twitter"></i></a></li>
+                                    </ul> -->
+                                    <ul class="information-list custom-info-list"
+                                       >
+                                        <li><span class="custom-reseaux-title">Nous suivre sur :</span></li>
+                                        <li ><a  target = "_blank" href="#" class="color-reseaux custom-reseaux"><i
+                                                    class="icon-facebook"></i></a></li>
+                                        <li ><a  target = "_blank" href="#"  class="color-reseaux custom-reseaux"><i
+                                                    class="icon-linkedin2"></i></a></li>
+                                        <li ><a target = "_blank" href="#"  class="color-reseaux custom-reseaux"><i
+                                                    class="icon-instagram"></i></a></li>
+                                        <li><a  target = "_blank" href="#"  class="color-reseaux custom-reseaux"><i
                                                     class="icon-twitter"></i></a></li>
                                     </ul>
 
@@ -82,15 +97,26 @@
                         <div class="edu-footer-widget quick-link-widget">
                             <h4 class="widget-title custom-color-white" >Contact</h4>
                             <div class="inner">
+                                <!-- <ul class="footer-link">
+                                    <li v-if="!telephone[0].resume"><i class="icon-phone custom-footer-icon" ></i>      (+229) 47 135 5 98</li>
+                                    <li v-if="telephone[0].resume"><i class="icon-phone custom-footer-icon" ></i>     {{ telephone[0].resume }}</li>
+                                    <li class="custom-footer-line"></li>
+                                    <li v-if="!email[0].resume"><i class="icon-envelope custom-footer-icon"></i>     gec@gouv.bj</li>
+                                    <li v-if="email[0].resume"><i class="icon-envelope custom-footer-icon"></i>     {{email[0].resume}}</li>
+                                    <li class="custom-footer-line"></li>
+                                    <li  v-if="!adresse[0].resume"><i class="icon-40 custom-footer-icon"></i>      Cotonou, Bénin</li>
+                                    <li  v-if="adresse[0].resume"><i class="icon-40 custom-footer-icon"></i>{{ adresse[0].resume }}</li>
+                                    <li class="custom-footer-line"></li>
+                                </ul> -->
                                 <ul class="footer-link">
-                                    <li v-if="!telephone[0]?.resume"><i class="icon-phone custom-footer-icon" ></i>      (+229) 47 135 5 98</li>
-                                    <li v-if="telephone[0]?.resume"><i class="icon-phone custom-footer-icon" ></i>     {{ telephone[0]?.resume }}</li>
+                                    <li><i class="icon-phone custom-footer-icon" ></i>     (+229) 47 135 5 98</li>
+                                  
                                     <li class="custom-footer-line"></li>
-                                    <li v-if="!email[0]?.resume"><i class="icon-envelope custom-footer-icon"></i>     gec@gouv.bj</li>
-                                    <li v-if="email[0]?.resume"><i class="icon-envelope custom-footer-icon"></i>     {{email[0]?.resume}}</li>
+                                    <li ><i class="icon-envelope custom-footer-icon"></i>     gec@gouv.bj</li>
+                                    
                                     <li class="custom-footer-line"></li>
-                                    <li  v-if="!adresse[0]?.resume"><i class="icon-40 custom-footer-icon"></i>      Cotonou, Bénin</li>
-                                    <li  v-if="adresse[0]?.resume"><i class="icon-40 custom-footer-icon"></i>{{ adresse[0]?.resume }}</li>
+                                    <li ><i class="icon-40 custom-footer-icon"></i>      Cotonou, Bénin</li>
+                                    
                                     <li class="custom-footer-line"></li>
                                 </ul>
                             </div>
