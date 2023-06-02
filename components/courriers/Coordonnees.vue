@@ -284,8 +284,8 @@ import { mapMutations, mapGetters } from 'vuex'
                 requerant:true,
                 model :{
                     requerant:{
-                        // prenom:"",
-                        // nom:"",
+                        prenom:"",
+                        nom:"",
                         prenometnom:'',
                         email:"",
                         telephone:"",
@@ -332,7 +332,7 @@ import { mapMutations, mapGetters } from 'vuex'
             submitCoordonnee(){
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
-                this.$store.dispatch('coordonnees/getDetail',{...this.model})
+                this.$store.dispatch('coordonnees/getDetail',{...this.model,nom:this.model.prenometnom,prenom:this.model.prenometnom})
                 this.$store.dispatch('active_step/getDetail',{id:'contenu'})
                 /* this.$axios.$post('/demandes')
                 .then(async (response) => {
