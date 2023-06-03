@@ -16,7 +16,7 @@
                 <label for="reg-name">Choisir une entrée</label>
                 <select class="custom-select" @change="changeModelEntree($event)" v-model="selectedEntree">
                     <!-- <option>--</option> -->
-                    <option v-for="item in modelEntree" :key="item.serialId" :value="item.serialId" :selected="item.id == 'BC1'">{{item.entity_label}}</option>
+                    <option v-for="item in detailentree" :key="item.serialId" :value="item.serialId">{{item.entity_label}}</option>
                 </select>
             </div>
             <div class="edu-sorting form-group col-12" v-if="saisie">
@@ -130,9 +130,11 @@ import { validationMixin } from 'vuelidate'
         computed: mapGetters({
             detailutilisateur: 'coordonnees/detailutilisateur',
             detailministere: 'ministeres/detailministere',
+            detailentree: 'entrees/detailentree',
             detailcontenu: 'contenus/detailcontenu'
         }),
         mounted: async function () {
+        
             try {
                 const response = await this.$axios.get("/model-courriers");
                 /* for (let organisme of response.data.data.data) {
@@ -145,26 +147,23 @@ import { validationMixin } from 'vuelidate'
                 return;
             }
 
-            try {
-                const detailministere = await this.$store.getters['ministeres/detailministere'];
-                const structure_id = await detailministere['structure'];
-                console.log ("structureid", structure_id)
-                const response = await this.$axios.get("/structures/"+structure_id+"/entrees");
-              
-                this.modelEntree = await response.data.data.data
-                const defaultItem = this.modelEntree.find(item => item.id === 'BC1');
-    if (defaultItem) {
-      this.selectedEntree = defaultItem.serialId;
-    }
-            }
-            catch (error) {
-                console.error("ERREURS ENTREES", error);
-                return;
-            }
+                // const detailministere = await this.$store.getters['ministeres/detailministere'];
+                // let structure_id  = detailministere['structure']
+                //  structure_id  = this.detailministere['structure']
+                // const response = await this.$axios.get("/structures/"+structure_id+"/entrees");
+                // this.modelEntree = await response.data.data.data
+                // const defaultItem = this.modelEntree.find(item => item.id === 'BC1');
+                // if (defaultItem) {
+                //     this.selectedEntree = defaultItem.serialId;
+                //     this.selectedEntreeName = defaultItem.entity_label;
+         
+           
         },
+        
         data() {
             return {
-                selectedEntree:'BC1',
+    
+                selectedEntree:'',
                 fileInfos:[{name:'file 1',url:'#'},{name:'file 2',url:'#'}],
                 key:null,
                 imageData:null,
@@ -214,7 +213,7 @@ import { validationMixin } from 'vuelidate'
       if (!this.$v.$invalid) {
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
-                this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree,subject:this.model.subject})
+                this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree, subject:this.model.subject})
                 this.$store.dispatch('active_step/getDetail',{id:'validation'})
       }
 
@@ -230,11 +229,14 @@ import { validationMixin } from 'vuelidate'
 
                 this.model.modelId = parseInt($event.target.value)
             },
-            changeModelEntree($event){
-                console.log('Données formulaire ++++++: ', $event.target.value)
+          async  changeModelEntree($event){
+                console.log('changeModelEntree ++++++: ', $event.target)
                 /* this.model.message = $event.target.value.text
                 this.model.subject = $event.target.value.libelle */
                 this.model.entree = $event.target.value
+
+
+                
             },
             changeType($event){
                 console.log('Données formulaire ++++++: ', $event.target.value)

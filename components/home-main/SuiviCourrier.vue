@@ -2,10 +2,26 @@
     <div>
         <div class="custom-suivi-courrier-template offset-xl-2 custom-col-lg-6 col-lg-6">
             <div class="contact-form custom-suivi-form-style-2 form-style-2">
-                <div class="close-menu">
+                <!-- <div class="close-menu">
                 <button @click="onClickClose()"  class="custom-suivi-close-btn"> <i class="icon-73"></i></button>
+                </div> -->
+                <div v-if="isCharging" class="close-menu">
+                    <span class="custom-loader" >
+                    <svg width="50" height="50" viewBox="0 0 38 38"
+                                                    xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g transform="translate(1 1)" stroke-width="2">
+                                                            <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                                                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                                                                <animateTransform attributeName="transform" type="rotate"
+                                                                    from="0 18 18" to="360 18 18" dur="1s"
+                                                                    repeatCount="indefinite" />
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </span> 
                 </div>
-           
                 <div class="section-title custom-suivi-section-title">
                     <h4 class="title custom-suivi-title text-uppercase text-left custom-title-font">
  
@@ -28,17 +44,17 @@
     placeholder="CODE DE SUIVI"
     v-model="code"
   >
-  <button
+  <!-- <button
     class="btn-medium custom-main-banner-track-btn"
     name="submit"
     type="submit"
     @click="isCodeValid(code)"
   >
     <i class="custom-track-btn-icon icon-4"></i>
-  </button>
+  </button> -->
 </div>
 
-                <div class="custom-loader" v-if="isCharging">
+                <!-- <div class="custom-loader" v-if="isCharging">
                     <svg width="100" height="100" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
@@ -52,7 +68,7 @@
                                                         </g>
                                                     </g>
                                                 </svg>
-                </div>
+                </div> -->
                 <div v-show="!validCode">
                     <div>
     <div class="resultat-section-etat-invalid d-flex">
@@ -231,7 +247,34 @@
     </tr>
   </table>
 </div>
+<div class="button-group d-flex justify-content-end">
+<button @click="onClickClose()"  class=" custom-suivi-close-button"><span class="custom-suivi-btn-color">FERMER</span></button>
+<button
+    class="custom-main-banner-track-btn"
+    name="submit"
+    type="submit"
+    @click="isCodeValid(code)"
+    :disabled="isCharging"
 
+  >
+  <span v-if="!isCharging" class="custom-suivi-btn-color">VÉRIFIER</span><span  v-else class="custom-suivi-btn-color">      <span >
+                    <svg width="20" height="20" viewBox="0 0 38 38"
+                                                    xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <g transform="translate(1 1)" stroke-width="4">
+                                                            <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                                                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                                                                <animateTransform attributeName="transform" type="rotate"
+                                                                    from="0 18 18" to="360 18 18" dur="1s"
+                                                                    repeatCount="indefinite" />
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </span> En cours ...</span>
+  </button>
+
+  </div>
             </div>
         </div>
     </div>
@@ -359,7 +402,10 @@ export default {
 
 <style>
 
-
+.button-group {
+  justify-content: flex-end;
+  gap: 15px;
+}
 .custom-input-group button {
   height: 60px;
   width: 60px;
@@ -372,18 +418,13 @@ export default {
   color: #0a3764 !important;
 }
 .custom-main-banner-track-btn {
-  border-radius: 5px;
-  border-color: #0a3764 !important;
-  background-color:#0a3764 !important;
-  background: #0a3764 !important;
+    padding: 15px;
+ 
+  background-color: #28a745 !important;
+  background: #28a745 !important;
   cursor: pointer;
 }
-.custom-main-banner-track-btn:hover {
-  background: #154f88 !important;
-}
-.custom-main-banner-track-btn::after {
-  background: #154f88 !important;
-}
+
 .custom-resultat-section-etat-div{
     background-color: #bc412b;
     padding: 0px !important;
@@ -580,17 +621,19 @@ export default {
 }
 
 
-.custom-suivi-close-btn {
-    position: absolute;
-    top: 3% !important;
-    right: 1% !important;
-    border-radius: 50%;
-    padding: 10px;
-    color : red !important;
-    background-color: white !important;
-    background: white !important;
-    border: none !important;
+.custom-suivi-close-button {
+   
+ padding: 15px;
+  
+  background-color: #6c757d !important;
+  background: #6c757d !important;
+  cursor: pointer;
+ 
 
+}
+.custom-suivi-btn-color{
+    color : white !important;
+    font-weight: 600 !important;
 }
 
 .custom-information-msg {
@@ -814,8 +857,8 @@ p {
 }
 .custom-loader{
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: right !important;
+    justify-content: right !important;
 }
 .custom-title-font{
     margin-left: -15px;

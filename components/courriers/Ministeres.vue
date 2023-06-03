@@ -106,10 +106,13 @@ export default {
             return organisme.description.toLowerCase().includes(search);
             });
         },
-        submitMinistere(item){
+       async submitMinistere(item){
             this.load=true
             console.log('Ministère ++++++: ', item)
+            const response = await this.$axios.get("/structures/"+item.id+"/entrees");
+            const entrees = await response.data.data.data
             this.$store.dispatch('ministeres/getDetail',{title_organisme:item.description,structure:item.id})
+            this.$store.dispatch('entrees/getDetail',entrees)
             this.$store.dispatch('active_step/getDetail',{id:'coordonnees'})
         }
     },
