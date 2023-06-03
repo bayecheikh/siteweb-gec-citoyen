@@ -99,9 +99,10 @@
                 <input type="checkbox" id="terms-condition" v-model="model.acceptedTerms">
                 <label for="terms-condition">J'accepte les termes et conditions <a href="#">Termes & Conditions.</a> </label>
                 </div>
-                <div v-if="$v.model.acceptedTerms.$error">
-    <p class="custom-validation-error-msg  mt-2">Vous devez accepter les termes et conditions.</p>
-  </div>
+                
+            </div>
+            <div v-if="$v.model.acceptedTerms.$error">
+                <p class="custom-validation-error-msg  mt-2">Vous devez accepter les termes et conditions.</p>
             </div>
             <div class="row d-flex justify-content-between">
                 <div class="form-group col-3 mt-5">
@@ -143,6 +144,15 @@ import { validationMixin } from 'vuelidate'
                 console.error(error);
                 return;
             }
+            try {
+                const response = await this.$axios.get("/structures/6435542246bf128b4c58e647/entrees");
+              
+                this.modelEntree = response.data.data
+            }
+            catch (error) {
+                console.error("ERREURS ENTREES", error);
+                return;
+            }
         },
         data() {
             return {
@@ -159,11 +169,7 @@ import { validationMixin } from 'vuelidate'
                     {id:2,libelle:'Demande',text:'Message message'},
                     {id:3,libelle:'Opinion',text:'Lorum ipsum dolor Lorum ipsum dolor'},
                 ],
-                modelEntree:[
-                    {id:1,libelle:'Secrétariat administratif',text:'Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor Lorum ipsum dolor',default:true},
-                    {id:2,libelle:'Secrétariat DC',text:'Message message'},
-                    {id:3,libelle:'Secrétariat particulier',text:'Lorum ipsum dolor Lorum ipsum dolor'},
-                ],
+                modelEntree: [],
                 model :{
                     uploadedFile: null,
                     acceptedTerms: null,

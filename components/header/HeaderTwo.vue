@@ -242,6 +242,7 @@ mounted() {
             await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
+            await localStorage.removeItem('isauthenticatingfrombutton')
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
             this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
             this.$store.dispatch('authentication/getDetail', false)
