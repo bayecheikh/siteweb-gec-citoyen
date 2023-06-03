@@ -5,12 +5,6 @@
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
   },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"
   },
@@ -31,6 +25,12 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "FooterKitchen": {
     "description": "Auto imported from components/footer/FooterKitchen.vue"

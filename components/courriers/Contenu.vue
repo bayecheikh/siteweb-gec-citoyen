@@ -106,7 +106,7 @@
             </div>
             <div class="row d-flex justify-content-between">
                 <div class="form-group col-3 mt-5">
-                <button @click="$goToTab('ministeres')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
+                <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précédent</button>
                 </div>
                 <div class="form-group col-3 mt-5">
                     <button @click="submitContenu" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
