@@ -42,12 +42,12 @@
             const sortedVideos = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.videos = await sortedVideos.slice(0, 1);
           if (this.videos){
-            this.video = this.videos[0]
+            this.video = await this.videos[0]
           }
           
             this.items = [
                     {
-                        src: "https://www.youtube.com/watch?v=HrNBaa59PtU"
+                        src: this.video.link
                     }
                 ];
         } catch (error) {

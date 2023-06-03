@@ -38,7 +38,7 @@
   </button>
 </div>
 
-                <div class="custom-loader" v-show="isCharging">
+                <div class="custom-loader" v-if="isCharging">
                     <svg width="100" height="100" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
@@ -243,10 +243,10 @@ export default {
     axios: {
         baseURL: 'https://api-gec-citoyen.fly.dev'
     },
-    // mounted: async function () {
-    //     this.isCodeValid()
+    mounted: async function () {
+        this.isCharging = false
       
-    // },
+    },
 
     // computed: {
     //     ...mapGetters({

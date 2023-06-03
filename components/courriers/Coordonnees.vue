@@ -54,11 +54,11 @@
             <div class="row">
                 <div class="form-group col-6">
                     <label for="reg-name">Prénom et Nom*</label>
-                    <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" placeholder="Prénom et nom" v-model="model.requerant.prenometnom" readonly>
+                    <input type="text" class="border-radio readonly" name="reg-name" id="reg-name" v-model="model.requerant.prenometnom" readonly>
                 </div>
                 <div class="form-group col-6">
                     <label for="log-email">Email*</label>
-                    <input type="email" class="border-radio readonly" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.requerant.email" readonly>
+                    <input type="email" class="border-radio readonly" name="log-email" id="log-email" v-model="model.requerant.email" readonly>
                 </div>
             </div>
 
@@ -77,12 +77,12 @@
             </div>
             <div class="form-group col-6 mb-5 mt-2">
                 <label for="phone">Téléphone</label>
-                <input type="text" class="border-radio" name="phone" id="phone" placeholder="Votre numéro de téléphone" v-model="model.requerant.telephone">
+                <input type="text" class="border-radio" name="phone" id="phone"  v-model="model.requerant.telephone">
                 </div>
 
                 <div class="form-group col-12 mb-5 mt-2">
                 <label for="address">Adresse</label>
-                <input type="text" class="border-input" name="address" id="address" placeholder="Adresse" v-model="model.requerant.adresse">
+                <input type="text" class="border-input" name="address" id="address"  v-model="model.requerant.adresse">
             </div>
 
             <!-- PERSONNNE PHYSIQUE -->
@@ -96,11 +96,11 @@
             <div class="row d-flex" v-if="personne_physique">
                 <div class="form-group col-6">
                     <label for="reg-name">Prénom*</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre prénom" v-model="model.personne_physique.prenom">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" v-model="model.personne_physique.prenom">
                 </div>
                 <div class="form-group col-6">
                     <label for="reg-name">Nom*</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre nom" v-model="model.personne_physique.nom">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name"  v-model="model.personne_physique.nom">
                 </div>
                 <div class="form-group col-6 mb-4 mt-2">
                     <div class="form-group col-12 mb-0">
@@ -120,15 +120,15 @@
                 </div>
                 <div class="form-group col-6 mb-5 mt-2">
                     <label for="reg-name">Téléphone*</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Votre numéro de téléphone" v-model="model.personne_physique.telephone">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" v-model="model.personne_physique.telephone">
                 </div>
                 <div class="form-group col-6">
                     <label for="log-email">Email*</label>
-                    <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.personne_physique.email">
+                    <input type="email" class="border-radio" name="log-email" id="log-email"  v-model="model.personne_physique.email">
                 </div>
                 <div class="form-group col-6">
                     <label for="log-email">Adresse*</label>
-                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="Adresse" v-model="model.personne_physique.adresse">
+                    <input type="text" class="border-input" name="reg-name" id="reg-name" v-model="model.personne_physique.adresse">
                 </div>
             </div>
             
@@ -146,38 +146,38 @@
                 </div>
                 <div class="form-group col-12">
                     <label for="reg-name">Nom de la société*</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Nom de la société" v-model="model.entreprise.nom_societe">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" v-model="model.entreprise.nom_societe">
                 </div>
                 <div class="form-group col-6">
                     <label for="reg-name">Numéro RCA*</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Numéro RCA" v-model="model.entreprise.numero_rca">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name"  v-model="model.entreprise.numero_rca">
                 </div>
 
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Numéro NINEA*</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="Numéro NINEA" v-model="model.entreprise.numero_ninea">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name"  v-model="model.entreprise.numero_ninea">
                 </div>
                 <div class="form-group col-6">
                     <label for="log-email">Email de l'entreprise*</label>
-                    <input type="email" class="border-radio" name="log-email" id="log-email" placeholder="Votre Email" v-model="model.entreprise.email_entreprise">
+                    <input type="email" class="border-radio" name="log-email" id="log-email" v-model="model.entreprise.email_entreprise">
                 </div>
                 <div class="form-group col-6 mb-5">
                     <label for="log-email">Siége social de l'entreprise*</label>
-                    <input type="text" class="border-input" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.adresse_entreprise">
+                    <input type="text" class="border-input" name="reg-name" id="reg-name"  v-model="model.entreprise.adresse_entreprise">
                 </div>
                 <hr class='dotted mt-5' />
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Prénom du représentant légal</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.prenom_representant_legal">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" v-model="model.entreprise.prenom_representant_legal">
                 </div>
                 
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Nom du représentant légal</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.nom_representant_legal">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" v-model="model.entreprise.nom_representant_legal">
                 </div>
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Téléphone du représentant légal</label>
-                    <input type="text" class="border-radio" name="reg-name" id="reg-name" placeholder="" v-model="model.entreprise.telephone_representant_legal">
+                    <input type="text" class="border-radio" name="reg-name" id="reg-name" v-model="model.entreprise.telephone_representant_legal">
                 </div>
                 <div class="form-group col-6 mb-5 ">
                     <label for="reg-name">Email du représentant légal</label>

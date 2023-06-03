@@ -8,8 +8,6 @@ You can directly use them in pages and other components without the need to impo
 
 - `<FunFact>` | `<fun-fact>` (components/FunFact.vue)
 - `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)
-- `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
-- `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
 - `<CourriersConnexion>` | `<courriers-connexion>` (components/courriers/Connexion.vue)
 - `<CourriersContenu>` | `<courriers-contenu>` (components/courriers/Contenu.vue)
 - `<CourriersCoordonnees>` | `<courriers-coordonnees>` (components/courriers/Coordonnees.vue)
@@ -19,6 +17,8 @@ You can directly use them in pages and other components without the need to impo
 - `<CourriersValidation>` | `<courriers-validation>` (components/courriers/Validation.vue)
 - `<FooterKitchen>` | `<footer-kitchen>` (components/footer/FooterKitchen.vue)
 - `<FooterScrollToTop>` | `<footer-scroll-to-top>` (components/footer/ScrollToTop.vue)
+- `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
+- `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
 - `<HeaderOne>` | `<header-one>` (components/header/HeaderOne.vue)
 - `<HeaderTwo>` | `<header-two>` (components/header/HeaderTwo.vue)
 - `<HeaderMobileMenu>` | `<header-mobile-menu>` (components/header/MobileMenu.vue)

@@ -54,9 +54,9 @@ export default {
                     const { code, ...queryParams } = this.$route.query;
                     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
                     await this.$router.replace(newUrl);
-                    this.$router.push("/");
+                    await this.$router.push("/");
                 }
-
+                localStorage.removeItem('isauthenticatingfrombutton');
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
                 this.$store.dispatch("toast/getMessage", {
                     type: "success",
@@ -81,6 +81,7 @@ export default {
             await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
+            localStorage.removeItem('isauthenticatingfrombutton');
             const { logout, ...queryParams } = this.$route.query;
             const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
             await this.$router.replace(newUrl);
