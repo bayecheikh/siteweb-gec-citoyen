@@ -16,7 +16,7 @@
                 <label for="reg-name">Choisir une entrée</label>
                 <select class="custom-select" @change="changeModelEntree($event)" v-model="selectedEntree">
                     <!-- <option>--</option> -->
-                    <option v-for="item in modelEntree" :key="item.id" :value="item.libelle" >{{item.libelle}}</option>
+                    <option v-for="item in modelEntree" :key="item.serialId" :value="item.serialId" :selected="item.id == 'BC1'">{{item.entity_label}}</option>
                 </select>
             </div>
             <div class="edu-sorting form-group col-12" v-if="saisie">
@@ -96,7 +96,7 @@
             </div>
             <div class="form-group col-12 chekbox-area">
                 <div class="edu-form-check">
-                <input type="checkbox" id="terms-condition" v-model="model.acceptedTerms">
+                <input type="checkbox" id="terms-condition" v-model="model.acceptedTerms" :required="true">
                 <label for="terms-condition">J'accepte les termes et conditions <a href="#">Termes & Conditions.</a> </label>
                 </div>
                 
@@ -144,10 +144,18 @@ import { validationMixin } from 'vuelidate'
                 console.error(error);
                 return;
             }
+
             try {
-                const response = await this.$axios.get("/structures/6435542246bf128b4c58e647/entrees");
+                const detailministere = await this.$store.getters['ministeres/detailministere'];
+                const structure_id = await detailministere['structure'];
+                console.log ("structureid", structure_id)
+                const response = await this.$axios.get("/structures/"+structure_id+"/entrees");
               
-                this.modelEntree = response.data.data
+                this.modelEntree = await response.data.data.data
+                const defaultItem = this.modelEntree.find(item => item.id === 'BC1');
+    if (defaultItem) {
+      this.selectedEntree = defaultItem.serialId;
+    }
             }
             catch (error) {
                 console.error("ERREURS ENTREES", error);
@@ -156,7 +164,7 @@ import { validationMixin } from 'vuelidate'
         },
         data() {
             return {
-                selectedEntree:'Secrétariat administratif',
+                selectedEntree:'BC1',
                 fileInfos:[{name:'file 1',url:'#'},{name:'file 2',url:'#'}],
                 key:null,
                 imageData:null,

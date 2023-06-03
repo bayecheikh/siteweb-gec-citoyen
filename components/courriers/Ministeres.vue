@@ -99,7 +99,7 @@ export default {
     methods: {
         filterOrganismes() {
             if (!this.recherche) {
-            return this.organismes;
+                return this.organismes;
             }
             const search = this.recherche.toLowerCase();
             return this.organismes.filter(organisme => {
