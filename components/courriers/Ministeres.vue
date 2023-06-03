@@ -61,12 +61,10 @@
             <!-- <div class="form-group col-3">
             <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium"><i class="icon-west"></i> Précedent</button>
             </div> -->
-             <div class="form-group col-3">
-           
-            </div>
-            <div class="form-group col-3">
+          
+            <!-- <div class="form-group col-3">
                 <button @click="$goToTab('coordonnees')" type="button" class="edu-btn btn-medium">Suivant <i class="icon-east"></i></button>
-            </div>
+            </div>  -->
         </div>
     </div>
 

@@ -7,7 +7,7 @@
             <div class="row isotop-button isotop-filter nav d-flex justify-content-between">
                <!-- <button @click="$goToTab('connexion')" :class="'nav-link '+(detailactive_step.id=='connexion'?'active':'')">Connexion</button> -->
                <div class="col-2 d-flex flex-column justify-content-center align-center">
-                  <div :class="'icon-step '+(detailactive_step.id=='ministeres'?'active_step':'')" @click="$goToTab('ministeres')">
+                  <div :class="'icon-step '+(detailactive_step.id=='ministeres'?'active_step':'')" >
                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         width="26.588" height="26.529" viewBox="0 0 46.588 46.529">
                         <defs>
@@ -35,7 +35,7 @@
                   </svg>
                </div>
                <div class="col-2 d-flex flex-column justify-content-center align-center">
-                  <div :class="'icon-step '+(detailactive_step.id=='coordonnees'?'active_step':'')" @click="$goToTab('coordonnees')">
+                  <div :class="'icon-step '+(detailactive_step.id=='coordonnees'?'active_step':'')" >
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
                         viewBox="0 0 38.16 40.834">
                         <g transform="translate(-5928 -10528.621)">
@@ -61,7 +61,7 @@
                </div>
                
                <div class="col-2 d-flex flex-column justify-content-center align-center">
-                  <div :class="'icon-step '+(detailactive_step.id=='contenu'?'active_step':'')" @click="$goToTab('contenu')">
+                  <div :class="'icon-step '+(detailactive_step.id=='contenu'?'active_step':'')" >
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
                                 viewBox="0 0 40.834 40.832">
                         <g transform="translate(-847 -579)">
@@ -86,7 +86,7 @@
                </div>
                
                <div class="col-2 d-flex flex-column justify-content-center align-center">
-                  <div :class="'icon-step '+(detailactive_step.id=='validation'?'active_step':'')" @click="$goToTab('validation')">
+                  <div :class="'icon-step '+(detailactive_step.id=='validation'?'active_step':'')">
                      <svg xmlns="http://www.w3.org/2000/svg" width="26.588" height="26.529"
                         viewBox="0 0 35.563 43.951">
                         <g transform="translate(-1604 -553)">

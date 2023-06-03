@@ -24,7 +24,6 @@ You can directly use them in pages and other components without the need to impo
 - `<HeaderMobileMenu>` | `<header-mobile-menu>` (components/header/MobileMenu.vue)
 - `<HeaderNavigation>` | `<header-navigation>` (components/header/Navigation.vue)
 - `<HeaderOffCanvasMobileMenuTwo>` | `<header-off-canvas-mobile-menu-two>` (components/header/OffCanvasMobileMenuTwo.vue)
-- `<HomeDistantLearningCourrierEnvoye>` | `<home-distant-learning-courrier-envoye>` (components/home-distant-learning/CourrierEnvoye.vue)
 - `<HomeMainAccordionOne>` | `<home-main-accordion-one>` (components/home-main/AccordionOne.vue)
 - `<HomeMainBanner>` | `<home-main-banner>` (components/home-main/Banner.vue)
 - `<HomeMainCategories>` | `<home-main-categories>` (components/home-main/Categories.vue)
@@ -32,3 +31,4 @@ You can directly use them in pages and other components without the need to impo
 - `<HomeMainFunFact>` | `<home-main-fun-fact>` (components/home-main/FunFact.vue)
 - `<HomeMainSuiviCourrier>` | `<home-main-suivi-courrier>` (components/home-main/SuiviCourrier.vue)
 - `<HomeMainVideo>` | `<home-main-video>` (components/home-main/Video.vue)
+- `<HomeDistantLearningCourrierEnvoye>` | `<home-distant-learning-courrier-envoye>` (components/home-distant-learning/CourrierEnvoye.vue)

@@ -53,9 +53,6 @@
   "HeaderOffCanvasMobileMenuTwo": {
     "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
   },
-  "HomeDistantLearningCourrierEnvoye": {
-    "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
-  },
   "HomeMainAccordionOne": {
     "description": "Auto imported from components/home-main/AccordionOne.vue"
   },
@@ -76,5 +73,8 @@
   },
   "HomeMainVideo": {
     "description": "Auto imported from components/home-main/Video.vue"
+  },
+  "HomeDistantLearningCourrierEnvoye": {
+    "description": "Auto imported from components/home-distant-learning/CourrierEnvoye.vue"
   }
 }
