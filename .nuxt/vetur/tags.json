@@ -26,17 +26,17 @@
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
   },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
   "FooterKitchen": {
     "description": "Auto imported from components/footer/FooterKitchen.vue"
   },
   "FooterScrollToTop": {
     "description": "Auto imported from components/footer/ScrollToTop.vue"
+  },
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "HeaderOne": {
     "description": "Auto imported from components/header/HeaderOne.vue"

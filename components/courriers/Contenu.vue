@@ -164,6 +164,7 @@ import { validationMixin } from 'vuelidate'
             return {
     
                 selectedEntree:'',
+                selectedEntreeName:'',
                 fileInfos:[{name:'file 1',url:'#'},{name:'file 2',url:'#'}],
                 key:null,
                 imageData:null,
@@ -213,7 +214,7 @@ import { validationMixin } from 'vuelidate'
       if (!this.$v.$invalid) {
                 this.load=true
                 console.log('Données formulaire ++++++: ', {...this.model})
-                this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree, subject:this.model.subject})
+                this.$store.dispatch('contenus/getDetail',{...this.model,entree:this.selectedEntree, entreename:this.selectedEntreeName, subject:this.model.subject})
                 this.$store.dispatch('active_step/getDetail',{id:'validation'})
       }
 
@@ -230,13 +231,16 @@ import { validationMixin } from 'vuelidate'
                 this.model.modelId = parseInt($event.target.value)
             },
           async  changeModelEntree($event){
+            const selectedOption = await $event.target.selectedOptions[0];
+            const entityLabel = await selectedOption.textContent;
+            if (entityLabel) {
+                    this.selectedEntreeName = entityLabel;
+                }
                 console.log('changeModelEntree ++++++: ', $event.target)
                 /* this.model.message = $event.target.value.text
                 this.model.subject = $event.target.value.libelle */
-                this.model.entree = $event.target.value
-
-
-                
+               
+               
             },
             changeType($event){
                 console.log('Données formulaire ++++++: ', $event.target.value)
