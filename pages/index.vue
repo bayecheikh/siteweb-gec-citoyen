@@ -23,6 +23,7 @@ export default {
    
 
         if (this.$route.query.code) {
+            window.location.href = "https://siteweb-gec-citoyen.vercel.app";
             this.model = {
                 code: this.$route.query.code,
                 authorisation: 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
@@ -54,8 +55,8 @@ export default {
                     const { code, ...queryParams } = this.$route.query;
                     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
                     await this.$router.replace(newUrl);
-                    //  window.location.href = "https://siteweb-gec-citoyen.vercel.app";
-                    this.$router.go(0)
+              
+                  
                 }
                 localStorage.removeItem('isauthenticatingfrombutton');
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
