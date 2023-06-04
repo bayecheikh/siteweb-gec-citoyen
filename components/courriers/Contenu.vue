@@ -185,13 +185,13 @@ import { validationMixin } from 'vuelidate'
                     encodedFile:'',
                     pieces_jointes:[],
                     modelId:1,
-                    entree:'',
+                  
                     format:"",
                     subject:"",
                     message:"",
                     doctype:102,   
                     status:"COU",
-                    destination:1             
+                    destination: ''           
                 } 
             }
         },
@@ -231,6 +231,7 @@ import { validationMixin } from 'vuelidate'
                 this.model.modelId = parseInt($event.target.value)
             },
           async  changeModelEntree($event){
+            this.model.destination = $event.target.value
             const selectedOption = await $event.target.selectedOptions[0];
             const entityLabel = await selectedOption.textContent;
             if (entityLabel) {
@@ -239,7 +240,7 @@ import { validationMixin } from 'vuelidate'
                 console.log('changeModelEntree ++++++: ', $event.target)
                 /* this.model.message = $event.target.value.text
                 this.model.subject = $event.target.value.libelle */
-               
+              
                
             },
             changeType($event){
