@@ -215,7 +215,7 @@
 
   </g>
 
-</svg>Date de dépôt</td>
+</svg>Date de réponse</td>
       
       <td><svg xmlns="http://www.w3.org/2000/svg" width="23.914" height="26.492" viewBox="0 0 23.914 26.492">
 
@@ -241,7 +241,7 @@
 </svg>Objet</td>
     </tr>
     <tr>
-        <td>{{ new Date(this.createdAt).toLocaleDateString('fr-FR') }}</td>
+        <td>{{ new Date(this.dateReponse).toLocaleDateString('fr-FR') }}</td>
       <td>{{ this.structure }}</td>
       <td>{{ this.subject }}</td>
     </tr>
@@ -320,6 +320,7 @@ export default {
             const response = await this.$axios.get("/courriers/"+code.toUpperCase()+"/status");
             console.log("Reponse",response?.data?.data?.data)
             this.subject = response?.data?.data?.data?.objet
+            this.idcourrier = response?.data?.data?.data?.id
             this.structure = response?.data?.data?.data?.destinataire?.description
             this.createdAt = response?.data?.data?.data?.dateDepot
             this.status = response?.data?.data?.data?.status
@@ -367,7 +368,8 @@ export default {
             }
             else {
              
-                
+                const response = await this.$axios.get("/courriers/"+this.idcourrier);
+                this.dateReponse = response?.data?.data?.data?.responses[0]?.send_date
                     this.showValidMessage2 = true
                     this.showValidMessage1 = false
                     this.validCode = true
@@ -383,6 +385,8 @@ export default {
 
     data() {
         return {
+            dateReponse: '',
+            idcourrier: '',
             code: '',
             isCharging: false,
 
