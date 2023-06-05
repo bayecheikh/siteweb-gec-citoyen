@@ -29,7 +29,7 @@
             <div class="form-group col-12">
                 <label for="reg-name">Objet*</label>
                 <input ref="subject" class="custom-input" type="text" v-model="model.subject" name="reg-name" id="reg-name" placeholder="Objet du courrier">
-                <div  v-if="$v.model.subject.$error"><p class="custom-validation-error-msg">L'objet est obligatoire.</p></div>
+                <div  v-if="$v.model.subject.$error"><p class="custom-validation-error-msg">L'objet du courrier doit contenir au moins 5 caractères.</p></div>
             </div>
             <div class="form-group col-12 mt-4" v-if="saisie">
                 <label for="reg-name">Message*</label>
@@ -119,7 +119,7 @@
 
 <script>
 import { mapMutations, mapGetters } from 'vuex'
-import { required } from 'vuelidate/lib/validators'
+import { required, minLength } from 'vuelidate/lib/validators'
 
 import { validationMixin } from 'vuelidate'
     export default {
@@ -198,7 +198,8 @@ import { validationMixin } from 'vuelidate'
         validations: {
             model: {
             subject: {
-                required
+                required,
+                minLength: minLength(5)
             },
             acceptedTerms: {
             required
