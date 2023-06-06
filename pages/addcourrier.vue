@@ -25,8 +25,8 @@ export default {
     //         console.log("AAAAAAA", localStorage.getItem('gecToken'))
     //         if (this.$getToken()==null || this.$getUser()==null || this.$isLogged()==null || this.$isLogged()==false )    {
     //             this.$loggout()
-    
-    
+
+
     //             return redirect('/')
     //         }
     //     }
@@ -36,10 +36,10 @@ export default {
         Form: () => import("@/components/courriers/Form"),
         FooterKitchen: () => import("@/components/footer/FooterKitchen")
     },
-    
-    mounted: function() {
+
+    mounted: function () {
         this.getToken()
- 
+
         // if (process.server) {
         //     console.log('on server');
         //     return
@@ -49,29 +49,29 @@ export default {
         //     return
         // }
         // if (process.client) {
-            //console.log("im on client 44444444444");
-            // return localStorage.getItem('gecToken')
-            console.log('token: ++++++++++ ', this.$getToken())
-             this.getToken()
-            if (this.$getToken()==null || this.$getUser()==null || this.$isLogged()==null || this.$isLogged()==false )    {
-                console.log("Non connecté");
-                this.$loggout()
-    
-    
-                return this.$router.push('/')
-            }
-           
+        //console.log("im on client 44444444444");
+        // return localStorage.getItem('gecToken')
+        console.log('token: ++++++++++ ', this.$getToken())
+        this.getToken()
+        if (this.$getToken() == null || this.$getUser() == null || this.$isLogged() == null || this.$isLogged() == false) {
+            console.log("Non connecté");
+            this.$loggout()
+
+
+            return this.$router.push('/')
+        }
+
         // }
-        },
+    },
     head() {
         return {
             title: 'Envoyer un courrier'
         }
     },
-    methods:{
-        getToken(){
+    methods: {
+        getToken() {
             console.log("aaaa", localStorage.getItem('gecToken'))
-         
+
         }
     }
 }

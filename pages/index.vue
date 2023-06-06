@@ -20,8 +20,6 @@ export default {
 
     mounted: async function () {
 
-   
-
         if (this.$route.query.code) {
             this.model = {
                 code: this.$route.query.code,
@@ -35,7 +33,7 @@ export default {
                 await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
 
                 console.log("TOKEN PNS RESPONSE", JSON.parse(localStorage.getItem('NEWRESPONSE')))
-                
+
 
                 await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 // await localStorage.setItem('gecToken', response.data.id_token.id_token)
@@ -52,12 +50,10 @@ export default {
                 }
                 else {
                     window.location.href = "https://siteweb-gec-citoyen.vercel.app";
-
                     const { code, ...queryParams } = this.$route.query;
                     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
                     await this.$router.replace(newUrl);
-              
-                  
+
                 }
                 localStorage.removeItem('isauthenticatingfrombutton');
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
@@ -70,7 +66,7 @@ export default {
                     dataUser: this.parseJwt(response.id_token),
                 });
                 this.$store.dispatch("active_step/getDetail", { id: "coordonnees" });
-       
+
 
             } catch (error) {
                 console.error(error);
@@ -79,7 +75,7 @@ export default {
                 return;
             }
         }
-        if (this.$route.query.logout){
+        if (this.$route.query.logout) {
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecLoggedInUser')
@@ -107,11 +103,6 @@ export default {
     head() {
         return {
             title: 'GEC CITOYEN'
-        }
-    },
-    data() {
-        return {
-
         }
     },
     methods: {

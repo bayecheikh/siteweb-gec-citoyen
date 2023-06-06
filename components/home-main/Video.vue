@@ -18,60 +18,58 @@
                 </div>
             </div>
         </div>
-        <CoolLightBox
-            :items="items"
-            :index="index"
-            @close="index = null"
-        >
+        <CoolLightBox :items="items" :index="index" @close="index = null">
         </CoolLightBox>
     </div>
 </template>
 
 <script>
-    export default {
-        modules: ['@nuxtjs/axios'],
+export default {
+    modules: ['@nuxtjs/axios'],
     axios: {
         baseURL: 'https://api-gec-citoyen.fly.dev'
     },
     mounted: async function () {
         try {
             const response = await this.$axios.get("/contenus");
-          
+
             const filteredContenus = await response.data.data.data.filter(contenu => contenu.title === "Vidéo");
-           
+
             const sortedVideos = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.videos = await sortedVideos.slice(0, 1);
-          if (this.videos){
-            this.video = await this.videos[0]
-          }
-          
+            if (this.videos) {
+                this.video = await this.videos[0]
+            }
+
             this.items = [
-                    {
-                        src: this.video.link
-                    }
-                ];
+                {
+                    src: this.video.link
+                }
+            ];
         } catch (error) {
-        console.error(error);
-        return;
+            console.error(error);
+            return;
         }
         console.log("Vidéos", this.video.link)
     },
-        data () {
-            return {
-                videos: [],
-                video: {},
-                items: [],
-                index: null
-            }
+    data() {
+        return {
+            videos: [],
+            video: {},
+            items: [],
+            index: null
         }
     }
+}
 </script>
 
 <style>
- .custom-video-area-2::before {
+.custom-video-area-2::before {
 
-display: inline-block; /* pour que la div s'adapte à la largeur de l'image */
-  width: auto; /* pour que la largeur de la div s'adapte à la largeur de l'image */
-  height: auto;
+    display: inline-block;
+    /* pour que la div s'adapte à la largeur de l'image */
+    width: auto;
+    /* pour que la largeur de la div s'adapte à la largeur de l'image */
+    height: auto;
 }
 </style>

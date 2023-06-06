@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="custom-template offset-xl-2 col-lg-6">
-            <div class="contact-form form-style-2">
+            <div class="contact-form custom-contact-success-form form-style-2">
                 <button @click="onClickClose()" class="custom-close-btn">x</button>
                 <div class="section-title">
                     <h4 class="title custom-suivi-title text-uppercase">VOTRE COURRIER A ÉTÉ ENVOYÉ AVEC SUCCÈS</h4>
@@ -95,6 +95,9 @@ export default {
 </script>
 
 <style>
+.custom-contact-success-form{
+    z-index: 9999 !important;
+}
 .custom-categorie-grid {
     height: 337.25px !important;
 }
@@ -207,33 +210,11 @@ export default {
     background-color: var(--color-tertiary) !important;
 }
 
-.custom-edu-btn-2 {
-    text-align: center !important;
-    border-radius: 5px !important;
-    display: inline-block !important;
-    height: 60px !important;
-    line-height: 62px !important;
-    color: var(--edu-btn-color) !important;
-    padding: 0 30px !important;
-    font-size: 15px !important;
-    transition: 0.4s !important;
-    font-family: var(--font-secondary) !important;
-    border: 0 none !important;
-    overflow: hidden !important;
-    position: relative !important;
-    z-index: 1 !important;
-    font-weight: bold !important;
-    margin-top: 20px !important;
-    background-color: #2985BC !important;
-    background: #2985BC !important;
-}
-
 .custom-template {
     position: fixed !important;
     top: 50%;
     left: 34.8%;
     transform: translate(-50%, -50%);
-    position: fixed;
     z-index: 9999 !important;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
   

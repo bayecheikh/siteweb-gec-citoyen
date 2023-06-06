@@ -1,7 +1,7 @@
 <template>
     <div>
         <header class="edu-header header-style-2">
-       
+
             <div class="header-mainmenu" :class="{ 'edu-sticky': isSticky }">
                 <div class="container">
                     <div class="header-navbar">
@@ -68,8 +68,10 @@
                                 <ul class="header-action">
 
                                     <li class="header-btn">
-                                        <a class=" btn-medium my-custom-login-button" href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true"> <span class="color-login-btn">SE CONNECTER</span></a>
-                                          
+                                        <a class=" btn-medium my-custom-login-button"
+                                            href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">
+                                            <span class="color-login-btn">SE CONNECTER</span></a>
+
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
                                         <button class="hamberger-button" @click="mobileMenuOpen('addClass', 'active')">
@@ -83,12 +85,12 @@
                         <div v-show="this.token">
                             <div class="header-right">
                                 <ul class="header-action">
-                                    <li class="header-btn"><a  :href="getDashboardURL">Mon compte</a>
-    </li>
+                                    <li class="header-btn"><a :href="getDashboardURL">Mon compte</a>
+                                    </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
-                                                v-show="!isDeconnecting" class="color-login-btn">SE DÉCONNECTER</span><span v-show="isDeconnecting"><svg
-                                                    width="24" height="24" viewBox="0 0 38 38"
+                                                v-show="!isDeconnecting" class="color-login-btn">SE DÉCONNECTER</span><span
+                                                v-show="isDeconnecting"><svg width="24" height="24" viewBox="0 0 38 38"
                                                     xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                                                     <g fill="none" fill-rule="evenodd">
                                                         <g transform="translate(1 1)" stroke-width="2">
@@ -104,7 +106,7 @@
                                             </span></a>
                                     </li>
                                     <li class="header-btn">
-                          
+
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
                                         <button class="hamberger-button" @click="mobileMenuOpen('addClass', 'active')">
@@ -118,12 +120,9 @@
                     </div>
                 </div>
             </div>
-
-
-
             <OffCanvasMobileMenuTwo />
         </header>
-  
+
     </div>
 </template>
 
@@ -142,33 +141,28 @@ export default {
 
         }),
         getDashboardURL() {
-      // Générer l'URL avec les paramètres
-      const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
-      const params = new URLSearchParams({
-        gecToken: this.token,
-        gecIdUser: this.gecIdUser,
-        gecIsAuthenticated: this.gecIsAuthenticated,
-        gecLoggedInUser: this.gecLoggedInUser,
-      });
+            // Générer l'URL avec les paramètres
+            const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
+            const params = new URLSearchParams({
+                gecToken: this.token,
+                gecIdUser: this.gecIdUser,
+                gecIsAuthenticated: this.gecIsAuthenticated,
+                gecLoggedInUser: this.gecLoggedInUser,
+            });
 
-      return `${baseURL}?${params.toString()}`;
-    }
+            return `${baseURL}?${params.toString()}`;
+        }
 
     },
     components: {
         SectionTitle: () => import('@/components/common/SectionTitle'),
-
         Navigation: () => import("@/components/header/Navigation"),
-  
-
-
-
         OffCanvasMobileMenuTwo: () => import("@/components/header/OffCanvasMobileMenuTwo")
     },
     data() {
         return {
             isUserAuthenticated: false,
-            initiales : "",
+            initiales: "",
             userName: "",
             email: null,
             token: null,
@@ -196,47 +190,45 @@ export default {
     props: ['showHeaderTop'],
 
 
-mounted() {
-    if(localStorage.getItem('gecToken')){
-        this.token = localStorage.getItem('gecToken')
-    }
-    else{
-        this.token = null
-    }
-    if(localStorage.getItem('gecIdUser')){
-        this.gecIdUser = localStorage.getItem('gecIdUser')
-    }
-    else{
-        this.gecIdUser = null
-    }
-    if(localStorage.getItem('gecIsAuthenticated')){
-        this.gecIsAuthenticated = localStorage.getItem('gecIsAuthenticated')
-    }
-    else{
-        this.gecIsAuthenticated = null
-    }
-    if(localStorage.getItem('gecLoggedInUser')){
-        this.gecLoggedInUser = localStorage.getItem('gecLoggedInUser')
-    }
-    else{
-        this.gecLoggedInUser = null
-    }
-     
-       
-},
+    mounted() {
+        if (localStorage.getItem('gecToken')) {
+            this.token = localStorage.getItem('gecToken')
+        }
+        else {
+            this.token = null
+        }
+        if (localStorage.getItem('gecIdUser')) {
+            this.gecIdUser = localStorage.getItem('gecIdUser')
+        }
+        else {
+            this.gecIdUser = null
+        }
+        if (localStorage.getItem('gecIsAuthenticated')) {
+            this.gecIsAuthenticated = localStorage.getItem('gecIsAuthenticated')
+        }
+        else {
+            this.gecIsAuthenticated = null
+        }
+        if (localStorage.getItem('gecLoggedInUser')) {
+            this.gecLoggedInUser = localStorage.getItem('gecLoggedInUser')
+        }
+        else {
+            this.gecLoggedInUser = null
+        }
+
+
+    },
 
     methods: {
 
-       
-
         onClickSeConnecter() {
-          
+
             this.$store.dispatch('authentication/getDetail', true)
         },
         async onClickSeDeconnecter() {
             this.isDeconnecting = true
-            
-            location.reload()          
+            location.reload()
+            await this.$router.push('/')
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecLoggedInUser')
@@ -245,11 +237,11 @@ mounted() {
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
             this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
             this.$store.dispatch('authentication/getDetail', false)
-          
+
         }
 
         ,
-        
+
         // Off-canvas Mobile Menu Open
         mobileMenuOpen(addRemoveClass, className) {
             const el = document.querySelector('#offcanvas-menu');
@@ -280,14 +272,17 @@ button.edu-btn {
     font-family: var(--font-secondary);
 
 }
+
 .header-action .header-btn a {
     display: block;
     color: grey !important;
     padding: 0 30px;
 }
-.color-login-btn{
+
+.color-login-btn {
     color: black !important;
 }
+
 .my-custom-login-button {
     padding: 15px !important;
     border-radius: 3px !important;

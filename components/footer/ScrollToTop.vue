@@ -7,10 +7,10 @@
 </template>
 
 <script>
-    import scrollToTop from "../../common/scrollToTop";
-    export default {
-        mounted() {
-            scrollToTop();
-        }
+import scrollToTop from "../../common/scrollToTop";
+export default {
+    mounted() {
+        scrollToTop();
     }
+}
 </script>

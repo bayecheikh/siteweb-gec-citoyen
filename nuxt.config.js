@@ -7,7 +7,7 @@ export default {
             siteKey: String,    // Site key for requests
             version: Number,    // Version
             size: String,      // Size: 'compact', 'normal', 'invisible' (v2)
-          siteKey: '6Lf2CtYlAAAAAHYqjiOMLOajbtuUd4GHxDKrrxBK' // for example
+            siteKey: '6Lf2CtYlAAAAAHYqjiOMLOajbtuUd4GHxDKrrxBK' // for example
         }
       },
     middleware: ['client-only', 'auth'],
@@ -36,7 +36,7 @@ export default {
             { 
                 rel: 'icon', 
                 type: 'image/x-icon', 
-                href: '/favicon.png' 
+                href: '/images/favicon.png' 
             }
         ],
         script: [

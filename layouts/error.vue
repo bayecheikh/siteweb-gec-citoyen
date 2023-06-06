@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="edu-error">
                     <div class="thumbnail">
-                        <img src="/images/others/404.png" alt="404 Error">
+                        <img src="/images/others/404.png" alt="Erreur 404">
                         <ul class="shape-group">
                             <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-25.png" />
                             <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-15.png" />

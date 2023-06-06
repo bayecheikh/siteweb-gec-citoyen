@@ -1,7 +1,7 @@
 <template>
     <div class="faq-accordion" id="faq-accordion">
-        <!-- <div class="accordion">
-            <div class="accordion-item" v-show="faqs.length > 0 && faqs[0].question && faqs[0].response">
+        <div class="accordion">
+            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[0].question && faqs[0].response">
                 <h5 class="accordion-header ">
                     <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
                         {{ faqs[0].question }}
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" v-show="faqs.length > 0 && faqs[1].question && faqs[1].response">
+            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[1].question && faqs[1].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
                         {{ faqs[1].question }}
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" v-show="faqs.length > 0 && faqs[2].question && faqs[2].response">
+            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[2].question && faqs[2].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
                         {{ faqs[2].question }}
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" v-show="faqs.length > 0 && faqs[3].question && faqs[3].response">
+            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[3].question && faqs[3].response">
                 <h5 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
                         {{ faqs[3].question }}
@@ -49,8 +49,8 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        <div class="accordion">
+        </div>
+        <!-- <div class="accordion">
             <div class="accordion-item" >
                 <h5 class="accordion-header ">
                     <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -112,7 +112,7 @@ export default {
     mounted: async function () {
         try {
             const response = await this.$axios.get("/faqs");
-            const filteredFaqs = response.data.data.data.filter(faq => faq.categorie.id === "6452491c5c298902251329bc");
+            const filteredFaqs = response.data.data.data.filter(faq => faq.categorie.slug === "infos-generales");
             const sortedFaqs = filteredFaqs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.faqs = sortedFaqs.slice(0, 4);
         } catch (error) {
@@ -123,8 +123,8 @@ export default {
 },
     data() {
         return {
-       
             faqs: [],
+           
         }
     },
 }

@@ -1,27 +1,26 @@
 <template>
     <div class="edu-categorie-area custom-categorie-area-1 categorie-area-1 edu-section-gap">
         <div class="container">
-            
-            
+
+
             <div>
-                <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800" class="section-title custom-categories-section-title mt-5 section-left aos-init aos-animate">
+                <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800"
+                    class="section-title custom-categories-section-title mt-5 section-left aos-init aos-animate">
                     <div class="custom-categories-send-btn-wrapper mt-5">
-                    <h2 class="title mt-5">Comment <span class="color-primary">déposer</span> un courrier ?</h2>
-                    <p>Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
-       
-    </div>
-    <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">DÉPOSER UN COURRIER</a>
-        
-   
-</div>
+                        <h2 class="title mt-5">Comment <span class="color-primary">déposer</span> un courrier ?</h2>
+                        <p>Pour envoyer un courrier, veuillez suivre ces quatre étapes.</p>
 
-</div>
+                    </div>
+                    <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">DÉPOSER UN COURRIER</a>
 
 
-            
+                </div>
+
+            </div>
             <div class="row g-5 custom-row">
                 <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
+                    <div
+                        class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
                         <div class="icon">
                             <svg class="custom-svg" xmlns="http://www.w3.org/2000/svg" width="38.16" height="40.834"
                                 viewBox="0 0 38.16 40.834">
@@ -40,10 +39,10 @@
                             <h5 class="title custom-title custom-title-2">Se connecter à la plateforme</h5>
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
-                           
+
                             </div>
                             <div class=" custom-number-2">1</div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -73,14 +72,15 @@
                             <h5 class="title custom-title custom-title-2">Trouver l'organisme concerné</h5>
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
-                           
+
                             </div>
                             <div class=" custom-number-2">2</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="100" data-aos-duration="800">
-                    <div class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
+                    <div
+                        class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40.834" height="40.832"
                                 viewBox="0 0 40.834 40.832">
@@ -100,7 +100,7 @@
 
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
-                           
+
                             </div>
                             <div class=" custom-number-2">3</div>
                         </div>
@@ -108,7 +108,8 @@
                 </div>
                 <div class="col-lg-3 col-sm-6" data-aos-delay="400" data-aos-duration="800">
                     <div class="col" data-aos-delay="100" data-aos-duration="800">
-                        <div class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
+                        <div
+                            class="categorie-grid custom-categorie-grid  categorie-style-3 custom-categorie-style-3 color-green-style color-primary-style">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="35.563" height="43.951"
                                     viewBox="0 0 35.563 43.951">
@@ -131,18 +132,18 @@
                             <div class="content">
                                 <h5 class="title custom-title custom-title-2">Soumettre le courrier et obtenir un code de
                                     suivi</h5>
-                                    <div class="custom-number-container">
-                                <div class="custom-line"></div>
-                           
-                            </div>
-                            <div class=" custom-number-2">4</div>
+                                <div class="custom-number-container">
+                                    <div class="custom-line"></div>
+
+                                </div>
+                                <div class=" custom-number-2">4</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-      
+
     </div>
 </template>
 
@@ -161,20 +162,20 @@ export default {
     },
 
     methods: {
-        
+
         async onClickSuivreCourrier() {
             await this.$store.dispatch('suivicourrier/getDetail', true)
         },
         async deposerCourrier() {
-     if (localStorage.getItem('gecToken')) {
-        this.$router.push("/addcourrier");
-      } else {
-        await localStorage.setItem("isauthenticatingfrombutton", "true")
-        window.location.href = `https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=${encodeURIComponent("https://siteweb-gec-citoyen.vercel.app")}&response_type=code&scope=openid&authError=true`;
+            if (localStorage.getItem('gecToken')) {
+                this.$router.push("/addcourrier");
+            } else {
+                await localStorage.setItem("isauthenticatingfrombutton", "true")
+                window.location.href = `https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=${encodeURIComponent("https://siteweb-gec-citoyen.vercel.app")}&response_type=code&scope=openid&authError=true`;
 
-      }
-    },
-      
+            }
+        },
+
     },
     data() {
         return {
@@ -194,15 +195,19 @@ export default {
 .custom-categorie-grid {
     height: 337.25px !important;
 }
+
 .custom-categorie-grid-bgcolor1 {
     background-color: #eeeffd !important;
 }
+
 .custom-categorie-grid-bgcolor2 {
     background-color: #e7f8f5 !important;
 }
+
 .custom-categorie-grid-bgcolor3 {
     background-color: #feecef !important;
 }
+
 .custom-categorie-grid-bgcolor4 {
     background-color: #fff8e8 !important;
 }
@@ -315,55 +320,10 @@ export default {
     background-color: var(--color-tertiary) !important;
 }
 
-.custom-edu-btn-2 {
-    text-align: center !important;
-    border-radius: 5px !important;
-    display: inline-block !important;
-    height: 60px !important;
-    line-height: 62px !important;
-    color: var(--edu-btn-color) !important;
-    padding: 0 30px !important;
-    font-size: 15px !important;
-    transition: 0.4s !important;
-    font-family: var(--font-secondary) !important;
-    border: 0 none !important;
-    overflow: hidden !important;
-    position: relative !important;
-    z-index: 1 !important;
-    font-weight: bold !important;
-    margin-top: 20px !important;
-    background-color: #2985BC !important;
-    background: #2985BC !important;
-}
-.custom-edu-btn-3 {
-    text-align: center !important;
-    border-radius: 5px !important;
-    display: inline-block !important;
-    height: 60px !important;
-    line-height: 62px !important;
-    padding: 0 30px !important;
-    font-size: 15px !important;
-    transition: 0.4s !important;
-    font-family: var(--font-secondary) !important;
-    border: 0 none !important;
-    overflow: hidden !important;
-    position: relative !important;
-    z-index: 1 !important;
-    font-weight: bold !important;
-    margin-top: 20px !important;
-  
-}
-.custom-template {
-    position: fixed !important;
-    top: 50%;
-    left: 34.8%;
-    transform: translate(-50%, -50%);
-    position: fixed;
-    z-index: 9999 !important;
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
- 
 
-}
+
+
+
 
 .custom-error-msg {
     margin-top: 25px !important;
@@ -559,89 +519,96 @@ p {
     width: 20px;
     height: 20px;
 }
+
 .custom-line {
-  width: 75px; /* Largeur du trait */
-  height: 4px; /* Hauteur du trait */
-  background-color: #008064; /* Couleur du trait */
-  display: flex;
-  justify-content: center; /* Centrer horizontalement */
-  align-items: center;
-}
-.custom-number-container{
+    width: 75px;
+    /* Largeur du trait */
+    height: 4px;
+    /* Hauteur du trait */
+    background-color: #008064;
+    /* Couleur du trait */
     display: flex;
-  justify-content: center; /* Centrer horizontalement */
-  align-items: center; /* Centrer verticalement */
-  padding: 20px;
-}
-.categorie-grid.color-primary-style .icon, .categorie-grid.color-primary-style .course-remain {
-  background-color: rgba(26, 182, 157, 0.1) !important;
-  color: #0a3764 !important;
+    justify-content: center;
+    /* Centrer horizontalement */
+    align-items: center;
 }
 
-.custom-categorie-style-3{
-    box-shadow: 0px 10px 45px 0px rgba(0,0,0,0.1) !important;
+.custom-number-container {
+    display: flex;
+    justify-content: center;
+    /* Centrer horizontalement */
+    align-items: center;
+    /* Centrer verticalement */
+    padding: 20px;
+}
+
+.categorie-grid.color-primary-style .icon,
+.categorie-grid.color-primary-style .course-remain {
+    background-color: rgba(26, 182, 157, 0.1) !important;
+    color: #0a3764 !important;
+}
+
+.custom-categorie-style-3 {
+    box-shadow: 0px 10px 45px 0px rgba(0, 0, 0, 0.1) !important;
 }
 
 
 
 .title-text-wrapper {
-  flex: 1;
+    flex: 1;
 }
 
 .title-button-wrapper {
     white-space: nowrap !important;
-  display: flex;
-  align-items: center;
- 
+    display: flex;
+    align-items: center;
+
 }
 
 
 
 
 .custom-categories-section-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    
-    .custom-categories-send-button {
-        
-  background: #008064 !important;
-  background-color: #008064 !;
-  font-weight: 700 !important;
-        cursor: pointer;
-        flex-grow: 0.1;
-        text-align: right;
-    }
-    
-    .custom-categories-send-btn-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin-top: auto;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    @media (max-width: 992px) {
+.custom-categories-send-button {
+
+    background: #008064 !important;
+    background-color: #008064 !;
+    font-weight: 700 !important;
+    cursor: pointer;
+    flex-grow: 0.1;
+    text-align: right;
+}
+
+.custom-categories-send-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+@media (max-width: 992px) {
     .custom-categories-send-button {
         margin-top: 20px;
         justify-content: center;
         align-items: center;
     }
 }
-    @media (max-width: 578px) {
-    .custom-categories-section-title  {
+
+@media (max-width: 578px) {
+    .custom-categories-section-title {
         margin-left: 15px;
         font-size: 12px !important;
-       
-    
+
+
     }
-    .custom-categories-send-button{
+
+    .custom-categories-send-button {
         left: 20%;
     }
-    
-}
 
-
-
-
-</style>
+}</style>
