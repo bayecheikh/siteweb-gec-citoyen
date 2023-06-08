@@ -53,7 +53,7 @@ export default {
     
         async onClickSeConnecter() {
 
-            window.location.href = `https://pprodofficial.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=${encodeURIComponent("https://siteweb-gec-citoyen.vercel.app")}&response_type=code&scope=openid&authError=true`;
+            window.location.href = `https://pprodauth.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=${encodeURIComponent("https://siteweb-gec-citoyen.vercel.app")}&response_type=code&scope=openid&authError=true`;
         },
         async onClickSeDeconnecter() {
 

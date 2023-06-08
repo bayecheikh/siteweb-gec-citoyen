@@ -69,7 +69,7 @@
 
                                     <li class="header-btn">
                                         <a class=" btn-medium my-custom-login-button"
-                                            href="https://pprodofficial.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
+                                            href="https://pprodauth.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
                                             CONNECTER</a>
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
