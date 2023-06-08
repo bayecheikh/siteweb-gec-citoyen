@@ -89,7 +89,9 @@ export default {
             console.log('Ministère ++++++: ', item)
             const response = await this.$axios.get("/structures/" + item.id + "/entrees");
             const entrees = await response.data.data.data
-            this.$store.dispatch('ministeres/getDetail', { title_organisme: item.description, structure: item.id })
+            const entreeBC1 = entrees.find(entree => entree.id === "BC1");
+            console.log("DEFATUL",entreeBC1.serialId )
+            this.$store.dispatch('ministeres/getDetail', { title_organisme: item.description, structure: item.id, defaultEntree: entreeBC1.serialId, defaultEntreeName: entreeBC1.entity_label })
             this.$store.dispatch('entrees/getDetail', entrees)
             this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
         }

@@ -4,9 +4,9 @@
         <form class="row">
             <div class="edu-sorting form-group col-12">
                 <label for="reg-name">Choisir une entrée</label>
-                <select class="custom-select" @change="changeModelEntree($event)" v-model="selectedEntree">
+                <select class="custom-select" @change="changeModelEntree($event)">
                     <!-- <option>--</option> -->
-                    <option v-for="item in detailentree" :key="item.serialId" :value="item.serialId">{{ item.entity_label }}
+                    <option v-for="item in detailentree" :key="item.serialId" :value="item.serialId" :selected="item.serialId === detailministere.defaultEntree">{{ item.entity_label }} 
                     </option>
                 </select>
             </div>
@@ -130,11 +130,13 @@ export default {
         SectionTitle: () => import('@/components/common/SectionTitle')
     },
     computed: mapGetters({
-        detailutilisateur: 'coordonnees/detailutilisateur',
-        detailministere: 'ministeres/detailministere',
-        detailentree: 'entrees/detailentree',
-        detailcontenu: 'contenus/detailcontenu'
-    }),
+            detailutilisateur: 'coordonnees/detailutilisateur',
+            detailministere: 'ministeres/detailministere',
+            detailentree: 'entrees/detailentree',
+            detailcontenu: 'contenus/detailcontenu'
+        }),
+
+
     mounted: async function () {
 
         try {
@@ -151,8 +153,8 @@ export default {
     data() {
         return {
 
-            selectedEntree: '',
-            selectedEntreeName: '',
+          selectedEntree:'',
+          
             fileInfos: [{ name: 'file 1', url: '#' }, { name: 'file 2', url: '#' }],
             key: null,
             imageData: null,
@@ -201,6 +203,12 @@ export default {
         submitContenu() {
             this.$v.$touch();
             if (!this.$v.$invalid) {
+                if(!this.model.destination){
+                    this.model.destination = this.detailministere.defaultEntree
+                    this.selectedEntree = this.detailministere.defaultEntree
+                    this.selectedEntreeName = this.detailministere.defaultEntreeName
+
+                }
                 this.load = true
                 console.log('Données formulaire ++++++: ', { ...this.model })
                 this.$store.dispatch('contenus/getDetail', { ...this.model, entree: this.selectedEntree, entreename: this.selectedEntreeName, subject: this.model.subject })

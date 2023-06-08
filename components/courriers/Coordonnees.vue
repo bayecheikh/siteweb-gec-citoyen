@@ -46,9 +46,8 @@
                 </div>
            
                 <div class="form-group col-12 mb-5 mt-2">
-                    <label for="log-email">Email</label>
-                    <input type="email" class="border-radio" name="log-email" id="log-email"
-                        v-model="model.requerant.email">
+                    <label for="phone">Téléphone</label>
+                <input type="text" class="border-radio readonly" name="phone" id="phone" v-model="model.requerant.telephone" readonly>
             </div>
             <div class="form-group col-md-6 col-sm-12 mb-5 mt-2">
                 <label for="reg-name">Sexe</label>
@@ -66,8 +65,9 @@
                 </div>
             </div>
             <div class="form-group col-md-6 col-sm-12 mb-5 mt-2">
-                <label for="phone">Téléphone</label>
-                <input type="text" class="border-radio" name="phone" id="phone" v-model="model.requerant.telephone">
+                <label for="log-email">Email</label>
+                    <input type="email" class="border-radio" name="log-email" id="log-email"
+                        v-model="model.requerant.email">
             </div>
 
             <div class="form-group col-12 mb-5 mt-2">
@@ -224,6 +224,7 @@ export default {
             this.model.requerant.nom = user['name']
             this.model.requerant.prenometnom = user['name']
             this.model.requerant.npi = user['sub']
+            this.model.requerant.telephone = user['phone_number']
             this.model.sender = _id
         }
     },
