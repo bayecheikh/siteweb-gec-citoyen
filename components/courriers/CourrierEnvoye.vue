@@ -214,7 +214,7 @@ export default {
     position: fixed !important;
     top: 50%;
     left: 34.8%;
-    transform: translate(-50%, -50%);
+   
     z-index: 9999 !important;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
   

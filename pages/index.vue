@@ -25,7 +25,7 @@ export default {
                 code: this.$route.query.code,
                 authorisation: 'Basic ZWNvbW11bmU6ZWNvbW11bmU=',
                 urlClient: 'https://siteweb-gec-citoyen.vercel.app',
-                urlPns: 'https://pprodofficial.service-public.bj/api/official/token'
+                urlPns: 'https://pprodofficial.service-public.bj/api/citizen/token'
             }
             try {
                 const response = await this.$axios.post('users/code', { ...this.model })

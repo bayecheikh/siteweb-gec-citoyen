@@ -69,7 +69,7 @@
 
                                     <li class="header-btn">
                                         <a class=" btn-medium my-custom-login-button"
-                                            href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
+                                            href="https://pprodofficial.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">SE
                                             CONNECTER</a>
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
@@ -84,7 +84,7 @@
                         <div v-show="this.token">
                             <div class="header-right">
                                 <ul class="header-action">
-                                    <li class="header-btn"><a :href="getDashboardURL">Mon compte</a>
+                                    <li class="header-btn"><a :href="getDashboardURL">Mes courriers</a>
                                     </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
@@ -385,4 +385,13 @@ button.edu-btn {
 
     }
 }
+</style>
+<style scoped>
+a:hover,
+a.active {
+  color: #1ab69d !important;
+  font-weight: 700px;
+}
+
+
 </style>

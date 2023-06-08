@@ -140,19 +140,22 @@
                            class="icon-west"></i> Précédent</button>
                   </div>
                   <div class="form-group col-md-3 col-sm-6">
-                     <button @click="submitValidation" type="button" class="edu-btn btn-medium">Soumettre <i
+                     <button @click="submitValidation" type="button" class="edu-btn btn-medium" :disabled="load">Soumettre <i
                            class="icon-4"></i></button>
                   </div>
                </div>
-               <CourrierEnvoye v-if="ispopupload" />
+             
             </div>
+           
          </div>
       </div>
+      <CourrierEnvoye v-if="ispopupload" />
    </div>
 </template>
 <script>
 import { mapMutations, mapGetters } from 'vuex'
 export default {
+ 
    components: {
       SectionTitle: () => import('@/components/common/SectionTitle'),
       Previsualisation: () => import('@/components/courriers/Previsualisation'),
@@ -168,7 +171,7 @@ export default {
    }),
    data() {
       return {
-
+         load:false
       }
    },
    methods: {
@@ -180,13 +183,14 @@ export default {
          this.$gecApi.$post('/courriers', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
             .then(async (response) => {
                await this.$store.dispatch("courrierenvoye/getDetail", true);
+               console.log("REPONSE API APRÈS SOUMISSION COURRIER", response)
                //this.$router.push('/');
 
 
             }).catch((error) => {
                console.log('Code error ++++++: ', error?.response?.data?.message)
             }).finally(() => {
-               console.log('Requette envoyé ')
+               console.log('Requête envoyé ')
             });
 
 

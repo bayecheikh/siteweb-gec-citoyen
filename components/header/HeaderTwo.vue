@@ -69,7 +69,7 @@
 
                                     <li class="header-btn">
                                         <a class=" btn-medium my-custom-login-button"
-                                            href="https://pprodofficial.service-public.bj/official/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">
+                                            href="https://pprodofficial.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=https://siteweb-gec-citoyen.vercel.app&response_type=code&scope=openid&authError=true">
                                             <span class="color-login-btn">SE CONNECTER</span></a>
 
                                     </li>
@@ -85,7 +85,7 @@
                         <div v-show="this.token">
                             <div class="header-right">
                                 <ul class="header-action">
-                                    <li class="header-btn"><a :href="getDashboardURL">Mon compte</a>
+                                    <li class="header-btn"><a :href="getDashboardURL" class="custom-mon-compte-button">Mes courriers</a>
                                     </li>
                                     <li class="header-btn">
                                         <a class="btn-medium my-custom-login-button" @click="onClickSeDeconnecter()"> <span
@@ -255,8 +255,23 @@ export default {
     }
 }
 </script>
+<style scoped>
+a:hover,
+a.active {
+  color: #1ab69d !important;
+  font-weight: 700px;
+}
 
+
+</style>
 <style>
+
+.custom-mon-compte-button:hover,
+.custom-mon-compte-button.active {
+  color: #1ab69d !important;
+  font-weight: 700px;
+}
+
 a.edu-btn,
 button.edu-btn {
     background: linear-gradient(-90deg, #31b978, #1ab69d);

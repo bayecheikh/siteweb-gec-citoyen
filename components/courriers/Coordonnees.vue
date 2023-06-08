@@ -40,12 +40,16 @@
                         v-model="model.requerant.prenometnom" readonly>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
-                    <label for="log-email">Email*</label>
-                    <input type="email" class="border-radio readonly" name="log-email" id="log-email"
-                        v-model="model.requerant.email" readonly>
+                    <label for="log-npi">NPI*</label>
+                    <input type="text" class="border-radio readonly" name="log-npi" id="log-npi"
+                        v-model="model.requerant.npi" readonly>
                 </div>
            
-
+                <div class="form-group col-12 mb-5 mt-2">
+                    <label for="log-email">Email</label>
+                    <input type="email" class="border-radio" name="log-email" id="log-email"
+                        v-model="model.requerant.email">
+            </div>
             <div class="form-group col-md-6 col-sm-12 mb-5 mt-2">
                 <label for="reg-name">Sexe</label>
                 <div class="form-group border-input pt-3 pb-1">
@@ -219,7 +223,7 @@ export default {
             this.model.requerant.prenom = user['name']
             this.model.requerant.nom = user['name']
             this.model.requerant.prenometnom = user['name']
-            this.model.requerant.email = user['sub']
+            this.model.requerant.npi = user['sub']
             this.model.sender = _id
         }
     },
@@ -234,6 +238,7 @@ export default {
             requerant: true,
             model: {
                 requerant: {
+                    npi: "",
                     prenom: "",
                     nom: "",
                     prenometnom: '',

@@ -326,7 +326,7 @@
                 <div class="button-group d-flex justify-content-end">
                     <button @click="onClickClose()" class=" custom-suivi-close-button"><span
                             class="custom-suivi-btn-color">FERMER</span></button>
-                    <button class="custom-main-banner-track-btn" name="submit" type="submit" @click="isCodeValid(code)"
+                    <button v-if="isVerifierVisible"  class="custom-main-banner-track-btn" name="submit" type="submit" @click="isCodeValid(code)"
                         :disabled="isCharging">
                         <span v-if="!isCharging" class="custom-suivi-btn-color">VÉRIFIER</span><span v-else
                             class="custom-suivi-btn-color"> <span>
@@ -359,6 +359,7 @@ export default {
     },
     mounted: async function () {
         this.isCharging = false
+        
 
     },
 
@@ -377,7 +378,7 @@ export default {
 
         },
         async isCodeValid(code) {
-
+            this.isVerifierVisible = false
             this.showValidMessage2 = false
             this.showValidMessage1 = false
             this.validCode = true
@@ -389,6 +390,7 @@ export default {
             try {
 
                 const response = await this.$axios.get("/courriers/" + code.toUpperCase() + "/status");
+
                 console.log("Reponse", response?.data?.data?.data)
                 this.subject = response?.data?.data?.data?.objet
                 this.idcourrier = response?.data?.data?.data?.id
@@ -406,6 +408,7 @@ export default {
                     this.transformedEmail = transformedUsername + '@' + domain;
                 }
                 this.isCharging = false
+                this.isVerifierVisible = false
 
 
 
@@ -413,6 +416,7 @@ export default {
             catch (error) {
                 console.error("ERROR SUIVI", error);
                 this.isCharging = false
+                this.isVerifierVisible = false
                 this.showValidMessage2 = false
                 this.showValidMessage1 = false
                 this.validCode = false
@@ -440,7 +444,9 @@ export default {
             else {
 
                 const response = await this.$axios.get("/courriers/" + this.idcourrier);
-                this.dateReponse = response?.data?.data?.data?.responses[0]?.send_date
+                if (response?.data?.data?.data?.responses && response?.data?.data?.data?.responses.length > 0) {
+                    this.dateReponse = response?.data?.data?.data?.responses[responses.length - 1]?.send_date
+                }
                 this.showValidMessage2 = true
                 this.showValidMessage1 = false
                 this.validCode = true
@@ -456,6 +462,7 @@ export default {
 
     data() {
         return {
+            isVerifierVisible: true,
             dateReponse: '',
             idcourrier: '',
             code: '',

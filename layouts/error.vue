@@ -31,7 +31,7 @@
             </ul>
         </section>
 
-        <FooterOne />
+        <FooterKitchen />
         
         <ScrollToTop />
     </div>
