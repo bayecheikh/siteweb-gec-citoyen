@@ -5,9 +5,7 @@
                 <button @click="onClickClose()" class="custom-close-btn">x</button>
                 <div class="section-title">
                     <h4 class="title custom-suivi-title text-uppercase">VOTRE COURRIER A ÉTÉ ENVOYÉ AVEC SUCCÈS</h4>
-                    <p class="custom-information-msg">Vous avez reçu un email
-                        contenant un code confidentiel vous permettant d'accéder à l'état de votre courrier. Pour
-                        suivre l'avancement de votre courrier, veuillez saisir ce code à la lettre.</p>
+                    <p class="custom-information-msg">Votre courrier a bien été envoyé. Votre code de suivi est : <span class="custom-code-suivi">{{ ispopupload }}</span>. Vous pouvez suivre l'avancement de votre courrier sur la plateforme à l'aide de ce code.</p>
                 </div>
             </div>
         </div>
@@ -16,9 +14,7 @@
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
-    mounted(){
-        this.isCodeValid()
-    },
+
     computed: {
         ...mapGetters({
             ispopupload: 'courrierenvoye/ispopupload'
@@ -40,44 +36,7 @@ export default {
 
 
         },
-        isCodeValid() {
-            
-            this.isLoading = true
-            if (this.ispopupload == 2) {
-                this.isCharging = true
-                setTimeout(() => {
-                    this.isCharging = false
-                    this.showValidMessage2 = false
-                    this.showValidMessage1 = false
-                    this.validCode = false
-                    this.isLoading = false
-                }, 1000);
-            }
-            else if (this.ispopupload == 3) {
-                this.isCharging = true
-                setTimeout(() => {
-                    this.isCharging = false
-                    this.showValidMessage1 = true
-                    this.showValidMessage2 = false
-                    this.validCode = true
-                    this.isLoading = false
-                }, 1000);
-            }
-            else {
-                this.isCharging = true
-                setTimeout(() => {
-                    this.isCharging = false
-                    this.showValidMessage2 = true
-                    this.showValidMessage1 = false
-                    this.validCode = true
-                    this.isLoading = false
-                }, 1000);
-              
-              
-            }
-
-
-        }
+   
     },
 
     data() {
@@ -95,6 +54,9 @@ export default {
 </script>
 
 <style>
+.custom-code-suivi{
+    font-weight: 800;
+}
 .custom-contact-success-form{
     z-index: 9999 !important;
 }
@@ -213,7 +175,7 @@ export default {
 .custom-template {
     position: fixed !important;
     top: 50%;
-    left: 34.8%;
+    right: 25%;
    
     z-index: 9999 !important;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;

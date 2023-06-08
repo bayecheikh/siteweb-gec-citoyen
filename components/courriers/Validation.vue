@@ -140,7 +140,7 @@
                            class="icon-west"></i> Précédent</button>
                   </div>
                   <div class="form-group col-md-3 col-sm-6">
-                     <button @click="submitValidation" type="button" class="edu-btn btn-medium" :disabled="load">Soumettre <i
+                     <button @click="submitValidation" type="button" class="edu-btn btn-medium" >Soumettre <i
                            class="icon-4"></i></button>
                   </div>
                </div>
@@ -182,8 +182,8 @@ export default {
          console.log('Données formulaire ++++++: ', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
          this.$gecApi.$post('/courriers', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
             .then(async (response) => {
-               await this.$store.dispatch("courrierenvoye/getDetail", true);
-               console.log("REPONSE API APRÈS SOUMISSION COURRIER", response)
+               await this.$store.dispatch("courrierenvoye/getDetail", response.data.data.id_suivi);
+               
                //this.$router.push('/');
 
 
