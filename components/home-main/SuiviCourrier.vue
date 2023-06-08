@@ -36,7 +36,7 @@
 
 
                 </div>
-                <div class="input-group custom-input-group mb-5">
+                <div v-if="isVerifierVisible" class="input-group custom-input-group mb-5">
                     <input type="text" name="code" id="code" class="form-control custom-form-control"
                         placeholder="CODE DE SUIVI" v-model="code">
                     <!-- <button
@@ -444,9 +444,9 @@ export default {
             else {
 
                 const response = await this.$axios.get("/courriers/" + this.idcourrier);
-                if (response?.data?.data?.data?.responses && response?.data?.data?.data?.responses.length > 0) {
-                    this.dateReponse = response?.data?.data?.data?.responses[responses.length - 1]?.send_date
-                }
+                const length = await response?.data?.data?.data?.responses?.length
+                this.dateReponse = response?.data?.data?.data?.responses[length - 1]?.send_date
+              
                 this.showValidMessage2 = true
                 this.showValidMessage1 = false
                 this.validCode = true
