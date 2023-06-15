@@ -96,7 +96,7 @@ export default {
     try {
       const response = await this.$axios.get("/contenus");
       console.log("REPONSE BANNIERE", response)
-      const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.id === "64639b9f701a1e0225c9ebc1");
+      const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.slug === "banniere");
       const sortedContenus = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       this.banniere = await sortedContenus.slice(0, 1);
       if (this.banniere[0]?.title) {
