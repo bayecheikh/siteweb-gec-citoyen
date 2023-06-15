@@ -26,15 +26,9 @@ export default {
             this.showValidMessage1 = false;
             this.showValidMessage2 = false;
             this.validCode = true
-          
-
-
-         
             this.$store.dispatch('courrierenvoye/getDetail', false)
             this.$router.push('/');
            
-
-
         },
    
     },

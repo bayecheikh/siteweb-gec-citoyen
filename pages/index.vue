@@ -30,11 +30,6 @@ export default {
             try {
                 const response = await this.$axios.post('users/code', { ...this.model })
 
-                await localStorage.setItem('NEWRESPONSE', JSON.stringify(response))
-
-                console.log("TOKEN PNS RESPONSE", JSON.parse(localStorage.getItem('NEWRESPONSE')))
-
-
                 await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 // await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))

@@ -7,7 +7,7 @@
                 </div> -->
                 <div v-if="isCharging" class="close-menu">
                     <span class="custom-loader">
-                        <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
+                        <svg class="custom-svg" width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                             <g fill="none" fill-rule="evenodd">
                                 <g transform="translate(1 1)" stroke-width="2">
                                     <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
@@ -24,7 +24,7 @@
                     <h4 class="title custom-suivi-title text-uppercase text-left custom-title-font">
 
 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="custom-suivi-section-title"
+                        <svg xmlns="http://www.w3.org/2000/svg" class="custom-svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
 
                             <image id="Envelope-bro" width="100" height="100"
@@ -989,26 +989,33 @@ p {
     }
 }
 
-@media (max-width: 863px) {
+@media (max-width: 768px) {
     .custom-suivi-section-title {
         display: block !important;
     }
 
     .custom-suivi-title>h4 {
+       
         text-align: center !important;
         justify-content: center !important;
         align-items: center !important;
     }
+    .custom-svg {
+        width: 60px !important;
+        height: 60px !important;
+    }
 
     .custom-title-font {
+        font-weight: 700 !important;
         font-size: 12px;
-        padding: 10px !important;
+        padding: 0px !important;
     }
 
     .custom-col-lg-6 {
         width: 90% !important;
     }
-}</style>
+}
+</style>
 
 <style>.custom-svg-response-icon {
     padding: 7px !important;

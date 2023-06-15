@@ -144,9 +144,7 @@
                            class="icon-4"></i></button>
                   </div>
                </div>
-             
             </div>
-           
          </div>
       </div>
       <CourrierEnvoye v-if="ispopupload" />
@@ -183,9 +181,6 @@ export default {
          this.$gecApi.$post('/courriers', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
             .then(async (response) => {
                await this.$store.dispatch("courrierenvoye/getDetail", response.data.data.id_suivi);
-               
-               //this.$router.push('/');
-
 
             }).catch((error) => {
                console.log('Code error ++++++: ', error?.response?.data?.message)

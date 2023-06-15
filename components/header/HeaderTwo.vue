@@ -52,11 +52,8 @@
                                             </g>
                                         </g>
                                     </svg>
-
-
                                 </a>
                             </div>
-
                         </div>
                         <div class="header-mainnav  custom-mainmenu-nav">
                             <nav class="mainmenu-nav">
@@ -116,13 +113,11 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
             <OffCanvasMobileMenuTwo />
         </header>
-
     </div>
 </template>
 
@@ -167,12 +162,9 @@ export default {
             email: null,
             token: null,
             isSticky: false,
-
-
             isPNSConnecting: false,
             isXroadConnecting: false,
             isDeconnecting: false,
-
             isPopUpConnexionNPSVisible: false,
             isPopUpConnexionXroadVisible: false,
             validPNSCredentials: true,

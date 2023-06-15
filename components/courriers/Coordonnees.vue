@@ -229,7 +229,6 @@ export default {
         }
     },
     computed: mapGetters({
-
         detailutilisateur: 'coordonnees/detailutilisateur',
     }),
     data() {

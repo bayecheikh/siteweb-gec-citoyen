@@ -8,7 +8,6 @@
                             <h4 class="widget-title">
                                 <div class="logo custom-footer-kitchen-logo">
                                     <a href="/">
-
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                             width="342.585" height="62.986" viewBox="0 0 342.585 62.986">
                                             <defs>
@@ -60,23 +59,24 @@
                                 </div>
                             </h4>
                             <div class="inner">
-                                <div class="widget-information">
+                                <div class="widget-information loader-desc-footer" v-show="loading">
+                                </div>
+                                <div class="widget-information" v-show="!loading">
 
-                                    <ul class="information-list">
-                                        <li>Plateforme digitale nationale pour le dépôt électronique et sécurisé de
-                                            courriers à destination de l'administration béninoise. </li>
+                                    <ul v-show="resume" class="information-list">
+                                        <li>{{ resume }} </li>
                                     </ul>
 
-                                    <ul class="information-list custom-info-list">
+                                    <ul v-show="reseaux" class="information-list custom-info-list">
                                         <li><span class="custom-reseaux-title">Nous suivre sur :</span></li>
-                                        <li><a target="_blank" href="#" class="color-reseaux custom-reseaux"><i
-                                                    class="icon-facebook"></i></a></li>
-                                        <li><a target="_blank" href="#" class="color-reseaux custom-reseaux"><i
-                                                    class="icon-linkedin2"></i></a></li>
-                                        <li><a target="_blank" href="#" class="color-reseaux custom-reseaux"><i
-                                                    class="icon-instagram"></i></a></li>
-                                        <li><a target="_blank" href="#" class="color-reseaux custom-reseaux"><i
-                                                    class="icon-twitter"></i></a></li>
+                                        <li v-show="facebook_link"><a target="_blank" :href=facebook_link
+                                                class="color-reseaux custom-reseaux"><i class="icon-facebook"></i></a></li>
+                                        <li v-show="linkedin_link"><a target="_blank" :href=linkedin_link
+                                                class="color-reseaux custom-reseaux"><i class="icon-linkedin2"></i></a></li>
+                                        <li v-show="instagram_link"><a target="_blank" :href=instagram_link
+                                                class="color-reseaux custom-reseaux"><i class="icon-instagram"></i></a></li>
+                                        <li v-show="twitter_link"><a target="_blank" :href=twitter_link
+                                                class="color-reseaux custom-reseaux"><i class="icon-twitter"></i></a></li>
                                     </ul>
 
                                 </div>
@@ -103,24 +103,24 @@
                     <div class="col-md-4 col-lg-2 col-sm-6">
                         <div class="edu-footer-widget quick-link-widget">
                             <h4 class="widget-title custom-color-white">Contact</h4>
-                            <div class="inner">
-
+                            <div class="inner loader-contact-footer" v-show="loading">
+                            </div>
+                            <div class="inner" v-show="!loading">
                                 <ul class="footer-link">
-                                    <li><i class="icon-phone custom-footer-icon"></i> (+229) 47 135 5 98</li>
 
+                                    <li v-if="telephone_gec"><i class="icon-phone custom-footer-icon"></i> {{ telephone_gec
+                                    }}</li>
                                     <li class="custom-footer-line"></li>
-                                    <li><i class="icon-envelope custom-footer-icon"></i> gec@gouv.bj</li>
-
+                                    <li v-if="email_gec"><i class="icon-envelope custom-footer-icon"></i> {{ email_gec }}
+                                    </li>
                                     <li class="custom-footer-line"></li>
-                                    <li><i class="icon-40 custom-footer-icon"></i> Cotonou, Bénin</li>
-
+                                    <li v-if="adresse_gec"><i class="icon-40 custom-footer-icon"></i> {{ adresse_gec }}
+                                    </li>
                                     <li class="custom-footer-line"></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
 
@@ -147,7 +147,48 @@ export default {
         baseURL: 'https://api-gec-citoyen.fly.dev'
     },
     mounted: async function () {
+        try {
+            const response = await this.$axios.get("/contenus");
+            const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Téléphone");
+            const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.telephone = sortedTelephones.slice(0, 1);
+            this.telephone_gec = this.telephone[0].resume
+            const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Email");
+            const sortedEmails = filteredEmails.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.email = sortedEmails.slice(0, 1);
+            this.email_gec = this.email[0].resume
+            const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Adresse");
+            const sortedAdresses = filteredAdresses.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.adresse = sortedAdresses.slice(0, 1);
+            this.adresse_gec = this.adresse[0].resume
+            const filteredFooters = response.data.data.data.filter(contenus => contenus.categorie.id === "646418cc701a1e0225c9ebc5" && contenus.title === "Footer-text");
+            const sortedFooters = filteredFooters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.footer = sortedFooters.slice(0, 1);
+            this.resume = this.footer[0]?.resume
+            const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.id === "64641a9a701a1e0225c9ebc7");
+            this.reseaux = filteredReseaux
+            const filteredFacebooks = filteredReseaux?.filter(contenus => contenus.title === "Facebook");
+            const sortedFacebooks = filteredFacebooks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.facebook = sortedFacebooks.slice(0, 1);
+            this.facebook_link = this.facebook[0]?.link
+            const filteredInstagrams = filteredReseaux?.filter(contenus => contenus.title === "Instagram");
+            const sortedInstagrams = filteredInstagrams.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.instagram = sortedInstagrams.slice(0, 1);
+            this.instagram_link = this.instagram[0]?.link
+            const filteredLinkedIns = filteredReseaux?.filter(contenus => contenus.title === "LinkedIn");
+            const sortedLinkedIns = filteredLinkedIns.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.linkedin = sortedLinkedIns.slice(0, 1);
+            this.linkedin_link = this.linkedin[0]?.link
+            const filteredTwitters = filteredReseaux?.filter(contenus => contenus.title === "Twitter");
+            const sortedTwitters = filteredTwitters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.twitter = await sortedTwitters.slice(0, 1);
+            this.twitter_link = this.twitter[0]?.link
 
+            this.loading = false
+        } catch (error) {
+            console.error(error);
+            return;
+        }
 
     },
     components: {
@@ -155,9 +196,18 @@ export default {
     },
     data() {
         return {
+            resume: '',
+            facebook_link: '',
+            linkedin_link: '',
+            twitter_link: '',
+            instagram_link: '',
+            loading: true,
             telephone: [],
             email: [],
             adresse: [],
+            telephone_gec: '',
+            email_gec: '',
+            adresse_gec: '',
             footer: [],
             reseaux: [],
             facebook: [],
@@ -171,6 +221,38 @@ export default {
 </script>
 
 <style>
+.loader-desc-footer {
+    height: 140px;
+    width: 320px;
+    background-color: #7a7a7a;
+    /* Couleur verte */
+    animation: loaderAnimation 1s ease-in-out infinite;
+    /* Animation */
+}
+
+.loader-contact-footer {
+    height: 140px;
+    width: 180px;
+    background-color: #7a7a7a;
+    /* Couleur verte */
+    animation: loaderAnimation 1s ease-in-out infinite;
+    /* Animation */
+}
+
+@keyframes loaderAnimation {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
 .custom-footer-for-kitchen {
     z-index: 1 !important;
     background: #383838 !important;

@@ -23,17 +23,12 @@
                                             fill-rule="evenodd" />
                                     </g>
                                 </svg>
-
                             </div>
                             <h3 class="counter-item count-number">
                                 <FunFact number="9.3" decimal="1" suffix="K" />
-
                             </h3>
                             <h6 class="title">UTILISATEURS</h6>
                         </div>
-                        <!--J'ai mis la section ici par ce que quand je cliquais sur le bouton ça descendait en bas-->
-                        <section id="faq">
-                        </section>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6 col-sm-6">
                         <div class="edu-counterup counterup-style-6">

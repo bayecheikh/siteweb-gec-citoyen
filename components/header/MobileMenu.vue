@@ -11,9 +11,10 @@
             <a v-show="!$getToken()" href="/" @click.prevent=onClickSeConnecter()>
                 Se connecter
             </a>
-            <!-- <a v-show="$getToken()" :href="getDashboardURL">
+         
+            <a v-show="$getToken()" :href="getDashboardURL">
                 Mes courriers
-            </a> -->
+            </a>
             <a v-show="$getToken()" href="/" @click.prevent=onClickSeDeconnecter()>
                 Se déconnecter
             </a>
@@ -34,18 +35,18 @@ export default {
             isauthenticating: 'authentication/isauthenticating',
 
         }),
-        // getDashboardURL() {
-        //     // Générer l'URL avec les paramètres
-        //     const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
-        //     const params = new URLSearchParams({
-        //         gecToken: this.token,
-        //         gecIdUser: this.gecIdUser,
-        //         gecIsAuthenticated: this.gecIsAuthenticated,
-        //         gecLoggedInUser: this.gecLoggedInUser,
-        //     });
+        getDashboardURL() {
+            // Générer l'URL avec les paramètres
+            const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
+            const params = new URLSearchParams({
+                gecToken: this.token,
+                gecIdUser: this.gecIdUser,
+                gecIsAuthenticated: this.gecIsAuthenticated,
+                gecLoggedInUser: this.gecLoggedInUser,
+            });
 
-        //     return `${baseURL}?${params.toString()}`;
-        // },
+            return `${baseURL}?${params.toString()}`;
+        }
     },
     components: {
     },

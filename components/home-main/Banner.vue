@@ -6,19 +6,18 @@
           <div class="col-lg-6">
             <div class="banner-content">
               <div>
-                <h3 class=" mb-5 title">
-                  Plateforme
-                  <span class="custom-banner-title-color">GEC CITOYEN</span>
-                  <div> du
-                    Bénin </div>
-                </h3>
-
-                <p class="custom-subtitle mb-5 ">
-                  Plateforme digitale nationale pour le dépôt électronique et
-                  sécurisé de courriers à destination de l'administration
-                  béninoise.
-                </p>
-
+                <h3 v-show="loading" class=" title mb-5 loader-title"></h3>
+                <h3 v-show="loading" class="custom-subtitle loader-resume mb-5"></h3>
+                <div v-show="!loading" >
+                    <h3 class="title">
+                        {{ firstWords }}
+          
+                    <div> {{ lastWords }} </div>
+                    </h3>
+                    <p class="custom-subtitle mb-5">
+                        {{ resume }}
+                    </p>
+                </div>
               </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
 
@@ -102,7 +101,7 @@ export default {
       this.banniere = await sortedContenus.slice(0, 1);
       if (this.banniere[0]?.title) {
         const trimmedText = this.banniere[0]?.title?.trim();
-
+        this.resume = this.banniere[0]?.resume
         const words = trimmedText.split(' ');
 
         if (words.length === 3) {
@@ -123,13 +122,11 @@ export default {
       }
 
     } catch (error) {
-      this.loading = false
+      
       console.error(error);
       return;
     }
-    finally {
-      this.loading = false
-    }
+   
 
     // Supprimer les espaces en début et fin de chaîne
 
@@ -148,6 +145,7 @@ export default {
   },
   data() {
     return {
+      resume: '',
       loading: true,
       courrier: "",
       banniere: [],
@@ -184,18 +182,18 @@ export default {
 <style>
 .loader-title {
   height: 100px;
-  background-color: #aae0c8;
-  /* Couleur verte */
+  width: 530px;
+  background-color: #d6e0e2;
   animation: loaderAnimation 1s ease-in-out infinite;
-  /* Animation */
+ 
 }
 
 .loader-resume {
   height: 120px;
-  background-color: #aae0c8;
-  /* Couleur verte */
+  width: 530px;
+  background-color: #d6e0e2;
   animation: loaderAnimation 1s ease-in-out infinite;
-  /* Animation */
+
 }
 
 @keyframes loaderAnimation {
