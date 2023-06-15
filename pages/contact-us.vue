@@ -145,6 +145,22 @@ export default {
       const response = await this.$axios.get("/contenus");
       const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.id === "64641a9a701a1e0225c9ebc7");
       this.reseaux = filteredReseaux
+      const filteredFacebooks = filteredReseaux?.filter(contenus => contenus.title === "Facebook");
+      const sortedFacebooks = filteredFacebooks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const facebooktab = sortedFacebooks.slice(0, 1);
+      this.facebook_link = facebooktab[0]?.link
+      const filteredTwitters = filteredReseaux?.filter(contenus => contenus.title === "Twitter");
+      const sortedTwitters = filteredTwitters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const twittertab = sortedTwitters.slice(0, 1);
+      this.twitter_link = twittertab[0]?.link
+      const filteredInstagrams = filteredReseaux?.filter(contenus => contenus.title === "Instagram");
+      const sortedInstagrams = filteredInstagrams.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const instagramtab = sortedInstagrams.slice(0, 1);
+      this.instagram_link = instagramtab[0]?.link
+      const filteredLinkedins = filteredReseaux?.filter(contenus => contenus.title === "LinkedIn");
+      const sortedLinkedins = filteredLinkedins.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const linkedintab= sortedLinkedins.slice(0, 1);
+      this.linkedin_link = linkedintab[0]?.link
       const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Téléphone");
       const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       this.telephone = sortedTelephones.slice(0, 1);

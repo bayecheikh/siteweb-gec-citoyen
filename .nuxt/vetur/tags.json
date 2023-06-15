@@ -2,9 +2,6 @@
   "FunFact": {
     "description": "Auto imported from components/FunFact.vue"
   },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
   "CommonBreadCrumbTwo": {
     "description": "Auto imported from components/common/BreadCrumbTwo.vue"
   },
@@ -16,6 +13,9 @@
   },
   "FooterScrollToTop": {
     "description": "Auto imported from components/footer/ScrollToTop.vue"
+  },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
   },
   "CourriersConnexion": {
     "description": "Auto imported from components/courriers/Connexion.vue"

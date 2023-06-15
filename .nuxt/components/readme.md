@@ -7,11 +7,11 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<FunFact>` | `<fun-fact>` (components/FunFact.vue)
-- `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)
 - `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
 - `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
 - `<FooterKitchen>` | `<footer-kitchen>` (components/footer/FooterKitchen.vue)
 - `<FooterScrollToTop>` | `<footer-scroll-to-top>` (components/footer/ScrollToTop.vue)
+- `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)
 - `<CourriersConnexion>` | `<courriers-connexion>` (components/courriers/Connexion.vue)
 - `<CourriersContenu>` | `<courriers-contenu>` (components/courriers/Contenu.vue)
 - `<CourriersCoordonnees>` | `<courriers-coordonnees>` (components/courriers/Coordonnees.vue)
