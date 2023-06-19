@@ -59,7 +59,8 @@ export default {
     mounted: async function () {
         try {
             const response = await this.$axios.get("/structures");
-            for (let organisme of response.data.data.data) {
+            const activeOrganismes = response.data.data.data.filter(organisme => organisme.status==1)
+            for (let organisme of activeOrganismes) {
                 this.organismes.push(organisme)
             }
         }
