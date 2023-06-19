@@ -30,10 +30,10 @@
 
               </ul>
               <ul v-show="reseaux" class="social-share">
-                <li v-show="facebook_link"><a :href=facebook_link><i class="icon-facebook"></i></a></li>
-                <li v-show="linkedin_link"><a :href=linkedin_link><i class="icon-linkedin2"></i></a></li>
-                <li v-show="instagram_link"><a :href=instagram_link><i class="icon-instagram"></i></a></li>
-                <li v-show="twitter_link"><a :href=twitter_link><i class="icon-twitter"></i></a></li>
+                <li v-show="facebook_link"><a target="_blank" :href=facebook_link><i class="icon-facebook"></i></a></li>
+                <li v-show="linkedin_link"><a target="_blank" :href=linkedin_link><i class="icon-linkedin2"></i></a></li>
+                <li v-show="instagram_link"><a target="_blank" :href=instagram_link><i class="icon-instagram"></i></a></li>
+                <li v-show="twitter_link"><a target="_blank" :href=twitter_link><i class="icon-twitter"></i></a></li>
               </ul>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default {
     this.subject = 'Autre'
     try {
       const response = await this.$axios.get("/contenus");
-      const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.id === "64641a9a701a1e0225c9ebc7");
+      const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.slug === "reseaux");
       this.reseaux = filteredReseaux
       const filteredFacebooks = filteredReseaux?.filter(contenus => contenus.title === "Facebook");
       const sortedFacebooks = filteredFacebooks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -161,18 +161,18 @@ export default {
       const sortedLinkedins = filteredLinkedins.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       const linkedintab= sortedLinkedins.slice(0, 1);
       this.linkedin_link = linkedintab[0]?.link
-      const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Téléphone");
+      const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Téléphone");
       const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       this.telephone = sortedTelephones.slice(0, 1);
-      this.telephone_gec = this.telephone[0]?.resume
-      const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Email");
+      this.telephone_gec = this.telephone[0]?.body
+      const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Email");
       const sortedEmails = filteredEmails.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       this.contactEmail = sortedEmails.slice(0, 1);
-      this.email_gec = this.contactEmail[0]?.resume
-      const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Adresse");
+      this.email_gec = this.contactEmail[0]?.body
+      const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Adresse");
       const sortedAdresses = filteredAdresses.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       this.adresse = sortedAdresses.slice(0, 1);
-      this.adresse_gec = this.adresse[0]?.resume
+      this.adresse_gec = this.adresse[0]?.body
       this.loading = false
     } catch (error) {
       console.error(error);

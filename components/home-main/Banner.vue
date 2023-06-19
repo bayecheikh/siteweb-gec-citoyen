@@ -101,7 +101,7 @@ export default {
       this.banniere = await sortedContenus.slice(0, 1);
       if (this.banniere[0]?.title) {
         const trimmedText = this.banniere[0]?.title?.trim();
-        this.resume = this.banniere[0]?.resume
+        this.resume = this.banniere[0]?.body
         const words = trimmedText.split(' ');
 
         if (words.length === 3) {

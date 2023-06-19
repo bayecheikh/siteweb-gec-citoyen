@@ -178,21 +178,21 @@ export default {
       const filteredProcedure1 = this.procedures.filter(contenus => contenus.slug === "comment-deposer-un-courrier");
       const procedure1tab = filteredProcedure1.slice(0, 1);
       this.procedures_title = procedure1tab[0]?.title
-      this.procedures_resume = procedure1tab[0]?.resume
+      this.procedures_resume = procedure1tab[0]?.body
       const filteredEtapes = response.data.data.data.filter(contenus => contenus.categorie.slug === "etapes");
       this.etapes = filteredEtapes
       const filteredEtape1 = this.etapes.filter(contenus => contenus.slug === "etape1");
       const etape1tab = filteredEtape1.slice(0, 1);
-      this.etape1 = etape1tab[0]?.resume
+      this.etape1 = etape1tab[0]?.body
       const filteredEtape2 = this.etapes.filter(contenus => contenus.slug === "etape2");
       const etape2tab = filteredEtape2.slice(0, 1);
-      this.etape2 = etape2tab[0]?.resume
+      this.etape2 = etape2tab[0]?.body
       const filteredEtape3 = this.etapes.filter(contenus => contenus.slug === "etape3");
       const etape3tab = filteredEtape3.slice(0, 1);
-      this.etape3 = etape3tab[0]?.resume
+      this.etape3 = etape3tab[0]?.body
       const filteredEtape4 = this.etapes.filter(contenus => contenus.slug === "etape4");
       const etape4tab = filteredEtape4.slice(0, 1);
-      this.etape4 = etape4tab[0]?.resume
+      this.etape4 = etape4tab[0]?.body
       this.loading = false
     } catch (error) {
       console.error(error);

@@ -149,23 +149,24 @@ export default {
     mounted: async function () {
         try {
             const response = await this.$axios.get("/contenus");
-            const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Téléphone");
+            console.log("response.data.data.data++++++++++++++", response.data.data.data)
+            const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Téléphone");
             const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.telephone = sortedTelephones.slice(0, 1);
-            this.telephone_gec = this.telephone[0].resume
-            const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Email");
+            this.telephone_gec = this.telephone[0].body
+            const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Email");
             const sortedEmails = filteredEmails.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.email = sortedEmails.slice(0, 1);
-            this.email_gec = this.email[0].resume
-            const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.id === "6461461ce1edd10225f8357f" && contenus.title === "Adresse");
+            this.email_gec = this.email[0].body
+            const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Adresse");
             const sortedAdresses = filteredAdresses.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.adresse = sortedAdresses.slice(0, 1);
-            this.adresse_gec = this.adresse[0].resume
-            const filteredFooters = response.data.data.data.filter(contenus => contenus.categorie.id === "646418cc701a1e0225c9ebc5" && contenus.title === "Footer-text");
+            this.adresse_gec = this.adresse[0].body
+            const filteredFooters = response.data.data.data.filter(contenus => contenus.categorie.slug === "footer" && contenus.title === "Footer-text");
             const sortedFooters = filteredFooters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.footer = sortedFooters.slice(0, 1);
-            this.resume = this.footer[0]?.resume
-            const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.id === "64641a9a701a1e0225c9ebc7");
+            this.resume = this.footer[0]?.body
+            const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.slug === "reseaux");
             this.reseaux = filteredReseaux
             const filteredFacebooks = filteredReseaux?.filter(contenus => contenus.title === "Facebook");
             const sortedFacebooks = filteredFacebooks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
