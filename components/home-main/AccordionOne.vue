@@ -1,65 +1,29 @@
+
 <template>
     <div class="faq-accordion" id="faq-accordion">
-        <div class="accordion" v-show="!loading">
-            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[0].question && faqs[0].response">
-                <h5 class="accordion-header ">
-                    <button class="accordion-button" type="button" color="rgb(0, 128, 100)" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true">
-                        {{ faqs[0].question }}
-                    </button>
-                </h5>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq-accordion">
-                    <div class="accordion-body">
-                        <p> {{ faqs[0].response }}</p>
-                    </div>
-                </div>
+      <div class="accordion" v-show="!loading">
+        <div class="accordion-item" v-for="(faq, index) in faqs" :key="index">
+          <h5 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="`#collapse${index + 1}`"
+              :aria-expanded="index == 0 ? 'true' : 'false'">
+              {{ faq.question }}
+            </button>
+          </h5>
+          <div :id="`collapse${index + 1}`" class="accordion-collapse collapse"
+            data-bs-parent="#faq-accordion">
+            <div class="accordion-body">
+              <p>{{ faq.response }}</p>
             </div>
-            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[1].question && faqs[1].response">
-                <h5 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false">
-                        {{ faqs[1].question }}
-                    </button>
-                </h5>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
-                    <div class="accordion-body">
-                        <p> {{ faqs[1].response }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[2].question && faqs[2].response">
-                <h5 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false">
-                        {{ faqs[2].question }}
-                    </button>
-                </h5>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
-                    <div class="accordion-body">
-                        <p> {{ faqs[2].response }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" v-if="faqs && faqs.length > 0 && faqs[3].question && faqs[3].response">
-                <h5 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour" aria-expanded="false">
-                        {{ faqs[3].question }}
-                    </button>
-                </h5>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
-                    <div class="accordion-body">
-                        <p> {{ faqs[3].response }}</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <div class="accordion loader-faq" v-show="loading">
-        </div>
+      </div>
+  
+      <div class="accordion loader-faq" v-show="loading">
+      </div>
     </div>
-</template>
-
+  </template>
+  
+  
 <script>
 export default {
     modules: ['@nuxtjs/axios'],
@@ -71,7 +35,7 @@ export default {
             const response = await this.$axios.get("/faqs");
             const filteredFaqs = response.data.data.data.filter(faq => faq.categorie.slug === "infos-generales");
             const sortedFaqs = filteredFaqs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.faqs = sortedFaqs.slice(0, 4);
+            this.faqs = sortedFaqs
             this.loading = false
         } catch (error) {
             console.error(error);
