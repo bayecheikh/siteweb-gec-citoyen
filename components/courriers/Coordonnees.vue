@@ -65,11 +65,11 @@
                     </div>
                 </div>
             </div>
-            <div v-show="!model.requerant.email" class="form-group col-md-6 col-sm-12 mb-5 mt-2">
+            <div v-show="!retrievedEmail" class="form-group col-md-6 col-sm-12 mb-5 mt-2">
                 <label for="log-email">Email</label>
                 <input type="email" class="border-radio" name="log-email" id="log-email" v-model="model.requerant.email">
             </div>
-            <div v-show="model.requerant.email" class="form-group col-md-6 col-sm-12 mb-5 mt-2">
+            <div v-show="retrievedEmail" class="form-group col-md-6 col-sm-12 mb-5 mt-2">
                 <label for="log-email">Email</label>
                 <input type="email" class="border-radio readonly" name="log-email" id="log-email"
                     v-model="model.requerant.email" readonly>
@@ -228,6 +228,7 @@ export default {
             const _id = await localStorage.getItem('gecIdUser');
             if (localStorage.getItem('gecEmail')) {
                 this.model.requerant.email = localStorage.getItem('gecEmail')
+                this.retrievedEmail = localStorage.getItem('gecEmail')
             }
             this.model.requerant.prenom = user['name']
             this.model.requerant.nom = user['name']
@@ -242,6 +243,7 @@ export default {
     }),
     data() {
         return {
+            retrievedEmail: '',
             personne_physique: false,
             entreprise: false,
             requerant: true,
