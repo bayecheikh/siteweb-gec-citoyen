@@ -229,19 +229,11 @@ export default {
    }
 }
 
-@media (max-width: 768px) {
-   .custom-svg-line {
-      width: 50px;
-      /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 768px */
-   }
-}
 
-@media (max-width: 480px) {
    .custom-svg-line {
-      width: 20px;
+      width: 25px;
       /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 480px */
    }
-}
 
 .course-area-3 {
    .isotop-button {

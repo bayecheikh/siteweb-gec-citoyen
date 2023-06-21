@@ -3,7 +3,7 @@
         <h3 class="title"></h3>
         <form class="row">
             <div class="edu-sorting form-group col-12">
-                <label for="reg-name">Choisir une entrée</label>
+                <label for="reg-name">Choisir une entrée*</label>
                 <select class="custom-select" @change="changeModelEntree($event)">
                     <!-- <option>--</option> -->
                     <option v-for="item in detailentree" :key="item.serialId" :value="item.serialId"
@@ -33,7 +33,7 @@
 
             </div>
             <div class="col-12 form-group" v-if="attache_courrier">
-                <label for="reg-name">Joindre le courrier (Format PDF) :</label>
+                <label for="reg-name">Joindre le courrier (Format PDF)* :</label>
                 <div class="d-flex justify-content-between border-input" @click="$refs.file.click()">
                     <p class="mb-0 bg-fichier p-3">Choisir un fichier</p>
                     <div class="p-3">

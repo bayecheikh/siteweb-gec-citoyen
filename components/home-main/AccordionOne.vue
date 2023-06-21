@@ -2,7 +2,7 @@
   <div class="faq-accordion" id="faq-accordion">
     <div v-show="!loading" class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="(faq, index) in faqs" :key="index">
+        <div v-for="(faq, index) in faqs" :key="index">
           <div class="accordion-item custom-faq-accordion-item">
             <h5 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -39,9 +39,8 @@ export default {
 
       const response = await this.$axios.get("/faqs");
       const filteredFaqs = response.data.data.data.filter(faq => faq.categorie.slug === "infos-generales");
-      const sortedFaqs = filteredFaqs.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+      const sortedFaqs = filteredFaqs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       this.faqs = sortedFaqs;
-
       await this.initSwiper();
     } catch (error) {
       console.error(error);

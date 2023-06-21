@@ -47,26 +47,35 @@
                   </div>
                   <hr>
                   <div class="d-flex justify-content-between p-4 pb-0 pt-0">
+                     <div class="col-6" for="reg-npi">NPI :</div>
+                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.npi
+                     }}
+                     </p>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between p-4 pb-0 pt-0">
+                     <div class="col-6" for="reg-tel">Téléphone :</div>
+                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.telephone }}
+                     </p>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between p-4 pb-4 pt-0">
+                     <div class="col-6" for="reg-sexe">Sexe :</div>
+                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.sexe }}</p>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between p-4 pb-4 pt-0">
                      <div class="col-6" for="log-email">Email :</div>
                      <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.email }}</p>
                   </div>
                   <hr>
                   <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                     <div class="col-6" for="reg-name">Sexe :</div>
-                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.sexe }}</p>
-                  </div>
-                  <hr>
-                  <div class="d-flex justify-content-between p-4 pb-4 pt-0">
-                     <div class="col-6" for="reg-name">Adresse :</div>
+                     <div class="col-6" for="reg-adresse">Adresse :</div>
                      <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.adresse }}
                      </p>
                   </div>
-                  <hr>
-                  <div class="d-flex justify-content-between p-4 pb-0 pt-0">
-                     <div class="col-6" for="reg-name">Téléphone :</div>
-                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.telephone }}
-                     </p>
-                  </div>
+                  
+                  
 
                </div>
                <div class="row border-grey-no-padding d-flex align-items-center mb-5">

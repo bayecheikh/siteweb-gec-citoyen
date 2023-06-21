@@ -2,7 +2,7 @@
     <div class="custom-bloc-padding">
         <div class="row pb-0 bloc-recherche">
             <div class="form-group col-12 mb-4">
-                <div class="custom-lable-title">MOTS-CLÉS</div>
+                <!-- <div class="custom-lable-title">MOTS-CLÉS</div> -->
                 <input class="border-radio my-4" type="text" v-model="recherche" name="reg-name" id="reg-name"
                     placeholder="Rechercher">
             </div>
@@ -82,7 +82,7 @@ export default {
             }
             const search = this.recherche.toLowerCase();
             return this.organismes.filter(organisme => {
-                return organisme.description.toLowerCase().includes(search);
+                return organisme.description.toLowerCase().includes(search) || organisme.intitule.toLowerCase().includes(search);
             });
         },
         async submitMinistere(item) {
