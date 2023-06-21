@@ -59,7 +59,7 @@ export default {
     mounted: async function () {
         try {
             const response = await this.$axios.get("/structures");
-            const activeOrganismes = response.data.data.data.filter(organisme => organisme.status==1)
+            const activeOrganismes = response.data.data.data.filter(organisme => organisme.status == 1)
             for (let organisme of activeOrganismes) {
                 this.organismes.push(organisme)
             }
@@ -91,7 +91,7 @@ export default {
             const response = await this.$axios.get("/structures/" + item.id + "/entrees");
             const entrees = await response.data.data.data
             const entreeBC1 = entrees.find(entree => entree.id === "BC1");
-            console.log("DEFATUL",entreeBC1.serialId )
+            console.log("DEFATUL", entreeBC1.serialId)
             this.$store.dispatch('ministeres/getDetail', { title_organisme: item.description, structure: item.id, defaultEntree: entreeBC1.serialId, defaultEntreeName: entreeBC1.entity_label })
             this.$store.dispatch('entrees/getDetail', entrees)
             this.$store.dispatch('active_step/getDetail', { id: 'coordonnees' })
@@ -208,4 +208,5 @@ export default {
     border: solid 2px #e8ecee;
     padding: 25px;
     margin-bottom: 10px;
-}</style>
+}
+</style>

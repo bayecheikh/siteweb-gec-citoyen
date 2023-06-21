@@ -11,7 +11,7 @@
             <a v-show="!$getToken()" href="/" @click.prevent=onClickSeConnecter()>
                 Se connecter
             </a>
-         
+
             <a v-show="$getToken()" :href="getDashboardURL">
                 Mes courriers
             </a>
@@ -51,7 +51,7 @@ export default {
     components: {
     },
     methods: {
-    
+
         async onClickSeConnecter() {
 
             window.location.href = `https://pprodauth.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=${encodeURIComponent("https://siteweb-gec-citoyen.vercel.app")}&response_type=code&scope=openid&authError=true`;
@@ -76,7 +76,7 @@ export default {
     data() {
         return {
             showMobileMenu: true,
-   
+
         }
     },
 

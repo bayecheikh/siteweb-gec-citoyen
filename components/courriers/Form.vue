@@ -30,7 +30,8 @@
                   <p :class="'title_step pt-2 '">Trouver l'organisme concerné</p>
                </div>
                <div class="col-1">
-                  <svg class="custom-svg-line" xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+                  <svg class="custom-svg-line" xmlns="http://www.w3.org/2000/svg" width="100" height="6"
+                     viewBox="0 0 339 6">
 
                      <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none"
                         :stroke="detailactive_step.id == 'ministeres' ? '#008064' : '#ffff'" stroke-linecap="round"
@@ -53,15 +54,16 @@
                      </svg>
                   </div>
                   <p class="title_step pt-2">Saisir vos coordonnées </p>
-                  
+
                </div>
 
                <div class="col-1">
-                  <svg class="custom-svg-line" xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+                  <svg class="custom-svg-line" xmlns="http://www.w3.org/2000/svg" width="100" height="6"
+                     viewBox="0 0 339 6">
 
                      <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none"
-                        :stroke="detailactive_step.id == 'contenu' ? '#008064' : '#ffff'" stroke-linecap="round" stroke-width="6"
-                        opacity="0.998" />
+                        :stroke="detailactive_step.id == 'contenu' ? '#008064' : '#ffff'" stroke-linecap="round"
+                        stroke-width="6" opacity="0.998" />
 
                   </svg>
                </div>
@@ -85,7 +87,8 @@
                   <p class="title_step pt-2">Remplir le formulaire de soumission</p>
                </div>
                <div class="col-1">
-                  <svg class="custom-svg-line" xmlns="http://www.w3.org/2000/svg" width="100" height="6" viewBox="0 0 339 6">
+                  <svg class="custom-svg-line" xmlns="http://www.w3.org/2000/svg" width="100" height="6"
+                     viewBox="0 0 339 6">
 
                      <line id="Ligne_19907" data-name="Ligne 19907" x2="333" transform="translate(3 3)" fill="none"
                         :stroke="detailactive_step.id == 'coordonnees' ? '#008064' : '#ffff'" stroke-linecap="round"
@@ -120,8 +123,8 @@
             </div>
             <div class="tab-content login-form-box registration-form">
 
-               <div :class="'tab-pane fade ' + (detailactive_step.id == 'ministeres' ? 'show active' : '')" id="undergraduate"
-                  role="tabpanel">
+               <div :class="'tab-pane fade ' + (detailactive_step.id == 'ministeres' ? 'show active' : '')"
+                  id="undergraduate" role="tabpanel">
                   <div class="container position-relative">
                      <div class="row g-5 justify-content-center">
                         <div class="col-lg-12">
@@ -150,8 +153,8 @@
                      </ul>
                   </div>
                </div>
-               <div :class="'tab-pane fade ' + (detailactive_step.id == 'coordonnees' ? 'show active' : '')" id="coordonnees"
-                  role="tabpanel">
+               <div :class="'tab-pane fade ' + (detailactive_step.id == 'coordonnees' ? 'show active' : '')"
+                  id="coordonnees" role="tabpanel">
                   <div class="container position-relative">
                      <div class="row g-5 justify-content-center">
                         <div class="col-lg-12">
@@ -219,24 +222,27 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 @media (max-width: 992px) {
-  .custom-formulaire-title {
-    font-size: 20px; 
-    text-align: center;
-  }
+   .custom-formulaire-title {
+      font-size: 20px;
+      text-align: center;
+   }
 }
+
 @media (max-width: 768px) {
-  .custom-svg-line {
-    width: 50px; /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 768px */
-  }
+   .custom-svg-line {
+      width: 50px;
+      /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 768px */
+   }
 }
 
 @media (max-width: 480px) {
-  .custom-svg-line {
-    width: 20px; /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 480px */
-  }
+   .custom-svg-line {
+      width: 20px;
+      /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 480px */
+   }
 }
+
 .course-area-3 {
    .isotop-button {
       button {

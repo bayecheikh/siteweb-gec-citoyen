@@ -41,7 +41,8 @@
                   <hr>
                   <div class="d-flex justify-content-between p-4 pb-0 pt-0">
                      <div class="col-6" for="reg-name">Prénom et nom :</div>
-                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.prenometnom }}
+                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.prenometnom
+                     }}
                      </p>
                   </div>
                   <hr>
@@ -57,7 +58,8 @@
                   <hr>
                   <div class="d-flex justify-content-between p-4 pb-4 pt-0">
                      <div class="col-6" for="reg-name">Adresse :</div>
-                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.adresse }}</p>
+                     <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.adresse }}
+                     </p>
                   </div>
                   <hr>
                   <div class="d-flex justify-content-between p-4 pb-0 pt-0">
@@ -140,7 +142,7 @@
                            class="icon-west"></i> Précédent</button>
                   </div>
                   <div class="form-group col-md-3 col-sm-6">
-                     <button @click="submitValidation" type="button" class="edu-btn btn-medium" >Soumettre <i
+                     <button @click="submitValidation" type="button" class="edu-btn btn-medium">Soumettre <i
                            class="icon-4"></i></button>
                   </div>
                </div>
@@ -153,7 +155,7 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex'
 export default {
- 
+
    components: {
       SectionTitle: () => import('@/components/common/SectionTitle'),
       Previsualisation: () => import('@/components/courriers/Previsualisation'),
@@ -169,7 +171,7 @@ export default {
    }),
    data() {
       return {
-         load:false
+         load: false
       }
    },
    methods: {
@@ -277,12 +279,14 @@ export default {
    font-size: 14px;
    font-weight: 500;
 }
+
 @media (max-width: 768px) {
    .custom-lable-title {
       text-align: center;
       width: 100% !important;
-  }
+   }
 }
+
 .custom-bloc-padding {
    padding: 30px;
 }

@@ -9,37 +9,37 @@
 
 <script>
 
-    export default {
-        props: {
-            preTitle: {
-                type: String
-            },
-            preTitleClass: {
-                type: String
-            },
-            title: {
-                type: String,
-                required: true
-            },
-            titleClass: {
-                type: String
-            },
-            subTitle: {
-                type: String
-            },
-            subTitleClass: {
-                type: String
-            },
-            alignment: {
-                type: String
-            },
-            disableMark: {
-                type: Boolean
-            },
-            shapeLineClass: {
-                type: String
-            },
-        }
+export default {
+    props: {
+        preTitle: {
+            type: String
+        },
+        preTitleClass: {
+            type: String
+        },
+        title: {
+            type: String,
+            required: true
+        },
+        titleClass: {
+            type: String
+        },
+        subTitle: {
+            type: String
+        },
+        subTitleClass: {
+            type: String
+        },
+        alignment: {
+            type: String
+        },
+        disableMark: {
+            type: Boolean
+        },
+        shapeLineClass: {
+            type: String
+        },
     }
+}
 
 </script>

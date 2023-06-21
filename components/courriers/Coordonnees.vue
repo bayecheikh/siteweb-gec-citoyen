@@ -33,21 +33,22 @@
                 <div class="custom-lable-title">COORDONNÉES MANDATAIRE ENTREPRISE</div>
             </div>
             <hr class='dotted mt-2 mb-5' />
-           
-                <div class="form-group col-md-6 col-sm-12">
-                    <label for="reg-name">Prénom et Nom*</label>
-                    <input type="text" class="border-radio readonly" name="reg-name" id="reg-name"
-                        v-model="model.requerant.prenometnom" readonly>
-                </div>
-                <div class="form-group col-md-6 col-sm-12">
-                    <label for="log-npi">NPI*</label>
-                    <input type="text" class="border-radio readonly" name="log-npi" id="log-npi"
-                        v-model="model.requerant.npi" readonly>
-                </div>
-           
-                <div class="form-group col-12 mb-5 mt-2">
-                    <label for="phone">Téléphone</label>
-                <input type="text" class="border-radio readonly" name="phone" id="phone" v-model="model.requerant.telephone" readonly>
+
+            <div class="form-group col-md-6 col-sm-12">
+                <label for="reg-name">Prénom et Nom*</label>
+                <input type="text" class="border-radio readonly" name="reg-name" id="reg-name"
+                    v-model="model.requerant.prenometnom" readonly>
+            </div>
+            <div class="form-group col-md-6 col-sm-12">
+                <label for="log-npi">NPI*</label>
+                <input type="text" class="border-radio readonly" name="log-npi" id="log-npi" v-model="model.requerant.npi"
+                    readonly>
+            </div>
+
+            <div class="form-group col-12 mb-5 mt-2">
+                <label for="phone">Téléphone</label>
+                <input type="text" class="border-radio readonly" name="phone" id="phone" v-model="model.requerant.telephone"
+                    readonly>
             </div>
             <div class="form-group col-md-6 col-sm-12 mb-5 mt-2">
                 <label for="reg-name">Sexe</label>
@@ -66,13 +67,12 @@
             </div>
             <div v-show="!model.requerant.email" class="form-group col-md-6 col-sm-12 mb-5 mt-2">
                 <label for="log-email">Email</label>
-                    <input type="email" class="border-radio" name="log-email" id="log-email"
-                        v-model="model.requerant.email">
+                <input type="email" class="border-radio" name="log-email" id="log-email" v-model="model.requerant.email">
             </div>
             <div v-show="model.requerant.email" class="form-group col-md-6 col-sm-12 mb-5 mt-2">
                 <label for="log-email">Email</label>
-                    <input type="email" class="border-radio readonly" name="log-email" id="log-email"
-                        v-model="model.requerant.email" readonly>
+                <input type="email" class="border-radio readonly" name="log-email" id="log-email"
+                    v-model="model.requerant.email" readonly>
             </div>
 
 
@@ -226,7 +226,7 @@ export default {
         if (localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser')) {
             const user = await JSON.parse(localStorage.getItem('gecLoggedInUser'));
             const _id = await localStorage.getItem('gecIdUser');
-            if(localStorage.getItem('gecEmail')){
+            if (localStorage.getItem('gecEmail')) {
                 this.model.requerant.email = localStorage.getItem('gecEmail')
             }
             this.model.requerant.prenom = user['name']
@@ -399,4 +399,5 @@ export default {
 
 .readonly {
     background: #f7f5f2;
-}</style>
+}
+</style>

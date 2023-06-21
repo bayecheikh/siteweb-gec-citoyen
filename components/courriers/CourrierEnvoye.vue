@@ -5,7 +5,9 @@
                 <button @click="onClickClose()" class="custom-close-btn">x</button>
                 <div class="section-title">
                     <h4 class="title custom-suivi-title text-uppercase">VOTRE COURRIER A ÉTÉ ENVOYÉ AVEC SUCCÈS</h4>
-                    <p class="custom-information-msg">Votre courrier a bien été envoyé. Votre code de suivi est : <span class="custom-code-suivi">{{ ispopupload }}</span>. Vous pouvez suivre l'avancement de votre courrier sur la plateforme à l'aide de ce code.</p>
+                    <p class="custom-information-msg">Votre courrier a bien été envoyé. Votre code de suivi est : <span
+                            class="custom-code-suivi">{{ ispopupload }}</span>. Vous pouvez suivre l'avancement de votre
+                        courrier sur la plateforme à l'aide de ce code.</p>
                 </div>
             </div>
         </div>
@@ -28,9 +30,9 @@ export default {
             this.validCode = true
             this.$store.dispatch('courrierenvoye/getDetail', false)
             this.$router.push('/');
-           
+
         },
-   
+
     },
 
     data() {
@@ -48,12 +50,14 @@ export default {
 </script>
 
 <style>
-.custom-code-suivi{
+.custom-code-suivi {
     font-weight: 800;
 }
-.custom-contact-success-form{
+
+.custom-contact-success-form {
     z-index: 9999 !important;
 }
+
 .custom-categorie-grid {
     height: 337.25px !important;
 }
@@ -170,10 +174,10 @@ export default {
     position: fixed !important;
     top: 50%;
     right: 25%;
-   
+
     z-index: 9999 !important;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2) !important;
-  
+
 }
 
 .custom-error-msg {
@@ -393,9 +397,9 @@ p {
     width: 20px;
     height: 20px;
 }
-.custom-loader{
+
+.custom-loader {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
-</style>
+}</style>

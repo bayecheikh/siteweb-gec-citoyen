@@ -313,4 +313,5 @@ export default {
 
 .custom-footer-kitchen-logo {
     margin-left: -14px;
-}</style>
+}
+</style>

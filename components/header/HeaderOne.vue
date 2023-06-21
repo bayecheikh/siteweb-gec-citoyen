@@ -389,9 +389,7 @@ button.edu-btn {
 <style scoped>
 a:hover,
 a.active {
-  color: #1ab69d !important;
-  font-weight: 700px;
+    color: #1ab69d !important;
+    font-weight: 700px;
 }
-
-
 </style>

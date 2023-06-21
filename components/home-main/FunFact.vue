@@ -133,8 +133,10 @@ export default {
 
 </script>
 
-<style scoped>.custom-counterup-area-6 {
+<style scoped>
+.custom-counterup-area-6 {
 
     margin-bottom: 80px !important;
     background: #0a3764 !important;
-}</style>
+}
+</style>

@@ -6,7 +6,8 @@
                 <label for="reg-name">Choisir une entrée</label>
                 <select class="custom-select" @change="changeModelEntree($event)">
                     <!-- <option>--</option> -->
-                    <option v-for="item in detailentree" :key="item.serialId" :value="item.serialId" :selected="item.serialId === detailministere.defaultEntree">{{ item.entity_label }} 
+                    <option v-for="item in detailentree" :key="item.serialId" :value="item.serialId"
+                        :selected="item.serialId === detailministere.defaultEntree">{{ item.entity_label }}
                     </option>
                 </select>
             </div>
@@ -46,7 +47,8 @@
                     </div>
 
                 </div>
-                <input type="file" id="file" name="avatar" ref="file" v-on:change="handleFileUpload" style="display: none">
+                <input type="file" id="file" name="avatar" ref="file" v-on:change="handleFileUpload"
+                    class="custom-contenu-input">
                 <div v-if="$v.model.uploadedFile.$error">
                     <p class="custom-validation-error-msg">Veuillez joindre le courrier.</p>
                 </div>
@@ -87,7 +89,7 @@
 
                             </div>
                             <input type="file" id="file2" name="avatar" ref="file2" v-on:change="handleFileUpload2"
-                                style="display: none">
+                                class="custom-contenu-input">
 
                         </li>
                     </ul>
@@ -130,11 +132,11 @@ export default {
         SectionTitle: () => import('@/components/common/SectionTitle')
     },
     computed: mapGetters({
-            detailutilisateur: 'coordonnees/detailutilisateur',
-            detailministere: 'ministeres/detailministere',
-            detailentree: 'entrees/detailentree',
-            detailcontenu: 'contenus/detailcontenu'
-        }),
+        detailutilisateur: 'coordonnees/detailutilisateur',
+        detailministere: 'ministeres/detailministere',
+        detailentree: 'entrees/detailentree',
+        detailcontenu: 'contenus/detailcontenu'
+    }),
 
 
     mounted: async function () {
@@ -153,8 +155,8 @@ export default {
     data() {
         return {
 
-          selectedEntree:'',
-          
+            selectedEntree: '',
+
             fileInfos: [{ name: 'file 1', url: '#' }, { name: 'file 2', url: '#' }],
             key: null,
             imageData: null,
@@ -203,7 +205,7 @@ export default {
         submitContenu() {
             this.$v.$touch();
             if (!this.$v.$invalid) {
-                if(!this.model.destination){
+                if (!this.model.destination) {
                     this.model.destination = this.detailministere.defaultEntree
                     this.selectedEntree = this.detailministere.defaultEntree
                     this.selectedEntreeName = this.detailministere.defaultEntreeName
@@ -350,6 +352,10 @@ export default {
 }
 </script>
 <style scoped>
+.custom-contenu-input {
+    display: none;
+}
+
 .custom-validation-error-msg {
     color: #fe0022
 }

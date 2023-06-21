@@ -8,15 +8,15 @@
               <div>
                 <h3 v-show="loading" class=" title mb-5 loader-title"></h3>
                 <h3 v-show="loading" class="custom-subtitle loader-resume mb-5"></h3>
-                <div v-show="!loading" >
-                    <h3 class="title">
-                        {{ firstWords }}
-          
+                <div v-show="!loading">
+                  <h3 class="title">
+                    {{ firstWords }}
+
                     <div> {{ lastWords }} </div>
-                    </h3>
-                    <p class="custom-subtitle mb-5">
-                        {{ resume }}
-                    </p>
+                  </h3>
+                  <p class="custom-subtitle mb-5">
+                    {{ resume }}
+                  </p>
                 </div>
               </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
@@ -122,11 +122,11 @@ export default {
       }
 
     } catch (error) {
-      
+
       console.error(error);
       return;
     }
-   
+
 
     // Supprimer les espaces en début et fin de chaîne
 
@@ -185,7 +185,7 @@ export default {
   width: 530px;
   background-color: #d6e0e2;
   animation: loaderAnimation 1s ease-in-out infinite;
- 
+
 }
 
 .loader-resume {

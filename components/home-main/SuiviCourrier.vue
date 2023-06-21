@@ -7,7 +7,8 @@
                 </div> -->
                 <div v-if="isCharging" class="close-menu">
                     <span class="custom-loader">
-                        <svg class="custom-svg" width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
+                        <svg class="custom-svg" width="50" height="50" viewBox="0 0 38 38"
+                            xmlns="http://www.w3.org/2000/svg" stroke="#0a3764">
                             <g fill="none" fill-rule="evenodd">
                                 <g transform="translate(1 1)" stroke-width="2">
                                     <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
@@ -87,7 +88,8 @@
 
                                     </g>
 
-                                </svg> Attention, le code de suivi <span class="custom-wrong-code"> {{ writtenCode }} </span> est invalide. Merci d'entrer un autre code. </p>
+                                </svg> Attention, le code de suivi <span class="custom-wrong-code"> {{ writtenCode }}
+                                </span> est invalide. Merci d'entrer un autre code. </p>
                         </div>
                         <div class="custom-aide-div">
                             <a href="/contact-us" class="custom-contact-us-a" @click="onClickClose()">
@@ -326,8 +328,8 @@
                 <div class="button-group d-flex justify-content-end">
                     <button @click="onClickClose()" class=" custom-suivi-close-button"><span
                             class="custom-suivi-btn-color">FERMER</span></button>
-                    <button v-if="isVerifierVisible"  class="custom-main-banner-track-btn" name="submit" type="submit" @click="isCodeValid(code)"
-                        :disabled="isCharging">
+                    <button v-if="isVerifierVisible" class="custom-main-banner-track-btn" name="submit" type="submit"
+                        @click="isCodeValid(code)" :disabled="isCharging">
                         <span v-if="!isCharging" class="custom-suivi-btn-color">VÉRIFIER</span><span v-else
                             class="custom-suivi-btn-color"> <span>
                                 <svg width="20" height="20" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +361,7 @@ export default {
     },
     mounted: async function () {
         this.isCharging = false
-        
+
 
     },
 
@@ -394,9 +396,9 @@ export default {
                 const response = await this.$axios.get("/courriers/" + code.toUpperCase() + "/status");
 
                 console.log("Reponse", response?.data?.data?.data)
-            
 
-              
+
+
                 this.subject = response?.data?.data?.data?.objet
                 this.idcourrier = response?.data?.data?.data?.id
                 this.structure = response?.data?.data?.data?.destinataire?.description
@@ -404,7 +406,7 @@ export default {
                 this.status = response?.data?.data?.data?.status
                 const exactEmail = await response?.data?.data?.data?.sender?.email
 
-          
+
                 if (!exactEmail) {
                     this.transformedEmail = '';
 
@@ -415,7 +417,7 @@ export default {
                     this.transformedEmail = transformedUsername + '@' + domain;
                 }
                 this.isCharging = false
-             
+
 
 
 
@@ -428,7 +430,7 @@ export default {
                 this.showValidMessage1 = false
                 this.validCode = false
 
-    
+
             }
 
             //  const courrier = await this.courriers.find(courrier => courrier.idSuivi == "BJ-MAEC-134" );
@@ -437,7 +439,7 @@ export default {
             if (!this.status) {
                 console.log("aaaaaaaaa++++")
                 this.isVerifierVisible = true
-                this.showValidMessage2 =  false
+                this.showValidMessage2 = false
                 this.showValidMessage1 = false
                 this.validCode = false
                 this.code = '';
@@ -455,7 +457,7 @@ export default {
                 const response = await this.$axios.get("/courriers/" + this.idcourrier);
                 const length = await response?.data?.data?.data?.responses?.length
                 this.dateReponse = response?.data?.data?.data?.responses[length - 1]?.send_date
-              
+
                 this.showValidMessage2 = true
                 this.showValidMessage1 = false
                 this.validCode = true
@@ -494,10 +496,10 @@ export default {
 </script>
 
 <style>
-
-.custom-wrong-code{
+.custom-wrong-code {
     font-weight: 800;
 }
+
 .button-group {
     justify-content: flex-end;
     gap: 15px;
@@ -995,11 +997,12 @@ p {
     }
 
     .custom-suivi-title>h4 {
-       
+
         text-align: center !important;
         justify-content: center !important;
         align-items: center !important;
     }
+
     .custom-svg {
         width: 60px !important;
         height: 60px !important;
@@ -1017,7 +1020,8 @@ p {
 }
 </style>
 
-<style>.custom-svg-response-icon {
+<style>
+.custom-svg-response-icon {
     padding: 7px !important;
 }
 

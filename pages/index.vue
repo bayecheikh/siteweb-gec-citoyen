@@ -29,15 +29,15 @@ export default {
             }
             try {
                 const response = await this.$axios.post('users/code', { ...this.model })
-               
+
                 await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 // await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
                 await localStorage.setItem('gecIdUser', response.data.data.doc._id)
-                if(response.data?.data?.doc?.email){
+                if (response.data?.data?.doc?.email) {
                     await localStorage.setItem('gecEmail', response.data?.data?.doc?.email)
                 }
-             
+
 
                 await localStorage.setItem('gecIsAuthenticated', true)
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));

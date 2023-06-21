@@ -32,7 +32,8 @@
               <ul v-show="reseaux" class="social-share">
                 <li v-show="facebook_link"><a target="_blank" :href=facebook_link><i class="icon-facebook"></i></a></li>
                 <li v-show="linkedin_link"><a target="_blank" :href=linkedin_link><i class="icon-linkedin2"></i></a></li>
-                <li v-show="instagram_link"><a target="_blank" :href=instagram_link><i class="icon-instagram"></i></a></li>
+                <li v-show="instagram_link"><a target="_blank" :href=instagram_link><i class="icon-instagram"></i></a>
+                </li>
                 <li v-show="twitter_link"><a target="_blank" :href=twitter_link><i class="icon-twitter"></i></a></li>
               </ul>
             </div>
@@ -159,7 +160,7 @@ export default {
       this.instagram_link = instagramtab[0]?.link
       const filteredLinkedins = filteredReseaux?.filter(contenus => contenus.title === "LinkedIn");
       const sortedLinkedins = filteredLinkedins.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      const linkedintab= sortedLinkedins.slice(0, 1);
+      const linkedintab = sortedLinkedins.slice(0, 1);
       this.linkedin_link = linkedintab[0]?.link
       const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Téléphone");
       const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -323,5 +324,6 @@ export default {
 
 .custom-validation-error-msg {
   color: #fe0022
-}</style>
+}
+</style>
 
