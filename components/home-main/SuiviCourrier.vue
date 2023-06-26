@@ -394,7 +394,7 @@ export default {
 
             try {
 
-                const response = await this.$axios.get("/courriers/"+code.trim().toUpperCase()+"/status");
+                const response = await this.$axios.get("/courriers/"+code.trim()+"/status");
 
               
 
