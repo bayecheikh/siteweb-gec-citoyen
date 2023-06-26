@@ -213,7 +213,7 @@ export default {
                 }
                 this.load = true
                 console.log('Données formulaire ++++++: ', { ...this.model })
-                this.$store.dispatch('contenus/getDetail', { ...this.model, entree: this.selectedEntree, entreename: this.selectedEntreeName, subject: this.model.subject })
+                this.$store.dispatch('contenus/getDetail', { ...this.model, entree: this.selectedEntree, entreename: this.selectedEntreeName, subject: this.model.subject,pieces_jointes:[...this.model.pieces_jointes] })
                 this.$store.dispatch('active_step/getDetail', { id: 'validation' })
             }
 

@@ -55,12 +55,12 @@
                 <div class="form-group border-input pt-3 pb-1">
                     <div class="form-check form-check-inline mr-5">
                         <input class="form-check-input" type="radio" v-model="model.requerant.sexe"
-                            name="inlineRadioOptions2" id="inlineRadio1111" value="Homme">
+                            name="inlineRadioOptions1" id="inlineRadio1111" value="Homme">
                         <label class="form-check-label" for="inlineRadio1111">Homme</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" v-model="model.requerant.sexe"
-                            name="inlineRadioOptions2" id="inlineRadio2222" value="Femme">
+                            name="inlineRadioOptions1" id="inlineRadio2222" value="Femme">
                         <label class="form-check-label" for="inlineRadio2222">Femme</label>
                     </div>
                 </div>
@@ -236,9 +236,11 @@ export default {
             this.model.sender = _id
         }
     },
-    computed: mapGetters({
-        detailutilisateur: 'coordonnees/detailutilisateur',
-    }),
+    computed: {
+        ...mapGetters({
+            detailutilisateur: 'coordonnees/detailutilisateur',
+        })
+    },
     data() {
         return {
             retrievedEmail: '',
@@ -295,8 +297,8 @@ export default {
     methods: {
         submitCoordonnee() {
             this.load = true
-            console.log('Données formulaire ++++++: ', { ...this.model })
-            this.$store.dispatch('coordonnees/getDetail', { ...this.model })
+            console.log('Données formulaire ++++++: ', { ...this.model})
+            this.$store.dispatch('coordonnees/getDetail', { ...this.model,requerant:{...this.model.requerant},personne_physique:{...this.model.personne_physique},entreprise:{...this.model.entreprise}})
             this.$store.dispatch('active_step/getDetail', { id: 'contenu' })
         },
         changeTypeUser($event) {

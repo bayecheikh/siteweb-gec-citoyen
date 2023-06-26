@@ -324,11 +324,7 @@
                             <td>{{ this.subject }}</td>
                         </tr>
                     </table>
-                    <div class="custom-aide-div">
-                            <a href="https://courrier-gec-citoyen.vercel.app/courrierrecus" class="custom-contact-us-a" @click="onClickClose()">
-                                Cliquez-ici pour consulter votre réponse.
-                            </a>
-                        </div>
+               
                 </div>
                 <div class="button-group d-flex justify-content-end">
                     <button @click="onClickClose()" class=" custom-suivi-close-button"><span
