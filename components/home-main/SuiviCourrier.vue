@@ -249,7 +249,7 @@
 
                                     </g>
 
-                                </svg> Votre courrier de réponse a été envoyé à l'adresse {{ this.transformedEmail }}</p>
+                                </svg> Votre courrier de réponse a été reçu<span v-show="this.transformedEmail"> à l'adresse {{ this.transformedEmail }}<span v-show="!this.transformedEmail"></span>.</span> </p>
                         </div>
                     </div>
 
@@ -324,6 +324,11 @@
                             <td>{{ this.subject }}</td>
                         </tr>
                     </table>
+                    <div class="custom-aide-div">
+                            <a href="https://courrier-gec-citoyen.vercel.app/courrierrecus" class="custom-contact-us-a" @click="onClickClose()">
+                                Cliquez-ici pour consulter votre réponse.
+                            </a>
+                        </div>
                 </div>
                 <div class="button-group d-flex justify-content-end">
                     <button @click="onClickClose()" class=" custom-suivi-close-button"><span
@@ -393,9 +398,9 @@ export default {
 
             try {
 
-                const response = await this.$axios.get("/courriers/" + code.toUpperCase() + "/status");
+                const response = await this.$axios.get("/courriers/"+code.trim().toUpperCase()+"/status");
 
-                console.log("Reponse", response?.data?.data?.data)
+                console.log("Reponse ID SUIVI+++++++++", response?.data?.data?.data)
 
 
 
@@ -424,11 +429,11 @@ export default {
             }
             catch (error) {
                 console.error("ERROR SUIVI", error);
-                this.isCharging = false
+                
                 this.isVerifierVisible = false
                 this.showValidMessage2 = false
                 this.showValidMessage1 = false
-                this.validCode = false
+                 return;
 
 
             }
@@ -443,28 +448,19 @@ export default {
                 this.showValidMessage1 = false
                 this.validCode = false
                 this.code = '';
-
             }
             else if (this.status == "En cours de traitement") {
-
                 this.showValidMessage1 = true
                 this.showValidMessage2 = false
                 this.validCode = true
-
             }
             else {
-
                 const response = await this.$axios.get("/courriers/" + this.idcourrier);
                 const length = await response?.data?.data?.data?.responses?.length
                 this.dateReponse = response?.data?.data?.data?.responses[length - 1]?.send_date
-
                 this.showValidMessage2 = true
                 this.showValidMessage1 = false
                 this.validCode = true
-
-
-
-
             }
 
 

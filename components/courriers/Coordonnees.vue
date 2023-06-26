@@ -74,15 +74,13 @@
                 <input type="email" class="border-radio readonly" name="log-email" id="log-email"
                     v-model="model.requerant.email" readonly>
             </div>
-
-
             <div class="form-group col-12 mb-5 mt-2">
                 <label for="address">Adresse</label>
                 <input type="text" class="border-input" name="address" id="address" v-model="model.requerant.adresse">
             </div>
 
             <!-- PERSONNNE PHYSIQUE -->
-
+            
             <div class="form-group col-12 mb-4 mt-3" v-if="personne_physique">
                 <hr class='dotted mt-2 mb-5' />
                 <div class="custom-lable-title">COORDONNÉES PERSONNE PHYSIQUE</div>

@@ -48,7 +48,7 @@ export default {
 
                 }
                 else {
-                    window.location.href = "https://siteweb-gec-citoyen.vercel.app";
+                    window.location.href = "/";
                     const { code, ...queryParams } = this.$route.query;
                     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
                     await this.$router.replace(newUrl);
