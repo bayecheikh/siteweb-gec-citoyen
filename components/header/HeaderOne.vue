@@ -154,8 +154,7 @@ export default {
 
     },
     components: {
-        SectionTitle: () => import('@/components/common/SectionTitle'),
-
+     
 
         Navigation: () => import("@/components/header/Navigation"),
 
@@ -232,7 +231,7 @@ export default {
 
 
         // Afficher la largeur de l'écran dans la console
-        console.log("Largeur de l'écran : " + largeurEcran + " pixels");
+     
         window.addEventListener('scroll', () => {
             let scrollPos = window.scrol
             if (scrollPos >= 200) {

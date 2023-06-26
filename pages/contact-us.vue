@@ -249,7 +249,6 @@ export default {
         };
         try {
           const token = await this.$recaptcha.getResponse()
-          console.log('ReCaptcha token:', token)
           this.showRecaptchaErrorText = false
           emailjs.send(serviceId, templateId, templateParams, userId)
             .then(() => {
@@ -278,7 +277,7 @@ export default {
 
           this.isloading = false;
           this.showRecaptchaErrorText = true
-          console.log('Login error:', error)
+        
         }
 
       }

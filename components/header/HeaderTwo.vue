@@ -151,7 +151,7 @@ export default {
 
     },
     components: {
-        SectionTitle: () => import('@/components/common/SectionTitle'),
+    
         Navigation: () => import("@/components/header/Navigation"),
         OffCanvasMobileMenuTwo: () => import("@/components/header/OffCanvasMobileMenuTwo")
     },

@@ -166,7 +166,7 @@ export default {
         })
     },
     components: {
-        SectionTitle: () => import('@/components/common/SectionTitle'),
+       
         SuiviCourrier: () => import("@/components/home-main/SuiviCourrier.vue"),
     },
     mounted: async function () {

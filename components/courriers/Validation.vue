@@ -166,7 +166,7 @@ import { mapMutations, mapGetters } from 'vuex'
 export default {
 
    components: {
-      SectionTitle: () => import('@/components/common/SectionTitle'),
+   
       Previsualisation: () => import('@/components/courriers/Previsualisation'),
       CourrierEnvoye: () => import("@/components/courriers/CourrierEnvoye.vue"),
    },
@@ -188,15 +188,15 @@ export default {
 
          this.load = true
 
-         console.log('Données formulaire ++++++: ', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
+      
          this.$gecApi.$post('/courriers', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
             .then(async (response) => {
                await this.$store.dispatch("courrierenvoye/getDetail", response.data.data.id_suivi);
 
             }).catch((error) => {
-               console.log('Code error ++++++: ', error?.response?.data?.message)
+               // console.log('Code error ++++++: ', error?.response?.data?.message)
             }).finally(() => {
-               console.log('Requête envoyé ')
+               // console.log('Requête envoyée')
             });
 
 

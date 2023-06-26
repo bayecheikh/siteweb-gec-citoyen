@@ -106,7 +106,7 @@ export default {
       async hasDownloaded(e) {
          this.blobToBase64(e)
             .then(base64String => {
-               //console.log("PDF content +++++++ ",base64String)
+      
                this.$store.dispatch('contenus/getDetail', { ...this.detailcontenu, encodedFile: base64String.split(';base64,')[1], format: 'pdf' })
             });
       },
@@ -124,7 +124,7 @@ export default {
 
          // Encode the String
          Buffer.from(string).toString('base64')
-         console.log('base 64', Buffer.from('Hello World!').toString('base64'))
+       
       },
       onProgress(x) {
          console.log(x)

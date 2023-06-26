@@ -128,9 +128,7 @@ import { required, minLength } from 'vuelidate/lib/validators'
 import { validationMixin } from 'vuelidate'
 export default {
     mixins: [validationMixin],
-    components: {
-        SectionTitle: () => import('@/components/common/SectionTitle')
-    },
+
     computed: mapGetters({
         detailutilisateur: 'coordonnees/detailutilisateur',
         detailministere: 'ministeres/detailministere',
@@ -212,14 +210,14 @@ export default {
 
                 }
                 this.load = true
-                console.log('Données formulaire ++++++: ', { ...this.model })
+              
                 this.$store.dispatch('contenus/getDetail', { ...this.model, entree: this.selectedEntree, entreename: this.selectedEntreeName, subject: this.model.subject,pieces_jointes:[...this.model.pieces_jointes] })
                 this.$store.dispatch('active_step/getDetail', { id: 'validation' })
             }
 
         },
         changeModel($event) {
-            console.log('Données formulaire ++++++: ', $event.target.value)
+           
             let model = this.modelContenu?.filter(item => (item._id == $event.target.value))[0];
             this.$refs.message.value = model?.message || ""
             this.model.message = model?.message || ""
@@ -236,11 +234,11 @@ export default {
             if (entityLabel) {
                 this.selectedEntreeName = entityLabel;
             }
-            console.log('changeModelEntree ++++++: ', $event.target)
+       
 
         },
         changeType($event) {
-            console.log('Données formulaire ++++++: ', $event.target.value)
+           
             if ($event.target.value == 'saisie_libre') {
                 this.saisie = true
                 this.attache_courrier = false
@@ -273,7 +271,7 @@ export default {
             let extFile = filename.substr(idxDot, filename.length).toLowerCase();
             this.model.format = extFile
             let size = files[0].size / 1024 / 1024 //La taille en Mbit
-            console.log('Size -------------- ', size)
+        
 
             //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
             if (size <= 5 && (extFile == "pdf")) {
@@ -289,7 +287,7 @@ export default {
                         this.$store.dispatch('contenus/getDetail', { ...this.detailcontenu, encodedFile: reader.result.split(';base64,')[1], format: extFile })
                         //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
                         //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
-                        console.log(reader.result.split(';base64,')[1])
+                        
                     }
                     reader.readAsDataURL(files[0])
                     this.$emit('input', files[0])
@@ -299,7 +297,7 @@ export default {
             }
         },
         handleFileUpload2(e) {
-            console.log(this.model.pieces_jointes.length)
+         
             if (this.model.pieces_jointes.length <= 2) {
                 //Recupère le fichier
                 const input = this.$refs.file2
@@ -313,7 +311,7 @@ export default {
                 let extFile = filename.substr(idxDot, filename.length).toLowerCase();
                 // this.model.format = extFile
                 let size = files[0].size / 1024 / 1024 //La taille en Mbit
-                console.log('Size -------------- ', size)
+             
 
                 //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
                 if (size <= 5 && (extFile == "pdf")) {
@@ -329,7 +327,7 @@ export default {
                             //this.$store.dispatch('contenus/getDetail',{...this.detailcontenu,encodedFile:reader.result.split(';base64,')[1],format:extFile})
                             this.model.pieces_jointes.push({ title: title, format: extFile, encodedFile: reader.result.split(';base64,')[1], taille: size })
                             //this.model.piece_jointes.push({title:title,format:extFile,encodedFile:reader.result.split(';base64,')[1]})
-                            console.log(this.model.pieces_jointes)
+                         
                         }
                         reader.readAsDataURL(files[0])
                         this.$emit('input', files[0])
@@ -344,7 +342,7 @@ export default {
 
         },
         deleteFindFichier: function (index) {
-            console.log('Index---- ', index);
+           
             this.model.pieces_jointes.splice(index, 1);
 
         },

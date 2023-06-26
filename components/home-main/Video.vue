@@ -50,7 +50,7 @@ export default {
             console.error(error);
             return;
         }
-        console.log("Vidéos", this.video.link)
+      
     },
     data() {
         return {

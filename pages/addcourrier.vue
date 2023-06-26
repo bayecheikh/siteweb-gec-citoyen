@@ -20,10 +20,10 @@ export default {
 
     mounted: function () {
         this.getToken()
-        console.log('token: ++++++++++ ', this.$getToken())
+   
         this.getToken()
         if (this.$getToken() == null || this.$getUser() == null || this.$isLogged() == null || this.$isLogged() == false) {
-            console.log("Non connecté");
+   
             this.$loggout()
 
 
@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         getToken() {
-            console.log("aaaa", localStorage.getItem('gecToken'))
+           
 
         }
     }

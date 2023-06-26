@@ -69,7 +69,7 @@ export default {
 
             } catch (error) {
                 console.error(error);
-                console.log('Code error ++++++: ', error)
+             
                 this.$store.dispatch('toast/getMessage', { type: 'error', text: error || 'Échec de la connexion' })
                 return;
             }

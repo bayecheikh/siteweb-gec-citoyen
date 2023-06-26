@@ -216,9 +216,7 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex'
 export default {
-    components: {
-        SectionTitle: () => import('@/components/common/SectionTitle')
-    },
+
     mounted: async function () {
         this.token = localStorage?.getItem('gecToken')
         if (localStorage.getItem('gecToken') && localStorage.getItem('gecLoggedInUser')) {
@@ -297,12 +295,12 @@ export default {
     methods: {
         submitCoordonnee() {
             this.load = true
-            console.log('Données formulaire ++++++: ', { ...this.model})
+           
             this.$store.dispatch('coordonnees/getDetail', { ...this.model,requerant:{...this.model.requerant},personne_physique:{...this.model.personne_physique},entreprise:{...this.model.entreprise}})
             this.$store.dispatch('active_step/getDetail', { id: 'contenu' })
         },
         changeTypeUser($event) {
-            console.log('Données formulaire ++++++: ', $event.target.value)
+           
             if ($event.target.value == 'Requerant') {
                 this.requerant = true
                 this.personne_physique = false

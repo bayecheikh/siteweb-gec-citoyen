@@ -1,7 +1,7 @@
 <template>
    <div class="edu-course-area course-area-3 bg-lighten04 pb-5 pt-5">
       <div class="container mb-6 custom-form-container">
-         <SectionTitle preTitle="" title='' alignment='section-center' />
+   
          <div class="isotope-wrapper">
             <h3 class="pl-0 pt-5 pb-5 pr-0 custom-formulaire-title">Formulaire de soumission courrier</h3>
             <div class="row isotop-button isotop-filter nav d-flex justify-content-between">

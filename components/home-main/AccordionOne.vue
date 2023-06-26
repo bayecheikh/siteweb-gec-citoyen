@@ -47,7 +47,7 @@ export default {
       return;
     }
     this.loading = false;
-    console.log("FAQS", this.faqs);
+ 
   },
   methods: {
     initSwiper() {

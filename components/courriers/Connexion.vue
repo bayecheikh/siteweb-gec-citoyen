@@ -31,9 +31,7 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex'
 export default {
-    components: {
-        SectionTitle: () => import('@/components/common/SectionTitle')
-    },
+ 
     mounted: function () {
     },
     computed: mapGetters({
@@ -50,7 +48,6 @@ export default {
     methods: {
         submitConnexion() {
             this.load = true
-            console.log('Données formulaire ++++++: ', { ...this.model })
             let dataUser = {
                 numero_ipn: "",
                 type_utilisateur: "Citoyen",

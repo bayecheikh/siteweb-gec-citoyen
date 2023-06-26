@@ -149,7 +149,7 @@ export default {
     mounted: async function () {
         try {
             const response = await this.$axios.get("/contenus");
-            console.log("response.data.data.data++++++++++++++", response.data.data.data)
+         
             const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Téléphone");
             const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.telephone = sortedTelephones.slice(0, 1);
