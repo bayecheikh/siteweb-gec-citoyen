@@ -249,7 +249,7 @@
 
                                     </g>
 
-                                </svg> Votre courrier de réponse a été reçu<span v-show="this.transformedEmail"> à l'adresse {{ this.transformedEmail }}<span v-show="!this.transformedEmail"></span>.</span> </p>
+                                </svg> Votre courrier de réponse a été envoyé à l'adresse {{ this.transformedEmail }}</p>
                         </div>
                     </div>
 
@@ -324,7 +324,6 @@
                             <td>{{ this.subject }}</td>
                         </tr>
                     </table>
-               
                 </div>
                 <div class="button-group d-flex justify-content-end">
                     <button @click="onClickClose()" class=" custom-suivi-close-button"><span
@@ -389,14 +388,14 @@ export default {
             this.validCode = true
 
             // Utiliser la valeur de l'input comme vous le souhaitez
-           
+            console.log("La valeur de l'input est : " + code);
             this.isCharging = true
 
             try {
 
-                const response = await this.$axios.get("/courriers/"+code.trim()+"/status");
+                const response = await this.$axios.get("/courriers/" + code.toUpperCase().trim() + "/status");
 
-              
+                console.log("Reponse", response?.data?.data?.data)
 
 
 
@@ -425,38 +424,47 @@ export default {
             }
             catch (error) {
                 console.error("ERROR SUIVI", error);
-                
+                this.isCharging = false
                 this.isVerifierVisible = false
                 this.showValidMessage2 = false
                 this.showValidMessage1 = false
-                 return;
+                this.validCode = false
 
 
             }
 
             //  const courrier = await this.courriers.find(courrier => courrier.idSuivi == "BJ-MAEC-134" );
-           
+            console.log("THECOURRIER", this.courrier)
 
             if (!this.status) {
-             
+                console.log("aaaaaaaaa++++")
                 this.isVerifierVisible = true
                 this.showValidMessage2 = false
                 this.showValidMessage1 = false
                 this.validCode = false
                 this.code = '';
+
             }
             else if (this.status == "En cours de traitement") {
+
                 this.showValidMessage1 = true
                 this.showValidMessage2 = false
                 this.validCode = true
+
             }
             else {
+
                 const response = await this.$axios.get("/courriers/" + this.idcourrier);
                 const length = await response?.data?.data?.data?.responses?.length
                 this.dateReponse = response?.data?.data?.data?.responses[length - 1]?.send_date
+
                 this.showValidMessage2 = true
                 this.showValidMessage1 = false
                 this.validCode = true
+
+
+
+
             }
 
 
