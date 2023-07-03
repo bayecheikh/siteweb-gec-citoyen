@@ -4,7 +4,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`)
+ // console.log(`Server listening on port ${PORT}`)
 })
 
 const bodyParser = require('body-parser')
@@ -31,7 +31,7 @@ app.post('/submit-form', async (req, res) => {
         res.send('fail')
       }
     } catch (error) {
-      console.log(error)
+     // console.log(error)
       res.send('error')
     }
   })

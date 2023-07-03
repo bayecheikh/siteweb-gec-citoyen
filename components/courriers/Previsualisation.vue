@@ -127,10 +127,10 @@ export default {
        
       },
       onProgress(x) {
-         console.log(x)
+        // console.log(x)
       },
       hasGenerated(x) {
-         console.log(x)
+        // console.log(x)
       }
    }
 }

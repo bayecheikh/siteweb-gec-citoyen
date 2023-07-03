@@ -388,14 +388,14 @@ export default {
             this.validCode = true
 
             // Utiliser la valeur de l'input comme vous le souhaitez
-            console.log("La valeur de l'input est : " + code);
+          //  console.log("La valeur de l'input est : " + code);
             this.isCharging = true
 
             try {
 
                 const response = await this.$axios.get("/courriers/" + code.toUpperCase().trim() + "/status");
 
-                console.log("Reponse", response?.data?.data?.data)
+                //console.log("Reponse", response?.data?.data?.data)
 
 
 
@@ -434,10 +434,10 @@ export default {
             }
 
             //  const courrier = await this.courriers.find(courrier => courrier.idSuivi == "BJ-MAEC-134" );
-            console.log("THECOURRIER", this.courrier)
+           // console.log("THECOURRIER", this.courrier)
 
             if (!this.status) {
-                console.log("aaaaaaaaa++++")
+               // console.log("aaaaaaaaa++++")
                 this.isVerifierVisible = true
                 this.showValidMessage2 = false
                 this.showValidMessage1 = false

@@ -13,7 +13,7 @@ export default function ({ $axios, store ,redirect}, inject) {
 
 
     gecApi.onError((error) => {
-        console.log('**************************-----------------error: ',error.response)
+     //   console.log('**************************-----------------error: ',error.response)
         
     })
 
