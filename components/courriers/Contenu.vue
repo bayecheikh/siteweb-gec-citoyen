@@ -363,24 +363,6 @@ export default {
     border: solid 1px #cecdcc !important;
 }
 
-.dotted {
-    border: 4px dotted #cecdcc;
-    border-style: none none dotted;
-    color: #fff;
-    background-color: #fff;
-}
-
-.border-grey {
-    border: solid 2px #0a3764;
-}
-
-.border-radio {
-    border: solid 1px #cecdcc !important;
-    padding: 10px;
-    padding-top: 16px;
-    padding-bottom: 6px;
-}
-
 .border-input {
     border: solid 1px #cecdcc !important;
     border-radius: 5px;

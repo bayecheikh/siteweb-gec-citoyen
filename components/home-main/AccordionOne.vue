@@ -69,7 +69,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .custom-faq-accordion-item {
   margin-bottom: 15px !important;
 }

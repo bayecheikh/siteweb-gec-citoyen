@@ -149,7 +149,7 @@ export default {
     mounted: async function () {
         try {
             const response = await this.$axios.get("/contenus");
-         
+
             const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Téléphone");
             const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.telephone = sortedTelephones.slice(0, 1);
@@ -221,7 +221,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .loader-desc-footer {
     height: 140px;
     width: 320px;

@@ -63,7 +63,7 @@
                                 <Navigation />
                             </nav>
                         </div>
-                        <div v-show="!this.token">
+                        <div v-show="this.token=='null'">
                             <div class="header-right">
                                 <ul class="header-action">
 
@@ -166,7 +166,6 @@ export default {
     },
     data() {
         return {
-            token: '',
             gecIsAuthenticated: '',
             gecLoggedInUser: '',
             gecIdUser: '',
@@ -202,7 +201,7 @@ export default {
             this.token = localStorage.getItem('gecToken')
         }
         else {
-            this.token = null
+            this.token = 'null'
         }
         if (localStorage.getItem('gecIdUser')) {
             this.gecIdUser = localStorage.getItem('gecIdUser')
@@ -282,26 +281,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .color-login-btn {
     color: black !important;
 }
 
-a.edu-btn,
-button.edu-btn {
-    background: linear-gradient(-90deg, #31b978, #1ab69d);
-}
 
-.custom-application-name {
-    color: #181818;
-    align-items: center;
-    justify-content: center;
-    font-weight: var(--p-bold);
-    font-size: 18px;
-    word-break: break-word;
-    font-family: var(--font-secondary);
-
-}
 
 .my-custom-login-button {
     padding: 15px !important;
@@ -327,48 +312,6 @@ button.edu-btn {
     padding-right: 0px;
 }
 
-.custom-img-fluid {
-    max-width: 100% !important;
-    height: auto !important;
-}
-
-.initials-circle {
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
-    padding: 10px;
-    background-color: #7289da;
-    text-align: center;
-
-}
-
-.tooltip {
-    visibility: hidden;
-    width: 150px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 9999;
-    top: 130%;
-    right: 50%;
-
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.initials-circle:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-.initials {
-
-
-    color: #fff;
-}
 
 .header-btn>.my-custom-login-button {
     font-size: 15px;
@@ -388,11 +331,5 @@ button.edu-btn {
 
     }
 }
-</style>
-<style scoped>
-a:hover,
-a.active {
-    color: #1ab69d !important;
-    font-weight: 700px;
-}
+
 </style>

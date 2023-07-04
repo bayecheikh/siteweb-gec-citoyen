@@ -74,8 +74,8 @@
                      <p class="col-6">{{ this.detailutilisateur.requerant && this.detailutilisateur.requerant.adresse }}
                      </p>
                   </div>
-                  
-                  
+
+
 
                </div>
                <div class="row border-grey-no-padding d-flex align-items-center mb-5">
@@ -166,7 +166,7 @@ import { mapMutations, mapGetters } from 'vuex'
 export default {
 
    components: {
-   
+
       Previsualisation: () => import('@/components/courriers/Previsualisation'),
       CourrierEnvoye: () => import("@/components/courriers/CourrierEnvoye.vue"),
    },
@@ -188,7 +188,7 @@ export default {
 
          this.load = true
 
-      
+
          this.$gecApi.$post('/courriers', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
             .then(async (response) => {
                await this.$store.dispatch("courrierenvoye/getDetail", response.data.data.id_suivi);
@@ -205,12 +205,6 @@ export default {
 }
 </script>
 <style scoped>
-.border-grey {
-   border: solid 2px #e8ecee;
-   padding: 25px;
-   margin-bottom: 10px;
-}
-
 .border-grey-no-padding {
    border: solid 2px #e8ecee;
    padding: 0px;
@@ -230,32 +224,11 @@ export default {
    padding: 30px;
 }
 
-.custom-textarea {
-   padding: 20px 25px;
-   border: solid 1px #cecdcc !important;
-}
-
-.border-radio {
-   border: solid 1px #cecdcc !important;
-   padding: 10px;
-}
-
 .border-input {
    border: solid 1px #cecdcc !important;
    border-radius: 5px;
 }
 
-.border-adresse {
-   border: solid 1px #cecdcc !important;
-   border-radius: 5px;
-   margin-left: 1px;
-}
-
-.bg-fichier {
-   background-color: #0a3764;
-   color: #fff;
-   border-radius: 5px 0px 0px 5px;
-}
 
 .imagePreviewWrapper {
    border: solid 1px #eae9e9;
@@ -265,17 +238,6 @@ export default {
 
 .imagePreviewWrapper img {
    height: 100% !important;
-}
-
-.custom-input {
-   border: 1px solid #cecdcc !important;
-   height: 50px !important;
-}
-
-.custom-select {
-   height: 50px !important;
-   border: solid 1px #cecdcc !important;
-   background-color: none !important;
 }
 
 .form-group label {
@@ -319,4 +281,5 @@ export default {
 .embeded-courrier {
    width: 100%;
    min-height: 300px;
-}</style>
+}
+</style>

@@ -36,30 +36,9 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 768px) {
-
-    /* Remplacer la valeur 768px par la largeur d'écran souhaitée */
-    .custom-edu-faq-gallery {
-        justify-content: center;
-        /* Centre les éléments horizontalement */
-        flex-wrap: wrap;
-        /* Permet aux éléments de s'enrouler sur plusieurs lignes si nécessaire */
-        padding-top: 60px;
-
-    }
-}
-
-.custom-edu-faq-gallery {
-    padding-top: 60px;
-}
 
 .custom-faq-container {
     padding-top: 100px !important;
-}
-
-.custom-title {
-    color: #333333 !important;
-
 }
 
 .custom-faq-style-3 {

@@ -5,7 +5,6 @@
          <div class="isotope-wrapper">
             <h3 class="pl-0 pt-5 pb-5 pr-0 custom-formulaire-title">Formulaire de soumission courrier</h3>
             <div class="row isotop-button isotop-filter nav d-flex justify-content-between">
-               <!-- <button @click="$goToTab('connexion')" :class="'nav-link '+(detailactive_step.id=='connexion'?'active':'')">Connexion</button> -->
                <div class="col-2 d-flex flex-column justify-content-center align-center">
                   <div :class="'icon-step ' + (detailactive_step.id == 'ministeres' ? 'active_step' : '')">
                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.588"
@@ -131,11 +130,6 @@
                            <Ministeres />
                         </div>
                      </div>
-                     <ul class="shape-group">
-                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                     </ul>
                   </div>
                </div>
                <div :class="'tab-pane fade ' + (detailactive_step.id == 'contenu' ? 'show active' : '')" id="graduate"
@@ -146,11 +140,6 @@
                            <Contenu />
                         </div>
                      </div>
-                     <ul class="shape-group">
-                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                     </ul>
                   </div>
                </div>
                <div :class="'tab-pane fade ' + (detailactive_step.id == 'coordonnees' ? 'show active' : '')"
@@ -161,11 +150,6 @@
                            <Coordonnees />
                         </div>
                      </div>
-                     <ul class="shape-group">
-                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                     </ul>
                   </div>
                </div>
                <div :class="'tab-pane fade ' + (detailactive_step.id == 'validation' ? 'show active' : '')" id="validation"
@@ -176,11 +160,6 @@
                            <Validation />
                         </div>
                      </div>
-                     <ul class="shape-group">
-                        <MouseMove addClassName="shape-1" dataDepth="2" imgSrc="/images/about/shape-07.png" />
-                        <MouseMove addClassName="shape-2" dataDepth="-2" imgSrc="/images/about/shape-13.png" />
-                        <MouseMove addClassName="shape-3" dataDepth="2" imgSrc="/images/counterup/shape-02.png" />
-                     </ul>
                   </div>
                </div>
             </div>
@@ -200,7 +179,7 @@
 import { mapMutations, mapGetters } from 'vuex'
 export default {
    components: {
-      Connexion: () => import("@/components/courriers/Connexion"),
+     
       Coordonnees: () => import("@/components/courriers/Coordonnees"),
       Ministeres: () => import("@/components/courriers/Ministeres"),
       Contenu: () => import("@/components/courriers/Contenu"),

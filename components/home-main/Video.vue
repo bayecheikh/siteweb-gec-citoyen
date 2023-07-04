@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .custom-video-area-2::before {
 
     display: inline-block;

@@ -290,7 +290,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .loader-contact {
   height: 769.55px;
   width: 550px;

@@ -85,7 +85,7 @@ export default {
         },
         async submitMinistere(item) {
             this.load = true
-          
+
             const response = await this.$axios.get("/structures/" + item.id + "/entrees");
             const entrees = await response.data.data.data
             const entreeBC1 = entrees.find(entree => entree.id === "BC1");
@@ -129,11 +129,6 @@ export default {
     border: solid 2px green !important;
 }
 
-.custom-textarea {
-    padding: 20px 25px;
-    border: solid 1px #cecdcc;
-}
-
 .custom-border-grey {
     border: solid 2px #e8ecee;
     border-bottom: 0px;
@@ -143,11 +138,6 @@ export default {
 .border-radio {
     border: solid 1px #cecdcc !important;
     padding: 10px;
-}
-
-.border-input {
-    border: solid 1px #cecdcc;
-    border-radius: 5px;
 }
 
 .bg-grey {
@@ -168,23 +158,6 @@ export default {
     padding-bottom: 99999px !important;
 }
 
-.dotted {
-    border: 4px dotted #cecdcc;
-    border-style: none none dotted;
-    color: #fff;
-    background-color: #fff;
-}
-
-.custom-input {
-    border: 1px solid #cecdcc !important;
-    height: 45px !important;
-}
-
-.custom-select {
-    height: 45px !important;
-    border: solid 1px #cecdcc !important;
-    background-color: none !important;
-}
 
 .form-group label {
     color: #181818c2 !important;

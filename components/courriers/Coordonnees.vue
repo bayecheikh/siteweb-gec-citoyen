@@ -322,20 +322,12 @@ export default {
 }
 </script>
 <style scoped>
-.custom-textarea {
-    padding: 20px 25px;
-    border: solid 1px #cecdcc !important;
-}
 
 .dotted {
     border: 4px dotted #cecdcc;
     border-style: none none dotted;
     color: #fff;
     background-color: #fff;
-}
-
-.border-grey {
-    border: solid 2px #0a3764;
 }
 
 .border-radio {
@@ -349,38 +341,6 @@ export default {
     border-radius: 5px;
 }
 
-.border-adresse {
-    border: solid 1px #cecdcc !important;
-    border-radius: 5px;
-    margin-left: 1px;
-}
-
-.bg-fichier {
-    background-color: #0a3764;
-    color: #fff;
-    border-radius: 5px 0px 0px 5px;
-}
-
-.imagePreviewWrapper {
-    border: solid 1px #eae9e9;
-    height: 200px;
-    padding: 20px;
-}
-
-.imagePreviewWrapper img {
-    height: 100% !important;
-}
-
-.custom-input {
-    border: 1px solid #cecdcc !important;
-    height: 50px !important;
-}
-
-.custom-select {
-    height: 50px !important;
-    border: solid 1px #cecdcc !important;
-    background-color: none !important;
-}
 
 .form-group label {
     color: #181818c2 !important;

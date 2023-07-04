@@ -54,8 +54,3 @@ export default {
 }
 </script>
 
-<style>
-.custom-mobile-menu-h4 {
-    color: #008064 !important;
-}
-</style>

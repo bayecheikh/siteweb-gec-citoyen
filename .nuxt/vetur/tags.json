@@ -2,8 +2,11 @@
   "FunFact": {
     "description": "Auto imported from components/FunFact.vue"
   },
-  "CourriersConnexion": {
-    "description": "Auto imported from components/courriers/Connexion.vue"
+  "CommonBreadCrumbTwo": {
+    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "CourriersContenu": {
     "description": "Auto imported from components/courriers/Contenu.vue"
@@ -25,15 +28,6 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
-  },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "FooterKitchen": {
     "description": "Auto imported from components/footer/FooterKitchen.vue"
@@ -76,5 +70,8 @@
   },
   "HomeMainVideo": {
     "description": "Auto imported from components/home-main/Video.vue"
+  },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
   }
 }
