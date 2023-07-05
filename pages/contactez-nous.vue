@@ -125,7 +125,7 @@
       </div>
     </div>
 
-    <FooterKitchen />
+    <Footer />
   </div>
 </template>
 
@@ -184,7 +184,7 @@ export default {
   components: {
     HeaderTwo: () => import("@/components/header/HeaderTwo"),
     BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
-    FooterKitchen: () => import("@/components/footer/FooterKitchen"),
+    Footer: () => import("@/components/footer/Footer"),
     MouseMove: () => import('@/components/animation/MouseMove')
   },
 
@@ -270,8 +270,6 @@ export default {
 
 
             });
-
-          // at the end you need to reset recaptcha
           await this.$recaptcha.reset()
         } catch (error) {
 

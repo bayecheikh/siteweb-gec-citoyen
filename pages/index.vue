@@ -4,13 +4,13 @@
         <HeaderTwo />
         <Banner />
         <Categories />
-        <HomeKitchenCoachFAQ />
-        <FooterKitchen />
+        <FAQ />
+        <Footer />
     </div>
 </template>
 
 <script>
-import { mapMutations, mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
 
     modules: ['@nuxtjs/axios'],
@@ -37,7 +37,6 @@ export default {
                 if (response.data?.data?.doc?.email) {
                     await localStorage.setItem('gecEmail', response.data?.data?.doc?.email)
                 }
-
 
                 await localStorage.setItem('gecIsAuthenticated', true)
                 const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
@@ -92,8 +91,8 @@ export default {
         HeaderTwo: () => import("@/components/header/HeaderTwo.vue"),
         Banner: () => import("@/components/home-main/Banner.vue"),
         Categories: () => import("@/components/home-main/Categories.vue"),
-        HomeKitchenCoachFAQ: () => import("@/components/home-main/FAQ.vue"),
-        FooterKitchen: () => import("@/components/footer/FooterKitchen")
+        FAQ: () => import("@/components/home-main/FAQ.vue"),
+        Footer: () => import("@/components/footer/Footer")
     },
     computed: mapGetters({
         detailactive_step: 'active_step/detailactive_step',

@@ -122,7 +122,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import { required, minLength } from 'vuelidate/lib/validators'
 
 import { validationMixin } from 'vuelidate'

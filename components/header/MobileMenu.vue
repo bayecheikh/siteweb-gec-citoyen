@@ -5,7 +5,7 @@
                 Accueil
             </a>
 
-            <a href="/contact-us">
+            <a href="/contactez-nous">
                 Nous contacter
             </a>
             <a v-show="!$getToken()" href="/" @click.prevent=onClickSeConnecter()>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import mobileMenuResponsive from '../../common/mobileMenuResponsive';
 
 export default {

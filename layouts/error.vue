@@ -31,7 +31,7 @@
             </ul>
         </section>
 
-        <FooterKitchen />
+        <Footer />
         
         <ScrollToTop />
     </div>
@@ -41,7 +41,7 @@
     export default {
         components: {
             BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
-            FooterKitchen: () => import("@/components/footer/FooterKitchen"),
+            Footer: () => import("@/components/footer/Footer"),
             ScrollToTop: () => import('@/components/footer/ScrollToTop'),
             MouseMove: () => import('@/components/animation/MouseMove')
         },

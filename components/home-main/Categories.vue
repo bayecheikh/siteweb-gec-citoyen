@@ -158,7 +158,7 @@
 
 <script>
 
-import { mapMutations, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
     computed: {
         ...mapGetters({
@@ -426,8 +426,6 @@ p {
     .custom-categories-section-title {
         margin-left: 15px;
         font-size: 12px !important;
-
-
     }
 
     .custom-categories-send-button {

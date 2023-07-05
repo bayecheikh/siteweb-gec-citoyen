@@ -1,6 +1,6 @@
 <template>
   <ul class="mainmenu custom-mainmenu">
-    <li><a href="/contact-us">Nous contacter</a>
+    <li><a href="/contactez-nous">Nous contacter</a>
     </li>
   </ul>
 </template>

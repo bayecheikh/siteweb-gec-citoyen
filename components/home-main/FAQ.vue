@@ -42,7 +42,6 @@ export default {
 }
 
 .custom-faq-style-3 {
-
     background-color: #f3f7f8 !important;
 }
 </style>

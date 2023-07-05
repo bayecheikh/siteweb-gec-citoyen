@@ -4,7 +4,7 @@
 
         <Form />
 
-        <FooterKitchen />
+        <Footer />
     </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     components: {
         HeaderOne: () => import("@/components/header/HeaderOne"),
         Form: () => import("@/components/courriers/Form"),
-        FooterKitchen: () => import("@/components/footer/FooterKitchen")
+        Footer: () => import("@/components/footer/Footer")
     },
 
     mounted: function () {
@@ -37,7 +37,6 @@ export default {
     },
     methods: {
         getToken() {
-           
 
         }
     }

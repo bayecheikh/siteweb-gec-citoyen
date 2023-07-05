@@ -5,8 +5,8 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _cac6b602 = () => interopDefault(import('..\\pages\\addcourrier.vue' /* webpackChunkName: "pages/addcourrier" */))
-const _5cce884a = () => interopDefault(import('..\\pages\\contact-us.vue' /* webpackChunkName: "pages/contact-us" */))
-const _7f327d06 = () => interopDefault(import('..\\pages\\terms-condition.vue' /* webpackChunkName: "pages/terms-condition" */))
+const _19f8dd76 = () => interopDefault(import('..\\pages\\contactez-nous.vue' /* webpackChunkName: "pages/contactez-nous" */))
+const _c87c0888 = () => interopDefault(import('..\\pages\\termes-conditions.vue' /* webpackChunkName: "pages/termes-conditions" */))
 const _1cc8837a = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -25,13 +25,13 @@ export const routerOptions = {
     component: _cac6b602,
     name: "addcourrier"
   }, {
-    path: "/contact-us",
-    component: _5cce884a,
-    name: "contact-us"
+    path: "/contactez-nous",
+    component: _19f8dd76,
+    name: "contactez-nous"
   }, {
-    path: "/terms-condition",
-    component: _7f327d06,
-    name: "terms-condition"
+    path: "/termes-conditions",
+    component: _c87c0888,
+    name: "termes-conditions"
   }, {
     path: "/",
     component: _1cc8837a,

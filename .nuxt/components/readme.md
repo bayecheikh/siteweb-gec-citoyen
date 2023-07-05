@@ -7,6 +7,7 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<FunFact>` | `<fun-fact>` (components/FunFact.vue)
+- `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)
 - `<CommonBreadCrumbTwo>` | `<common-bread-crumb-two>` (components/common/BreadCrumbTwo.vue)
 - `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
 - `<CourriersContenu>` | `<courriers-contenu>` (components/courriers/Contenu.vue)
@@ -16,7 +17,7 @@ You can directly use them in pages and other components without the need to impo
 - `<CourriersMinisteres>` | `<courriers-ministeres>` (components/courriers/Ministeres.vue)
 - `<CourriersPrevisualisation>` | `<courriers-previsualisation>` (components/courriers/Previsualisation.vue)
 - `<CourriersValidation>` | `<courriers-validation>` (components/courriers/Validation.vue)
-- `<FooterKitchen>` | `<footer-kitchen>` (components/footer/FooterKitchen.vue)
+- `<Footer>` | `<footer>` (components/footer/Footer.vue)
 - `<FooterScrollToTop>` | `<footer-scroll-to-top>` (components/footer/ScrollToTop.vue)
 - `<HeaderOne>` | `<header-one>` (components/header/HeaderOne.vue)
 - `<HeaderTwo>` | `<header-two>` (components/header/HeaderTwo.vue)
@@ -30,4 +31,3 @@ You can directly use them in pages and other components without the need to impo
 - `<HomeMainFunFact>` | `<home-main-fun-fact>` (components/home-main/FunFact.vue)
 - `<HomeMainSuiviCourrier>` | `<home-main-suivi-courrier>` (components/home-main/SuiviCourrier.vue)
 - `<HomeMainVideo>` | `<home-main-video>` (components/home-main/Video.vue)
-- `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)

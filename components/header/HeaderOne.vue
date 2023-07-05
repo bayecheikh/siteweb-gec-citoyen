@@ -52,11 +52,8 @@
                                             </g>
                                         </g>
                                     </svg>
-
-
                                 </a>
                             </div>
-
                         </div>
                         <div class="header-mainnav  custom-mainmenu-nav">
                             <nav class="mainmenu-nav">
@@ -120,9 +117,6 @@
                     </div>
                 </div>
             </div>
-
-
-
             <OffCanvasMobileMenuTwo />
         </header>
 
@@ -130,7 +124,7 @@
 </template>
 
 <script>
-import { mapMutations, mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
 
     computed: {
@@ -154,14 +148,8 @@ export default {
 
     },
     components: {
-     
 
         Navigation: () => import("@/components/header/Navigation"),
-
-
-
-
-
         OffCanvasMobileMenuTwo: () => import("@/components/header/OffCanvasMobileMenuTwo")
     },
     data() {
@@ -175,23 +163,7 @@ export default {
             email: null,
             token: null,
             isSticky: false,
-
-
-            isPNSConnecting: false,
-            isXroadConnecting: false,
             isDeconnecting: false,
-
-            isPopUpConnexionNPSVisible: false,
-            isPopUpConnexionXroadVisible: false,
-            validPNSCredentials: true,
-            validXroadCredentials: true,
-            model: {
-                numero_npi: "",
-                password: "",
-                xroad_email: "",
-                xroad_password: ""
-
-            },
             isPageLoad: false,
         }
     },
@@ -222,15 +194,6 @@ export default {
             this.gecLoggedInUser = null
         }
 
-
-
-
-        var largeurEcran = window?.innerWidth;
-
-
-
-        // Afficher la largeur de l'écran dans la console
-     
         window.addEventListener('scroll', () => {
             let scrollPos = window.scrol
             if (scrollPos >= 200) {
@@ -262,11 +225,7 @@ export default {
             this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
             this.$store.dispatch('authentication/getDetail', false)
 
-        }
-        
-
-        ,
-
+        },
         // Off-canvas Mobile Menu Open
         mobileMenuOpen(addRemoveClass, className) {
             const el = document.querySelector('#offcanvas-menu');
@@ -276,7 +235,6 @@ export default {
                 el.classList.remove(className);
             }
         },
-
     }
 }
 </script>
@@ -285,8 +243,6 @@ export default {
 .color-login-btn {
     color: black !important;
 }
-
-
 
 .my-custom-login-button {
     padding: 15px !important;
@@ -300,24 +256,19 @@ export default {
     font-weight: 700 !important;
 
 }
-
 .my-custom-login-button:hover {
     color: #3376b9 !important;
     border: 3px solid #3376b9 !important;
 }
 
-
-
 .mainmenu-nav .mainmenu>li>a {
     padding-right: 0px;
 }
-
 
 .header-btn>.my-custom-login-button {
     font-size: 15px;
     padding: 10px !important;
 }
-
 .header-action .header-btn a {
     display: block;
     color: grey !important;

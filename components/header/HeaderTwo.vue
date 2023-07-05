@@ -124,7 +124,7 @@
 
 <script>
 
-import { mapMutations, mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
     modules: ['@nuxtjs/axios'],
     axios: {
@@ -163,20 +163,7 @@ export default {
             email: null,
             token: null,
             isSticky: false,
-            isPNSConnecting: false,
-            isXroadConnecting: false,
             isDeconnecting: false,
-            isPopUpConnexionNPSVisible: false,
-            isPopUpConnexionXroadVisible: false,
-            validPNSCredentials: true,
-            validXroadCredentials: true,
-            model: {
-                numero_npi: "",
-                password: "",
-                xroad_email: "",
-                xroad_password: ""
-
-            },
             isPageLoad: false,
         }
     },
@@ -208,8 +195,6 @@ export default {
         else {
             this.gecLoggedInUser = null
         }
-
-
     },
 
     methods: {

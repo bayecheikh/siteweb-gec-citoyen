@@ -92,7 +92,7 @@
                                 </span> est invalide. Merci d'entrer un autre code. </p>
                         </div>
                         <div class="custom-aide-div">
-                            <a href="/contact-us" class="custom-contact-us-a" @click="onClickClose()">
+                            <a href="/contactez-nous" class="custom-contact-us-a" @click="onClickClose()">
                                 Avez-vous besoin d'aide ?
                             </a>
                         </div>
@@ -353,7 +353,7 @@
     </div>
 </template>
 <script>
-import { mapGetters, mapMutations, mapActions } from 'vuex'
+
 export default {
     modules: ['@nuxtjs/axios'],
     axios: {
@@ -361,15 +361,8 @@ export default {
     },
     mounted: async function () {
         this.isCharging = false
-
-
     },
 
-    // computed: {
-    //     ...mapGetters({
-    //         ispopupload: 'suivicourrier/ispopupload'
-    //     })
-    // },
     methods: {
 
         async onClickClose() {
@@ -388,7 +381,7 @@ export default {
             this.validCode = true
 
             // Utiliser la valeur de l'input comme vous le souhaitez
-          //  console.log("La valeur de l'input est : " + code);
+            //  console.log("La valeur de l'input est : " + code);
             this.isCharging = true
 
             try {
@@ -434,10 +427,10 @@ export default {
             }
 
             //  const courrier = await this.courriers.find(courrier => courrier.idSuivi == "BJ-MAEC-134" );
-           // console.log("THECOURRIER", this.courrier)
+            // console.log("THECOURRIER", this.courrier)
 
             if (!this.status) {
-               // console.log("aaaaaaaaa++++")
+                // console.log("aaaaaaaaa++++")
                 this.isVerifierVisible = true
                 this.showValidMessage2 = false
                 this.showValidMessage1 = false
@@ -729,7 +722,7 @@ p {
     }
 
     .custom-col-lg-6 {
-        width: 90% !important;
+        width: 100% !important;
     }
 }
 
@@ -768,4 +761,5 @@ td {
 td>svg {
     width: 15px !important;
     margin-right: 10px !important;
-}</style>
+}
+</style>

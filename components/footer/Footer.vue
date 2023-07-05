@@ -93,7 +93,7 @@
                                 <ul class="footer-link">
                                     <li><a href="/">Accueil</a></li>
 
-                                    <li><a href="/contact-us">Nous contacter</a></li>
+                                    <li><a href="/contactez-nous">Nous contacter</a></li>
                                 </ul>
                             </div>
                         </div>

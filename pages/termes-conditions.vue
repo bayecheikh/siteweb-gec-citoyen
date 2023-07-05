@@ -51,7 +51,7 @@
             </div>
         </section>
 
-        <FooterKitchen />
+        <Footer />
     </div>
 </template>
 
@@ -61,7 +61,7 @@ export default {
         HeaderOne: () => import("@/components/header/HeaderOne"),
         BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
 
-        FooterKitchen: () => import("@/components/footer/FooterKitchen")
+        Footer: () => import("@/components/footer/Footer")
     },
     head() {
         return {

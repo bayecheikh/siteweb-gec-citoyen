@@ -6,7 +6,6 @@
         <p :class="subTitleClass" v-html="subTitle" v-if="subTitle"></p>
     </div>
 </template>
-
 <script>
 
 export default {
