@@ -671,8 +671,6 @@ p {
     font-family: Arial, Helvetica, sans-serif !important;
     font-weight: 100 !important;
 }
-
-
 .custom-suivi-form-style-2 {
     padding: 50px !important;
     border-top-left-radius: 5px !important;

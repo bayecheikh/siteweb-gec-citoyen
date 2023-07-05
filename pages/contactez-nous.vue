@@ -131,7 +131,7 @@
 
 <script>
 import emailjs from 'emailjs-com';
-import { required, email, minLength, numeric, maxLength } from 'vuelidate/lib/validators'
+import { required, email, minLength } from 'vuelidate/lib/validators'
 
 import { validationMixin } from 'vuelidate'
 
@@ -144,36 +144,23 @@ export default {
     this.subject = 'Autre'
     try {
       const response = await this.$axios.get("/contenus");
-      const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.slug === "reseaux");
+      const filteredContacts = await response.data.data.data.filter(contenus => contenus.categorie.slug === "contact");
+      this.telephone =  filteredContacts.find(contenus => contenus.title === "Téléphone");
+      this.telephone_gec = this.telephone.body
+      const email = filteredContacts.find(contenus => contenus.title === "Email");
+      this.email_gec = email.body
+      this.adresse = filteredContacts.find(contenus => contenus.title === "Adresse");
+      this.adresse_gec = this.adresse.body
+      const filteredReseaux = await response.data.data.data.filter(contenus => contenus.categorie.slug === "reseaux");
       this.reseaux = filteredReseaux
-      const filteredFacebooks = filteredReseaux?.filter(contenus => contenus.title === "Facebook");
-      const sortedFacebooks = filteredFacebooks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      const facebooktab = sortedFacebooks.slice(0, 1);
-      this.facebook_link = facebooktab[0]?.link
-      const filteredTwitters = filteredReseaux?.filter(contenus => contenus.title === "Twitter");
-      const sortedTwitters = filteredTwitters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      const twittertab = sortedTwitters.slice(0, 1);
-      this.twitter_link = twittertab[0]?.link
-      const filteredInstagrams = filteredReseaux?.filter(contenus => contenus.title === "Instagram");
-      const sortedInstagrams = filteredInstagrams.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      const instagramtab = sortedInstagrams.slice(0, 1);
-      this.instagram_link = instagramtab[0]?.link
-      const filteredLinkedins = filteredReseaux?.filter(contenus => contenus.title === "LinkedIn");
-      const sortedLinkedins = filteredLinkedins.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      const linkedintab = sortedLinkedins.slice(0, 1);
-      this.linkedin_link = linkedintab[0]?.link
-      const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Téléphone");
-      const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      this.telephone = sortedTelephones.slice(0, 1);
-      this.telephone_gec = this.telephone[0]?.body
-      const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Email");
-      const sortedEmails = filteredEmails.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      this.contactEmail = sortedEmails.slice(0, 1);
-      this.email_gec = this.contactEmail[0]?.body
-      const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Adresse");
-      const sortedAdresses = filteredAdresses.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      this.adresse = sortedAdresses.slice(0, 1);
-      this.adresse_gec = this.adresse[0]?.body
+      this.facebook = filteredReseaux?.find(contenus => contenus.title === "Facebook");
+      this.facebook_link = this.facebook?.link
+      this.instagram = filteredReseaux?.find(contenus => contenus.title === "Instagram");
+      this.instagram_link = this.instagram?.link
+      this.linkedin = filteredReseaux?.find(contenus => contenus.title === "LinkedIn");
+      this.linkedin_link = this.linkedin?.link
+      this.twitter = filteredReseaux?.find(contenus => contenus.title === "Twitter");
+      this.twitter_link = this.twitter?.link
       this.loading = false
     } catch (error) {
       console.error(error);
@@ -183,7 +170,7 @@ export default {
   mixins: [validationMixin],
   components: {
     HeaderTwo: () => import("@/components/header/HeaderTwo"),
-    BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
+    BreadCrumb: () => import("@/components/common/BreadCrumb"),
     Footer: () => import("@/components/footer/Footer"),
     MouseMove: () => import('@/components/animation/MouseMove')
   },
@@ -196,9 +183,9 @@ export default {
       instagram_link: '',
       linkedin_link: '',
       loading: true,
-      telephone: [],
-      contactEmail: [],
-      adresse: [],
+      telephone: {},
+      contactEmail: {},
+      adresse: {},
       telephone_gec: '',
       email_gec: '',
       adresse_gec: '',

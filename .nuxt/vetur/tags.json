@@ -2,15 +2,6 @@
   "FunFact": {
     "description": "Auto imported from components/FunFact.vue"
   },
-  "AnimationMouseMove": {
-    "description": "Auto imported from components/animation/MouseMove.vue"
-  },
-  "CommonBreadCrumbTwo": {
-    "description": "Auto imported from components/common/BreadCrumbTwo.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
-  },
   "CourriersContenu": {
     "description": "Auto imported from components/courriers/Contenu.vue"
   },
@@ -32,6 +23,15 @@
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
   },
+  "CommonBreadCrumb": {
+    "description": "Auto imported from components/common/BreadCrumb.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
+  "AnimationMouseMove": {
+    "description": "Auto imported from components/animation/MouseMove.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/footer/Footer.vue"
   },
@@ -50,11 +50,11 @@
   "HeaderNavigation": {
     "description": "Auto imported from components/header/Navigation.vue"
   },
-  "HeaderOffCanvasMobileMenuTwo": {
-    "description": "Auto imported from components/header/OffCanvasMobileMenuTwo.vue"
+  "HeaderOffCanvasMobileMenu": {
+    "description": "Auto imported from components/header/OffCanvasMobileMenu.vue"
   },
-  "HomeMainAccordionOne": {
-    "description": "Auto imported from components/home-main/AccordionOne.vue"
+  "HomeMainAccordion": {
+    "description": "Auto imported from components/home-main/Accordion.vue"
   },
   "HomeMainBanner": {
     "description": "Auto imported from components/home-main/Banner.vue"

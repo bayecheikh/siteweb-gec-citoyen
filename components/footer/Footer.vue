@@ -149,42 +149,25 @@ export default {
     mounted: async function () {
         try {
             const response = await this.$axios.get("/contenus");
-
-            const filteredTelephones = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Téléphone");
-            const sortedTelephones = filteredTelephones.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.telephone = sortedTelephones.slice(0, 1);
-            this.telephone_gec = this.telephone[0].body
-            const filteredEmails = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Email");
-            const sortedEmails = filteredEmails.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.email = sortedEmails.slice(0, 1);
-            this.email_gec = this.email[0].body
-            const filteredAdresses = response.data.data.data.filter(contenus => contenus.categorie.slug === "contact" && contenus.title === "Adresse");
-            const sortedAdresses = filteredAdresses.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.adresse = sortedAdresses.slice(0, 1);
-            this.adresse_gec = this.adresse[0].body
-            const filteredFooters = response.data.data.data.filter(contenus => contenus.categorie.slug === "footer" && contenus.title === "Footer-text");
-            const sortedFooters = filteredFooters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.footer = sortedFooters.slice(0, 1);
-            this.resume = this.footer[0]?.body
-            const filteredReseaux = response.data.data.data.filter(contenus => contenus.categorie.slug === "reseaux");
+            const filteredContacts = await response.data.data.data.filter(contenus => contenus.categorie.slug === "contact");
+            this.telephone =  filteredContacts.find(contenus => contenus.title === "Téléphone");
+            this.telephone_gec = this.telephone.body
+            this.email = filteredContacts.find(contenus => contenus.title === "Email");
+            this.email_gec = this.email.body
+            this.adresse = filteredContacts.find(contenus => contenus.title === "Adresse");
+            this.adresse_gec = this.adresse.body
+            this.footer = response.data.data.data.find(contenus => contenus.categorie.slug === "footer" && contenus.title === "Footer-text")
+            this.resume = this.footer?.body
+            const filteredReseaux = await response.data.data.data.filter(contenus => contenus.categorie.slug === "reseaux");
             this.reseaux = filteredReseaux
-            const filteredFacebooks = filteredReseaux?.filter(contenus => contenus.title === "Facebook");
-            const sortedFacebooks = filteredFacebooks.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.facebook = sortedFacebooks.slice(0, 1);
-            this.facebook_link = this.facebook[0]?.link
-            const filteredInstagrams = filteredReseaux?.filter(contenus => contenus.title === "Instagram");
-            const sortedInstagrams = filteredInstagrams.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.instagram = sortedInstagrams.slice(0, 1);
-            this.instagram_link = this.instagram[0]?.link
-            const filteredLinkedIns = filteredReseaux?.filter(contenus => contenus.title === "LinkedIn");
-            const sortedLinkedIns = filteredLinkedIns.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.linkedin = sortedLinkedIns.slice(0, 1);
-            this.linkedin_link = this.linkedin[0]?.link
-            const filteredTwitters = filteredReseaux?.filter(contenus => contenus.title === "Twitter");
-            const sortedTwitters = filteredTwitters.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-            this.twitter = await sortedTwitters.slice(0, 1);
-            this.twitter_link = this.twitter[0]?.link
-
+            this.facebook = filteredReseaux?.find(contenus => contenus.title === "Facebook");
+            this.facebook_link = this.facebook?.link
+            this.instagram = filteredReseaux?.find(contenus => contenus.title === "Instagram");
+            this.instagram_link = this.instagram?.link
+            this.linkedin = filteredReseaux?.find(contenus => contenus.title === "LinkedIn");
+            this.linkedin_link = this.linkedin?.link
+            this.twitter = filteredReseaux?.find(contenus => contenus.title === "Twitter");
+            this.twitter_link = this.twitter?.link
             this.loading = false
         } catch (error) {
             console.error(error);
@@ -203,18 +186,18 @@ export default {
             twitter_link: '',
             instagram_link: '',
             loading: true,
-            telephone: [],
-            email: [],
-            adresse: [],
+            telephone: {},
+            email: {},
+            adresse: {},
             telephone_gec: '',
             email_gec: '',
             adresse_gec: '',
-            footer: [],
+            footer: '',
             reseaux: [],
-            facebook: [],
-            twitter: [],
-            instagram: [],
-            linkedin: []
+            facebook: {},
+            twitter: {},
+            instagram: {},
+            linkedin: {}
         };
     },
 

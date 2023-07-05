@@ -23,10 +23,7 @@ export default {
    
         this.getToken()
         if (this.$getToken() == null || this.$getUser() == null || this.$isLogged() == null || this.$isLogged() == false) {
-   
             this.$loggout()
-
-
             return this.$router.push('/')
         }
     },

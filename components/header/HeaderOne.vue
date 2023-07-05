@@ -103,7 +103,6 @@
                                     </li>
                                     <li class="header-btn">
 
-
                                     </li>
                                     <li class="mobile-menu-bar d-block d-xl-none">
                                         <button class="hamberger-button" @click="mobileMenuOpen('addClass', 'active')">
@@ -117,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <OffCanvasMobileMenuTwo />
+            <OffCanvasMobileMenu />
         </header>
 
     </div>
@@ -150,7 +149,7 @@ export default {
     components: {
 
         Navigation: () => import("@/components/header/Navigation"),
-        OffCanvasMobileMenuTwo: () => import("@/components/header/OffCanvasMobileMenuTwo")
+        OffCanvasMobileMenu: () => import("@/components/header/OffCanvasMobileMenu")
     },
     data() {
         return {
@@ -158,13 +157,9 @@ export default {
             gecLoggedInUser: '',
             gecIdUser: '',
             gecToken: '',
-            initiales: "",
-            userName: "",
-            email: null,
             token: null,
             isSticky: false,
             isDeconnecting: false,
-            isPageLoad: false,
         }
     },
     props: ['showHeaderTop'],
@@ -211,7 +206,6 @@ export default {
         async onClickSeDeconnecter() {
             this.isDeconnecting = true
             location.reload()
-
             await this.$router.push('/')
             await localStorage.removeItem('gecToken')
             await localStorage.removeItem('gecIdUser')

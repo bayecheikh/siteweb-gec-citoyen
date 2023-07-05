@@ -3,7 +3,7 @@
         
         <HeaderOne />
 
-        <BreadCrumbTwo title="Erreur 404" />
+        <BreadCrumb title="Erreur 404" />
 
         <section class="section-gap-equal error-page-area">
             <div class="container">
@@ -40,7 +40,7 @@
 <script>
     export default {
         components: {
-            BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
+            BreadCrumb: () => import("@/components/common/BreadCrumb"),
             Footer: () => import("@/components/footer/Footer"),
             ScrollToTop: () => import('@/components/footer/ScrollToTop'),
             MouseMove: () => import('@/components/animation/MouseMove')

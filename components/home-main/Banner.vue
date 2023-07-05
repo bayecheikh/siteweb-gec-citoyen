@@ -96,14 +96,12 @@ export default {
     try {
       const response = await this.$axios.get("/contenus");
     
-      const filteredContenus = await response.data.data.data.filter(contenus => contenus.categorie.slug === "banniere");
-      const sortedContenus = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      this.banniere = await sortedContenus.slice(0, 1);
-      if (this.banniere[0]?.title) {
-        const trimmedText = this.banniere[0]?.title?.trim();
-        this.resume = this.banniere[0]?.body
+      const filteredContenus = await response.data.data.data.find(contenus => contenus.categorie.slug === "banniere");
+      this.banniere = filteredContenus
+      if (this.banniere?.title) {
+        const trimmedText = this.banniere?.title?.trim();
+        this.resume = this.banniere?.body
         const words = trimmedText.split(' ');
-
         if (words.length === 3) {
           // Le texte contient exactement 3 mots
           this.firstWords = words.join(' ');

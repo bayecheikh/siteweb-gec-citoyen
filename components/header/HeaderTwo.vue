@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <OffCanvasMobileMenuTwo />
+            <OffCanvasMobileMenu />
         </header>
     </div>
 </template>
@@ -153,18 +153,13 @@ export default {
     components: {
     
         Navigation: () => import("@/components/header/Navigation"),
-        OffCanvasMobileMenuTwo: () => import("@/components/header/OffCanvasMobileMenuTwo")
+        OffCanvasMobileMenu: () => import("@/components/header/OffCanvasMobileMenu")
     },
     data() {
         return {
-            isUserAuthenticated: false,
-            initiales: "",
-            userName: "",
-            email: null,
             token: null,
             isSticky: false,
             isDeconnecting: false,
-            isPageLoad: false,
         }
     },
     props: ['showHeaderTop'],

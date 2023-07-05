@@ -1,25 +1,18 @@
 <template>
     <div class="edu-categorie-area custom-categorie-area-1 categorie-area-1 edu-section-gap">
         <div class="container">
-
-
             <div>
                 <div data-aos-delay="150" data-aos="fade-up" data-aos-duration="800"
                     class="section-title custom-categories-section-title mt-5 section-left aos-init aos-animate">
                     <div v-show="!loading" class="custom-categories-send-btn-wrapper mt-5">
                         <h2 v-show="procedures_title" class="title mt-5">{{ procedures_title }}</h2>
                         <p v-show="procedures_resume">{{ procedures_resume }}</p>
-
                     </div>
                     <div v-show="loading" class="custom-categories-send-btn-wrapper mt-5">
                         <h2 v-show="!procedures_title" class="title loader-categories-title mt-5"></h2>
                         <p v-show="!procedures_resume" class="loader-categories-resume"></p>
                     </div>
-
-
                     <a @click="deposerCourrier()" class="edu-btn custom-categories-send-button">DÉPOSER UN COURRIER</a>
-
-
                 </div>
 
             </div>
@@ -46,7 +39,6 @@
                             <h5 v-show="!etape1 || loading" class="title custom-title loader-etape custom-title-2"></h5>
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
-
                             </div>
                             <div class=" custom-number-2">1</div>
 
@@ -80,7 +72,6 @@
                             <h5 v-show="!etape2 || loading" class="title custom-title loader-etape custom-title-2"></h5>
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
-
                             </div>
                             <div class=" custom-number-2">2</div>
                         </div>
@@ -106,10 +97,8 @@
                         <div class="content">
                             <h5 v-show="etape3 && !loading" class="title custom-title custom-title-2">{{ etape3 }}</h5>
                             <h5 v-show="!etape3 || loading" class="title custom-title loader-etape custom-title-2"></h5>
-
                             <div class="custom-number-container">
                                 <div class="custom-line"></div>
-
                             </div>
                             <div class=" custom-number-2">3</div>
                         </div>
@@ -152,10 +141,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
-
 <script>
 
 import { mapGetters } from 'vuex'
@@ -166,7 +153,6 @@ export default {
         })
     },
     components: {
-       
         SuiviCourrier: () => import("@/components/home-main/SuiviCourrier.vue"),
     },
     mounted: async function () {
@@ -181,18 +167,14 @@ export default {
             this.procedures_resume = procedure1tab[0]?.body
             const filteredEtapes = response.data.data.data.filter(contenus => contenus.categorie.slug === "etapes");
             this.etapes = filteredEtapes
-            const filteredEtape1 = this.etapes.filter(contenus => contenus.slug === "etape1");
-            const etape1tab = filteredEtape1.slice(0, 1);
-            this.etape1 = etape1tab[0]?.body
-            const filteredEtape2 = this.etapes.filter(contenus => contenus.slug === "etape2");
-            const etape2tab = filteredEtape2.slice(0, 1);
-            this.etape2 = etape2tab[0]?.body
-            const filteredEtape3 = this.etapes.filter(contenus => contenus.slug === "etape3");
-            const etape3tab = filteredEtape3.slice(0, 1);
-            this.etape3 = etape3tab[0]?.body
-            const filteredEtape4 = this.etapes.filter(contenus => contenus.slug === "etape4");
-            const etape4tab = filteredEtape4.slice(0, 1);
-            this.etape4 = etape4tab[0]?.body
+            const filteredEtape1 = this.etapes.find(contenu => contenu.slug === "etape1");
+            this.etape1 = filteredEtape1?.body
+            const filteredEtape2 = this.etapes.find(contenu => contenu.slug === "etape2");
+            this.etape2 = filteredEtape2?.body
+            const filteredEtape3 = this.etapes.find(contenu => contenu.slug === "etape3");
+            this.etape3 = filteredEtape3?.body
+            const filteredEtape4 = this.etapes.find(contenu => contenu.slug === "etape4");
+            this.etape4 = filteredEtape4?.body
             this.loading = false
         } catch (error) {
             console.error(error);
@@ -200,7 +182,6 @@ export default {
         }
     },
     methods: {
-
         async onClickSuivreCourrier() {
             await this.$store.dispatch('suivicourrier/getDetail', true)
         },
@@ -213,7 +194,6 @@ export default {
 
             }
         },
-
     },
     data() {
         return {

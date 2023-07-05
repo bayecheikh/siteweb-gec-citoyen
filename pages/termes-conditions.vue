@@ -3,7 +3,7 @@
 
         <HeaderOne />
 
-        <BreadCrumbTwo title='Termes & Conditions' />
+        <BreadCrumb title='Termes & Conditions' />
 
         <section class="privacy-policy-area terms-condition-area">
             <div class="container">
@@ -59,7 +59,7 @@
 export default {
     components: {
         HeaderOne: () => import("@/components/header/HeaderOne"),
-        BreadCrumbTwo: () => import("@/components/common/BreadCrumbTwo"),
+        BreadCrumb: () => import("@/components/common/BreadCrumb"),
 
         Footer: () => import("@/components/footer/Footer")
     },

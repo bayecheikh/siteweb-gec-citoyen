@@ -10,10 +10,9 @@
                                 <span class="pre-title">FAQ</span>
                                 <h2 class="title">Questions fréquentes</h2>
                             </div>
-                            <AccordionOne />
+                            <Accordion />
                         </div>
                     </div>
-
                     <div class="col-lg-6 custom-faq-right-section">
                         <div class="edu-faq-content section-right">
                             <DemoVideo />
@@ -28,7 +27,7 @@
 <script>
 export default {
     components: {
-        AccordionOne: () => import('@/components/home-main/AccordionOne'),
+        Accordion: () => import('@/components/home-main/Accordion'),
         MouseMove: () => import('@/components/animation/MouseMove'),
         DemoVideo: () => import('@/components/home-main/Video')
     }
@@ -40,7 +39,6 @@ export default {
 .custom-faq-container {
     padding-top: 100px !important;
 }
-
 .custom-faq-style-3 {
     background-color: #f3f7f8 !important;
 }
