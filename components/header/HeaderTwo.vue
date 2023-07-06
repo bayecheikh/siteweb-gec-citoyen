@@ -60,7 +60,7 @@
                                 <Navigation />
                             </nav>
                         </div>
-                        <div v-show="this.token=='null'">
+                        <div v-show="!this.token">
                             <div class="header-right">
                                 <ul class="header-action">
 
@@ -170,7 +170,7 @@ export default {
             this.token = localStorage.getItem('gecToken')
         }
         else {
-            this.token = 'null'
+            this.token = null
         }
         if (localStorage.getItem('gecIdUser')) {
             this.gecIdUser = localStorage.getItem('gecIdUser')
