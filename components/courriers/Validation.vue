@@ -166,7 +166,6 @@ import { mapGetters } from 'vuex'
 export default {
 
    components: {
-
       Previsualisation: () => import('@/components/courriers/Previsualisation'),
       CourrierEnvoye: () => import("@/components/courriers/CourrierEnvoye.vue"),
    },
@@ -174,21 +173,11 @@ export default {
    computed: mapGetters({
       detailutilisateur: 'coordonnees/detailutilisateur',
       detailministere: 'ministeres/detailministere',
-
       detailcontenu: 'contenus/detailcontenu',
       ispopupload: "courrierenvoye/ispopupload",
    }),
-   data() {
-      return {
-         load: false
-      }
-   },
    methods: {
       async submitValidation() {
-
-         this.load = true
-
-
          this.$gecApi.$post('/courriers', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
             .then(async (response) => {
                await this.$store.dispatch("courrierenvoye/getDetail", response.data.data.id_suivi);
@@ -198,8 +187,6 @@ export default {
             }).finally(() => {
                // console.log('Requête envoyée')
             });
-
-
       },
    },
 }

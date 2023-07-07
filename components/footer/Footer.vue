@@ -84,8 +84,6 @@
                         </div>
                     </div>
 
-
-
                     <div class=" col-md-4 col-lg-2 col-sm-6">
                         <div class="edu-footer-widget quick-link-widget">
                             <h4 class="widget-title custom-color-white">Liens</h4>
@@ -98,8 +96,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="col-md-4 col-lg-2 col-sm-6">
                         <div class="edu-footer-widget quick-link-widget">
                             <h4 class="widget-title custom-color-white">Contact</h4>
@@ -150,7 +146,7 @@ export default {
         try {
             const response = await this.$axios.get("/contenus");
             const filteredContacts = await response.data.data.data.filter(contenus => contenus.categorie.slug === "contact");
-            this.telephone =  filteredContacts.find(contenus => contenus.title === "Téléphone");
+            this.telephone = filteredContacts.find(contenus => contenus.title === "Téléphone");
             this.telephone_gec = this.telephone.body
             this.email = filteredContacts.find(contenus => contenus.title === "Email");
             this.email_gec = this.email.body
@@ -170,10 +166,9 @@ export default {
             this.twitter_link = this.twitter?.link
             this.loading = false
         } catch (error) {
-            console.error(error);
+            // console.error(error);
             return;
         }
-
     },
     components: {
         MouseMove: () => import('@/components/animation/MouseMove')
@@ -209,18 +204,14 @@ export default {
     height: 140px;
     width: 320px;
     background-color: #7a7a7a;
-    /* Couleur verte */
     animation: loaderAnimation 1s ease-in-out infinite;
-    /* Animation */
 }
 
 .loader-contact-footer {
     height: 140px;
     width: 180px;
     background-color: #7a7a7a;
-    /* Couleur verte */
     animation: loaderAnimation 1s ease-in-out infinite;
-    /* Animation */
 }
 
 @keyframes loaderAnimation {
@@ -282,15 +273,11 @@ export default {
 }
 
 .custom-footer-line {
-
     height: 1px;
-    /* Hauteur du trait */
     width: 100%;
     background-color: #6d6d6d;
-    /* Couleur du trait */
     display: flex;
     justify-content: center;
-    /* Centrer horizontalement */
     align-items: center;
 }
 

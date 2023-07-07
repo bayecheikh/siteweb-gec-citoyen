@@ -17,8 +17,8 @@ export default function ({store ,redirect}, inject) {
         await localStorage.removeItem('gecLoggedInUser')
         await localStorage.removeItem('gecIsAuthenticated') 
         await localStorage.removeItem('isauthenticatingfrombutton')
+        await localStorage.removeItem('gecEmail')
     }
-
 
     inject('getUser', getUser)
     inject('getToken',getToken)

@@ -145,16 +145,8 @@
 </template>
 <script>
 
-import { mapGetters } from 'vuex'
 export default {
-    computed: {
-        ...mapGetters({
-            isloggedin: 'authentication/isloggedin',
-        })
-    },
-    components: {
-        SuiviCourrier: () => import("@/components/home-main/SuiviCourrier.vue"),
-    },
+
     mounted: async function () {
         this.subject = 'Autre'
         try {
@@ -177,7 +169,7 @@ export default {
             this.etape4 = filteredEtape4?.body
             this.loading = false
         } catch (error) {
-            console.error(error);
+            // console.error(error);
             return;
         }
     },
@@ -206,12 +198,7 @@ export default {
             etape2: '',
             etape3: '',
             etape4: '',
-            isPageLoad: false,
-            isLoading: false,
-            validCode: true,
-            showValidMessage1: false,
-            showValidMessage2: false,
-            code: '',
+
         }
     },
 }
@@ -384,7 +371,6 @@ p {
     background-color: #008064 !;
     font-weight: 700 !important;
     cursor: pointer;
-    flex-grow: 0.1;
     text-align: right;
 }
 

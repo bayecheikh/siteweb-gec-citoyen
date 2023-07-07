@@ -214,7 +214,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+
 export default {
 
     mounted: async function () {
@@ -233,11 +233,6 @@ export default {
             this.model.requerant.telephone = user['phone_number']
             this.model.sender = _id
         }
-    },
-    computed: {
-        ...mapGetters({
-            detailutilisateur: 'coordonnees/detailutilisateur',
-        })
     },
     data() {
         return {
@@ -294,8 +289,6 @@ export default {
     },
     methods: {
         submitCoordonnee() {
-            this.load = true
-           
             this.$store.dispatch('coordonnees/getDetail', { ...this.model,requerant:{...this.model.requerant},personne_physique:{...this.model.personne_physique},entreprise:{...this.model.entreprise}})
             this.$store.dispatch('active_step/getDetail', { id: 'contenu' })
         },
@@ -316,11 +309,11 @@ export default {
                 this.personne_physique = false
                 this.entreprise = true
             }
-
         }
     },
 }
 </script>
+
 <style scoped>
 
 .dotted {

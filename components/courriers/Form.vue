@@ -1,7 +1,7 @@
 <template>
    <div class="edu-course-area course-area-3 bg-lighten04 pb-5 pt-5">
       <div class="container mb-6 custom-form-container">
-   
+
          <div class="isotope-wrapper">
             <h3 class="pl-0 pt-5 pb-5 pr-0 custom-formulaire-title">Formulaire de soumission courrier</h3>
             <div class="row isotop-button isotop-filter nav d-flex justify-content-between">
@@ -179,7 +179,6 @@
 import { mapGetters } from 'vuex'
 export default {
    components: {
-     
       Coordonnees: () => import("@/components/courriers/Coordonnees"),
       Ministeres: () => import("@/components/courriers/Ministeres"),
       Contenu: () => import("@/components/courriers/Contenu"),
@@ -191,13 +190,6 @@ export default {
    computed: mapGetters({
       detailactive_step: 'active_step/detailactive_step',
    }),
-   data() {
-      return {
-
-      }
-   },
-   methods: {
-   },
 }
 </script>
 <style lang="scss" scoped>
@@ -208,11 +200,10 @@ export default {
    }
 }
 
-
-   .custom-svg-line {
-      width: 25px;
-      /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 480px */
-   }
+.custom-svg-line {
+   width: 25px;
+   /* Modifier la largeur de la ligne pour les écrans de largeur maximale de 480px */
+}
 
 .course-area-3 {
    .isotop-button {
@@ -320,4 +311,5 @@ export default {
 
 .align-center {
    text-align: center;
-}</style>
+}
+</style>

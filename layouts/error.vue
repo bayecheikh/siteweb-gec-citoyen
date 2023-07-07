@@ -1,7 +1,7 @@
 <template>
     <div id="main-wrapper" class="main-wrapper">
         
-        <HeaderOne />
+        <HeaderTwo />
 
         <BreadCrumb title="Erreur 404" />
 
@@ -40,6 +40,7 @@
 <script>
     export default {
         components: {
+            HeaderTwo: () => import("@/components/header/HeaderTwo"),
             BreadCrumb: () => import("@/components/common/BreadCrumb"),
             Footer: () => import("@/components/footer/Footer"),
             ScrollToTop: () => import('@/components/footer/ScrollToTop'),

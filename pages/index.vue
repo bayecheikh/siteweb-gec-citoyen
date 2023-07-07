@@ -29,29 +29,22 @@ export default {
             }
             try {
                 const response = await this.$axios.post('users/code', { ...this.model })
-
                 await localStorage.setItem('gecToken', response.data.id_token.id_token)
-                // await localStorage.setItem('gecToken', response.data.id_token.id_token)
                 await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
                 await localStorage.setItem('gecIdUser', response.data.data.doc._id)
                 if (response.data?.data?.doc?.email) {
                     await localStorage.setItem('gecEmail', response.data?.data?.doc?.email)
                 }
-
                 await localStorage.setItem('gecIsAuthenticated', true)
-                const gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'));
-                const gecIdUser = localStorage.getItem('gecIdUser');
-
+        
                 if (localStorage.getItem('isauthenticatingfrombutton') == "true") {
                     await this.$router.push("/addcourrier");
-
                 }
                 else {
                     window.location.href = "/";
                     const { code, ...queryParams } = this.$route.query;
                     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
                     await this.$router.replace(newUrl);
-
                 }
                 localStorage.removeItem('isauthenticatingfrombutton');
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
@@ -67,8 +60,7 @@ export default {
 
 
             } catch (error) {
-                console.error(error);
-             
+                // console.error(error);
                 this.$store.dispatch('toast/getMessage', { type: 'error', text: error || 'Échec de la connexion' })
                 return;
             }
@@ -78,6 +70,7 @@ export default {
             await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
+            await localStorage.removeItem('gecEmail')
             localStorage.removeItem('isauthenticatingfrombutton');
             const { logout, ...queryParams } = this.$route.query;
             const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
@@ -95,7 +88,6 @@ export default {
         Footer: () => import("@/components/footer/Footer")
     },
     computed: mapGetters({
-        detailactive_step: 'active_step/detailactive_step',
         isauthenticatingfrombutton: 'authentication/isauthenticatingfrombutton'
     }),
     head() {

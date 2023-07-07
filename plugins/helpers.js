@@ -10,7 +10,6 @@ export default function ({store ,redirect}, inject) {
         if (process.client) {
             return JSON.parse(localStorage.getItem('gecLoggedInUser'));
         }
-     
     }
     
     const isLogged = () => {
@@ -27,6 +26,7 @@ export default function ({store ,redirect}, inject) {
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
             await localStorage.removeItem('isauthenticatingfrombutton')
+            await localStorage.removeItem('gecEmail')
         } 
     }
 

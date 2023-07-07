@@ -374,31 +374,21 @@ export default {
         },
         async isCodeValid(code) {
             this.writtenCode = code.toUpperCase()
-
             this.isVerifierVisible = false
             this.showValidMessage2 = false
             this.showValidMessage1 = false
             this.validCode = true
-
-            // Utiliser la valeur de l'input comme vous le souhaitez
-            //  console.log("La valeur de l'input est : " + code);
             this.isCharging = true
 
             try {
 
                 const response = await this.$axios.get("/courriers/" + code.toUpperCase().trim() + "/status");
-
-                //console.log("Reponse", response?.data?.data?.data)
-
-
-
                 this.subject = response?.data?.data?.data?.objet
                 this.idcourrier = response?.data?.data?.data?.id
                 this.structure = response?.data?.data?.data?.destinataire?.description
                 this.createdAt = response?.data?.data?.data?.dateDepot
                 this.status = response?.data?.data?.data?.status
                 const exactEmail = await response?.data?.data?.data?.sender?.email
-
 
                 if (!exactEmail) {
                     this.transformedEmail = '';
@@ -410,10 +400,6 @@ export default {
                     this.transformedEmail = transformedUsername + '@' + domain;
                 }
                 this.isCharging = false
-
-
-
-
             }
             catch (error) {
                 console.error("ERROR SUIVI", error);
@@ -422,12 +408,7 @@ export default {
                 this.showValidMessage2 = false
                 this.showValidMessage1 = false
                 this.validCode = false
-
-
             }
-
-            //  const courrier = await this.courriers.find(courrier => courrier.idSuivi == "BJ-MAEC-134" );
-            // console.log("THECOURRIER", this.courrier)
 
             if (!this.status) {
                 // console.log("aaaaaaaaa++++")
@@ -439,28 +420,18 @@ export default {
 
             }
             else if (this.status == "En cours de traitement") {
-
                 this.showValidMessage1 = true
                 this.showValidMessage2 = false
                 this.validCode = true
-
             }
             else {
-
                 const response = await this.$axios.get("/courriers/" + this.idcourrier);
                 const length = await response?.data?.data?.data?.responses?.length
                 this.dateReponse = response?.data?.data?.data?.responses[length - 1]?.send_date
-
                 this.showValidMessage2 = true
                 this.showValidMessage1 = false
                 this.validCode = true
-
-
-
-
             }
-
-
         }
     },
 
@@ -477,7 +448,6 @@ export default {
             validCode: true,
             showValidMessage1: false,
             showValidMessage2: false,
-            code: '',
             courrier: {},
             structure: '',
             status: '',
@@ -528,8 +498,6 @@ export default {
     width: 1%;
 }
 
-
-
 .custom-aide-div {
     padding-top: 20px !important;
     color: #818181 !important;
@@ -570,24 +538,17 @@ export default {
 
 }
 
-
 .custom-suivi-close-button {
-
     padding: 15px;
-
     background-color: #6c757d !important;
     background: #6c757d !important;
     cursor: pointer;
-
-
 }
 
 .custom-suivi-btn-color {
     color: white !important;
     font-weight: 600 !important;
 }
-
-
 
 .custom-suivi-title {
     margin-top: -10px !important;
@@ -597,41 +558,25 @@ export default {
     font-weight: bold !important;
 }
 
-
 .resultat-section-etat-pending {
-
-
     display: flex;
     border-radius: 10px;
     color: #ed802e !important;
-
-
     background-color: #f6ebe2 !important;
-
 }
 
 .resultat-section-etat-invalid {
-
-
     display: flex;
     border-radius: 10px;
     color: #bc412b !important;
-
-
     background-color: #f1e4e2 !important;
-
 }
 
 .resultat-section-etat-response {
-
-
     display: flex;
     border-radius: 10px;
     color: #008165 !important;
-
-
     background-color: #dfebe9 !important;
-
 }
 
 .resultat-section-etat-response-div {
@@ -648,16 +593,13 @@ export default {
     font-weight: 600 !important;
 }
 
-
 p {
     margin: 0;
 }
 
-
 #code {
     color: #0a3764 !important;
 }
-
 
 .custom-loader {
     display: flex !important;
@@ -667,7 +609,6 @@ p {
 
 .custom-title-font {
     margin-left: -15px;
-
     font-family: Arial, Helvetica, sans-serif !important;
     font-weight: 100 !important;
 }
@@ -683,7 +624,6 @@ p {
         font-size: 16px;
         padding: 5px !important;
     }
-
 }
 
 @media (max-width: 1200px) {
@@ -700,7 +640,6 @@ p {
     .custom-suivi-section-title {
         display: block !important;
     }
-
     .custom-suivi-title>h4 {
 
         text-align: center !important;

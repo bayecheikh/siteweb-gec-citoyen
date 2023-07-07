@@ -5,7 +5,6 @@
             <div class="edu-sorting form-group col-12">
                 <label for="reg-name">Choisir une entrée*</label>
                 <select class="custom-select" @change="changeModelEntree($event)">
-                    <!-- <option>--</option> -->
                     <option v-for="item in detailentree" :key="item.serialId" :value="item.serialId"
                         :selected="item.serialId === detailministere.defaultEntree">{{ item.entity_label }}
                     </option>
@@ -90,18 +89,16 @@
                             </div>
                             <input type="file" id="file2" name="avatar" ref="file2" v-on:change="handleFileUpload2"
                                 class="custom-contenu-input">
-
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="form-group col-12 chekbox-area">
                 <div class="edu-form-check">
-                    <input type="checkbox" id="terms-condition" v-model="model.acceptedTerms" :required="true">
-                    <label for="terms-condition">J'accepte les termes et conditions <a href="#">Termes & Conditions.</a>
+                    <input type="checkbox" id="termes-conditions" v-model="model.acceptedTerms" :required="true">
+                    <label for="termes-conditions">J'accepte les termes et conditions <a href="#">Termes & Conditions.</a>
                     </label>
                 </div>
-
             </div>
             <div v-if="$v.model.acceptedTerms.$error">
                 <p class="custom-validation-error-msg  mt-2">Vous devez accepter les termes et conditions.</p>
@@ -124,13 +121,10 @@
 <script>
 import { mapGetters } from 'vuex'
 import { required, minLength } from 'vuelidate/lib/validators'
-
 import { validationMixin } from 'vuelidate'
 export default {
     mixins: [validationMixin],
-
     computed: mapGetters({
-        detailutilisateur: 'coordonnees/detailutilisateur',
         detailministere: 'ministeres/detailministere',
         detailentree: 'entrees/detailentree',
         detailcontenu: 'contenus/detailcontenu'
@@ -154,8 +148,6 @@ export default {
         return {
 
             selectedEntree: '',
-
-            fileInfos: [{ name: 'file 1', url: '#' }, { name: 'file 2', url: '#' }],
             key: null,
             imageData: null,
             title_courrier: '',
@@ -175,7 +167,6 @@ export default {
                 encodedFile: '',
                 pieces_jointes: [],
                 modelId: 1,
-
                 format: "",
                 subject: "",
                 message: "",
@@ -207,24 +198,18 @@ export default {
                     this.model.destination = this.detailministere.defaultEntree
                     this.selectedEntree = this.detailministere.defaultEntree
                     this.selectedEntreeName = this.detailministere.defaultEntreeName
-
                 }
-                this.load = true
-              
                 this.$store.dispatch('contenus/getDetail', { ...this.model, entree: this.selectedEntree, entreename: this.selectedEntreeName, subject: this.model.subject,pieces_jointes:[...this.model.pieces_jointes] })
                 this.$store.dispatch('active_step/getDetail', { id: 'validation' })
             }
 
         },
         changeModel($event) {
-           
             let model = this.modelContenu?.filter(item => (item._id == $event.target.value))[0];
             this.$refs.message.value = model?.message || ""
             this.model.message = model?.message || ""
-
             this.$refs.subject.value = model?.objet || ""
             this.model.subject = model?.objet || ""
-
             this.model.modelId = parseInt($event.target.value)
         },
         async changeModelEntree($event) {
@@ -234,8 +219,6 @@ export default {
             if (entityLabel) {
                 this.selectedEntreeName = entityLabel;
             }
-       
-
         },
         changeType($event) {
            
@@ -262,7 +245,6 @@ export default {
             //Recupère le fichier
             const input = this.$refs.file
             const files = input.files
-
             //Recupère l'extension
             let filename = files[0].name;
             let title = filename.substring(0, filename.lastIndexOf('.')) || filename;
@@ -271,7 +253,6 @@ export default {
             let extFile = filename.substr(idxDot, filename.length).toLowerCase();
             this.model.format = extFile
             let size = files[0].size / 1024 / 1024 //La taille en Mbit
-        
 
             //if (size <= 5 && (extFile=="jpg" || extFile=="jpeg" || extFile=="png"|| extFile=="pdf" || extFile=="doc" || extFile=="xls")){
             if (size <= 5 && (extFile == "pdf")) {
@@ -337,12 +318,11 @@ export default {
                 }
             }
             else {
-                alert("Le nombre maximum de pièces-jointes est déja atteint")
+                alert("Le nombre maximum de pièces-jointes est atteint.")
             }
 
         },
         deleteFindFichier: function (index) {
-           
             this.model.pieces_jointes.splice(index, 1);
 
         },

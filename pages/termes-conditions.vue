@@ -1,15 +1,15 @@
 <template>
     <div id="main-wrapper" class="main-wrapper">
 
-        <HeaderOne />
+        <HeaderTwo />
 
         <BreadCrumb title='Termes & Conditions' />
 
-        <section class="privacy-policy-area terms-condition-area">
+        <section class="privacy-policy-area termes-conditions-area">
             <div class="container">
                 <div class="row row--30">
                     <div class="col-lg-8">
-                        <div class="privacy-policy terms-condition">
+                        <div class="privacy-policy termes-conditions">
                             <div class="text-block">
                                 <h3 class="title">Definitions of Basic Terms, Rights and Restriction:</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -58,14 +58,13 @@
 <script>
 export default {
     components: {
-        HeaderOne: () => import("@/components/header/HeaderOne"),
+        HeaderTwo: () => import("@/components/header/HeaderTwo"),
         BreadCrumb: () => import("@/components/common/BreadCrumb"),
-
         Footer: () => import("@/components/footer/Footer")
     },
     head() {
         return {
-            title: 'Terms & Condition'
+            title: 'Termes & Conditions'
         }
     }
 }

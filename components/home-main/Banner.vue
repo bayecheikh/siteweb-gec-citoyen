@@ -11,7 +11,6 @@
                 <div v-show="!loading">
                   <h3 class="title">
                     {{ firstWords }}
-
                     <div> {{ lastWords }} </div>
                   </h3>
                   <p class="custom-subtitle mb-5">
@@ -20,8 +19,6 @@
                 </div>
               </div>
               <div class="d-flex banner-btn custom-main-banner-btn">
-
-
                 <a @click="deposerCourrier()" class="edu-btn custom-banner-send-button">
                   DÉPOSER UN COURRIER
                 </a>
@@ -91,11 +88,9 @@ export default {
   },
 
   mounted: async function () {
-
-
     try {
       const response = await this.$axios.get("/contenus");
-    
+
       const filteredContenus = await response.data.data.data.find(contenus => contenus.categorie.slug === "banniere");
       this.banniere = filteredContenus
       if (this.banniere?.title) {
@@ -125,21 +120,12 @@ export default {
       return;
     }
 
-
-    // Supprimer les espaces en début et fin de chaîne
-
   },
   computed: {
     ...mapGetters({
-      // detailbanner: 'banner/detailbanner',
-      isloggedin: "authentication/isloggedin",
       ispopupload: "suivicourrier/ispopupload",
       isauthenticatingfrombutton: "authentication/isauthenticatingfrombutton",
-      isauthenticated: "authentication/isauthenticated"
     }),
-
-
-
   },
   data() {
     return {
@@ -149,19 +135,15 @@ export default {
       banniere: [],
       firstWords: '',
       lastWords: '',
-
     };
   },
 
   components: {
-
     MouseMove: () => import("@/components/animation/MouseMove"),
     SuiviCourrier: () => import("@/components/home-main/SuiviCourrier.vue"),
   },
   methods: {
-
     async onClickSuivreCourrier() {
-
       await this.$store.dispatch("suivicourrier/getDetail", true);
     },
     async deposerCourrier() {
@@ -170,7 +152,6 @@ export default {
       } else {
         await localStorage.setItem("isauthenticatingfrombutton", "true")
         window.location.href = `https://pprodauth.service-public.bj/citizen/login?client_id=ecommune&redirect_uri=${encodeURIComponent("https://siteweb-gec-citoyen.vercel.app")}&response_type=code&scope=openid&authError=true`;
-
       }
     },
   },

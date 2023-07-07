@@ -30,15 +30,12 @@ export default {
             this.validCode = true
             this.$store.dispatch('courrierenvoye/getDetail', false)
             this.$router.push('/');
-
         },
 
     },
 
     data() {
         return {
-            isCharging: false,
-            isLoading: false,
             validCode: true,
             showValidMessage1: false,
             showValidMessage2: false,
@@ -72,26 +69,12 @@ export default {
     padding-left: 2px !important;
 }
 
-
-
 .custom-suivi-title {
     margin-top: -10px !important;
     padding: 10px !important;
     padding-left: 0px !important;
     color: #0a3764 !important;
     font-weight: bold !important;
-}
-
-
-
-p {
-    margin: 0;
-}
-
-
-
-#code {
-    color: #0a3764 !important;
 }
 
 .custom-suivi-form-style-2 {
@@ -150,8 +133,6 @@ td>svg {
     font-weight: 800;
 }
 
-
-
 .custom-close-btn {
     position: absolute;
     top: 0;
@@ -182,7 +163,6 @@ td>svg {
 p {
     margin: 0;
 }
-
 
 #code {
     color: #0a3764 !important;

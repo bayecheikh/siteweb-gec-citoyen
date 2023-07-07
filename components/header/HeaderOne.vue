@@ -136,15 +136,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
 
     computed: {
-        ...mapGetters({
-            isloggedin: 'authentication/isloggedin',
-            isauthenticating: 'authentication/isauthenticating',
-
-        }),
         getDashboardURL() {
             // Générer l'URL avec les paramètres
             const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
@@ -160,7 +154,6 @@ export default {
 
     },
     components: {
-
         Navigation: () => import("@/components/header/Navigation"),
         OffCanvasMobileMenu: () => import("@/components/header/OffCanvasMobileMenu")
     },
@@ -227,10 +220,10 @@ export default {
             await localStorage.removeItem('gecIdUser')
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
+            await localStorage.removeItem('gecEmail')
             if(localStorage.getItem('isauthenticatingfrombutton')){
                 await localStorage.removeItem('isauthenticatingfrombutton')
             }
-           
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
             this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
             this.$store.dispatch('authentication/getDetail', false)
@@ -271,7 +264,7 @@ export default {
     border: 3px solid #3376b9 !important;
 }
 
-.mainmenu-nav .mainmenu>li>a {
+.mainmenu-nav {
     padding-right: 0px;
 }
 

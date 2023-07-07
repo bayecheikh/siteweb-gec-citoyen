@@ -145,7 +145,7 @@ export default {
     try {
       const response = await this.$axios.get("/contenus");
       const filteredContacts = await response.data.data.data.filter(contenus => contenus.categorie.slug === "contact");
-      this.telephone =  filteredContacts.find(contenus => contenus.title === "Téléphone");
+      this.telephone = filteredContacts.find(contenus => contenus.title === "Téléphone");
       this.telephone_gec = this.telephone.body
       const email = filteredContacts.find(contenus => contenus.title === "Email");
       this.email_gec = email.body
@@ -163,14 +163,13 @@ export default {
       this.twitter_link = this.twitter?.link
       this.loading = false
     } catch (error) {
-      console.error(error);
+      // console.error(error);
       return;
     }
   },
   mixins: [validationMixin],
   components: {
     HeaderTwo: () => import("@/components/header/HeaderTwo"),
-    BreadCrumb: () => import("@/components/common/BreadCrumb"),
     Footer: () => import("@/components/footer/Footer"),
     MouseMove: () => import('@/components/animation/MouseMove')
   },
@@ -193,7 +192,6 @@ export default {
       isloading: false,
       recaptchaErrorText: false,
       showRecaptchaErrorText: false,
-      resultText: '',
       fullname: '',
       phone: '',
       email: '',
@@ -215,7 +213,6 @@ export default {
     },
     message: {
       required,
-
     },
   },
   methods: {
@@ -254,15 +251,11 @@ export default {
                 type: "error",
                 text: error.text,
               });
-
-
             });
           await this.$recaptcha.reset()
         } catch (error) {
-
           this.isloading = false;
           this.showRecaptchaErrorText = true
-        
         }
 
       }

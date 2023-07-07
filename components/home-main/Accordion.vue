@@ -36,7 +36,6 @@ export default {
   },
   mounted: async function () {
     try {
-
       const response = await this.$axios.get("/faqs");
       const filteredFaqs = response.data.data.data.filter(faq => faq.categorie.slug === "infos-generales");
       const sortedFaqs = filteredFaqs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -47,7 +46,7 @@ export default {
       return;
     }
     this.loading = false;
- 
+
   },
   methods: {
     initSwiper() {
@@ -99,4 +98,5 @@ export default {
   100% {
     opacity: 0.5;
   }
-}</style>
+}
+</style>

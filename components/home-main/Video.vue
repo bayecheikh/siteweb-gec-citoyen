@@ -62,7 +62,6 @@ export default {
     }
 }
 </script>
-
 <style scoped>
 .custom-video-area-2::before {
 

@@ -137,18 +137,12 @@
 
 <script>
 
-import { mapGetters } from 'vuex'
 export default {
     modules: ['@nuxtjs/axios'],
     axios: {
         baseURL: 'https://api-gec-citoyen.fly.dev'
     },
     computed: {
-        ...mapGetters({
-            isloggedin: 'authentication/isloggedin',
-            isauthenticating: 'authentication/isauthenticating',
-
-        }),
         getDashboardURL() {
             // Générer l'URL avec les paramètres
             const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
@@ -164,7 +158,6 @@ export default {
 
     },
     components: {
-
         Navigation: () => import("@/components/header/Navigation"),
         OffCanvasMobileMenu: () => import("@/components/header/OffCanvasMobileMenu")
     },
@@ -224,14 +217,12 @@ export default {
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
             await localStorage.removeItem('isauthenticatingfrombutton')
+            await localStorage.removeItem('gecEmail')
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
             this.$store.dispatch('authentication/getDetailIsAuthenticated', false)
             this.$store.dispatch('authentication/getDetail', false)
 
-        }
-
-        ,
-
+        },
         // Off-canvas Mobile Menu Open
         mobileMenuOpen(addRemoveClass, className) {
             const el = document.querySelector('#offcanvas-menu');
@@ -253,7 +244,6 @@ export default {
 }
 
 a.edu-btn,
-
 .header-action .header-btn a {
     display: block;
     color: grey !important;
@@ -282,13 +272,9 @@ a.edu-btn,
     border: 3px solid #3376b9 !important;
 }
 
-
-
-.mainmenu-nav .mainmenu>li>a {
+.mainmenu-nav {
     padding-right: 0px;
 }
-
-
 
 .header-btn>.my-custom-login-button {
     font-size: 15px;
@@ -298,8 +284,6 @@ a.edu-btn,
 @media (max-width: 993px) {
     .my-custom-login-button {
         font-size: 11px !important;
-
-
     }
 }
 </style>

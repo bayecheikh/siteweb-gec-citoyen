@@ -22,7 +22,6 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-
     computed: {
         ...mapGetters({
             isauthenticating: 'authentication/isauthenticating',
@@ -31,7 +30,6 @@ export default {
     },
     components: {
         MobileMenu: () => import('@/components/header/MobileMenu'),
-
     },
 
     methods: {
@@ -45,12 +43,6 @@ export default {
             }
         }
     },
-    data() {
-        return {
-            prenomEtNom: null,
-            email: null,
-        }
-    }
 }
 </script>
 

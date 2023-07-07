@@ -29,7 +29,7 @@ export default {
     },
     head() {
         return {
-            title: 'Envoyer un courrier'
+            title: 'Déposer un courrier'
         }
     },
     methods: {

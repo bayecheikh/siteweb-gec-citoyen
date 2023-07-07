@@ -28,7 +28,6 @@
 export default {
     components: {
         Accordion: () => import('@/components/home-main/Accordion'),
-        MouseMove: () => import('@/components/animation/MouseMove'),
         DemoVideo: () => import('@/components/home-main/Video')
     }
 }

@@ -59,8 +59,7 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-   components: {
-   },
+
    computed: mapGetters({
       detailutilisateur: 'coordonnees/detailutilisateur',
       detailministere: 'ministeres/detailministere',
@@ -106,7 +105,7 @@ export default {
       async hasDownloaded(e) {
          this.blobToBase64(e)
             .then(base64String => {
-      
+
                this.$store.dispatch('contenus/getDetail', { ...this.detailcontenu, encodedFile: base64String.split(';base64,')[1], format: 'pdf' })
             });
       },
@@ -124,13 +123,13 @@ export default {
 
          // Encode the String
          Buffer.from(string).toString('base64')
-       
+
       },
       onProgress(x) {
-        // console.log(x)
+         // console.log(x)
       },
       hasGenerated(x) {
-        // console.log(x)
+         // console.log(x)
       }
    }
 }

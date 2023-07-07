@@ -18,7 +18,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .custom-edu-breadcrumb-area {
     padding: 20px 0 30px !important;
 }
