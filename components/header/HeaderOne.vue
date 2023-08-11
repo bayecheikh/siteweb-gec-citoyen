@@ -142,11 +142,17 @@ export default {
         getDashboardURL() {
             // Générer l'URL avec les paramètres
             const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
+
+            let formatedGecLoggedInUser = {
+                ...this.gecLoggedInUser,
+                "email": this.gecEmail
+            }
+            console.log("AAAAAAAAAAAAAAA++++++++++++++++++++++++ed", formatedGecLoggedInUser)
             const params = new URLSearchParams({
                 gecToken: this.token,
                 gecIdUser: this.gecIdUser,
                 gecIsAuthenticated: this.gecIsAuthenticated,
-                gecLoggedInUser: this.gecLoggedInUser,
+                gecLoggedInUser: formatedGecLoggedInUser,
             });
 
             return `${baseURL}?${params.toString()}`;
@@ -164,6 +170,7 @@ export default {
             gecLoggedInUser: '',
             gecIdUser: '',
             gecToken: '',
+            gecEmail: '',
             token: null,
             isSticky: false,
             isDeconnecting: false,
@@ -197,6 +204,12 @@ export default {
         else {
             this.gecLoggedInUser = null
         }
+        if (localStorage.getItem('gecEmail')) {
+            this.gecEmail = localStorage.getItem('gecEmail')
+        }
+        else {
+            this.gecEmail = null
+        }
 
         window.addEventListener('scroll', () => {
             let scrollPos = window.scrol
@@ -221,7 +234,7 @@ export default {
             await localStorage.removeItem('gecLoggedInUser')
             await localStorage.removeItem('gecIsAuthenticated')
             await localStorage.removeItem('gecEmail')
-            if(localStorage.getItem('isauthenticatingfrombutton')){
+            if (localStorage.getItem('isauthenticatingfrombutton')) {
                 await localStorage.removeItem('isauthenticatingfrombutton')
             }
             this.$store.dispatch('authentication/getDetailIsLoggedIn', false)
@@ -259,6 +272,7 @@ export default {
     font-weight: 700 !important;
 
 }
+
 .my-custom-login-button:hover {
     color: #3376b9 !important;
     border: 3px solid #3376b9 !important;
@@ -272,6 +286,7 @@ export default {
     font-size: 15px;
     padding: 10px !important;
 }
+
 .header-action .header-btn a {
     display: block;
     color: grey !important;
@@ -284,6 +299,4 @@ export default {
 
 
     }
-}
-
-</style>
+}</style>

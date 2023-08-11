@@ -2,8 +2,20 @@
   "FunFact": {
     "description": "Auto imported from components/FunFact.vue"
   },
+  "CommonBreadCrumb": {
+    "description": "Auto imported from components/common/BreadCrumb.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/footer/Footer.vue"
+  },
+  "FooterScrollToTop": {
+    "description": "Auto imported from components/footer/ScrollToTop.vue"
   },
   "CourriersContenu": {
     "description": "Auto imported from components/courriers/Contenu.vue"
@@ -25,18 +37,6 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
-  },
-  "Footer": {
-    "description": "Auto imported from components/footer/Footer.vue"
-  },
-  "FooterScrollToTop": {
-    "description": "Auto imported from components/footer/ScrollToTop.vue"
-  },
-  "CommonBreadCrumb": {
-    "description": "Auto imported from components/common/BreadCrumb.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "HeaderOne": {
     "description": "Auto imported from components/header/HeaderOne.vue"
