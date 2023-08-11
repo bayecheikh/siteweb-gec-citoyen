@@ -149,7 +149,7 @@ export default {
                 gecIdUser: this.gecIdUser,
                 gecIsAuthenticated: this.gecIsAuthenticated,
                 gecLoggedInUser: this.gecLoggedInUser,
-                gecEmail : this.gecEmail
+
             });
 
             return `${baseURL}?${params.toString()}`;

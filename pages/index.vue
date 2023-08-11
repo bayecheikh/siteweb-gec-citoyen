@@ -30,7 +30,6 @@ export default {
             try {
                 const response = await this.$axios.post('users/code', { ...this.model })
                 await localStorage.setItem('gecToken', response.data.id_token.id_token)
-                await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
                 await localStorage.setItem('gecIdUser', response.data.data.doc._id)
                 if (response.data?.data?.doc?.email) {
                     await localStorage.setItem('gecEmail', response.data?.data?.doc?.email)
@@ -45,6 +44,13 @@ export default {
                     const { code, ...queryParams } = this.$route.query;
                     const newUrl = `${this.$route.path}?${new URLSearchParams(queryParams).toString()}`;
                     await this.$router.replace(newUrl);
+                }
+                if(localStorage.getItem("gecEmail")){
+                    const formatedGecLoggedInUser =  JSON.stringify({...this.parseJwt(response.data.id_token.id_token), email : localStorage.getItem('gecEmail')} )
+                    await localStorage.setItem('gecLoggedInUser', formatedGecLoggedInUser)
+                }
+                else{
+                    await localStorage.setItem('gecLoggedInUser', JSON.stringify(this.parseJwt(response.data.id_token.id_token)))
                 }
                 localStorage.removeItem('isauthenticatingfrombutton');
                 this.$store.dispatch("authentication/getDetailIsLoggedIn", true);
