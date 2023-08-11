@@ -143,16 +143,15 @@ export default {
             // Générer l'URL avec les paramètres
             const baseURL = 'https://courrier-gec-citoyen.vercel.app/dashboard';
 
-            let formatedGecLoggedInUser = {
-                ...this.gecLoggedInUser,
-                "email": this.gecEmail
-            }
-            console.log("AAAAAAAAAAAAAAA++++++++++++++++++++++++ed", formatedGecLoggedInUser)
+         
+            console.log("email", this.gecEmail)
+
+            console.log("AAAAAAAAAAAAAAA++++++++++++++++++++++++ed", JSON.parse(this.gecLoggedInUser))
             const params = new URLSearchParams({
                 gecToken: this.token,
                 gecIdUser: this.gecIdUser,
                 gecIsAuthenticated: this.gecIsAuthenticated,
-                gecLoggedInUser: formatedGecLoggedInUser,
+                gecLoggedInUser: this.gecLoggedInUser,
             });
 
             return `${baseURL}?${params.toString()}`;
@@ -199,7 +198,16 @@ export default {
             this.gecIsAuthenticated = null
         }
         if (localStorage.getItem('gecLoggedInUser')) {
-            this.gecLoggedInUser = localStorage.getItem('gecLoggedInUser')
+           if(localStorage.getItem('gecEmail')){
+            this.gecLoggedInUser = {
+                ...JSON.parse(localStorage.getItem('gecLoggedInUser')),
+                "email": this.gecEmail
+            }
+           }
+           else{
+            this.gecLoggedInUser = JSON.parse(localStorage.getItem('gecLoggedInUser'))
+           }
+          
         }
         else {
             this.gecLoggedInUser = null
