@@ -46,7 +46,7 @@ export default {
                     await this.$router.replace(newUrl);
                 }
                 if(localStorage.getItem("gecEmail")){
-                    const formatedGecLoggedInUser = { ...JSON.stringify(this.parseJwt(response.data.id_token.id_token)), "email" : localStorage.getItem('gecEmail')}
+                    const formatedGecLoggedInUser = { ...this.parseJwt(response.data.id_token.id_token), "email" : localStorage.getItem('gecEmail')}
                     await localStorage.setItem('gecLoggedInUser', formatedGecLoggedInUser)
                 }
                 else{
