@@ -2,6 +2,12 @@
   "FunFact": {
     "description": "Auto imported from components/FunFact.vue"
   },
+  "CommonBreadCrumb": {
+    "description": "Auto imported from components/common/BreadCrumb.vue"
+  },
+  "CommonSectionTitle": {
+    "description": "Auto imported from components/common/SectionTitle.vue"
+  },
   "AnimationMouseMove": {
     "description": "Auto imported from components/animation/MouseMove.vue"
   },
@@ -25,12 +31,6 @@
   },
   "CourriersValidation": {
     "description": "Auto imported from components/courriers/Validation.vue"
-  },
-  "CommonBreadCrumb": {
-    "description": "Auto imported from components/common/BreadCrumb.vue"
-  },
-  "CommonSectionTitle": {
-    "description": "Auto imported from components/common/SectionTitle.vue"
   },
   "Footer": {
     "description": "Auto imported from components/footer/Footer.vue"

@@ -145,21 +145,21 @@ export default {
     try {
       const response = await this.$axios.get("/contenus");
       const filteredContacts = await response.data.data.data.filter(contenus => contenus.categorie.slug === "contact");
-      this.telephone = filteredContacts.find(contenus => contenus.title === "Téléphone");
+      this.telephone = filteredContacts.find(contenus => contenus.slug === "telephone");
       this.telephone_gec = this.telephone.body
-      const email = filteredContacts.find(contenus => contenus.title === "Email");
+      const email = filteredContacts.find(contenus => contenus.slug === "email");
       this.email_gec = email.body
-      this.adresse = filteredContacts.find(contenus => contenus.title === "Adresse");
+      this.adresse = filteredContacts.find(contenus => contenus.slug === "adresse");
       this.adresse_gec = this.adresse.body
       const filteredReseaux = await response.data.data.data.filter(contenus => contenus.categorie.slug === "reseaux");
       this.reseaux = filteredReseaux
-      this.facebook = filteredReseaux?.find(contenus => contenus.title === "Facebook");
+      this.facebook = filteredReseaux?.find(contenus => contenus.slug === "facebook");
       this.facebook_link = this.facebook?.link
-      this.instagram = filteredReseaux?.find(contenus => contenus.title === "Instagram");
+      this.instagram = filteredReseaux?.find(contenus => contenus.slug === "instagram");
       this.instagram_link = this.instagram?.link
-      this.linkedin = filteredReseaux?.find(contenus => contenus.title === "LinkedIn");
+      this.linkedin = filteredReseaux?.find(contenus => contenus.slug === "linkedin");
       this.linkedin_link = this.linkedin?.link
-      this.twitter = filteredReseaux?.find(contenus => contenus.title === "Twitter");
+      this.twitter = filteredReseaux?.find(contenus => contenus.slug === "twitter");
       this.twitter_link = this.twitter?.link
       this.loading = false
     } catch (error) {

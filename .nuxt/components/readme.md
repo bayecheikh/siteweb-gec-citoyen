@@ -7,6 +7,8 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<FunFact>` | `<fun-fact>` (components/FunFact.vue)
+- `<CommonBreadCrumb>` | `<common-bread-crumb>` (components/common/BreadCrumb.vue)
+- `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
 - `<AnimationMouseMove>` | `<animation-mouse-move>` (components/animation/MouseMove.vue)
 - `<CourriersContenu>` | `<courriers-contenu>` (components/courriers/Contenu.vue)
 - `<CourriersCoordonnees>` | `<courriers-coordonnees>` (components/courriers/Coordonnees.vue)
@@ -15,8 +17,6 @@ You can directly use them in pages and other components without the need to impo
 - `<CourriersMinisteres>` | `<courriers-ministeres>` (components/courriers/Ministeres.vue)
 - `<CourriersPrevisualisation>` | `<courriers-previsualisation>` (components/courriers/Previsualisation.vue)
 - `<CourriersValidation>` | `<courriers-validation>` (components/courriers/Validation.vue)
-- `<CommonBreadCrumb>` | `<common-bread-crumb>` (components/common/BreadCrumb.vue)
-- `<CommonSectionTitle>` | `<common-section-title>` (components/common/SectionTitle.vue)
 - `<Footer>` | `<footer>` (components/footer/Footer.vue)
 - `<FooterScrollToTop>` | `<footer-scroll-to-top>` (components/footer/ScrollToTop.vue)
 - `<HeaderOne>` | `<header-one>` (components/header/HeaderOne.vue)

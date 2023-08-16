@@ -33,7 +33,7 @@ export default {
         try {
             const response = await this.$axios.get("/contenus");
 
-            const filteredContenus = await response.data.data.data.filter(contenu => contenu.title === "Vidéo");
+            const filteredContenus = await response.data.data.data.filter(contenu => contenu.slug === "exemple-de-video");
 
             const sortedVideos = await filteredContenus.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.videos = await sortedVideos.slice(0, 1);
