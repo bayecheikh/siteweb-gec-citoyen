@@ -1,7 +1,7 @@
 export { default as FunFact } from '../..\\components\\FunFact.vue'
+export { default as AnimationMouseMove } from '../..\\components\\animation\\MouseMove.vue'
 export { default as CommonBreadCrumb } from '../..\\components\\common\\BreadCrumb.vue'
 export { default as CommonSectionTitle } from '../..\\components\\common\\SectionTitle.vue'
-export { default as AnimationMouseMove } from '../..\\components\\animation\\MouseMove.vue'
 export { default as CourriersContenu } from '../..\\components\\courriers\\Contenu.vue'
 export { default as CourriersCoordonnees } from '../..\\components\\courriers\\Coordonnees.vue'
 export { default as CourriersCourrierEnvoye } from '../..\\components\\courriers\\CourrierEnvoye.vue'

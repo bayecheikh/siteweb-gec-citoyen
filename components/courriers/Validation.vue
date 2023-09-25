@@ -178,7 +178,10 @@ export default {
    }),
    methods: {
       async submitValidation() {
+         console.log("POST COURRIERS++++++++++", { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
+        
          this.$gecApi.$post('/courriers', { ...this.detailutilisateur, ...this.detailministere, ...this.detailcontenu })
+        
             .then(async (response) => {
                await this.$store.dispatch("courrierenvoye/getDetail", response.data.data.id_suivi);
 
