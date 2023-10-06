@@ -3,24 +3,28 @@
     "name": "addcourrier",
     "path": "/addcourrier",
     "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\addcourrier.vue",
-    "chunkName": "pages/addcourrier"
+    "chunkName": "pages/addcourrier",
+    "_name": "_cac6b602"
   },
   {
     "name": "contactez-nous",
     "path": "/contactez-nous",
     "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\contactez-nous.vue",
-    "chunkName": "pages/contactez-nous"
+    "chunkName": "pages/contactez-nous",
+    "_name": "_19f8dd76"
   },
   {
     "name": "termes-conditions",
     "path": "/termes-conditions",
     "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\termes-conditions.vue",
-    "chunkName": "pages/termes-conditions"
+    "chunkName": "pages/termes-conditions",
+    "_name": "_c87c0888"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\wamp\\\\www\\\\GEC-CITOYEN\\\\siteweb-gec-citoyen\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_1cc8837a"
   }
 ]
